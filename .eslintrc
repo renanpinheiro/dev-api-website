@@ -17,7 +17,8 @@
     "@typescript-eslint",
     "prettier",
     "import",
-    "import-helpers"
+    "import-helpers",
+    "react-hooks"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -33,6 +34,8 @@
     "no-use-before-define": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "import-helpers/order-imports": [
       "warn",
