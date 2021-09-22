@@ -1,6 +1,6 @@
 {
-  "name": "Nextjs Websites Starter",
-  "short_name": "A starter for creating websites using NextJs.",
+  "name": "DevApi",
+  "short_name": "DevApi é o integrador de sistema mais seguro e confiável",
   "icons": [
     {
       "src": "/favicons/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0051FF",
-  "background_color": "#0051FF",
+  "theme_color": "#5f47ff",
+  "background_color": "#5f47ff",
   "display": "standalone",
   "start_url": "/"
 }

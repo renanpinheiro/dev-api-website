@@ -4,42 +4,33 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "start:dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore --ext .jsx,.ts,.tsx .",
-    "format": "prettier --ignore-path .gitignore --ext .jsx,.ts,.tsx . --write"
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.+(ts|tsx)": [
-      "yarn lint",
-      "yarn format"
-    ]
+    "format": "prettier --ignore-path .gitignore --ext .jsx,.ts,.tsx . --write",
+    "lint:css": "stylelint './styles/*.ts' --fix",
+    "precommit": "yarn format && yarn lint:css",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "next": "10.2.3",
+    "@devapi/design-system": "^1.0.63",
+    "next": "^11.1.2",
     "next-images": "^1.7.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "styled-components": "^5.2.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.2.1",
+    "styled-reset": "^4.3.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
-    "@types/node": "^14.14.31",
+    "@types/node": "^16.9.6",
     "@types/react": "^17.0.22",
     "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.15.1",
     "babel-plugin-inline-react-svg": "^2.0.1",
-    "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.1.0",
@@ -47,18 +38,16 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-standard": "^5.0.0",
-    "husky": "^5.1.1",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
+    "git-commit-msg-linter": "^3.2.8",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recess-order": "^2.5.0",
     "typescript": "^4.2.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

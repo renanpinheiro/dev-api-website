@@ -1,26 +1,31 @@
 import { createGlobalStyle } from 'styled-components'
+import { theme } from '@devapi/design-system'
+
+import { reset } from 'styled-reset'
 
 const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+${reset}
+  
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-  html {
-    width: 100vw;
-    font-size: 1rem;
-  }
+html {
+  width: 100vw;
+  font-size: 1rem;
+}
 
-  html, body, #__next {
-    height: 100%;
-  }
+html, body, #__next {
+  height: 100%;
+}
 
-  body {
-    color: ${props => props.theme.colors.black};
-    font-size: 1rem;
-    font-family: 'DM Sans', sans-serif;
-  }
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: ${theme.colors.primary};
+}
 `
 
 export default GlobalStyles
