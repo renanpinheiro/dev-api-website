@@ -1,12 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "es6",
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["es6", "dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -18,22 +13,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "src",
-    "rootDirs": [
-      "./src"
-    ],
+    "rootDirs": ["./src"],
     "noFallthroughCasesInSwitch": true,
     "useUnknownInCatchVariables": false,
     "declaration": true,
     "declarationMap": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/node_modules/*"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "**/node_modules/*"]
 }
