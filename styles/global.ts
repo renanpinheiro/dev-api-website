@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
-import { theme } from '@devapi/design-system'
 
 import { reset } from 'styled-reset'
+import { theme } from './theme'
 
 const GlobalStyles = createGlobalStyle`
 ${reset}

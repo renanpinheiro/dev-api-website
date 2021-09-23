@@ -8,5 +8,5 @@
     ],
     "inline-react-svg"
   ],
-  "presets": ["next/babel", "@babel/preset-typescript"]
+  "presets": ["next/babel", "@babel/preset-react", "@babel/preset-typescript"]
 }
