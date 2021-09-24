@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
+import Link from './Link'
+import { useRouter } from 'next/router'
 import {
   ButtonContainer,
   Container,
@@ -7,12 +9,17 @@ import {
   LogoContainer,
   NavBarContainer,
   NavBar,
+  NavLinkContainer,
   NavLink,
+  Arrow,
 } from './Header.style'
 import { navLinks } from './menuOptions'
+import { Dropdown } from './Dropdown'
 
 const Header = () => {
+  const dropdownRef = useRef(null)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState()
 
   const handleScroll = () => {
     const offsetY = window.pageYOffset
@@ -28,32 +35,50 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll)
   })
 
+  const handleOpenDropdown = index => {
+    if (openDropdown === index) {
+      setOpenDropdown(undefined)
+    } else {
+      setOpenDropdown(index)
+    }
+  }
+
   return (
     <Container isScrollStyle={isScrolled}>
       <LogoContainer>
         {isScrolled ? (
-          <>
-            <Logo
-              src="../static/images/shared/devapi-primary.svg"
-              alt="devapi"
-            />
-          </>
+          <Link href="/">
+            <Logo src="/logo/devapi-primary.svg" alt="devapi" />
+          </Link>
         ) : (
-          <>
-            <Logo
-              src="../static/images/shared/devapi-white.svg"
-              alt="devapi-white"
-            />
-          </>
+          <Link href="/">
+            <Logo src="/logo/devapi-white.svg" alt="devapi-white" />
+          </Link>
         )}
       </LogoContainer>
       <NavBarContainer>
         <NavBar>
           {navLinks.map((link, index) => {
+            const isOpen = openDropdown === index
             return (
-              <div key={index}>
-                <NavLink>{link.name}</NavLink>
-              </div>
+              <Dropdown
+                isOpen={isOpen}
+                key={index}
+                dropdownItems={link.dropDown}
+              >
+                <NavLinkContainer
+                  onClick={() => handleOpenDropdown(index)}
+                  ref={dropdownRef}
+                >
+                  <Link
+                    href={link.url ? link.url : ''}
+                    activeClassName="active"
+                  >
+                    <NavLink>{link.name}</NavLink>
+                  </Link>
+                  {link.dropDown && <Arrow src="/arrows/arrow-dropdown.svg" />}
+                </NavLinkContainer>
+              </Dropdown>
             )
           })}
         </NavBar>

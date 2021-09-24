@@ -18,7 +18,6 @@ export const Container = styled.div<IHeaderContainerStyle>`
 
   background-color: ${props => (props.isScrollStyle ? 'white' : 'transparent')};
 
-  background-color: ${theme.colors.gray[550]};
   transition: all 0.3s ease-in-out;
 `
 
@@ -26,7 +25,7 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
 
-  width: 18vw;
+  width: 10vw;
   height: 100%;
 `
 
@@ -35,8 +34,11 @@ export const ButtonContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  width: 22vw;
   height: 100%;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `
 
 export const Logo = styled.img`
@@ -52,17 +54,56 @@ export const NavBarContainer = styled.div`
   align-items: center;
 
   height: 100%;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `
 
 export const NavBar = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `
 
-export const NavLink = styled.div`
-  font-size: 20px;
+export const NavLinkContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  margin-right: 5vw;
+
   cursor: pointer;
+
+  @media (max-width: 1300px) {
+    margin-right: 3vw;
+  }
+
+  .active {
+    font-weight: 700;
+    color: ${theme.colors.secondary};
+  }
+
+  a:not(.active) {
+    :hover {
+      color: ${theme.colors.secondary};
+    }
+  }
+`
+
+export const NavLink = styled.a`
+  font-size: 20px;
+
+  @media (max-width: 1300px) {
+    font-size: 18px;
+  }
+`
+
+export const Arrow = styled.img`
+  margin: 5px 0 0 5px;
 `

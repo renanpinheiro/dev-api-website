@@ -23,32 +23,11 @@ export const navLinks = [
   },
   {
     name: 'Soluções',
-    url: '/solutions',
     isActive: false,
     dropDown: [
       {
         name: 'Gestão',
-        url: '/gestao',
-        isActive: false,
-      },
-      {
-        name: 'Comercial',
-        url: '/comercial',
-        isActive: false,
-      },
-      {
-        name: 'e-Commerce',
-        url: '/e-commerce',
-        isActive: false,
-      },
-      {
-        name: 'Financeiro',
-        url: '/financeiro',
-        isActive: false,
-      },
-      {
-        name: 'Logística',
-        url: '/logistica',
+        url: '/teste',
         isActive: false,
       },
       {
@@ -57,8 +36,18 @@ export const navLinks = [
         isActive: false,
       },
       {
+        name: 'Comercial',
+        url: '/comercial',
+        isActive: false,
+      },
+      {
         name: 'RH',
         url: '/rh',
+        isActive: false,
+      },
+      {
+        name: 'e-Commerce',
+        url: '/e-commerce',
         isActive: false,
       },
       {
@@ -67,15 +56,24 @@ export const navLinks = [
         isActive: false,
       },
       {
+        name: 'Financeiro',
+        url: '/financeiro',
+        isActive: false,
+      },
+      {
         name: 'Seu Produto',
         url: '/seu-produto',
+        isActive: false,
+      },
+      {
+        name: 'Logística',
+        url: '/logistica',
         isActive: false,
       },
     ],
   },
   {
     name: 'Recursos',
-    url: '/resources',
     isActive: false,
     dropDown: [
       {
@@ -103,7 +101,6 @@ export const navLinks = [
   },
   {
     name: 'Empresa',
-    url: '/business',
     isActive: false,
     dropDown: [
       {

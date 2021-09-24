@@ -2,7 +2,7 @@ import React from 'react'
 import { Header } from '../../components/Header'
 import { theme } from '../../styles/theme'
 
-const Home = () => {
+const Teste = () => {
   return (
     <>
       <Header />
@@ -13,10 +13,10 @@ const Home = () => {
           backgroundColor: theme.colors.gray[100],
         }}
       >
-        HOME
+        Teste
       </div>
     </>
   )
 }
 
-export default Home
+export default Teste
