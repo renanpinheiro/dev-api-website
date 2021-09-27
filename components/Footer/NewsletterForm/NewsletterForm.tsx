@@ -10,8 +10,6 @@ import {
 
 interface Values {
   email: string
-  
-  
 }
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
