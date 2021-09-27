@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from '../styles/global'
 import { theme } from '../styles/theme'
+import { Footer } from '../components/Footer'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -19,6 +20,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
+        <Footer />
         <GlobalStyle />
       </ThemeProvider>
     </>
