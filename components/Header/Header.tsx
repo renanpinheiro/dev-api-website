@@ -1,18 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
 import Link from './Link'
-import { useRouter } from 'next/router'
-import {
-  ButtonContainer,
-  Container,
-  Logo,
-  LogoContainer,
-  NavBarContainer,
-  NavBar,
-  NavLinkContainer,
-  NavLink,
-  Arrow,
-} from './Header.style'
+import * as S from './Header.style'
 import { navLinks } from './menuOptions'
 import { Dropdown } from './Dropdown'
 
@@ -44,20 +33,20 @@ const Header = () => {
   }
 
   return (
-    <Container isScrollStyle={isScrolled}>
-      <LogoContainer>
+    <S.Container isScrollStyle={isScrolled}>
+      <S.LogoContainer>
         {isScrolled ? (
           <Link href="/">
-            <Logo src="/logo/devapi-primary.svg" alt="devapi" />
+            <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
           </Link>
         ) : (
           <Link href="/">
-            <Logo src="/logo/devapi-white.svg" alt="devapi-white" />
+            <S.Logo src="/logo/devapi-white.svg" alt="devapi-white" />
           </Link>
         )}
-      </LogoContainer>
-      <NavBarContainer>
-        <NavBar>
+      </S.LogoContainer>
+      <S.NavBarContainer>
+        <S.NavBar>
           {navLinks.map((link, index) => {
             const isOpen = openDropdown === index
             return (
@@ -66,7 +55,7 @@ const Header = () => {
                 key={index}
                 dropdownItems={link.dropDown}
               >
-                <NavLinkContainer
+                <S.NavLinkContainer
                   onClick={() => handleOpenDropdown(index)}
                   ref={dropdownRef}
                 >
@@ -74,16 +63,18 @@ const Header = () => {
                     href={link.url ? link.url : ''}
                     activeClassName="active"
                   >
-                    <NavLink>{link.name}</NavLink>
+                    <S.NavLink>{link.name}</S.NavLink>
                   </Link>
-                  {link.dropDown && <Arrow src="/arrows/arrow-dropdown.svg" />}
-                </NavLinkContainer>
+                  {link.dropDown && (
+                    <S.Arrow src="/arrows/arrow-dropdown.svg" />
+                  )}
+                </S.NavLinkContainer>
               </Dropdown>
             )
           })}
-        </NavBar>
-      </NavBarContainer>
-      <ButtonContainer>
+        </S.NavBar>
+      </S.NavBarContainer>
+      <S.ButtonContainer>
         <Button
           size="default"
           text="Teste grátis"
@@ -91,8 +82,8 @@ const Header = () => {
           margin="0 20px 0 0"
         />
         <Button size="default" text="Login" type="outline" />
-      </ButtonContainer>
-    </Container>
+      </S.ButtonContainer>
+    </S.Container>
   )
 }
 
