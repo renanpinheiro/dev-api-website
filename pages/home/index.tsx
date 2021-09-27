@@ -10,7 +10,7 @@ const Home = () => {
         style={{
           height: '3000px',
           overflowX: 'auto',
-          backgroundColor: theme.colors.gray[100],
+          backgroundColor: theme.colors.white,
         }}
       >
         HOME

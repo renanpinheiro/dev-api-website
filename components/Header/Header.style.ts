@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { theme } from '../../styles/theme'
-import { IHeaderContainerStyle } from './Header.interface'
+import { IHeaderMenuStyle, IHeaderStyle } from './Header.interface'
 
-export const Container = styled.div<IHeaderContainerStyle>`
+export const Container = styled.div`
   position: fixed;
 
   display: flex;
@@ -16,8 +16,7 @@ export const Container = styled.div<IHeaderContainerStyle>`
 
   user-select: none;
 
-  background-color: ${props => (props.isScrollStyle ? 'white' : 'transparent')};
-
+  background-color: ${theme.colors.gray[100]};
   transition: all 0.3s ease-in-out;
 `
 
@@ -96,8 +95,15 @@ export const NavLinkContainer = styled.div`
   }
 `
 
-export const NavLink = styled.a`
+export const NavLink = styled.a<IHeaderStyle>`
   font-size: 20px;
+
+  ${props =>
+    props.isActive &&
+    css`
+      font-weight: 700;
+      color: ${theme.colors.secondary};
+    `}
 
   @media (max-width: 1300px) {
     font-size: 18px;
@@ -106,4 +112,50 @@ export const NavLink = styled.a`
 
 export const Arrow = styled.img`
   margin: 5px 0 0 5px;
+`
+
+export const MenuContainer = styled.div`
+  display: none;
+  @media (max-width: 1200px) {
+    display: block;
+  }
+`
+
+export const Menu = styled.button`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+
+  > span {
+    margin-right: 0.625rem;
+    font-size: 1.25rem;
+    color: ${theme.colors.primary};
+  }
+`
+
+export const Burger = styled.div`
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  margin-top: -2%;
+
+  div {
+    position: relative;
+    width: 2rem;
+    height: 0.125rem;
+    background: ${theme.colors.primary};
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+
+    @media (max-width: 1280px) {
+      height: 0.25rem;
+    }
+  }
 `

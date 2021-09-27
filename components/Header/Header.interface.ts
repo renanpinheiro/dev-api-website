@@ -1,3 +1,3 @@
-export interface IHeaderContainerStyle {
-  isScrollStyle: boolean
+export interface IHeaderStyle {
+  isActive: boolean
 }

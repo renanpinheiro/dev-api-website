@@ -2,21 +2,24 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
 import Link from './Link'
 import * as S from './Header.style'
-import { navLinks } from './menuOptions'
 import { Dropdown } from './Dropdown'
+import { handleNavLink } from './menuOptions'
+import { useRouter } from 'next/router'
+import Menu from './Menu'
 
 const Header = () => {
+  const router = useRouter()
   const dropdownRef = useRef(null)
-  const [isScrolled, setIsScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState()
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+
+  const navLinks = handleNavLink(router.asPath)
 
   const handleScroll = () => {
     const offsetY = window.pageYOffset
 
     if (offsetY >= 80) {
-      setIsScrolled(true)
-    } else {
-      setIsScrolled(false)
+      setOpenDropdown(undefined)
     }
   }
 
@@ -33,17 +36,11 @@ const Header = () => {
   }
 
   return (
-    <S.Container isScrollStyle={isScrolled}>
+    <S.Container>
       <S.LogoContainer>
-        {isScrolled ? (
-          <Link href="/">
-            <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
-          </Link>
-        ) : (
-          <Link href="/">
-            <S.Logo src="/logo/devapi-white.svg" alt="devapi-white" />
-          </Link>
-        )}
+        <Link href="/">
+          <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
+        </Link>
       </S.LogoContainer>
       <S.NavBarContainer>
         <S.NavBar>
@@ -59,12 +56,8 @@ const Header = () => {
                   onClick={() => handleOpenDropdown(index)}
                   ref={dropdownRef}
                 >
-                  <Link
-                    href={link.url ? link.url : ''}
-                    activeClassName="active"
-                  >
-                    <S.NavLink>{link.name}</S.NavLink>
-                  </Link>
+                  <S.NavLink isActive={link.isActive}>{link.name}</S.NavLink>
+
                   {link.dropDown && (
                     <S.Arrow src="/arrows/arrow-dropdown.svg" />
                   )}
@@ -74,6 +67,7 @@ const Header = () => {
           })}
         </S.NavBar>
       </S.NavBarContainer>
+
       <S.ButtonContainer>
         <Button
           size="default"
@@ -83,6 +77,19 @@ const Header = () => {
         />
         <Button size="default" text="Login" type="outline" />
       </S.ButtonContainer>
+
+      <S.MenuContainer>
+        <S.Menu title="Menu" onClick={() => setIsOpenMenu(!isOpenMenu)}>
+          <span>Menu</span>
+          <S.Burger>
+            <div />
+            <div />
+            <div />
+          </S.Burger>
+        </S.Menu>
+
+        <Menu open={isOpenMenu} close={() => setIsOpenMenu(!isOpenMenu)} />
+      </S.MenuContainer>
     </S.Container>
   )
 }
