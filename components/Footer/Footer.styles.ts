@@ -171,7 +171,7 @@ export const SocialMediaContainer = styled.div`
   justify-content: flex-end;
   height: 100%;
 
-  @media only screen and (max-width: 8 space-between28px) {
+  @media only screen and (max-width: 828px) {
     justify-content: center;
   }
 `
