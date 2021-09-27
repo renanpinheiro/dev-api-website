@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-import { IImagesProps } from './TermsOfUse.interfaces'
+interface IImagesProps {
+  margin: string
+}
 
 export const TermsUse = styled.div`
   display: flex;

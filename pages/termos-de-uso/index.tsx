@@ -2,7 +2,7 @@ import React from 'react'
 
 import Head from 'next/head'
 
-import * as S from '../../styles/TermsOfUser'
+import * as S from '../../styles/termsOfUse'
 
 const UseTerm = () => {
   return (
