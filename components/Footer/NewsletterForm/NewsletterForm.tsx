@@ -21,46 +21,44 @@ const NewsletterForm = () => {
   }
 
   return (
-    <>
+    <S.ContainerForm>
+      <Formik
+        initialValues={{
+          email: '',
+        }}
+        onSubmit={(
+          values: IValuesForm,
+          { setSubmitting }: FormikHelpers<IValuesForm>,
+        ) => {
+          setTimeout(() => {
+            setIsSuccess(true)
+            setSubmitting(false)
+          }, 1500)
+        }}
+      >
+        <Form name="newsletter-devapi">
+          <S.InputGroup>
+            <S.InputNewsletter
+              placeholder="Digite aqui seu email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+            <S.ButtonNewsLetter type="submit" onClick={handleSubmit}>
+              Descobrir{' '}
+            </S.ButtonNewsLetter>
+          </S.InputGroup>
+        </Form>
+      </Formik>
       <S.ContainerForm>
-        <Formik
-          initialValues={{
-            email: '',
-          }}
-          onSubmit={(
-            values: IValuesForm,
-            { setSubmitting }: FormikHelpers<IValuesForm>,
-          ) => {
-            setTimeout(() => {
-              setIsSuccess(true)
-              setSubmitting(false)
-            }, 1500)
-          }}
-        >
-          <Form name="newsletter-devapi">
-            <S.InputGroup>
-              <S.InputNewsletter
-                placeholder="Digite aqui seu email"
-                type="email"
-                name="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-              <S.ButtonNewsLetter type="submit" onClick={handleSubmit}>
-                Descobrir{' '}
-              </S.ButtonNewsLetter>
-            </S.InputGroup>
-          </Form>
-        </Formik>
-        <S.ContainerForm>
-          {isSuccess && (
-            <S.Message>
-              <small>Obrigado! newsletter assinado com sucesso!</small>
-            </S.Message>
-          )}
-        </S.ContainerForm>
+        {isSuccess && (
+          <S.Message>
+            <small>Obrigado! newsletter assinado com sucesso!</small>
+          </S.Message>
+        )}
       </S.ContainerForm>
-    </>
+    </S.ContainerForm>
   )
 }
 

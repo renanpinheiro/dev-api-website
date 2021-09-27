@@ -10,7 +10,7 @@ export const ContainerLink = styled.div`
   padding: 10px;
 
   > a {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin: 0;
     margin-bottom: 5px;
     font-size: 1.25rem;

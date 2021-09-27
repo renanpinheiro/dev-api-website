@@ -3,106 +3,11 @@ import Link from 'next/link'
 import { Links } from './Links'
 import { NewsletterForm } from './NewsletterForm'
 import * as S from './Footer.styles'
-
+import { platform } from '../../constants/platform'
+import { soluctions } from '../../constants/soluctions'
+import { resources } from '../../constants/resources'
+import { company } from '../../constants/company'
 const Footer = () => {
-  const platform = [
-    {
-      name: 'Características',
-      url: '/caracteristicas',
-    },
-    {
-      name: 'API Management',
-      url: '/api-management',
-    },
-    {
-      name: 'Conectores',
-      url: '/conectores',
-    },
-    {
-      name: 'Planos',
-      url: '/planos',
-    },
-    {
-      name: 'Parceiro de integração',
-      url: '/parceiro-de-integração',
-    },
-  ]
-
-  const soluctions = [
-    {
-      name: 'Gestão',
-      url: '/gestao',
-    },
-    {
-      name: 'Comerical',
-      url: '/comercial',
-    },
-    {
-      name: 'e-Commerce',
-      url: '/e-commerce',
-    },
-    {
-      name: 'Financeiro',
-      url: '/financeiro',
-    },
-    {
-      name: 'Logística',
-      url: '/logistica',
-    },
-    {
-      name: 'Marketing',
-      url: '/marketing',
-    },
-    {
-      name: 'RH',
-      url: '/rh',
-    },
-    {
-      name: 'Empresas 360',
-      url: '/empresas-360',
-    },
-    {
-      name: 'Seu Produto',
-      url: '/seu-produto',
-    },
-  ]
-  const resources = [
-    {
-      name: 'DevApi Academy',
-      url: '/devapi-academy',
-    },
-    {
-      name: 'Blog',
-      url: '/blog',
-    },
-    {
-      name: 'Termos de uso',
-      url: '/termos-de-uso',
-    },
-    {
-      name: 'Política de privacidade',
-      url: '/politica-de-privacidade',
-    },
-  ]
-  const company = [
-    {
-      name: 'Sobre',
-      url: '/nosso-time',
-    },
-    {
-      name: 'Contato',
-      url: '/fale-com-um-especialista',
-    },
-    {
-      name: 'Carreiras',
-      url: 'https://devapi.gupy.io',
-    },
-    {
-      name: 'DevApi na mídia',
-      url: '/devapi-na-midia',
-    },
-  ]
-
   return (
     <>
       <S.FooterContainer>
@@ -118,7 +23,6 @@ const Footer = () => {
               <S.Newsletter>
                 <S.Pipe />
                 <S.TextContainer>
-                  AddressContainer
                   <S.Title>
                     Assine <span>nossa newsletter</span>
                   </S.Title>
