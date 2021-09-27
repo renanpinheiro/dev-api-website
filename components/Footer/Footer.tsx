@@ -8,7 +8,7 @@ import {
   Col,
   NewsletterContainer,
   Newsletter,
-  Pipe, 
+  Pipe,
   TextContainer,
   Title,
   SubTitle,
@@ -20,9 +20,7 @@ import {
   SocialMediaContainer,
   SocialMedia,
   SocialLogocontainer,
-  SocialMediaLogo
-
-
+  SocialMediaLogo,
 } from './styles'
 
 const Footer = () => {
@@ -48,6 +46,7 @@ const Footer = () => {
       url: '/parceiro-de-integração',
     },
   ]
+
   const soluctions = [
     {
       name: 'Gestão',
@@ -103,25 +102,24 @@ const Footer = () => {
       name: 'Política de privacidade',
       url: '/politica-de-privacidade',
     },
-   
   ]
   const company = [
     {
       name: 'Sobre',
-      url: '/nosso-time'
+      url: '/nosso-time',
     },
     {
       name: 'Contato',
-      url: '/fale-com-um-especialista'
+      url: '/fale-com-um-especialista',
     },
     {
       name: 'Carreiras',
-      url: 'https://devapi.gupy.io'
+      url: 'https://devapi.gupy.io',
     },
     {
-        name: 'DevApi na mídia',
-        url: '/devapi-na-midia'
-      }
+      name: 'DevApi na mídia',
+      url: '/devapi-na-midia',
+    },
   ]
 
   return (
@@ -138,7 +136,8 @@ const Footer = () => {
               </p>
               <Newsletter>
                 <Pipe />
-                <TextContainer>AddressContainer
+                <TextContainer>
+                  AddressContainer
                   <Title>
                     Assine <span>nossa newsletter</span>
                   </Title>
@@ -204,6 +203,5 @@ const Footer = () => {
     </>
   )
 }
-
 
 export { Footer }

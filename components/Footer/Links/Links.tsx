@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {ContainerLink,TitleLink} from './styles'
+import { ContainerLink, TitleLink } from './styles'
 
 interface IContainerLinkProps {
   title: string

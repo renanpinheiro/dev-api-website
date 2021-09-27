@@ -5,11 +5,13 @@ import {
   InputGroup,
   InputNewsletter,
   ButtonNewsLetter,
-  Message
+  Message,
 } from './styles'
 
 interface Values {
   email: string
+  
+  
 }
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
