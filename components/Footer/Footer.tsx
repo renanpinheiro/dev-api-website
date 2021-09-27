@@ -2,26 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Links } from './Links'
 import { NewsletterForm } from './NewsletterForm'
-import {
-  FooterContainer,
-  Row,
-  Col,
-  NewsletterContainer,
-  Newsletter,
-  Pipe,
-  TextContainer,
-  Title,
-  SubTitle,
-  ResponsivePipe,
-  LogoContainer,
-  Logo,
-  AddressContainer,
-  Address,
-  SocialMediaContainer,
-  SocialMedia,
-  SocialLogocontainer,
-  SocialMediaLogo,
-} from './styles'
+import * as S from './styles'
 
 const Footer = () => {
   const platform = [
@@ -124,82 +105,82 @@ const Footer = () => {
 
   return (
     <>
-      <FooterContainer>
-        <Row>
-          <Col>
-            <NewsletterContainer>
+      <S.FooterContainer>
+        <S.Row>
+          <S.Col>
+            <S.NewsletterContainer>
               <p>
                 Sua empresa totalmente
                 <br />
                 <span> integrada no mundo digital </span>
                 <br /> de forma segura, fácil e eficiente.
               </p>
-              <Newsletter>
-                <Pipe />
-                <TextContainer>
+              <S.Newsletter>
+                <S.Pipe />
+                <S.TextContainer>
                   AddressContainer
-                  <Title>
+                  <S.Title>
                     Assine <span>nossa newsletter</span>
-                  </Title>
-                  <SubTitle>Descubra novas ideias</SubTitle>
-                </TextContainer>
-              </Newsletter>
+                  </S.Title>
+                  <S.SubTitle>Descubra novas ideias</S.SubTitle>
+                </S.TextContainer>
+              </S.Newsletter>
               <NewsletterForm />
-            </NewsletterContainer>
+            </S.NewsletterContainer>
 
-            <ResponsivePipe />
+            <S.ResponsivePipe />
             <Links title="Plataforma" links={platform} />
-            <ResponsivePipe />
+            <S.ResponsivePipe />
 
             <Links title="Soluções" links={soluctions} />
-            <ResponsivePipe />
+            <S.ResponsivePipe />
 
             <Links title="Recursos" links={resources} />
 
-            <ResponsivePipe />
+            <S.ResponsivePipe />
             <Links title="Empresa" links={company} />
-          </Col>
-        </Row>
-        <Row>
-          <Col content="space-between">
-            <LogoContainer>
-              <Logo src={'/logo/devapi-white.svg'} />
-              <AddressContainer>
-                <Pipe />
-                <Address>
+          </S.Col>
+        </S.Row>
+        <S.Row>
+          <S.Col content="space-between">
+            <S.LogoContainer>
+              <S.Logo src={'/logo/devapi-white.svg'} />
+              <S.AddressContainer>
+                <S.Pipe />
+                <S.Address>
                   <span>Endereço:</span> Ed. Atrium Torre Norte - Av. Pedro
                   Taques, 294 - 13° Andar - Sala 1307 -
                   <br /> Zona 03 - CEP: 87030-008 - Maringá | PR | Brasil
                   <span> Telefone:</span> +55 (44) 3354-7410
-                </Address>
-              </AddressContainer>
-            </LogoContainer>
+                </S.Address>
+              </S.AddressContainer>
+            </S.LogoContainer>
 
-            <SocialMediaContainer>
-              <SocialMedia>
+            <S.SocialMediaContainer>
+              <S.SocialMedia>
                 Siga <span>nossas redes</span>
-              </SocialMedia>
-              <SocialLogocontainer>
+              </S.SocialMedia>
+              <S.SocialLogocontainer>
                 <Link href="https://www.instagram.com/devapi.ipaas/">
                   <a title="Instagram" target="_blank">
-                    <SocialMediaLogo src="/socialMedia/instagram-primary.svg" />
+                    <S.SocialMediaLogo src="/socialMedia/instagram-primary.svg" />
                   </a>
                 </Link>
                 <Link href="https://www.facebook.com/DevApiOficial/">
                   <a title="Facebook" target="_blank">
-                    <SocialMediaLogo src="/socialMedia/facebook-primary.svg" />
+                    <S.SocialMediaLogo src="/socialMedia/facebook-primary.svg" />
                   </a>
                 </Link>
                 <Link href="https://www.linkedin.com/company/devapitecnologia/">
                   <a title="Linkedin" target="_blank">
-                    <SocialMediaLogo src="/socialMedia/linkedin-primary.svg" />
+                    <S.SocialMediaLogo src="/socialMedia/linkedin-primary.svg" />
                   </a>
                 </Link>
-              </SocialLogocontainer>
-            </SocialMediaContainer>
-          </Col>
-        </Row>
-      </FooterContainer>
+              </S.SocialLogocontainer>
+            </S.SocialMediaContainer>
+          </S.Col>
+        </S.Row>
+      </S.FooterContainer>
     </>
   )
 }

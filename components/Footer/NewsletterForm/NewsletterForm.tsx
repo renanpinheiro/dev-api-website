@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Formik, Form, FormikHelpers } from 'formik'
-import {
-  ContainerForm,
-  InputGroup,
-  InputNewsletter,
-  ButtonNewsLetter,
-  Message,
-} from './styles'
+import * as S from './styles'
 
 interface Values {
   email: string
@@ -31,7 +25,7 @@ const NewsletterForm = () => {
 
   return (
     <>
-      <ContainerForm>
+      <S.ContainerForm>
         <Formik
           initialValues={{
             email: '',
@@ -47,28 +41,28 @@ const NewsletterForm = () => {
           }}
         >
           <Form name="newsletter-devapi">
-            <InputGroup>
-              <InputNewsletter
+            <S.InputGroup>
+              <S.InputNewsletter
                 placeholder="Digite aqui seu email"
                 type="email"
                 name="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
               />
-              <ButtonNewsLetter type="submit" onClick={handleSubmit}>
+              <S.ButtonNewsLetter type="submit" onClick={handleSubmit}>
                 Descobrir{' '}
-              </ButtonNewsLetter>
-            </InputGroup>
+              </S.ButtonNewsLetter>
+            </S.InputGroup>
           </Form>
         </Formik>
-        <ContainerForm>
+        <S.ContainerForm>
           {isSuccess && (
-            <Message>
+            <S.Message>
               <small>Obrigado! newsletter assinado com sucesso!</small>
-            </Message>
+            </S.Message>
           )}
-        </ContainerForm>
-      </ContainerForm>
+        </S.ContainerForm>
+      </S.ContainerForm>
     </>
   )
 }

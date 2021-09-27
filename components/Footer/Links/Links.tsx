@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { ContainerLink, TitleLink } from './styles'
+import * as S from './styles'
 
 interface IContainerLinkProps {
   title: string
@@ -22,10 +22,10 @@ const Links = ({ title, links }: IContainerLinkProps) => {
   })
 
   return (
-    <ContainerLink>
-      <TitleLink>{title}</TitleLink>
+    <S.ContainerLink>
+      <S.TitleLink>{title}</S.TitleLink>
       {handleLiks}
-    </ContainerLink>
+    </S.ContainerLink>
   )
 }
 
