@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Formik, Form, FormikHelpers } from 'formik'
 import * as S from './styles'
-
-interface Values {
-  email: string
-}
+import { IValuesForm } from './NewletterForm.interfaces'
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
   const [isSuccess, setIsSuccess] = useState(false)
@@ -31,8 +28,8 @@ const NewsletterForm = () => {
             email: '',
           }}
           onSubmit={(
-            values: Values,
-            { setSubmitting }: FormikHelpers<Values>,
+            values: IValuesForm,
+            { setSubmitting }: FormikHelpers<IValuesForm>,
           ) => {
             setTimeout(() => {
               setIsSuccess(true)
