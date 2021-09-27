@@ -1,3 +1,3 @@
-export interface Values {
+export interface IValuesForm {
   email: string
 }
