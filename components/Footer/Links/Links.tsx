@@ -1,15 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import * as S from './styles'
-
-interface IContainerLinkProps {
-  title: string
-  links: ILinks[]
-}
-interface ILinks {
-  name: string
-  url: string
-}
+import { IContainerLinkProps } from './Links.interfaces'
 const Links = ({ title, links }: IContainerLinkProps) => {
   const handleLiks = links.map((link, index) => {
     return (
