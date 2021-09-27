@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Formik, Form, FormikHelpers } from 'formik'
-import * as S from './styles'
-import { IValuesForm } from './NewletterForm.interfaces'
+import * as S from './NewsletterForm.styles'
+import { IValuesForm } from './NewsletterForm.interfaces'
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
   const [isSuccess, setIsSuccess] = useState(false)

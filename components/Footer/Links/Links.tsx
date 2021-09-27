@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import * as S from './styles'
+import * as S from './Links.styles'
 import { IContainerLinkProps } from './Links.interfaces'
 const Links = ({ title, links }: IContainerLinkProps) => {
   const handleLiks = links.map((link, index) => {

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Links } from './Links'
 import { NewsletterForm } from './NewsletterForm'
-import * as S from './styles'
+import * as S from './Footer.styles'
 
 const Footer = () => {
   const platform = [

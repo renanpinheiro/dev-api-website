@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
-
-interface ColProps {
-  content?: string
-}
-
+import { IColProps } from './Footer.interfaces'
 export const FooterContainer = styled.div`
   width: 100%;
   height: auto;
@@ -25,7 +21,7 @@ export const Row = styled.div`
     justify-items: flex-start;
   }
 `
-export const Col = styled.div<ColProps>`
+export const Col = styled.div<IColProps>`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
