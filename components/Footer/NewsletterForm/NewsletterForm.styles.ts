@@ -113,11 +113,11 @@ export const CheckboxCol = styled.div`
   flex-direction: row;
   justify-content: normal;
   width: 100%;
-  padding: 5px 0 4px 8px;
+  padding: 5px 0 10px 10px;
   cursor: pointer;
 `
 export const LabelCheckBox = styled.label`
-  padding-left: 6px;
+  padding-left: 10px;
   font-size: 18px;
   color: ${theme.colors.white};
   text-align: left;
@@ -126,16 +126,39 @@ export const LabelCheckBox = styled.label`
     font-weight: 700;
   }
 `
-export const CheckBoxNewsLetter = styled.input`
-  display: inline-block;
+export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
   width: 18px;
   height: 18px;
-  border: 1px solid ${theme.colors.gray[400]};
-  border-radius: 5px;
-  :checked {
-    width: 20px;
-    height: 20px;
-    color: ${theme.colors.secondary};
+
+  font-size: 17px;
+  visibility: hidden;
+  content: ' ';
+  &:after {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    color: #00bff0;
+
     cursor: pointer;
+    visibility: visible;
+    content: ' ';
+    background-color: ${theme.colors.gray[900]} padding-box;
+    border: 1px solid ${theme.colors.gray[500]};
+    border-radius: 3px;
+  }
+  &:checked:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    padding-right: 2px;
+    font-size: 20px;
+    color: ${theme.colors.gray[100]};
+    cursor: pointer;
+    content: '✓';
+
+    background-color: ${theme.colors.primary};
   }
 `

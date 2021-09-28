@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Formik, Form, FormikHelpers } from 'formik'
+import { useFormik } from 'formik'
 import * as S from './NewsletterForm.styles'
-import { IValuesForm } from './NewsletterForm.interfaces'
+import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
+import { ApiRdStation } from '../../../Services/ApiRdStation'
 const NewsletterForm = () => {
   const [email, setEmail] = useState('')
   const [isSuccess, setIsSuccess] = useState(false)
@@ -13,60 +14,75 @@ const NewsletterForm = () => {
     script.async = true
     document.body.appendChild(script)
   }, [])
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setEmail('')
-      setIsSuccess(true)
-    }, 1500)
+  // api https://api.rd.services/platform/conversions
+  const handleSubmit = (email: string) => {
+    const payloadRD = {
+      event_type: 'CONVERSION',
+      event_family: 'CDP',
+      payload: {
+        conversion_identifier: 'newsletter-devapi',
+        email: email,
+      },
+    }
+
+    ApiRdStation.post<IRdStationResponse>('/', payloadRD)
+      .then(response => {
+        alert(response)
+        setIsSuccess(true)
+      })
+      .catch(error => {
+        alert(error)
+        setIsSuccess(false)
+      })
   }
 
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      notifications: '',
+      policy: '',
+    },
+    onSubmit: (values: IValuesForm) => {
+      handleSubmit(values.email)
+    },
+  })
   return (
     <S.ContainerForm>
-      <Formik
-        initialValues={{
-          email: '',
-        }}
-        onSubmit={(
-          values: IValuesForm,
-          { setSubmitting }: FormikHelpers<IValuesForm>,
-        ) => {
-          setTimeout(() => {
-            setIsSuccess(true)
-            setSubmitting(false)
-          }, 1500)
-        }}
-      >
-        <Form name="newsletter-devapi">
-          <S.CheckboxContainer>
-            <S.CheckboxCol>
-              <S.CheckBoxNewsLetter type="checkbox" />
-              <S.LabelCheckBox>
-                Concordo em receber comunicações
-              </S.LabelCheckBox>
-            </S.CheckboxCol>
-
-            <S.CheckboxCol>
-              <S.CheckBoxNewsLetter type="checkbox" />
-              <S.LabelCheckBox>
-                Concordo com a <span>Política de privacidade</span>
-              </S.LabelCheckBox>
-            </S.CheckboxCol>
-          </S.CheckboxContainer>
-
-          <S.InputGroup>
-            <S.InputNewsletter
-              placeholder="Digite aqui seu email"
-              type="email"
-              name="email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
+      <form name="newsletter-devapi" onSubmit={formik.handleSubmit}>
+        <S.CheckboxContainer>
+          <S.CheckboxCol>
+            <S.CheckBoxNewsLetter
+              name="notifications"
+              value={formik.values.notifications}
+              onChange={formik.handleChange}
             />
-            <S.ButtonNewsLetter type="submit" onClick={handleSubmit}>
-              Descobrir{' '}
-            </S.ButtonNewsLetter>
-          </S.InputGroup>
-        </Form>
-      </Formik>
+            <S.LabelCheckBox>Concordo em receber comunicações</S.LabelCheckBox>
+          </S.CheckboxCol>
+
+          <S.CheckboxCol>
+            <S.CheckBoxNewsLetter
+              name="policy"
+              value={formik.values.policy}
+              onChange={formik.handleChange}
+            />
+            <S.LabelCheckBox>
+              Concordo com a <span>Política de privacidade</span>
+            </S.LabelCheckBox>
+          </S.CheckboxCol>
+        </S.CheckboxContainer>
+
+        <S.InputGroup>
+          <S.InputNewsletter
+            placeholder="Digite aqui seu email"
+            type="email"
+            name="email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+          />
+          <S.ButtonNewsLetter type="submit">Descobrir</S.ButtonNewsLetter>
+        </S.InputGroup>
+      </form>
+
       <S.ContainerForm>
         {isSuccess && (
           <S.Message>
