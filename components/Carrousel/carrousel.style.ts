@@ -3,12 +3,7 @@ import { Carousel, CarouselItem } from 'react-bootstrap'
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 
 import { theme } from '../../styles/theme'
-
-interface ICarouselStyle {
-  dotsMargin?: string
-  isCustomCarouselItem?: boolean
-  carouselItemStyle?: FlattenSimpleInterpolation
-}
+import { ICarouselStyle } from './Carrousel.interface'
 
 export const Container = styled.div`
   padding: 20px;

@@ -4,18 +4,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import * as S from './MultiCarrousel.styles'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
-interface IMultiCarrouselProps {
-  items: IMultiCarrousel[]
-  title: ReactNode
-  interval: number
-  itemsPerSlide?: number
-  itemsPerScroll?: number
-}
-
-export interface IMultiCarrousel {
-  url: string
-}
+import { IMultiCarrouselProps } from './MultiCarrousel.interface'
 
 const MultiCarrousel = ({
   items,
