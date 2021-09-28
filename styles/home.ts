@@ -18,3 +18,7 @@ export const CostumersCarrouselContainer = styled.div`
   width: 100%;
   background-size: 76%;
 `
+
+export const Container = styled.div`
+  padding-top: 13vh;
+`

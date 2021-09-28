@@ -4,6 +4,8 @@ import { constumersMobile, costumers } from '../../constants/costumers'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
 import dynamic from 'next/dynamic'
+import QuoteCarousel from '../../components/QuoteCarousel'
+import { quotes } from '../../constants/quotes'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -24,8 +26,7 @@ const Home = () => {
   const isMobile = width <= 1024
 
   return (
-    <>
-      <div>HOME</div>
+    <S.Container>
       <S.CostumersCarrouselContainer>
         {isMobile ? (
           <CarrouselWithOutSSR
@@ -49,8 +50,10 @@ const Home = () => {
             }
           />
         )}
+
+        <QuoteCarousel quotes={quotes} />
       </S.CostumersCarrouselContainer>
-    </>
+    </S.Container>
   )
 }
 
