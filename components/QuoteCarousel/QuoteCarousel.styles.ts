@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
 export const Container = styled.div`
-  padding: 45px 0vw;
   width: 100%;
 `
 
@@ -50,7 +49,6 @@ export const QuoteContainer = styled.div`
   @media (min-width: 1024px) and (max-width: 1366px) {
     height: auto;
     width: 100%;
-    margin-top: 10vh;
   }
 
   @media only screen and (max-width: 1023px) {
@@ -149,7 +147,7 @@ export const IconContainer = styled.div`
   }
 
   @media only screen and (max-width: 770px) {
-    top: -20%;
+    top: -15%;
     left: 28%;
   }
 `

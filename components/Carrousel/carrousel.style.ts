@@ -6,7 +6,7 @@ import { theme } from '../../styles/theme'
 import { ICarouselStyle } from './Carrousel.interface'
 
 export const Container = styled.div`
-  padding: 20px;
+  /* padding: 20px; */
 `
 
 export const TitleContainer = styled.div`
@@ -60,7 +60,6 @@ export const Item = styled(CarouselItem)<ICarouselStyle>`
             width: 50% 
             height: 50px;
             margin-bottom: 30px;
-            padding: 20px;
             object-fit: contain;
           }
         `}
