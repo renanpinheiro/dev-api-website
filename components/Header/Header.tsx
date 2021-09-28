@@ -5,7 +5,7 @@ import * as S from './Header.style'
 import { Dropdown } from './Dropdown'
 import { handleNavLink } from './menuOptions'
 import { useRouter } from 'next/router'
-import Menu from './Menu'
+import { Menu } from './Menu'
 
 const Header = () => {
   const router = useRouter()
@@ -92,7 +92,7 @@ const Header = () => {
           </S.Burger>
         </S.Menu>
 
-        <Menu open={isOpenMenu} close={handleOpenMenu} />
+        <Menu isOpen={isOpenMenu} close={handleOpenMenu} navLinks={navLinks} />
       </S.MenuContainer>
     </S.Container>
   )

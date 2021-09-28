@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components'
 import { theme } from '../../styles/theme'
-import { IHeaderMenuStyle, IHeaderStyle } from './Header.interface'
+import { IHeaderStyle } from './Header.interface'
 
 export const Container = styled.div`
   position: fixed;
+  z-index: 15;
 
   display: flex;
   align-items: center;
@@ -97,6 +98,8 @@ export const NavLinkContainer = styled.div`
 
 export const NavLink = styled.a<IHeaderStyle>`
   font-size: 20px;
+  color: ${theme.colors.primary};
+  text-decoration: none;
 
   ${props =>
     props.isActive &&
