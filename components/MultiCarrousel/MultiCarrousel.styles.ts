@@ -1,9 +1,7 @@
 import Slider from 'react-slick'
 
 import styled from 'styled-components'
-export const Container = styled.div`
-  padding: 0px 08vh;
-`
+export const Container = styled.div``
 
 export const TitleContainer = styled.div`
   width: 100%;

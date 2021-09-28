@@ -50,11 +50,10 @@ const Home = () => {
             }
           />
         )}
-
-        <S.QuoteContainer>
-          <QuoteCarousel quotes={quotes} />
-        </S.QuoteContainer>
       </S.CostumersCarrouselContainer>
+      <S.QuoteContainer>
+        <QuoteCarousel quotes={quotes} />
+      </S.QuoteContainer>
     </S.Container>
   )
 }

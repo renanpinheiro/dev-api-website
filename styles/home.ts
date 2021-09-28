@@ -16,8 +16,8 @@ export const CarrouselTitle = styled.h2`
 `
 export const CostumersCarrouselContainer = styled.div`
   width: 100%;
-  padding: 0 08vw;
   background-size: 76%;
+  padding: 0 8vw;
 `
 
 export const Container = styled.div`
