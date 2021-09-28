@@ -11,11 +11,11 @@ export const PrivacyPolicy = styled.div`
   height: auto;
 
   @media (max-width: 992px) {
-    margin-top: 6.25rem;
+    padding-top: 6.25rem;
   }
 
   @media (min-width: 1200px) {
-    margin-top: 7.813rem;
+    padding-top: 7.813rem;
   }
 `
 
