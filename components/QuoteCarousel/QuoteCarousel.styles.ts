@@ -108,7 +108,7 @@ export const Quote = styled.p`
     font-size: 1.5rem;
   }
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 800px) {
     font-size: 1.125rem;
     line-height: 25px;
   }
@@ -119,7 +119,7 @@ export const Name = styled.p`
   color: ${theme.colors.white};
   font-size: 1.125rem;
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 800px) {
     margin-bottom: 2vh;
     font-size: 1.375rem;
     font-style: italic;
@@ -135,20 +135,20 @@ export const IconContainer = styled.div`
   top: 10%;
 
   @media (min-width: 1440px) and (max-width: 1600px) {
-    left: -11%;
+    left: -5%;
   }
 
   @media (min-width: 1336px) and (max-width: 1440px) {
-    left: -8%;
+    left: -4%;
   }
 
   @media (min-width: 1000px) and (max-width: 1336px) {
-    left: -7%;
+    left: -8%;
   }
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 800px) {
     top: -15%;
-    left: 28%;
+    left: 20%;
   }
 `
 export const Icon = styled.img`
@@ -176,7 +176,7 @@ export const Icon = styled.img`
     height: 200px;
   }
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 800px) {
     width: 150px;
     height: 150px;
   }
