@@ -101,3 +101,41 @@ export const Message = styled.div`
     color: ${props => props.theme.colors.green[100]};
   }
 `
+export const CheckboxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 100%;
+  height: auto;
+`
+export const CheckboxCol = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  width: 100%;
+  padding: 5px 0 4px 8px;
+  cursor: pointer;
+`
+export const LabelCheckBox = styled.label`
+  padding-left: 6px;
+  font-size: 18px;
+  color: ${theme.colors.white};
+  text-align: left;
+  span {
+    font-style: italic;
+    font-weight: 700;
+  }
+`
+export const CheckBoxNewsLetter = styled.input`
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid ${theme.colors.gray[400]};
+  border-radius: 5px;
+  :checked {
+    width: 20px;
+    height: 20px;
+    color: ${theme.colors.secondary};
+    cursor: pointer;
+  }
+`

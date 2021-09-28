@@ -37,6 +37,22 @@ const NewsletterForm = () => {
         }}
       >
         <Form name="newsletter-devapi">
+          <S.CheckboxContainer>
+            <S.CheckboxCol>
+              <S.CheckBoxNewsLetter type="checkbox" />
+              <S.LabelCheckBox>
+                Concordo em receber comunicações
+              </S.LabelCheckBox>
+            </S.CheckboxCol>
+
+            <S.CheckboxCol>
+              <S.CheckBoxNewsLetter type="checkbox" />
+              <S.LabelCheckBox>
+                Concordo com a <span>Política de privacidade</span>
+              </S.LabelCheckBox>
+            </S.CheckboxCol>
+          </S.CheckboxContainer>
+
           <S.InputGroup>
             <S.InputNewsletter
               placeholder="Digite aqui seu email"
