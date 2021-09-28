@@ -35,6 +35,10 @@ const Header = () => {
     }
   }
 
+  const handleOpenMenu = () => {
+    setIsOpenMenu(!isOpenMenu)
+  }
+
   return (
     <S.Container>
       <S.LogoContainer>
@@ -79,7 +83,7 @@ const Header = () => {
       </S.ButtonContainer>
 
       <S.MenuContainer>
-        <S.Menu title="Menu" onClick={() => setIsOpenMenu(!isOpenMenu)}>
+        <S.Menu title="Menu" onClick={handleOpenMenu}>
           <span>Menu</span>
           <S.Burger>
             <div />
@@ -88,7 +92,7 @@ const Header = () => {
           </S.Burger>
         </S.Menu>
 
-        <Menu open={isOpenMenu} close={() => setIsOpenMenu(!isOpenMenu)} />
+        <Menu open={isOpenMenu} close={handleOpenMenu} />
       </S.MenuContainer>
     </S.Container>
   )
