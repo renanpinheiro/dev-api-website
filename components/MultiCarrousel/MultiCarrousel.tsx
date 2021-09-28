@@ -2,7 +2,8 @@ import React, { ReactNode } from 'react'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import * as S from './styles'
+import * as S from './MultiCarrousel.styles'
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 
 interface IMultiCarrouselProps {
   items: IMultiCarrousel[]
@@ -32,7 +33,7 @@ const MultiCarrousel = ({
         autoplay
         autoplaySpeed={interval}
         arrows={false}
-        speed={500}
+        speed={2000}
         slidesToShow={itemsPerSlide}
         slidesToScroll={itemsPerScroll}
       >

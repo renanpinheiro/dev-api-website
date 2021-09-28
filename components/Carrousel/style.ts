@@ -2,7 +2,7 @@ import { Carousel, CarouselItem } from 'react-bootstrap'
 
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 
-import theme from 'styles/theme'
+import { theme } from '../../styles/theme'
 
 interface ICarouselStyle {
   dotsMargin?: string
@@ -61,10 +61,17 @@ export const Item = styled(CarouselItem)<ICarouselStyle>`
       ? props.carouselItemStyle
       : css`
           img {
-            width: 50% !important;
+            width: 50% 
             height: 90px;
-            margin-bottom: 55px;
+            margin-bottom: 30px;
             padding: 20px;
+            object-fit: cover;
           }
         `}
+`
+export const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
 `

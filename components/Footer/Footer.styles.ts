@@ -4,7 +4,7 @@ import { IColProps } from './Footer.interfaces'
 export const FooterContainer = styled.div`
   width: 100%;
   height: auto;
-  padding: 90px 60px 70px 60px;
+  padding: 90px 8vw 70px 8vw;
 
   background-color: #221e1e;
 

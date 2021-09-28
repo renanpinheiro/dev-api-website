@@ -2,7 +2,7 @@ import Slider from 'react-slick'
 
 import styled from 'styled-components'
 export const Container = styled.div`
-  padding: 45px 10vh;
+  padding: 0px 08vh;
 `
 
 export const TitleContainer = styled.div`
@@ -24,8 +24,8 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   pointer-events: none;
-  width: 100%;
   object-fit: contain;
+  width: 100%;
 `
 
 export const Carrousel = styled(Slider)`

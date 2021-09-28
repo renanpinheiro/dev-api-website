@@ -1,40 +1,26 @@
-import React, { ReactNode } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { FlattenSimpleInterpolation } from 'styled-components'
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+import { ICarrouselProps } from './Carrousel.interface'
 
 import * as S from './style'
-interface ICarrouselProps {
-  items: ICarrousel[]
-  title?: ReactNode
-  dotsMargin?: string
-  isCustomCarouselItem?: boolean
-  carouselItemStyle?: FlattenSimpleInterpolation
-}
-interface ICarrousel {
-  interval: number
-  component: ReactNode
-}
 
-const Carrousel = ({
-  items,
-  title,
-  dotsMargin,
-  isCustomCarouselItem,
-  carouselItemStyle,
-}: ICarrouselProps) => {
+const Carrousel = ({ items, title }: ICarrouselProps) => {
+  const { width } = useWindowDimensions()
+
   return (
     <S.Container>
       <S.TitleContainer>{title}</S.TitleContainer>
-      <S.CarrouselContent dotsMargin={dotsMargin}>
-        {items.map((item, index) => {
+      <S.CarrouselContent>
+        {items[width >= 768 ? 3 : 2].map((item, index) => {
           return (
-            <S.Item
-              key={index}
-              interval={item.interval}
-              isCustomCarouselItem={isCustomCarouselItem}
-              carouselItemStyle={carouselItemStyle}
-            >
-              {item.component}
+            <S.Item key={index} interval={2000}>
+              <S.ImageContainer>
+                {Object.entries(item).map(([key, value]) => {
+                  return <img key={key} src={value} />
+                })}
+              </S.ImageContainer>
             </S.Item>
           )
         })}
