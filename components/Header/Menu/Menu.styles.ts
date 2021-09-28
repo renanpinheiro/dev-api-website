@@ -1,14 +1,17 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { theme } from '../../../styles/theme'
+import {
+  IMenuContainerProps,
+  IMenuOverlayProps,
+  INavLinkTitleStyle,
+} from '../Header.interface'
 
-interface IContainerProps {
-  open: boolean
-}
+import {
+  Accordion as AccordionBootstrap,
+  Card as CardBootstrap,
+} from 'react-bootstrap'
 
-interface IOverlayProps {
-  isOverlay: boolean
-}
-
-export const Overlay = styled.div<IOverlayProps>`
+export const Overlay = styled.div<IMenuOverlayProps>`
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +23,7 @@ export const Overlay = styled.div<IOverlayProps>`
   opacity: ${props => (props.isOverlay ? 0.5 : 0)};
 `
 
-export const Menu = styled.div<IContainerProps>`
+export const Menu = styled.div<IMenuContainerProps>`
   position: fixed;
   top: 0;
   right: 0;
@@ -35,8 +38,7 @@ export const Menu = styled.div<IContainerProps>`
   background-position: center;
   background-size: cover;
   transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
   @media (max-width: 992px) {
     width: 100%;
     padding: 0;
@@ -121,6 +123,10 @@ export const BgCicle = styled.div`
 `
 
 export const Nav = styled.div`
+  height: 100%;
+  padding-bottom: 60px;
+  overflow-x: auto;
+
   > ul {
     list-style: none;
 
@@ -151,18 +157,6 @@ export const Nav = styled.div`
           color: ${props => props.theme.colors.secondary};
         }
       }
-
-      > h6 {
-        display: flex;
-        align-items: center;
-        font-size: clamp(42px, 45px, 62px);
-        font-weight: 600;
-        color: ${props => props.theme.colors.primary};
-
-        @media (max-width: 992px) {
-          font-size: 1.75rem;
-        }
-      }
     }
 
     .activeLink {
@@ -189,6 +183,25 @@ export const Nav = styled.div`
   }
 `
 
+export const Title = styled.h6<INavLinkTitleStyle>`
+  display: flex;
+  align-items: center;
+  font-size: clamp(42px, 45px, 62px);
+  font-weight: 600;
+  color: ${theme.colors.primary};
+
+  ${props =>
+    props.isActive &&
+    css`
+      font-weight: 700;
+      color: ${theme.colors.secondary};
+    `}
+
+  @media (max-width: 992px) {
+    font-size: 1.75rem;
+  }
+`
+
 export const Subnav = styled.div`
   > ul {
     list-style: none;
@@ -200,29 +213,31 @@ export const Subnav = styled.div`
       @media (max-width: 992px) {
         line-height: 2.5rem;
       }
-
-      > a {
-        display: flex;
-        font-size: 38px;
-        font-weight: 500;
-        color: ${props => props.theme.colors.primary};
-        text-decoration: none;
-
-        @media (max-width: 992px) {
-          font-size: 1.375rem;
-        }
-
-        &:hover {
-          color: ${props => props.theme.colors.secondary};
-          text-decoration: none;
-        }
-
-        &.active {
-          color: ${props => props.theme.colors.secondary};
-        }
-      }
     }
   }
+`
+
+export const LinkDropdown = styled.a<INavLinkTitleStyle>`
+  display: flex;
+  font-size: 38px;
+  font-weight: 500;
+  color: ${props => props.theme.colors.primary};
+  text-decoration: none;
+
+  @media (max-width: 992px) {
+    font-size: 1.375rem;
+  }
+
+  &:hover {
+    color: ${props => props.theme.colors.secondary};
+    text-decoration: none;
+  }
+
+  ${props =>
+    props.isActive &&
+    css`
+      color: ${props => props.theme.colors.secondary};
+    `}
 `
 
 export const SignUp = styled.button`
@@ -240,5 +255,57 @@ export const SignUp = styled.button`
     color: ${props => props.theme.colors.white};
     background: ${props => props.theme.colors.secondary};
     border: none;
+  }
+`
+
+export const Accordion = styled(AccordionBootstrap)``
+
+export const Card = styled(CardBootstrap)`
+  background-color: transparent;
+  border: none;
+`
+
+export const CardHeader = styled(CardBootstrap.Header)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+`
+
+export const CardBody = styled(CardBootstrap.Body)``
+
+export const AccordionToggle = styled(AccordionBootstrap.Toggle)`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+`
+
+export const AccordionCollapse = styled(AccordionBootstrap.Collapse)``
+
+export const Plans = styled.div`
+  padding: 0.5rem 1rem;
+
+  margin-bottom: 70px;
+  color: ${theme.colors.primary};
+
+  > a {
+    display: flex;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: ${props => props.theme.colors.primary};
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: ${props => props.theme.colors.secondary};
+    }
+  }
+
+  .activeLink {
+    color: ${props => props.theme.colors.secondary};
   }
 `

@@ -11,7 +11,7 @@ export const TermsUse = styled.div`
   max-width: 100%;
   height: auto;
   @media (max-width: 992px) {
-    margin-top: 6.25rem;
+    padding-top: 6.25rem;
   }
 `
 
