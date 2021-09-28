@@ -4,7 +4,7 @@ import { IColProps } from './Footer.interfaces'
 export const FooterContainer = styled.div`
   width: 100%;
   height: auto;
-  padding: 90px 8vw 70px 8vw;
+  padding: 60px 8vw 70px 8vw;
 
   background-color: #221e1e;
 
@@ -28,7 +28,7 @@ export const Col = styled.div<IColProps>`
   justify-content: ${props => props.content};
   width: 100%;
 
-  @media only screen and (max-width: 828px) {
+  @media only screen and (max-width: 1024px) {
     flex-direction: column;
     padding-top: 20px;
   }
@@ -68,7 +68,7 @@ export const Pipe = styled.div`
 `
 
 export const ResponsivePipe = styled.div`
-  @media only screen and (max-width: 828px) {
+  @media only screen and (max-width: 1024px) {
     width: 100%;
     height: 3px;
     margin: 7px 0 15px 0;
@@ -99,19 +99,26 @@ export const Title = styled.div`
 
 export const SubTitle = styled.div`
   margin-left: 10px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
 
   @media only screen and (max-width: 828px) {
-    font-size: 28px;
+    padding-top: 10px;
+    font-size: 10px;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding-top: 5px;
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 1366px) {
-    font-size: 30px;
+    padding-top: 10px;
+    font-size: 20px;
   }
 
-  @media only screen and (min-width: 1517px) {
-    font-size: 38px;
+  @media only screen and (max-width: 1517px) {
+    padding-top: 10px;
+    font-size: 28px;
   }
 `
 
@@ -171,7 +178,7 @@ export const SocialMediaContainer = styled.div`
   justify-content: flex-end;
   height: 100%;
 
-  @media only screen and (max-width: 8 space-between28px) {
+  @media only screen and (max-width: 828px) {
     justify-content: center;
   }
 `

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { theme } from './theme'
 
 export const CarrouselTitle = styled.h2`
-
   font-size: 2.3rem;
   color: ${theme.colors.primary};
 
