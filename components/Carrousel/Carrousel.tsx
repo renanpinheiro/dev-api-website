@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-import { FlattenSimpleInterpolation } from 'styled-components'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import { ICarrouselProps } from './Carrousel.interface'
 
-import * as S from './style'
+import * as S from './carrousel.style'
 
 const Carrousel = ({ items, title }: ICarrouselProps) => {
   const { width } = useWindowDimensions()

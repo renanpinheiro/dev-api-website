@@ -8,6 +8,7 @@ export const Container = styled.div`
 export const TitleContainer = styled.div`
   width: 100%;
   text-align: center;
+  padding-bottom: 20px;
 `
 
 export const ImageContainer = styled.div`
@@ -26,6 +27,7 @@ export const Image = styled.img`
   pointer-events: none;
   object-fit: contain;
   width: 100%;
+  height: 90px;
 `
 
 export const Carrousel = styled(Slider)`

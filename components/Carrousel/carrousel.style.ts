@@ -17,6 +17,7 @@ export const Container = styled.div`
 export const TitleContainer = styled.div`
   width: 100%;
   text-align: center;
+  padding-bottom: 20px;
 `
 
 export const CarrouselContent = styled(Carousel)<ICarouselStyle>`
@@ -62,10 +63,10 @@ export const Item = styled(CarouselItem)<ICarouselStyle>`
       : css`
           img {
             width: 50% 
-            height: 90px;
+            height: 50px;
             margin-bottom: 30px;
             padding: 20px;
-            object-fit: cover;
+            object-fit: contain;
           }
         `}
 `

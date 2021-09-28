@@ -9,11 +9,11 @@ export const useWindowDimensions = () => {
 
     return {
       width,
-      height
+      height,
     }
   }
   const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
+    getWindowDimensions(),
   )
 
   useEffect(() => {

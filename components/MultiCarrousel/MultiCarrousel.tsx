@@ -40,7 +40,7 @@ const MultiCarrousel = ({
         {items.map((item, index) => {
           return (
             <S.ImageContainer key={index}>
-              <S.Image className="d-block w-100" src={item.url} />
+              <S.Image src={item.url} />
             </S.ImageContainer>
           )
         })}

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import MultiCarrousel from '../../components/MultiCarrousel/MultiCarrousel'
+import { constumersMobile, costumers } from '../../constants/costumers'
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+import * as S from '../../styles/home'
 import dynamic from 'next/dynamic'
-import styled from 'styled-components'
-import { constumersMobile } from '../../constants/costumers'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -11,33 +11,45 @@ const CarrouselWithOutSSR = dynamic(
     ssr: false,
   },
 )
-
-export const ClientCarrouselContainer = styled.div`
-  width: 100%;
-  background-color: rgba(224, 224, 224, 0.35);
-  background-size: 76%;
-
-  @media (max-width: 996px) {
-    background-color: rgba(224, 224, 224, 0.1);
-    background-size: 100%;
-  }
-`
+const MultiCarrouselWithOutSSR = dynamic(
+  () => import('../../components/MultiCarrousel/MultiCarrousel'),
+  {
+    ssr: false,
+  },
+)
 
 const Home = () => {
+  const { width } = useWindowDimensions()
+
+  const isMobile = width <= 1024
+
   return (
     <>
       <div>HOME</div>
-      <ClientCarrouselContainer>
-        <CarrouselWithOutSSR
-          items={constumersMobile}
-          title={
-            <div>
-              Conexões que conquistaram a{' '}
-              <span>confiança de grandes clientes</span>
-            </div>
-          }
-        />
-      </ClientCarrouselContainer>
+      <S.CostumersCarrouselContainer>
+        {isMobile ? (
+          <CarrouselWithOutSSR
+            items={constumersMobile}
+            title={
+              <S.CarrouselTitle>
+                Empresas que ja desbloquearam o{' '}
+                <span>poder da integração de sistemas.</span>
+              </S.CarrouselTitle>
+            }
+          />
+        ) : (
+          <MultiCarrouselWithOutSSR
+            interval={2000}
+            items={costumers}
+            title={
+              <S.CarrouselTitle>
+                Empresas que ja desbloquearam o{' '}
+                <span>poder da integração de sistemas.</span>
+              </S.CarrouselTitle>
+            }
+          />
+        )}
+      </S.CostumersCarrouselContainer>
     </>
   )
 }
