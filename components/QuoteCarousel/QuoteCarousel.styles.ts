@@ -40,7 +40,7 @@ export const QuoteContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../../static/images/backgrounds/devapi-bg-secondary.svg');
+  background-image: url('/backgrounds/devapi-bg-secondary.svg');
   padding: 2vh 5vh 2vh 20vh;
 
   border-top-left-radius: 100px;
@@ -185,7 +185,7 @@ export const Icon = styled.img`
 export const CircleDetail = styled.div`
   height: 100%;
   width: 100%;
-  border: 2px solid ${props => props.theme.colors.primary};
+  border: 2px solid ${theme.colors.primary};
   position: absolute;
   border-radius: 50%;
   z-index: 9;
