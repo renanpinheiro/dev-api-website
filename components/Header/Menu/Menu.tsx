@@ -37,7 +37,7 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
                   <React.Fragment key={index}>
                     {link.dropDown ? (
                       <S.Accordion defaultActiveKey="0">
-                        <S.Card eventKey={index}>
+                        <S.Card>
                           <S.CardHeader>
                             <S.Title isActive={link.isActive}>
                               {link.name}
