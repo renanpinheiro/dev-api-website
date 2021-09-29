@@ -5,9 +5,7 @@ import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 import { theme } from '../../styles/theme'
 import { ICarouselStyle } from './Carrousel.interface'
 
-export const Container = styled.div`
-  /* padding: 20px; */
-`
+export const Container = styled.div``
 
 export const TitleContainer = styled.div`
   width: 100%;
