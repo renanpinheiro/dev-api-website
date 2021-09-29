@@ -1,60 +1,127 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useFormik } from 'formik'
+import * as Yup from 'yup'
+import axios from 'axios'
 import * as S from './NewsletterForm.styles'
+import { theme } from '../../../styles/theme'
 import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
-import { ApiRdStation } from '../../../Services/ApiRdStation'
+
 const NewsletterForm = () => {
-  const [email, setEmail] = useState('')
+  const api = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_RDSTATION,
+  })
+
   const [isSuccess, setIsSuccess] = useState(false)
 
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src =
-      'https://d335luupugsy2.cloudfront.net/js/loader-scripts/3898021c-e125-41ca-8f3c-3cd2e9e9bb99-loader.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
-  // api https://api.rd.services/platform/conversions
-  const handleSubmit = (email: string) => {
+  const handleValidation = Yup.object().shape({
+    name: Yup.string().required('O Nome é obrigatório.'),
+    email: Yup.string()
+      .email('Email inválido.')
+      .required('O Email é obrigatório.'),
+    notifications: Yup.string().required(
+      'Você não concordou em receber as notificações',
+    ),
+    policy: Yup.string().required(
+      'Você não concordou com a Política de privacidade',
+    ),
+  })
+
+  const handleAPI = (values: IValuesForm) => {
     const payloadRD = {
       event_type: 'CONVERSION',
       event_family: 'CDP',
       payload: {
         conversion_identifier: 'newsletter-devapi',
-        email: email,
+        email: values.email,
       },
     }
 
-    ApiRdStation.post<IRdStationResponse>('/', payloadRD)
+    api
+      .post<IRdStationResponse>(process.env.NEXT_PUBLIC_KEY, payloadRD)
       .then(response => {
-        alert(response)
+        console.log(response.status)
         setIsSuccess(true)
       })
       .catch(error => {
-        alert(error)
+        console.log(error)
         setIsSuccess(false)
       })
   }
 
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      notifications: '',
-      policy: '',
-    },
-    onSubmit: (values: IValuesForm) => {
-      handleSubmit(values.email)
-    },
-  })
+  const { handleSubmit, handleChange, values, errors, touched, setSubmitting } =
+    useFormik({
+      initialValues: {
+        name: '',
+        email: '',
+        notifications: '',
+        policy: '',
+      },
+      validationSchema: handleValidation,
+      onSubmit: (values: IValuesForm) => {
+        alert('submit')
+        handleAPI(values)
+
+        setTimeout(() => {
+          setSubmitting(false)
+        }, 3000)
+      },
+    })
   return (
     <S.ContainerForm>
-      <form name="newsletter-devapi" onSubmit={formik.handleSubmit}>
+      <S.ContainerMessage>
+        {touched.notifications && errors.notifications ? (
+          <S.Message color={theme.colors.red[100]}>
+            <small>{errors.notifications}</small>
+          </S.Message>
+        ) : null}
+        {touched.policy && errors.policy ? (
+          <S.Message color={theme.colors.red[100]}>
+            <small>{errors.policy}</small>
+          </S.Message>
+        ) : null}
+        {touched.email && errors.email ? (
+          <S.Message color={theme.colors.red[100]}>
+            <small>{errors.email}</small>
+          </S.Message>
+        ) : null}
+        {touched.name && errors.name ? (
+          <S.Message color={theme.colors.red[100]}>
+            <small>{errors.name}</small>
+          </S.Message>
+        ) : null}
+        {isSuccess && (
+          <S.Message>
+            <small>
+              'Obrigado!{values.name} newsletter assinado com sucesso!'
+            </small>
+          </S.Message>
+        )}
+      </S.ContainerMessage>
+      <form name="newsletter-devapi" onSubmit={handleSubmit}>
+        <S.InputContainer>
+          <S.InputNewsletter
+            placeholder="Digite seu nome"
+            type="text"
+            name="name"
+            value={values.name}
+            onChange={handleChange}
+          />
+        </S.InputContainer>
+        <S.InputContainer>
+          <S.InputNewsletter
+            placeholder="Digite aqui seu email"
+            type="email"
+            name="email"
+            value={values.email}
+            onChange={handleChange}
+          />
+        </S.InputContainer>
         <S.CheckboxContainer>
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
               name="notifications"
-              value={formik.values.notifications}
-              onChange={formik.handleChange}
+              value={values.notifications}
+              onChange={handleChange}
             />
             <S.LabelCheckBox>Concordo em receber comunicações</S.LabelCheckBox>
           </S.CheckboxCol>
@@ -62,34 +129,18 @@ const NewsletterForm = () => {
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
               name="policy"
-              value={formik.values.policy}
-              onChange={formik.handleChange}
+              value={values.policy}
+              onChange={handleChange}
             />
             <S.LabelCheckBox>
               Concordo com a <span>Política de privacidade</span>
             </S.LabelCheckBox>
           </S.CheckboxCol>
         </S.CheckboxContainer>
-
-        <S.InputGroup>
-          <S.InputNewsletter
-            placeholder="Digite aqui seu email"
-            type="email"
-            name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-          />
+        <S.ButtonContainer>
           <S.ButtonNewsLetter type="submit">Descobrir</S.ButtonNewsLetter>
-        </S.InputGroup>
+        </S.ButtonContainer>
       </form>
-
-      <S.ContainerForm>
-        {isSuccess && (
-          <S.Message>
-            <small>Obrigado! newsletter assinado com sucesso!</small>
-          </S.Message>
-        )}
-      </S.ContainerForm>
     </S.ContainerForm>
   )
 }

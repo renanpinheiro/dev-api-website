@@ -13,3 +13,6 @@ yarn install
 # Start local development
 yarn dev
 ```
+# Variables local development
+Use a .env.local file for development use.
+...

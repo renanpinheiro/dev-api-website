@@ -13,10 +13,6 @@ export const PrivacyPolicy = styled.div`
   @media (max-width: 992px) {
     margin-top: 6.25rem;
   }
-
-  @media (min-width: 1200px) {
-    margin-top: 7.813rem;
-  }
 `
 
 export const HeroUp = styled.div`

@@ -1,4 +1,5 @@
 export interface IValuesForm {
+  name: string
   email: string
   notifications: string
   policy: string
