@@ -3,6 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import * as S from '../../styles/termsOfUse'
+import { Hero } from '../../components/Hero'
 
 const UseTerm = () => {
   return (

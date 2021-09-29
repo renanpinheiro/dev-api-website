@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 import { IColProps } from './Footer.interfaces'
 export const FooterContainer = styled.div`
+  z-index: 4;
   width: 100%;
   height: auto;
   padding: 60px 8vw 70px 8vw;
