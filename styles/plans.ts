@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 import { theme } from './theme'
-export const Container = styled.div``
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10vh 0 20vh 0;
+`
 export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;

@@ -1,15 +1,21 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import React from 'react'
 import { Hero } from '../../components/Hero'
 import * as S from '../../styles/plans'
+import { cardPlanItems } from '../../constants/cardPlanItems'
+import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
+import { CardPlans } from '../../components/CardPlans'
 const Plans = () => {
+  const cards: ICardPlanItems[] = cardPlanItems
+
   return (
     <>
       <Head>
         <title>DevApi – Planos personalizados para você!</title>
         <meta
           property="og:title"
-          content="DevApi – Plataforma de Gerenciamento de APIs"
+          content="Planos personalizados para você | DevApi"
           key="title"
         />
         <meta
@@ -32,6 +38,9 @@ const Plans = () => {
           </p>
         </S.HeroContent>
       </Hero>
+      <S.Container>
+        <CardPlans cards={cards} />
+      </S.Container>
     </>
   )
 }

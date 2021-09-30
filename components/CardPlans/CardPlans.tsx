@@ -6,6 +6,11 @@ import * as S from './CardPlan.style'
 import { ICardPlanItems } from './CardPlans.interface'
 
 const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
+  const hangleStrongNumberText = (text: string) => {
+    const splitText = text.split(':')
+
+    return <span>{{ splitText }}</span>
+  }
   const handleURL = (url: string) => {
     location.href = url
   }
@@ -19,6 +24,7 @@ const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
               <S.TextContainer>
                 <S.Title>{item.title}</S.Title>
                 <S.Text>{item.text}</S.Text>
+                <S.MiddleText>{item.middleText}</S.MiddleText>
               </S.TextContainer>
               <S.ButtonContainer>
                 <S.SubText>{item.subText}</S.SubText>
@@ -37,4 +43,4 @@ const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
   )
 }
 
-export default CardPlans
+export { CardPlans }

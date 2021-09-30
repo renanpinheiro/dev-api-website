@@ -1,16 +1,21 @@
 import styled from 'styled-components'
+import { theme } from '../../styles/theme'
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
 `
 
 export const CardsContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 85vw;
   border-radius: 8px;
-  box-shadow: 0px 6px 28px #2c2d6636;
 `
 export const Cards = styled.div`
   display: flex;
@@ -20,14 +25,19 @@ export const Cards = styled.div`
   line-height: 1;
   text-align: center;
   background-color: white;
+  background-image: url('/backgrounds/card-plan-bg.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
   border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 28px #2c2d6636;
   transition: transform 1s;
   transform: translateX(0) scale(1);
 
   :hover,
   :focus {
     z-index: 9;
-    background-image: url('static/images/cardPlansImages/card-plan-bg.svg');
+    background-image: url('/backgrounds/card-plan-bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 8px;
@@ -68,9 +78,10 @@ export const Icon = styled.img`
 `
 
 export const Title = styled.h2`
+  padding: 3rem 0 1rem 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: ${props => props.theme.colors.primary};
+  color: ${theme.colors.primary};
   text-transform: uppercase;
   letter-spacing: 7px;
 
@@ -92,18 +103,28 @@ export const Title = styled.h2`
 `
 
 export const Text = styled.p`
+  padding: 0 0 1rem 0;
   font-size: 1em;
-  color: ${props => props.theme.colors.primary};
-
+  color: ${theme.colors.primary};
   @media (min-width: 1920px) {
     font-size: 1.3em;
   }
 `
 
 export const SubText = styled.p`
+  padding-bottom: 1rem;
   margin: 0;
-  font-size: 1em;
-  color: ${props => props.theme.colors.gray[600]};
+  font-size: 1.3em;
+  color: ${theme.colors.gray[900]};
+`
+export const MiddleText = styled.p`
+  padding: 2rem 0 1rem 0;
+  margin: 0;
+  font-size: 1.2em;
+  color: ${theme.colors.gray[900]};
+  span {
+    font-weight: 700;
+  }
 `
 export const TextContainer = styled.div`
   padding: 0rem 0.6rem;
@@ -122,10 +143,10 @@ export const TextContainer = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0rem 2rem 1.5rem 2rem;
+  padding: 0 2rem 1.5rem 2rem;
 
   @media (min-width: 900px) {
     padding: 0rem 1rem 1.5rem 1rem;
