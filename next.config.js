@@ -7,7 +7,7 @@ module.exports = withImages({
 module.exports = {
   reactStrictMode: true,
   env: {
-    NEXT_PUBLIC_RDSTATION: process.env.NEXT_PUBLIC_RDSTATION,
-    NEXT_PUBLIC_KEY: process.env.NEXT_PUBLIC_KEY,
+    NEXT_PUBLIC_API_RDSTATION: process.env.NEXT_PUBLIC_API_RDSTATION,
+    NEXT_PUBLIC_KEY_RDSTATION: process.env.NEXT_PUBLIC_KEY_RDSTATION,
   },
 }
