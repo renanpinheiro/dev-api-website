@@ -59,8 +59,8 @@ const Home = () => {
             items={connectorsMobile}
             title={
               <S.CarrouselTitle>
-                Empresas que ja desbloquearam o{' '}
-                <span>poder da integração de sistemas.</span>
+                Mais de 300 conectores pré-construídos{' '}
+                <span>e prontos para uso.</span>
               </S.CarrouselTitle>
             }
           />
@@ -70,8 +70,8 @@ const Home = () => {
             items={connectors}
             title={
               <S.CarrouselTitle>
-                Empresas que ja desbloquearam o{' '}
-                <span>poder da integração de sistemas.</span>
+                Mais de 300 conectores pré-construídos{' '}
+                <span>e prontos para uso.</span>
               </S.CarrouselTitle>
             }
           />
