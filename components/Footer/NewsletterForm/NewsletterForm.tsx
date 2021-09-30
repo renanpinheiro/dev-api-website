@@ -7,7 +7,7 @@ import { theme } from '../../../styles/theme'
 import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
 
 const NewsletterForm = () => {
-  const api = axios.create({
+  const RDapi = axios.create({
     baseURL: process.env.NEXT_PUBLIC_RDSTATION,
   })
 
@@ -36,14 +36,11 @@ const NewsletterForm = () => {
       },
     }
 
-    api
-      .post<IRdStationResponse>(process.env.NEXT_PUBLIC_KEY, payloadRD)
+    RDapi.post<IRdStationResponse>(process.env.NEXT_PUBLIC_KEY, payloadRD)
       .then(response => {
-        console.log(response.status)
         setIsSuccess(true)
       })
       .catch(error => {
-        console.log(error)
         setIsSuccess(false)
       })
   }
@@ -58,7 +55,6 @@ const NewsletterForm = () => {
       },
       validationSchema: handleValidation,
       onSubmit: (values: IValuesForm) => {
-        alert('submit')
         handleAPI(values)
 
         setTimeout(() => {
@@ -69,26 +65,26 @@ const NewsletterForm = () => {
   return (
     <S.ContainerForm>
       <S.ContainerMessage>
-        {touched.notifications && errors.notifications ? (
+        {touched.notifications && errors.notifications && (
           <S.Message color={theme.colors.red[100]}>
             <small>{errors.notifications}</small>
           </S.Message>
-        ) : null}
-        {touched.policy && errors.policy ? (
+        )}
+        {touched.policy && errors.policy && (
           <S.Message color={theme.colors.red[100]}>
             <small>{errors.policy}</small>
           </S.Message>
-        ) : null}
-        {touched.email && errors.email ? (
+        )}
+        {touched.email && errors.email && (
           <S.Message color={theme.colors.red[100]}>
             <small>{errors.email}</small>
           </S.Message>
-        ) : null}
-        {touched.name && errors.name ? (
+        )}
+        {touched.name && errors.name && (
           <S.Message color={theme.colors.red[100]}>
             <small>{errors.name}</small>
           </S.Message>
-        ) : null}
+        )}
         {isSuccess && (
           <S.Message>
             <small>

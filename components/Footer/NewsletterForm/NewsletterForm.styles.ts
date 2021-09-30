@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 import { theme } from '../../../styles/theme'
-interface IColorNotification {
-  color?: string
-}
+import { IColorNotificationStyle } from './NewsletterForm.interfaces'
 export const ContainerForm = styled.div`
   display: flex;
   flex-direction: column;
@@ -114,7 +112,7 @@ export const ButtonNewsLetter = styled.button`
     border: 1px solid ${theme.colors.green[200]};
   }
 `
-export const Message = styled.div`
+export const Message = styled.div<IColorNotificationStyle>`
   padding: 10px;
   > small {
     font-size: 1rem;

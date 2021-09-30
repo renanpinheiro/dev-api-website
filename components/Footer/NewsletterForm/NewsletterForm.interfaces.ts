@@ -13,3 +13,6 @@ export interface IRdPayload {
   conversion_identifier: string
   email: string
 }
+export interface IColorNotificationStyle {
+  color?: string
+}
