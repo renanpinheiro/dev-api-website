@@ -19,7 +19,7 @@ const Dropdown = ({ children, isOpen, dropdownItems }: IDropdownProps) => {
             return (
               <DropdownItemContainer key={index}>
                 <Link href={item.url} activeClassName="active">
-                  <DropdownItem>{item.name}</DropdownItem>
+                  <DropdownItem id={`${index}`}>{item.name}</DropdownItem>
                 </Link>
               </DropdownItemContainer>
             )

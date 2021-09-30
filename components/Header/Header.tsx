@@ -23,8 +23,21 @@ const Header = () => {
     }
   }
 
+  const handleClickOutSide = event => {
+    const element = event.target
+    const id = element.getAttribute('id')
+    if (!id) {
+      setOpenDropdown(undefined)
+    }
+  }
+
+  useEffect(() => {
+    setOpenDropdown(undefined)
+  }, [router.asPath])
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
+    window.addEventListener('mousedown', handleClickOutSide)
   })
 
   const handleOpenDropdown = index => {
