@@ -153,8 +153,8 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
   content: ' ';
   &:after {
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
 
     color: #00bff0;
 
@@ -171,8 +171,8 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
     justify-content: center;
     width: 18px;
     height: 18px;
-    padding-right: 2px;
-    font-size: 20px;
+
+    font-size: 15px;
     color: ${theme.colors.gray[100]};
     cursor: pointer;
     content: '✓';
