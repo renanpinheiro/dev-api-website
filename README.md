@@ -13,3 +13,8 @@ yarn install
 # Start local development
 yarn dev
 ```
+
+# Variables local development
+
+Use the .env.local file to generate the API that will be used to register the Newsletter form.
+...

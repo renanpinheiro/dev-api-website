@@ -13,10 +13,6 @@ export const PrivacyPolicy = styled.div`
   @media (max-width: 992px) {
     padding-top: 6.25rem;
   }
-
-  @media (min-width: 1200px) {
-    padding-top: 7.813rem;
-  }
 `
 
 export const HeroUp = styled.div`
