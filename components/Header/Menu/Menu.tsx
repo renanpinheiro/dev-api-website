@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { VscChromeClose } from 'react-icons/vsc'
 
 import { useRouter } from 'next/router'
@@ -12,6 +12,16 @@ import { BiPlus } from 'react-icons/bi'
 import { theme } from '../../../styles/theme'
 
 const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
+  const [openCollapse, setOpenCollapse] = useState('0')
+
+  const handleClickCollapse = (index: string) => {
+    if (index !== openCollapse) {
+      setOpenCollapse(index)
+    } else {
+      setOpenCollapse('')
+    }
+  }
+
   return (
     <>
       <S.Overlay isOverlay={isOpen} />
@@ -36,9 +46,13 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
                 return (
                   <React.Fragment key={index}>
                     {link.dropDown ? (
-                      <S.Accordion defaultActiveKey="0">
+                      <S.Accordion activeKey={openCollapse}>
                         <S.Card>
-                          <S.CardHeader>
+                          <S.CardHeader
+                            onClick={() =>
+                              handleClickCollapse(index.toString())
+                            }
+                          >
                             <S.Title isActive={link.isActive}>
                               {link.name}
                             </S.Title>
