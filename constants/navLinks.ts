@@ -26,7 +26,7 @@ export const navLinks = [
     dropDown: [
       {
         name: 'Gestão',
-        url: '/teste',
+        url: '/gestao',
         isActive: false,
       },
       {
@@ -104,7 +104,7 @@ export const navLinks = [
     dropDown: [
       {
         name: 'Sobre',
-        url: '/sobre',
+        url: '/nosso-time',
         isActive: false,
       },
       {
@@ -127,7 +127,7 @@ export const navLinks = [
   },
   {
     name: 'Planos',
-    url: '/plans',
+    url: '/planos',
     isActive: false,
   },
 ]

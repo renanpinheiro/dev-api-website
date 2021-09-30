@@ -11,7 +11,7 @@ export const PrivacyPolicy = styled.div`
   height: auto;
 
   @media (max-width: 992px) {
-    margin-top: 6.25rem;
+    padding-top: 6.25rem;
   }
 `
 
