@@ -3,7 +3,7 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
 import * as S from './NewsletterForm.styles'
-import { theme } from '../../../styles/theme'
+
 import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
 import { Button } from '../../Button'
 const NewsletterForm = () => {
@@ -18,8 +18,8 @@ const NewsletterForm = () => {
   const handleValidation = Yup.object().shape({
     name: Yup.string().required('false'),
     email: Yup.string().email('false').required('false'),
-    notifications: Yup.boolean().required('false').oneOf([true], 'true'),
-    policy: Yup.boolean().required('false').oneOf([true], 'true'),
+    isNotifications: Yup.boolean().required('false').oneOf([true], 'true'),
+    isPolicy: Yup.boolean().required('false').oneOf([true], 'true'),
   })
 
   const handleAPI = (values: IValuesForm) => {
@@ -52,8 +52,8 @@ const NewsletterForm = () => {
     initialValues: {
       name: '',
       email: '',
-      notifications: false,
-      policy: false,
+      isNotifications: false,
+      isPolicy: false,
     },
 
     validationSchema: handleValidation,
@@ -102,8 +102,8 @@ const NewsletterForm = () => {
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
               checked={checkedNotification}
-              name="notifications"
-              value={String(values.notifications)}
+              name="isNotifications"
+              value={String(values.isNotifications)}
               onChange={handleChange}
               onClick={() => setCheckedNotification(!checkedNotification)}
             />
@@ -113,8 +113,8 @@ const NewsletterForm = () => {
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
               checked={checkedPolicy}
-              name="policy"
-              value={String(values.policy)}
+              name="isPolicy"
+              value={String(values.isPolicy)}
               onChange={handleChange}
               onClick={() => setCheckedPolicy(!checkedPolicy)}
             />
