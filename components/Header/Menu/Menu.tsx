@@ -24,8 +24,6 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
 
   return (
     <>
-      <S.Overlay isOverlay={isOpen} />
-
       <S.Menu isOpen={isOpen}>
         <S.Container>
           <S.Close onClick={close}>

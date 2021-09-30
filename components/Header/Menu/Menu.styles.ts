@@ -11,18 +11,6 @@ import {
   Card as CardBootstrap,
 } from 'react-bootstrap'
 
-export const Overlay = styled.div<IMenuOverlayProps>`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1005;
-  width: 100%;
-  height: 100vh;
-  visibility: ${props => (props.isOverlay ? 'visible' : 'hidden')};
-  background: #06071a;
-  opacity: ${props => (props.isOverlay ? 0.5 : 0)};
-`
-
 export const Menu = styled.div<IMenuContainerProps>`
   position: fixed;
   top: 0;
@@ -35,7 +23,7 @@ export const Menu = styled.div<IMenuContainerProps>`
   padding: 7rem 3rem 3rem 3rem;
   text-align: left;
   background-color: white;
-  background-image: url('/backgrounds/bg-menu.svg');
+  background-image: url('/masks/devapi.svg');
   background-position: center;
   background-size: cover;
   transition: transform 0.3s ease-in-out;
