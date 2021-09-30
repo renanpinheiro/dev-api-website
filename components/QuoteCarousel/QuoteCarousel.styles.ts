@@ -16,10 +16,10 @@ export const Carrousel = styled(Slider)`
 
       & > div {
         @media (max-width: 996px) {
-          height: 100%;
           width: 100% !important;
-          padding-left: 1.25rem;
+          height: 100%;
           padding-right: 1.25rem;
+          padding-left: 1.25rem;
         }
 
         & > div {
@@ -33,29 +33,29 @@ export const Carrousel = styled(Slider)`
 `
 
 export const QuoteContainer = styled.div`
-  width: 75rem;
-  height: 250px;
-  background-color: ${theme.colors.secondary};
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/backgrounds/devapi-bg-secondary.svg');
+  width: 75rem;
+  height: 250px;
   padding: 2vh 5vh 2vh 20vh;
+  background-color: ${theme.colors.secondary};
+  background-image: url('/backgrounds/devapi-bg-secondary.svg');
 
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
 
   @media (min-width: 1024px) and (max-width: 1366px) {
-    height: auto;
     width: 100%;
+    height: auto;
   }
 
   @media only screen and (max-width: 1023px) {
-    height: auto;
     width: 100%;
-    margin-top: 10vh;
+    height: auto;
     padding: 2vh 2vw 2vh 2vh;
+    margin-top: 10vh;
   }
 `
 
@@ -64,8 +64,8 @@ export const QuoteTexts = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  line-height: 1;
   height: 100%;
+  line-height: 1;
 
   @media (min-width: 1600px) and (max-width: 1920px) {
     padding: 1vw;
@@ -86,8 +86,8 @@ export const QuotationMark = styled.img`
   @media (min-width: 1336px) and (max-width: 1600px) {
     width: 30px;
     height: 30px;
-    margin-bottom: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 996px) {
@@ -99,10 +99,10 @@ export const QuotationMark = styled.img`
 
 export const Quote = styled.p`
   margin: 0;
-  color: ${theme.colors.white};
+  margin-bottom: 20px;
   font-size: 1.7rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: ${theme.colors.white};
 
   @media (min-width: 1336px) and (max-width: 1600px) {
     font-size: 1.5rem;
@@ -116,8 +116,8 @@ export const Quote = styled.p`
 
 export const Name = styled.p`
   margin: 0;
-  color: ${theme.colors.white};
   font-size: 1.125rem;
+  color: ${theme.colors.white};
 
   @media only screen and (max-width: 800px) {
     margin-bottom: 2vh;
@@ -127,12 +127,12 @@ export const Name = styled.p`
 `
 
 export const IconContainer = styled.div`
+  position: absolute;
+  top: 10%;
+  left: -3%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: -3%;
-  top: 10%;
 
   @media (min-width: 1440px) and (max-width: 1600px) {
     left: -5%;
@@ -183,11 +183,11 @@ export const Icon = styled.img`
 `
 
 export const CircleDetail = styled.div`
-  height: 100%;
-  width: 100%;
-  border: 2px solid ${theme.colors.primary};
   position: absolute;
-  border-radius: 50%;
-  z-index: 9;
   right: 7%;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  border: 2px solid ${theme.colors.primary};
+  border-radius: 50%;
 `
