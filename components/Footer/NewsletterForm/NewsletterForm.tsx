@@ -8,7 +8,7 @@ import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
 
 const NewsletterForm = () => {
   const RDapi = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_RDSTATION,
+    baseURL: process.env.NEXT_PUBLIC_API_RDSTATION,
   })
 
   const [isSuccess, setIsSuccess] = useState(false)
@@ -31,12 +31,15 @@ const NewsletterForm = () => {
       event_type: 'CONVERSION',
       event_family: 'CDP',
       payload: {
-        conversion_identifier: 'newsletter-devapi',
+        conversion_identifier: 'newsletter-devapi (site novo)',
         email: values.email,
       },
     }
 
-    RDapi.post<IRdStationResponse>(process.env.NEXT_PUBLIC_KEY, payloadRD)
+    RDapi.post<IRdStationResponse>(
+      `?api_key=${process.env.NEXT_PUBLIC_KEY_RDSTATION}`,
+      payloadRD,
+    )
       .then(response => {
         setIsSuccess(true)
       })
@@ -88,7 +91,7 @@ const NewsletterForm = () => {
         {isSuccess && (
           <S.Message>
             <small>
-              'Obrigado!{values.name} newsletter assinado com sucesso!'
+              Obrigado! {values.name} newsletter assinado com sucesso.'
             </small>
           </S.Message>
         )}
