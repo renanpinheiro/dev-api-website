@@ -1,8 +1,8 @@
 export interface IValuesForm {
   name: string
   email: string
-  notifications: string
-  policy: string
+  notifications: boolean
+  policy: boolean
 }
 export interface IRdStationResponse {
   event_type: string
