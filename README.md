@@ -1,15 +1,29 @@
 # website
 
-DevApi website.
+Website DevApi.
 
-### Running locally
+## Installation
 
-To develop the website locally, you'll want to run the development server:
+```bash
+$ yarn
+```
+
+## Running local
+
+```bash
+$ yarn start:dev
+```
+
+## Build
+
+```bash
+$ yarn build
+```
+
+## Variables local development
+
+Copy .env.local.example to .env.local and modify according to your environment
 
 ```sh
-# Install the dependencies
-yarn install
-
-# Start local development
-yarn dev
+cp .env.local.example .env.local
 ```

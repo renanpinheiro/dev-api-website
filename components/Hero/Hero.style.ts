@@ -1,112 +1,121 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { theme } from '../../styles/theme'
-import { IHeroCircleStyle, IHeroStyles } from './Hero.interface'
-
-const circleAnimation = (translate: string) => {
-  return keyframes`
-      from {
-        transform: rotate(0deg) translate(${translate}) rotate(-0deg);
-  
-      }
-      to {
-        transform: rotate(360deg) translate(${translate}) rotate(-360deg);
-      }
-    `
-}
 
 export const Container = styled.div`
   position: relative;
   height: 80vh;
-  max-height: 80vh;
+  padding-top: 5vh;
   background-color: ${theme.colors.gray[100]};
 `
 
-export const BackgroundCircleContainer = styled.div`
-  position: absolute;
-  bottom: 350px;
-  left: 40vw;
-  z-index: 3;
-  background-color: white;
-  transform: scale(1);
+// const circleAnimation = (translate: string) => {
+//   return keyframes`
+//       from {
+//         transform: rotate(0deg) translate(${translate}) rotate(-0deg);
 
-  @media (max-width: 1200px) {
-    bottom: 555px;
-    left: 0;
+//       }
+//       to {
+//         transform: rotate(360deg) translate(${translate}) rotate(-360deg);
+//       }
+//     `
+// }
 
-    transform: scale(0.8);
-  }
+/* export const Container = styled.div`
+  position: relative;
+  height: 80vh;
+  padding-top: 5vh;
+  background-color: ${theme.colors.gray[100]};
 
-  @media (max-width: 500px) {
-    bottom: 555px;
-    left: 0;
+  max-height: 80vh;
+  background-color: ${theme.colors.gray[100]};
+` */
 
-    transform: scale(0.5);
-  }
-`
+// export const BackgroundCircleContainer = styled.div`
+//   position: absolute;
+//   bottom: 350px;
+//   left: 40vw;
+//   z-index: 3;
+//   background-color: white;
+//   transform: scale(1);
 
-export const CircleContainer = styled.div<IHeroStyles>`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+//   @media (max-width: 1200px) {
+//     bottom: 555px;
+//     left: 0;
 
-  z-index: 2;
+//     transform: scale(0.8);
+//   }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+//   @media (max-width: 500px) {
+//     bottom: 555px;
+//     left: 0;
 
-  width: ${props => props.width};
-  height: ${props => props.height};
+//     transform: scale(0.5);
+//   }
+// `
 
-  margin: auto;
-  border: 2px solid ${theme.colors.gray[400]};
-  border-radius: 50%;
-`
+// export const CircleContainer = styled.div<IHeroStyles>`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
 
-export const Circle = styled.div<IHeroCircleStyle>`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+//   z-index: 2;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
-  margin: auto;
-  overflow: hidden;
+//   width: ${props => props.width};
+//   height: ${props => props.height};
 
-  border-radius: 50%;
-  animation: ${props => circleAnimation(props.position)} ${props => props.timer}
-    linear infinite;
+//   margin: auto;
+//   border: 2px solid ${theme.colors.gray[400]};
+//   border-radius: 50%;
+// `
 
-  ${props =>
-    props.type === 'default'
-      ? css`
-          width: 50px;
-          height: 50px;
+// export const Circle = styled.div<IHeroCircleStyle>`
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
 
-          padding: 4px;
-          background-color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
 
-          border: 2px solid ${theme.colors.gray[400]};
+//   margin: auto;
+//   overflow: hidden;
 
-          img {
-            height: 80%;
-          }
-        `
-      : css`
-          width: 20px;
-          height: 20px;
-          background-color: ${theme.colors.gray[500]};
-          border: 2px solid ${theme.colors.gray[500]};
-        `}
-`
+//   border-radius: 50%;
+//   animation: ${props => circleAnimation(props.position)} ${props => props.timer}
+//     linear infinite;
 
-export const Logo = styled.img`
-  height: 30%;
-  margin-bottom: 15px;
-`
+//   ${props =>
+//     props.type === 'default'
+//       ? css`
+//           width: 50px;
+//           height: 50px;
+
+//           padding: 4px;
+//           background-color: white;
+
+//           border: 2px solid ${theme.colors.gray[400]};
+
+//           img {
+//             height: 80%;
+//           }
+//         `
+//       : css`
+//           width: 20px;
+//           height: 20px;
+//           background-color: ${theme.colors.gray[500]};
+//           border: 2px solid ${theme.colors.gray[500]};
+//         `}
+// `
+
+// export const Logo = styled.img`
+//   height: 30%;
+//   margin-bottom: 15px;
+// `

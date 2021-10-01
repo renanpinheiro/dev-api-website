@@ -1,4 +1,3 @@
-/* eslint-disable no-irregular-whitespace */
 import React from 'react'
 
 import Head from 'next/head'
