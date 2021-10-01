@@ -4,6 +4,7 @@ export interface IButtonProps {
   size: 'small' | 'default' | 'large'
   onClick?: () => void
   margin?: string
+  isDisabled?: boolean
 }
 
 export interface IButtonStyle {

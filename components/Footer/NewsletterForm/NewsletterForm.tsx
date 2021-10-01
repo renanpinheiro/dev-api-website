@@ -3,27 +3,23 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
 import * as S from './NewsletterForm.styles'
-import { theme } from '../../../styles/theme'
-import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
 
+import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
+import { Button } from '../../Button'
 const NewsletterForm = () => {
   const RDapi = axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_RDSTATION,
   })
 
   const [isSuccess, setIsSuccess] = useState(false)
+  const [checkedNotification, setCheckedNotification] = useState(false)
+  const [checkedPolicy, setCheckedPolicy] = useState(false)
 
   const handleValidation = Yup.object().shape({
-    name: Yup.string().required('O Nome é obrigatório.'),
-    email: Yup.string()
-      .email('Email inválido.')
-      .required('O Email é obrigatório.'),
-    notifications: Yup.string().required(
-      'Você não concordou em receber as notificações',
-    ),
-    policy: Yup.string().required(
-      'Você não concordou com a Política de privacidade',
-    ),
+    name: Yup.string().required('false'),
+    email: Yup.string().email('false').required('false'),
+    isNotifications: Yup.boolean().required('false').oneOf([true], 'true'),
+    isPolicy: Yup.boolean().required('false').oneOf([true], 'true'),
   })
 
   const handleAPI = (values: IValuesForm) => {
@@ -48,46 +44,38 @@ const NewsletterForm = () => {
       })
   }
 
-  const { handleSubmit, handleChange, values, errors, touched, setSubmitting } =
-    useFormik({
-      initialValues: {
-        name: '',
-        email: '',
-        notifications: '',
-        policy: '',
-      },
-      validationSchema: handleValidation,
-      onSubmit: (values: IValuesForm) => {
-        handleAPI(values)
+  const {
+    handleSubmit,
+    handleChange,
+    resetForm,
+    values,
+    isValid,
+    setSubmitting,
+  } = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      isNotifications: false,
+      isPolicy: false,
+    },
 
-        setTimeout(() => {
-          setSubmitting(false)
-        }, 3000)
-      },
-    })
+    validationSchema: handleValidation,
+    validateOnMount: true,
+
+    onSubmit: (values: IValuesForm) => {
+      handleAPI(values)
+
+      setTimeout(() => {
+        setSubmitting(false)
+        resetForm({})
+        setCheckedNotification(false)
+        setCheckedPolicy(false)
+      }, 2000)
+    },
+  })
   return (
     <S.ContainerForm>
       <S.ContainerMessage>
-        {touched.notifications && errors.notifications && (
-          <S.Message color={theme.colors.red[100]}>
-            <small>{errors.notifications}</small>
-          </S.Message>
-        )}
-        {touched.policy && errors.policy && (
-          <S.Message color={theme.colors.red[100]}>
-            <small>{errors.policy}</small>
-          </S.Message>
-        )}
-        {touched.email && errors.email && (
-          <S.Message color={theme.colors.red[100]}>
-            <small>{errors.email}</small>
-          </S.Message>
-        )}
-        {touched.name && errors.name && (
-          <S.Message color={theme.colors.red[100]}>
-            <small>{errors.name}</small>
-          </S.Message>
-        )}
         {isSuccess && (
           <S.Message>
             <small>
@@ -118,18 +106,22 @@ const NewsletterForm = () => {
         <S.CheckboxContainer>
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
-              name="notifications"
-              value={values.notifications}
+              checked={checkedNotification}
+              name="isNotifications"
+              value={String(values.isNotifications)}
               onChange={handleChange}
+              onClick={() => setCheckedNotification(!checkedNotification)}
             />
             <S.LabelCheckBox>Concordo em receber comunicações</S.LabelCheckBox>
           </S.CheckboxCol>
 
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
-              name="policy"
-              value={values.policy}
+              checked={checkedPolicy}
+              name="isPolicy"
+              value={String(values.isPolicy)}
               onChange={handleChange}
+              onClick={() => setCheckedPolicy(!checkedPolicy)}
             />
             <S.LabelCheckBox>
               Concordo com a <span>Política de privacidade</span>
@@ -137,7 +129,12 @@ const NewsletterForm = () => {
           </S.CheckboxCol>
         </S.CheckboxContainer>
         <S.ButtonContainer>
-          <S.ButtonNewsLetter type="submit">Descobrir</S.ButtonNewsLetter>
+          <Button
+            type="default"
+            text="Descobrir"
+            size="default"
+            isDisabled={!isValid}
+          />
         </S.ButtonContainer>
       </form>
     </S.ContainerForm>

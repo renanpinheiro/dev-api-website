@@ -11,18 +11,6 @@ import {
   Card as CardBootstrap,
 } from 'react-bootstrap'
 
-export const Overlay = styled.div<IMenuOverlayProps>`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1005;
-  width: 100%;
-  height: 100vh;
-  visibility: ${props => (props.isOverlay ? 'visible' : 'hidden')};
-  background: #06071a;
-  opacity: ${props => (props.isOverlay ? 0.5 : 0)};
-`
-
 export const Menu = styled.div<IMenuContainerProps>`
   position: fixed;
   top: 0;
@@ -34,11 +22,13 @@ export const Menu = styled.div<IMenuContainerProps>`
   height: 100vh;
   padding: 7rem 3rem 3rem 3rem;
   text-align: left;
-  background-image: url('/backgrounds/bg-menu.svg');
+  background-color: white;
+  background-image: url('/masks/devapi.svg');
   background-position: center;
   background-size: cover;
   transition: transform 0.3s ease-in-out;
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+
   @media (max-width: 992px) {
     width: 100%;
     padding: 0;
@@ -125,7 +115,12 @@ export const BgCicle = styled.div`
 export const Nav = styled.div`
   height: 100%;
   padding-bottom: 60px;
-  overflow-x: auto;
+  overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
 
   > ul {
     list-style: none;
@@ -269,6 +264,9 @@ export const CardHeader = styled(CardBootstrap.Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  cursor: pointer;
+
   background-color: transparent;
   border: none;
 `
