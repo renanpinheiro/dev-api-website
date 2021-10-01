@@ -14,7 +14,7 @@ export const CarrouselTitle = styled.h2`
     font-weight: 700;
   }
 `
-export const CostumersCarrouselContainer = styled.div`
+export const CarrouselContainer = styled.div`
   width: 100%;
   padding: 0 8vw;
   background-size: 76%;

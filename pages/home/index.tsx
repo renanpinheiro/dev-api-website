@@ -6,6 +6,7 @@ import * as S from '../../styles/home'
 import dynamic from 'next/dynamic'
 import QuoteCarousel from '../../components/QuoteCarousel'
 import { quotes } from '../../constants/quotes'
+import { connectors, connectorsMobile } from '../../constants/connectors'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -27,7 +28,7 @@ const Home = () => {
 
   return (
     <S.Container>
-      <S.CostumersCarrouselContainer>
+      <S.CarrouselContainer>
         {isMobile ? (
           <CarrouselWithOutSSR
             items={constumersMobile}
@@ -50,7 +51,32 @@ const Home = () => {
             }
           />
         )}
-      </S.CostumersCarrouselContainer>
+      </S.CarrouselContainer>
+
+      <S.CarrouselContainer>
+        {isMobile ? (
+          <CarrouselWithOutSSR
+            items={connectorsMobile}
+            title={
+              <S.CarrouselTitle>
+                Mais de 300 conectores pré-construídos{' '}
+                <span>e prontos para uso.</span>
+              </S.CarrouselTitle>
+            }
+          />
+        ) : (
+          <MultiCarrouselWithOutSSR
+            interval={2000}
+            items={connectors}
+            title={
+              <S.CarrouselTitle>
+                Mais de 300 conectores pré-construídos{' '}
+                <span>e prontos para uso.</span>
+              </S.CarrouselTitle>
+            }
+          />
+        )}
+      </S.CarrouselContainer>
       <S.QuoteContainer>
         <QuoteCarousel quotes={quotes} />
       </S.QuoteContainer>
