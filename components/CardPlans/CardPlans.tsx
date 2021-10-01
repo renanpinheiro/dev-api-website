@@ -4,13 +4,8 @@ import { Button } from '../Button'
 
 import * as S from './CardPlan.style'
 import { ICardPlanItems } from './CardPlans.interface'
-
+import { MiddleText } from './MiddleText'
 const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
-  const hangleStrongNumberText = (text: string) => {
-    const splitText = text.split(':')
-
-    return <span>{{ splitText }}</span>
-  }
   const handleURL = (url: string) => {
     location.href = url
   }
@@ -24,10 +19,10 @@ const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
               <S.TextContainer>
                 <S.Title>{item.title}</S.Title>
                 <S.Text>{item.text}</S.Text>
-                <S.MiddleText>{item.middleText}</S.MiddleText>
+                <MiddleText text={item.middleText} />
+                <S.SubText>{item.subText}</S.SubText>
               </S.TextContainer>
               <S.ButtonContainer>
-                <S.SubText>{item.subText}</S.SubText>
                 <Button
                   onClick={() => handleURL(item.url)}
                   text={item.buttonText}

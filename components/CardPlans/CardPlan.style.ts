@@ -10,20 +10,29 @@ export const Container = styled.div`
 `
 
 export const CardsContainer = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
+
   align-items: center;
   justify-content: space-between;
-  width: 85vw;
+  width: 86vw;
+  height: 60vh;
   border-radius: 8px;
+
+  @media (min-width: 1600px) {
+    width: 86vw;
+  }
 `
 export const Cards = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 17vw;
+  width: 20vw;
+  height: 100%;
   line-height: 1;
   text-align: center;
+  vertical-align: middle;
   background-color: white;
   background-image: url('/backgrounds/card-plan-bg.svg');
   background-repeat: no-repeat;
@@ -61,6 +70,7 @@ export const Cards = styled.div`
       background-position-y: -4%;
     }
     @media (min-width: 1920px) {
+      height: 90%;
       background-position-y: -12%;
     }
   }
@@ -81,7 +91,7 @@ export const Title = styled.h2`
   padding: 3rem 0 1rem 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: ${theme.colors.primary};
+  color: ${theme.colors.secondary};
   text-transform: uppercase;
   letter-spacing: 7px;
 
@@ -103,9 +113,13 @@ export const Title = styled.h2`
 `
 
 export const Text = styled.p`
-  padding: 0 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 2% 0;
   font-size: 1em;
-  color: ${theme.colors.primary};
+
+  color: ${theme.colors.black};
   @media (min-width: 1920px) {
     font-size: 1.3em;
   }
@@ -117,15 +131,7 @@ export const SubText = styled.p`
   font-size: 1.3em;
   color: ${theme.colors.gray[900]};
 `
-export const MiddleText = styled.p`
-  padding: 2rem 0 1rem 0;
-  margin: 0;
-  font-size: 1.2em;
-  color: ${theme.colors.gray[900]};
-  span {
-    font-weight: 700;
-  }
-`
+
 export const TextContainer = styled.div`
   padding: 0rem 0.6rem;
 
@@ -143,7 +149,10 @@ export const TextContainer = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+
   align-items: center;
+  align-items: center;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
   padding: 0 2rem 1.5rem 2rem;
