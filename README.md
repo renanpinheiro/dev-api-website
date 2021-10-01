@@ -1,20 +1,29 @@
 # website
 
-DevApi website.
+Website DevApi.
 
-### Running locally
+## Installation
 
-To develop the website locally, you'll want to run the development server:
-
-```sh
-# Install the dependencies
-yarn install
-
-# Start local development
-yarn dev
+```bash
+$ yarn
 ```
 
-# Variables local development
+## Running local
 
-Use the .env.local file to generate the API that will be used to register the Newsletter form.
-...
+```bash
+$ yarn start:dev
+```
+
+## Build
+
+```bash
+$ yarn build
+```
+
+## Variables local development
+
+Copy .env.local.example to .env.local and modify according to your environment
+
+```sh
+cp .env.local.example .env.local
+```

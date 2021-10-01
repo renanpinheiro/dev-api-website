@@ -15,11 +15,15 @@ const Carrousel = ({ items, title }: ICarrouselProps) => {
         {items[width >= 768 ? 3 : 2].map((item, index) => {
           return (
             <S.Item key={index} interval={2000}>
-              <S.ImageContainer>
+              <S.ItemContainer>
                 {Object.entries(item).map(([key, value]) => {
-                  return <img key={key} src={value} />
+                  return (
+                    <S.ImageContainer>
+                      <img key={key} src={value} />
+                    </S.ImageContainer>
+                  )
                 })}
-              </S.ImageContainer>
+              </S.ItemContainer>
             </S.Item>
           )
         })}
