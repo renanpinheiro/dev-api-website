@@ -36,7 +36,7 @@ const Home = () => {
             title={
               <S.CarrouselTitle>
                 Empresas que ja desbloquearam o{' '}
-                <span>poder da integração de sistemas.</span>
+                <span>poder da integração de sistemas</span>
               </S.CarrouselTitle>
             }
           />
@@ -47,7 +47,7 @@ const Home = () => {
             title={
               <S.CarrouselTitle>
                 Empresas que ja desbloquearam o{' '}
-                <span>poder da integração de sistemas.</span>
+                <span>poder da integração de sistemas</span>
               </S.CarrouselTitle>
             }
           />

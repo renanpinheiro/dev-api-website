@@ -18,7 +18,7 @@ const Characteristics = () => {
           <S.HeroContent>
             <S.Pipe />
             <h1>
-              <span>Plataforma de integração</span> IPaaS & API Manager
+              <span>Plataforma de integração</span> iPaaS & API Manager
             </h1>
             <p>
               Uma plataforma construída para escalar sua empresa sem limites.
