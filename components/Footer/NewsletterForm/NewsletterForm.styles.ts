@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { theme } from '../../../styles/theme'
+
 import { IColorNotificationStyle } from './NewsletterForm.interfaces'
+
 export const ContainerForm = styled.div`
   display: flex;
   flex-direction: column;
@@ -51,48 +53,37 @@ export const ContainerMessage = styled.div`
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-
   align-items: center;
   width: 100%;
-  height: 60px;
-
+  height: 50px;
   margin: 10px;
 `
-export const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
 
-  align-items: flex-start;
-  width: 100%;
-  height: 60px;
-
-  margin: 10px;
-`
 export const InputNewsletter = styled.input`
   width: 100%;
   height: 100%;
   padding: 0.75rem 0.75rem;
-
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-
   color: ${theme.colors.gray[800]};
-
   background-color: white;
   background-clip: padding-box;
   border: 1px solid ${theme.colors.gray[500]};
-
   border-radius: 5px;
   outline: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     -webkit-box-shadow 0.15s ease-in-out;
-
-  &:focus {
-    border: 1px solid ${theme.colors.green[100]};
-    border-right: 0;
-  }
 `
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 50px;
+  margin: 10px;
+`
+
 export const ButtonNewsLetter = styled.button`
   display: flex;
   align-items: center;
@@ -112,6 +103,7 @@ export const ButtonNewsLetter = styled.button`
     border: 1px solid ${theme.colors.green[200]};
   }
 `
+
 export const Message = styled.div<IColorNotificationStyle>`
   padding: 10px;
   > small {
@@ -119,6 +111,7 @@ export const Message = styled.div<IColorNotificationStyle>`
     color: ${props => props.color || theme.colors.green[100]};
   }
 `
+
 export const CheckboxContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -126,6 +119,7 @@ export const CheckboxContainer = styled.div`
   width: 100%;
   height: auto;
 `
+
 export const CheckboxCol = styled.div`
   display: flex;
   flex-direction: row;
@@ -134,23 +128,32 @@ export const CheckboxCol = styled.div`
   padding: 5px 0 10px 10px;
   cursor: pointer;
 `
+
 export const LabelCheckBox = styled.label`
   padding-left: 10px;
   font-size: 18px;
   color: ${theme.colors.white};
   text-align: left;
-  span {
-    font-style: italic;
+
+  > a {
+    color: #fff;
     font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease-out 0s;
+
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
   }
 `
+
 export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
   width: 18px;
   height: 18px;
-
   font-size: 17px;
   visibility: hidden;
   content: ' ';
+
   &:after {
     display: inline-block;
     width: 18px;
@@ -165,6 +168,7 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
     border: 1px solid ${theme.colors.gray[500]};
     border-radius: 3px;
   }
+
   &:checked:after {
     display: flex;
     align-items: center;
@@ -175,8 +179,6 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
     font-size: 15px;
     color: ${theme.colors.gray[100]};
     cursor: pointer;
-    content: '✓';
-
     background-color: ${theme.colors.primary};
   }
 `
