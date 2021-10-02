@@ -1,192 +1,94 @@
 import styled from 'styled-components'
+import { theme } from './theme'
 
-interface IMarginProps {
-  margin?: string
-}
-export const PrivacyPolicy = styled.div`
+export const Container = styled.div``
+
+export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
-  height: auto;
-
-  @media (max-width: 992px) {
-    padding-top: 6.25rem;
-  }
-`
-
-export const HeroUp = styled.div`
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 41vh;
+  height: 100%;
+  padding: 25px;
   text-align: center;
-  background-image: url('/backgrounds/bg-privacy-policy.svg');
+  background-image: url('/masks/lines.svg');
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background-position: bottom;
+  background-size: contain;
 
-  @media only screen and (max-width: 2560px) and (max-height: 1600px) {
-    height: 29vh;
+  @media (max-width: 576px) {
+    align-items: flex-start;
+    padding: 25px;
+    text-align: left;
+    background-size: 100%;
   }
 
-  @media only screen and (max-width: 2560px) and (max-height: 1440px) {
-    height: 32vh;
-  }
+  h1 {
+    margin-bottom: 15px;
+    font-size: 5vh;
 
-  @media only screen and (max-width: 1920px) {
-    height: 32vh;
-  }
-
-  @media only screen and (max-width: 1440px) {
-    height: 29vh;
-  }
-
-  @media only screen and (max-width: 1366px) {
-    height: 41vh;
-  }
-
-  @media only screen and (max-width: 1280px) {
-    height: 30vh;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    height: 13vh;
-  }
-
-  @media only screen and (max-width: 760px) {
-    height: 30vh;
-    background-image: url('/backgrounds/bg-policy-privacy-mobile.svg');
-  }
-
-  & > hr {
-    align-self: center;
-    width: 131px;
-    height: 3px;
-    margin-bottom: 5px;
-    background-color: ${props => props.theme.colors.white};
-    opacity: 1;
-
-    @media only screen and (max-width: 760px) {
-      width: 90px;
-    }
-  }
-
-  & > h1 {
-    font-size: 3.75rem;
-    color: ${props => props.theme.colors.white};
-
-    @media only screen and (max-width: 760px) {
-      font-size: 1.75rem;
+    span {
+      font-weight: 400;
     }
   }
 `
-export const ContainerDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 85px 0px;
 
-  @media only screen and (max-width: 760px) {
-    margin: 45px 0px;
-  }
+export const Pipe = styled.div`
+  width: 10vh;
+  height: 3px;
+  margin-bottom: 10px;
+  background-color: ${theme.colors.secondary};
 
-  .RowDescription {
-    display: flex;
+  @media (max-width: 576px) {
+    width: 8vh;
   }
 `
-export const TitleDescription = styled.div<IMarginProps>`
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: 15px auto;
 
-  & > span {
-    margin-bottom: 5px;
-    font-size: 1.25rem;
-    font-weight: bold;
-    line-height: 26px;
-    color: ${props => props.theme.colors.primary};
+export const Content = styled.div`
+  padding: 10vh 19vw 10vh 19vw;
+  font-size: 1.25rem;
 
-    @media only screen and (max-width: 1024px) {
-      width: 80%;
-      margin: auto;
-    }
+  @media (max-width: 768px) {
+    padding: 10vh 8vw 10vh 8vw;
+    font-size: 1rem;
   }
 
-  & > p {
-    width: 100%;
-    font-size: 1.25rem;
-    line-height: 26px;
-    color: ${props => props.theme.colors.primary};
+  > strong {
+    font-weight: 900;
+  }
 
-    @media only screen and (max-width: 1024px) {
-      width: 80%;
-      margin: auto;
+  > p {
+    margin-top: 2vh;
+    line-height: 2.5vh;
+
+    > b {
+      font-weight: 900;
     }
 
-    & > b {
-      font-size: 1.25rem;
-      font-weight: bold;
-      line-height: 26px;
-      color: #2c2d66;
-    }
-
-    & > ul {
-      margin: 15px 20px;
-      list-style: none;
+    > ol {
+      padding: 1vh 1vw;
 
       > li {
-        padding-bottom: 5px;
-      }
-    }
+        padding-bottom: 1vh;
 
-    & > ol {
-      > li {
-        padding-bottom: 5px;
+        ul {
+          padding: 1vh 1vw;
 
-        & > ol {
-          & > li {
-            padding-bottom: 5px;
+          > li {
+            padding-bottom: 0.5vh;
           }
         }
       }
     }
-  }
 
-  & > ul {
-    margin: ${props => props.margin};
-    list-style: none;
+    > ul {
+      padding-left: 2vh;
+      list-style: disc;
 
-    & > span {
-      margin-bottom: 10px;
-      font-size: 1.25rem;
-      font-weight: bold;
-      line-height: 26px;
-      color: #2c2d66;
-    }
-
-    & > p {
-      margin-top: 10px;
-      & > span {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 26px;
-        color: #2c2d66;
+      > li {
+        padding-bottom: 0.5vh;
       }
-    }
-  }
-
-  & > ul p {
-    width: 100%;
-    font-size: 1.25rem;
-    line-height: 26px;
-    color: #2c2d66;
-
-    @media only screen and (max-width: 1024px) {
-      width: 80%;
-      margin: auto;
     }
   }
 `
