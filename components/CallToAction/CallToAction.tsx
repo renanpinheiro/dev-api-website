@@ -7,7 +7,7 @@ import * as S from './CallToAction.style'
 const CallToAction = () => {
   return (
     <S.Container>
-      <S.Warp>
+      <S.Wrapper>
         <S.Title>
           <hr />
           <h3>
@@ -19,7 +19,7 @@ const CallToAction = () => {
             Converse com um especialista
           </a>
         </Link>
-      </S.Warp>
+      </S.Wrapper>
     </S.Container>
   )
 }

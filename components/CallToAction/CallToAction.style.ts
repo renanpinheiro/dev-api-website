@@ -12,7 +12,7 @@ export const Container = styled.div`
   }
 `
 
-export const Warp = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-grow: 0;
   flex-shrink: 1;
