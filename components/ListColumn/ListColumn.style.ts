@@ -21,7 +21,7 @@ export const ListItem = styled.li`
 
   align-self: center;
   justify-self: center;
-  float: left;
+
   width: 90%;
   padding-left: 1rem;
 

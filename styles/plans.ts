@@ -16,7 +16,7 @@ export const HeroContent = styled.div`
   justify-content: center;
 
   width: 100%;
-  height: 90%;
+  height: 100%;
 
   padding: 25px;
 
@@ -37,12 +37,12 @@ export const HeroContent = styled.div`
   }
 
   p {
-    max-width: 65ch;
+    max-width: 90ch;
 
     margin-bottom: 15px;
 
     overflow: hidden;
-    font-size: 1.7vh;
+    font-size: 2vh;
 
     line-height: 1.7;
   }
@@ -54,6 +54,7 @@ export const HeroContent = styled.div`
     background-size: 100%;
   }
 `
+
 export const PipeContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -93,10 +94,20 @@ export const CostumersCarrouselContainer = styled.div`
 `
 
 export const QuoteContainer = styled.div`
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3vw 10vh 6vw;
 `
 
 export const FreeTestContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 8vh 0 8vh 0;
+`
+export const AcordionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,9 +152,19 @@ export const ListIntegrationTitle = styled.h2`
   color: ${theme.colors.primary};
 
   @media (max-width: 996px) {
-    font-size: 1.375rem;
+    font-size: 0.8rem;
   }
 
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 1366px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 1700px) {
+    font-size: 2.5rem;
+  }
   span {
     font-weight: 700;
   }

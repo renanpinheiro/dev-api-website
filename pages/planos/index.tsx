@@ -12,11 +12,13 @@ import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import dynamic from 'next/dynamic'
 import QuoteCarousel from '../../components/QuoteCarousel'
 import { quotes } from '../../constants/quotes'
-import { Button } from '../../components/Button'
+import { FreeTest } from '../../components/FreeTest'
 import { ListColumn } from '../../components/ListColumn'
 
 import { listIntegration } from '../../constants/listIntegration'
-import { SelectCollapsible } from '../../components/SelectCollapsible'
+import { Acordion } from '../../components/Acordion'
+
+import { commonQuestions } from '../../constants/commonQuestions'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -33,7 +35,8 @@ const MultiCarrouselWithOutSSR = dynamic(
 
 const Plans = () => {
   const cards: ICardPlanItems[] = cardPlanItems
-  const list = listIntegration
+  const listItegration = listIntegration
+  const listQuestions = commonQuestions
   const { width } = useWindowDimensions()
   const isMobile = width <= 1024
   return (
@@ -98,27 +101,12 @@ const Plans = () => {
               />
             )}
           </S.CostumersCarrouselContainer>
-          <S.FreeTestContainer>
-            <S.FreeTestRows>
-              <S.Pipe />
-              <S.FreeTest>
-                <h2>
-                  Quer testar a DevApi <span>gratuitamente?</span>
-                </h2>
-                <Button
-                  type="default"
-                  size="default"
-                  text="Converse com um especialista"
-                />
-              </S.FreeTest>
-            </S.FreeTestRows>
-          </S.FreeTestContainer>
 
           <S.QuoteContainer>
             <QuoteCarousel quotes={quotes} />
           </S.QuoteContainer>
         </S.ContainerItegration>
-
+        <FreeTest />
         <S.PipeContainer>
           <S.Pipe />
         </S.PipeContainer>
@@ -128,13 +116,11 @@ const Plans = () => {
             <span>Reduza em até 20x o tempo</span> de ter toda a sua empresa
             integrada
           </S.ListIntegrationTitle>
-          <ListColumn list={list} col={2} />
+          <ListColumn list={listIntegration} col={2} />
         </S.ListIntegrationContainer>
-
-        <SelectCollapsible
-          question="O que é a integração de sistemas?"
-          answer="A integração de sistemas faz parte do DNA da DevApi. O uso de software é uma realidade nas empresas de todos os portes. Mas como cada software se comunica de um jeito, é como se não existisse uma língua comum para que eles possam conversar entre si. A DevApi funciona como um tradutor universal entre esses diferentes sistemas. Sistemas integrados se comunicam de maneira eficiente, os dados são trafegados sem erro, os processos são otimizados e automatizados. Com a integração de sistemas você evita que informações importantes sejam duplicadas ou perdidas, uma vez que os diversos sistemas passam a estar vinculados e se tornam parte de um macrossistema. Dessa forma, com baixo investimento de tempo e esforço e sem custos de desenvolvimento para implementar, atualizar e escalar, a integração de sistemas com a DevApi se torna essencial para aumentar a eficiência operacional e a inovação nas empresas."
-        />
+        <S.AcordionContainer>
+          <Acordion list={listQuestions} />
+        </S.AcordionContainer>
       </S.Container>
     </>
   )
