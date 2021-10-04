@@ -21,7 +21,6 @@ export const Carrousel = styled.section`
 `
 
 export const CarrouselTitle = styled.h2`
-  font-size: 2.3rem;
   color: ${theme.colors.primary};
 
   @media (max-width: 996px) {
