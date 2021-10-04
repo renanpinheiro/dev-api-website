@@ -28,9 +28,9 @@ const FreeTrial = () => {
             <InputText name={'company'} label={'Empresa'} isRequired />
             <InputText name={'role'} label={'Cargo'} isRequired />
           </S.InputContainer>
-          <S.InputContainer>
-            <Button text={'Proximo'} size={'small'} type={'default'} />
-          </S.InputContainer>
+          <S.ButtonContainer>
+            <Button text={'Proximo'} size={'default'} type={'default'} />
+          </S.ButtonContainer>
         </S.Form>
       </FormikProvider>
     </S.Container>
