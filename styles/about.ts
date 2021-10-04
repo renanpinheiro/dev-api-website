@@ -127,7 +127,7 @@ export const Founders = styled.div`
 
 export const Card = styled.div`
   display: flex;
-  flex-basis: 350px;
+  flex-basis: 450px;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 1;

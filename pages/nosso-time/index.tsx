@@ -3,6 +3,8 @@ import React from 'react'
 import Head from 'next/head'
 
 import { Hero } from '../../components/Hero'
+import { CallToAction } from '../../components/CallToAction'
+
 import * as S from '../../styles/about'
 
 const About = () => {
@@ -71,6 +73,8 @@ const About = () => {
             </S.Card>
           </S.Founders>
         </S.Wrapper>
+
+        <CallToAction />
       </S.Content>
     </>
   )
