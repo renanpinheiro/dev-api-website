@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
+
+import Link from 'next/link'
+
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
-import * as S from './NewsletterForm.styles'
+
+import { Button } from '../../Button'
 
 import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
-import { Button } from '../../Button'
+
+import * as S from './NewsletterForm.styles'
+
 const NewsletterForm = () => {
   const RDapi = axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_RDSTATION,
@@ -124,7 +130,10 @@ const NewsletterForm = () => {
               onClick={() => setCheckedPolicy(!checkedPolicy)}
             />
             <S.LabelCheckBox>
-              Concordo com a <span>Política de privacidade</span>
+              Concordo com a{' '}
+              <Link href="/politica-de-privacidade">
+                Política de privacidade
+              </Link>
             </S.LabelCheckBox>
           </S.CheckboxCol>
         </S.CheckboxContainer>

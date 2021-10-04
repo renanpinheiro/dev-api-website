@@ -12,9 +12,3 @@ export interface ICarrousel {
 interface IUrl {
   [position: number]: string
 }
-
-export interface ICarouselStyle {
-  dotsMargin?: string
-  isCustomCarouselItem?: boolean
-  carouselItemStyle?: FlattenSimpleInterpolation
-}
