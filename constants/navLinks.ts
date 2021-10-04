@@ -114,7 +114,7 @@ export const navLinks = [
       },
       {
         name: 'Carreiras',
-        url: '/carreiras',
+        url: 'https://jobs.kenoby.com/tivit',
         isActive: false,
       },
       ,
