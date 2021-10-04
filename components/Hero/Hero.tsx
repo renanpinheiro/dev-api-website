@@ -1,11 +1,7 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import * as S from './Hero.style'
 
-export interface IHeroProps {
-  minHeight?: number
-  maxHeight?: number
-  children: ReactNode
-}
+import { IHeroProps } from './Hero.interface'
 
 const Hero = ({ minHeight, maxHeight, children }: IHeroProps) => {
   return (

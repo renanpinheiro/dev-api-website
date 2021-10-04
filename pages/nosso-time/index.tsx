@@ -24,7 +24,7 @@ const About = () => {
       </Hero>
 
       <S.Content>
-        <S.Warp>
+        <S.Wrapper>
           <img src="/static/images/about-connect.svg" alt="DevApi Connect" />
 
           <S.Title>
@@ -48,9 +48,9 @@ const About = () => {
               produto tech, feito de Dev para Dev!
             </p>
           </S.Text>
-        </S.Warp>
+        </S.Wrapper>
 
-        <S.Warp>
+        <S.Wrapper>
           <S.Title>
             <hr />
             <h2>
@@ -72,7 +72,7 @@ const About = () => {
               <hr />
             </S.Card>
           </S.Founders>
-        </S.Warp>
+        </S.Wrapper>
 
         <CallToAction />
       </S.Content>
