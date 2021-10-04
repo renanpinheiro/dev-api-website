@@ -25,7 +25,7 @@ export const Container = styled.div`
 `
 
 export const QuoteContainer = styled.div`
-  padding: 20px 0;
+  padding: 0 3vw 0 6vw;
 `
 export const Pipe = styled.div`
   width: 10vh;

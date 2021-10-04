@@ -1,36 +1,118 @@
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect, useState } from 'react'
+import { Circle } from '../../components/AnimatedBackground'
 import { Button } from '../../components/Button'
 import { Hero } from '../../components/Hero'
+import { ProfessionalService } from '../../components/ProfessionalService'
+import QuoteCarousel from '../../components/QuoteCarousel'
+import { constumersMobile, costumers } from '../../constants/costumers'
+import { quotes } from '../../constants/quotes'
+import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/solutions'
 
+const CarrouselWithOutSSR = dynamic(
+  () => import('../../components/Carrousel'),
+  {
+    ssr: false,
+  },
+)
+
+const MultiCarrouselWithOutSSR = dynamic(
+  () => import('../../components/MultiCarrousel/MultiCarrousel'),
+  {
+    ssr: false,
+  },
+)
+
 const Solutions = () => {
+  const { width } = useWindowDimensions()
+  const isMobile = width <= 1024
+
+  const router = useRouter().asPath
+
+  const currentPage = router.split('/')
+  const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
+
+  console.log(page)
+
   return (
     <>
       <Head>
-        <title>Integrações inteligentes para todos os setores | DevApi</title>
+        <title>{page ? page.metaTitle : 'Soluções | Devapi'}</title>
       </Head>
 
       <S.Container>
         <Hero>
-          <S.HeroContent>
-            <S.Pipe />
-            <h1>
-              <span>Plataforma de integração</span> IPaaS & API Manager
-            </h1>
-            <p>
-              Uma plataforma construída para escalar sua empresa sem limites.
-              Integração de sistemas, software e aplicativos, automatização de
-              processos e orquestração de dados com a melhor usabilidade através
-              de APIs robustas e seguras.
-            </p>
+          <Circle>
+            <S.HeroContent>
+              <S.Pipe />
+              {page ? page.title : <h1>ola</h1>}
+              {page ? page.subTitle : <p>ola</p>}
+              <Button
+                size="default"
+                text="Fale com um consultor"
+                type="default"
+              />
+            </S.HeroContent>
+          </Circle>
+        </Hero>
+        <S.Content>
+          <S.SolutionContainer>
+            <S.TextContainer>
+              <S.TitleContainer>
+                <S.Pipe />
+                {page ? page.contentTitle : <h2>ola</h2>}
+              </S.TitleContainer>
+              <S.ParagraphContainer>
+                {page ? page.contentText : <p>ola</p>}
+              </S.ParagraphContainer>
+            </S.TextContainer>
+
+            <S.IntegrationContainer></S.IntegrationContainer>
+
             <Button
               size="default"
-              text="Quero escalabilidade!"
+              text="Quero integrar agora!"
               type="default"
             />
-          </S.HeroContent>
-        </Hero>
+          </S.SolutionContainer>
+
+          <S.QuoteContainer>
+            <QuoteCarousel quotes={quotes} />
+          </S.QuoteContainer>
+
+          <S.ProfessionalServiceContainer>
+            <ProfessionalService />
+          </S.ProfessionalServiceContainer>
+
+          <S.CarrouselContainer>
+            {isMobile ? (
+              <CarrouselWithOutSSR
+                items={constumersMobile}
+                title={
+                  <S.CarrouselTitle>
+                    Empresas que ja desbloquearam o{' '}
+                    <span>poder da integração de sistemas</span>
+                  </S.CarrouselTitle>
+                }
+              />
+            ) : (
+              <MultiCarrouselWithOutSSR
+                interval={2000}
+                items={costumers}
+                title={
+                  <S.CarrouselTitle>
+                    Empresas que ja desbloquearam o{' '}
+                    <span>poder da integração de sistemas</span>
+                  </S.CarrouselTitle>
+                }
+              />
+            )}
+          </S.CarrouselContainer>
+        </S.Content>
       </S.Container>
     </>
   )

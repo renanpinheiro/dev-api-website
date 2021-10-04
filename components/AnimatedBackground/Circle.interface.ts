@@ -4,7 +4,8 @@ export interface IHeroStyles {
 }
 
 export interface IHeroCircleStyle {
-  position: string
+  position: number
+  translatePosition: string
   timer: string
   type?: string
 }

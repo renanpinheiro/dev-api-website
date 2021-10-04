@@ -5,7 +5,6 @@ import { constumersMobile, costumers } from '../../constants/costumers'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
 import dynamic from 'next/dynamic'
-import QuoteCarousel from '../../components/QuoteCarousel'
 import { quotes } from '../../constants/quotes'
 import { Button } from '../../components/Button'
 import { connectors, connectorsMobile } from '../../constants/connectors'
@@ -18,6 +17,13 @@ const CarrouselWithOutSSR = dynamic(
 )
 const MultiCarrouselWithOutSSR = dynamic(
   () => import('../../components/MultiCarrousel/MultiCarrousel'),
+  {
+    ssr: false,
+  },
+)
+
+const QuoteCarouselWithOutSSR = dynamic(
+  () => import('../../components/QuoteCarousel'),
   {
     ssr: false,
   },
@@ -96,7 +102,7 @@ const Home = () => {
         />
       </S.ActionContainer>
       <S.QuoteContainer>
-        <QuoteCarousel quotes={quotes} />
+        <QuoteCarouselWithOutSSR quotes={quotes} />
       </S.QuoteContainer>
     </S.Container>
   )
