@@ -86,12 +86,14 @@ const Header = () => {
       </S.NavBarContainer>
 
       <S.ButtonContainer>
-        <Button
-          size="default"
-          text="Teste grátis"
-          type="default"
-          margin="0 20px 0 0"
-        />
+        <Link href={'/free-trial'}>
+          <Button
+            size="default"
+            text="Teste grátis"
+            type="default"
+            margin="0 20px 0 0"
+          />
+        </Link>
         <Button size="default" text="Login" type="outline" />
       </S.ButtonContainer>
 

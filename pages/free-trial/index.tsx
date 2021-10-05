@@ -17,22 +17,44 @@ const FreeTrial = () => {
 
   return (
     <S.Container>
-      <FormikProvider value={formik}>
-        <S.Form>
-          <InputText name={'name'} label={'Nome Completo'} isRequired />
-          <S.InputContainer>
-            <InputText name={'email'} label={'Email'} isRequired />
-            <InputText name={'phone'} label={'Telefone'} isRequired />
-          </S.InputContainer>
-          <S.InputContainer>
-            <InputText name={'company'} label={'Empresa'} isRequired />
-            <InputText name={'role'} label={'Cargo'} isRequired />
-          </S.InputContainer>
-          <S.ButtonContainer>
-            <Button text={'Proximo'} size={'default'} type={'default'} />
-          </S.ButtonContainer>
-        </S.Form>
-      </FormikProvider>
+      <S.FormContainer>
+        <S.Title>Vamos desbloquear o poder da integração de sistemas?</S.Title>
+        <S.SubTitle>
+          Preencha os campos abaixo para que possamos entrar em contato com
+          você.
+        </S.SubTitle>
+        <FormikProvider value={formik}>
+          <S.Form>
+            <InputText
+              name={'name'}
+              label={'Nome Completo'}
+              placeholder={'Nome'}
+              isRequired
+            />
+            <S.InputContainer>
+              <InputText
+                name={'email'}
+                label={'Email'}
+                placeholder={'Email'}
+                isRequired
+              />
+              <InputText name={'phone'} label={'Telefone'} isRequired />
+            </S.InputContainer>
+            <S.InputContainer>
+              <InputText
+                name={'company'}
+                label={'Empresa'}
+                placeholder={'Empresa'}
+                isRequired
+              />
+              <InputText name={'role'} label={'Cargo'} isRequired />
+            </S.InputContainer>
+            <S.ButtonContainer>
+              <Button text={'Proximo'} size={'default'} type={'default'} />
+            </S.ButtonContainer>
+          </S.Form>
+        </FormikProvider>
+      </S.FormContainer>
     </S.Container>
   )
 }

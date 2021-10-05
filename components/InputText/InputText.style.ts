@@ -19,7 +19,7 @@ export const Label = styled.label<ILabelStyles>`
     css`
       ::after {
         color: ${theme.colors.red[200]};
-        content: '*';
+        content: ' *';
       }
     `}
 `
@@ -30,6 +30,11 @@ export const Input = styled.input<IInputStyles>`
   border: 1px solid;
   border-color: ${theme.colors.gray[400]};
   border-radius: 5px;
+
+  ::placeholder {
+    padding-left: 15px;
+    font-size: 1.2rem;
+  }
 
   :focus-visible {
     outline: none;
