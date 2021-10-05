@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
 
   flex-direction: column;
+  width: 100%;
 
   margin-bottom: 20px;
 `
@@ -27,14 +28,11 @@ export const Label = styled.label<ILabelStyles>`
 export const Input = styled.input<IInputStyles>`
   width: 100%;
   height: 40px;
+  padding-left: 15px;
+  font-size: 1.2rem;
   border: 1px solid;
   border-color: ${theme.colors.gray[400]};
   border-radius: 5px;
-
-  ::placeholder {
-    padding-left: 15px;
-    font-size: 1.2rem;
-  }
 
   :focus-visible {
     outline: none;

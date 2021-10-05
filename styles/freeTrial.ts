@@ -27,14 +27,15 @@ export const Form = styled(FormikForm)`
   width: 100%;
   margin-top: 35px;
 `
-export const InputContainer = styled.div`
+export const DefaultContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  div {
-    width: 49%;
-  }
 `
-
+export const SmallContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 49%;
+`
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;

@@ -7,6 +7,7 @@ import { departaments } from '../../constants/departaments'
 import { employerRanges } from '../../constants/employerRanges'
 import * as S from '../../styles/freeTrial'
 import { Checkbox } from '../../components/Checkbox'
+import { Select } from '../../components/Select'
 
 const FormStepper = ({ children }) => {
   const formsArray = React.Children.toArray(children) as React.ReactElement[]
@@ -87,24 +88,39 @@ const PersonalForm = () => {
         placeholder={'Nome'}
         isRequired
       />
-      <S.InputContainer>
-        <InputText
-          name={'email'}
-          label={'Email'}
-          placeholder={'Email'}
-          isRequired
-        />
-        <InputText name={'phone'} label={'Telefone'} isRequired />
-      </S.InputContainer>
-      <S.InputContainer>
-        <InputText
-          name={'company'}
-          label={'Empresa'}
-          placeholder={'Empresa'}
-          isRequired
-        />
-        <InputText name={'role'} label={'Cargo'} isRequired />
-      </S.InputContainer>
+      <S.DefaultContainer>
+        <S.SmallContainer>
+          <InputText
+            name={'email'}
+            label={'Email'}
+            placeholder={'Email'}
+            isRequired
+          />
+        </S.SmallContainer>
+        <S.SmallContainer>
+          <InputText name={'phone'} label={'Telefone'} isRequired />
+        </S.SmallContainer>
+      </S.DefaultContainer>
+      <S.DefaultContainer>
+        <S.SmallContainer>
+          <InputText
+            name={'company'}
+            label={'Empresa'}
+            placeholder={'Empresa'}
+            isRequired
+          />
+        </S.SmallContainer>
+        <S.SmallContainer>
+          <Select
+            name={'role'}
+            label={'Cargo'}
+            options={[
+              { label: 'teste', value: 'teste-value' },
+              { label: 'teste2', value: 'teste2-value' },
+            ]}
+          />
+        </S.SmallContainer>
+      </S.DefaultContainer>
     </>
   )
 }
@@ -145,14 +161,17 @@ const LastForm = () => {
           )
         })}
       </S.RangeContainer>
-      <Checkbox label={'Concordo em receber comunicações.'} name={'agree'} />
+      <Checkbox
+        label={'Concordo em receber comunicações.'}
+        name={'agreeComunication'}
+      />
       <Checkbox
         label={
           <span>
             Concordo com a <S.Bolder>Política de privacidade.</S.Bolder>
           </span>
         }
-        name={'agree'}
+        name={'agreePrivacyPolice'}
       />
     </>
   )
