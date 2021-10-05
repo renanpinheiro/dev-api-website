@@ -1,12 +1,18 @@
 import React from 'react'
+
 import Link from 'next/link'
-import * as S from './Links.styles'
+
 import { IContainerLinkProps } from './Links.interfaces'
+
+import * as S from './Links.styles'
+
 const Links = ({ title, links }: IContainerLinkProps) => {
-  const handleLiks = links.map((link, index) => {
+  const handleLinks = links.map((link, index) => {
     return (
       <Link key={index} href={link.url}>
-        <a title={link.name}>{link.name}</a>
+        <a title={link.name} target={link.target}>
+          {link.name}
+        </a>
       </Link>
     )
   })
@@ -14,7 +20,7 @@ const Links = ({ title, links }: IContainerLinkProps) => {
   return (
     <S.ContainerLink>
       <S.TitleLink>{title}</S.TitleLink>
-      {handleLiks}
+      {handleLinks}
     </S.ContainerLink>
   )
 }
