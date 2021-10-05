@@ -1,5 +1,5 @@
 import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../../components/Button'
 import { Checkbox } from '../../components/Checkbox'
 import { InputText } from '../../components/InputText'
@@ -28,9 +28,14 @@ const FormStepper = ({ children }) => {
       phone: '',
       company: '',
       role: '',
+      departaments: [],
     },
     onSubmit,
   })
+
+  useEffect(() => {
+    console.log(formik.values)
+  }, [formik.values])
 
   return (
     <FormikProvider value={formik}>
@@ -82,7 +87,7 @@ const DepartamentForm = () => {
     <>
       <S.Title>Qual setor a empresa está inserida?</S.Title>
       <S.SubTitle>Selecione a opção que defina o setor da empresa.</S.SubTitle>
-      <Checkbox text={'Software e Cloud'} />
+      <Checkbox text={'Software e Cloud'} name={'departaments'} />
     </>
   )
 }
