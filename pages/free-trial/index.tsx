@@ -11,8 +11,12 @@ const FormStepper = ({ children }) => {
   const [step, setStep] = useState(0)
   const currentForm = formsArray[step]
 
-  function isLastStep() {
+  const isLastStep = () => {
     return step === formsArray.length - 1
+  }
+
+  const isFirstStep = () => {
+    return step === 0
   }
 
   const onSubmit = async (values: FormikValues) => {
@@ -34,6 +38,10 @@ const FormStepper = ({ children }) => {
     onSubmit,
   })
 
+  const goBack = () => {
+    !isFirstStep() && setStep(step - 1)
+  }
+
   useEffect(() => {
     console.log(formik.values)
   }, [formik.values])
@@ -43,7 +51,21 @@ const FormStepper = ({ children }) => {
       <S.Form onSubmit={formik.handleSubmit}>
         {currentForm}
         <S.ButtonContainer>
-          <Button text={'Proximo'} size={'default'} type={'default'} />
+          {!isFirstStep() ? (
+            <Button
+              text={'Voltar'}
+              size={'default'}
+              type={'outline'}
+              onClick={goBack}
+            />
+          ) : (
+            <div></div>
+          )}
+          <Button
+            text={isLastStep() ? 'Enviar' : 'Proximo'}
+            size={'default'}
+            type={'default'}
+          />
         </S.ButtonContainer>
       </S.Form>
     </FormikProvider>
