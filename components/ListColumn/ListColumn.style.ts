@@ -13,6 +13,10 @@ export const ListColumn = styled.ul<IColPropsStyle>`
   grid-template-rows: auto;
   grid-template-columns: repeat(${props => props.col || 1}, 1fr);
 
+  @media (max-width: 996px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   padding: 3rem;
   color: ${theme.colors.secondary};
 `

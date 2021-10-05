@@ -30,14 +30,20 @@ export const CardsContainer = styled.div`
     grid-gap: 40px;
   }
   @media only screen and (min-width: 1200px) {
-    grid-template-columns: repeat(2, 26vw);
+    grid-template-columns: repeat(2, 28vw);
     grid-gap: 40px;
   }
   @media only screen and (min-width: 1366px) {
     grid-template-columns: repeat(2, 24vw);
     grid-gap: 40px;
   }
+
   @media only screen and (min-width: 1517px) {
+    grid-template-columns: repeat(2, 25vw);
+    grid-gap: 40px;
+  }
+
+  @media only screen and (min-width: 1700px) {
     grid-template-columns: repeat(4, 20vw);
     grid-gap: 40px;
   }
@@ -54,6 +60,8 @@ export const Cards = styled.div`
   background-color: white;
   background-image: url('/backgrounds/card-plan-bg.svg');
   background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: -1.5rem;
   background-size: contain;
   border-radius: 8px;
   border-radius: 8px;
@@ -64,6 +72,7 @@ export const Cards = styled.div`
   :hover,
   :focus {
     z-index: 9;
+
     background-image: url('/backgrounds/card-plan-bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -91,7 +100,6 @@ export const Cards = styled.div`
     }
 
     @media (max-width: 1920px) {
-      height: 90%;
       background-position-y: -12%;
     }
   }

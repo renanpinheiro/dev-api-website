@@ -97,7 +97,7 @@ export const QuoteContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 3vw 10vh 6vw;
+  padding: 0 3vw 6vh 6vw;
 `
 
 export const FreeTestContainer = styled.div`
@@ -152,14 +152,14 @@ export const ListIntegrationTitle = styled.h2`
   color: ${theme.colors.primary};
 
   @media (max-width: 996px) {
-    font-size: 0.8rem;
+    width: 55%;
   }
 
   @media (max-width: 1024px) {
-    font-size: 1rem;
+    width: 70%;
   }
   @media (max-width: 1366px) {
-    font-size: 2rem;
+    width: 75%;
   }
 
   @media (max-width: 1700px) {
