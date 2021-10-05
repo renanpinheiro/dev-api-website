@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
       </Head>
 
       <S.Container>
-        <Hero>
+        <Hero minHeight={40} maxHeight={65}>
           <S.HeroContent>
             <S.Pipe />
             <h1>

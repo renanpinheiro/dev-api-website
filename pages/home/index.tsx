@@ -1,13 +1,19 @@
 import React from 'react'
 import { Hero } from '../../components/Hero'
 
-import { constumersMobile, costumers } from '../../constants/costumers'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-import * as S from '../../styles/home'
+import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { quotes } from '../../constants/quotes'
-import { Button } from '../../components/Button'
+
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+
+import { CallToAction } from '../../components/CallToAction'
+import QuoteCarousel from '../../components/QuoteCarousel'
+
 import { connectors, connectorsMobile } from '../../constants/connectors'
+import { constumersMobile, costumers } from '../../constants/costumers'
+import { quotes } from '../../constants/quotes'
+
+import * as S from '../../styles/home'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -15,6 +21,7 @@ const CarrouselWithOutSSR = dynamic(
     ssr: false,
   },
 )
+
 const MultiCarrouselWithOutSSR = dynamic(
   () => import('../../components/MultiCarrousel/MultiCarrousel'),
   {
@@ -35,76 +42,71 @@ const Home = () => {
   const isMobile = width <= 1024
 
   return (
-    <S.Container>
-      <S.CarrouselContainer>
-        {isMobile ? (
-          <CarrouselWithOutSSR
-            items={constumersMobile}
-            title={
-              <S.CarrouselTitle>
-                Empresas que ja desbloquearam o{' '}
-                <span>poder da integração de sistemas</span>
-              </S.CarrouselTitle>
-            }
-          />
-        ) : (
-          <MultiCarrouselWithOutSSR
-            interval={2000}
-            items={costumers}
-            title={
-              <S.CarrouselTitle>
-                Empresas que ja desbloquearam o{' '}
-                <span>poder da integração de sistemas</span>
-              </S.CarrouselTitle>
-            }
-          />
-        )}
-      </S.CarrouselContainer>
+    <>
+      <Head>
+        <title>DevApi</title>
+      </Head>
 
-      <S.CarrouselContainer>
-        {isMobile ? (
-          <CarrouselWithOutSSR
-            items={connectorsMobile}
-            title={
-              <S.CarrouselTitle>
-                Mais de 300 conectores pré-construídos{' '}
-                <span>e prontos para uso.</span>
-              </S.CarrouselTitle>
-            }
-          />
-        ) : (
-          <MultiCarrouselWithOutSSR
-            interval={2000}
-            items={connectors}
-            title={
-              <S.CarrouselTitle>
-                Mais de 300 conectores pré-construídos{' '}
-                <span>e prontos para uso.</span>
-              </S.CarrouselTitle>
-            }
-          />
-        )}
-      </S.CarrouselContainer>
+      <S.Hero></S.Hero>
 
-      <S.ActionContainer>
-        <S.ActionTextContainer>
-          <S.Pipe />
-          <h3>
-            Quer testar a DevApi <span>gratuitamente?</span>
-          </h3>
-        </S.ActionTextContainer>
-        <Button
-          size={'large'}
-          text={
-            width < 500 ? 'Entrar em contato' : 'Converse com um especialista'
-          }
-          type={'default'}
-        />
-      </S.ActionContainer>
-      <S.QuoteContainer>
-        <QuoteCarouselWithOutSSR quotes={quotes} />
-      </S.QuoteContainer>
-    </S.Container>
+      <S.Content>
+        <S.Carrousel>
+          {isMobile ? (
+            <CarrouselWithOutSSR
+              items={constumersMobile}
+              title={
+                <S.CarrouselTitle>
+                  Empresas que ja desbloquearam o{' '}
+                  <span>poder da integração de sistemas</span>
+                </S.CarrouselTitle>
+              }
+            />
+          ) : (
+            <MultiCarrouselWithOutSSR
+              interval={2000}
+              items={costumers}
+              title={
+                <S.CarrouselTitle>
+                  Empresas que ja desbloquearam o{' '}
+                  <span>poder da integração de sistemas</span>
+                </S.CarrouselTitle>
+              }
+            />
+          )}
+        </S.Carrousel>
+
+        <S.Carrousel>
+          {isMobile ? (
+            <CarrouselWithOutSSR
+              items={connectorsMobile}
+              title={
+                <S.CarrouselTitle>
+                  Mais de 300 conectores pré-construídos{' '}
+                  <span>e prontos para uso.</span>
+                </S.CarrouselTitle>
+              }
+            />
+          ) : (
+            <MultiCarrouselWithOutSSR
+              interval={2000}
+              items={connectors}
+              title={
+                <S.CarrouselTitle>
+                  Mais de 300 conectores pré-construídos{' '}
+                  <span>e prontos para uso.</span>
+                </S.CarrouselTitle>
+              }
+            />
+          )}
+        </S.Carrousel>
+
+        <S.Quote>
+          <QuoteCarousel quotes={quotes} />
+        </S.Quote>
+
+        <CallToAction />
+      </S.Content>
+    </>
   )
 }
 
