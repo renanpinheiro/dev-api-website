@@ -36,8 +36,6 @@ const Solutions = () => {
   const currentPage = router.split('/')
   const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
 
-  console.log(page)
-
   return (
     <>
       <Head>
@@ -49,8 +47,8 @@ const Solutions = () => {
           <Circle>
             <S.HeroContent>
               <S.Pipe />
-              {page ? page.title : <h1>ola</h1>}
-              {page ? page.subTitle : <p>ola</p>}
+              {page ? page.title : <h1></h1>}
+              {page ? page.subTitle : <p></p>}
               <Button
                 size="default"
                 text="Fale com um consultor"
@@ -64,14 +62,16 @@ const Solutions = () => {
             <S.TextContainer>
               <S.TitleContainer>
                 <S.Pipe />
-                {page ? page.contentTitle : <h2>ola</h2>}
+                {page ? page.contentTitle : <></>}
               </S.TitleContainer>
               <S.ParagraphContainer>
-                {page ? page.contentText : <p>ola</p>}
+                {page ? page.contentText : <></>}
               </S.ParagraphContainer>
             </S.TextContainer>
 
-            <S.IntegrationContainer></S.IntegrationContainer>
+            <S.IntegrationContainer>
+              {page ? page.component : <></>}
+            </S.IntegrationContainer>
 
             <Button
               size="default"

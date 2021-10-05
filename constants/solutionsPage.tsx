@@ -1,4 +1,6 @@
 import React, { ReactNode } from 'react'
+import { ConnectorsCard } from '../components/ConnectorsCard'
+import * as S from '../styles/solutions'
 
 export interface ISolutionPage {
   metaTitle: string
@@ -6,6 +8,7 @@ export interface ISolutionPage {
   subTitle: ReactNode
   contentTitle: ReactNode
   contentText: ReactNode
+  component: ReactNode
 }
 
 export const solutionsPage = {
@@ -54,6 +57,25 @@ export const solutionsPage = {
         nossos clientes:
       </p>
     ),
+    component: (
+      <>
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/magento.png', name: 'Magento' },
+            { url: '/connectors/sankhya.png', name: 'Sankhya' },
+          ]}
+          text="Gestão de pedidos e estoque de lojas franqueadas."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/sap-one.png', name: 'SAP' },
+            { url: '/connectors/picpay.png', name: 'PicPay' },
+            { url: '/connectors/gmail.png', name: 'Gmail' },
+          ]}
+          text="Busque os pedidos faturados e registre os boletos no gateway de pagamento e envie para o cliente."
+        />
+      </>
+    ),
   },
   marketing: {
     metaTitle: 'Soluções em Marketing | DevApi',
@@ -93,6 +115,33 @@ export const solutionsPage = {
         Confira algumas das integrações de marketing que realizamos para os
         nossos clientes:
       </p>
+    ),
+    component: (
+      <>
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/ads.png', name: 'Google Ads' },
+            { url: '/connectors/instagram.png', name: 'Instagram' },
+            { url: '/connectors/facebook-ads.png', name: 'Facebook Ads' },
+          ]}
+          text="Busque performance de campanhas e conversões e envie para seu B.I."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/facebook.png', name: 'Facebook' },
+            { url: '/connectors/instagram.png', name: 'Instagram' },
+            { url: '/connectors/rd-station.png', name: 'RD Station' },
+          ]}
+          text="Capture novos leads nos canais de marketing e crie um novo lead no RD Station Marketing."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/shopify.png', name: 'Shopify' },
+            { url: '/connectors/rd-station.png', name: 'RD Station' },
+          ]}
+          text="A cada pedido criado no Shopify, crie um lead no RD Station Marketing."
+        />
+      </>
     ),
   },
   comercial: {
@@ -136,6 +185,25 @@ export const solutionsPage = {
         clientes:
       </p>
     ),
+    component: (
+      <>
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/ads.png', name: 'Google Ads' },
+            { url: '/connectors/pipedrive.png', name: 'Pipedrive' },
+            { url: '/connectors/clicksign.png', name: 'ClickSign' },
+          ]}
+          text="Capture leads ganhos e envie o contrato para assinatura eletrônica."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/rd-station.png', name: 'RD Station' },
+            { url: '/connectors/salesforce.png', name: 'Salesforce' },
+          ]}
+          text="Busque os novos leads no RD Station Marketing e crie o lead no CRM."
+        />
+      </>
+    ),
   },
   rh: {
     metaTitle: 'Soluções em RH | DevApi',
@@ -177,6 +245,25 @@ export const solutionsPage = {
         Confira algumas das integrações do setor de Recursos Humanos que
         realizamos para os nossos clientes:
       </p>
+    ),
+    component: (
+      <>
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/gupy.png', name: 'Gupy' },
+            { url: '/connectors/senior.png', name: 'Senior' },
+            { url: '/connectors/vr.png', name: 'VR' },
+          ]}
+          text="Busque os colaboradores contratados na Gupy e as envie para o setor de RH na Senior e solicite a criação do vale alimentação na VR."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/solides.png', name: 'Sólides' },
+            { url: '/connectors/linkedin.png', name: 'Linkedin' },
+          ]}
+          text="Capture vagas no HR e crie anúncios no Linkedin."
+        />
+      </>
     ),
   },
   'e-commerce': {
@@ -224,6 +311,32 @@ export const solutionsPage = {
         realizamos para os nossos clientes:
       </p>
     ),
+    component: (
+      <>
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/totvs.png', name: 'Totvs' },
+            { url: '/connectors/vtex.png', name: 'Vtex' },
+          ]}
+          text="Capture os produtos, estoque e preço e atualize no seu e-Commerce."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/sap-one.png', name: 'SAP' },
+            { url: '/connectors/magalu.png', name: 'Magalu' },
+            { url: '/connectors/b2w.png', name: 'B2W' },
+          ]}
+          text="Envio de produtos do ERP aos Marketplaces."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/magento.png', name: 'Magento' },
+            { url: '/connectors/hubspot.png', name: 'Hubspot' },
+          ]}
+          text="Envio de clientes do e-Commerce ao CRM."
+        />
+      </>
+    ),
   },
   'empresas-360': {
     metaTitle: 'Soluções para Empresas | DevApi',
@@ -257,6 +370,11 @@ export const solutionsPage = {
         gestão, atendimento, logística, recursos humanos, administrativo e
         financeiro… não há limites!
       </p>
+    ),
+    component: (
+      <S.ImageContainer>
+        <img src="/logo/business.png" alt="Empresa 360" />
+      </S.ImageContainer>
     ),
   },
   financeiro: {
@@ -298,6 +416,32 @@ export const solutionsPage = {
         para os nossos clientes:
       </p>
     ),
+    component: (
+      <>
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/omie.png', name: 'Omie' },
+            { url: '/connectors/superlogica.png', name: 'Superlógica' },
+          ]}
+          text="Registro de recebimento e contas a receber."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/senior.png', name: 'Senior' },
+            { url: '/connectors/zenvia.png', name: 'Zenvia' },
+          ]}
+          text="Envio de SMS para clientes inadimplentes."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/sap-one.png', name: 'SAP' },
+            { url: '/connectors/picpay.png', name: 'PicPay' },
+            { url: '/connectors/gmail.png', name: 'Gmail' },
+          ]}
+          text="Busque os pedidos faturados e registre os boletos no gateway de pagamento e envie para o cliente."
+        />
+      </>
+    ),
   },
   'seu-produto': {
     metaTitle: 'Soluções para seu produto | DevApi',
@@ -334,6 +478,11 @@ export const solutionsPage = {
         com a gente, vamos ajudar você a desbloquear todo o potencial do seu
         produto. Prepare-se para escalar!
       </p>
+    ),
+    component: (
+      <S.ImageContainer>
+        <img src="/logo/product.png" alt="Empresa 360" />
+      </S.ImageContainer>
     ),
   },
   logistica: {
@@ -377,6 +526,25 @@ export const solutionsPage = {
         Confira algumas das integrações de Logística que realizamos para os
         nossos clientes:
       </p>
+    ),
+    component: (
+      <>
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/totvs.png', name: 'Totvs' },
+            { url: '/connectors/shopify.png', name: 'Shopify' },
+            { url: '/connectors/frete.png', name: 'Frete Rápido' },
+          ]}
+          text="Busque todas as DANFEs no seu ERP e atualize o status do pedido para faturado no seu e-commerce e as envie para o setor de logística."
+        />
+        <ConnectorsCard
+          connectors={[
+            { url: '/connectors/correios.png', name: 'Correios' },
+            { url: '/connectors/magento.png', name: 'Magento' },
+          ]}
+          text="Atualização de tracking code."
+        />
+      </>
     ),
   },
 }

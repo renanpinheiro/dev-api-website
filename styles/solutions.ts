@@ -69,6 +69,8 @@ export const Content = styled.div`
 
   width: 100%;
 
+  margin-top: 30px;
+
   background-color: white;
 `
 
@@ -94,6 +96,10 @@ export const TextContainer = styled.div`
   width: 100%;
 
   padding: 10vh 8vw 10vh 8vw;
+
+  @media (max-width: 996px) {
+    flex-direction: column;
+  }
 `
 
 export const TitleContainer = styled.div`
@@ -131,6 +137,10 @@ export const ParagraphContainer = styled.div`
 
     line-height: 1.7;
   }
+
+  @media (max-width: 996px) {
+    width: 100%;
+  }
 `
 
 export const CarrouselContainer = styled.div`
@@ -152,4 +162,26 @@ export const CarrouselTitle = styled.h2`
   }
 `
 
-export const IntegrationContainer = styled.div``
+export const IntegrationContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10vh;
+
+  @media (max-width: 996px) {
+    flex-direction: column;
+
+    padding: 0 8vw 0 8vw;
+  }
+`
+
+export const ImageContainer = styled.div`
+  img {
+    width: 30vw;
+
+    @media (max-width: 996px) {
+      width: 100%;
+    }
+  }
+`
