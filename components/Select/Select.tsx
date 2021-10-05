@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useField } from 'formik'
 import { IOption, ISelectProps } from './Select.interface'
 import * as S from './Select.style'
@@ -7,6 +7,15 @@ export const Select = ({ name, label, options }: ISelectProps) => {
   const [field, _, helpers] = useField(name)
   const [isOpen, setIsOpen] = useState(false)
   const [value, setValue] = useState('')
+
+  useEffect(() => {
+    if (field.value) {
+      const selectedOption = options.find(
+        option => option.value === field.value,
+      )
+      setValue(selectedOption.label)
+    }
+  }, [])
 
   const toggleOpen = () => {
     setIsOpen(!isOpen)
