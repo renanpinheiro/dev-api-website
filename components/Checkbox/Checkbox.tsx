@@ -22,7 +22,7 @@ export const Checkbox = ({ text, name }: ICheckboxProps) => {
   }, [isChecked])
 
   return (
-    <S.Container onClick={onClickCheck}>
+    <S.Container onClick={onClickCheck} isChecked={isChecked}>
       <S.Label>{text}</S.Label>
       <S.Check isChecked={isChecked} />
     </S.Container>

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Button } from '../../components/Button'
 import { Checkbox } from '../../components/Checkbox'
 import { InputText } from '../../components/InputText'
+import { departaments } from '../../constants/departaments'
 import * as S from '../../styles/freeTrial'
 
 const FormStepper = ({ children }) => {
@@ -39,7 +40,12 @@ const FormStepper = ({ children }) => {
 
   return (
     <FormikProvider value={formik}>
-      <S.Form onSubmit={formik.handleSubmit}>{currentForm}</S.Form>
+      <S.Form onSubmit={formik.handleSubmit}>
+        {currentForm}
+        <S.ButtonContainer>
+          <Button text={'Proximo'} size={'default'} type={'default'} />
+        </S.ButtonContainer>
+      </S.Form>
     </FormikProvider>
   )
 }
@@ -75,9 +81,6 @@ const PersonalForm = () => {
         />
         <InputText name={'role'} label={'Cargo'} isRequired />
       </S.InputContainer>
-      <S.ButtonContainer>
-        <Button text={'Proximo'} size={'default'} type={'default'} />
-      </S.ButtonContainer>
     </>
   )
 }
@@ -87,7 +90,13 @@ const DepartamentForm = () => {
     <>
       <S.Title>Qual setor a empresa está inserida?</S.Title>
       <S.SubTitle>Selecione a opção que defina o setor da empresa.</S.SubTitle>
-      <Checkbox text={'Software e Cloud'} name={'departaments'} />
+      <S.OptionsContainer>
+        {departaments.map(departament => (
+          <S.CheckboxContainer>
+            <Checkbox text={departament} name={'departaments'} />
+          </S.CheckboxContainer>
+        ))}
+      </S.OptionsContainer>
     </>
   )
 }

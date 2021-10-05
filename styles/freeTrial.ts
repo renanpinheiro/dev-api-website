@@ -40,3 +40,16 @@ export const ButtonContainer = styled.div`
   justify-content: flex-end;
   width: 100%;
 `
+
+export const CheckboxContainer = styled.div`
+  width: 49%;
+  margin-bottom: 10px;
+`
+export const OptionsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 55vh;
+  margin-top: 35px;
+`
