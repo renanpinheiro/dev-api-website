@@ -1,10 +1,12 @@
 import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
 import React, { useEffect, useState } from 'react'
 import { Button } from '../../components/Button'
-import { Checkbox } from '../../components/Checkbox'
+import { MultipleCheckbox } from '../../components/MultipleCheckbox'
 import { InputText } from '../../components/InputText'
 import { departaments } from '../../constants/departaments'
+import { employerRanges } from '../../constants/employerRanges'
 import * as S from '../../styles/freeTrial'
+import { Checkbox } from '../../components/Checkbox'
 
 const FormStepper = ({ children }) => {
   const formsArray = React.Children.toArray(children) as React.ReactElement[]
@@ -34,17 +36,16 @@ const FormStepper = ({ children }) => {
       company: '',
       role: '',
       departaments: [],
+      employees: '',
+      agreeComunication: false,
+      agreePrivacyPolice: false,
     },
     onSubmit,
   })
 
   const goBack = () => {
-    !isFirstStep() && setStep(step - 1)
+    setStep(step - 1)
   }
-
-  useEffect(() => {
-    console.log(formik.values)
-  }, [formik.values])
 
   return (
     <FormikProvider value={formik}>
@@ -56,6 +57,7 @@ const FormStepper = ({ children }) => {
               text={'Voltar'}
               size={'default'}
               type={'outline'}
+              buttonType={'button'}
               onClick={goBack}
             />
           ) : (
@@ -112,13 +114,46 @@ const DepartamentForm = () => {
     <>
       <S.Title>Qual setor a empresa está inserida?</S.Title>
       <S.SubTitle>Selecione a opção que defina o setor da empresa.</S.SubTitle>
-      <S.OptionsContainer>
-        {departaments.map(departament => (
-          <S.CheckboxContainer>
-            <Checkbox text={departament} name={'departaments'} />
+      <S.DepartamentContainer>
+        {departaments.map((departament, idx) => (
+          <S.CheckboxContainer key={idx}>
+            <MultipleCheckbox
+              text={departament}
+              name={'departaments'}
+              isMultiple
+            />
           </S.CheckboxContainer>
         ))}
-      </S.OptionsContainer>
+      </S.DepartamentContainer>
+    </>
+  )
+}
+
+const LastForm = () => {
+  return (
+    <>
+      <S.Title>Para finalizar, quantos funcionários a empresa tem?</S.Title>
+      <S.SubTitle>
+        Selecione a opção que defina a quantidade de colaboradores da empresa.
+      </S.SubTitle>
+      <S.RangeContainer>
+        {employerRanges.map((range, idx) => {
+          return (
+            <S.CheckboxContainer key={idx}>
+              <MultipleCheckbox text={range} name={'employees'} />
+            </S.CheckboxContainer>
+          )
+        })}
+      </S.RangeContainer>
+      <Checkbox label={'Concordo em receber comunicações.'} name={'agree'} />
+      <Checkbox
+        label={
+          <span>
+            Concordo com a <S.Bolder>Política de privacidade.</S.Bolder>
+          </span>
+        }
+        name={'agree'}
+      />
     </>
   )
 }
@@ -129,6 +164,7 @@ const FreeTrial = () => {
         <FormStepper>
           <PersonalForm />
           <DepartamentForm />
+          <LastForm />
         </FormStepper>
       </S.FormContainer>
     </S.Container>

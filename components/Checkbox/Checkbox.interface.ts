@@ -1,5 +1,7 @@
+import { ReactNode } from 'react'
+
 export interface ICheckboxProps {
-  text: string
+  label: string | ReactNode
   name: string
 }
 

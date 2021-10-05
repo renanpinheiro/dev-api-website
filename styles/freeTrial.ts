@@ -39,17 +39,30 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 20px;
 `
 
 export const CheckboxContainer = styled.div`
   width: 49%;
   margin-bottom: 10px;
 `
-export const OptionsContainer = styled.div`
+export const DepartamentContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   height: 55vh;
   margin-top: 35px;
+`
+export const RangeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 15vh;
+  margin-top: 35px;
+`
+
+export const Bolder = styled.span`
+  font-weight: bold;
 `

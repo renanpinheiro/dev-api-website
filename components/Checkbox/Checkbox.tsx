@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { ICheckboxProps } from './Checkbox.interface'
 import * as S from './Checkbox.style'
 
-export const Checkbox = ({ text, name }: ICheckboxProps) => {
+export const Checkbox = ({ label, name }: ICheckboxProps) => {
   const [field, _, helpers] = useField(name)
 
-  const [isChecked, setIsChecked] = useState(false)
+  const [isChecked, setIsChecked] = useState<boolean>(field.value)
 
   const onClickCheck = () => {
     setIsChecked(!isChecked)
@@ -14,17 +14,16 @@ export const Checkbox = ({ text, name }: ICheckboxProps) => {
 
   useEffect(() => {
     if (isChecked) {
-      helpers.setValue([...field.value, text])
+      helpers.setValue(true)
     } else {
-      const newValue = field.value.filter(value => value !== text)
-      helpers.setValue(newValue)
+      helpers.setValue(false)
     }
   }, [isChecked])
 
   return (
-    <S.Container onClick={onClickCheck} isChecked={isChecked}>
-      <S.Label>{text}</S.Label>
-      <S.Check isChecked={isChecked} />
+    <S.Container>
+      <S.Check isChecked={isChecked} onClick={onClickCheck} />
+      <S.Label onClick={onClickCheck}>{label}</S.Label>
     </S.Container>
   )
 }
