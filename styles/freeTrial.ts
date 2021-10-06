@@ -1,6 +1,10 @@
-import { Button } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 import { Form as FormikForm } from 'formik'
+import { theme } from './theme'
+
+interface IErrorTextStyle {
+  hasError: boolean
+}
 
 export const Container = styled.div`
   display: flex;
@@ -70,4 +74,19 @@ export const Bolder = styled.span`
 export const StepsContainer = styled.div`
   width: 100%;
   margin: 5vh 0;
+`
+
+export const ErrorText = styled.p<IErrorTextStyle>`
+  height: 20px;
+  margin: 10px 0;
+  font-size: 1.4rem;
+  color: ${theme.colors.red[200]};
+
+  ${({ hasError }) =>
+    hasError &&
+    css`
+      ::before {
+        content: '•  ';
+      }
+    `}
 `

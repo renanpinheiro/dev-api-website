@@ -15,14 +15,18 @@ export const InputText = ({
   return (
     <S.Container>
       <S.Label isRequired={isRequired}>{label}</S.Label>
-      <InputMask
-        mask={mask}
-        hasError={!!meta.error}
-        {...field}
-        placeholder={placeholder}
-      >
-        {inputProps => <S.Input {...inputProps} />}
-      </InputMask>
+      {mask ? (
+        <InputMask
+          mask={mask}
+          hasError={!!meta.error}
+          {...field}
+          placeholder={placeholder}
+        >
+          {inputProps => <S.Input {...inputProps} />}
+        </InputMask>
+      ) : (
+        <S.Input hasError={!!meta.error} {...field} placeholder={placeholder} />
+      )}
     </S.Container>
   )
 }

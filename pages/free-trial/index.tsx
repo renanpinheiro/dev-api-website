@@ -1,4 +1,4 @@
-import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
+import { FormikProvider, useFormik } from 'formik'
 import React, { useEffect, useState } from 'react'
 import { Button } from '../../components/Button'
 import { MultipleCheckbox } from '../../components/MultipleCheckbox'
@@ -9,6 +9,7 @@ import * as S from '../../styles/freeTrial'
 import { Checkbox } from '../../components/Checkbox'
 import { Select } from '../../components/Select'
 import { Steps } from '../../components/Steps'
+import axios from 'axios'
 import {
   stepsDepartamentsForm,
   stepsLastForm,
@@ -16,8 +17,14 @@ import {
 } from '../../constants/steps'
 
 const FormStepper = ({ children }) => {
+  const leadsApi = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_API_LEADS,
+  })
+
   const formsArray = React.Children.toArray(children) as React.ReactElement[]
   const [step, setStep] = useState(0)
+  const [errorMessage, setErrorMessage] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
   const currentForm = formsArray[step]
 
   const isLastStep = () => {
@@ -28,36 +35,62 @@ const FormStepper = ({ children }) => {
     return step === 0
   }
 
-  const onSubmit = async (values: FormikValues) => {
+  const onSubmit = async values => {
     if (isLastStep()) {
-      console.log(values)
+      setIsLoading(true)
+      const payload = {
+        full_name: values.fullName,
+        email: values.email,
+        phone: values.phone,
+        company: values.company,
+        role: values.role,
+        departaments: values.departaments,
+        employees: values.employees,
+        is_comunication: values.isComunication,
+        is_privacy_police: values.isPrivacyPolice,
+      }
+      try {
+        await leadsApi.post('/leads', payload)
+      } catch (error) {
+        const errors = {
+          'Lead already exist.': 'Email já cadastrado.',
+        }
+        setErrorMessage(
+          errors[error.response?.data?.message] ||
+            'Erro ao enviar sua requisição.',
+        )
+      } finally {
+        setIsLoading(false)
+      }
     } else {
       setStep(step + 1)
     }
   }
   const formik = useFormik({
     initialValues: {
-      name: '',
+      fullName: '',
       email: '',
       phone: '',
       company: '',
       role: '',
       departaments: [],
       employees: '',
-      agreeComunication: false,
-      agreePrivacyPolice: false,
+      isComunication: false,
+      isPrivacyPolice: false,
     },
     onSubmit,
   })
 
   const goBack = () => {
     setStep(step - 1)
+    setErrorMessage('')
   }
 
   return (
     <FormikProvider value={formik}>
       <S.Form onSubmit={formik.handleSubmit}>
         {currentForm}
+        <S.ErrorText hasError={!!errorMessage}>{errorMessage}</S.ErrorText>
         <S.ButtonContainer>
           {!isFirstStep() ? (
             <Button
@@ -71,7 +104,9 @@ const FormStepper = ({ children }) => {
             <div></div>
           )}
           <Button
-            text={isLastStep() ? 'Enviar' : 'Proximo'}
+            text={
+              isLastStep() ? 'Enviar' : isLoading ? 'Enviando...' : 'Proximo'
+            }
             size={'default'}
             type={'default'}
           />
@@ -92,7 +127,7 @@ const PersonalForm = () => {
         Preencha os campos abaixo para que possamos entrar em contato com você.
       </S.SubTitle>
       <InputText
-        name={'name'}
+        name={'fullName'}
         label={'Nome Completo'}
         placeholder={'Nome'}
         isRequired
@@ -184,7 +219,7 @@ const LastForm = () => {
       </S.RangeContainer>
       <Checkbox
         label={'Concordo em receber comunicações.'}
-        name={'agreeComunication'}
+        name={'isComunication'}
       />
       <Checkbox
         label={
@@ -192,7 +227,7 @@ const LastForm = () => {
             Concordo com a <S.Bolder>Política de privacidade.</S.Bolder>
           </span>
         }
-        name={'agreePrivacyPolice'}
+        name={'isPrivacyPolice'}
       />
     </>
   )

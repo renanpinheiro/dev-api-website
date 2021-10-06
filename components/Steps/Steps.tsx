@@ -6,7 +6,7 @@ export const Steps = ({ steps }: IStepsProps) => {
   return (
     <S.Container>
       {steps.map((step, idx) => (
-        <S.StepContainer>
+        <S.StepContainer key={idx}>
           <S.IconContainer isPass={step.isPass}>{step.icon}</S.IconContainer>
           <S.StepTextContainer isLastItem={idx === steps.length - 1}>
             <S.StepText isPass={step.isPass}>{step.label}</S.StepText>
