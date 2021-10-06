@@ -154,7 +154,7 @@ const Home = () => {
                         return <img src={connector.urlImage} key={index} />
                       })
                     ) : (
-                      <div></div>
+                      <S.Invisible />
                     )}
                   </S.ConnectorsContainer>
                 </S.Card>
@@ -187,6 +187,10 @@ const Home = () => {
             />
           )}
         </S.Carrousel>
+
+        <S.ButtonContainer>
+          <Button size="default" text="Ver conectores" type="default" />
+        </S.ButtonContainer>
 
         <S.Quote>
           <QuoteCarousel quotes={quotes} />

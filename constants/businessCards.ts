@@ -107,11 +107,9 @@ export const businessCards = [
   {
     title: 'Integrações para Empresas 360°',
     text: 'Uma empresa 360° representa uma organização que possui integração total de sistemas, dados, processos, projetos e pessoas.',
-    connectors: [],
   },
   {
     title: 'Integrações para o Seu Produto',
     text: 'Escale as integrações do seu produto, conecte-o aos sistemas do mercado e não perca mais nenhuma venda!',
-    connectors: [],
   },
 ]

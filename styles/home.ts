@@ -15,6 +15,11 @@ export const Hero = styled.section`
   background-repeat: no-repeat;
   background-position-y: 127%;
   background-size: 100%;
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    padding: 15vh 8vw 0 8vw;
+  }
 `
 
 export const HeroContent = styled.div`
@@ -48,9 +53,12 @@ export const HeroContent = styled.div`
     line-height: 1.7;
   }
 
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+
   @media (max-width: 576px) {
     align-items: flex-start;
-    padding: 25px;
     text-align: left;
     background-size: 100%;
   }
@@ -60,6 +68,10 @@ export const GifContainer = styled.div`
   width: 54%;
 
   img {
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
     width: 100%;
   }
 `
@@ -107,6 +119,10 @@ export const Quote = styled.div`
 export const PlatformContainer = styled.div`
   display: flex;
   padding: 10vh 8vw;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `
 
 export const Platform = styled.div`
@@ -133,6 +149,10 @@ export const Platform = styled.div`
 
     line-height: 1.3;
   }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 export const PlatformDetails = styled.div`
@@ -142,6 +162,10 @@ export const PlatformDetails = styled.div`
 
   width: 50%;
   height: 100%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 export const DetailsContainer = styled.div`
@@ -200,7 +224,8 @@ export const BusinessContainer = styled.div`
 
   background-color: ${theme.colors.gray[100]};
   background-image: url('/masks/devapi.svg');
-  background-size: cover;
+  background-position-y: top;
+  background-size: auto;
 
   h2 {
     margin-bottom: 15px;
@@ -221,6 +246,11 @@ export const BusinessContainer = styled.div`
 
     line-height: 1.3;
   }
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    text-align: left;
+  }
 `
 
 export const CardContainer = styled.div`
@@ -229,6 +259,11 @@ export const CardContainer = styled.div`
   justify-content: space-between;
 
   width: 100%;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Card = styled.div`
@@ -247,6 +282,23 @@ export const Card = styled.div`
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 10px 25px #5f47ff29;
+
+  p {
+    font-size: 1vw;
+
+    @media (max-width: 900px) {
+      font-size: 2.5vh;
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 40vh;
+
+    padding: 3vh;
+    margin: 0;
+    margin-bottom: 2vh;
+  }
 `
 
 export const CardTitle = styled.div`
@@ -256,13 +308,30 @@ export const CardTitle = styled.div`
 
 export const ConnectorsContainer = styled.div`
   img {
-    width: 4vw;
+    width: 3.5vw;
     margin-right: 10px;
     box-shadow: 0px 10px 25px #5f47ff29;
+
+    @media (max-width: 900px) {
+      width: 6vh;
+    }
   }
 `
 
 export const Invisible = styled.div`
-  width: 4vw;
+  width: 2px;
   height: 4vw;
+
+  @media (max-width: 900px) {
+    height: 6vh;
+  }
+`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: 10vh 8vw 0 8vw;
 `
