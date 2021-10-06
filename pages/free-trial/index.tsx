@@ -15,6 +15,7 @@ import {
   stepsLastForm,
   stepsPersonalForm,
 } from '../../constants/steps'
+import * as Yup from 'yup'
 
 const FormStepper = ({ children }) => {
   const leadsApi = axios.create({
@@ -34,6 +35,30 @@ const FormStepper = ({ children }) => {
   const isFirstStep = () => {
     return step === 0
   }
+
+  const validationSchemas = {
+    step1: Yup.object().shape({
+      fullName: Yup.string().required('Campo obrigatório.'),
+      email: Yup.string()
+        .email('Este campo deve ser um email válido.')
+        .required('Campo é obrigatório'),
+      phone: Yup.string().required('Campo é obrigatório.'),
+      company: Yup.string().required('Campo obrigatório.'),
+      role: Yup.string().required('Campo obrigatŕoio.'),
+    }),
+    step2: Yup.object().shape({
+      departaments: Yup.array().min(1).required('Campo obrigatório.'),
+    }),
+    step3: Yup.object().shape({
+      employees: Yup.string().required('Campo obrigatório'),
+    }),
+  }
+
+  const schemaArray = [
+    validationSchemas.step1,
+    validationSchemas.step2,
+    validationSchemas.step3,
+  ]
 
   const onSubmit = async values => {
     if (isLastStep()) {
@@ -79,7 +104,12 @@ const FormStepper = ({ children }) => {
       isPrivacyPolice: false,
     },
     onSubmit,
+    validationSchema: schemaArray[step],
   })
+
+  useEffect(() => {
+    console.log(formik.errors, formik.values)
+  }, [formik.errors])
 
   const goBack = () => {
     setStep(step - 1)

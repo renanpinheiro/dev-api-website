@@ -27,6 +27,7 @@ export const InputText = ({
       ) : (
         <S.Input hasError={!!meta.error} {...field} placeholder={placeholder} />
       )}
+      <S.ErrorMessage>{meta.touched && meta.error}</S.ErrorMessage>
     </S.Container>
   )
 }

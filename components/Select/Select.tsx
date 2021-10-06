@@ -4,7 +4,7 @@ import { IOption, ISelectProps } from './Select.interface'
 import * as S from './Select.style'
 
 export const Select = ({ name, label, options, isRequered }: ISelectProps) => {
-  const [field, _, helpers] = useField(name)
+  const [field, meta, helpers] = useField(name)
   const [isOpen, setIsOpen] = useState(false)
   const [value, setValue] = useState('')
 
@@ -27,6 +27,11 @@ export const Select = ({ name, label, options, isRequered }: ISelectProps) => {
     setIsOpen(false)
   }
 
+  useEffect(() => {
+    console.log(meta)
+    if (meta.touched) setIsOpen(false)
+  }, [meta.touched])
+
   return (
     <S.Container>
       <S.Label isRequired={isRequered}>{label}</S.Label>
@@ -34,6 +39,8 @@ export const Select = ({ name, label, options, isRequered }: ISelectProps) => {
         <S.Selection placeholder={'Selecione'} disabled value={value} />
         <S.Icon src={'/icons/arrow-down.svg'} onClick={toggleOpen} />
       </S.Input>
+      <S.ErrorMessage>{meta.error && meta.error}</S.ErrorMessage>
+
       <S.OptionsContainer isOpen={isOpen}>
         {options.map((option, idx) => {
           return (

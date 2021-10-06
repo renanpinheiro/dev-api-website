@@ -48,3 +48,8 @@ export const Input = styled.input<IInputStyles>`
       border-color: ${theme.colors.red};
     `};
 `
+
+export const ErrorMessage = styled.p`
+  height: 10px;
+  color: ${theme.colors.red[200]};
+`

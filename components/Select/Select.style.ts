@@ -32,7 +32,6 @@ export const Input = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 40px;
-  margin-bottom: 20px;
   cursor: pointer;
   border: 1px solid;
   border-color: ${theme.colors.gray[400]};
@@ -94,4 +93,9 @@ export const Option = styled.p`
     cursor: pointer;
     background-color: ${theme.colors.gray[100]};
   }
+`
+
+export const ErrorMessage = styled.p`
+  height: 10px;
+  color: ${theme.colors.red[200]};
 `
