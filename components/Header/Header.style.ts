@@ -80,7 +80,11 @@ export const NavLinkContainer = styled.div`
 
   cursor: pointer;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1600px) {
+    margin-right: 4vw;
+  }
+
+  @media (max-width: 1370px) {
     margin-right: 3vw;
   }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Hero } from '../../components/Hero'
 
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
@@ -23,6 +24,13 @@ const CarrouselWithOutSSR = dynamic(
 
 const MultiCarrouselWithOutSSR = dynamic(
   () => import('../../components/MultiCarrousel/MultiCarrousel'),
+  {
+    ssr: false,
+  },
+)
+
+const QuoteCarouselWithOutSSR = dynamic(
+  () => import('../../components/QuoteCarousel'),
   {
     ssr: false,
   },

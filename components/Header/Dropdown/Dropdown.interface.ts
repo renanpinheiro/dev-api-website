@@ -13,5 +13,6 @@ export interface IDropdownProps {
 }
 
 export interface IDropdownStyle {
-  hasTwoColumns: boolean
+  hasTwoColumns?: boolean
+  isActive?: boolean
 }

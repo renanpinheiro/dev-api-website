@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { theme } from '../../../styles/theme'
 import { IDropdownStyle } from './Dropdown.interface'
 
@@ -36,7 +36,14 @@ export const DropdownContainer = styled.div<IDropdownStyle>`
   }
 `
 
-export const DropdownItemContainer = styled.div`
+export const DropdownItemContainer = styled.div<IDropdownStyle>`
+  ${props =>
+    props.isActive &&
+    css`
+      color: ${theme.colors.secondary};
+      background-color: ${theme.colors.gray[100]};
+    `}
+
   .active {
     color: ${theme.colors.secondary};
     background-color: ${theme.colors.gray[100]};

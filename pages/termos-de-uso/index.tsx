@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import { Hero } from '../../components/Hero'
 import * as S from '../../styles/termsOfUse'
+import { Hero } from '../../components/Hero'
 
 const UseTerm = () => {
   return (
