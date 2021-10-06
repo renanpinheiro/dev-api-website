@@ -37,7 +37,6 @@ export const ListItem = styled.li`
   }
 
   span {
-    /* white-space: pre-wrap; */
     padding-top: 10px;
 
     font-size: 16px;
