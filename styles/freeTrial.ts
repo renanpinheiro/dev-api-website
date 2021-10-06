@@ -52,7 +52,7 @@ export const DepartamentContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 55vh;
+  height: 60vh;
   margin-top: 35px;
 `
 export const RangeContainer = styled.div`
@@ -60,7 +60,7 @@ export const RangeContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   margin-top: 35px;
 `
 
