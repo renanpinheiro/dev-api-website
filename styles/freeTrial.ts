@@ -6,14 +6,14 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 13vh;
+  padding: 13vh 0 10vh 0;
 `
 export const Title = styled.h2`
   width: 100%;
   margin-bottom: 15px;
 `
 export const SubTitle = styled.p`
-  margin-bottom: 15px;
+  margin-bottom: 5vh;
   font-size: 1.4rem;
 `
 
@@ -52,7 +52,7 @@ export const DepartamentContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 60vh;
+  height: 55vh;
   margin-top: 35px;
 `
 export const RangeContainer = styled.div`
@@ -60,10 +60,14 @@ export const RangeContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   margin-top: 35px;
 `
 
 export const Bolder = styled.span`
   font-weight: bold;
+`
+export const StepsContainer = styled.div`
+  width: 100%;
+  margin: 5vh 0;
 `

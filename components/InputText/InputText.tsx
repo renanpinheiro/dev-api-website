@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useField } from 'formik'
 import { IInputTextProps } from './InputText.interface'
 import * as S from './InputText.style'

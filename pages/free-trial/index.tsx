@@ -8,6 +8,12 @@ import { employerRanges } from '../../constants/employerRanges'
 import * as S from '../../styles/freeTrial'
 import { Checkbox } from '../../components/Checkbox'
 import { Select } from '../../components/Select'
+import { Steps } from '../../components/Steps'
+import {
+  stepsDepartamentsForm,
+  stepsLastForm,
+  stepsPersonalForm,
+} from '../../constants/steps'
 
 const FormStepper = ({ children }) => {
   const formsArray = React.Children.toArray(children) as React.ReactElement[]
@@ -78,6 +84,9 @@ const FormStepper = ({ children }) => {
 const PersonalForm = () => {
   return (
     <>
+      <S.StepsContainer>
+        <Steps steps={stepsPersonalForm} />
+      </S.StepsContainer>
       <S.Title>Vamos desbloquear o poder da integração de sistemas?</S.Title>
       <S.SubTitle>
         Preencha os campos abaixo para que possamos entrar em contato com você.
@@ -134,6 +143,9 @@ const PersonalForm = () => {
 const DepartamentForm = () => {
   return (
     <>
+      <S.StepsContainer>
+        <Steps steps={stepsDepartamentsForm} />
+      </S.StepsContainer>
       <S.Title>Qual setor a empresa está inserida?</S.Title>
       <S.SubTitle>Selecione a opção que defina o setor da empresa.</S.SubTitle>
       <S.DepartamentContainer>
@@ -154,6 +166,9 @@ const DepartamentForm = () => {
 const LastForm = () => {
   return (
     <>
+      <S.StepsContainer>
+        <Steps steps={stepsLastForm} />
+      </S.StepsContainer>
       <S.Title>Para finalizar, quantos funcionários a empresa tem?</S.Title>
       <S.SubTitle>
         Selecione a opção que defina a quantidade de colaboradores da empresa.
