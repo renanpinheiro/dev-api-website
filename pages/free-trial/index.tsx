@@ -119,10 +119,11 @@ const FormStepper = ({ children }) => {
   }
 
   useEffect(() => {
+    console.log('------>', formik.errors)
     if (formik.errors.departaments) {
       setErrorMessage(formik.errors.departaments as String)
     }
-  }, [formik.errors])
+  }, [])
 
   return (
     <FormikProvider value={formik}>
