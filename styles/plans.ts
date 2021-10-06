@@ -6,8 +6,8 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 10vh 0 20vh 0;
+  width: auto;
+  padding: 5vh 0 8vw 0;
 `
 export const HeroContent = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export const HeroContent = styled.div`
   width: 100%;
   height: 100%;
 
-  padding: 25px;
+  padding: 8vh 0 8vh 0;
 
   text-align: center;
 
@@ -60,10 +60,16 @@ export const PipeContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
+export const QuestionsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3vw;
+`
 export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   background-color: ${theme.colors.secondary};
 
@@ -72,7 +78,7 @@ export const Pipe = styled.div`
   }
 `
 export const ContainerItegration = styled.div`
-  margin: 10vw 0 8vw 0;
+  padding: 5vh 0 8vh 0;
 `
 export const CarrouselTitle = styled.h2`
   font-size: 2.3rem;
@@ -97,7 +103,7 @@ export const QuoteContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 3vw 6vh 6vw;
+  padding: 5vw 3vw 6vh 6vw;
 `
 
 export const FreeTestContainer = styled.div`
@@ -112,7 +118,13 @@ export const AcordionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 8vh 0 8vh 0;
+  padding: 5vh 0 8vh 0;
+  h2 {
+    font-size: 3.2rem;
+  }
+  span {
+    font-weight: 700;
+  }
 `
 export const FreeTestRows = styled.div`
   display: flex;
@@ -144,19 +156,21 @@ export const ListIntegrationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 100%;
+  padding: 5vh 8vw 5vh 8vw;
 `
 
 export const ListIntegrationTitle = styled.h2`
   font-size: 3.2rem;
   color: ${theme.colors.primary};
-
+  text-align: center;
   @media (max-width: 996px) {
     width: 55%;
   }
 
   @media (max-width: 1024px) {
-    width: 70%;
+    width: auto;
   }
   @media (max-width: 1366px) {
     width: 75%;
@@ -168,4 +182,7 @@ export const ListIntegrationTitle = styled.h2`
   span {
     font-weight: 700;
   }
+`
+export const ButtonContainer = styled.div`
+  padding: 3vh 0 3vh 0;
 `

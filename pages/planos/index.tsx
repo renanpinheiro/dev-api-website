@@ -19,6 +19,7 @@ import { listIntegration } from '../../constants/listIntegration'
 import { Acordion } from '../../components/Acordion'
 
 import { commonQuestions } from '../../constants/commonQuestions'
+import { Button } from '../../components/Button'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -101,25 +102,38 @@ const Plans = () => {
               />
             )}
           </S.CostumersCarrouselContainer>
-
+          <FreeTest />
           <S.QuoteContainer>
             <QuoteCarousel quotes={quotes} />
           </S.QuoteContainer>
         </S.ContainerItegration>
-        <FreeTest />
-        <S.PipeContainer>
-          <S.Pipe />
-        </S.PipeContainer>
 
         <S.ListIntegrationContainer>
+          <S.Pipe />
           <S.ListIntegrationTitle>
             <span>Reduza em até 20x o tempo</span> de ter toda a sua empresa
             integrada
           </S.ListIntegrationTitle>
-          <ListColumn list={listIntegration} col={2} />
+          <ListColumn list={listIntegration} />
+          <S.ButtonContainer>
+            <Button
+              text="Quero integrar meus sistemas"
+              type="default"
+              size="large"
+            />
+          </S.ButtonContainer>
         </S.ListIntegrationContainer>
         <S.AcordionContainer>
+          <S.QuestionsContainer>
+            <S.Pipe />
+            <h2>
+              Perguntas <span>frequentes</span>
+            </h2>
+          </S.QuestionsContainer>
           <Acordion list={listQuestions} />
+          <S.ButtonContainer>
+            <Button text="Vamos conversar" type="default" size="default" />
+          </S.ButtonContainer>
         </S.AcordionContainer>
       </S.Container>
     </>

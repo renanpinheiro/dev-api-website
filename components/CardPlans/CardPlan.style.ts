@@ -10,50 +10,41 @@ export const Container = styled.div`
 `
 
 export const CardsContainer = styled.div`
-  box-sizing: border-box;
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-  grid-template-columns: repeat(4, 22vw);
-
-  padding: 3rem;
-
-  @media only screen and (max-width: 828px) {
-    grid-template-columns: repeat(1, 40vw);
-    grid-row-gap: 40px;
+  width: 90%;
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    width: 70vw;
   }
-  @media only screen and (max-width: 1000px) {
-    grid-template-columns: repeat(1, 40vw);
-    grid-row-gap: 40px;
+  @media (max-width: 1024px) {
+    width: 84vw;
   }
-  @media only screen and (min-width: 1024px) {
-    grid-template-columns: repeat(1, 28vw);
-    grid-gap: 40px;
+  @media (max-width: 1280px) {
+    width: 84vw;
   }
-  @media only screen and (min-width: 1200px) {
-    grid-template-columns: repeat(2, 28vw);
-    grid-gap: 40px;
+  @media (max-width: 1366px) {
+    width: 86vw;
   }
-  @media only screen and (min-width: 1366px) {
-    grid-template-columns: repeat(2, 24vw);
-    grid-gap: 40px;
+  @media (max-width: 1440px) {
+    width: 80vw;
   }
-
-  @media only screen and (min-width: 1517px) {
-    grid-template-columns: repeat(2, 25vw);
-    grid-gap: 40px;
+  @media (max-width: 1600px) {
+    width: 80vw;
   }
-
-  @media only screen and (min-width: 1700px) {
-    grid-template-columns: repeat(4, 20vw);
-    grid-gap: 40px;
+  @media (max-width: 1920px) {
+    width: 82vw;
   }
 `
 export const Cards = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 22em;
-  height: 100%;
+  width: 20vw;
+  height: 18em;
   line-height: 1;
   text-align: center;
   vertical-align: middle;
@@ -61,7 +52,7 @@ export const Cards = styled.div`
   background-image: url('/backgrounds/card-plan-bg.svg');
   background-repeat: no-repeat;
   background-position-x: 50%;
-  background-position-y: -1.5rem;
+  background-position-y: -4.5rem;
   background-size: contain;
   border-radius: 8px;
   border-radius: 8px;
@@ -79,29 +70,39 @@ export const Cards = styled.div`
     border-radius: 8px;
     box-shadow: 0px 6px 28px #2c2d6636;
     transform: scale(1.1);
+  }
+  @media (max-width: 800px) {
+    width: 32vw;
+    height: 18em;
+  }
+  @media (max-width: 1024px) {
+    width: 20vw;
+    height: 40em;
+    background-position-x: 50%;
+    background-position-y: -1rem;
+  }
+  @media (max-width: 1280px) {
+    width: 20vw;
+    height: 40em;
+    background-position-x: 50%;
+    background-position-y: -3rem;
+  }
+  @media (max-width: 1366px) {
+    width: 20vw;
+    height: 40em;
+  }
+  @media (max-width: 1440px) {
+    width: 18vw;
+    height: 40em;
+  }
+  @media (max-width: 1600px) {
+    width: 18vw;
+    height: 41em;
+  }
 
-    @media (min-width: 900px) {
-      background-position-x: 50%;
-      background-position-y: 0%;
-      background-size: 140%;
-    }
-    @media (min-width: 1200px) {
-      background-position-x: 50%;
-      background-position-y: 0%;
-      background-size: 120%;
-    }
-    @media only screen and (max-width: 1024px) {
-      width: 31vw;
-    }
-    @media (max-width: 1366px) {
-      background-size: 103%;
-    }
-    @media only screen and (max-width: 1517px) {
-    }
-
-    @media (max-width: 1920px) {
-      background-position-y: -12%;
-    }
+  @media (max-width: 1920px) {
+    width: 18.5vw;
+    height: 25.5em;
   }
 `
 
@@ -109,7 +110,36 @@ export const Icon = styled.img`
   width: 80px;
   height: 80px;
   margin: 1rem auto 2rem auto;
-
+  @media (max-width: 800px) {
+    width: 45px;
+    height: 45px;
+    margin: 0.5rem auto auto auto;
+  }
+  @media (min-width: 1024px) {
+    width: 25px;
+    height: 25px;
+    margin: 0.25rem auto 0.2rem auto;
+  }
+  @media (min-width: 1280px) {
+    width: 30px;
+    height: 30px;
+    margin: 0.25rem auto 0.2rem auto;
+  }
+  @media (min-width: 1366px) {
+    width: 30px;
+    height: 30px;
+    margin: 0.25rem auto 0.2rem auto;
+  }
+  @media (min-width: 1440px) {
+    width: 30px;
+    height: 30px;
+    margin: 0.25rem auto 0.2rem auto;
+  }
+  @media (min-width: 1600px) {
+    width: 54px;
+    height: 54px;
+    margin: 0.25rem auto auto auto;
+  }
   @media (min-width: 1920px) {
     width: 90px;
     height: 90px;
@@ -117,17 +147,28 @@ export const Icon = styled.img`
 `
 
 export const Title = styled.h2`
-  padding: 3rem 0 1rem 0;
-  font-size: 1.5rem;
+  padding: 3.2rem 0 1rem 0;
+  font-size: 3rem;
   font-weight: 700;
   color: ${theme.colors.secondary};
   text-transform: uppercase;
   letter-spacing: 7px;
 
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
+    padding: 1.5rem 0 0.5rem 0;
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0.8rem 0 0.7rem 0;
+    font-size: 1rem;
     letter-spacing: 4px;
   }
   @media (min-width: 1200px) {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+  @media (min-width: 1366px) {
     font-size: 1.5rem;
     letter-spacing: 4px;
   }
@@ -136,8 +177,8 @@ export const Title = styled.h2`
     letter-spacing: 5px;
   }
   @media (min-width: 1920px) {
-    font-size: 2rem;
-    letter-spacing: 6px;
+    font-size: 1.7rem;
+    letter-spacing: 7px;
   }
 `
 
@@ -146,27 +187,58 @@ export const Text = styled.p`
   flex-direction: column;
   align-items: center;
   padding: 0 0 2% 0;
-  font-size: 1em;
+  font-size: 1rem;
 
   color: ${theme.colors.black};
-  @media (min-width: 1920px) {
-    font-size: 1.3em;
+  @media (max-width: 1024px) {
+    font-size: 0.5rem;
+  }
+  @media (max-width: 1280px) {
+    font-size: 0.6rem;
+  }
+  @media (max-width: 1366px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 1920px) {
+    font-size: 1rem;
   }
 `
 
 export const SubText = styled.p`
   padding-bottom: 1rem;
   margin: 0;
-  font-size: 1.3em;
+  font-size: 1.2rem;
   color: ${theme.colors.gray[900]};
+
+  @media (max-width: 1024px) {
+    font-size: 0.8em;
+  }
+  color: ${theme.colors.black};
+  @media (max-width: 1280px) {
+    font-size: 0.7rem;
+  }
+  @media (max-width: 1366px) {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 1600px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 1920px) {
+    font-size: 1.3rem;
+  }
 `
 
 export const TextContainer = styled.div`
   padding: 0rem 0.6rem;
 
+  @media (min-width: 124px) {
+    font-size: 0.8em;
+  }
   @media (min-width: 1200px) {
     padding: 0rem 1.1rem;
   }
+
   @media (min-width: 1600px) {
     padding: 0rem 2.1rem;
   }
@@ -180,16 +252,23 @@ export const ButtonContainer = styled.div`
   flex-direction: column;
 
   align-items: center;
-  align-items: center;
+
   justify-content: flex-end;
   width: 100%;
   height: 100%;
   padding: 0 2rem 1.5rem 2rem;
 
-  @media (min-width: 900px) {
+  @media (max-width: 900px) {
     padding: 0rem 1rem 1.5rem 1rem;
   }
-  @media (min-width: 1920px) {
+  @media (max-width: 1024px) {
+    button {
+      height: 35px;
+      font-size: 1rem;
+    }
+    justify-content: center;
+  }
+  @media (max-width: 1920px) {
     padding: 0rem 4rem 1.5rem 4rem;
   }
 `

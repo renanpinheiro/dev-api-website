@@ -7,14 +7,12 @@ export const FreeTestContainer = styled.div`
   align-items: center;
   width: 100%;
 
-  padding: 2vh 0 8vh 0;
+  padding: 8vh 0 8vh 0;
 `
 
 export const FreeTestRows = styled.div`
   display: flex;
   flex-direction: column;
-
-  width: 40vw;
 `
 export const FreeTest = styled.div`
   display: flex;
@@ -24,20 +22,23 @@ export const FreeTest = styled.div`
 
   @media (max-width: 996px) {
     flex-direction: column;
-    margin-top: 10px;
+
     font-size: 1.375rem;
   }
 
   h2 {
+    max-width: 18ch;
     font-size: 2.3rem;
     color: ${theme.colors.primary};
 
     @media (max-width: 996px) {
       flex-direction: column;
-      margin-top: 10px;
+
       font-size: 1.375rem;
     }
-
+    @media (max-width: 1024px) {
+      font-size: 2rem;
+    }
     span {
       font-weight: 700;
     }
@@ -46,7 +47,8 @@ export const FreeTest = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-items: center;
+
   padding: 2.1rem 0 0 0;
 `
 export const Pipe = styled.div`

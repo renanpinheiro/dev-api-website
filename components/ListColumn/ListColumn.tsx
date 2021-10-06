@@ -1,10 +1,10 @@
 import React from 'react'
 import { IListColumnProps } from './ListColumn.interface'
 import * as S from './ListColumn.style'
-const ListColumn = ({ list, col }: IListColumnProps) => {
+const ListColumn = ({ list }: IListColumnProps) => {
   return (
     <S.ListContainer>
-      <S.ListColumn col={col}>
+      <S.ListColumn>
         {list.map((list, index) => {
           return (
             <S.ListItem key={index}>
