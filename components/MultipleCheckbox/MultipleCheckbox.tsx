@@ -35,6 +35,9 @@ export const MultipleCheckbox = ({
       } else {
         setIsChecked(false)
       }
+    } else {
+      const isChecked = !!field.value.find(value => value === text)
+      setIsChecked(isChecked)
     }
   }, [field.value])
 

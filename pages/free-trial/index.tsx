@@ -10,6 +10,7 @@ import { Checkbox } from '../../components/Checkbox'
 import { Select } from '../../components/Select'
 import { Steps } from '../../components/Steps'
 import axios from 'axios'
+import router from 'next/router'
 import {
   stepsDepartamentsForm,
   stepsLastForm,
@@ -24,7 +25,7 @@ const FormStepper = ({ children }) => {
 
   const formsArray = React.Children.toArray(children) as React.ReactElement[]
   const [step, setStep] = useState(0)
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState<String>('')
   const [isLoading, setIsLoading] = useState(false)
   const currentForm = formsArray[step]
 
@@ -47,7 +48,10 @@ const FormStepper = ({ children }) => {
       role: Yup.string().required('Campo obrigatŕoio.'),
     }),
     step2: Yup.object().shape({
-      departaments: Yup.array().min(1).required('Campo obrigatório.'),
+      departaments: Yup.array().min(
+        1,
+        'É necessário selecionar ao menos uma opção.',
+      ),
     }),
     step3: Yup.object().shape({
       employees: Yup.string().required('Campo obrigatório'),
@@ -76,6 +80,7 @@ const FormStepper = ({ children }) => {
       }
       try {
         await leadsApi.post('/leads', payload)
+        router.push('/')
       } catch (error) {
         const errors = {
           'Lead already exist.': 'Email já cadastrado.',
@@ -86,6 +91,7 @@ const FormStepper = ({ children }) => {
         )
       } finally {
         setIsLoading(false)
+        setErrorMessage('')
       }
     } else {
       setStep(step + 1)
@@ -107,14 +113,16 @@ const FormStepper = ({ children }) => {
     validationSchema: schemaArray[step],
   })
 
-  useEffect(() => {
-    console.log(formik.errors, formik.values)
-  }, [formik.errors])
-
   const goBack = () => {
     setStep(step - 1)
     setErrorMessage('')
   }
+
+  useEffect(() => {
+    if (formik.errors.departaments) {
+      setErrorMessage(formik.errors.departaments as String)
+    }
+  }, [formik.errors])
 
   return (
     <FormikProvider value={formik}>

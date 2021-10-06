@@ -44,7 +44,6 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 20px;
 `
 
 export const CheckboxContainer = styled.div`
@@ -77,14 +76,14 @@ export const StepsContainer = styled.div`
 `
 
 export const ErrorText = styled.p<IErrorTextStyle>`
-  height: 20px;
-  margin: 10px 0;
   font-size: 1.4rem;
   color: ${theme.colors.red[200]};
 
   ${({ hasError }) =>
     hasError &&
     css`
+      margin: 5px 0px;
+
       ::before {
         content: '•  ';
       }
