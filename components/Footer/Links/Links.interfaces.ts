@@ -6,5 +6,5 @@ export interface IContainerLinkProps {
 export interface ILinks {
   name: string
   url: string
-  target: string
+  target?: string
 }
