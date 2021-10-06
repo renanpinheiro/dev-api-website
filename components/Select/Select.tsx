@@ -3,7 +3,7 @@ import { useField } from 'formik'
 import { IOption, ISelectProps } from './Select.interface'
 import * as S from './Select.style'
 
-export const Select = ({ name, label, options }: ISelectProps) => {
+export const Select = ({ name, label, options, isRequered }: ISelectProps) => {
   const [field, _, helpers] = useField(name)
   const [isOpen, setIsOpen] = useState(false)
   const [value, setValue] = useState('')
@@ -29,7 +29,7 @@ export const Select = ({ name, label, options }: ISelectProps) => {
 
   return (
     <S.Container>
-      <S.Label>{label}</S.Label>
+      <S.Label isRequired={isRequered}>{label}</S.Label>
       <S.Input onClick={toggleOpen}>
         <S.Selection placeholder={'Selecione'} disabled value={value} />
         <S.Icon src={'/icons/arrow-down.svg'} onClick={toggleOpen} />

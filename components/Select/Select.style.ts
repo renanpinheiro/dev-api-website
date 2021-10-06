@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components'
 import { theme } from '../../styles/theme'
-import { IOptionsContainerStyle } from './Select.interface'
+import {
+  ILabelStyles,
+  IOptionsContainerStyle,
+  ISelectionStyle,
+} from './Select.interface'
 
 export const Container = styled.div`
   position: relative;
@@ -9,9 +13,18 @@ export const Container = styled.div`
   width: 100%;
 `
 
-export const Label = styled.label`
+export const Label = styled.label<ILabelStyles>`
   margin-bottom: 5px;
   font-size: 1.2rem;
+
+  ${({ isRequired }) =>
+    isRequired &&
+    css`
+      ::after {
+        color: ${theme.colors.red[200]};
+        content: ' *';
+      }
+    `}
 `
 
 export const Input = styled.div`
@@ -32,7 +45,7 @@ export const Icon = styled.img`
   cursor: pointer;
 `
 
-export const Selection = styled.input`
+export const Selection = styled.input<ISelectionStyle>`
   width: 90%;
   height: 100%;
   padding-left: 15px;
@@ -41,6 +54,12 @@ export const Selection = styled.input`
   background-color: #fff;
   border: none;
   outline: 0;
+
+  ${({ hasError }) =>
+    hasError &&
+    css`
+      border-color: ${theme.colors.red};
+    `};
 `
 export const OptionsContainer = styled.div<IOptionsContainerStyle>`
   display: none;

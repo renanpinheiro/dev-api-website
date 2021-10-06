@@ -98,7 +98,12 @@ const PersonalForm = () => {
           />
         </S.SmallContainer>
         <S.SmallContainer>
-          <InputText name={'phone'} label={'Telefone'} isRequired />
+          <InputText
+            name={'phone'}
+            label={'Telefone'}
+            isRequired
+            mask={'(99)9 9999-9999'}
+          />
         </S.SmallContainer>
       </S.DefaultContainer>
       <S.DefaultContainer>
@@ -112,6 +117,7 @@ const PersonalForm = () => {
         </S.SmallContainer>
         <S.SmallContainer>
           <Select
+            isRequered
             name={'role'}
             label={'Cargo'}
             options={[

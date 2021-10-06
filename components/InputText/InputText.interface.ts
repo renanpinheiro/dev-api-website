@@ -3,6 +3,7 @@ export interface IInputTextProps {
   label: string
   isRequired?: boolean
   placeholder?: string
+  mask?: string
 }
 
 export interface IInputStyles {
