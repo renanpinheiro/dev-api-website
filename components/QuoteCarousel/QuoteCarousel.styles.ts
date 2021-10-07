@@ -172,8 +172,8 @@ export const Icon = styled.img`
   }
 
   @media (min-width: 1336px) and (max-width: 1440px) {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
   }
 
   @media only screen and (max-width: 800px) {
