@@ -120,7 +120,7 @@ export const navLinks = [
       ,
       {
         name: 'DevApi na Mídia',
-        url: '/devApi-na-midia',
+        url: '/devapi-na-midia',
         isActive: false,
       },
     ],
