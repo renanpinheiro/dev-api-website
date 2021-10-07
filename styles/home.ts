@@ -335,3 +335,100 @@ export const ButtonContainer = styled.div`
 
   padding: 10vh 8vw 0 8vw;
 `
+
+export const FeaturesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10vh 8vw 0 8vw;
+
+  text-align: center;
+
+  h2 {
+    margin-bottom: 15px;
+    font-size: 5vh;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  p {
+    max-width: 120ch;
+
+    margin-bottom: 15px;
+
+    overflow: hidden;
+    font-size: 2vh;
+
+    line-height: 1.3;
+  }
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`
+
+export const Features = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 51vw;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`
+
+export const FeatureCard = styled.div`
+  display: flex;
+  align-items: center;
+
+  margin: 2vh;
+
+  text-align: left;
+`
+
+export const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 8vh;
+  height: 8vh;
+
+  background-color: ${theme.colors.gray[100]};
+  border-radius: 5px;
+
+  img {
+    width: 60%;
+  }
+`
+
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+
+  margin-left: 15px;
+
+  p {
+    max-width: 28ch;
+    margin: 0;
+    line-height: 1;
+  }
+`
+
+export const Title = styled.p`
+  font-weight: 700;
+`
+
+export const CallToActionContainer = styled.div`
+  padding: 0 0 10vh 0;
+`

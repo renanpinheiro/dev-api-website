@@ -17,6 +17,7 @@ import * as S from '../../styles/home'
 import { Button } from '../../components/Button'
 import { plataformDetails } from '../../constants/plataformDetails'
 import { businessCards } from '../../constants/businessCards'
+import { featuresCard } from '../../constants/featuresCard'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -163,6 +164,33 @@ const Home = () => {
           </S.CardContainer>
         </S.BusinessContainer>
 
+        <S.FeaturesContainer>
+          <S.Pipe />
+          <h2>
+            Poderosa, mas
+            <span> simples e intuitiva</span>
+          </h2>
+          <p>
+            Os líderes de negócio se surpreendem. Os líderes técnicos confiam.
+            Os desenvolvedores agradecem.
+          </p>
+          <S.Features>
+            {featuresCard.map((item, index) => {
+              return (
+                <S.FeatureCard key={index}>
+                  <S.Icon>
+                    <img src={item.icon} />
+                  </S.Icon>
+                  <S.Text>
+                    <S.Title>{item.title}</S.Title>
+                    <p>{item.text}</p>
+                  </S.Text>
+                </S.FeatureCard>
+              )
+            })}
+          </S.Features>
+        </S.FeaturesContainer>
+
         <S.Carrousel>
           {isMobile ? (
             <CarrouselWithOutSSR
@@ -196,7 +224,9 @@ const Home = () => {
           <QuoteCarousel quotes={quotes} />
         </S.Quote>
 
-        <CallToAction />
+        <S.CallToActionContainer>
+          <CallToAction />
+        </S.CallToActionContainer>
       </S.Content>
     </>
   )
