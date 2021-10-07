@@ -73,7 +73,9 @@ const Header = () => {
                   onClick={() => handleOpenDropdown(index)}
                   ref={dropdownRef}
                 >
-                  <S.NavLink isActive={link.isActive}>{link.name}</S.NavLink>
+                  <S.NavLink href={link.url} isActive={link.isActive}>
+                    {link.name}
+                  </S.NavLink>
 
                   {link.dropDown && (
                     <S.Arrow src="/arrows/arrow-dropdown.svg" />

@@ -133,9 +133,11 @@ ${reset}
   }
 
   body {
+    max-width: 100%;
+    overflow-x: hidden;
     font-size: 1rem;
     font-weight: normal;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.primary}; 
   }
 
   h1 {

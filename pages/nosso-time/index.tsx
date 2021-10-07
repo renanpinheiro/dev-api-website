@@ -25,7 +25,7 @@ const About = () => {
 
       <S.Content>
         <S.Wrapper>
-          <img src="/static/images/about-connect.svg" alt="DevApi Connect" />
+          <img src="/images/about-connect.svg" alt="DevApi Connect" />
 
           <S.Title>
             <hr />
@@ -60,13 +60,13 @@ const About = () => {
 
           <S.Founders>
             <S.Card>
-              <img src="/static/images/william-cto.png" />
+              <img src="/images/founder-william-cto.png" />
               <b>William Hoffmann</b>
               <span>Chief Technology Officer</span>
               <hr />
             </S.Card>
             <S.Card>
-              <img src="/static/images/Luana-ceo.png" />
+              <img src="/images/founder-luana-ceo.png" />
               <b>Luana Ribeiro</b>
               <span>Chief Executive Officer</span>
               <hr />

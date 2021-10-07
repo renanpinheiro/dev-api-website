@@ -26,47 +26,47 @@ export const navLinks = [
     dropDown: [
       {
         name: 'Gestão',
-        url: '/gestao',
+        url: '/solucoes/gestao',
         isActive: false,
       },
       {
         name: 'Marketing',
-        url: '/marketing',
+        url: '/solucoes/marketing',
         isActive: false,
       },
       {
         name: 'Comercial',
-        url: '/comercial',
+        url: '/solucoes/comercial',
         isActive: false,
       },
       {
         name: 'RH',
-        url: '/rh',
+        url: '/solucoes/rh',
         isActive: false,
       },
       {
         name: 'e-Commerce',
-        url: '/e-commerce',
+        url: '/solucoes/e-commerce',
         isActive: false,
       },
       {
         name: 'Empresas 360',
-        url: '/empresas-360',
+        url: '/solucoes/empresas-360',
         isActive: false,
       },
       {
         name: 'Financeiro',
-        url: '/financeiro',
+        url: '/solucoes/financeiro',
         isActive: false,
       },
       {
         name: 'Seu Produto',
-        url: '/seu-produto',
+        url: '/solucoes/seu-produto',
         isActive: false,
       },
       {
         name: 'Logística',
-        url: '/logistica',
+        url: '/solucoes/logistica',
         isActive: false,
       },
     ],
@@ -114,13 +114,13 @@ export const navLinks = [
       },
       {
         name: 'Carreiras',
-        url: '/carreiras',
+        url: 'https://jobs.kenoby.com/tivit',
         isActive: false,
       },
       ,
       {
         name: 'DevApi na Mídia',
-        url: '/devApi-na-midia',
+        url: '/devapi-na-midia',
         isActive: false,
       },
     ],

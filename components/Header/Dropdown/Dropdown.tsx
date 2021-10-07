@@ -17,7 +17,7 @@ const Dropdown = ({ children, isOpen, dropdownItems }: IDropdownProps) => {
         <DropdownContainer hasTwoColumns={hasTwoColumns}>
           {dropdownItems.map((item, index) => {
             return (
-              <DropdownItemContainer key={index}>
+              <DropdownItemContainer key={index} isActive={item.isActive}>
                 <Link href={item.url} activeClassName="active">
                   <DropdownItem id={`${index}`}>{item.name}</DropdownItem>
                 </Link>
