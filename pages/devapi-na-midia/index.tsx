@@ -10,17 +10,17 @@ import { Hero } from '../../components/Hero'
 
 import * as S from '../../styles/midia'
 
-interface Midia {
+interface IMidia {
   title: string
   link: string
   image: string
 }
 
-interface MidiaProps {
-  allMidias: Midia[]
+interface IMidiasProps {
+  midias: IMidia[]
 }
 
-const Midias = ({ allMidias }: MidiaProps) => {
+const Midias = ({ midias }: IMidiasProps) => {
   return (
     <>
       <Head>
@@ -43,7 +43,7 @@ const Midias = ({ allMidias }: MidiaProps) => {
 
       <S.Content>
         <S.Wrapper>
-          {allMidias.map(midia => (
+          {midias.map(midia => (
             <S.Card>
               <img src={midia.image} />
               <h3>{midia.title}</h3>
@@ -65,11 +65,11 @@ const Midias = ({ allMidias }: MidiaProps) => {
 export const getStaticProps: GetServerSideProps = async () => {
   const { data } = await api.get(`/midias`)
 
-  const allMidias = data
+  const midias = data
 
   return {
     props: {
-      allMidias,
+      midias,
     },
   }
 }
