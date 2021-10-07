@@ -84,14 +84,6 @@ export const Card = styled.div`
     padding: 5vh 3vh 0;
   }
 
-  > img {
-    width: 8vw;
-
-    @media (max-width: 768px) {
-      width: 40%;
-    }
-  }
-
   > h3 {
     padding: 3vh 0;
     font-size: 1.5rem;
@@ -102,9 +94,17 @@ export const Card = styled.div`
       font-size: 1.25rem;
     }
   }
+
+  > img {
+    width: 8vw;
+
+    @media (max-width: 768px) {
+      width: 40%;
+    }
+  }
 `
 
-export const CardFooter = styled.div`
+export const KnowMoreLink = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

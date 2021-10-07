@@ -1,13 +1,26 @@
 import React from 'react'
 
+import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+
+import api from '../../services/api'
 
 import { Hero } from '../../components/Hero'
 
 import * as S from '../../styles/midia'
 
-const Midia = () => {
+interface Midia {
+  title: string
+  link: string
+  image: string
+}
+
+interface MidiaProps {
+  allMidias: Midia[]
+}
+
+const Midias = ({ allMidias }: MidiaProps) => {
   return (
     <>
       <Head>
@@ -30,57 +43,35 @@ const Midia = () => {
 
       <S.Content>
         <S.Wrapper>
-          <S.Card>
-            <img
-              src="http://www.aintec.com.br/wp-content/uploads/2015/10/img-lg.jpg"
-              title="Gazeta do Povo"
-            />
-            <h3>Um raio-x do ecossistema de inovação no Paraná</h3>
-
-            <S.CardFooter>
-              <Link href="">
-                <a title="Saiba mais">Saiba mais</a>
-              </Link>
-            </S.CardFooter>
-          </S.Card>
-
-          <S.Card>
-            <img
-              src="http://www.aintec.com.br/wp-content/uploads/2015/10/img-lg.jpg"
-              title="Gazeta do Povo"
-            />
-            <h3>
-              DevApi pretende aumentar a captação de leads no dashboard em até
-              39,5%
-            </h3>
-
-            <S.CardFooter>
-              <Link href="">
-                <a title="Saiba mais">Saiba mais</a>
-              </Link>
-            </S.CardFooter>
-          </S.Card>
-
-          <S.Card>
-            <img
-              src="http://www.aintec.com.br/wp-content/uploads/2015/10/img-lg.jpg"
-              title="Gazeta do Povo"
-            />
-            <h3>
-              Como as startups brasileiras estão lidando com os desafios de
-              adequação à LGPD
-            </h3>
-
-            <S.CardFooter>
-              <Link href="">
-                <a title="Saiba mais">Saiba mais</a>
-              </Link>
-            </S.CardFooter>
-          </S.Card>
+          {allMidias.map(midia => (
+            <S.Card>
+              <img src={midia.image} />
+              <h3>{midia.title}</h3>
+              <S.KnowMoreLink>
+                <Link href={midia.link}>
+                  <a title="Saiba mais" target="_blank">
+                    Saiba mais
+                  </a>
+                </Link>
+              </S.KnowMoreLink>
+            </S.Card>
+          ))}
         </S.Wrapper>
       </S.Content>
     </>
   )
 }
 
-export default Midia
+export const getStaticProps: GetServerSideProps = async () => {
+  const { data } = await api.get(`/midias`)
+
+  const allMidias = data
+
+  return {
+    props: {
+      allMidias,
+    },
+  }
+}
+
+export default Midias
