@@ -28,7 +28,6 @@ export const Select = ({ name, label, options, isRequered }: ISelectProps) => {
   }
 
   useEffect(() => {
-    console.log(meta)
     if (meta.touched) setIsOpen(false)
   }, [meta.touched])
 

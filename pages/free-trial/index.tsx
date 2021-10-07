@@ -1,4 +1,4 @@
-import { FormikProvider, useFormik } from 'formik'
+import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
 import React, { useEffect, useState } from 'react'
 import { Button } from '../../components/Button'
 import { MultipleCheckbox } from '../../components/MultipleCheckbox'
@@ -37,33 +37,6 @@ const FormStepper = ({ children }) => {
     return step === 0
   }
 
-  const validationSchemas = {
-    step1: Yup.object().shape({
-      fullName: Yup.string().required('Campo obrigatório.'),
-      email: Yup.string()
-        .email('Este campo deve ser um email válido.')
-        .required('Campo é obrigatório'),
-      phone: Yup.string().required('Campo é obrigatório.'),
-      company: Yup.string().required('Campo obrigatório.'),
-      role: Yup.string().required('Campo obrigatŕoio.'),
-    }),
-    step2: Yup.object().shape({
-      departaments: Yup.array().min(
-        1,
-        'É necessário selecionar ao menos uma opção.',
-      ),
-    }),
-    step3: Yup.object().shape({
-      employees: Yup.string().required('Campo obrigatório'),
-    }),
-  }
-
-  const schemaArray = [
-    validationSchemas.step1,
-    validationSchemas.step2,
-    validationSchemas.step3,
-  ]
-
   const onSubmit = async values => {
     if (isLastStep()) {
       setIsLoading(true)
@@ -80,6 +53,7 @@ const FormStepper = ({ children }) => {
       }
       try {
         await leadsApi.post('/leads', payload)
+        setErrorMessage('')
         router.push('/')
       } catch (error) {
         const errors = {
@@ -91,12 +65,13 @@ const FormStepper = ({ children }) => {
         )
       } finally {
         setIsLoading(false)
-        setErrorMessage('')
       }
     } else {
       setStep(step + 1)
     }
   }
+  console.log(errorMessage)
+
   const formik = useFormik({
     initialValues: {
       fullName: '',
@@ -109,21 +84,15 @@ const FormStepper = ({ children }) => {
       isComunication: false,
       isPrivacyPolice: false,
     },
+    validateOnChange: !!currentForm.props.validateOnChange,
     onSubmit,
-    validationSchema: schemaArray[step],
+    validationSchema: currentForm.props.validationSchema,
   })
 
   const goBack = () => {
     setStep(step - 1)
     setErrorMessage('')
   }
-
-  useEffect(() => {
-    console.log('------>', formik.errors)
-    if (formik.errors.departaments) {
-      setErrorMessage(formik.errors.departaments as String)
-    }
-  }, [])
 
   return (
     <FormikProvider value={formik}>
@@ -148,6 +117,7 @@ const FormStepper = ({ children }) => {
             }
             size={'default'}
             type={'default'}
+            buttonType={'submit'}
           />
         </S.ButtonContainer>
       </S.Form>
@@ -155,7 +125,10 @@ const FormStepper = ({ children }) => {
   )
 }
 
-const PersonalForm = () => {
+const PersonalForm = ({}: Pick<
+  FormikConfig<FormikValues>,
+  'validationSchema' | 'validateOnChange'
+>) => {
   return (
     <>
       <S.StepsContainer>
@@ -214,7 +187,12 @@ const PersonalForm = () => {
   )
 }
 
-const DepartamentForm = () => {
+const DepartamentForm = ({}: Pick<
+  FormikConfig<FormikValues>,
+  'validationSchema' | 'validateOnChange'
+>) => {
+  const [errorMessage, setErrorMessage] = useState<String>('')
+
   return (
     <>
       <S.StepsContainer>
@@ -222,12 +200,15 @@ const DepartamentForm = () => {
       </S.StepsContainer>
       <S.Title>Qual setor a empresa está inserida?</S.Title>
       <S.SubTitle>Selecione a opção que defina o setor da empresa.</S.SubTitle>
+      <S.ErrorText hasError={!!errorMessage}>{errorMessage}</S.ErrorText>
+
       <S.DepartamentContainer>
         {departaments.map((departament, idx) => (
           <S.CheckboxContainer key={idx}>
             <MultipleCheckbox
               text={departament}
               name={'departaments'}
+              setError={setErrorMessage}
               isMultiple
             />
           </S.CheckboxContainer>
@@ -237,7 +218,12 @@ const DepartamentForm = () => {
   )
 }
 
-const LastForm = () => {
+const LastForm = ({}: Pick<
+  FormikConfig<FormikValues>,
+  'validationSchema' | 'validateOnChange'
+>) => {
+  const [errorMessage, setErrorMessage] = useState<String>('')
+
   return (
     <>
       <S.StepsContainer>
@@ -247,11 +233,17 @@ const LastForm = () => {
       <S.SubTitle>
         Selecione a opção que defina a quantidade de colaboradores da empresa.
       </S.SubTitle>
+      <S.ErrorText hasError={!!errorMessage}>{errorMessage}</S.ErrorText>
+
       <S.RangeContainer>
         {employerRanges.map((range, idx) => {
           return (
             <S.CheckboxContainer key={idx}>
-              <MultipleCheckbox text={range} name={'employees'} />
+              <MultipleCheckbox
+                text={range}
+                name={'employees'}
+                setError={setErrorMessage}
+              />
             </S.CheckboxContainer>
           )
         })}
@@ -272,13 +264,37 @@ const LastForm = () => {
   )
 }
 const FreeTrial = () => {
+  const validationSchemas = {
+    step1: Yup.object().shape({
+      fullName: Yup.string().required('Campo obrigatório.'),
+      email: Yup.string()
+        .email('Este campo deve ser um email válido.')
+        .required('Campo é obrigatório'),
+      phone: Yup.string().required('Campo é obrigatório.'),
+      company: Yup.string().required('Campo obrigatório.'),
+      role: Yup.string().required('Campo obrigatŕoio.'),
+    }),
+    step2: Yup.object().shape({
+      departaments: Yup.array().min(
+        1,
+        'É necessário selecionar ao menos uma opção.',
+      ),
+    }),
+    step3: Yup.object().shape({
+      employees: Yup.string().required('É necessário selecionar uma opção.'),
+    }),
+  }
+
   return (
     <S.Container>
       <S.FormContainer>
         <FormStepper>
-          <PersonalForm />
-          <DepartamentForm />
-          <LastForm />
+          <PersonalForm
+            validationSchema={validationSchemas.step1}
+            validateOnChange
+          />
+          <DepartamentForm validationSchema={validationSchemas.step2} />
+          <LastForm validationSchema={validationSchemas.step3} />
         </FormStepper>
       </S.FormContainer>
     </S.Container>
