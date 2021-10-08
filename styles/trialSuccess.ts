@@ -10,6 +10,13 @@ export const Container = styled.div`
   justify-content: space-between;
   height: 100vh;
   padding: 13vh 8vw 0 8vw;
+
+  background-image: url('/images/connect-world.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+
+  background-size: 100vh;
 `
 export const InfoContainer = styled.div`
   display: flex;

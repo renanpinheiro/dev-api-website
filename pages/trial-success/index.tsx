@@ -11,9 +11,6 @@ const TrialSuccess = () => {
         </h2>
         <p>Entraremos em contato o mais brevemente possível.</p>
       </S.InfoContainer>
-      <S.ImgContainer>
-        <img src={'/images/connect-world.png'} />
-      </S.ImgContainer>
     </S.Container>
   )
 }
