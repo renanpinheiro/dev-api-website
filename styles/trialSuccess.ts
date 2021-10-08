@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 
   padding: 10vh 0;
