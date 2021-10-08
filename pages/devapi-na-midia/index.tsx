@@ -63,7 +63,7 @@ const Midias = ({ midias }: IMidiasProps) => {
 }
 
 export const getStaticProps: GetServerSideProps = async () => {
-  const { data } = await api.get(`/midias`)
+  const { data } = await api.get(`/imprensas`)
 
   const midias = data
 

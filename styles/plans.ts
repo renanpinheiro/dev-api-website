@@ -3,7 +3,7 @@ import { theme } from './theme'
 export const Container = styled.div``
 export const CardContainer = styled.div`
   width: 100%;
-  padding: 5vh 8vw;
+  padding: 10vh 8vw 0 8vw;
 `
 export const HeroContent = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ export const PipeContainer = styled.div`
   align-items: center;
   @media (max-width: 576px) {
     align-items: flex-start;
-    padding-left: 8vw;
+
     text-align: left;
   }
 `
@@ -65,7 +65,7 @@ export const QuestionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3vw;
+
   h2 {
     font-size: 3.2rem;
     text-align: center;
@@ -86,13 +86,12 @@ export const Pipe = styled.div`
 
   background-color: ${theme.colors.secondary};
 
-  @media (max-width: 900px) {
+  @media (max-width: 576px) {
     width: 8vh;
-    margin-bottom: 0;
   }
 `
 export const ContainerItegration = styled.div`
-  padding: 5vh 0 8vh 0;
+  padding: 10vh 8vw 0 8vw;
   @media (max-width: 576px) {
     align-items: flex-start;
     padding-left: 0;
@@ -103,7 +102,7 @@ export const CarrouselTitle = styled.h2`
   font-size: 2.3rem;
   color: ${theme.colors.primary};
   @media (max-width: 576px) {
-    padding: 1vh 0 8vh 0;
+    /* padding: 1vh 0 8vh 0; */
 
     font-size: 1.375rem;
     text-align: left;
@@ -123,7 +122,7 @@ export const QuoteContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5vw 3vw 6vh 6vw;
+  padding: 10vh 3vw 3vh 6vw;
 `
 
 export const FreeTestContainer = styled.div`
@@ -132,10 +131,10 @@ export const FreeTestContainer = styled.div`
   align-items: center;
 
   width: 100%;
-  padding: 8vh 0 8vh 0;
+  padding: 10vh 8vw 0 8vw;
   @media (max-width: 576px) {
     align-items: flex-start;
-    padding: 8vh 0 8vh 0;
+    padding: 10vh 8vw 0 8vw;
   }
 `
 export const AcordionContainer = styled.div`
@@ -143,10 +142,10 @@ export const AcordionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 0 0 8vh 0;
+  padding: 10vh 8vw 10vh 8vw;
   @media (max-width: 576px) {
     align-items: flex-start;
-    padding: 1vh 0 0 8vw;
+    padding-right: 0;
   }
 `
 
@@ -156,10 +155,9 @@ export const ListIntegrationContainer = styled.div`
   align-items: center;
 
   width: 100%;
-  padding: 0 8vw 5vh 8vw;
-  @media (max-width: 900px) {
+  padding: 10vh 8vw 0 8vw;
+  @media (max-width: 576px) {
     align-items: flex-start;
-    padding: 2vh 8vw 5vh 8vw;
   }
 `
 export const ListColumnContainer = styled.div`
@@ -169,7 +167,6 @@ export const ListColumnContainer = styled.div`
 
   @media (max-width: 900px) {
     align-items: flex-start;
-    padding-bottom: 0;
   }
 `
 export const ListIntegrationTitle = styled.h2`
@@ -190,9 +187,9 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1vh 0 2vh 0;
-  padding-top: 1vh;
-  @media (max-width: 576px) {
-    width: 90%;
+  padding: 10vh 0 0 0;
+
+  @media (max-width: 576) {
+    padding: 0;
   }
 `

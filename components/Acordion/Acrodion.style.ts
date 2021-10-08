@@ -4,5 +4,5 @@ export const AcordionContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 80%;
+  width: 100%;
 `

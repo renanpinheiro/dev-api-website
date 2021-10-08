@@ -54,7 +54,7 @@ const FormStepper = ({ children }) => {
       try {
         await leadsApi.post('/leads', payload)
         setErrorMessage('')
-        router.push('/')
+        router.push('/trial-success')
       } catch (error) {
         const errors = {
           'Lead already exist.': 'Email já cadastrado.',
@@ -70,7 +70,6 @@ const FormStepper = ({ children }) => {
       setStep(step + 1)
     }
   }
-  console.log(errorMessage)
 
   const formik = useFormik({
     initialValues: {
@@ -92,6 +91,19 @@ const FormStepper = ({ children }) => {
   const goBack = () => {
     setStep(step - 1)
     setErrorMessage('')
+  }
+
+  const isDisable = () => {
+    if (isLastStep()) {
+      if (
+        formik.values.isComunication &&
+        formik.values.isPrivacyPolice &&
+        isLastStep()
+      ) {
+        return false
+      }
+      return true
+    }
   }
 
   return (
@@ -118,6 +130,7 @@ const FormStepper = ({ children }) => {
             size={'default'}
             type={'default'}
             buttonType={'submit'}
+            isDisabled={isDisable()}
           />
         </S.ButtonContainer>
       </S.Form>
@@ -269,8 +282,8 @@ const FreeTrial = () => {
       fullName: Yup.string().required('Campo obrigatório.'),
       email: Yup.string()
         .email('Este campo deve ser um email válido.')
-        .required('Campo é obrigatório'),
-      phone: Yup.string().required('Campo é obrigatório.'),
+        .required('Campo obrigatório'),
+      phone: Yup.string().required('Campo obrigatório.'),
       company: Yup.string().required('Campo obrigatório.'),
       role: Yup.string().required('Campo obrigatŕoio.'),
     }),

@@ -9,7 +9,6 @@ export const FreeTestContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-left: 8vw;
 
   @media (max-width: 900px) {
     flex-direction: column;
@@ -46,7 +45,7 @@ export const ButtonContainer = styled.div`
 export const PipeFreeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 8vw;
+  align-items: flex-start;
 `
 export const PipeFree = styled.div`
   width: 10vh;
@@ -54,4 +53,8 @@ export const PipeFree = styled.div`
   margin-bottom: 10px;
 
   background-color: ${theme.colors.secondary};
+
+  @media (max-width: 576px) {
+    width: 8vh;
+  }
 `

@@ -146,7 +146,10 @@ ${reset}
 
   h2 {
   font-size: 2.2rem;
+<<<<<<< HEAD
   
+=======
+>>>>>>> fbb765ba0ba25693d69d224a5f44683cddb7fd1b
   }
 
   button:focus {

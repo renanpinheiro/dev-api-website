@@ -5,7 +5,7 @@ export const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 8vw 5vh 8vw;
+  padding: 5vh 8vw 0 8vw;
   @media (max-width: 576px) {
     align-items: flex-start;
     padding-left: 0;

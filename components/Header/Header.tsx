@@ -52,6 +52,18 @@ const Header = () => {
     setIsOpenMenu(!isOpenMenu)
   }
 
+  if (router.asPath === '/free-trial') {
+    return (
+      <S.Container isCentralized>
+        <S.LogoContainer>
+          <Link href="/">
+            <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
+          </Link>
+        </S.LogoContainer>
+      </S.Container>
+    )
+  }
+
   return (
     <S.Container>
       <S.LogoContainer>

@@ -75,10 +75,10 @@ const Plans = () => {
         </S.CardContainer>
 
         <S.ContainerItegration>
-          <S.PipeContainer>
-            <S.Pipe />
-          </S.PipeContainer>
           <S.CostumersCarrouselContainer>
+            <S.PipeContainer>
+              <S.Pipe />
+            </S.PipeContainer>
             {isMobile ? (
               <CarrouselWithOutSSR
                 items={constumersMobile}
@@ -102,20 +102,19 @@ const Plans = () => {
               />
             )}
           </S.CostumersCarrouselContainer>
-
-          <S.FreeTestContainer>
-            <FreeTest />
-          </S.FreeTestContainer>
-
-          <S.QuoteContainer>
-            <QuoteCarousel quotes={quotes} />
-          </S.QuoteContainer>
         </S.ContainerItegration>
+        <S.FreeTestContainer>
+          <FreeTest />
+        </S.FreeTestContainer>
 
-        <S.PipeContainer>
-          <S.Pipe />
-        </S.PipeContainer>
+        <S.QuoteContainer>
+          <QuoteCarousel quotes={quotes} />
+        </S.QuoteContainer>
+
         <S.ListIntegrationContainer>
+          <S.PipeContainer>
+            <S.Pipe />
+          </S.PipeContainer>
           <S.ListIntegrationTitle>
             <span>Reduza em até 20x o tempo</span> de ter toda a sua empresa
             integrada
@@ -126,15 +125,16 @@ const Plans = () => {
               <Button
                 text="Quero integrar meus sistemas"
                 type="default"
-                size="large"
+                size="default"
               />
             </S.ButtonContainer>
           </S.ListColumnContainer>
         </S.ListIntegrationContainer>
-        <S.PipeContainer>
-          <S.Pipe />
-        </S.PipeContainer>
+
         <S.AcordionContainer>
+          <S.PipeContainer>
+            <S.Pipe />
+          </S.PipeContainer>
           <S.QuestionsContainer>
             <h2>
               Perguntas <span>frequentes</span>
@@ -142,7 +142,7 @@ const Plans = () => {
           </S.QuestionsContainer>
           <Acordion list={listQuestions} />
           <S.ButtonContainer>
-            <Button text="Vamos conversar" type="default" size="large" />
+            <Button text="Vamos conversar" type="default" size="default" />
           </S.ButtonContainer>
         </S.AcordionContainer>
       </S.Container>
