@@ -146,7 +146,6 @@ ${reset}
 
   h2 {
   font-size: 2.2rem;
-  font-weight: bold;
   }
 
   button:focus {

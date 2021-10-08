@@ -31,3 +31,7 @@ export interface IHeaderMenuProps {
 export interface INavLinkTitleStyle {
   isActive: boolean
 }
+
+export interface IContainerStyles {
+  isCentralized?: boolean
+}

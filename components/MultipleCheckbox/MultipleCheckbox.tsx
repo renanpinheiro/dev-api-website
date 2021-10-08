@@ -30,6 +30,7 @@ export const MultipleCheckbox = ({
       }
     }
   }, [isChecked])
+
   useEffect(() => {
     if (!isMultiple) {
       if (field.value === text) {
@@ -37,12 +38,15 @@ export const MultipleCheckbox = ({
       } else {
         setIsChecked(false)
       }
-    } else {
-      console.log(field.value)
+    }
+  }, [field.value])
+
+  useEffect(() => {
+    if (isMultiple) {
       const isChecked = !!field.value.find(value => value === text)
       setIsChecked(isChecked)
     }
-  }, [field.value])
+  }, [])
 
   useEffect(() => {
     if (meta.touched) setError(meta.error)
