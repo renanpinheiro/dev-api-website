@@ -5,6 +5,7 @@ export interface IButtonProps {
   onClick?: () => void
   margin?: string
   isDisabled?: boolean
+  buttonType?: 'submit' | 'reset' | 'button'
 }
 
 export interface IButtonStyle {

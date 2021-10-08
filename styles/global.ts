@@ -144,6 +144,11 @@ ${reset}
     font-weight: 700;
   }
 
+  h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  }
+
   button:focus {
     outline: none;
   }

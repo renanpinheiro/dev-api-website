@@ -9,10 +9,11 @@ const Button = ({
   onClick,
   margin,
   isDisabled,
+  buttonType,
 }: IButtonProps) => {
   return (
     <Container type={type} size={size} margin={margin}>
-      <button onClick={onClick} disabled={isDisabled}>
+      <button onClick={onClick} disabled={isDisabled} type={buttonType}>
         {text}
       </button>
     </Container>
