@@ -9,6 +9,7 @@ import GlobalStyle from '../styles/global'
 import { theme } from '../styles/theme'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { Cookie } from '../components/Cookie'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -24,6 +25,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <Component {...pageProps} />
         <Footer />
         <GlobalStyle />
+        <Cookie />
       </ThemeProvider>
     </>
   )

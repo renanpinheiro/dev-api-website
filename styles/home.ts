@@ -13,7 +13,7 @@ export const Hero = styled.section`
 
   background-image: url('/masks/lines.svg');
   background-repeat: no-repeat;
-  background-position-y: 127%;
+  background-position-y: 140%;
   background-size: 100%;
 
   @media (max-width: 900px) {
@@ -35,7 +35,7 @@ export const HeroContent = styled.div`
     max-width: 20ch;
 
     margin-bottom: 15px;
-    font-size: 5vh;
+    font-size: 5.3vh;
 
     span {
       font-weight: 400;
