@@ -94,7 +94,7 @@ const Solutions = () => {
                 items={constumersMobile}
                 title={
                   <S.CarrouselTitle>
-                    Empresas que ja desbloquearam o{' '}
+                    Empresas que já desbloquearam o{' '}
                     <span>poder da integração de sistemas</span>
                   </S.CarrouselTitle>
                 }
@@ -105,7 +105,7 @@ const Solutions = () => {
                 items={costumers}
                 title={
                   <S.CarrouselTitle>
-                    Empresas que ja desbloquearam o{' '}
+                    Empresas que já desbloquearam o{' '}
                     <span>poder da integração de sistemas</span>
                   </S.CarrouselTitle>
                 }
