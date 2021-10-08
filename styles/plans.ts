@@ -2,12 +2,8 @@ import styled from 'styled-components'
 import { theme } from './theme'
 export const Container = styled.div``
 export const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  padding: 5vh 0 8vw 0;
+  width: 100%;
+  padding: 5vh 8vw;
 `
 export const HeroContent = styled.div`
   display: flex;
@@ -59,34 +55,58 @@ export const PipeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 576px) {
+    align-items: flex-start;
+    padding-left: 8vw;
+    text-align: left;
+  }
 `
 export const QuestionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 3vw;
+  h2 {
+    font-size: 3.2rem;
+    text-align: center;
+    @media (max-width: 576px) {
+      align-items: flex-start;
+      font-size: 2rem;
+    }
+  }
+
+  span {
+    font-weight: 700;
+  }
 `
 export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   background-color: ${theme.colors.secondary};
 
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     width: 8vh;
+    margin-bottom: 0;
   }
 `
 export const ContainerItegration = styled.div`
   padding: 5vh 0 8vh 0;
+  @media (max-width: 576px) {
+    align-items: flex-start;
+    padding-left: 0;
+    text-align: left;
+  }
 `
 export const CarrouselTitle = styled.h2`
   font-size: 2.3rem;
   color: ${theme.colors.primary};
+  @media (max-width: 576px) {
+    padding: 1vh 0 8vh 0;
 
-  @media (max-width: 996px) {
-    margin-top: 10px;
     font-size: 1.375rem;
+    text-align: left;
   }
 
   span {
@@ -110,79 +130,65 @@ export const FreeTestContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+
+  width: 100%unset;
   padding: 8vh 0 8vh 0;
+  @media (max-width: 576px) {
+    align-items: flex-start;
+    padding: 8vh 0 8vh 0;
+  }
 `
 export const AcordionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 5vh 0 8vh 0;
-  h2 {
-    font-size: 3.2rem;
-  }
-  span {
-    font-weight: 700;
+  padding: 0 0 8vh 0;
+  @media (max-width: 576px) {
+    align-items: flex-start;
+    padding: 1vh 0 0 8vw;
   }
 `
-export const FreeTestRows = styled.div`
-  display: flex;
-  flex-direction: column;
 
-  width: 40vw;
-`
-export const FreeTest = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  h2 {
-    font-size: 2.3rem;
-    color: ${theme.colors.primary};
-
-    @media (max-width: 996px) {
-      margin-top: 10px;
-      font-size: 1.375rem;
-    }
-
-    span {
-      font-weight: 700;
-    }
-  }
-`
 export const ListIntegrationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 100%;
-  padding: 5vh 8vw 5vh 8vw;
+  padding: 0 8vw 5vh 8vw;
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    padding: 2vh 8vw 5vh 8vw;
+  }
 `
+export const ListColumnContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+`
 export const ListIntegrationTitle = styled.h2`
   font-size: 3.2rem;
   color: ${theme.colors.primary};
   text-align: center;
-  @media (max-width: 996px) {
-    width: 55%;
+
+  @media (max-width: 900px) {
+    font-size: 2rem !important;
+    text-align: left;
   }
 
-  @media (max-width: 1024px) {
-    width: auto;
-  }
-  @media (max-width: 1366px) {
-    width: 75%;
-  }
-
-  @media (max-width: 1700px) {
-    font-size: 2.5rem;
-  }
   span {
     font-weight: 700;
   }
 `
 export const ButtonContainer = styled.div`
-  padding: 3vh 0 3vh 0;
+  padding: 0 0 3vh 0;
+  @media (max-width: 576px) {
+    transform: scale(0.6);
+  }
 `

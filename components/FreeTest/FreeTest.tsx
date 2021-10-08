@@ -6,24 +6,26 @@ const FreeTest = () => {
     location.href = url
   }
   return (
-    <S.FreeTestContainer>
-      <S.FreeTestRows>
-        <S.Pipe />
-        <S.FreeTest>
-          <h2>
-            Quer testar a DevApi <span>gratuitamente?</span>
-          </h2>
-          <S.ButtonContainer>
-            <Button
-              onClick={() => handleURL('fale-com-um-especialista')}
-              type="default"
-              size="default"
-              text="Converse com um especialista"
-            />
-          </S.ButtonContainer>
-        </S.FreeTest>
-      </S.FreeTestRows>
-    </S.FreeTestContainer>
+    <S.Container>
+      <S.PipeFreeContainer>
+        <S.PipeFree />
+      </S.PipeFreeContainer>
+      <S.FreeTestContainer>
+        <S.FreeTestText>
+          <S.FreeTestLeft>Quer testar a DevApi</S.FreeTestLeft>
+          <S.FreeTestSpan>gratuitamente?</S.FreeTestSpan>
+        </S.FreeTestText>
+
+        <S.ButtonContainer>
+          <Button
+            onClick={() => handleURL('fale-com-um-especialista')}
+            type="default"
+            size="default"
+            text="Converse com um especialista"
+          />
+        </S.ButtonContainer>
+      </S.FreeTestContainer>
+    </S.Container>
   )
 }
 export { FreeTest }

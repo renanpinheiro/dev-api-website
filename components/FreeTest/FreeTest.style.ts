@@ -1,64 +1,57 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
-
+export const Container = styled.div`
+  vertical-align: middle;
+`
 export const FreeTestContainer = styled.div`
   display: flex;
-  flex-direction: column;
+
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  padding-left: 8vw;
 
-  padding: 8vh 0 8vh 0;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
-
-export const FreeTestRows = styled.div`
+export const FreeTestText = styled.div`
   display: flex;
   flex-direction: column;
-`
-export const FreeTest = styled.div`
-  display: flex;
-  flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+`
+export const FreeTestLeft = styled.h2`
+  display: flex;
 
-  @media (max-width: 996px) {
-    flex-direction: column;
+  font-size: 2rem;
+  color: ${theme.colors.primary};
+`
+export const FreeTestSpan = styled.span`
+  display: flex;
 
-    font-size: 1.375rem;
-  }
+  font-size: 2rem;
 
-  h2 {
-    max-width: 18ch;
-    font-size: 2.3rem;
-    color: ${theme.colors.primary};
-
-    @media (max-width: 996px) {
-      flex-direction: column;
-
-      font-size: 1.375rem;
-    }
-    @media (max-width: 1024px) {
-      font-size: 2rem;
-    }
-    span {
-      font-weight: 700;
-    }
-  }
+  font-weight: 700;
+  color: ${theme.colors.primary};
 `
 export const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 2.1rem 0 0 0;
+  align-items: flex-start;
+  padding: 2vw 0 0 3vw;
+  @media (max-width: 900px) {
+    padding-left: 0;
+  }
 `
-export const Pipe = styled.div`
+export const PipeFreeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 8vw;
+`
+export const PipeFree = styled.div`
   width: 10vh;
   height: 3px;
   margin-bottom: 10px;
 
   background-color: ${theme.colors.secondary};
-
-  @media (max-width: 576px) {
-    width: 8vh;
-  }
 `

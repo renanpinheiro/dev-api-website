@@ -6,6 +6,10 @@ export const ListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 5vh 8vw 5vh 8vw;
+  @media (max-width: 576px) {
+    align-items: flex-start;
+    padding-left: 0;
+  }
 `
 export const ListColumn = styled.ul`
   column-count: 2;

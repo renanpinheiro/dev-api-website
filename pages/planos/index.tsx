@@ -46,7 +46,7 @@ const Plans = () => {
         <title>DevApi – Planos personalizados para você!</title>
         <meta
           property="og:title"
-          content="Planos personalizados para você | DevApi"
+          content="É a hora de acelerar a transformação"
           key="title"
         />
         <meta
@@ -102,37 +102,47 @@ const Plans = () => {
               />
             )}
           </S.CostumersCarrouselContainer>
-          <FreeTest />
+
+          <S.FreeTestContainer>
+            <FreeTest />
+          </S.FreeTestContainer>
+
           <S.QuoteContainer>
             <QuoteCarousel quotes={quotes} />
           </S.QuoteContainer>
         </S.ContainerItegration>
 
-        <S.ListIntegrationContainer>
+        <S.PipeContainer>
           <S.Pipe />
+        </S.PipeContainer>
+        <S.ListIntegrationContainer>
           <S.ListIntegrationTitle>
             <span>Reduza em até 20x o tempo</span> de ter toda a sua empresa
             integrada
           </S.ListIntegrationTitle>
-          <ListColumn list={listIntegration} />
-          <S.ButtonContainer>
-            <Button
-              text="Quero integrar meus sistemas"
-              type="default"
-              size="large"
-            />
-          </S.ButtonContainer>
+          <S.ListColumnContainer>
+            <ListColumn list={listIntegration} />
+            <S.ButtonContainer>
+              <Button
+                text="Quero integrar meus sistemas"
+                type="default"
+                size="large"
+              />
+            </S.ButtonContainer>
+          </S.ListColumnContainer>
         </S.ListIntegrationContainer>
+        <S.PipeContainer>
+          <S.Pipe />
+        </S.PipeContainer>
         <S.AcordionContainer>
           <S.QuestionsContainer>
-            <S.Pipe />
             <h2>
               Perguntas <span>frequentes</span>
             </h2>
           </S.QuestionsContainer>
           <Acordion list={listQuestions} />
           <S.ButtonContainer>
-            <Button text="Vamos conversar" type="default" size="default" />
+            <Button text="Vamos conversar" type="default" size="large" />
           </S.ButtonContainer>
         </S.AcordionContainer>
       </S.Container>
