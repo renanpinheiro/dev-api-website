@@ -54,7 +54,7 @@ const FormStepper = ({ children }) => {
       try {
         await leadsApi.post('/leads', payload)
         setErrorMessage('')
-        router.push('/')
+        router.push('/trial-success')
       } catch (error) {
         const errors = {
           'Lead already exist.': 'Email já cadastrado.',

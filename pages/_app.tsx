@@ -9,8 +9,10 @@ import GlobalStyle from '../styles/global'
 import { theme } from '../styles/theme'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { useRouter } from 'next/router'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -22,7 +24,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <ThemeProvider theme={theme}>
         <Header />
         <Component {...pageProps} />
-        <Footer />
+        {router.asPath !== '/trial-success' && <Footer />}
         <GlobalStyle />
       </ThemeProvider>
     </>
