@@ -94,13 +94,25 @@ const FormStepper = ({ children }) => {
     setErrorMessage('')
   }
 
+  const cancel = () => {
+    router.push('/')
+  }
+
   return (
     <FormikProvider value={formik}>
       <S.Form onSubmit={formik.handleSubmit}>
         {currentForm}
         <S.ErrorText hasError={!!errorMessage}>{errorMessage}</S.ErrorText>
         <S.ButtonContainer>
-          {!isFirstStep() ? (
+          {isFirstStep() ? (
+            <Button
+              text={'Cancelar'}
+              size={'default'}
+              type={'outline'}
+              buttonType={'button'}
+              onClick={cancel}
+            />
+          ) : (
             <Button
               text={'Voltar'}
               size={'default'}
@@ -108,8 +120,6 @@ const FormStepper = ({ children }) => {
               buttonType={'button'}
               onClick={goBack}
             />
-          ) : (
-            <div></div>
           )}
           <Button
             text={
@@ -269,8 +279,8 @@ const FreeTrial = () => {
       fullName: Yup.string().required('Campo obrigatório.'),
       email: Yup.string()
         .email('Este campo deve ser um email válido.')
-        .required('Campo é obrigatório'),
-      phone: Yup.string().required('Campo é obrigatório.'),
+        .required('Campo obrigatório'),
+      phone: Yup.string().required('Campo obrigatório.'),
       company: Yup.string().required('Campo obrigatório.'),
       role: Yup.string().required('Campo obrigatŕoio.'),
     }),
