@@ -160,8 +160,7 @@ export const solutionsPage = {
     ),
     contentTitle: (
       <h2>
-        Processo comercial com
-        <span>agilidade e inteligência</span>
+        Processo comercial com <span>agilidade e inteligência</span>
       </h2>
     ),
     contentText: (
@@ -222,8 +221,7 @@ export const solutionsPage = {
     ),
     contentTitle: (
       <h2>
-        Recursos Humanos mais
-        <span>estratégico e eficiente</span>
+        Recursos Humanos mais <span>estratégico e eficiente</span>
       </h2>
     ),
     contentText: (

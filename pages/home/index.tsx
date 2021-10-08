@@ -75,7 +75,7 @@ const Home = () => {
               items={constumersMobile}
               title={
                 <S.CarrouselTitle>
-                  Empresas que ja desbloquearam o{' '}
+                  Empresas que já desbloquearam o{' '}
                   <span>poder da integração de sistemas</span>
                 </S.CarrouselTitle>
               }
@@ -86,7 +86,7 @@ const Home = () => {
               items={costumers}
               title={
                 <S.CarrouselTitle>
-                  Empresas que ja desbloquearam o{' '}
+                  Empresas que já desbloquearam o{' '}
                   <span>poder da integração de sistemas</span>
                 </S.CarrouselTitle>
               }
@@ -198,7 +198,7 @@ const Home = () => {
               title={
                 <S.CarrouselTitle>
                   Mais de 300 conectores pré-construídos{' '}
-                  <span>e prontos para uso.</span>
+                  <span>e prontos para uso</span>
                 </S.CarrouselTitle>
               }
             />
@@ -209,7 +209,7 @@ const Home = () => {
               title={
                 <S.CarrouselTitle>
                   Mais de 300 conectores pré-construídos{' '}
-                  <span>e prontos para uso.</span>
+                  <span>e prontos para uso</span>
                 </S.CarrouselTitle>
               }
             />
