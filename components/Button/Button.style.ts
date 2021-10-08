@@ -58,15 +58,14 @@ export const Container = styled.div<IButtonStyle>`
     cursor: pointer;
     border-radius: 5px;
 
-    &:disabled {
-      background-color: ${theme.colors.green[100]};
-      &:hover {
-        cursor: no-drop;
-        background-color: ${theme.colors.green[100]};
-        border: 1px solid ${theme.colors.green[100]};
-      }
-    }
     ${props => sizeVariation[props.size]}
     ${props => typeVariation[props.type]}
+
+    &:disabled {
+      background-color: ${theme.colors.gray[600]};
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
   }
 `

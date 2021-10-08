@@ -70,7 +70,6 @@ const FormStepper = ({ children }) => {
       setStep(step + 1)
     }
   }
-  console.log(errorMessage)
 
   const formik = useFormik({
     initialValues: {
@@ -94,8 +93,17 @@ const FormStepper = ({ children }) => {
     setErrorMessage('')
   }
 
-  const cancel = () => {
-    router.push('/')
+  const isDisable = () => {
+    if (isLastStep()) {
+      if (
+        formik.values.isComunication &&
+        formik.values.isPrivacyPolice &&
+        isLastStep()
+      ) {
+        return false
+      }
+      return true
+    }
   }
 
   return (
@@ -104,15 +112,7 @@ const FormStepper = ({ children }) => {
         {currentForm}
         <S.ErrorText hasError={!!errorMessage}>{errorMessage}</S.ErrorText>
         <S.ButtonContainer>
-          {isFirstStep() ? (
-            <Button
-              text={'Cancelar'}
-              size={'default'}
-              type={'outline'}
-              buttonType={'button'}
-              onClick={cancel}
-            />
-          ) : (
+          {!isFirstStep() ? (
             <Button
               text={'Voltar'}
               size={'default'}
@@ -120,6 +120,8 @@ const FormStepper = ({ children }) => {
               buttonType={'button'}
               onClick={goBack}
             />
+          ) : (
+            <div></div>
           )}
           <Button
             text={
@@ -128,6 +130,7 @@ const FormStepper = ({ children }) => {
             size={'default'}
             type={'default'}
             buttonType={'submit'}
+            isDisabled={isDisable()}
           />
         </S.ButtonContainer>
       </S.Form>
