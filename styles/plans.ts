@@ -131,7 +131,7 @@ export const FreeTestContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: 100%unset;
+  width: 100%;
   padding: 8vh 0 8vh 0;
   @media (max-width: 576px) {
     align-items: flex-start;
@@ -187,8 +187,12 @@ export const ListIntegrationTitle = styled.h2`
   }
 `
 export const ButtonContainer = styled.div`
-  padding: 0 0 3vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 0 2vh 0;
+  padding-top: 1vh;
   @media (max-width: 576px) {
-    transform: scale(0.6);
+    width: 90%;
   }
 `
