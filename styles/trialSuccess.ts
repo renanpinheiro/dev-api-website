@@ -4,8 +4,11 @@ import { theme } from './theme'
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+
   align-items: center;
 
+  justify-content: space-between;
+  height: 100vh;
   padding: 13vh 8vw 0 8vw;
 `
 export const InfoContainer = styled.div`
@@ -19,6 +22,8 @@ export const InfoContainer = styled.div`
   h2 {
     margin-bottom: 15px;
     font-size: 5vh;
+
+    text-align: center;
 
     span {
       font-weight: 700;
@@ -34,11 +39,6 @@ export const InfoContainer = styled.div`
     font-size: 2vh;
 
     line-height: 1.3;
-  }
-
-  @media (max-width: 900px) {
-    align-items: flex-start;
-    text-align: left;
   }
 `
 export const Pipe = styled.div`
@@ -58,6 +58,7 @@ export const ImgContainer = styled.div`
 
   img {
     width: 100%;
+    height: 100%;
     object-fit: contain;
   }
 `
