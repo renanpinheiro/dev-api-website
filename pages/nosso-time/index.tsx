@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Head from 'next/head'
+import Link from 'next/link'
 
 import { Hero } from '../../components/Hero'
 import { CallToAction } from '../../components/CallToAction'
@@ -11,14 +12,14 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Nosso time | DevApi</title>
+        <title>Sobre nós | DevApi</title>
       </Head>
 
       <Hero minHeight={40} maxHeight={65}>
         <S.HeroContainer>
           <S.Pipe />
           <h1>
-            <span>Nosso</span> time
+            <span>Sobre</span> nós
           </h1>
         </S.HeroContainer>
       </Hero>
@@ -36,16 +37,22 @@ const About = () => {
 
           <S.Text>
             <p>
-              A Plataforma global DevApi foi criada pelos seus founders e
-              desenvolvida a partir de insights internos para otimizar tempo e
-              rentabilidade financeira nas integrações que são traumáticas hoje
-              no mercado. Trazendo dessa maneira custos menores, mitigando erros
-              e agilizando processos morosos e de alta complexidade.
+              A DevApi, plataforma de integração de sistemas e gerenciamento de
+              APIs (iPaaS & API Manager), foi criada e desenvolvida a partir da
+              necessidade de otimizar tempo e rentabilidade financeira nas
+              integrações de sistemas, que são traumáticas para empresas de
+              todos os segmentos e portes. Com custos expressivamente menores,
+              mitigando erros e agilizando processos morosos e de alta
+              complexidade, a DevApi ajuda as empresas a desbloquear todo o seu
+              potencial de inovação e a acelerar o crescimento ao conectar todas
+              as áreas da organização.
             </p>
             <p>
-              Nosso propósito é revolucionar experiências em integração e APIs.
-              Toda a plataforma roda em cloud, em modelo SaaS. A DevApi é um
-              produto tech, feito de Dev para Dev!
+              Simplificamos integrações complexas! Nosso propósito é
+              revolucionar globalmente a experiência em integração de sistemas e
+              APIs. Toda a plataforma roda em cloud, no modelo SaaS. A DevApi é
+              um produto desenvolvido com tecnologia de ponta e as melhores
+              práticas de UX. Encaixe as peças da sua operação!
             </p>
           </S.Text>
         </S.Wrapper>
@@ -61,13 +68,21 @@ const About = () => {
           <S.Founders>
             <S.Card>
               <img src="/images/founder-william-cto.png" />
-              <b>William Hoffmann</b>
+              <Link href="https://www.linkedin.com/in/williamhoffmann/">
+                <a title="William Hoffmann" target="_blank">
+                  William Hoffmann
+                </a>
+              </Link>
               <span>Chief Technology Officer</span>
               <hr />
             </S.Card>
             <S.Card>
               <img src="/images/founder-luana-ceo.png" />
-              <b>Luana Ribeiro</b>
+              <Link href="https://www.linkedin.com/in/luanaribeiromelo/">
+                <a title="Luana Ribeiro" target="_blank">
+                  Luana Ribeiro
+                </a>
+              </Link>
               <span>Chief Executive Officer</span>
               <hr />
             </S.Card>

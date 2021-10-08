@@ -148,12 +148,13 @@ export const Card = styled.div`
     border-top-right-radius: 8px;
   }
 
-  > b {
+  > a {
     margin: 1vw 0 0.5vw;
     font-size: 1.75rem;
     font-weight: 700;
     color: ${theme.colors.primary};
     text-align: center;
+    text-decoration: none;
 
     @media (max-width: 768px) {
       margin: 5vw 0 0.5vw;
