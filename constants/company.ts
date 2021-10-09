@@ -1,7 +1,7 @@
 export const company = [
   {
     name: 'Sobre',
-    url: '/nosso-time',
+    url: '/sobre',
     target: '_self',
   },
   {

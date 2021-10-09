@@ -104,7 +104,7 @@ export const navLinks = [
     dropDown: [
       {
         name: 'Sobre',
-        url: '/nosso-time',
+        url: '/sobre',
         isActive: false,
       },
       {
