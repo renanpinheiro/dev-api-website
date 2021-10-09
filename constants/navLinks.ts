@@ -75,11 +75,11 @@ export const navLinks = [
     name: 'Recursos',
     isActive: false,
     dropDown: [
-      {
-        name: 'DevApi Academy',
-        url: '/devApi-academy',
-        isActive: false,
-      },
+      // {
+      //   name: 'DevApi Academy',
+      //   url: '/devApi-academy',
+      //   isActive: false,
+      // },
       {
         name: 'Blog',
         url: '/blog',

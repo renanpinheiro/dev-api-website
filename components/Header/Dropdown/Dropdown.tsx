@@ -1,32 +1,30 @@
 import React from 'react'
+
 import Link from '../Link'
+
 import { IDropdownProps } from './Dropdown.interface'
-import {
-  Container,
-  DropdownContainer,
-  DropdownItem,
-  DropdownItemContainer,
-} from './Dropdown.style'
+
+import * as S from './Dropdown.style'
 
 const Dropdown = ({ children, isOpen, dropdownItems }: IDropdownProps) => {
   const hasTwoColumns = dropdownItems && dropdownItems.length > 5
   return (
-    <Container>
+    <S.Container>
       {children}
       {isOpen && dropdownItems && (
-        <DropdownContainer hasTwoColumns={hasTwoColumns}>
+        <S.DropdownContainer hasTwoColumns={hasTwoColumns}>
           {dropdownItems.map((item, index) => {
             return (
-              <DropdownItemContainer key={index} isActive={item.isActive}>
+              <S.DropdownItemContainer key={index} isActive={item.isActive}>
                 <Link href={item.url} activeClassName="active">
-                  <DropdownItem id={`${index}`}>{item.name}</DropdownItem>
+                  <S.DropdownItem id={`${index}`}>{item.name}</S.DropdownItem>
                 </Link>
-              </DropdownItemContainer>
+              </S.DropdownItemContainer>
             )
           })}
-        </DropdownContainer>
+        </S.DropdownContainer>
       )}
-    </Container>
+    </S.Container>
   )
 }
 

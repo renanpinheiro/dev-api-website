@@ -13,6 +13,7 @@ const type = {
       border: 1px solid ${theme.colors.green[200]};
     }
   `,
+
   outline: css`
     color: ${theme.colors.primary};
     background-color: ${theme.colors.white};

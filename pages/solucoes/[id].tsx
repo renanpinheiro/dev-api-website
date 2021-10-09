@@ -1,16 +1,21 @@
+import React from 'react'
+
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+
 import { Circle } from '../../components/AnimatedBackground'
-import { Button } from '../../components/Button'
+import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
+
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+
 import { constumersMobile, costumers } from '../../constants/costumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+
 import * as S from '../../styles/solutions'
 
 const CarrouselWithOutSSR = dynamic(
@@ -49,9 +54,11 @@ const Solutions = () => {
               <S.Pipe />
               {page ? page.title : <h1></h1>}
               {page ? page.subTitle : <p></p>}
-              <Button
-                size="default"
+              <ButtonLink
                 text="Fale com um consultor"
+                href="/free-trial"
+                target="_self"
+                size="default"
                 type="default"
               />
             </S.HeroContent>
@@ -73,9 +80,11 @@ const Solutions = () => {
               {page ? page.component : <></>}
             </S.IntegrationContainer>
 
-            <Button
-              size="default"
+            <ButtonLink
               text="Quero integrar agora!"
+              href="/free-trial"
+              target="_self"
+              size="default"
               type="default"
             />
           </S.SolutionContainer>
