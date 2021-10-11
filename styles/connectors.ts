@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import { theme } from './theme'
 import {
   Button,
@@ -7,6 +7,16 @@ import {
   Dropdown as BDropdown,
   DropdownButton as BDropdownButton,
 } from 'react-bootstrap'
+
+const bounce = keyframes`
+  0%, 100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+`
 
 export const Hero = styled.section`
   position: relative;
@@ -20,6 +30,7 @@ export const Hero = styled.section`
 
   @media (max-width: 768px) {
     height: 90vh;
+    background-image: none;
   }
 `
 
@@ -276,4 +287,40 @@ export const DropdownButton = styled(BDropdownButton)`
       border-color: ${props => props.theme.colors.secondary} !important;
     }
   }
+`
+
+export const LoadMore = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+`
+
+export const Preloader = styled.div`
+  position: relative;
+  display: inline-block;
+  width: 2vw;
+  height: 2vw;
+
+  @media (max-width: 996px) {
+    width: 4vw;
+    height: 4vw;
+  }
+`
+
+const BounceAnimation = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${theme.colors.secondary};
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: ${bounce} 2s infinite ease-in-out;
+`
+
+export const DoubleBounceIn = styled(BounceAnimation)``
+
+export const DoubleBounceOut = styled(BounceAnimation)`
+  animation-delay: -1s;
 `

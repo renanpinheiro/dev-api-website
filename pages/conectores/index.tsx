@@ -37,7 +37,7 @@ const getMoreConnectors = async ({
   pageParam = 0,
   queryKey,
 }: IQueryKeyType) => {
-  let params = `_limit=1&_start=${pageParam}`
+  let params = `_limit=40&_start=${pageParam}`
 
   const categoryId = queryKey[0]
   const search = queryKey[1]
@@ -62,16 +62,13 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
   const [search, setSearch] = useState('')
   const [categoryId, setCategoryId] = useState('')
 
-  const { data, isSuccess, fetchNextPage, hasNextPage } = useInfiniteQuery(
-    [categoryId, search],
-    getMoreConnectors,
-    {
+  const { data, isSuccess, fetchNextPage, hasNextPage, isLoading } =
+    useInfiniteQuery([categoryId, search], getMoreConnectors, {
       getNextPageParam: (data: IPagination) =>
         data.pagination.page === data.pagination.total_pages
           ? undefined
-          : data.pagination.page + 1,
-    },
-  )
+          : data.pagination.page + 40,
+    })
 
   useIntersectionObserver({
     target: loadMoreRef,
@@ -167,10 +164,23 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
             ))}
         </S.Wrapper>
 
-        <div
-          ref={loadMoreRef}
-          className={`${!hasNextPage ? 'hidden' : ''}`}
-        ></div>
+        {hasNextPage && (
+          <S.LoadMore ref={loadMoreRef}>
+            <S.Preloader>
+              <S.DoubleBounceIn />
+              <S.DoubleBounceOut />
+            </S.Preloader>
+          </S.LoadMore>
+        )}
+
+        {isLoading && (
+          <S.LoadMore>
+            <S.Preloader>
+              <S.DoubleBounceIn />
+              <S.DoubleBounceOut />
+            </S.Preloader>
+          </S.LoadMore>
+        )}
       </S.Content>
     </>
   )
@@ -178,7 +188,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const { data: categories } = await api.get('/categoria-de-conectores')
-  const { data } = await api.get('/conectores?_limit=1&_start=0')
+  const { data } = await api.get('/conectores?_limit=40&_start=0')
 
   const connectors = {
     pages: [{ data }],
