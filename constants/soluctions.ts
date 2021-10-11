@@ -1,38 +1,38 @@
 export const soluctions = [
   {
     name: 'Gestão',
-    url: '/gestao',
+    url: '/solucoes/gestao',
   },
   {
     name: 'Comerical',
-    url: '/comercial',
+    url: '/solucoes/comercial',
   },
   {
     name: 'e-Commerce',
-    url: '/e-commerce',
+    url: '/solucoes/e-commerce',
   },
   {
     name: 'Financeiro',
-    url: '/financeiro',
+    url: '/solucoes/financeiro',
   },
   {
     name: 'Logística',
-    url: '/logistica',
+    url: '/solucoes/logistica',
   },
   {
     name: 'Marketing',
-    url: '/marketing',
+    url: '/solucoes/marketing',
   },
   {
     name: 'RH',
-    url: '/rh',
+    url: '/solucoes/rh',
   },
   {
     name: 'Empresas 360',
-    url: '/empresas-360',
+    url: '/solucoes/empresas-360',
   },
   {
     name: 'Seu Produto',
-    url: '/seu-produto',
+    url: '/solucoes/seu-produto',
   },
 ]

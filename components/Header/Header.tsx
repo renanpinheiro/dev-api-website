@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Button } from '../Button'
-import Link from './Link'
-import * as S from './Header.style'
-import { Dropdown } from './Dropdown'
-import { handleNavLink } from './menuOptions'
+
 import { useRouter } from 'next/router'
+
+import { ButtonLink } from '../ButtonLink'
+import { Dropdown } from './Dropdown'
+import Link from './Link'
 import { Menu } from './Menu'
+import { handleNavLink } from './menuOptions'
+
+import * as S from './Header.style'
 
 const Header = () => {
   const router = useRouter()
@@ -57,7 +60,9 @@ const Header = () => {
       <S.Container isCentralized>
         <S.LogoContainer>
           <Link href="/">
-            <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
+            <a title="DevApi">
+              <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
+            </a>
           </Link>
         </S.LogoContainer>
       </S.Container>
@@ -68,13 +73,17 @@ const Header = () => {
     <S.Container>
       <S.LogoContainer>
         <Link href="/">
-          <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
+          <a title="DevApi">
+            <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
+          </a>
         </Link>
       </S.LogoContainer>
+
       <S.NavBarContainer>
         <S.NavBar>
           {navLinks.map((link, index) => {
             const isOpen = openDropdown === index
+
             return (
               <Dropdown
                 isOpen={isOpen}
@@ -100,15 +109,21 @@ const Header = () => {
       </S.NavBarContainer>
 
       <S.ButtonContainer>
-        <Link href={'/free-trial'}>
-          <Button
-            size="default"
-            text="Teste grátis"
-            type="default"
-            margin="0 20px 0 0"
-          />
-        </Link>
-        <Button size="default" text="Login" type="outline" />
+        <ButtonLink
+          text="Teste grátis"
+          href="/free-trial"
+          target="_self"
+          type="default"
+          size="default"
+          margin="0 20px 0 0"
+        />
+        <ButtonLink
+          text="Login"
+          href="https://app.devapi.com.br"
+          target="_self"
+          type="outline"
+          size="default"
+        />
       </S.ButtonContainer>
 
       <S.MenuContainer>

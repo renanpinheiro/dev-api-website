@@ -1,11 +1,15 @@
-import Head from 'next/head'
 import React from 'react'
-import { Button } from '../../components/Button'
+
+import Head from 'next/head'
+
+import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
+
 import { integrations } from '../../constants/integrations'
-import * as S from '../../styles/characteristics'
 import { validateOddNumber } from '../../utils/validateOddNumber'
+
+import * as S from '../../styles/characteristics'
 
 const Characteristics = () => {
   return (
@@ -27,9 +31,11 @@ const Characteristics = () => {
               processos e orquestração de dados com a melhor usabilidade através
               de APIs robustas e seguras.
             </p>
-            <Button
-              size="default"
+            <ButtonLink
               text="Quero escalabilidade!"
+              href="/free-trial"
+              target="_self"
+              size="default"
               type="default"
             />
           </S.HeroContent>

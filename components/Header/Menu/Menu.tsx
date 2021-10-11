@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { VscChromeClose } from 'react-icons/vsc'
-
-import { useRouter } from 'next/router'
+import { BiPlus } from 'react-icons/bi'
 
 import Link from '../Link'
 import SocialVertical from './Social'
-import * as S from './Menu.styles'
+
 import { IHeaderMenuProps } from '../Header.interface'
 
-import { BiPlus } from 'react-icons/bi'
+import * as S from './Menu.styles'
 import { theme } from '../../../styles/theme'
 
 const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
