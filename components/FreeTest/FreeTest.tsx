@@ -20,7 +20,7 @@ const FreeTest = () => {
           <Button
             onClick={() => handleURL('fale-com-um-especialista')}
             type="default"
-            size="default"
+            size="small"
             text="Converse com um especialista"
           />
         </S.ButtonContainer>

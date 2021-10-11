@@ -121,14 +121,14 @@ const Plans = () => {
           </S.ListIntegrationTitle>
           <S.ListColumnContainer>
             <ListColumn list={listIntegration} />
-            <S.ButtonContainer>
-              <Button
-                text="Quero integrar meus sistemas"
-                type="default"
-                size="default"
-              />
-            </S.ButtonContainer>
           </S.ListColumnContainer>
+          <S.ButtonContainer>
+            <Button
+              text="Quero integrar meus sistemas"
+              type="default"
+              size="small"
+            />
+          </S.ButtonContainer>
         </S.ListIntegrationContainer>
 
         <S.AcordionContainer>

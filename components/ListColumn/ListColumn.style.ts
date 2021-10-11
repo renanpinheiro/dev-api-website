@@ -6,15 +6,17 @@ export const ListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 5vh 8vw 0 8vw;
-  @media (max-width: 576px) {
+
+  @media (max-width: 900px) {
     align-items: flex-start;
     padding-left: 0;
   }
 `
 export const ListColumn = styled.ul`
   column-count: 2;
-  @media (max-width: 996px) {
+  @media (max-width: 900px) {
     column-count: 1;
+    align-items: flex-start;
   }
 
   color: ${theme.colors.secondary};

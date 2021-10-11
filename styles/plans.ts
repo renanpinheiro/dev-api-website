@@ -14,7 +14,7 @@ export const HeroContent = styled.div`
   width: 100%;
   height: 100%;
 
-  padding: 8vh 0 8vh 0;
+  padding: 8vh 8vw 8vh 8vw;
 
   text-align: center;
 
@@ -43,9 +43,9 @@ export const HeroContent = styled.div`
     line-height: 1.7;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     align-items: flex-start;
-    padding: 25px;
+
     text-align: left;
     background-size: 100%;
   }
@@ -55,7 +55,7 @@ export const PipeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     align-items: flex-start;
 
     text-align: left;
@@ -69,7 +69,7 @@ export const QuestionsContainer = styled.div`
   h2 {
     font-size: 3.2rem;
     text-align: center;
-    @media (max-width: 576px) {
+    @media (max-width: 900px) {
       align-items: flex-start;
       font-size: 2rem;
     }
@@ -92,7 +92,7 @@ export const Pipe = styled.div`
 `
 export const ContainerItegration = styled.div`
   padding: 10vh 8vw 0 8vw;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     align-items: flex-start;
     padding-left: 0;
     text-align: left;
@@ -101,10 +101,8 @@ export const ContainerItegration = styled.div`
 export const CarrouselTitle = styled.h2`
   font-size: 2.3rem;
   color: ${theme.colors.primary};
-  @media (max-width: 576px) {
-    /* padding: 1vh 0 8vh 0; */
-
-    font-size: 1.375rem;
+  @media (max-width: 900px) {
+    font-size: 1.6rem;
     text-align: left;
   }
 
@@ -132,7 +130,7 @@ export const FreeTestContainer = styled.div`
 
   width: 100%;
   padding: 10vh 8vw 0 8vw;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     align-items: flex-start;
     padding: 10vh 8vw 0 8vw;
   }
@@ -143,9 +141,8 @@ export const AcordionContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 10vh 8vw 10vh 8vw;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     align-items: flex-start;
-    padding-right: 0;
   }
 `
 
@@ -156,7 +153,7 @@ export const ListIntegrationContainer = styled.div`
 
   width: 100%;
   padding: 10vh 8vw 0 8vw;
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     align-items: flex-start;
   }
 `
@@ -189,7 +186,7 @@ export const ButtonContainer = styled.div`
   align-items: center;
   padding: 10vh 0 0 0;
 
-  @media (max-width: 576) {
-    padding: 0;
+  @media (max-width: 900) {
+    align-items: flex-start;
   }
 `
