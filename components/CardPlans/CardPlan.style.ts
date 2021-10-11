@@ -1,136 +1,108 @@
 import styled from 'styled-components'
-
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-`
+import { theme } from '../../styles/theme'
 
 export const CardsContainer = styled.div`
   display: flex;
-  width: 85vw;
-  border-radius: 8px;
-  box-shadow: 0px 6px 28px #2c2d6636;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
+
+  @media (max-width: 700px) {
+    justify-content: center;
+  }
 `
 export const Cards = styled.div`
   display: flex;
+  flex: 0 0 24%;
   flex-direction: column;
-  align-items: center;
-  width: 17vw;
+  height: 60vh;
   line-height: 1;
   text-align: center;
+  vertical-align: middle;
   background-color: white;
+  background-image: url('/backgrounds/card-plan-bg.svg');
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: -3vh;
+  background-size: contain;
   border-radius: 8px;
-  transition: transform 1s;
+  border-radius: 8px;
+  box-shadow: 0px 6px 28px #2c2d6636;
+  transition: transform 0.5s;
   transform: translateX(0) scale(1);
 
   :hover,
   :focus {
     z-index: 9;
-    background-image: url('static/images/cardPlansImages/card-plan-bg.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+
     border-radius: 8px;
     box-shadow: 0px 6px 28px #2c2d6636;
-    transform: scale(1.1);
+    transform: scale(1.05);
+  }
 
-    @media (min-width: 900px) {
-      background-position-x: 50%;
-      background-position-y: 0%;
-      background-size: 140%;
-    }
-    @media (min-width: 1200px) {
-      background-position-x: 50%;
-      background-position-y: 0%;
-      background-size: 120%;
-    }
-    @media (min-width: 1366px) {
-      background-size: 103%;
-    }
-    @media (min-width: 1600px) {
-      background-position-y: -4%;
-    }
-    @media (min-width: 1920px) {
-      background-position-y: -12%;
-    }
+  @media (max-width: 1024px) {
+    flex: 0 0 49%;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 700px) {
+    flex: 0 0 65%;
+    height: 60vh;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 576px) {
+    flex: 0 0 90%;
+    height: 60vh;
+    margin-top: 10px;
   }
 `
 
 export const Icon = styled.img`
-  width: 80px;
-  height: 80px;
-  margin: 1rem auto 2rem auto;
-
-  @media (min-width: 1920px) {
-    width: 90px;
-    height: 90px;
-  }
+  width: 8vh;
+  height: 8vh;
+  margin: 1vh auto 1vh auto;
 `
 
 export const Title = styled.h2`
-  font-size: 1.5rem;
+  padding: 7vh 0 1vh 0;
+  font-size: 2.5vh;
   font-weight: 700;
-  color: ${props => props.theme.colors.primary};
+  color: ${theme.colors.secondary};
   text-transform: uppercase;
-  letter-spacing: 7px;
-
-  @media (min-width: 900px) {
-    letter-spacing: 4px;
-  }
-  @media (min-width: 1200px) {
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-  }
-  @media (min-width: 1600px) {
-    font-size: 1.7rem;
-    letter-spacing: 5px;
-  }
-  @media (min-width: 1920px) {
-    font-size: 2rem;
-    letter-spacing: 6px;
-  }
+  letter-spacing: 1vh;
 `
 
 export const Text = styled.p`
-  font-size: 1em;
-  color: ${props => props.theme.colors.primary};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 2% 0;
+  font-size: 1.2rem;
 
-  @media (min-width: 1920px) {
-    font-size: 1.3em;
-  }
+  color: ${theme.colors.black};
 `
 
 export const SubText = styled.p`
+  padding-bottom: 1.5vh;
   margin: 0;
-  font-size: 1em;
-  color: ${props => props.theme.colors.gray[600]};
+  font-size: 1.1rem;
+  color: ${theme.colors.gray[900]};
 `
-export const TextContainer = styled.div`
-  padding: 0rem 0.6rem;
 
-  @media (min-width: 1200px) {
-    padding: 0rem 1.1rem;
-  }
-  @media (min-width: 1600px) {
-    padding: 0rem 2.1rem;
-  }
-  @media (min-width: 1920px) {
-    padding: 0rem 2.2rem;
-  }
+export const TextContainer = styled.div`
+  padding: 0 2vw;
 `
 
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  align-items: center;
+
   justify-content: flex-end;
   width: 100%;
   height: 100%;
-  padding: 0rem 2rem 1.5rem 2rem;
-
-  @media (min-width: 900px) {
-    padding: 0rem 1rem 1.5rem 1rem;
-  }
-  @media (min-width: 1920px) {
-    padding: 0rem 4rem 1.5rem 4rem;
-  }
+  padding: 0 2vw 3vh 2vw;
 `
