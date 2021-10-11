@@ -11,6 +11,7 @@ import { Button } from '../../Button'
 import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
 
 import * as S from './NewsletterForm.styles'
+import { theme } from '../../../styles/theme'
 
 const NewsletterForm = () => {
   const RDapi = axios.create({
@@ -22,10 +23,16 @@ const NewsletterForm = () => {
   const [checkedPolicy, setCheckedPolicy] = useState(false)
 
   const handleValidation = Yup.object().shape({
-    name: Yup.string().required('false'),
-    email: Yup.string().email('false').required('false'),
-    isNotifications: Yup.boolean().required('false').oneOf([true], 'true'),
-    isPolicy: Yup.boolean().required('false').oneOf([true], 'true'),
+    name: Yup.string().required('O nome é obrigatório! '),
+    email: Yup.string()
+      .email('Email inválido')
+      .required('O Email é obrigatório!'),
+    isNotifications: Yup.boolean()
+      .required()
+      .oneOf([true], 'Deve concordar com as notificações!'),
+    isPolicy: Yup.boolean()
+      .required()
+      .oneOf([true], 'Deve concordar com a Política de Privacidade!'),
   })
 
   const handleAPI = (values: IValuesForm) => {
@@ -55,7 +62,8 @@ const NewsletterForm = () => {
     handleChange,
     resetForm,
     values,
-    isValid,
+
+    errors,
     setSubmitting,
   } = useFormik({
     initialValues: {
@@ -66,7 +74,6 @@ const NewsletterForm = () => {
     },
 
     validationSchema: handleValidation,
-    validateOnMount: true,
 
     onSubmit: (values: IValuesForm) => {
       handleAPI(values)
@@ -79,6 +86,7 @@ const NewsletterForm = () => {
       }, 2000)
     },
   })
+  console.log(errors.name)
   return (
     <S.ContainerForm>
       <S.ContainerMessage>
@@ -99,15 +107,29 @@ const NewsletterForm = () => {
             value={values.name}
             onChange={handleChange}
           />
+          <S.ContainerMessage>
+            {errors.name && (
+              <S.Message color={theme.colors.red[100]}>
+                <small>{errors.name}</small>
+              </S.Message>
+            )}
+          </S.ContainerMessage>
         </S.InputContainer>
         <S.InputContainer>
           <S.InputNewsletter
             placeholder="Digite aqui seu email"
-            type="email"
+            type="text"
             name="email"
             value={values.email}
             onChange={handleChange}
           />
+          <S.ContainerMessage>
+            {errors.email && (
+              <S.Message color={theme.colors.red[100]}>
+                <small>{errors.email}</small>
+              </S.Message>
+            )}
+          </S.ContainerMessage>
         </S.InputContainer>
         <S.CheckboxContainer>
           <S.CheckboxCol>
@@ -120,6 +142,14 @@ const NewsletterForm = () => {
             />
             <S.LabelCheckBox>Concordo em receber comunicações</S.LabelCheckBox>
           </S.CheckboxCol>
+
+          <S.ContainerMessage>
+            {errors.notification && (
+              <S.Message color={theme.colors.red[100]}>
+                <small>{errors.isNotification}</small>
+              </S.Message>
+            )}
+          </S.ContainerMessage>
 
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
@@ -136,14 +166,17 @@ const NewsletterForm = () => {
               </Link>
             </S.LabelCheckBox>
           </S.CheckboxCol>
+
+          <S.ContainerMessage>
+            {errors.isPolicy && (
+              <S.Message color={theme.colors.red[100]}>
+                <small>{errors.isPolicy}</small>
+              </S.Message>
+            )}
+          </S.ContainerMessage>
         </S.CheckboxContainer>
         <S.ButtonContainer>
-          <Button
-            type="default"
-            text="Descobrir"
-            size="default"
-            isDisabled={!isValid}
-          />
+          <Button type="default" text="Descobrir" size="default" />
         </S.ButtonContainer>
       </form>
     </S.ContainerForm>
