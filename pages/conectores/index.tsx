@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment, useRef } from 'react'
+import React, { useState, Fragment, useRef } from 'react'
 import { useInfiniteQuery } from 'react-query'
 import { useUIDSeed } from 'react-uid'
 
@@ -11,8 +11,6 @@ import api from '../../services/api'
 import { ButtonLink } from '../../components/ButtonLink'
 
 import * as S from '../../styles/connectors'
-
-import type { Connectors } from 'types'
 
 interface ICategory {
   id: string
@@ -27,15 +25,7 @@ interface IPagination {
 }
 
 interface IConnectorsProps {
-  connectors: {
-    pages: [
-      {
-        posts: [Connectors]
-      },
-    ]
-    pageParams: [number | undefined]
-  }
-  categories: [ICategory]
+  categories: ICategory[]
 }
 
 interface IQueryKeyType {
@@ -65,21 +55,14 @@ const getMoreConnectors = async ({
   return data
 }
 
-const ConnectorsPage = ({ categories, connectors }: IConnectorsProps) => {
+const ConnectorsPage = ({ categories }: IConnectorsProps) => {
   const seed = useUIDSeed()
   const loadMoreRef = useRef()
 
   const [search, setSearch] = useState('')
   const [categoryId, setCategoryId] = useState('')
 
-  const {
-    data,
-    isSuccess,
-    fetchNextPage,
-    hasNextPage,
-    isFetchingNextPage,
-    isLoading,
-  } = useInfiniteQuery(
+  const { data, isSuccess, fetchNextPage, hasNextPage } = useInfiniteQuery(
     [categoryId, search],
     getMoreConnectors,
     {
@@ -88,7 +71,6 @@ const ConnectorsPage = ({ categories, connectors }: IConnectorsProps) => {
           ? undefined
           : data.pagination.page + 1,
     },
-    { initialData: connectors },
   )
 
   useIntersectionObserver({
@@ -135,7 +117,9 @@ const ConnectorsPage = ({ categories, connectors }: IConnectorsProps) => {
                   aria-label="search"
                   aria-describedby="basic-addon2"
                   onChange={e => {
-                    setSearch(e.target.value)
+                    setTimeout(() => {
+                      setSearch(e.target.value)
+                    }, 1000)
                   }}
                 />
                 <S.InputGroup.Append>
@@ -173,7 +157,7 @@ const ConnectorsPage = ({ categories, connectors }: IConnectorsProps) => {
           {isSuccess &&
             data?.pages.map((page: any) => (
               <Fragment key={seed(page)}>
-                {page.content.map((item: Connectors) => (
+                {page.content.map(item => (
                   <S.Card>
                     <img src={item.image} title={item.name} />
                     <span>{item.name}</span>

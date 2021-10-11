@@ -13,6 +13,10 @@ export const Hero = styled.section`
   height: 80vh;
   padding-top: 5vh;
   background-color: ${theme.colors.gray[100]};
+  background-image: url('/backgrounds/bg-hero-connectors.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 
   @media (max-width: 768px) {
     height: 90vh;
@@ -47,10 +51,14 @@ export const HeroContent = styled.div`
   }
 
   > h1 {
-    font-size: 3.75rem;
+    font-size: 2.625rem;
 
     @media (max-width: 576px) {
       font-size: 2.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.75rem;
     }
 
     > b {
@@ -59,7 +67,7 @@ export const HeroContent = styled.div`
   }
 
   > p {
-    width: 35%;
+    width: 42%;
     margin: 3vh 0;
     font-size: 1.375rem;
     line-height: 3vh;
@@ -67,6 +75,10 @@ export const HeroContent = styled.div`
     @media (max-width: 996px) {
       width: 100%;
       font-size: 1.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 35%;
     }
   }
 `
@@ -104,12 +116,17 @@ export const SearchContent = styled.div`
   }
 
   > span {
-    width: 35%;
-    font-size: 1.75rem;
+    width: 45%;
+    font-size: 1.375rem;
     font-weight: 900;
 
     @media (max-width: 996px) {
       font-size: 1.375rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 35%;
+      font-size: 1.75rem;
     }
   }
 `
@@ -174,13 +191,13 @@ export const Card = styled.div`
 `
 
 export const FormControl = styled(BFormControl)`
-  height: 5vh;
+  height: 6vh;
   text-transform: lowercase;
   background: #eff3f6;
   border: none;
 
-  @media (max-width: 996px) {
-    height: 6vh;
+  @media (min-width: 1920px) {
+    height: 5vh;
   }
 
   &:focus {
@@ -197,14 +214,14 @@ export const ButtonInput = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5vh;
+  height: 6vh;
   font-size: 1.25rem;
   color: ${props => props.theme.colors.white};
   background-color: ${props => props.theme.colors.secondary};
   border: none;
 
-  @media (max-width: 996px) {
-    height: 6vh;
+  @media (min-width: 1920px) {
+    height: 5vh;
   }
 
   :active {
