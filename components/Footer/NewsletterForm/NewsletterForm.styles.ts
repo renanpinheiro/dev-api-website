@@ -136,8 +136,8 @@ export const LabelCheckBox = styled.label`
   text-align: left;
 
   > a {
-    color: #fff;
     font-weight: 700;
+    color: #fff;
     text-decoration: none;
     transition: all 0.2s ease-out 0s;
 
@@ -152,7 +152,7 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
   height: 18px;
   font-size: 17px;
   visibility: hidden;
-  content: ' ';
+  content: '';
 
   &:after {
     display: inline-block;
@@ -163,7 +163,7 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
 
     cursor: pointer;
     visibility: visible;
-    content: ' ';
+    content: '';
     background-color: ${theme.colors.gray[900]} padding-box;
     border: 1px solid ${theme.colors.gray[500]};
     border-radius: 3px;
@@ -175,10 +175,10 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
     justify-content: center;
     width: 18px;
     height: 18px;
-
     font-size: 15px;
     color: ${theme.colors.gray[100]};
     cursor: pointer;
+    content: '✓';
     background-color: ${theme.colors.primary};
   }
 `

@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { theme } from '../../styles/theme'
-import { IHeaderStyle } from './Header.interface'
+import { IContainerStyles, IHeaderStyle } from './Header.interface'
 
-export const Container = styled.div`
+export const Container = styled.div<IContainerStyles>`
   position: fixed;
   z-index: 15;
 
@@ -19,6 +19,18 @@ export const Container = styled.div`
 
   background-color: ${theme.colors.gray[100]};
   transition: all 0.3s ease-in-out;
+
+  ${({ isCentralized }) =>
+    isCentralized &&
+    css`
+      justify-content: center;
+      img {
+        padding: 2vh 0;
+      }
+      div {
+        width: auto;
+      }
+    `}
 `
 
 export const LogoContainer = styled.div`

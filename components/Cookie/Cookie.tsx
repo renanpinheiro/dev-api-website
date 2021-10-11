@@ -8,6 +8,7 @@ import { cookieContent } from '../../constants/cookieContent'
 
 const Cookie = () => {
   const [isOpenPreferences, setIsOpenPreferences] = useState(false)
+  const [isAcceptCookies, setIsAcceptCookies] = useState(false)
   const [activeTab, setActiveTab] = useState(0)
 
   const currentModalContent = cookieContent[activeTab]
@@ -24,26 +25,45 @@ const Cookie = () => {
     setActiveTab(tab)
   }
 
+  const handleClickAccept = () => {
+    setIsAcceptCookies(true)
+  }
+
   return (
     <S.Container isOpen={isOpenPreferences}>
       {!isOpenPreferences ? (
         <S.CookieContainer>
-          <S.Cookie>
-            <p>
-              Clicando em "Aceito todos os Cookies", você concorda com o
-              armazenamento de cookies no seu dispositivo para melhorar a
-              experiência e navegação no site. Para saber mais, acesse a{' '}
-              <a href="/politica-de-privacidade">Política de Privacidade.</a>
-            </p>
-            <Button
-              size="small"
-              type="outline"
-              text="Preferências"
-              margin="0 10px 0 10px"
-              onClick={handleClickPreferences}
-            />
-            <Button size="small" type="default" text="Aceitar todos" />
-          </S.Cookie>
+          {isAcceptCookies ? (
+            <S.AcceptCookie>
+              <img
+                src="/icons/cookie.png"
+                alt="cookie"
+                onClick={handleClickPreferences}
+              />
+            </S.AcceptCookie>
+          ) : (
+            <S.Cookie>
+              <p>
+                Clicando em "Aceito todos os Cookies", você concorda com o
+                armazenamento de cookies no seu dispositivo para melhorar a
+                experiência e navegação no site. Para saber mais, acesse a{' '}
+                <a href="/politica-de-privacidade">Política de Privacidade.</a>
+              </p>
+              <Button
+                size="small"
+                type="outline"
+                text="Preferências"
+                margin="0 10px 0 10px"
+                onClick={handleClickPreferences}
+              />
+              <Button
+                size="small"
+                type="default"
+                text="Aceitar todos"
+                onClick={handleClickAccept}
+              />
+            </S.Cookie>
+          )}
         </S.CookieContainer>
       ) : (
         <S.CookieModal>

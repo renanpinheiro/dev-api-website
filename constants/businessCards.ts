@@ -2,6 +2,7 @@ export const businessCards = [
   {
     title: 'Integrações para Gestão',
     text: 'Sistemas ERP desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
+    link: '/solucoes/gestao',
     connectors: [
       {
         urlImage: '/connectors/sap.png',
@@ -17,6 +18,7 @@ export const businessCards = [
   {
     title: 'Integrações para Vendas',
     text: 'Automatize a operação comercial e aumente o tempo da equipe para se dedicar ao que realmente importa: suas vendas!',
+    link: '/solucoes/comercial',
     connectors: [
       {
         urlImage: '/connectors/salesforce.png',
@@ -32,6 +34,7 @@ export const businessCards = [
   {
     title: 'Integrações para e-Commerce',
     text: 'Integre o e-Commerce ao Marketplaces e às suas ferramentas de marketing, CRM, SAC, ERP, financeiro e muito mais!',
+    link: '/solucoes/e-commerce',
     connectors: [
       {
         urlImage: '/connectors/vtex.png',
@@ -47,6 +50,7 @@ export const businessCards = [
   {
     title: 'Integrações para Financeiro',
     text: 'Integre soluções financeiras e APIs open banking, automatize a contabilidade, relatórios e DREs de forma ágil e segura.',
+    link: '/solucoes/financeiro',
     connectors: [
       {
         urlImage: '/connectors/pix.png',
@@ -62,6 +66,7 @@ export const businessCards = [
   {
     title: 'Integrações para Logística 4.0',
     text: 'Integre a operação de logística, supply e delivery ao ecossistema da sua empresa e de seus clientes e parceiros.',
+    link: '/solucoes/logistica',
     connectors: [
       {
         urlImage: '/connectors/bsoft.png',
@@ -77,6 +82,7 @@ export const businessCards = [
   {
     title: 'Integrações para Marketing',
     text: 'A nova era do marketing integrado espera por você. Elimine tarefas manuais, acelere a conversão em vendas e encante seus clientes!',
+    link: '/solucoes/marketing',
     connectors: [
       {
         urlImage: '/connectors/adwords.png',
@@ -92,6 +98,7 @@ export const businessCards = [
   {
     title: 'Integrações para RH 4.0',
     text: 'People Analytics, Gestão de Dados e Business Intelligence junto com a agilidade nos processos internos do Departamento Pessoal.',
+    link: '/solucoes/rh',
     connectors: [
       {
         urlImage: '/connectors/gupy.png',
@@ -107,9 +114,11 @@ export const businessCards = [
   {
     title: 'Integrações para Empresas 360°',
     text: 'Uma empresa 360° representa uma organização que possui integração total de sistemas, dados, processos, projetos e pessoas.',
+    link: '/solucoes/empresas-360',
   },
   {
     title: 'Integrações para o Seu Produto',
     text: 'Escale as integrações do seu produto, conecte-o aos sistemas do mercado e não perca mais nenhuma venda!',
+    link: '/solucoes/seu-produto',
   },
 ]

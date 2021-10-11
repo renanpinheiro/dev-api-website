@@ -61,7 +61,7 @@ export const CookieModal = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  width: 60vw;
+  width: 50vw;
   height: 70vh;
 
   background-color: ${theme.colors.white};
@@ -121,4 +121,23 @@ export const ContentContainer = styled.div`
   height: 100%;
 
   padding: 2vh 2vw;
+
+  font-size: 2.2vh;
+`
+
+export const AcceptCookie = styled.div`
+  position: fixed;
+  display: flex;
+
+  width: 100%;
+  height: 60px;
+
+  padding: 0 2vw;
+
+  img {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 2px ${theme.colors.secondary};
+  }
 `
