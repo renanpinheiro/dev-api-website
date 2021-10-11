@@ -50,10 +50,12 @@ const Solutions = () => {
       <S.Container>
         <Hero>
           <Circle>
-            <S.HeroContent>
+            <S.HeroContent titleWidth={page.titleWidth}>
               <S.Pipe />
+
               {page ? page.title : <h1></h1>}
               {page ? page.subTitle : <p></p>}
+
               <ButtonLink
                 text="Fale com um consultor"
                 href="/free-trial"

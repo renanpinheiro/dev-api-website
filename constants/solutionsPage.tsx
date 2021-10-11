@@ -5,6 +5,7 @@ import * as S from '../styles/solutions'
 export interface ISolutionPage {
   metaTitle: string
   title: ReactNode
+  titleWidth?: string
   subTitle: ReactNode
   contentTitle: ReactNode
   contentText: ReactNode
@@ -16,8 +17,8 @@ export const solutionsPage = {
     metaTitle: 'Soluções em Gestão | DevApi',
     title: (
       <h1>
-        <span>Cada empresa enfrenta diferentes </span>
-        desafios de gestão. Supere os seus!
+        Cada empresa enfrenta diferentes{' '}
+        <b>desafios de gestão. Supere os seus!</b>
       </h1>
     ),
     subTitle: (
@@ -81,9 +82,10 @@ export const solutionsPage = {
     metaTitle: 'Soluções em Marketing | DevApi',
     title: (
       <h1>
-        <span>Marketing integrado impulsionando </span>a sua empresa no mercado
+        <b>Marketing integrado impulsionando</b> a sua empresa no mercado
       </h1>
     ),
+    titleWidth: '60%',
     subTitle: (
       <p>
         A nova era do marketing integrado espera por você. Elimine tarefas
@@ -148,7 +150,7 @@ export const solutionsPage = {
     metaTitle: 'Soluções comerciais | DevApi',
     title: (
       <h1>
-        <span>Impulsione as vendas da sua empresa </span>
+        <b>Impulsione as vendas da sua empresa </b>
         integrando os sistemas
       </h1>
     ),
@@ -176,7 +178,7 @@ export const solutionsPage = {
         Foco nas vendas: elimine o trabalho manual! Integre todos os sistemas e
         automatize os dados do seu processo comercial. Acabe com as planilhas de
         copiar e colar, dados perdidos no CRM, follows não realizados,
-        relatórios trabalhosos e pouco confiáveis.Transforme seu time comercial
+        relatórios trabalhosos e pouco confiáveis. Transforme seu time comercial
         em uma verdadeira máquina de vendas!
         <br />
         <br />
@@ -208,10 +210,11 @@ export const solutionsPage = {
     metaTitle: 'Soluções em RH | DevApi',
     title: (
       <h1>
-        <span>RH 4.0: Sua empresa está preparada para os </span>
-        novos desafios na gestão de pessoas?
+        RH 4.0: Sua empresa está preparada para os{' '}
+        <b>novos desafios na gestão de pessoas?</b>
       </h1>
     ),
+    titleWidth: '65%',
     subTitle: (
       <p>
         Employer Branding, People Analytics, Gestão de Dados e Business
@@ -268,8 +271,8 @@ export const solutionsPage = {
     metaTitle: 'Soluções em e-Commerce | DevApi',
     title: (
       <h1>
-        <span>Venda 24h por dia, 7 dias por semana </span>
-        com seu e-Commerce automatizado
+        <b>Venda 24h por dia, 7 dias por semana</b> com seu e-Commerce
+        automatizado
       </h1>
     ),
     subTitle: (
@@ -280,8 +283,7 @@ export const solutionsPage = {
     ),
     contentTitle: (
       <h2>
-        Automatizar e escalar.
-        <span>Ou desaparecer!</span>
+        Automatizar e escalar. <span>Ou desaparecer!</span>
       </h2>
     ),
     contentText: (
@@ -340,10 +342,10 @@ export const solutionsPage = {
     metaTitle: 'Soluções para Empresas | DevApi',
     title: (
       <h1>
-        <span>A qualquer momento, em qualquer lugar: </span>
-        tudo integrado!
+        A qualquer momento, em qualquer lugar: <b>tudo integrado!</b>
       </h1>
     ),
+    titleWidth: '55%',
     subTitle: (
       <p>
         Uma empresa 360° representa uma organização que possui integração total
@@ -379,8 +381,8 @@ export const solutionsPage = {
     metaTitle: 'Soluções Financeiras | DevApi',
     title: (
       <h1>
-        <span>Gestão financeira de alta performance </span>
-        para sua empresa
+        <b>Gestão financeira de alta performance</b>
+        <br /> para sua empresa
       </h1>
     ),
     subTitle: (
@@ -445,10 +447,10 @@ export const solutionsPage = {
     metaTitle: 'Soluções para seu produto | DevApi',
     title: (
       <h1>
-        <span>Torne o seu produto </span>
-        líder de mercado
+        Torne o seu produto <b>líder de mercado</b>
       </h1>
     ),
+    titleWidth: '30%',
     subTitle: (
       <p>
         Escale as integrações do seu produto, conecte-o aos sistemas do mercado
@@ -487,8 +489,8 @@ export const solutionsPage = {
     metaTitle: 'Soluções em Logística | DevApi',
     title: (
       <h1>
-        <span>Logística 4.0: Sua empresa está preparada </span>
-        para essa transformação?
+        Logística 4.0: Sua empresa está preparada{' '}
+        <b>para essa transformação?</b>
       </h1>
     ),
     subTitle: (

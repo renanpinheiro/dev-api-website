@@ -75,7 +75,7 @@ export const Wrapper = styled.div`
 `
 
 export const Title = styled.div`
-  margin: 3vw 0 1vh;
+  margin: 6vw 0 1vh;
 
   > hr {
     width: 5.8vw;

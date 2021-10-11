@@ -1,61 +1,73 @@
 import styled from 'styled-components'
 import { theme } from './theme'
 
+interface IHeroContentProps {
+  titleWidth?: string
+}
+
 export const Container = styled.div`
   z-index: 1;
 `
 
-export const HeroContent = styled.div`
+export const HeroContent = styled.div<IHeroContentProps>`
   z-index: 2;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   width: 100%;
   height: 100%;
-
   padding: 0 8vw 0 8vw;
-
   text-align: left;
+
+  @media (max-width: 576px) {
+    align-items: flex-start;
+    text-align: left;
+    background-size: 100%;
+  }
 
   h1 {
     z-index: 4;
-    max-width: 20ch;
-    margin-bottom: 15px;
-    font-size: 5vh;
+    max-width: ${props => (props.titleWidth ? props.titleWidth : '62%')};
+    font-size: 2.625rem;
 
-    span {
-      font-weight: 400;
+    @media (max-width: 996px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      max-width: ${props => (props.titleWidth ? props.titleWidth : '62%')};
+      font-size: 3.75rem;
+      line-height: 7vh;
+    }
+
+    > b {
+      font-weight: 700;
     }
   }
 
   p {
     z-index: 4;
-    max-width: 65ch;
-    margin-bottom: 15px;
+    width: 60%;
+    margin: 3vh 0;
+    font-size: 1.375rem;
+    line-height: 3vh;
 
-    overflow: hidden;
-    font-size: 2vh;
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 1.25rem;
+    }
 
-    line-height: 1.7;
-  }
-
-  @media (max-width: 576px) {
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 25px;
-    text-align: left;
-    background-size: 100%;
+    @media (min-width: 1600px) {
+      max-width: 43%;
+    }
   }
 `
 
 export const Pipe = styled.div`
-  width: 10vh;
+  width: 15vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -66,11 +78,8 @@ export const Pipe = styled.div`
 export const Content = styled.div`
   position: relative;
   z-index: 7;
-
   width: 100%;
-
   margin-top: 30px;
-
   background-color: white;
 `
 
@@ -110,7 +119,6 @@ export const TitleContainer = styled.div`
 
   h2 {
     max-width: 25ch;
-
     margin-bottom: 15px;
     font-size: 5vh;
 

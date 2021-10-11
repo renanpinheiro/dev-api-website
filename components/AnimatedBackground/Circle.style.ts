@@ -19,7 +19,6 @@ export const Container = styled.div`
   position: relative;
   z-index: 3;
   height: 80vh;
-
   max-height: 80vh;
   padding-top: 5vh;
   background-color: ${theme.colors.gray[100]};
@@ -30,7 +29,7 @@ export const BackgroundCircleContainer = styled.div`
   position: absolute;
   bottom: 38vh;
   left: 45vw;
-  z-index: 3;
+  z-index: 1;
   background-color: white;
   transform: scale(1);
 
@@ -42,11 +41,11 @@ export const BackgroundCircleContainer = styled.div`
     transform: scale(0.7);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     bottom: 60vh;
     left: 30vw;
-
     transform: scale(0.5);
+    content-visibility: hidden;
   }
 
   @media (max-width: 500px) {
