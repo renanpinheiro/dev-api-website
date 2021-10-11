@@ -1,21 +1,101 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, Fragment, useRef } from 'react'
+import { useInfiniteQuery } from 'react-query'
+import { useUIDSeed } from 'react-uid'
 
+import type { GetServerSideProps } from 'next'
 import Head from 'next/head'
 
-import { Button } from '../../components/Button'
+import useIntersectionObserver from '../../hooks/useIntersectionObserver'
+import api from '../../services/api'
+
 import { ButtonLink } from '../../components/ButtonLink'
 
 import * as S from '../../styles/connectors'
 
-import ConnectorsData from '../../constants/connectors.json'
+import type { Connectors } from 'types'
 
-const Connectors = () => {
-  const [pageCurrent, setPageCurrent] = useState(1)
+interface ICategory {
+  id: string
+  name: string
+}
 
-  const handleLoadConnectors = pageCurrent => {
-    let page = pageCurrent + 1
-    setPageCurrent(page)
+interface IPagination {
+  pagination: {
+    page: number
+    total_pages: number
   }
+}
+
+interface IConnectorsProps {
+  connectors: {
+    pages: [
+      {
+        posts: [Connectors]
+      },
+    ]
+    pageParams: [number | undefined]
+  }
+  categories: [ICategory]
+}
+
+interface IQueryKeyType {
+  pageParam: number
+  queryKey: [string, string]
+}
+
+const getMoreConnectors = async ({
+  pageParam = 0,
+  queryKey,
+}: IQueryKeyType) => {
+  let params = `_limit=1&_start=${pageParam}`
+
+  const categoryId = queryKey[0]
+  const search = queryKey[1]
+
+  if (categoryId) {
+    params = `${params}&Categoria=${categoryId}`
+  }
+
+  if (search) {
+    params = `${params}&_q=${search}`
+  }
+
+  const { data } = await api.get(`/conectores?${params}`)
+
+  return data
+}
+
+const ConnectorsPage = ({ categories, connectors }: IConnectorsProps) => {
+  const seed = useUIDSeed()
+  const loadMoreRef = useRef()
+
+  const [search, setSearch] = useState('')
+  const [categoryId, setCategoryId] = useState('')
+
+  const {
+    data,
+    isSuccess,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+  } = useInfiniteQuery(
+    [categoryId, search],
+    getMoreConnectors,
+    {
+      getNextPageParam: (data: IPagination) =>
+        data.pagination.page === data.pagination.total_pages
+          ? undefined
+          : data.pagination.page + 1,
+    },
+    { initialData: connectors },
+  )
+
+  useIntersectionObserver({
+    target: loadMoreRef,
+    onIntersect: fetchNextPage,
+    enabled: hasNextPage,
+  })
 
   return (
     <>
@@ -50,10 +130,13 @@ const Connectors = () => {
               <S.InputGroup>
                 <S.FormControl
                   type="text"
+                  name="search"
                   placeholder="Busca..."
                   aria-label="search"
                   aria-describedby="basic-addon2"
-                  name="search"
+                  onChange={e => {
+                    setSearch(e.target.value)
+                  }}
                 />
                 <S.InputGroup.Append>
                   <S.ButtonInput variant="outline-secondary">
@@ -68,8 +151,9 @@ const Connectors = () => {
                 id="dropdown-basic-button"
                 title="Todas as categorias"
                 size="md"
+                onSelect={e => setCategoryId(e)}
               >
-                {ConnectorsData.categories.map((item, index) => (
+                {categories.map((item, index) => (
                   <S.Dropdown.Item
                     eventKey={item.id}
                     key={index}
@@ -86,26 +170,43 @@ const Connectors = () => {
 
       <S.Content>
         <S.Wrapper>
-          {ConnectorsData.connectors.map(item => (
-            <S.Card>
-              <img src={item.image} title={item.name} />
-              <span>B2W</span>
-            </S.Card>
-          ))}
-
-          <S.More>
-            <Button
-              text="Ver mais conectores"
-              type="default"
-              size="default"
-              buttonType="button"
-              onClick={() => handleLoadConnectors(pageCurrent)}
-            />
-          </S.More>
+          {isSuccess &&
+            data?.pages.map((page: any) => (
+              <Fragment key={seed(page)}>
+                {page.content.map((item: Connectors) => (
+                  <S.Card>
+                    <img src={item.image} title={item.name} />
+                    <span>{item.name}</span>
+                  </S.Card>
+                ))}
+              </Fragment>
+            ))}
         </S.Wrapper>
+
+        <div
+          ref={loadMoreRef}
+          className={`${!hasNextPage ? 'hidden' : ''}`}
+        ></div>
       </S.Content>
     </>
   )
 }
 
-export default Connectors
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { data: categories } = await api.get('/categoria-de-conectores')
+  const { data } = await api.get('/conectores?_limit=1&_start=0')
+
+  const connectors = {
+    pages: [{ data }],
+    pageParams: [null],
+  }
+
+  return {
+    props: {
+      connectors,
+      categories,
+    },
+  }
+}
+
+export default ConnectorsPage

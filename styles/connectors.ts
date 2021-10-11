@@ -173,12 +173,8 @@ export const Card = styled.div`
   }
 `
 
-export const More = styled.div`
-  margin-top: 5vh;
-`
-
 export const FormControl = styled(BFormControl)`
- height: 5vh;
+  height: 5vh;
   text-transform: lowercase;
   background: #eff3f6;
   border: none;
