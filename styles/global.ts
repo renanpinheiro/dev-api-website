@@ -115,7 +115,7 @@ ${reset}
     font-weight: normal;
     src: local('TT Commons'), url('https://devapi-cdn-static.s3.amazonaws.com/plataform/fonts/TTCommons/TT+Commons+Regular.woff') format("truetype");
   }
-  
+
   * {
     box-sizing: border-box;
     padding: 0;
@@ -137,19 +137,20 @@ ${reset}
     overflow-x: hidden;
     font-size: 1rem;
     font-weight: normal;
-    color: ${theme.colors.primary}; 
-  }
-
-  h1 {
-    font-weight: 700;
+    color: ${theme.colors.primary};
   }
 
   h2 {
-  font-size: 2.2rem;
+    font-size: 2.2rem;
   }
 
   button:focus {
     outline: none;
+  }
+
+  hr {
+    margin: 0;
+    opacity: 1;
   }
 
   scrollbar-color: #738099 transparent;

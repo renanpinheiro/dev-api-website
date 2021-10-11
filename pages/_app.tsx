@@ -1,4 +1,5 @@
 import React from 'react'
+import { QueryClientProvider, QueryClient } from 'react-query'
 
 import { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -10,6 +11,8 @@ import { theme } from '../styles/theme'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { useRouter } from 'next/router'
+
+const queryClient = new QueryClient()
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
@@ -23,7 +26,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <Header />
-        <Component {...pageProps} />
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
         {router.asPath !== '/trial-success' && <Footer />}
         <GlobalStyle />
       </ThemeProvider>
