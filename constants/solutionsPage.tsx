@@ -28,7 +28,7 @@ export const solutionsPage = {
       'Sistemas ERP desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
     contentTitle: (
       <h2>
-        Visão centralizada <span>do seu negócio!</span>
+        Visão centralizada <b>do seu negócio!</b>
       </h2>
     ),
     contentText: (
@@ -89,8 +89,8 @@ export const solutionsPage = {
       'A nova era do marketing integrado espera por você. Elimine tarefas manuais, acelere a conversão em vendas e encante os seus clientes!',
     contentTitle: (
       <h2>
-        Crie uma estrutura Omnichannel com
-        <span>estratégias de marketing integrado</span>
+        Crie uma estrutura Omnichannel com{' '}
+        <b>estratégias de marketing integrado</b>
       </h2>
     ),
     contentText: (
@@ -152,7 +152,7 @@ export const solutionsPage = {
       'Automatize a operação comercial e aumente o tempo da equipe para se dedicar ao que realmente importa: suas vendas!',
     contentTitle: (
       <h2>
-        Processo comercial com <span>agilidade e inteligência</span>
+        Processo comercial com <b>agilidade e inteligência</b>
       </h2>
     ),
     contentText: (
@@ -208,7 +208,7 @@ export const solutionsPage = {
       'Employer Branding, People Analytics, Gestão de Dados e Business Intelligence junto com a agilidade nos processos internos do Departamento Pessoal.',
     contentTitle: (
       <h2>
-        Recursos Humanos mais <span>estratégico e eficiente</span>
+        Recursos Humanos mais <b>estratégico e eficiente</b>
       </h2>
     ),
     contentText: (
@@ -262,7 +262,7 @@ export const solutionsPage = {
       'Integre seu e-commerce aos Marketplaces e às suas ferramentas de marketing, CRM e atendimento, ERP, financeiro, logística e muito mais!',
     contentTitle: (
       <h2>
-        Automatizar e escalar. <span>Ou desaparecer!</span>
+        Automatizar e escalar. <b>Ou desaparecer!</b>
       </h2>
     ),
     contentText: (
@@ -329,8 +329,7 @@ export const solutionsPage = {
       'Uma empresa 360° representa uma organização que possui integração total entre sistemas, dados, processos, projetos e pessoas.',
     contentTitle: (
       <h2>
-        Defina o cenário ideal
-        <span> para a sua empresa!</span>
+        Defina o cenário ideal <b>para a sua empresa!</b>
       </h2>
     ),
     contentText: (
@@ -363,8 +362,7 @@ export const solutionsPage = {
       'Integre soluções financeiras e APIs open banking, automatize a contabilidade, relatórios e DREs de forma ágil e segura.',
     contentTitle: (
       <h2>
-        O processo de digitalização da
-        <span> economia não para!</span>
+        O processo de digitalização da <b>economia não para!</b>
       </h2>
     ),
     contentText: (
@@ -425,8 +423,7 @@ export const solutionsPage = {
       'Escale as integrações do seu produto, conecte-o aos sistemas do mercado e não perca mais nenhuma venda!',
     contentTitle: (
       <h2>
-        Conecte o seu produto
-        <span> com o mundo</span>
+        Conecte o seu produto <b>com o mundo</b>
       </h2>
     ),
     contentText: (
@@ -462,8 +459,7 @@ export const solutionsPage = {
       'Integre a operação de logística, supply e delivery ao ecossistema da sua empresa e de seus clientes e parceiros.',
     contentTitle: (
       <h2>
-        Logística integrada,
-        <span> visão 360 graus</span>
+        Logística integrada, <b> visão 360 graus</b>
       </h2>
     ),
     contentText: (

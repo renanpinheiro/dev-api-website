@@ -71,20 +71,22 @@ const Solutions = () => {
             </S.HeroContent>
           </Circle>
         </Hero>
+
         <S.Content>
           <S.SolutionContainer>
             <S.TextContainer>
               <S.TitleContainer>
                 <S.Pipe />
-                {page ? page.contentTitle : <></>}
+                {page && page.contentTitle}
               </S.TitleContainer>
+
               <S.ParagraphContainer>
-                {page ? page.contentText : <></>}
+                {page && page.contentText}
               </S.ParagraphContainer>
             </S.TextContainer>
 
             <S.IntegrationContainer>
-              {page ? page.component : <></>}
+              {page && page.component}
             </S.IntegrationContainer>
 
             <ButtonLink
