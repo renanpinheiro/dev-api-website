@@ -22,8 +22,8 @@ const ApiManagement = () => {
           <S.HeroContent>
             <S.Pipe />
             <h1>
-              <span>Acelere suas estratégias digitais </span>
-              com o gerenciamento de APIs
+              Acelere suas estratégias digitais{' '}
+              <b>com o gerenciamento de APIs</b>
             </h1>
             <p>
               Sem limites para a inovação com o poder do API Manager da DevApi!
