@@ -31,7 +31,7 @@ const Midias = ({ midias }: IMidiasProps) => {
         <S.HeroContainer>
           <S.Pipe />
           <h1>
-            <span>DevApi</span> na mídia
+            DevApi <b>na mídia</b>
           </h1>
           <p>
             Saiba como a DevApi tem sido destaque em grandes portais de

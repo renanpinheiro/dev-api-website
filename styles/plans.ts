@@ -10,44 +10,47 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   height: 100%;
-
   padding: 8vh 8vw 8vh 8vw;
-
   text-align: center;
-
   background-image: url('/masks/lines.svg');
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
 
-  h1 {
-    margin-bottom: 15px;
-    font-size: 5vh;
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    text-align: left;
+    background-size: 100%;
+  }
 
-    span {
-      font-weight: 400;
+  > h1 {
+    font-size: 2.625rem;
+
+    @media (max-width: 576px) {
+      font-size: 2.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.75rem;
+    }
+
+    > b {
+      font-weight: 700;
     }
   }
 
-  p {
-    max-width: 90ch;
+  > p {
+    width: 51%;
+    margin: 3vh 0;
+    font-size: 1.375rem;
+    line-height: 3vh;
 
-    margin-bottom: 15px;
-
-    overflow: hidden;
-    font-size: 2vh;
-
-    line-height: 1.7;
-  }
-
-  @media (max-width: 900px) {
-    align-items: flex-start;
-
-    text-align: left;
-    background-size: 100%;
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 1.25rem;
+    }
   }
 `
 
@@ -112,15 +115,15 @@ export const CarrouselTitle = styled.h2`
 `
 export const CostumersCarrouselContainer = styled.div`
   width: 100%;
-  padding: 0 8vw;
-  background-size: 76%;
+  margin: 0 8vw;
+  background-size: 100%;
 `
 
 export const QuoteContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10vh 3vw 3vh 6vw;
+  margin: 10vh 3vw 3vh 6vw;
 `
 
 export const FreeTestContainer = styled.div`
