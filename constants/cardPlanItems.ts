@@ -17,7 +17,7 @@ export const cardPlanItems = [
     subText: 'Sob consulta',
     buttonText: 'Fale conosco',
     buttonColor: 'secondary',
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
   },
   {
     imageUrl: 'static/images/cardPlansImages/devapi.svg',
@@ -26,7 +26,7 @@ export const cardPlanItems = [
     subText: 'Sob consulta',
     buttonText: 'Fale conosco',
     buttonColor: 'secondary',
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
   },
   {
     imageUrl: 'static/images/cardPlansImages/business.svg',
@@ -35,7 +35,7 @@ export const cardPlanItems = [
     subText: 'Sob consulta',
     buttonText: 'Fale conosco',
     buttonColor: 'secondary',
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
   },
   {
     imageUrl: 'static/images/cardPlansImages/enterprise.svg',
@@ -44,6 +44,6 @@ export const cardPlanItems = [
     subText: 'Sob consulta',
     buttonText: 'Fale conosco',
     buttonColor: 'secondary',
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
   },
 ]

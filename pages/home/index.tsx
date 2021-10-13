@@ -19,6 +19,8 @@ import { plataformDetails } from '../../constants/plataformDetails'
 import { businessCards } from '../../constants/businessCards'
 import { featuresCard } from '../../constants/featuresCard'
 
+import Link from 'next/link'
+
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
   {
@@ -61,7 +63,9 @@ const Home = () => {
             Sem limites: uma única plataforma para integrar sistemas,
             automatizar processos, orquestrar dados e gerenciar APIs.
           </p>
-          <Button size="default" text="Quero uma demo!" type="default" />
+          <Link href={'/free-trial'}>
+            <Button size="default" text="Quero uma demo!" type="default" />
+          </Link>
         </S.HeroContent>
         <S.GifContainer>
           <img src="/gifs/home.gif" alt="platform" />

@@ -12,6 +12,7 @@ import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/solutions'
+import Link from 'next/link'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -49,11 +50,13 @@ const Solutions = () => {
               <S.Pipe />
               {page ? page.title : <h1></h1>}
               {page ? page.subTitle : <p></p>}
-              <Button
-                size="default"
-                text="Fale com um consultor"
-                type="default"
-              />
+              <Link href={'/converse-com-especialista'}>
+                <Button
+                  size="default"
+                  text="Fale com um consultor"
+                  type="default"
+                />
+              </Link>
             </S.HeroContent>
           </Circle>
         </Hero>
@@ -73,11 +76,13 @@ const Solutions = () => {
               {page ? page.component : <></>}
             </S.IntegrationContainer>
 
-            <Button
-              size="default"
-              text="Quero integrar agora!"
-              type="default"
-            />
+            <Link href={'/converse-com-especialista'}>
+              <Button
+                size="default"
+                text="Quero integrar agora!"
+                type="default"
+              />
+            </Link>
           </S.SolutionContainer>
 
           <S.QuoteContainer>
