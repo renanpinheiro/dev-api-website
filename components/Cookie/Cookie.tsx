@@ -5,11 +5,14 @@ import * as S from './Cookie.style'
 import { IoMdClose } from 'react-icons/io'
 import { theme } from '../../styles/theme'
 import { cookieContent } from '../../constants/cookieContent'
+import { Switch } from '../Switch'
+import { CookieDetails } from './CookieDetails'
 
 const Cookie = () => {
   const [isOpenPreferences, setIsOpenPreferences] = useState(false)
   const [isAcceptCookies, setIsAcceptCookies] = useState(false)
   const [activeTab, setActiveTab] = useState(0)
+  const [openCollapse, setOpenCollapse] = useState('')
 
   const currentModalContent = cookieContent[activeTab]
 
@@ -23,10 +26,19 @@ const Cookie = () => {
 
   const handleSelectTab = (tab: number) => {
     setActiveTab(tab)
+    setOpenCollapse('')
   }
 
   const handleClickAccept = () => {
     setIsAcceptCookies(true)
+  }
+
+  const handleClickCollapse = (index: string) => {
+    if (index !== openCollapse) {
+      setOpenCollapse(index)
+    } else {
+      setOpenCollapse('')
+    }
   }
 
   return (
@@ -91,7 +103,70 @@ const Cookie = () => {
             </S.Tab>
           </S.TabContainer>
 
-          <S.ContentContainer>{currentModalContent.text}</S.ContentContainer>
+          <S.ContentContainer>
+            {currentModalContent.text}
+            {activeTab === 1 && (
+              <S.ButtonContainer>
+                <Button
+                  type="default"
+                  size="small"
+                  text="Acompanhar Solicitação"
+                />
+              </S.ButtonContainer>
+            )}
+            <S.AccordionContainer>
+              {currentModalContent.collapse.map((item, index) => {
+                return (
+                  <S.Accordion key={index} activeKey={openCollapse}>
+                    <S.Card>
+                      <S.CardHeader>
+                        <S.Title
+                          onClick={() => handleClickCollapse(index.toString())}
+                        >
+                          {item.title}
+                        </S.Title>
+                        <S.AccordionToggle
+                          eventKey={index.toString()}
+                          onClick={() => handleClickCollapse(index.toString())}
+                        >
+                          <img src="/arrows/arrow-dropdown.svg" alt="arrow" />
+                        </S.AccordionToggle>
+                        {item.switch && (
+                          <S.SwitchContainer>
+                            <Switch />
+                          </S.SwitchContainer>
+                        )}
+                      </S.CardHeader>
+                      <S.AccordionCollapse eventKey={index.toString()}>
+                        <S.CardBody>
+                          <S.Text>{item.text}</S.Text>
+                          {item.cookies && <CookieDetails />}
+                          {item.button && (
+                            <S.ButtonContainer>
+                              <Button
+                                type="default"
+                                size="small"
+                                text="Solicitar"
+                              />
+                            </S.ButtonContainer>
+                          )}
+                        </S.CardBody>
+                      </S.AccordionCollapse>
+                    </S.Card>
+                  </S.Accordion>
+                )
+              })}
+            </S.AccordionContainer>
+            {activeTab === 0 && (
+              <S.ButtonContainer>
+                <Button
+                  type="default"
+                  size="small"
+                  text="Aceitar Todos os Cookies"
+                />
+              </S.ButtonContainer>
+            )}
+          </S.ContentContainer>
         </S.CookieModal>
       )}
     </S.Container>

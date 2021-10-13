@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components'
 import { theme } from '../../../styles/theme'
-import {
-  IMenuContainerProps,
-  IMenuOverlayProps,
-  INavLinkTitleStyle,
-} from '../Header.interface'
+import { IMenuContainerProps, INavLinkTitleStyle } from '../Header.interface'
 
 import {
   Accordion as AccordionBootstrap,
