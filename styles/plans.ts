@@ -126,18 +126,6 @@ export const QuoteContainer = styled.div`
   margin: 10vh 3vw 3vh 6vw;
 `
 
-export const FreeTestContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  padding: 10vh 8vw 0 8vw;
-  @media (max-width: 900px) {
-    align-items: flex-start;
-    padding: 10vh 8vw 0 8vw;
-  }
-`
 export const AcordionContainer = styled.div`
   display: flex;
   flex-direction: column;
