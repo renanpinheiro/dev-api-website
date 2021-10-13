@@ -105,32 +105,18 @@ export const ButtonNewsLetter = styled.button`
 `
 
 export const Message = styled.div<IColorNotificationStyle>`
-  position: absolute;
-
   left: 10vw;
-  z-index: 1;
-  padding: 2vh 1vw;
-  background-color: ${theme.colors.gray[100]};
+
+  padding: 1vh 1vw;
 
   border-radius: 5px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-  :after {
-    position: absolute;
-    top: -20px;
-    left: 20%;
-    width: 0;
-    height: 0;
-    content: ' ';
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid ${theme.colors.gray[100]};
-    border-left: 20px solid transparent;
-  }
+
   > small {
     font-size: 1rem;
     color: ${props => props.color || theme.colors.green[100]};
   }
 `
-
 export const CheckboxContainer = styled.div`
   display: flex;
   flex-direction: column;

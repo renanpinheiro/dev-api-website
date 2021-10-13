@@ -75,6 +75,7 @@ export const QuestionsContainer = styled.div`
     @media (max-width: 900px) {
       align-items: flex-start;
       font-size: 2rem;
+      text-align: left;
     }
   }
 
@@ -94,7 +95,6 @@ export const Pipe = styled.div`
   }
 `
 export const ContainerItegration = styled.div`
-  padding: 10vh 8vw 0 8vw;
   @media (max-width: 900px) {
     align-items: flex-start;
     padding-left: 0;
@@ -102,10 +102,10 @@ export const ContainerItegration = styled.div`
   }
 `
 export const CarrouselTitle = styled.h2`
-  font-size: 2.3rem;
   color: ${theme.colors.primary};
-  @media (max-width: 900px) {
-    font-size: 1.6rem;
+  @media (max-width: 996px) {
+    margin-top: 10px;
+    font-size: 1.375rem;
     text-align: left;
   }
 
@@ -115,8 +115,8 @@ export const CarrouselTitle = styled.h2`
 `
 export const CostumersCarrouselContainer = styled.div`
   width: 100%;
-  margin: 0 8vw;
-  background-size: 100%;
+  padding: 10vh 8vh 0 8vw;
+  background-size: 76%;
 `
 
 export const QuoteContainer = styled.div`

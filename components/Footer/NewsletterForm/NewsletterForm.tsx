@@ -29,7 +29,7 @@ const NewsletterForm = () => {
       .required('O Email é obrigatório!'),
     isNotifications: Yup.boolean()
       .required()
-      .oneOf([true], 'Deve concordar com as notificações!'),
+      .oneOf([true], 'Deve concordar em receber as comunicações!'),
     isPolicy: Yup.boolean()
       .required()
       .oneOf([true], 'Deve concordar com a Política de Privacidade!'),
@@ -107,14 +107,14 @@ const NewsletterForm = () => {
             value={values.name}
             onChange={handleChange}
           />
-          <S.ContainerMessage>
-            {errors.name && (
-              <S.Message color={theme.colors.red[100]}>
-                <small>{errors.name}</small>
-              </S.Message>
-            )}
-          </S.ContainerMessage>
         </S.InputContainer>
+        <S.ContainerMessage>
+          {errors.name && (
+            <S.Message color={theme.colors.red[100]}>
+              <small>{errors.name}</small>
+            </S.Message>
+          )}
+        </S.ContainerMessage>
         <S.InputContainer>
           <S.InputNewsletter
             placeholder="Digite aqui seu email"
@@ -123,14 +123,14 @@ const NewsletterForm = () => {
             value={values.email}
             onChange={handleChange}
           />
-          <S.ContainerMessage>
-            {errors.email && (
-              <S.Message color={theme.colors.red[100]}>
-                <small>{errors.email}</small>
-              </S.Message>
-            )}
-          </S.ContainerMessage>
         </S.InputContainer>
+        <S.ContainerMessage>
+          {errors.email && (
+            <S.Message color={theme.colors.red[100]}>
+              <small>{errors.email}</small>
+            </S.Message>
+          )}
+        </S.ContainerMessage>
         <S.CheckboxContainer>
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
@@ -142,15 +142,13 @@ const NewsletterForm = () => {
             />
             <S.LabelCheckBox>Concordo em receber comunicações</S.LabelCheckBox>
           </S.CheckboxCol>
-
           <S.ContainerMessage>
-            {errors.notification && (
+            {errors.isNotifications && (
               <S.Message color={theme.colors.red[100]}>
-                <small>{errors.isNotification}</small>
+                <small>{errors.isNotifications}</small>
               </S.Message>
             )}
           </S.ContainerMessage>
-
           <S.CheckboxCol>
             <S.CheckBoxNewsLetter
               checked={checkedPolicy}
@@ -166,15 +164,15 @@ const NewsletterForm = () => {
               </Link>
             </S.LabelCheckBox>
           </S.CheckboxCol>
-
-          <S.ContainerMessage>
-            {errors.isPolicy && (
-              <S.Message color={theme.colors.red[100]}>
-                <small>{errors.isPolicy}</small>
-              </S.Message>
-            )}
-          </S.ContainerMessage>
         </S.CheckboxContainer>
+
+        <S.ContainerMessage>
+          {errors.isPolicy && (
+            <S.Message color={theme.colors.red[100]}>
+              <small>{errors.isPolicy}</small>
+            </S.Message>
+          )}
+        </S.ContainerMessage>
         <S.ButtonContainer>
           <Button type="default" text="Descobrir" size="default" />
         </S.ButtonContainer>

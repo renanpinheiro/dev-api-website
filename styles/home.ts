@@ -108,6 +108,7 @@ export const CarrouselTitle = styled.h2`
   @media (max-width: 996px) {
     margin-top: 10px;
     font-size: 1.375rem;
+    text-align: left;
   }
 
   span {
