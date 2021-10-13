@@ -1,3 +1,3 @@
 export const removePhoneMask = (phone: string) => {
-  return phone.replace(/[\(\)\ \s-]/g, '')
+  return phone.replace(/\D/g, '')
 }
