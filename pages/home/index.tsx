@@ -18,6 +18,8 @@ import { quotes } from '../../constants/quotes'
 
 import * as S from '../../styles/home'
 
+import Link from 'next/link'
+
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
   {

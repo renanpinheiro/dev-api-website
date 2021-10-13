@@ -10,24 +10,44 @@ export const InputText = ({
   isRequired,
   placeholder,
   mask,
+  type,
 }: IInputTextProps) => {
   const [field, meta] = useField(name)
-  return (
-    <S.Container>
-      <S.Label isRequired={isRequired}>{label}</S.Label>
-      {mask ? (
-        <InputMask
-          mask={mask}
+
+  if (type === 'textarea') {
+    return (
+      <S.Container>
+        <S.Textarea
+          rows={5}
           hasError={!!meta.error}
           {...field}
           placeholder={placeholder}
-        >
-          {inputProps => <S.Input {...inputProps} />}
-        </InputMask>
-      ) : (
-        <S.Input hasError={!!meta.error} {...field} placeholder={placeholder} />
-      )}
-      <S.ErrorMessage>{meta.touched && meta.error}</S.ErrorMessage>
-    </S.Container>
-  )
+        />
+        <S.ErrorMessage>{meta.touched && meta.error}</S.ErrorMessage>
+      </S.Container>
+    )
+  } else {
+    return (
+      <S.Container>
+        <S.Label isRequired={isRequired}>{label}</S.Label>
+        {mask ? (
+          <InputMask
+            mask={mask}
+            hasError={!!meta.error}
+            {...field}
+            placeholder={placeholder}
+          >
+            {inputProps => <S.Input {...inputProps} />}
+          </InputMask>
+        ) : (
+          <S.Input
+            hasError={!!meta.error}
+            {...field}
+            placeholder={placeholder}
+          />
+        )}
+        <S.ErrorMessage>{meta.touched && meta.error}</S.ErrorMessage>
+      </S.Container>
+    )
+  }
 }

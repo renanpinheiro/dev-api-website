@@ -9,7 +9,7 @@ export const cardPlanItems = [
     subText: 'Sob consulta',
     buttonText: 'Fale conosco',
 
-    url: '/free-trial',
+    url: '/converse-com-especialista',
   },
   {
     imageUrl: '/icons/startup.svg',
@@ -19,7 +19,7 @@ export const cardPlanItems = [
     subText: 'Sob consulta',
     buttonText: 'Fale conosco',
 
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
   },
   {
     imageUrl: '/icons/devapi.svg',
@@ -29,7 +29,7 @@ export const cardPlanItems = [
     subText: 'Sob consulta',
     buttonText: 'Fale conosco',
 
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
   },
   {
     imageUrl: '/icons/business.svg',
@@ -39,6 +39,6 @@ export const cardPlanItems = [
     subText: 'R$ 1.399/mês',
     buttonText: 'Fale conosco',
 
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
   },
 ]
