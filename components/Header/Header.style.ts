@@ -38,7 +38,7 @@ export const LogoContainer = styled.div`
   align-items: center;
   width: 10vw;
   height: 100%;
-  @media (max-width: 450) {
+  @media (max-width: 450px) {
     padding-top: 2vh;
   }
 `

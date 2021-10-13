@@ -86,7 +86,7 @@ const NewsletterForm = () => {
       }, 2000)
     },
   })
-  console.log(errors.name)
+
   return (
     <S.ContainerForm>
       <S.ContainerMessage>
