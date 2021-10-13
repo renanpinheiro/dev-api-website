@@ -3,9 +3,14 @@ import { ConnectorsCard } from '../components/ConnectorsCard'
 import * as S from '../styles/solutions'
 
 export interface ISolutionPage {
-  metaTitle: string
-  title: ReactNode
-  subTitle: ReactNode
+  seo: {
+    metaTitle: string
+  }
+  title: {
+    text: string
+    width?: string
+  }
+  subtitle: string
   contentTitle: ReactNode
   contentText: ReactNode
   component: ReactNode
@@ -13,22 +18,17 @@ export interface ISolutionPage {
 
 export const solutionsPage = {
   gestao: {
-    metaTitle: 'Soluções em Gestão | DevApi',
-    title: (
-      <h1>
-        <span>Cada empresa enfrenta diferentes </span>
-        desafios de gestão. Supere os seus!
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Sistemas ERP desempenham um papel central na gestão. Integre seu ERP aos
-        demais sistemas e fontes de dados que a empresa utiliza.
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções em Gestão | DevApi',
+    },
+    title: {
+      text: 'Cada empresa enfrenta diferentes <b>desafios de gestão. Supere os seus!</b>',
+    },
+    subtitle:
+      'Sistemas ERP desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
     contentTitle: (
       <h2>
-        Visão centralizada <span>do seu negócio!</span>
+        Visão centralizada <b>do seu negócio!</b>
       </h2>
     ),
     contentText: (
@@ -78,22 +78,19 @@ export const solutionsPage = {
     ),
   },
   marketing: {
-    metaTitle: 'Soluções em Marketing | DevApi',
-    title: (
-      <h1>
-        <span>Marketing integrado impulsionando </span>a sua empresa no mercado
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        A nova era do marketing integrado espera por você. Elimine tarefas
-        manuais, acelere a conversão em vendas e encante os seus clientes!
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções em Marketing | DevApi',
+    },
+    title: {
+      text: '<b>Marketing integrado impulsionando</b> a sua empresa no mercado',
+      width: '60%',
+    },
+    subtitle:
+      'A nova era do marketing integrado espera por você. Elimine tarefas manuais, acelere a conversão em vendas e encante os seus clientes!',
     contentTitle: (
       <h2>
-        Crie uma estrutura Omnichannel com
-        <span>estratégias de marketing integrado</span>
+        Crie uma estrutura Omnichannel com{' '}
+        <b>estratégias de marketing integrado</b>
       </h2>
     ),
     contentText: (
@@ -145,22 +142,17 @@ export const solutionsPage = {
     ),
   },
   comercial: {
-    metaTitle: 'Soluções comerciais | DevApi',
-    title: (
-      <h1>
-        <span>Impulsione as vendas da sua empresa </span>
-        integrando os sistemas
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Automatize a operação comercial e aumente o tempo da equipe para se
-        dedicar ao que realmente importa: suas vendas!
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções comerciais | DevApi',
+    },
+    title: {
+      text: '<b>Impulsione as vendas da sua empresa </b> integrando os sistemas',
+    },
+    subtitle:
+      'Automatize a operação comercial e aumente o tempo da equipe para se dedicar ao que realmente importa: suas vendas!',
     contentTitle: (
       <h2>
-        Processo comercial com <span>agilidade e inteligência</span>
+        Processo comercial com <b>agilidade e inteligência</b>
       </h2>
     ),
     contentText: (
@@ -176,7 +168,7 @@ export const solutionsPage = {
         Foco nas vendas: elimine o trabalho manual! Integre todos os sistemas e
         automatize os dados do seu processo comercial. Acabe com as planilhas de
         copiar e colar, dados perdidos no CRM, follows não realizados,
-        relatórios trabalhosos e pouco confiáveis.Transforme seu time comercial
+        relatórios trabalhosos e pouco confiáveis. Transforme seu time comercial
         em uma verdadeira máquina de vendas!
         <br />
         <br />
@@ -205,23 +197,18 @@ export const solutionsPage = {
     ),
   },
   rh: {
-    metaTitle: 'Soluções em RH | DevApi',
-    title: (
-      <h1>
-        <span>RH 4.0: Sua empresa está preparada para os </span>
-        novos desafios na gestão de pessoas?
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Employer Branding, People Analytics, Gestão de Dados e Business
-        Intelligence junto com a agilidade nos processos internos do
-        Departamento Pessoal.
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções em RH | DevApi',
+    },
+    title: {
+      text: 'RH 4.0: Sua empresa está preparada para os <b>novos desafios na gestão de pessoas?</b>',
+      width: '65%',
+    },
+    subtitle:
+      'Employer Branding, People Analytics, Gestão de Dados e Business Intelligence junto com a agilidade nos processos internos do Departamento Pessoal.',
     contentTitle: (
       <h2>
-        Recursos Humanos mais <span>estratégico e eficiente</span>
+        Recursos Humanos mais <b>estratégico e eficiente</b>
       </h2>
     ),
     contentText: (
@@ -265,23 +252,17 @@ export const solutionsPage = {
     ),
   },
   'e-commerce': {
-    metaTitle: 'Soluções em e-Commerce | DevApi',
-    title: (
-      <h1>
-        <span>Venda 24h por dia, 7 dias por semana </span>
-        com seu e-Commerce automatizado
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Integre seu e-Commerce aos Marketplaces e às suas ferramentas de
-        marketing, CRM e atendimento, ERP, financeiro, logística e muito mais!
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções em e-commerce | DevApi',
+    },
+    title: {
+      text: '<b>Venda 24h por dia, 7 dias por semana</b> com seu e-commerce automatizado',
+    },
+    subtitle:
+      'Integre seu e-commerce aos Marketplaces e às suas ferramentas de marketing, CRM e atendimento, ERP, financeiro, logística e muito mais!',
     contentTitle: (
       <h2>
-        Automatizar e escalar.
-        <span>Ou desaparecer!</span>
+        Automatizar e escalar. <b>Ou desaparecer!</b>
       </h2>
     ),
     contentText: (
@@ -337,23 +318,18 @@ export const solutionsPage = {
     ),
   },
   'empresas-360': {
-    metaTitle: 'Soluções para Empresas | DevApi',
-    title: (
-      <h1>
-        <span>A qualquer momento, em qualquer lugar: </span>
-        tudo integrado!
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Uma empresa 360° representa uma organização que possui integração total
-        entre sistemas, dados, processos, projetos e pessoas.
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções para Empresas | DevApi',
+    },
+    title: {
+      text: 'A qualquer momento, em qualquer lugar: <b>tudo integrado!</b>',
+      width: '55%',
+    },
+    subtitle:
+      'Uma empresa 360° representa uma organização que possui integração total entre sistemas, dados, processos, projetos e pessoas.',
     contentTitle: (
       <h2>
-        Defina o cenário ideal
-        <span> para a sua empresa!</span>
+        Defina o cenário ideal <b>para a sua empresa!</b>
       </h2>
     ),
     contentText: (
@@ -376,23 +352,17 @@ export const solutionsPage = {
     ),
   },
   financeiro: {
-    metaTitle: 'Soluções Financeiras | DevApi',
-    title: (
-      <h1>
-        <span>Gestão financeira de alta performance </span>
-        para sua empresa
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Integre soluções financeiras e APIs open banking, automatize a
-        contabilidade, relatórios e DREs de forma ágil e segura.
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções Financeiras | DevApi',
+    },
+    title: {
+      text: '<b>Gestão financeira de alta performance</b> para sua empresa',
+    },
+    subtitle:
+      'Integre soluções financeiras e APIs open banking, automatize a contabilidade, relatórios e DREs de forma ágil e segura.',
     contentTitle: (
       <h2>
-        O processo de digitalização da
-        <span> economia não para!</span>
+        O processo de digitalização da <b>economia não para!</b>
       </h2>
     ),
     contentText: (
@@ -442,23 +412,18 @@ export const solutionsPage = {
     ),
   },
   'seu-produto': {
-    metaTitle: 'Soluções para seu produto | DevApi',
-    title: (
-      <h1>
-        <span>Torne o seu produto </span>
-        líder de mercado
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Escale as integrações do seu produto, conecte-o aos sistemas do mercado
-        e não perca mais nenhuma venda!
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções para seu produto | DevApi',
+    },
+    title: {
+      text: 'Torne o seu produto <b>líder de mercado</b>',
+      width: '30%',
+    },
+    subtitle:
+      'Escale as integrações do seu produto, conecte-o aos sistemas do mercado e não perca mais nenhuma venda!',
     contentTitle: (
       <h2>
-        Conecte o seu produto
-        <span> com o mundo</span>
+        Conecte o seu produto <b>com o mundo</b>
       </h2>
     ),
     contentText: (
@@ -484,23 +449,17 @@ export const solutionsPage = {
     ),
   },
   logistica: {
-    metaTitle: 'Soluções em Logística | DevApi',
-    title: (
-      <h1>
-        <span>Logística 4.0: Sua empresa está preparada </span>
-        para essa transformação?
-      </h1>
-    ),
-    subTitle: (
-      <p>
-        Integre a operação de logística, supply e delivery ao ecossistema da sua
-        empresa e de seus clientes e parceiros.
-      </p>
-    ),
+    seo: {
+      metaTitle: 'Soluções em Logística | DevApi',
+    },
+    title: {
+      text: 'Logística 4.0: Sua empresa está preparada <b>para essa transformação?</b>',
+    },
+    subtitle:
+      'Integre a operação de logística, supply e delivery ao ecossistema da sua empresa e de seus clientes e parceiros.',
     contentTitle: (
       <h2>
-        Logística integrada,
-        <span> visão 360 graus</span>
+        Logística integrada, <b> visão 360 graus</b>
       </h2>
     ),
     contentText: (

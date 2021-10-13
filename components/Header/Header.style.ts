@@ -36,7 +36,6 @@ export const Container = styled.div<IContainerStyles>`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-
   width: 10vw;
   height: 100%;
 `
@@ -55,7 +54,7 @@ export const ButtonContainer = styled.div`
 
 export const Logo = styled.img`
   height: 100%;
-
+  width: 100px;
   padding: 2vh 0 2vh 0;
   cursor: pointer;
 `

@@ -44,7 +44,7 @@ const Solutions = () => {
   return (
     <>
       <Head>
-        <title>{page ? page.metaTitle : 'Soluções | Devapi'}</title>
+        <title>{page ? page.seo.metaTitle : 'Soluções | Devapi'}</title>
       </Head>
 
       <S.Container>
@@ -52,8 +52,15 @@ const Solutions = () => {
           <Circle>
             <S.HeroContent>
               <S.Pipe />
-              {page ? page.title : <h1></h1>}
-              {page ? page.subTitle : <p></p>}
+
+              {page && (
+                <S.Title
+                  width={page.title.width}
+                  dangerouslySetInnerHTML={{ __html: `${page.title.text}` }}
+                />
+              )}
+              {page && <S.Subtitle>{page.subtitle}</S.Subtitle>}
+
               <ButtonLink
                 text="Fale com um consultor"
                 href="/free-trial"
@@ -64,20 +71,22 @@ const Solutions = () => {
             </S.HeroContent>
           </Circle>
         </Hero>
+
         <S.Content>
           <S.SolutionContainer>
             <S.TextContainer>
               <S.TitleContainer>
                 <S.Pipe />
-                {page ? page.contentTitle : <></>}
+                {page && page.contentTitle}
               </S.TitleContainer>
+
               <S.ParagraphContainer>
-                {page ? page.contentText : <></>}
+                {page && page.contentText}
               </S.ParagraphContainer>
             </S.TextContainer>
 
             <S.IntegrationContainer>
-              {page ? page.component : <></>}
+              {page && page.component}
             </S.IntegrationContainer>
 
             <ButtonLink

@@ -1,14 +1,18 @@
 import React from 'react'
 
-import { Button } from '../Button'
+import { ButtonLink } from '../ButtonLink'
+
+import { MiddleText } from './MiddleText'
+
+import { ICardPlanItems } from './CardPlans.interface'
 
 import * as S from './CardPlan.style'
-import { ICardPlanItems } from './CardPlans.interface'
-import { MiddleText } from './MiddleText'
+
 const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
   const handleURL = (url: string) => {
     location.href = url
   }
+
   return (
     <S.CardsContainer>
       {cards.map((item, index) => {
@@ -25,11 +29,13 @@ const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
                 <MiddleText text={item.middleText} />
                 <S.SubText>{item.subText}</S.SubText>
               </S.TextContainer>
-              <Button
-                onClick={() => handleURL(item.url)}
-                text={item.buttonText}
+
+              <ButtonLink
+                text="Fale conosco"
+                href="/free-trial"
+                target="_self"
                 type="default"
-                size="default"
+                size="large"
               />
             </S.ButtonContainer>
           </S.Cards>

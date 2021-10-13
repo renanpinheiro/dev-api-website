@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
           <S.HeroContent>
             <S.Pipe />
             <h1>
-              <span>Política de</span> privacidade
+              Política de <b>privacidade</b>
             </h1>
           </S.HeroContent>
         </Hero>

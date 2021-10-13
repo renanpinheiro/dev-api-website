@@ -54,7 +54,7 @@ const Home = () => {
         <S.HeroContent>
           <S.Pipe />
           <h1>
-            <span>Desbloqueamos o poder da </span>integração de sistemas
+            Desbloqueamos o poder da <b>integração de sistemas</b>
           </h1>
           <p>
             Sem limites: uma única plataforma para integrar sistemas,

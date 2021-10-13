@@ -62,7 +62,8 @@ export const Container = styled.div<IButtonStyle>`
     ${props => typeVariation[props.type]}
 
     &:disabled {
-      background-color: ${theme.colors.gray[600]};
+      background-color: ${theme.colors.green[100]};
+
       &:hover {
         cursor: not-allowed;
       }

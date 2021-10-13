@@ -26,12 +26,19 @@ export const HeroContent = styled.div`
     background-size: 100%;
   }
 
-  h1 {
-    margin-bottom: 15px;
-    font-size: 5vh;
+  > h1 {
+    font-size: 2.625rem;
 
-    span {
-      font-weight: 400;
+    @media (max-width: 576px) {
+      font-size: 2.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.75rem;
+    }
+
+    > b {
+      font-weight: 700;
     }
   }
 `
