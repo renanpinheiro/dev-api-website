@@ -11,5 +11,4 @@ const Subscribe = () => {
     </S.Container>
   )
 }
-
 export default Subscribe
