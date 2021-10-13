@@ -22,12 +22,19 @@ export const HeroContainer = styled.section`
     background-size: 100%;
   }
 
-  h1 {
-    margin-bottom: 15px;
-    font-size: 5vh;
+  > h1 {
+    font-size: 2.625rem;
 
-    span {
-      font-weight: 400;
+    @media (max-width: 576px) {
+      font-size: 2.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.75rem;
+    }
+
+    > b {
+      font-weight: 700;
     }
   }
 `
@@ -75,7 +82,7 @@ export const Wrapper = styled.div`
 `
 
 export const Title = styled.div`
-  margin: 3vw 0 1vh;
+  margin: 6vw 0 1vh;
 
   > hr {
     width: 5.8vw;
@@ -148,12 +155,13 @@ export const Card = styled.div`
     border-top-right-radius: 8px;
   }
 
-  > b {
+  > a {
     margin: 1vw 0 0.5vw;
     font-size: 1.75rem;
     font-weight: 700;
     color: ${theme.colors.primary};
     text-align: center;
+    text-decoration: none;
 
     @media (max-width: 768px) {
       margin: 5vw 0 0.5vw;

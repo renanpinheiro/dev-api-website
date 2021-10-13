@@ -7,7 +7,7 @@ export const plataformDetails = [
   {
     urlImage: '/icons/integrations-data.svg',
     text: 'Transação de dados',
-    detail: '+15 Milhões',
+    detail: '+21 Milhões',
   },
   {
     urlImage: '/icons/lightning.svg',

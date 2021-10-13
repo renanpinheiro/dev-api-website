@@ -40,19 +40,24 @@ export const Connector = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width: 5vw;
-  margin: 5px;
+  margin: 10px;
 
-  img {
-    width: 100%;
+  > img {
+    width: 6vw;
+    height: 6vw;
     border-radius: 10px;
     box-shadow: 0px 10px 25px #5f47ff29;
+
+    @media (max-width: 996px) {
+      width: 20vw;
+      height: 20vw;
+    }
   }
 
   span {
-    margin-top: 5px;
-    font-size: 1.3vh;
+    margin-top: 10px;
+    font-size: 1rem;
   }
 
   @media (max-width: 996px) {
@@ -61,12 +66,10 @@ export const Connector = styled.div`
 `
 
 export const Plus = styled.span`
-  margin: 10px;
+  margin: 10px 0;
   margin-bottom: 4vh;
-
-  font-size: 1.5vh;
+  font-size: 1.5rem;
   font-weight: 600;
-
   color: ${theme.colors.secondary};
 
   @media (max-width: 996px) {
@@ -74,7 +77,8 @@ export const Plus = styled.span`
   }
 `
 
-export const TextContainer = styled.div`
+export const Text = styled.div`
   max-width: 40ch;
   text-align: center;
+  display: flex;
 `

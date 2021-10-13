@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { VscChromeClose } from 'react-icons/vsc'
-
-import { useRouter } from 'next/router'
+import { BiPlus } from 'react-icons/bi'
 
 import Link from '../Link'
 import SocialVertical from './Social'
-import * as S from './Menu.styles'
+
 import { IHeaderMenuProps } from '../Header.interface'
 
-import { BiPlus } from 'react-icons/bi'
+import * as S from './Menu.styles'
 import { theme } from '../../../styles/theme'
 
 const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
@@ -33,13 +32,6 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
 
           <S.Nav>
             <ul>
-              <li>
-                <Link href="/" activeClassName="activeLink">
-                  <a title="Home" onClick={close}>
-                    Home
-                  </a>
-                </Link>
-              </li>
               {navLinks.map((link, index) => {
                 return (
                   <React.Fragment key={index}>

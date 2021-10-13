@@ -1,16 +1,21 @@
+import React from 'react'
+
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+
 import { Circle } from '../../components/AnimatedBackground'
-import { Button } from '../../components/Button'
+import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
+
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+
 import { constumersMobile, costumers } from '../../constants/costumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+
 import * as S from '../../styles/solutions'
 import Link from 'next/link'
 
@@ -40,7 +45,7 @@ const Solutions = () => {
   return (
     <>
       <Head>
-        <title>{page ? page.metaTitle : 'Soluções | Devapi'}</title>
+        <title>{page ? page.seo.metaTitle : 'Soluções | Devapi'}</title>
       </Head>
 
       <S.Container>
@@ -48,41 +53,50 @@ const Solutions = () => {
           <Circle>
             <S.HeroContent>
               <S.Pipe />
-              {page ? page.title : <h1></h1>}
-              {page ? page.subTitle : <p></p>}
-              <Link href={'/converse-com-especialista'}>
-                <Button
-                  size="default"
-                  text="Fale com um consultor"
-                  type="default"
+
+              {page && (
+                <S.Title
+                  width={page.title.width}
+                  dangerouslySetInnerHTML={{ __html: `${page.title.text}` }}
                 />
-              </Link>
+              )}
+              {page && <S.Subtitle>{page.subtitle}</S.Subtitle>}
+
+              <ButtonLink
+                text="Fale com um consultor"
+                href="/free-trial"
+                target="_self"
+                size="default"
+                type="default"
+              />
             </S.HeroContent>
           </Circle>
         </Hero>
+
         <S.Content>
           <S.SolutionContainer>
             <S.TextContainer>
               <S.TitleContainer>
                 <S.Pipe />
-                {page ? page.contentTitle : <></>}
+                {page && page.contentTitle}
               </S.TitleContainer>
+
               <S.ParagraphContainer>
-                {page ? page.contentText : <></>}
+                {page && page.contentText}
               </S.ParagraphContainer>
             </S.TextContainer>
 
             <S.IntegrationContainer>
-              {page ? page.component : <></>}
+              {page && page.component}
             </S.IntegrationContainer>
 
-            <Link href={'/converse-com-especialista'}>
-              <Button
-                size="default"
-                text="Quero integrar agora!"
-                type="default"
-              />
-            </Link>
+            <ButtonLink
+              text="Quero integrar agora!"
+              href="/converse-com-especialista"
+              target="_self"
+              size="default"
+              type="default"
+            />
           </S.SolutionContainer>
 
           <S.QuoteContainer>
@@ -99,7 +113,7 @@ const Solutions = () => {
                 items={constumersMobile}
                 title={
                   <S.CarrouselTitle>
-                    Empresas que ja desbloquearam o{' '}
+                    Empresas que já desbloquearam o{' '}
                     <span>poder da integração de sistemas</span>
                   </S.CarrouselTitle>
                 }
@@ -110,7 +124,7 @@ const Solutions = () => {
                 items={costumers}
                 title={
                   <S.CarrouselTitle>
-                    Empresas que ja desbloquearam o{' '}
+                    Empresas que já desbloquearam o{' '}
                     <span>poder da integração de sistemas</span>
                   </S.CarrouselTitle>
                 }

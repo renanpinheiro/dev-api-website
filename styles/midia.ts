@@ -15,31 +15,39 @@ export const HeroContainer = styled.div`
   background-position: bottom;
   background-size: contain;
 
-  h1 {
-    margin-bottom: 15px;
-    font-size: 5vh;
-
-    span {
-      font-weight: 400;
-    }
-  }
-
-  p {
-    max-width: 90ch;
-
-    margin-bottom: 15px;
-
-    overflow: hidden;
-    font-size: 2vh;
-
-    line-height: 1.7;
-  }
-
   @media (max-width: 576px) {
     align-items: flex-start;
     padding: 25px;
     text-align: left;
     background-size: 100%;
+  }
+
+  > h1 {
+    font-size: 2.625rem;
+
+    @media (max-width: 576px) {
+      font-size: 2.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.75rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+
+  > p {
+    width: 42%;
+    margin: 3vh 0;
+    font-size: 1.375rem;
+    line-height: 3vh;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 1.25rem;
+    }
   }
 `
 

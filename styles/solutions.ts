@@ -1,61 +1,37 @@
 import styled from 'styled-components'
 import { theme } from './theme'
 
+interface ITitleProps {
+  width?: string
+}
+
 export const Container = styled.div`
   z-index: 1;
+  width: 100%;
 `
 
 export const HeroContent = styled.div`
   z-index: 2;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   width: 100%;
   height: 100%;
-
   padding: 0 8vw 0 8vw;
-
   text-align: left;
-
-  h1 {
-    z-index: 4;
-    max-width: 20ch;
-    margin-bottom: 15px;
-    font-size: 5vh;
-
-    span {
-      font-weight: 400;
-    }
-  }
-
-  p {
-    z-index: 4;
-    max-width: 65ch;
-    margin-bottom: 15px;
-
-    overflow: hidden;
-    font-size: 2vh;
-
-    line-height: 1.7;
-  }
 
   @media (max-width: 576px) {
     align-items: flex-start;
-    justify-content: flex-end;
-    padding: 25px;
     text-align: left;
     background-size: 100%;
   }
 `
 
 export const Pipe = styled.div`
-  width: 10vh;
+  width: 15vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -63,14 +39,49 @@ export const Pipe = styled.div`
   }
 `
 
+export const Title = styled.h1<ITitleProps>`
+  z-index: 4;
+  width: ${props => (props.width ? props.width : '62%')};
+  font-size: 2.625rem;
+
+  @media (max-width: 996px) {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  @media (min-width: 1600px) {
+    width: ${props => (props.width ? props.width : '62%')};
+    font-size: 3.75rem;
+    line-height: 7vh;
+  }
+
+  > b {
+    font-weight: 700;
+  }
+`
+
+export const Subtitle = styled.p`
+  z-index: 4;
+  width: 60%;
+  margin: 3vh 0;
+  font-size: 1.375rem;
+  line-height: 3vh;
+
+  @media (max-width: 996px) {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 43%;
+  }
+`
+
 export const Content = styled.div`
   position: relative;
   z-index: 7;
-
   width: 100%;
-
   margin-top: 30px;
-
   background-color: white;
 `
 
@@ -92,9 +103,7 @@ export const TextContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-
   width: 100%;
-
   padding: 10vh 8vw 10vh 8vw;
 
   @media (max-width: 996px) {
@@ -108,38 +117,43 @@ export const TitleContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  h2 {
-    max-width: 25ch;
-
+  > h2 {
+    width: 61%;
     margin-bottom: 15px;
-    font-size: 5vh;
+    font-size: 2.625rem;
+    line-height: 1.2;
 
-    span {
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.25rem;
+    }
+
+    > b {
       font-weight: 700;
-    }
-
-    @media (max-width: 1600px) {
-      font-size: 2.5vw;
-    }
-
-    @media (max-width: 1200px) {
-      font-size: 4vh;
     }
   }
 `
 
 export const ParagraphContainer = styled.div`
-  width: 40vw;
-
-  p {
-    overflow: hidden;
-    font-size: 2vh;
-
-    line-height: 1.7;
-  }
+  width: 50%;
 
   @media (max-width: 996px) {
     width: 100%;
+  }
+
+  > p {
+    overflow: hidden;
+    font-size: 1.375rem;
+    line-height: 1.5;
+
+    @media (max-width: 996px) {
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
   }
 `
 
@@ -177,8 +191,8 @@ export const IntegrationContainer = styled.div`
 `
 
 export const ImageContainer = styled.div`
-  img {
-    width: 30vw;
+  > img {
+    width: 32vw;
 
     @media (max-width: 996px) {
       width: 100%;

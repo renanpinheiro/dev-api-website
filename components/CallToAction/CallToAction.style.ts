@@ -64,11 +64,15 @@ export const Title = styled.div`
   }
 
   > h3 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     color: ${theme.colors.primary};
 
     @media (max-width: 1024px) {
       font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
     }
 
     > b {

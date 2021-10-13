@@ -1,11 +1,15 @@
-import Head from 'next/head'
 import React from 'react'
-import { Button } from '../../components/Button'
+
+import Head from 'next/head'
+
+import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
+
 import { integrations } from '../../constants/integrations'
-import * as S from '../../styles/characteristics'
 import { validateOddNumber } from '../../utils/validateOddNumber'
+
+import * as S from '../../styles/characteristics'
 
 const Characteristics = () => {
   return (
@@ -19,7 +23,7 @@ const Characteristics = () => {
           <S.HeroContent>
             <S.Pipe />
             <h1>
-              <span>Plataforma de integração</span> iPaaS & API Manager
+              Plataforma de integração <b>iPaaS & API Manager</b>
             </h1>
             <p>
               Uma plataforma construída para escalar sua empresa sem limites.
@@ -27,9 +31,11 @@ const Characteristics = () => {
               processos e orquestração de dados com a melhor usabilidade através
               de APIs robustas e seguras.
             </p>
-            <Button
-              size="default"
+            <ButtonLink
               text="Quero escalabilidade!"
+              href="/free-trial"
+              target="_self"
+              size="default"
               type="default"
             />
           </S.HeroContent>

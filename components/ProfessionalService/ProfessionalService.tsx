@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button } from '../Button'
-import Link from 'next/link'
+
+import { ButtonLink } from '../ButtonLink'
 
 import * as S from './ProfessionalService.style'
 
@@ -27,9 +27,13 @@ const ProfessionalService = () => {
             Uma equipe de alta performance ao serviço do sucesso da sua empresa!
           </p>
         </S.CheckContainer>
-        <Link href="/converse-com-especialista">
-          <Button size="default" text="Quero um orçamento!" type="default" />
-        </Link>
+        <ButtonLink
+          text="Quero um orçamento!"
+          href="/converse-com-especialista"
+          target="_self"
+          size="default"
+          type="default"
+        />
       </S.ProfessionalServiceText>
     </S.Container>
   )

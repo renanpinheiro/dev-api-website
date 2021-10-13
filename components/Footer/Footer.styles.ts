@@ -80,14 +80,14 @@ export const ResponsivePipe = styled.div`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 60px;
-  @media only screen and (max-width: 828px) {
-    height: 50px;
-  }
+
+  margin-bottom: 1vh;
 `
 
 export const Title = styled.div`
-  margin-left: 10px;
+  padding-top: 0.5vh;
+  padding-left: 1vw;
+
   font-size: 18px;
   line-height: 1;
   color: ${theme.colors.secondary};
@@ -96,30 +96,20 @@ export const Title = styled.div`
     font-style: italic;
     font-weight: 700;
   }
+  @media only screen and (max-width: 500px) {
+    padding-top: 0.5vh;
+  }
 `
 
 export const SubTitle = styled.div`
-  margin-left: 10px;
-  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1vw;
+  font-size: 2rem;
   font-weight: 700;
 
-  @media only screen and (max-width: 828px) {
-    padding-top: 10px;
-    font-size: 10px;
-  }
-  @media only screen and (max-width: 1024px) {
-    padding-top: 5px;
-    font-size: 16px;
-  }
-
-  @media only screen and (max-width: 1366px) {
-    padding-top: 10px;
-    font-size: 20px;
-  }
-
-  @media only screen and (max-width: 1517px) {
-    padding-top: 10px;
-    font-size: 28px;
+  @media (max-width: 1024px) {
+    font-size: 1.6rem;
   }
 `
 

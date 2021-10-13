@@ -17,7 +17,7 @@ const UseTerm = () => {
           <S.HeroContent>
             <S.Pipe />
             <h1>
-              <span>Termos de</span> uso
+              Termos de <b>uso</b>
             </h1>
           </S.HeroContent>
         </Hero>

@@ -1,23 +1,22 @@
 import React from 'react'
-import { Hero } from '../../components/Hero'
 
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 
+import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
 import QuoteCarousel from '../../components/QuoteCarousel'
 
+import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
 import { constumersMobile, costumers } from '../../constants/costumers'
+import { featuresCard } from '../../constants/featuresCard'
+import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
 
 import * as S from '../../styles/home'
-import { Button } from '../../components/Button'
-import { plataformDetails } from '../../constants/plataformDetails'
-import { businessCards } from '../../constants/businessCards'
-import { featuresCard } from '../../constants/featuresCard'
 
 import Link from 'next/link'
 
@@ -57,15 +56,20 @@ const Home = () => {
         <S.HeroContent>
           <S.Pipe />
           <h1>
-            <span>Desbloqueamos o poder da </span>integração de sistemas
+            Desbloqueamos o poder da <b>integração de sistemas</b>
           </h1>
           <p>
             Sem limites: uma única plataforma para integrar sistemas,
             automatizar processos, orquestrar dados e gerenciar APIs.
           </p>
-          <Link href={'/free-trial'}>
-            <Button size="default" text="Quero uma demo!" type="default" />
-          </Link>
+
+          <ButtonLink
+            text="Quero uma demo!"
+            href="/free-trial"
+            target="_self"
+            size="default"
+            type="default"
+          />
         </S.HeroContent>
         <S.GifContainer>
           <img src="/gifs/home.gif" alt="platform" />
@@ -79,7 +83,7 @@ const Home = () => {
               items={constumersMobile}
               title={
                 <S.CarrouselTitle>
-                  Empresas que ja desbloquearam o{' '}
+                  Empresas que já desbloquearam o{' '}
                   <span>poder da integração de sistemas</span>
                 </S.CarrouselTitle>
               }
@@ -90,7 +94,7 @@ const Home = () => {
               items={costumers}
               title={
                 <S.CarrouselTitle>
-                  Empresas que ja desbloquearam o{' '}
+                  Empresas que já desbloquearam o{' '}
                   <span>poder da integração de sistemas</span>
                 </S.CarrouselTitle>
               }
@@ -151,8 +155,17 @@ const Home = () => {
               return (
                 <S.Card key={index}>
                   <S.CardTitle>{item.title}</S.CardTitle>
+
                   <p>{item.text}</p>
-                  <Button size="default" text="Saiba mais" type="default" />
+
+                  <ButtonLink
+                    text="Saiba mais"
+                    href={item.link}
+                    target="_self"
+                    size="default"
+                    type="default"
+                  />
+
                   <S.ConnectorsContainer>
                     {item.connectors ? (
                       item.connectors.map((connector, index) => {
@@ -202,7 +215,7 @@ const Home = () => {
               title={
                 <S.CarrouselTitle>
                   Mais de 300 conectores pré-construídos{' '}
-                  <span>e prontos para uso.</span>
+                  <span>e prontos para uso</span>
                 </S.CarrouselTitle>
               }
             />
@@ -213,7 +226,7 @@ const Home = () => {
               title={
                 <S.CarrouselTitle>
                   Mais de 300 conectores pré-construídos{' '}
-                  <span>e prontos para uso.</span>
+                  <span>e prontos para uso</span>
                 </S.CarrouselTitle>
               }
             />
@@ -221,7 +234,13 @@ const Home = () => {
         </S.Carrousel>
 
         <S.ButtonContainer>
-          <Button size="default" text="Ver conectores" type="default" />
+          <ButtonLink
+            text="Ver conectores"
+            href="/conectores"
+            target="_self"
+            size="default"
+            type="default"
+          />
         </S.ButtonContainer>
 
         <S.Quote>
