@@ -53,3 +53,18 @@ export const ErrorMessage = styled.p`
   height: 10px;
   color: ${theme.colors.red[200]};
 `
+
+export const Textarea = styled.textarea<IInputStyles>`
+  width: 100%;
+  padding: 15px 0 0 15px;
+  font-size: 1.2rem;
+  border: 1px solid;
+  border-color: ${theme.colors.gray[400]};
+  border-radius: 5px;
+
+  ${({ hasError }) =>
+    hasError &&
+    css`
+      border-color: ${theme.colors.red};
+    `};
+`

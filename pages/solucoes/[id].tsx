@@ -17,6 +17,7 @@ import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 
 import * as S from '../../styles/solutions'
+import Link from 'next/link'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -91,7 +92,7 @@ const Solutions = () => {
 
             <ButtonLink
               text="Quero integrar agora!"
-              href="/free-trial"
+              href="/converse-com-especialista"
               target="_self"
               size="default"
               type="default"
