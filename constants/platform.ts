@@ -17,6 +17,6 @@ export const platform = [
   },
   {
     name: 'Parceiro de integração',
-    url: '/parceiro-de-integração',
+    url: '/parceiro-de-integracao',
   },
 ]
