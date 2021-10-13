@@ -67,7 +67,7 @@ export const ProfessionalServiceText = styled.div`
 
   > p {
     width: 100%;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     line-height: 1.3;
 
     @media (max-width: 996px) {
@@ -76,6 +76,7 @@ export const ProfessionalServiceText = styled.div`
     }
 
     @media (min-width: 1600px) {
+      font-size: 1.375rem;
       width: 96%;
     }
   }
@@ -109,12 +110,16 @@ export const CheckContainer = styled.div`
   }
 
   > p {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     line-height: 1.3;
 
     @media (max-width: 996px) {
       font-size: 1.25rem;
       line-height: 1.1;
+    }
+
+    @media (max-width: 1600px) {
+      font-size: 1.375rem;
     }
   }
 `

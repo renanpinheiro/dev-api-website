@@ -48,7 +48,7 @@ export const HeroContent = styled.div`
   > p {
     width: 70%;
     margin: 3vh 0;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
@@ -132,7 +132,7 @@ export const TextContainer = styled.div`
 
   > h2 {
     width: 100%;
-    font-size: 2.625rem;
+    font-size: 2.375rem;
     line-height: 1;
 
     @media (max-width: 996px) {
@@ -152,7 +152,7 @@ export const TextContainer = styled.div`
   > p {
     width: 100%;
     margin-top: 3vh;
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     line-height: 1.3;
 
     @media (max-width: 996px) {
@@ -162,6 +162,7 @@ export const TextContainer = styled.div`
 
     @media (min-width: 1600px) {
       width: 96%;
+      font-size: 1.375rem;
     }
   }
 `

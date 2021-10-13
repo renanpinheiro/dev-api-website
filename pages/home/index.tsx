@@ -82,7 +82,7 @@ const Home = () => {
               title={
                 <S.CarrouselTitle>
                   Empresas que já desbloquearam o{' '}
-                  <span>poder da integração de sistemas</span>
+                  <b>poder da integração de sistemas</b>
                 </S.CarrouselTitle>
               }
             />
@@ -93,7 +93,7 @@ const Home = () => {
               title={
                 <S.CarrouselTitle>
                   Empresas que já desbloquearam o{' '}
-                  <span>poder da integração de sistemas</span>
+                  <b>poder da integração de sistemas</b>
                 </S.CarrouselTitle>
               }
             />
@@ -116,6 +116,7 @@ const Home = () => {
               limites!
             </p>
           </S.Platform>
+
           <S.PlatformDetails>
             {plataformDetails.map((item, index) => {
               return (
@@ -148,11 +149,12 @@ const Home = () => {
             pareciam impossíveis e libere a equipe para focar na proposta de
             valor central da sua empresa.
           </p>
+
           <S.CardContainer>
             {businessCards.map((item, index) => {
               return (
                 <S.Card key={index}>
-                  <S.CardTitle>{item.title}</S.CardTitle>
+                  <h3>{item.title}</h3>
 
                   <p>{item.text}</p>
 
@@ -181,14 +183,12 @@ const Home = () => {
 
         <S.FeaturesContainer>
           <S.Pipe />
-          <h2>
-            Poderosa, mas
-            <span> simples e intuitiva</span>
-          </h2>
+          <h2>Poderosa, mas simples e intuitiva</h2>
           <p>
             Os líderes de negócio se surpreendem. Os líderes técnicos confiam.
             Os desenvolvedores agradecem.
           </p>
+
           <S.Features>
             {featuresCard.map((item, index) => {
               return (
@@ -213,7 +213,7 @@ const Home = () => {
               title={
                 <S.CarrouselTitle>
                   Mais de 300 conectores pré-construídos{' '}
-                  <span>e prontos para uso</span>
+                  <b>e prontos para uso</b>
                 </S.CarrouselTitle>
               }
             />
@@ -223,8 +223,8 @@ const Home = () => {
               items={connectors}
               title={
                 <S.CarrouselTitle>
-                  Mais de 300 conectores pré-construídos{' '}
-                  <span>e prontos para uso</span>
+                  <b> Mais de 300 conectores</b> pré-construídos e prontos para
+                  uso
                 </S.CarrouselTitle>
               }
             />
