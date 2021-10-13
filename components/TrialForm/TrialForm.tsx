@@ -19,6 +19,7 @@ import * as Yup from 'yup'
 import { roleOptions } from '../../constants/roleOptions'
 import * as S from './TrialForm.style'
 import { IFormStepperProps, ITrialFormProps } from './TrialForm.interface'
+import { removePhoneMask } from '../../utils/removePhoneMask'
 
 const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
   const leadsApi = axios.create({
@@ -46,7 +47,7 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
         conversion_identifier: conversionIdentifier,
         full_name: values.fullName,
         email: values.email,
-        phone: values.phone,
+        phone: removePhoneMask(values.phone),
         company: values.company,
         role: values.role,
         departaments: values.departaments,
@@ -276,29 +277,6 @@ const LastForm = ({}: Pick<
   )
 }
 
-const FreeTrial = () => {
-  const validationSchemas = {
-    step1: Yup.object().shape({
-      fullName: Yup.string().required('Campo obrigatório.'),
-      email: Yup.string()
-        .email('Este campo deve ser um email válido.')
-        .required('Campo obrigatório'),
-      phone: Yup.string().required('Campo obrigatório.'),
-      company: Yup.string().required('Campo obrigatório.'),
-      role: Yup.string().required('Campo obrigatŕoio.'),
-    }),
-    step2: Yup.object().shape({
-      departaments: Yup.array().min(
-        1,
-        'É necessário selecionar ao menos uma opção.',
-      ),
-    }),
-    step3: Yup.object().shape({
-      employees: Yup.string().required('É necessário selecionar uma opção.'),
-    }),
-  }
-}
-
 const TrialForm = ({ conversionIdentifier }: ITrialFormProps) => {
   const validationSchemas = {
     step1: Yup.object().shape({
@@ -311,10 +289,7 @@ const TrialForm = ({ conversionIdentifier }: ITrialFormProps) => {
       role: Yup.string().required('Campo obrigatŕoio.'),
     }),
     step2: Yup.object().shape({
-      departaments: Yup.array().min(
-        1,
-        'É necessário selecionar ao menos uma opção.',
-      ),
+      departaments: Yup.string().required('É necessário selecionar uma opção.'),
     }),
     step3: Yup.object().shape({
       employees: Yup.string().required('É necessário selecionar uma opção.'),

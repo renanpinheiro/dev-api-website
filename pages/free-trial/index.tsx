@@ -6,7 +6,7 @@ const FreeTrial = () => {
   return (
     <S.Container>
       <S.FormContainer>
-        <TrialForm conversionIdentifier={'/free-trial'} />
+        <TrialForm conversionIdentifier={'free-trial'} />
       </S.FormContainer>
     </S.Container>
   )

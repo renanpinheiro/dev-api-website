@@ -17,7 +17,7 @@ export const roleOptions = [
   },
   {
     label: 'Analista / auxiliar',
-    value: 'Analista / auxiliar',
+    value: 'Analista/ auxiliar',
   },
   {
     label: 'Outros',

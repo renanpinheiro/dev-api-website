@@ -6,7 +6,7 @@ const Subscribe = () => {
   return (
     <S.Container>
       <S.FormContainer>
-        <TrialForm conversionIdentifier={'/converse-com-especialista'} />
+        <TrialForm conversionIdentifier={'converse-com-especialista'} />
       </S.FormContainer>
     </S.Container>
   )

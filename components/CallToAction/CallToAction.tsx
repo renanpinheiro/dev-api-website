@@ -14,7 +14,7 @@ const CallToAction = () => {
             Quer testar a DevApi <b>gratuitamente?</b>
           </h3>
         </S.Title>
-        <Link href="/free-trial">
+        <Link href="/converse-com-especialista">
           <a title="Converse com um especialista">
             Converse com um especialista
           </a>
