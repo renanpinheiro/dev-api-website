@@ -1,15 +1,14 @@
 import React from 'react'
 import { TrialForm } from '../../components/TrialForm/TrialForm'
-import * as S from '../../styles/freeTrial'
+import * as S from '../../styles/subscribe'
 
-const FreeTrial = () => {
+const Subscribe = () => {
   return (
     <S.Container>
       <S.FormContainer>
-        <TrialForm conversionIdentifier={'free-trial'} />
+        <TrialForm conversionIdentifier={'converse-com-especialista'} />
       </S.FormContainer>
     </S.Container>
   )
 }
-
-export default FreeTrial
+export default Subscribe

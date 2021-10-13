@@ -29,7 +29,7 @@ const ProfessionalService = () => {
         </S.CheckContainer>
         <ButtonLink
           text="Quero um orçamento!"
-          href="/free-trial"
+          href="/converse-com-especialista"
           target="_self"
           size="default"
           type="default"
