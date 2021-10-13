@@ -17,6 +17,7 @@ import {
   stepsPersonalForm,
 } from '../../constants/steps'
 import * as Yup from 'yup'
+import { roleOptions } from '../../constants/roleOptions'
 
 const FormStepper = ({ children }) => {
   const leadsApi = axios.create({
@@ -78,7 +79,7 @@ const FormStepper = ({ children }) => {
       phone: '',
       company: '',
       role: '',
-      departaments: [],
+      departaments: '',
       employees: '',
       isComunication: false,
       isPrivacyPolice: false,
@@ -189,10 +190,7 @@ const PersonalForm = ({}: Pick<
             isRequered
             name={'role'}
             label={'Cargo'}
-            options={[
-              { label: 'teste', value: 'teste-value' },
-              { label: 'teste2', value: 'teste2-value' },
-            ]}
+            options={roleOptions}
           />
         </S.SmallContainer>
       </S.DefaultContainer>
@@ -222,7 +220,6 @@ const DepartamentForm = ({}: Pick<
               text={departament}
               name={'departaments'}
               setError={setErrorMessage}
-              isMultiple
             />
           </S.CheckboxContainer>
         ))}
