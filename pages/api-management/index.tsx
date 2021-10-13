@@ -40,6 +40,7 @@ const ApiManagement = () => {
             />
           </S.HeroContent>
         </Hero>
+
         <S.ApiContainer>
           {apis.map((integration, index) => {
             const isOddNumber = validateOddNumber(index)
@@ -63,14 +64,14 @@ const ApiManagement = () => {
         <S.Inovation>
           <S.Pipe />
           <h3>
-            Quer desbloquear a<span> inovação na sua empresa?</span>
+            Quer desbloquear a <b>inovação na sua empresa?</b>
           </h3>
           <ButtonLink
             text="Sim, vamos lá!"
             href="/free-trial"
             target="_self"
             type="default"
-            size="default"
+            size="large"
           />
         </S.Inovation>
       </S.Container>

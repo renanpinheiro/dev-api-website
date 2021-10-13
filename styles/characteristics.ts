@@ -122,42 +122,46 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   width: 35vw;
-
-  h2 {
-    max-width: 25ch;
-
-    margin-bottom: 15px;
-    font-size: 5vh;
-
-    span {
-      font-weight: 700;
-    }
-
-    @media (max-width: 1600px) {
-      font-size: 2.5vw;
-    }
-
-    @media (max-width: 1200px) {
-      font-size: 4vh;
-    }
-  }
-
-  p {
-    max-width: 70ch;
-    line-height: 1.7;
-
-    @media (max-width: 1600px) {
-      max-width: 50ch;
-    }
-  }
 
   @media (max-width: 1200px) {
     justify-content: center;
-
     width: 100%;
-
     max-width: 90ch;
+  }
+
+  > h2 {
+    width: 100%;
+    font-size: 2.625rem;
+    line-height: 1;
+
+    @media (max-width: 996px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 98%;
+      font-size: 3.25rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+
+  > p {
+    width: 100%;
+    margin-top: 3vh;
+    font-size: 1.375rem;
+    line-height: 1.3;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 96%;
+    }
   }
 `

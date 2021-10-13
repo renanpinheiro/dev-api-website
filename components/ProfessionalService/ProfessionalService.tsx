@@ -10,11 +10,12 @@ const ProfessionalService = () => {
       <S.ImageContainer>
         <img src="/logo/professional-service.svg" alt="professional-service" />
       </S.ImageContainer>
+
       <S.ProfessionalServiceText>
         <S.Pipe />
         <h2>
-          <span>Professional Services,</span> um time de especialistas dedicado
-          ao seu negócio
+          <b>Professional Services,</b> um time de especialistas dedicado ao seu
+          negócio
         </h2>
         <p>
           A DevApi é composta por profissionais especializados no

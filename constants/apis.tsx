@@ -7,8 +7,7 @@ export const apis = [
       <>
         <S.Pipe />
         <h2>
-          API
-          <span> Management</span>
+          API <b>Management</b>
         </h2>
       </>
     ),
@@ -20,8 +19,7 @@ export const apis = [
       <>
         <S.Pipe />
         <h2>
-          APIs
-          <span> personalizáveis</span>
+          APIs <b>personalizáveis</b>
         </h2>
       </>
     ),
@@ -33,8 +31,7 @@ export const apis = [
       <>
         <S.Pipe />
         <h2>
-          Crie
-          <span> políticas de acesso</span>
+          Crie <b>políticas de acesso</b>
         </h2>
       </>
     ),
@@ -46,8 +43,7 @@ export const apis = [
       <>
         <S.Pipe />
         <h2>
-          Visão
-          <span> 360° das APIs</span>
+          Visão <b> 360° das APIs</b>
         </h2>
       </>
     ),

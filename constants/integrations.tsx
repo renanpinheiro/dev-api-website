@@ -7,8 +7,8 @@ export const integrations = [
       <>
         <S.Pipe />
         <h2>
-          Crie um conector personalizado ou
-          <span> utilize um dos mais de 300 já existentes</span>
+          Crie um conector personalizado ou{' '}
+          <b>utilize um dos mais de 300 já existentes</b>
         </h2>
       </>
     ),
@@ -20,8 +20,7 @@ export const integrations = [
       <>
         <S.Pipe />
         <h2>
-          Crie integrações
-          <span> até 75% mais rápido</span>
+          Crie integrações <b>até 75% mais rápido</b>
         </h2>
       </>
     ),
@@ -33,8 +32,7 @@ export const integrations = [
       <>
         <S.Pipe />
         <h2>
-          Versatilidade para
-          <span> criar integrações complexas</span>
+          Versatilidade para <b>criar integrações complexas</b>
         </h2>
       </>
     ),
@@ -46,8 +44,7 @@ export const integrations = [
       <>
         <S.Pipe />
         <h2>
-          <span>Automatize as integrações </span>
-          através de eventos inteligentes
+          <b>Automatize as integrações</b> através de eventos inteligentes
         </h2>
       </>
     ),
@@ -59,7 +56,7 @@ export const integrations = [
       <>
         <S.Pipe />
         <h2>
-          Dashboards completos e <span> gestão centralizada em tempo real</span>
+          Dashboards completos e <b> gestão centralizada em tempo real</b>
         </h2>
       </>
     ),
