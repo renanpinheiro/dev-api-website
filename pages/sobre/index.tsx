@@ -19,7 +19,7 @@ const About = () => {
         <S.HeroContainer>
           <S.Pipe />
           <h1>
-            <span>Sobre</span> nós
+            Sobre <b>nós</b>
           </h1>
         </S.HeroContainer>
       </Hero>

@@ -1,25 +1,27 @@
+import React from 'react'
+
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import React from 'react'
-import { Hero } from '../../components/Hero'
-import * as S from '../../styles/plans'
-import { cardPlanItems } from '../../constants/cardPlanItems'
-import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
-import { CardPlans } from '../../components/CardPlans'
-
-import { constumersMobile, costumers } from '../../constants/costumers'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-import dynamic from 'next/dynamic'
-import QuoteCarousel from '../../components/QuoteCarousel'
-import { quotes } from '../../constants/quotes'
-import { FreeTest } from '../../components/FreeTest'
-import { ListColumn } from '../../components/ListColumn'
-
-import { listIntegration } from '../../constants/listIntegration'
 import { Acordion } from '../../components/Acordion'
+import { ButtonLink } from '../../components/ButtonLink'
+import { CallToAction } from '../../components/CallToAction'
+import { CardPlans } from '../../components/CardPlans'
+import { Hero } from '../../components/Hero'
+import { ListColumn } from '../../components/ListColumn'
+import QuoteCarousel from '../../components/QuoteCarousel'
 
+import { cardPlanItems } from '../../constants/cardPlanItems'
 import { commonQuestions } from '../../constants/commonQuestions'
-import { Button } from '../../components/Button'
+import { constumersMobile, costumers } from '../../constants/costumers'
+import { listIntegration } from '../../constants/listIntegration'
+import { quotes } from '../../constants/quotes'
+
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+
+import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
+
+import * as S from '../../styles/plans'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -43,24 +45,15 @@ const Plans = () => {
   return (
     <>
       <Head>
-        <title>DevApi – Planos personalizados para você!</title>
-        <meta
-          property="og:title"
-          content="É a hora de acelerar a transformação"
-          key="title"
-        />
-        <meta
-          property="og:description"
-          content="cDevApi é o Integrador de Sistemas (iPaaS), Seguro e Confiável, Integre Seus Sistemas de Gestão, Logística, Marketing e Ecommerce Agora. Acesse e Confira!"
-          key="description"
-        />
+        <title>Planos | DevApi</title>
         <link rel="canonical" href="https://devapi.com.br/plano" />
       </Head>
+
       <Hero>
         <S.HeroContent>
           <S.Pipe />
           <h1>
-            <span> É a hora de </span>acelerar a transformação
+            É a hora de <b>acelerar a transformação</b>
           </h1>
           <p>
             Com a DevApi, conectar sistemas, processos, bancos de dados e
@@ -103,9 +96,8 @@ const Plans = () => {
             )}
           </S.CostumersCarrouselContainer>
         </S.ContainerItegration>
-        <S.FreeTestContainer>
-          <FreeTest />
-        </S.FreeTestContainer>
+
+        <CallToAction />
 
         <S.QuoteContainer>
           <QuoteCarousel quotes={quotes} />
@@ -123,10 +115,12 @@ const Plans = () => {
             <ListColumn list={listIntegration} />
           </S.ListColumnContainer>
           <S.ButtonContainer>
-            <Button
+            <ButtonLink
               text="Quero integrar meus sistemas"
+              href="/free-trial"
+              target="_self"
               type="default"
-              size="small"
+              size="large"
             />
           </S.ButtonContainer>
         </S.ListIntegrationContainer>
@@ -141,8 +135,15 @@ const Plans = () => {
             </h2>
           </S.QuestionsContainer>
           <Acordion list={listQuestions} />
+
           <S.ButtonContainer>
-            <Button text="Vamos conversar" type="default" size="default" />
+            <ButtonLink
+              text="Vamos conversar"
+              href="/free-trial"
+              target="_self"
+              type="default"
+              size="large"
+            />
           </S.ButtonContainer>
         </S.AcordionContainer>
       </S.Container>

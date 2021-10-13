@@ -32,13 +32,6 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
 
           <S.Nav>
             <ul>
-              <li>
-                <Link href="/" activeClassName="activeLink">
-                  <a title="Home" onClick={close}>
-                    Home
-                  </a>
-                </Link>
-              </li>
               {navLinks.map((link, index) => {
                 return (
                   <React.Fragment key={index}>

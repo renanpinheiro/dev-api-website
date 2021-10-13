@@ -122,8 +122,7 @@ export const Nav = styled.div`
     list-style: none;
 
     @media (max-width: 992px) {
-      padding-right: 5rem;
-      padding-left: 5rem;
+      padding: 0 3rem;
     }
 
     > li {
@@ -136,7 +135,7 @@ export const Nav = styled.div`
         text-decoration: none;
         transition: all 0.2s;
 
-        @media (max-width: 992px) {
+        @media (max-width: 996px) {
           font-size: 1.75rem;
         }
 

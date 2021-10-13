@@ -4,11 +4,8 @@ import { theme } from './theme'
 export const Hero = styled.section`
   display: flex;
   align-items: center;
-
   height: 100vh;
-
   padding: 0 8vw 0 8vw;
-
   background-color: ${theme.colors.gray[100]};
 
   background-image: url('/masks/lines.svg');
@@ -27,31 +24,8 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   width: 45%;
   height: 100%;
-
-  h1 {
-    max-width: 20ch;
-
-    margin-bottom: 15px;
-    font-size: 5.3vh;
-
-    span {
-      font-weight: 400;
-    }
-  }
-
-  p {
-    max-width: 50ch;
-
-    margin-bottom: 15px;
-
-    overflow: hidden;
-    font-size: 2vh;
-
-    line-height: 1.7;
-  }
 
   @media (max-width: 900px) {
     width: 100%;
@@ -62,16 +36,51 @@ export const HeroContent = styled.div`
     text-align: left;
     background-size: 100%;
   }
+
+  > h1 {
+    max-width: 20ch;
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+
+    @media (max-width: 576px) {
+      font-size: 2.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.75rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+
+  > p {
+    width: 90%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-size: 1.375rem;
+    line-height: 1.5;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 90%;
+    }
+  }
 `
 
 export const GifContainer = styled.div`
   width: 54%;
 
-  img {
+  @media (max-width: 900px) {
     width: 100%;
   }
 
-  @media (max-width: 900px) {
+  > img {
     width: 100%;
   }
 `
@@ -429,5 +438,5 @@ export const Title = styled.p`
 `
 
 export const CallToActionContainer = styled.div`
-  padding: 0 0 10vh 0;
+  padding: 0 8vw 10vh 8vw;
 `

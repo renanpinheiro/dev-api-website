@@ -16,6 +16,7 @@ const ConnectorsCard = ({ connectors, text }: IConnectorsCardProps) => {
                 <img src={item.url} alt={item.name} />
                 <span>{item.name}</span>
               </S.Connector>
+
               {hasPlus && (
                 <S.Plus>
                   <HiPlusSm />
@@ -25,9 +26,10 @@ const ConnectorsCard = ({ connectors, text }: IConnectorsCardProps) => {
           )
         })}
       </S.ConnectorsContainer>
-      <S.TextContainer>
+
+      <S.Text>
         <p>{text}</p>
-      </S.TextContainer>
+      </S.Text>
     </S.Container>
   )
 }

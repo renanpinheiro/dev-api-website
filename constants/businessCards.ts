@@ -33,7 +33,7 @@ export const businessCards = [
   },
   {
     title: 'Integrações para e-Commerce',
-    text: 'Integre o e-Commerce ao Marketplaces e às suas ferramentas de marketing, CRM, SAC, ERP, financeiro e muito mais!',
+    text: 'Integre o e-Commerce aos Marketplaces e às suas ferramentas de marketing, CRM, SAC, ERP, financeiro e muito mais!',
     link: '/solucoes/e-commerce',
     connectors: [
       {
