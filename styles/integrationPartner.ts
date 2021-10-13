@@ -88,7 +88,6 @@ export const CardImage = styled.div`
   justify-content: space-between;
 
   width: 25vw;
-  /* height: 29vh; */
 
   padding: 2vw 2vw 0 2vw;
   margin: 1vw;
@@ -249,7 +248,7 @@ export const FeatureContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding: 10vh 8vw 0 8vw;
+  padding: 10vh 8vw 10vh 8vw;
 
   text-align: center;
 
@@ -313,7 +312,7 @@ export const Text = styled.div`
   margin-left: 15px;
 
   p {
-    max-width: 28ch;
+    max-width: 35ch;
     margin: 0;
     line-height: 1;
   }
@@ -323,6 +322,82 @@ export const Title = styled.p`
   font-weight: 700;
 `
 
-export const CallToActionContainer = styled.div`
-  padding: 0 8vw 10vh 8vw;
+export const CornerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 10vh 8vw 0 8vw;
+  background-color: ${theme.colors.gray[100]};
+  background-image: url('masks/devapi.svg');
+  background-size: contain;
+
+  border-radius: 110px 0;
+`
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 35vw;
+
+  h2 {
+    max-width: 25ch;
+
+    margin-bottom: 15px;
+    font-size: 5vh;
+
+    span {
+      font-weight: 700;
+    }
+
+    @media (max-width: 1600px) {
+      font-size: 2.5vw;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 4vh;
+    }
+  }
+
+  p {
+    max-width: 70ch;
+    line-height: 1.7;
+
+    @media (max-width: 1600px) {
+      max-width: 50ch;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+
+    width: 100%;
+
+    max-width: 90ch;
+  }
+`
+export const Carrousel = styled.section`
+  width: 100%;
+  padding: 10vh 8vh 0 8vw;
+  background-size: 76%;
+`
+
+export const CarrouselTitle = styled.h2`
+  color: ${theme.colors.primary};
+
+  @media (max-width: 996px) {
+    margin-top: 10px;
+    font-size: 1.375rem;
+  }
+
+  span {
+    font-weight: 700;
+  }
+`
+
+export const Quote = styled.div`
+  padding: 10vh 3vw 0 5vw;
 `

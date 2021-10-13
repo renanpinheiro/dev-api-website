@@ -8,6 +8,7 @@ import * as S from '../../styles/integrationPartner'
 import { cardPatnerImages } from '../../constants/cardPatnerImages'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
+import { constumersMobile, costumers } from '../../constants/costumers'
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
   {
@@ -115,6 +116,39 @@ const IntegrationPartner = () => {
             })}
           </S.Features>
         </S.FeatureContainer>
+        <S.CornerContainer>
+          <S.TextContainer>
+            <S.Pipe />
+            <h2>
+              Faça parceria com a DevApi para fornecer uma plataforma de{' '}
+              <span>integração de API </span> para seus clientes
+            </h2>
+          </S.TextContainer>
+        </S.CornerContainer>
+        <S.Carrousel>
+          {isMobile ? (
+            <CarrouselWithOutSSR
+              items={constumersMobile}
+              title={
+                <S.CarrouselTitle>
+                  Empresas que já desbloquearam o{' '}
+                  <span>poder da integração de sistemas</span>
+                </S.CarrouselTitle>
+              }
+            />
+          ) : (
+            <MultiCarrouselWithOutSSR
+              interval={2000}
+              items={costumers}
+              title={
+                <S.CarrouselTitle>
+                  Empresas que já desbloquearam o{' '}
+                  <span>poder da integração de sistemas</span>
+                </S.CarrouselTitle>
+              }
+            />
+          )}
+        </S.Carrousel>
       </S.Container>
     </>
   )
