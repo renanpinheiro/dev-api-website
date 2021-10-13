@@ -4,6 +4,7 @@ export interface IInputTextProps {
   isRequired?: boolean
   placeholder?: string
   mask?: string
+  type?: string
 }
 
 export interface IInputStyles {
