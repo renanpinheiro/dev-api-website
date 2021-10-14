@@ -119,7 +119,10 @@ export const solutionsPage = {
           connectors={[
             { url: '/images/connectors/ads.png', name: 'Google Ads' },
             { url: '/images/connectors/instagram.png', name: 'Instagram' },
-            { url: '/images/connectors/facebook-ads.png', name: 'Facebook Ads' },
+            {
+              url: '/images/connectors/facebook-ads.png',
+              name: 'Facebook Ads',
+            },
           ]}
           text="Busque performance de campanhas e conversões e envie para seu B.I."
         />

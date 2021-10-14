@@ -379,8 +379,8 @@ export const FeaturesContainer = styled.div`
 
   > p {
     max-width: 120ch;
-    overflow: hidden;
     margin-top: 2vh;
+    overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.3;
   }
@@ -444,8 +444,8 @@ export const Text = styled.div`
   }
 
   > b {
-    font-weight: 700;
     margin-bottom: 10px;
+    font-weight: 700;
   }
 `
 
