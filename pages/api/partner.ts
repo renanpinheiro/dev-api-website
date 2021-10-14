@@ -16,10 +16,10 @@ const partnerMail = async (req: Request, res) => {
     host: process.env.NEXT_PUBLIC_EMAIL_HOST,
     port: Number(process.env.NEXT_PUBLIC_EMAIL_PORT),
     secure: false,
-    // auth: {
-    //   user: '',
-    //   pass: '',
-    // },
+    auth: {
+      user: process.env.NEXT_PUBLIC_EMAIL_USER,
+      pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
+    },
     tls: {
       ciphers: 'SSLv3',
     },
