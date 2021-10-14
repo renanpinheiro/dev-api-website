@@ -9,6 +9,7 @@ import { cardPatnerImages } from '../../constants/cardPatnerImages'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
 import { constumersMobile, costumers } from '../../constants/costumers'
+import { FormPartner } from '../../components/FormPartner'
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
   {
@@ -124,6 +125,9 @@ const IntegrationPartner = () => {
               <span>integração de API </span> para seus clientes
             </h2>
           </S.TextContainer>
+          <S.FormContaimer>
+            <FormPartner />
+          </S.FormContaimer>
         </S.CornerContainer>
         <S.Carrousel>
           {isMobile ? (

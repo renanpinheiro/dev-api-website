@@ -17,6 +17,7 @@ export const InputText = ({
   if (type === 'textarea') {
     return (
       <S.Container>
+        <S.Label isRequired={isRequired}>{label}</S.Label>
         <S.Textarea
           rows={5}
           hasError={!!meta.error}

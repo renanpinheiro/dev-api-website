@@ -324,16 +324,20 @@ export const Title = styled.p`
 
 export const CornerContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 100vh;
-  padding: 10vh 8vw 0 8vw;
+
+  padding: 10vh 8vw 10vh 8vw;
   background-color: ${theme.colors.gray[100]};
   background-image: url('masks/devapi.svg');
   background-size: contain;
 
   border-radius: 110px 0;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `
 export const TextContainer = styled.div`
   display: flex;
@@ -341,13 +345,13 @@ export const TextContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
 
-  width: 35vw;
+  width: 100%;
 
   h2 {
-    max-width: 25ch;
+    max-width: 26ch;
 
     margin-bottom: 15px;
-    font-size: 5vh;
+    font-size: 6.5vh;
 
     span {
       font-weight: 700;
@@ -357,7 +361,9 @@ export const TextContainer = styled.div`
       font-size: 2.5vw;
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1024px) {
+      max-width: 30ch;
+      padding: 1vh 3vw 2vh 0;
       font-size: 4vh;
     }
   }
@@ -367,16 +373,10 @@ export const TextContainer = styled.div`
     line-height: 1.7;
 
     @media (max-width: 1600px) {
+      width: 100%;
+
       max-width: 50ch;
     }
-  }
-
-  @media (max-width: 1200px) {
-    justify-content: center;
-
-    width: 100%;
-
-    max-width: 90ch;
   }
 `
 export const Carrousel = styled.section`
@@ -400,4 +400,15 @@ export const CarrouselTitle = styled.h2`
 
 export const Quote = styled.div`
   padding: 10vh 3vw 0 5vw;
+`
+export const FormContaimer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  padding: 4vh 1vw 4vh 1vw;
+  background-color: ${theme.colors.white};
+  border-radius: 10px;
+  box-shadow: 0px 10px 25px #5f47ff29;
 `
