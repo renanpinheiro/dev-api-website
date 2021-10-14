@@ -1,4 +1,7 @@
-import styled from 'styled-components'
+import { propTypes } from 'react-bootstrap/esm/Image'
+import styled, { css } from 'styled-components'
+import { theme } from '../../styles/theme'
+import { IColorNotificationStyle } from './FormPartner.interface'
 
 export const Container = styled.div`
   display: flex;
@@ -23,8 +26,8 @@ export const InputContainer = styled.div`
 `
 export const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 `
 export const InputColumnContainer = styled.div`
@@ -39,4 +42,16 @@ export const InputColumn = styled.div`
   @media (max-width: 900px) {
     flex: 0 0 100%;
   }
+`
+const colorVaritation = {
+  success: css`
+    color: ${theme.colors.green[100]};
+  `,
+  alert: css`
+    color: ${theme.colors.red[100]};
+  `,
+}
+
+export const Message = styled.p<IColorNotificationStyle>`
+  ${({ color }) => colorVaritation[color]}
 `

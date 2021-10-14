@@ -6,3 +6,10 @@ export interface IPayload {
   role: string
   fullName: string
 }
+export interface IColorNotificationStyle {
+  color?: 'success' | 'alert'
+}
+export interface IMessage {
+  type: 'success' | 'alert'
+  message: string
+}

@@ -381,7 +381,7 @@ export const TextContainer = styled.div`
 `
 export const Carrousel = styled.section`
   width: 100%;
-  padding: 10vh 8vh 0 8vw;
+  padding: 10vh 8vh 10vh 8vw;
   background-size: 76%;
 `
 

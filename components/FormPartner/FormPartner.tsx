@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import * as S from './FormPartiner.style'
 import { InputText } from '../InputText'
@@ -7,10 +7,12 @@ import { FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
 import { roleOptions } from '../../constants/roleOptions'
-import { IPayload } from './FormPartner.interface'
+import { IMessage, IPayload } from './FormPartner.interface'
 import { Select } from '../Select'
 
 const FormPartner = () => {
+  const [message, setMessage] = useState<IMessage>()
+
   const schema = Yup.object().shape({
     message: Yup.string().required('Campo Obrigatório'),
     email: Yup.string().email('Email inválido').required('Campo Obrigatório'),
@@ -22,9 +24,13 @@ const FormPartner = () => {
 
   const onSubmit = async (values: IPayload) => {
     try {
-      axios.post('/api/partner', values)
+      const result = await axios.post('/api/partner', values)
+
+      formik.resetForm()
+      result.status === 200 &&
+        setMessage({ type: 'success', message: 'Enviando com sucesso !' })
     } catch {
-      console.log('deu errado')
+      setMessage({ type: 'alert', message: 'Algo deu errado !' })
     }
   }
   const formik = useFormik({
@@ -39,6 +45,11 @@ const FormPartner = () => {
     validationSchema: schema,
     onSubmit,
   })
+  useEffect(() => {
+    setTimeout(() => {
+      setMessage(undefined)
+    }, 3000)
+  }, [message])
 
   return (
     <S.Container>
@@ -102,6 +113,11 @@ const FormPartner = () => {
             />
           </S.InputContainer>
           <S.ButtonContainer>
+            {message ? (
+              <S.Message color={message.type}>{message.message}</S.Message>
+            ) : (
+              <div></div>
+            )}
             <Button
               buttonType="submit"
               text="Enviar"
