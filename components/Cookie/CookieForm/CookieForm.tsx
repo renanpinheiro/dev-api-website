@@ -27,7 +27,7 @@ const CookieForm = ({ text, title, onClickBack, lgpdApi }) => {
       .required('Campo obrigatório'),
     phone: Yup.string().required('Campo obrigatório.'),
     cpf: Yup.string().required('Campo obrigatório.'),
-    information: Yup.string().required('Campo obrigatŕoio.'),
+    information: Yup.string().required('Campo obrigatório.'),
   })
 
   const formik = useFormik({
