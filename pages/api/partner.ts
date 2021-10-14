@@ -28,7 +28,7 @@ const partnerMail = async (req: Request, res) => {
   await transporter
     .sendMail({
       from: `${fullName} <${email}>`,
-      to: `${process.env.NEXT_PUBLIC_EMAIL_NAME} <${process.env.NEXT_PUBLIC_EMAIL_FROM}>`,
+      to: `${process.env.NEXT_PUBLIC_EMAIL_NAME} <${process.env.NEXT_PUBLIC_EMAIL_TO}>`,
       subject: 'Parceria',
       html: `
     ${message}
