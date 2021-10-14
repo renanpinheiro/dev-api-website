@@ -43,30 +43,6 @@ export const CookieContainer = styled.div`
   padding-bottom: 5vh;
 `
 
-export const Cookie = styled.div`
-  position: fixed;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 80vw;
-
-  padding: 2vh 2vw;
-
-  background-color: ${theme.colors.white};
-  border-radius: 10px;
-  box-shadow: 0px 0px 25px #5f47ff29;
-
-  a {
-    color: ${theme.colors.secondary};
-  }
-
-  @media (max-width: 992px) {
-    width: 100%;
-  }
-`
-
 export const CookieModal = styled.div`
   display: flex;
   flex-direction: column;
@@ -79,7 +55,7 @@ export const CookieModal = styled.div`
   border-radius: 10px;
 
   @media (max-width: 992px) {
-    width: 90%;
+    width: 100%;
   }
 `
 
@@ -95,6 +71,10 @@ export const TitleContainer = styled.div`
   h3 {
     font-size: 3vh;
     font-weight: 700;
+  }
+
+  @media (max-width: 992px) {
+    padding: 2vh 6vw;
   }
 `
 
@@ -127,9 +107,15 @@ export const Tab = styled.div<ICookieStyle>`
           border-bottom: 3px solid ${theme.colors.secondary};
         `
       : css`
-          color: ${theme.colors.gray[300]};
-          border-bottom: 3px solid ${theme.colors.gray[300]};
+          color: ${theme.colors.gray[400]};
+          border-bottom: 3px solid ${theme.colors.gray[400]};
         `}
+
+  @media (max-width: 992px) {
+    max-width: 16ch;
+    font-size: 2.5vh;
+    text-align: center;
+  }
 `
 
 export const ContentContainer = styled.div`
@@ -140,22 +126,9 @@ export const ContentContainer = styled.div`
   overflow: auto;
 
   font-size: 2.2vh;
-`
 
-export const AcceptCookie = styled.div`
-  position: fixed;
-  display: flex;
-
-  width: 100%;
-  height: 60px;
-
-  padding: 0 2vw;
-
-  img {
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0px 0px 0px 2px ${theme.colors.secondary};
+  @media (max-width: 992px) {
+    padding: 2vh 6vw;
   }
 `
 
@@ -165,7 +138,6 @@ export const AccordionContainer = styled.div`
 `
 
 export const Accordion = styled(AccordionBootstrap)`
-  max-height: 60vh;
   margin-bottom: 20px;
   overflow: auto;
   background-color: ${theme.colors.gray[100]};
@@ -209,6 +181,10 @@ export const AccordionToggle = styled(AccordionBootstrap.Toggle)`
   img {
     width: 15px;
     margin-left: 30px;
+
+    @media (max-width: 992px) {
+      margin-left: 15px;
+    }
   }
 `
 

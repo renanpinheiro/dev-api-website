@@ -10,10 +10,79 @@ export const cookieContent = {
         text: 'Estes cookies são aqueles necessários para o site funcionar e não podem ser desligados em nossos sistemas. Eles geralmente são definidos apenas em resposta às ações feitas por você, como por exemplo, definir suas preferências de privacidade, fazer login ou preencher formulários. Caso queira, pode configurar seu navegador para bloqueá-lo ou alertá-lo sobre esses cookies, mas algumas partes do site podem não funcionar de forma adequada.',
         cookies: [
           {
-            name: 'devapi.global',
+            name: 'DevApi',
+            subItem: [
+              {
+                name: '__Secure-Senv',
+                domain: {
+                  title: 'Domínio',
+                  value: 'devapi.com.br',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+              {
+                name: '__Secure-Spvll',
+                domain: {
+                  title: 'Domínio',
+                  value: 'devapi.com.br',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+            ],
           },
           {
             name: 'CloudFlare',
+            subItem: [
+              {
+                name: '__cfduid',
+                domain: {
+                  title: 'Domínio',
+                  value: 'devapi.com.br',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+            ],
+          },
+          {
+            name: 'RD Station',
+            subItem: [
+              {
+                name: '__trf.src',
+                domain: {
+                  title: 'Domínio',
+                  value: 'devapi.com.br',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+            ],
           },
         ],
       },
@@ -23,25 +92,116 @@ export const cookieContent = {
         cookies: [
           {
             name: 'Google Analytics',
+            subItem: [
+              {
+                name: '_ga',
+                domain: {
+                  title: 'Domínio',
+                  value: 'google.com',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+              {
+                name: '_gat_gtag',
+                domain: {
+                  title: 'Domínio',
+                  value: 'google.com',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+              {
+                name: '_gid',
+                domain: {
+                  title: 'Domínio',
+                  value: 'google.com',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+            ],
+          },
+          {
+            name: 'Facebook',
+            subItem: [
+              {
+                name: '_fbp',
+                domain: {
+                  title: 'Domínio',
+                  value: 'facebook.com',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+            ],
+          },
+          {
+            name: 'Linkedin',
+            subItem: [
+              {
+                name: '_guid',
+                domain: {
+                  title: 'Domínio',
+                  value: 'linkedin.com',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+              {
+                name: '_gcl_au',
+                domain: {
+                  title: 'Domínio',
+                  value: 'linkedin.com',
+                },
+                time: {
+                  title: 'Duração',
+                  value: '1 ano',
+                },
+                type: {
+                  title: 'Tipo',
+                  value: 'Http Seguro',
+                },
+              },
+            ],
           },
           {
             link: 'Termos de Uso',
+            url: '/termos-de-uso',
           },
           {
             link: 'Políticas de Privacidade',
-          },
-        ],
-        switch: true,
-      },
-      {
-        title: 'Cookies de Marketing',
-        text: 'Os cookies de marketing fornecem informações sobre a interação do usuário com o conteúdo do nosso site, ajudando-nos a entender melhor a eficácia do nosso conteúdo de e-mail e website.',
-        cookies: [
-          {
-            name: 'Google/DoubleClick',
-          },
-          {
-            name: 'YouTube',
+            url: '/politica-de-privacidade',
           },
         ],
         switch: true,

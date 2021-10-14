@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '../Button'
 import * as S from './Cookie.style'
 
@@ -7,14 +7,33 @@ import { theme } from '../../styles/theme'
 import { cookieContent } from '../../constants/cookieContent'
 import { Switch } from '../Switch'
 import { CookieDetails } from './CookieDetails'
+import { CookieBar } from './CookieBar'
+import { CookieForm } from './CookieForm'
+import { CookieFollowUpRequestForm } from './CookieFollowUpRequestForm'
+import axios from 'axios'
 
-const Cookie = () => {
-  const [isOpenPreferences, setIsOpenPreferences] = useState(false)
+const Cookie = ({ acceptCookie, isActiveCookies }) => {
+  const lgpdApi = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_API_LGPD,
+  })
+
   const [isAcceptCookies, setIsAcceptCookies] = useState(false)
+  const [isOpenPreferences, setIsOpenPreferences] = useState(false)
+  const [isOpenRequestForm, setIsOpenRequestForm] = useState(false)
+  const [isOpenFollowUpRequest, setIsOpenFollowUpRequest] = useState(false)
   const [activeTab, setActiveTab] = useState(0)
+  const [openForm, setOpenForm] = useState(0)
   const [openCollapse, setOpenCollapse] = useState('')
 
   const currentModalContent = cookieContent[activeTab]
+
+  useEffect(() => {
+    acceptCookie(isAcceptCookies)
+  }, [isAcceptCookies])
+
+  const handleSwitch = () => {
+    setIsAcceptCookies(!isAcceptCookies)
+  }
 
   const handleClickPreferences = () => {
     setIsOpenPreferences(true)
@@ -22,15 +41,22 @@ const Cookie = () => {
 
   const handleCloseModal = () => {
     setIsOpenPreferences(false)
+    setOpenCollapse('')
+    setIsOpenRequestForm(false)
+    setActiveTab(0)
+    setIsOpenFollowUpRequest(false)
   }
 
   const handleSelectTab = (tab: number) => {
-    setActiveTab(tab)
     setOpenCollapse('')
+    setIsOpenRequestForm(false)
+    setActiveTab(tab)
+    setIsOpenFollowUpRequest(false)
   }
 
   const handleClickAccept = () => {
     setIsAcceptCookies(true)
+    setIsOpenPreferences(false)
   }
 
   const handleClickCollapse = (index: string) => {
@@ -41,41 +67,30 @@ const Cookie = () => {
     }
   }
 
+  const handleClickRequest = (index: number) => {
+    setIsOpenRequestForm(!isOpenRequestForm)
+    setOpenForm(index)
+  }
+
+  const handleClickBack = () => {
+    setIsOpenRequestForm(false)
+    setOpenCollapse('')
+    setIsOpenFollowUpRequest(false)
+  }
+
+  const handleClickFollowUpRequest = () => {
+    setIsOpenFollowUpRequest(!isOpenFollowUpRequest)
+  }
+
   return (
     <S.Container isOpen={isOpenPreferences}>
       {!isOpenPreferences ? (
         <S.CookieContainer>
-          {isAcceptCookies ? (
-            <S.AcceptCookie>
-              <img
-                src="/icons/cookie.png"
-                alt="cookie"
-                onClick={handleClickPreferences}
-              />
-            </S.AcceptCookie>
-          ) : (
-            <S.Cookie>
-              <p>
-                Clicando em "Aceito todos os Cookies", você concorda com o
-                armazenamento de cookies no seu dispositivo para melhorar a
-                experiência e navegação no site. Para saber mais, acesse a{' '}
-                <a href="/politica-de-privacidade">Política de Privacidade.</a>
-              </p>
-              <Button
-                size="small"
-                type="outline"
-                text="Preferências"
-                margin="0 10px 0 10px"
-                onClick={handleClickPreferences}
-              />
-              <Button
-                size="small"
-                type="default"
-                text="Aceitar todos"
-                onClick={handleClickAccept}
-              />
-            </S.Cookie>
-          )}
+          <CookieBar
+            isAcceptCookies={isAcceptCookies}
+            handleClickAccept={handleClickAccept}
+            handleClickPreferences={handleClickPreferences}
+          />
         </S.CookieContainer>
       ) : (
         <S.CookieModal>
@@ -102,71 +117,103 @@ const Cookie = () => {
               Seus Direitos e Solicitações
             </S.Tab>
           </S.TabContainer>
-
-          <S.ContentContainer>
-            {currentModalContent.text}
-            {activeTab === 1 && (
-              <S.ButtonContainer>
-                <Button
-                  type="default"
-                  size="small"
-                  text="Acompanhar Solicitação"
+          {!isOpenRequestForm ? (
+            <S.ContentContainer>
+              {!isOpenFollowUpRequest ? (
+                <>
+                  {currentModalContent.text}
+                  {activeTab === 1 && (
+                    <S.ButtonContainer>
+                      <Button
+                        type="default"
+                        size="small"
+                        text="Acompanhar Solicitação"
+                        onClick={handleClickFollowUpRequest}
+                      />
+                    </S.ButtonContainer>
+                  )}
+                  <S.AccordionContainer>
+                    {currentModalContent.collapse.map((item, index) => {
+                      return (
+                        <S.Accordion key={index} activeKey={openCollapse}>
+                          <S.Card>
+                            <S.CardHeader>
+                              <S.Title
+                                onClick={() =>
+                                  handleClickCollapse(index.toString())
+                                }
+                              >
+                                {item.title}
+                              </S.Title>
+                              <S.AccordionToggle
+                                eventKey={index.toString()}
+                                onClick={() =>
+                                  handleClickCollapse(index.toString())
+                                }
+                              >
+                                <img
+                                  src="/arrows/arrow-dropdown.svg"
+                                  alt="arrow"
+                                />
+                              </S.AccordionToggle>
+                              {item.switch && (
+                                <S.SwitchContainer>
+                                  <Switch
+                                    isChecked={isActiveCookies}
+                                    onChange={handleSwitch}
+                                  />
+                                </S.SwitchContainer>
+                              )}
+                            </S.CardHeader>
+                            <S.AccordionCollapse eventKey={index.toString()}>
+                              <S.CardBody>
+                                <S.Text>{item.text}</S.Text>
+                                {item.cookies && (
+                                  <CookieDetails cookies={item.cookies} />
+                                )}
+                                {item.button && (
+                                  <S.ButtonContainer>
+                                    <Button
+                                      type="default"
+                                      size="small"
+                                      text="Solicitar"
+                                      onClick={() => handleClickRequest(index)}
+                                    />
+                                  </S.ButtonContainer>
+                                )}
+                              </S.CardBody>
+                            </S.AccordionCollapse>
+                          </S.Card>
+                        </S.Accordion>
+                      )
+                    })}
+                  </S.AccordionContainer>
+                  {activeTab === 0 && (
+                    <S.ButtonContainer>
+                      <Button
+                        type="default"
+                        size="small"
+                        text="Aceitar Todos os Cookies"
+                        onClick={handleClickAccept}
+                      />
+                    </S.ButtonContainer>
+                  )}
+                </>
+              ) : (
+                <CookieFollowUpRequestForm
+                  onClickBack={handleClickBack}
+                  lgpdApi={lgpdApi}
                 />
-              </S.ButtonContainer>
-            )}
-            <S.AccordionContainer>
-              {currentModalContent.collapse.map((item, index) => {
-                return (
-                  <S.Accordion key={index} activeKey={openCollapse}>
-                    <S.Card>
-                      <S.CardHeader>
-                        <S.Title
-                          onClick={() => handleClickCollapse(index.toString())}
-                        >
-                          {item.title}
-                        </S.Title>
-                        <S.AccordionToggle
-                          eventKey={index.toString()}
-                          onClick={() => handleClickCollapse(index.toString())}
-                        >
-                          <img src="/arrows/arrow-dropdown.svg" alt="arrow" />
-                        </S.AccordionToggle>
-                        {item.switch && (
-                          <S.SwitchContainer>
-                            <Switch />
-                          </S.SwitchContainer>
-                        )}
-                      </S.CardHeader>
-                      <S.AccordionCollapse eventKey={index.toString()}>
-                        <S.CardBody>
-                          <S.Text>{item.text}</S.Text>
-                          {item.cookies && <CookieDetails />}
-                          {item.button && (
-                            <S.ButtonContainer>
-                              <Button
-                                type="default"
-                                size="small"
-                                text="Solicitar"
-                              />
-                            </S.ButtonContainer>
-                          )}
-                        </S.CardBody>
-                      </S.AccordionCollapse>
-                    </S.Card>
-                  </S.Accordion>
-                )
-              })}
-            </S.AccordionContainer>
-            {activeTab === 0 && (
-              <S.ButtonContainer>
-                <Button
-                  type="default"
-                  size="small"
-                  text="Aceitar Todos os Cookies"
-                />
-              </S.ButtonContainer>
-            )}
-          </S.ContentContainer>
+              )}
+            </S.ContentContainer>
+          ) : (
+            <CookieForm
+              onClickBack={handleClickBack}
+              text={currentModalContent.collapse[openForm].text}
+              title={currentModalContent.collapse[openForm].title}
+              lgpdApi={lgpdApi}
+            />
+          )}
         </S.CookieModal>
       )}
     </S.Container>
