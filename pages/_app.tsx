@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { QueryClientProvider, QueryClient } from 'react-query'
 
 import { AppProps } from 'next/app'
@@ -13,6 +13,7 @@ import { ThemeProvider } from 'styled-components'
 import { useRouter } from 'next/router'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { Cookie } from '../components/Cookie'
 
 import GlobalStyle from '../styles/global'
 import { theme } from '../styles/theme'
@@ -21,6 +22,8 @@ const queryClient = new QueryClient()
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
+
+  const [isAcceptCookies, setIsAcceptCookies] = useState(false)
 
   // Initiate GTM
   useEffect(() => {
@@ -31,6 +34,10 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     }
   }, [])
 
+  const acceptCookie = (isAccept: boolean) => {
+    setIsAcceptCookies(isAccept)
+  }
+
   return (
     <>
       <Head>
@@ -38,6 +45,17 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover"
         />
+        {isAcceptCookies && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TPHLSXZ');`,
+            }}
+          />
+        )}
       </Head>
 
       <DefaultSeo {...SEO} />
@@ -49,6 +67,10 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         </QueryClientProvider>
         {router.asPath !== '/trial-success' && <Footer />}
         <GlobalStyle />
+        <Cookie
+          acceptCookie={isAccept => acceptCookie(isAccept)}
+          isActiveCookies={isAcceptCookies}
+        />
       </ThemeProvider>
     </>
   )

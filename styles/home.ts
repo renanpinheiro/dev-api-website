@@ -8,6 +8,11 @@ export const Hero = styled.section`
   padding: 0 8vw 0 8vw;
   background-color: ${theme.colors.gray[100]};
 
+  background-image: url('/masks/lines.svg');
+  background-repeat: no-repeat;
+  background-position-y: 140%;
+  background-size: 100%;
+
   @media (max-width: 900px) {
     flex-direction: column-reverse;
     padding: 15vh 8vw 0 8vw;

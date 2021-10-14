@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React from 'react'
 import * as S from './Acrodion.style'
 import { SelectCollapsible } from './SelectCollapsible'
 

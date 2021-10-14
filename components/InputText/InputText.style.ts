@@ -50,7 +50,7 @@ export const Input = styled.input<IInputStyles>`
 `
 
 export const ErrorMessage = styled.p`
-  height: 10px;
+  font-size: 1rem;
   color: ${theme.colors.red[200]};
 `
 
@@ -75,4 +75,12 @@ export const Textarea = styled.textarea<IInputStyles>`
     css`
       border-color: ${theme.colors.red};
     `};
+
+  :focus-visible {
+    outline: none;
+  }
+
+  :focus {
+    border-color: ${theme.colors.gray[700]};
+  }
 `
