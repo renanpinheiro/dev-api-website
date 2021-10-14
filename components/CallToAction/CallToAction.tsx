@@ -21,7 +21,7 @@ const CallToAction = () => {
           href="/converse-com-especialista"
           target="_self"
           type="default"
-          size="default"
+          size="small"
         />
       </S.Wrapper>
     </S.Container>

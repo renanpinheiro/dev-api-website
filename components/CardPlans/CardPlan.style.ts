@@ -16,7 +16,8 @@ export const Cards = styled.div`
   display: flex;
   flex: 0 0 24%;
   flex-direction: column;
-  height: 60vh;
+
+  padding-bottom: 1.5vh;
   line-height: 1;
   text-align: center;
   vertical-align: middle;
@@ -48,13 +49,13 @@ export const Cards = styled.div`
 
   @media (max-width: 700px) {
     flex: 0 0 65%;
-    height: 60vh;
+
     margin-top: 10px;
   }
 
   @media (max-width: 576px) {
     flex: 0 0 90%;
-    height: 60vh;
+
     margin-top: 10px;
   }
 `
