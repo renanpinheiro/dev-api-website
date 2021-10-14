@@ -61,16 +61,16 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/magento.png', name: 'Magento' },
-            { url: '/connectors/sankhya.png', name: 'Sankhya' },
+            { url: '/images/connectors/magento.png', name: 'Magento' },
+            { url: '/images/connectors/sankhya.png', name: 'Sankhya' },
           ]}
           text="Gestão de pedidos e estoque de lojas franqueadas."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/sap-one.png', name: 'SAP' },
-            { url: '/connectors/picpay.png', name: 'PicPay' },
-            { url: '/connectors/gmail.png', name: 'Gmail' },
+            { url: '/images/connectors/sap-one.png', name: 'SAP' },
+            { url: '/images/connectors/picpay.png', name: 'PicPay' },
+            { url: '/images/connectors/gmail.png', name: 'Gmail' },
           ]}
           text="Busque os pedidos faturados e registre os boletos no gateway de pagamento e envie para o cliente."
         />
@@ -117,24 +117,24 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/ads.png', name: 'Google Ads' },
-            { url: '/connectors/instagram.png', name: 'Instagram' },
-            { url: '/connectors/facebook-ads.png', name: 'Facebook Ads' },
+            { url: '/images/connectors/ads.png', name: 'Google Ads' },
+            { url: '/images/connectors/instagram.png', name: 'Instagram' },
+            { url: '/images/connectors/facebook-ads.png', name: 'Facebook Ads' },
           ]}
           text="Busque performance de campanhas e conversões e envie para seu B.I."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/facebook.png', name: 'Facebook' },
-            { url: '/connectors/instagram.png', name: 'Instagram' },
-            { url: '/connectors/rd-station.png', name: 'RD Station' },
+            { url: '/images/connectors/facebook.png', name: 'Facebook' },
+            { url: '/images/connectors/instagram.png', name: 'Instagram' },
+            { url: '/images/connectors/rd-station.png', name: 'RD Station' },
           ]}
           text="Capture novos leads nos canais de marketing e crie um novo lead no RD Station Marketing."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/shopify.png', name: 'Shopify' },
-            { url: '/connectors/rd-station.png', name: 'RD Station' },
+            { url: '/images/connectors/shopify.png', name: 'Shopify' },
+            { url: '/images/connectors/rd-station.png', name: 'RD Station' },
           ]}
           text="A cada pedido criado no Shopify, crie um lead no RD Station Marketing."
         />
@@ -180,16 +180,16 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/ads.png', name: 'Google Ads' },
-            { url: '/connectors/pipedrive.png', name: 'Pipedrive' },
-            { url: '/connectors/clicksign.png', name: 'ClickSign' },
+            { url: '/images/connectors/ads.png', name: 'Google Ads' },
+            { url: '/images/connectors/pipedrive.png', name: 'Pipedrive' },
+            { url: '/images/connectors/clicksign.png', name: 'ClickSign' },
           ]}
           text="Capture leads ganhos e envie o contrato para assinatura eletrônica."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/rd-station.png', name: 'RD Station' },
-            { url: '/connectors/salesforce.png', name: 'Salesforce' },
+            { url: '/images/connectors/rd-station.png', name: 'RD Station' },
+            { url: '/images/connectors/salesforce.png', name: 'Salesforce' },
           ]}
           text="Busque os novos leads no RD Station Marketing e crie o lead no CRM."
         />
@@ -235,9 +235,9 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/gupy.png', name: 'Gupy' },
-            { url: '/connectors/senior.png', name: 'Senior' },
-            { url: '/connectors/vr.png', name: 'VR' },
+            { url: '/images/images/connectors/gupy.png', name: 'Gupy' },
+            { url: '/images/images/connectors/senior.png', name: 'Senior' },
+            { url: '/images/images/connectors/vr.png', name: 'VR' },
           ]}
           text="Busque os colaboradores contratados na Gupy e as envie para o setor de RH na Senior e solicite a criação do vale alimentação na VR."
         />
@@ -294,8 +294,8 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/totvs.png', name: 'Totvs' },
-            { url: '/connectors/vtex.png', name: 'Vtex' },
+            { url: '/images/connectors/totvs.png', name: 'Totvs' },
+            { url: '/images/connectors/vtex.png', name: 'Vtex' },
           ]}
           text="Capture os produtos, estoque e preço e atualize no seu e-Commerce."
         />
@@ -309,8 +309,8 @@ export const solutionsPage = {
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/magento.png', name: 'Magento' },
-            { url: '/connectors/hubspot.png', name: 'Hubspot' },
+            { url: '/images/connectors/magento.png', name: 'Magento' },
+            { url: '/images/connectors/hubspot.png', name: 'Hubspot' },
           ]}
           text="Envio de clientes do e-Commerce ao CRM."
         />
@@ -388,23 +388,23 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/omie.png', name: 'Omie' },
-            { url: '/connectors/superlogica.png', name: 'Superlógica' },
+            { url: '/images/connectors/omie.png', name: 'Omie' },
+            { url: '/images/connectors/superlogica.png', name: 'Superlógica' },
           ]}
           text="Registro de recebimento e contas a receber."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/senior.png', name: 'Senior' },
-            { url: '/connectors/zenvia.png', name: 'Zenvia' },
+            { url: '/images/connectors/senior.png', name: 'Senior' },
+            { url: '/images/connectors/zenvia.png', name: 'Zenvia' },
           ]}
           text="Envio de SMS para clientes inadimplentes."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/sap-one.png', name: 'SAP' },
-            { url: '/connectors/picpay.png', name: 'PicPay' },
-            { url: '/connectors/gmail.png', name: 'Gmail' },
+            { url: '/images/connectors/sap-one.png', name: 'SAP' },
+            { url: '/images/connectors/picpay.png', name: 'PicPay' },
+            { url: '/images/connectors/gmail.png', name: 'Gmail' },
           ]}
           text="Busque os pedidos faturados e registre os boletos no gateway de pagamento e envie para o cliente."
         />
@@ -488,16 +488,16 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/totvs.png', name: 'Totvs' },
-            { url: '/connectors/shopify.png', name: 'Shopify' },
-            { url: '/connectors/frete.png', name: 'Frete Rápido' },
+            { url: '/images/connectors/totvs.png', name: 'Totvs' },
+            { url: '/images/connectors/shopify.png', name: 'Shopify' },
+            { url: '/images/connectors/frete.png', name: 'Frete Rápido' },
           ]}
           text="Busque todas as DANFEs no seu ERP e atualize o status do pedido para faturado no seu e-commerce e as envie para o setor de logística."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/correios.png', name: 'Correios' },
-            { url: '/connectors/magento.png', name: 'Magento' },
+            { url: '/images/connectors/correios.png', name: 'Correios' },
+            { url: '/images/connectors/magento.png', name: 'Magento' },
           ]}
           text="Atualização de tracking code."
         />
