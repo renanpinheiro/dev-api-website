@@ -101,6 +101,14 @@ export const ContainerItegration = styled.div`
     text-align: left;
   }
 `
+export const ContainerCallToAction = styled.div`
+  padding: 10vh 8vw 0 8vw;
+  @media (max-width: 900px) {
+    align-items: flex-start;
+
+    text-align: left;
+  }
+`
 export const CarrouselTitle = styled.h2`
   color: ${theme.colors.primary};
   @media (max-width: 996px) {

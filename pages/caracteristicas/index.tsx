@@ -40,6 +40,7 @@ const Characteristics = () => {
             />
           </S.HeroContent>
         </Hero>
+
         <S.IntegrationContainer>
           {integrations.map((integration, index) => {
             const isOddNumber = validateOddNumber(index)

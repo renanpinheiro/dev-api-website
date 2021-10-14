@@ -38,7 +38,7 @@ const MultiCarrouselWithOutSSR = dynamic(
 
 const Plans = () => {
   const cards: ICardPlanItems[] = cardPlanItems
-  const listItegration = listIntegration
+
   const listQuestions = commonQuestions
   const { width } = useWindowDimensions()
   const isMobile = width <= 1024
@@ -95,9 +95,10 @@ const Plans = () => {
               />
             )}
           </S.CostumersCarrouselContainer>
+          <S.ContainerCallToAction>
+            <CallToAction />
+          </S.ContainerCallToAction>
         </S.ContainerItegration>
-
-        <CallToAction />
 
         <S.QuoteContainer>
           <QuoteCarousel quotes={quotes} />
@@ -120,7 +121,7 @@ const Plans = () => {
               href="/free-trial"
               target="_self"
               type="default"
-              size="large"
+              size="small"
             />
           </S.ButtonContainer>
         </S.ListIntegrationContainer>
@@ -142,7 +143,7 @@ const Plans = () => {
               href="/free-trial"
               target="_self"
               type="default"
-              size="large"
+              size="small"
             />
           </S.ButtonContainer>
         </S.AcordionContainer>

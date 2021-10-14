@@ -10,7 +10,7 @@ const MultiCarrousel = ({
   items,
   title,
   interval,
-  itemsPerSlide = 9,
+  itemsPerSlide = 10,
   itemsPerScroll = 1,
 }: IMultiCarrouselProps) => {
   return (

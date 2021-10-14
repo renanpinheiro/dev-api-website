@@ -134,7 +134,7 @@ export const Founders = styled.div`
 
 export const Card = styled.div`
   display: flex;
-  flex-basis: 450px;
+  flex-basis: 350px;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 1;
@@ -145,6 +145,10 @@ export const Card = styled.div`
 
   @media (max-width: 768px) {
     margin: 3vh 0;
+  }
+
+  @media (min-width: 1600px) {
+    flex-basis: 450px;
   }
 
   > img {
