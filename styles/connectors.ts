@@ -79,9 +79,9 @@ export const HeroContent = styled.div`
 
   > p {
     width: 42%;
-    margin: 3vh 0;
+    margin: 3vh 0 4vh;
     font-size: 1.375rem;
-    line-height: 3vh;
+    line-height: 1.3;
 
     @media (max-width: 996px) {
       width: 100%;
@@ -196,6 +196,7 @@ export const Card = styled.div`
   > span {
     width: 100%;
     overflow: hidden;
+    font-size: 0.75rem;
     text-align: center;
     white-space: nowrap;
   }

@@ -41,59 +41,85 @@ export const ImageContainer = styled.div`
 export const ProfessionalServiceText = styled.div`
   width: 35vw;
 
-  h2 {
-    max-width: 25ch;
-
-    margin-bottom: 15px;
-    font-size: 5vh;
-
-    span {
-      font-weight: 700;
-    }
-
-    @media (max-width: 1600px) {
-      font-size: 2.5vw;
-    }
-
-    @media (max-width: 1200px) {
-      font-size: 4vh;
-    }
-  }
-
-  p {
-    max-width: 70ch;
-    line-height: 1.7;
-
-    @media (max-width: 1600px) {
-      max-width: 50ch;
-    }
-  }
-
   @media (max-width: 1200px) {
     width: 100%;
+  }
+
+  > h2 {
+    max-width: 25ch;
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+    line-height: 1;
+
+    @media (max-width: 996px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 98%;
+      font-size: 3.25rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+
+  > p {
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 1.3;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 1.375rem;
+      width: 96%;
+    }
+  }
+`
+
+export const Pipe = styled.div`
+  width: 15vh;
+  height: 3px;
+  margin-bottom: 10px;
+  background-color: ${theme.colors.secondary};
+
+  @media (max-width: 576px) {
+    width: 8vh;
   }
 `
 
 export const CheckContainer = styled.div`
   display: flex;
   align-items: center;
-
   margin-top: 30px;
   margin-bottom: 30px;
 
-  p {
-    margin-left: 20px;
+  @media (max-width: 996px) {
+    align-items: flex-start;
   }
-`
 
-export const Pipe = styled.div`
-  width: 10vh;
-  height: 3px;
-  margin-bottom: 10px;
+  > img {
+    padding-right: 10px;
+    width: 5vh;
+    height: auto;
+  }
 
-  background-color: ${theme.colors.secondary};
+  > p {
+    font-size: 1.25rem;
+    line-height: 1.3;
 
-  @media (max-width: 576px) {
-    width: 8vh;
+    @media (max-width: 996px) {
+      font-size: 1.25rem;
+      line-height: 1.1;
+    }
+
+    @media (max-width: 1600px) {
+      font-size: 1.375rem;
+    }
   }
 `

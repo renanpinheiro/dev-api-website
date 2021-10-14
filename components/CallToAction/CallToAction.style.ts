@@ -25,19 +25,19 @@ export const Wrapper = styled.div`
 
   > a {
     padding: 0.75rem 1.75rem;
-    background-color: ${theme.colors.green[100]};
     font-size: 1.5rem;
     font-weight: 700;
-    border-radius: 5px;
     color: #fff;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
     text-align: center;
+    text-decoration: none;
+    background-color: ${theme.colors.green[100]};
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 
     @media (max-width: 1024px) {
       width: 100%;
-      margin-top: 1vh;
       padding: 1rem 0;
+      margin-top: 1vh;
       font-size: 1.25rem;
     }
 
@@ -49,7 +49,6 @@ export const Wrapper = styled.div`
 
 export const Title = styled.div`
   flex-basis: 23vw;
-
   > hr {
     width: 7.5vw;
     height: 3px;
@@ -59,6 +58,9 @@ export const Title = styled.div`
     opacity: 1;
 
     @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: 25vw;
     }
   }
@@ -68,6 +70,9 @@ export const Title = styled.div`
     color: ${theme.colors.primary};
 
     @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       font-size: 2rem;
     }
 

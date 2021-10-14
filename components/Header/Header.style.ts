@@ -38,6 +38,9 @@ export const LogoContainer = styled.div`
   align-items: center;
   width: 10vw;
   height: 100%;
+  @media (max-width: 450px) {
+    padding-top: 2vh;
+  }
 `
 
 export const ButtonContainer = styled.div`
@@ -53,8 +56,8 @@ export const ButtonContainer = styled.div`
 `
 
 export const Logo = styled.img`
-  height: 100%;
   width: 100px;
+  height: 100%;
   padding: 2vh 0 2vh 0;
   cursor: pointer;
 `

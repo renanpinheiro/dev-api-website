@@ -105,13 +105,18 @@ export const ButtonNewsLetter = styled.button`
 `
 
 export const Message = styled.div<IColorNotificationStyle>`
-  padding: 10px;
+  left: 10vw;
+
+  padding: 1vh 1vw;
+
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+
   > small {
     font-size: 1rem;
     color: ${props => props.color || theme.colors.green[100]};
   }
 `
-
 export const CheckboxContainer = styled.div`
   display: flex;
   flex-direction: column;
