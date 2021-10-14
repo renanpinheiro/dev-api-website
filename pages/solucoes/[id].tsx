@@ -17,7 +17,6 @@ import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 
 import * as S from '../../styles/solutions'
-import Link from 'next/link'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),

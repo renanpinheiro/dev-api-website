@@ -68,18 +68,6 @@ export const HeroContent = styled.div`
   }
 `
 
-export const GifContainer = styled.div`
-  width: 54%;
-
-  @media (max-width: 900px) {
-    width: 100%;
-  }
-
-  > img {
-    width: 100%;
-  }
-`
-
 export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
@@ -92,36 +80,55 @@ export const Pipe = styled.div`
   }
 `
 
+export const GifContainer = styled.div`
+  width: 54%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+
+  > img {
+    width: 100%;
+  }
+`
+
 export const Content = styled.section`
   width: 100%;
 `
 
 export const Carrousel = styled.section`
   width: 100%;
-  padding: 10vh 8vh 0 8vw;
-  background-size: 76%;
+  padding: 10vh 5.5vw 6vh;
+  background-size: 100%;
 `
 
-export const CarrouselTitle = styled.h2`
-  font-size: 2.625rem;
-  color: ${theme.colors.primary};
+export const CarrouselTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
 
-  @media (max-width: 576px) {
-    margin-top: 10px;
+  > h2 {
     font-size: 2.25rem;
-  }
+    color: ${theme.colors.primary};
 
-  @media (min-width: 1600px) {
-    font-size: 3rem;
-  }
+    @media (max-width: 576px) {
+      margin-top: 10px;
+    }
 
-  > b {
-    font-weight: 700;
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
   }
 `
 
 export const Quote = styled.div`
-  padding: 10vh 3vw 0 5vw;
+  padding: 15vh 3vw 5vh 5vw;
 `
 
 export const PlatformContainer = styled.div`
@@ -144,7 +151,11 @@ export const Platform = styled.div`
   > h2 {
     max-width: 20ch;
     margin-bottom: 15px;
-    font-size: 5vh;
+    font-size: 2.25rem;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
 
     span {
       font-weight: 700;
@@ -235,9 +246,13 @@ export const BusinessContainer = styled.div`
 
   > h2 {
     margin-bottom: 15px;
-    font-size: 3.25rem;
+    font-size: 2.25rem;
 
-    span {
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+
+    b {
       font-weight: 700;
     }
   }
@@ -342,7 +357,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 10vh 8vw 0 8vw;
+  padding: 0 8vw 0 8vw;
 `
 
 export const FeaturesContainer = styled.div`
@@ -353,15 +368,18 @@ export const FeaturesContainer = styled.div`
   padding: 10vh 8vw 0 8vw;
   text-align: center;
 
-  h2 {
-    margin-bottom: 15px;
-    font-size: 5vh;
+  > h2 {
+    font-size: 2.25rem;
     font-weight: 700;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
   }
 
-  p {
+  > p {
     max-width: 120ch;
-    margin-bottom: 15px;
+    margin-top: 2vh;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.3;
@@ -377,18 +395,28 @@ export const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 51vw;
+  width: 65vw;
+  margin-top: 7vh;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     width: 100%;
+  }
+
+  @media (min-width: 1600px) {
+    width: 51vw;
   }
 `
 
 export const FeatureCard = styled.div`
   display: flex;
   align-items: center;
-  margin: 2vh;
+  margin: 0 2vh 7vh;
   text-align: left;
+
+  @media (max-width: 996px) {
+    align-items: flex-start;
+    margin: 0 0 7vh;
+  }
 `
 
 export const Icon = styled.div`
@@ -400,8 +428,14 @@ export const Icon = styled.div`
   background-color: ${theme.colors.gray[100]};
   border-radius: 5px;
 
+  @media (max-width: 996px) {
+    width: 13vh;
+    height: 10vh;
+  }
+
   img {
     width: 60%;
+    padding: 2px;
   }
 `
 
@@ -410,18 +444,19 @@ export const Text = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-
   margin-left: 15px;
+  font-size: 1.25rem;
 
-  p {
+  > p {
     max-width: 28ch;
     margin: 0;
-    line-height: 1;
+    line-height: 1.2;
   }
-`
 
-export const Title = styled.p`
-  font-weight: 700;
+  > b {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
 `
 
 export const CallToActionContainer = styled.div`
