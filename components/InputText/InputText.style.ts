@@ -62,6 +62,14 @@ export const Textarea = styled.textarea<IInputStyles>`
   border-color: ${theme.colors.gray[400]};
   border-radius: 5px;
 
+  :focus-visible {
+    outline: none;
+  }
+
+  :focus {
+    border-color: ${theme.colors.gray[700]};
+  }
+
   ${({ hasError }) =>
     hasError &&
     css`
