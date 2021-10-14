@@ -7,7 +7,6 @@ import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 
 import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
-import QuoteCarousel from '../../components/QuoteCarousel'
 
 import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
@@ -17,8 +16,6 @@ import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
 
 import * as S from '../../styles/home'
-
-import Link from 'next/link'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -83,8 +80,11 @@ const Home = () => {
               items={constumersMobile}
               title={
                 <S.CarrouselTitle>
-                  Empresas que já desbloquearam o{' '}
-                  <b>poder da integração de sistemas</b>
+                  <S.Pipe />
+                  <h2>
+                    Empresas que já desbloquearam o{' '}
+                    <b>poder da integração de sistemas</b>
+                  </h2>
                 </S.CarrouselTitle>
               }
             />
@@ -94,8 +94,11 @@ const Home = () => {
               items={costumers}
               title={
                 <S.CarrouselTitle>
-                  Empresas que já desbloquearam o{' '}
-                  <b>poder da integração de sistemas</b>
+                  <S.Pipe />
+                  <h2>
+                    Empresas que já desbloquearam o{' '}
+                    <b>poder da integração de sistemas</b>
+                  </h2>
                 </S.CarrouselTitle>
               }
             />
@@ -140,7 +143,7 @@ const Home = () => {
           <S.Pipe />
           <h2>
             Prepare-se para
-            <span> transformar a sua empresa</span>
+            <b> transformar a sua empresa</b>
           </h2>
           <p>
             À medida que os negócios crescem, a complexidade da operação aumenta
@@ -199,7 +202,7 @@ const Home = () => {
                     <img src={item.icon} />
                   </S.Icon>
                   <S.Text>
-                    <S.Title>{item.title}</S.Title>
+                    <b>{item.title}</b>
                     <p>{item.text}</p>
                   </S.Text>
                 </S.FeatureCard>
@@ -214,19 +217,26 @@ const Home = () => {
               items={connectorsMobile}
               title={
                 <S.CarrouselTitle>
-                  Mais de 300 conectores pré-construídos{' '}
-                  <b>e prontos para uso</b>
+                  <S.Pipe />
+                  <h2>
+                    <b> Mais de 300 conectores</b> pré-construídos e prontos
+                    para uso
+                  </h2>
                 </S.CarrouselTitle>
               }
             />
           ) : (
             <MultiCarrouselWithOutSSR
+              itemsPerSlide={9}
               interval={2000}
               items={connectors}
               title={
                 <S.CarrouselTitle>
-                  <b> Mais de 300 conectores</b> pré-construídos e prontos para
-                  uso
+                  <S.Pipe />
+                  <h2>
+                    <b> Mais de 300 conectores</b> pré-construídos e prontos
+                    para uso
+                  </h2>
                 </S.CarrouselTitle>
               }
             />
@@ -244,7 +254,7 @@ const Home = () => {
         </S.ButtonContainer>
 
         <S.Quote>
-          <QuoteCarousel quotes={quotes} />
+          <QuoteCarouselWithOutSSR quotes={quotes} />
         </S.Quote>
 
         <S.CallToActionContainer>

@@ -1,70 +1,70 @@
 export const connectors = [
   {
-    url: '/connectors/sap.png',
+    url: '/images/connectors/sap-one.png',
   },
   {
-    url: '/connectors/oracle.png',
+    url: '/images/connectors/oracle.png',
   },
   {
-    url: '/connectors/hubspot.png',
+    url: '/images/connectors/hubspot.png',
   },
   {
-    url: '/connectors/pipefy.png',
+    url: '/images/connectors/correios.png',
   },
   {
-    url: '/connectors/salesforce.png',
+    url: '/images/connectors/picpay.png',
   },
   {
-    url: '/connectors/totvs.png',
+    url: '/images/connectors/totvs-black.png',
   },
   {
-    url: '/connectors/vtex.png',
+    url: '/images/connectors/vtex.png',
   },
   {
-    url: '/connectors/magalu.png',
+    url: '/images/connectors/magalu.png',
   },
   {
-    url: '/connectors/shipay.png',
+    url: '/images/connectors/shipay.png',
   },
 ]
 
 export const connectorsMobile = {
   3: [
     {
-      1: '/connectors/sap.png',
-      2: '/connectors/oracle.png',
-      3: '/connectors/hubspot.png',
+      1: '/images/connectors/sap-one.png',
+      2: '/images/connectors/oracle.png',
+      3: '/images/connectors/hubspot.png',
     },
     {
-      1: '/connectors/pipefy.png',
-      2: '/connectors/salesforce.png',
-      3: '/connectors/totvs.png',
+      1: '/images/connectors/correios.png',
+      2: '/images/connectors/picpay.png',
+      3: '/images/connectors/totvs-black.png',
     },
     {
-      1: '/connectors/vtex.png',
-      2: '/connectors/magalu.png',
-      3: '/connectors/shipay.png',
+      1: '/images/connectors/vtex.png',
+      2: '/images/connectors/magalu.png',
+      3: '/images/connectors/shipay.png',
     },
   ],
   2: [
     {
-      1: '/connectors/sap.png',
-      2: '/connectors/oracle.png',
+      1: '/images/connectors/sap-one.png',
+      2: '/images/connectors/oracle.png',
     },
     {
-      1: '/connectors/hubspot.png',
-      2: '/connectors/pipefy.png',
+      1: '/images/connectors/hubspot.png',
+      2: '/images/connectors/correios.png',
     },
     {
-      1: '/connectors/salesforce.png',
-      2: '/connectors/totvs.png',
+      1: '/images/connectors/picpay.png',
+      2: '/images/connectors/totvs-black.png',
     },
     {
-      1: '/connectors/vtex.png',
-      2: '/connectors/magalu.png',
+      1: '/images/connectors/vtex.png',
+      2: '/images/connectors/magalu.png',
     },
     {
-      1: '/connectors/shipay.png',
+      1: '/images/connectors/shipay.png',
     },
   ],
 }

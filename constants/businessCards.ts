@@ -5,13 +5,14 @@ export const businessCards = [
     link: '/solucoes/gestao',
     connectors: [
       {
-        urlImage: '/connectors/sap.png',
+        urlImage: '/images/connectors/sap.png',
       },
       {
-        urlImage: '/connectors/oracle.png',
+        urlImage: '/images/connectors/oracle.png',
       },
       {
-        urlImage: '/connectors/totvs-black.png',
+        urlImage:
+          '/images/connectors/images/connectors/images/connectors/totvs-black.png',
       },
     ],
   },
@@ -21,13 +22,13 @@ export const businessCards = [
     link: '/solucoes/comercial',
     connectors: [
       {
-        urlImage: '/connectors/salesforce.png',
+        urlImage: '/images/connectors/salesforce.png',
       },
       {
-        urlImage: '/connectors/pipedrive.png',
+        urlImage: '/images/connectors/pipedrive.png',
       },
       {
-        urlImage: '/connectors/meetime.png',
+        urlImage: '/images/connectors/meetime.png',
       },
     ],
   },
@@ -37,13 +38,13 @@ export const businessCards = [
     link: '/solucoes/e-commerce',
     connectors: [
       {
-        urlImage: '/connectors/vtex.png',
+        urlImage: '/images/connectors/vtex.png',
       },
       {
-        urlImage: '/connectors/magalu.png',
+        urlImage: '/images/connectors/magalu.png',
       },
       {
-        urlImage: '/connectors/b2w.png',
+        urlImage: '/images/connectors/b2w.png',
       },
     ],
   },
@@ -53,13 +54,13 @@ export const businessCards = [
     link: '/solucoes/financeiro',
     connectors: [
       {
-        urlImage: '/connectors/pix.png',
+        urlImage: '/images/connectors/pix.png',
       },
       {
-        urlImage: '/connectors/shipay.png',
+        urlImage: '/images/connectors/shipay.png',
       },
       {
-        urlImage: '/connectors/cielo.png',
+        urlImage: '/images/connectors/cielo.png',
       },
     ],
   },
@@ -69,13 +70,13 @@ export const businessCards = [
     link: '/solucoes/logistica',
     connectors: [
       {
-        urlImage: '/connectors/bsoft.png',
+        urlImage: '/images/connectors/bsoft.png',
       },
       {
-        urlImage: '/connectors/frete.png',
+        urlImage: '/images/connectors/frete.png',
       },
       {
-        urlImage: '/connectors/fedex.png',
+        urlImage: '/images/connectors/fedex.png',
       },
     ],
   },
@@ -85,13 +86,13 @@ export const businessCards = [
     link: '/solucoes/marketing',
     connectors: [
       {
-        urlImage: '/connectors/adwords.png',
+        urlImage: '/images/connectors/adwords.png',
       },
       {
-        urlImage: '/connectors/hubspot.png',
+        urlImage: '/images/connectors/hubspot.png',
       },
       {
-        urlImage: '/connectors/rd-station.png',
+        urlImage: '/images/connectors/rd-station.png',
       },
     ],
   },
@@ -101,13 +102,13 @@ export const businessCards = [
     link: '/solucoes/rh',
     connectors: [
       {
-        urlImage: '/connectors/gupy.png',
+        urlImage: '/images/connectors/gupy.png',
       },
       {
-        urlImage: '/connectors/senior.png',
+        urlImage: '/images/connectors/senior.png',
       },
       {
-        urlImage: '/connectors/vr.png',
+        urlImage: '/images/connectors/vr.png',
       },
     ],
   },
