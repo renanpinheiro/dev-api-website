@@ -48,9 +48,9 @@ export const HeroContent = styled.div`
   }
 
   > p {
-    width: 70%;
+    width: 80%;
     margin: 3vh 0;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
@@ -84,28 +84,34 @@ export const Inovation = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   height: 100%;
-
   padding: 25px;
   margin-bottom: 10vh;
-
   text-align: center;
-
-  h3 {
-    margin-bottom: 15px;
-    font-size: 5vh;
-
-    span {
-      font-weight: 700;
-    }
-  }
 
   @media (max-width: 576px) {
     align-items: flex-start;
     text-align: left;
     background-size: 100%;
+  }
+
+  > h3 {
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+
+    @media (max-width: 996px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 98%;
+      font-size: 3.25rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
   }
 `
 
@@ -154,48 +160,47 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
   width: 35vw;
 
-  h2 {
-    max-width: 25ch;
+  @media (max-width: 1200px) {
+    justify-content: center;
+    width: 100%;
+    max-width: 90ch;
+  }
 
-    margin-bottom: 15px;
-    font-size: 5vh;
+  > h2 {
+    width: 100%;
+    font-size: 2.375rem;
+    line-height: 1;
 
-    span {
+    @media (max-width: 996px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 98%;
+      font-size: 3.25rem;
+    }
+
+    > b {
       font-weight: 700;
-    }
-
-    @media (max-width: 1600px) {
-      font-size: 2.5vw;
-    }
-
-    @media (max-width: 1200px) {
-      font-size: 4vh;
     }
   }
 
   > p {
-    max-width: 70ch;
-    font-size: 1.375rem;
-    line-height: 1.5;
+    width: 100%;
+    margin-top: 3vh;
+    font-size: 1.25rem;
+    line-height: 1.3;
 
     @media (max-width: 996px) {
+      width: 100%;
       font-size: 1.25rem;
-      line-height: 1.2;
     }
 
-    @media (max-width: 1600px) {
-      max-width: 50ch;
+    @media (min-width: 1600px) {
+      width: 96%;
+      font-size: 1.375rem;
     }
-  }
-
-  @media (max-width: 1200px) {
-    justify-content: center;
-
-    width: 100%;
-
-    max-width: 90ch;
   }
 `
