@@ -412,6 +412,11 @@ export const FeatureCard = styled.div`
   align-items: center;
   margin: 0 2vh 7vh;
   text-align: left;
+
+  @media (max-width: 996px) {
+    align-items: flex-start;
+    margin: 0 0 7vh;
+  }
 `
 
 export const Icon = styled.div`
@@ -422,6 +427,11 @@ export const Icon = styled.div`
   height: 8vh;
   background-color: ${theme.colors.gray[100]};
   border-radius: 5px;
+
+  @media (max-width: 996px) {
+    width: 13vh;
+    height: 10vh;
+  }
 
   img {
     width: 60%;
