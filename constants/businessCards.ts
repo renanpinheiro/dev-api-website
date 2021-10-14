@@ -11,7 +11,8 @@ export const businessCards = [
         urlImage: '/images/connectors/oracle.png',
       },
       {
-        urlImage: '/images/connectors/images/connectors/images/connectors/totvs-black.png',
+        urlImage:
+          '/images/connectors/images/connectors/images/connectors/totvs-black.png',
       },
     ],
   },
