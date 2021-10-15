@@ -79,7 +79,7 @@ export const Subtitle = styled.p`
 
 export const Content = styled.div`
   position: relative;
-  z-index: 7;
+  z-index: 13;
   width: 100%;
   margin-top: 30px;
   background-color: white;
