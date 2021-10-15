@@ -33,6 +33,7 @@ const FormPartner = () => {
       setMessage({ type: 'alert', message: 'Algo deu errado !' })
     }
   }
+
   const formik = useFormik({
     initialValues: {
       message: '',
@@ -45,6 +46,7 @@ const FormPartner = () => {
     validationSchema: schema,
     onSubmit,
   })
+
   useEffect(() => {
     setTimeout(() => {
       setMessage(undefined)
@@ -54,6 +56,7 @@ const FormPartner = () => {
   return (
     <S.Container>
       <S.TitleContainer>Seja um Parceiro DevApi!</S.TitleContainer>
+
       <FormikProvider value={formik}>
         <form onSubmit={formik.handleSubmit}>
           <S.InputContainer>

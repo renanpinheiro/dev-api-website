@@ -80,9 +80,10 @@ const IntegrationPartner = () => {
         <S.KnowPatnersContainer>
           <S.Pipe />
           <h2>
-            Conheça <span>nossos parceiros</span>
+            Conheça <b>nossos parceiros</b>
           </h2>
         </S.KnowPatnersContainer>
+
         <S.CardPatnerContainer>
           {knowPatners.map((patners, index) => {
             return (
@@ -90,6 +91,7 @@ const IntegrationPartner = () => {
                 <S.Pipe />
                 <img src={patners.imgage} />
                 <p>{patners.text}</p>
+
                 {patners.subText.map((text, idx) => {
                   return (
                     <S.SubtextContainer key={idx}>
@@ -103,10 +105,11 @@ const IntegrationPartner = () => {
             )
           })}
         </S.CardPatnerContainer>
+
         <S.FeatureContainer>
           <S.Pipe />
           <h2>
-            Benefícios <span>do programa</span>
+            Benefícios <b>do programa</b>
           </h2>
 
           <S.Features>
@@ -125,26 +128,32 @@ const IntegrationPartner = () => {
             })}
           </S.Features>
         </S.FeatureContainer>
+
         <S.CornerContainer>
           <S.TextContainer>
             <S.Pipe />
             <h2>
               Faça parceria com a DevApi para fornecer uma plataforma de{' '}
-              <span>integração de API </span> para seus clientes
+              <b>integração de API </b> para seus clientes
             </h2>
           </S.TextContainer>
-          <S.FormContaimer>
+
+          <S.FormContainer>
             <FormPartner />
-          </S.FormContaimer>
+          </S.FormContainer>
         </S.CornerContainer>
+
         <S.Carrousel>
           {isMobile ? (
             <CarrouselWithOutSSR
               items={constumersMobile}
               title={
                 <S.CarrouselTitle>
-                  Empresas que já desbloquearam o{' '}
-                  <span>poder da integração de sistemas</span>
+                  <S.Pipe />
+                  <h2>
+                    Empresas que já desbloquearam o{' '}
+                    <b>poder da integração de sistemas</b>
+                  </h2>
                 </S.CarrouselTitle>
               }
             />
@@ -154,8 +163,11 @@ const IntegrationPartner = () => {
               items={costumers}
               title={
                 <S.CarrouselTitle>
-                  Empresas que já desbloquearam o{' '}
-                  <span>poder da integração de sistemas</span>
+                  <S.Pipe />
+                  <h2>
+                    Empresas que já desbloquearam o{' '}
+                    <b>poder da integração de sistemas</b>
+                  </h2>
                 </S.CarrouselTitle>
               }
             />
