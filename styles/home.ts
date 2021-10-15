@@ -20,6 +20,7 @@ export const Hero = styled.section`
 `
 
 export const HeroContent = styled.div`
+  z-index: 13;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { theme } from './theme'
 
 export const Container = styled.div``
+
 export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -42,7 +43,7 @@ export const HeroContent = styled.div`
   > p {
     width: 70%;
     margin: 3vh 0;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;

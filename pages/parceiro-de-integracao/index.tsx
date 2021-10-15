@@ -1,15 +1,21 @@
 import React from 'react'
-import Head from 'next/head'
+
 import dynamic from 'next/dynamic'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-import { Hero } from '../../components/Hero'
+import Head from 'next/head'
+
 import { ButtonLink } from '../../components/ButtonLink'
-import * as S from '../../styles/integrationPartner'
+import { Hero } from '../../components/Hero'
+import { FormPartner } from '../../components/FormPartner'
+
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+
 import { cardPatnerImages } from '../../constants/cardPatnerImages'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
 import { constumersMobile, costumers } from '../../constants/costumers'
-import { FormPartner } from '../../components/FormPartner'
+
+import * as S from '../../styles/partner'
+
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
   {
@@ -28,11 +34,13 @@ const IntegrationPartner = () => {
   const { width } = useWindowDimensions()
 
   const isMobile = width <= 1024
+
   return (
     <>
       <Head>
-        <title>DevApi</title>
+        <title>Programa de parceiros | DevApi</title>
       </Head>
+
       <S.Container>
         <Hero>
           <S.HeroContent>
