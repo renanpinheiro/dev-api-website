@@ -1,11 +1,15 @@
 import React, { useState, useRef } from 'react'
+
 import { useOutSideClick } from './useOutSideClick'
+
 import { ISelectCollapsibleProps } from './SelectCollapsible.interface'
+
 import * as S from './SelectCollapsible.style'
 
 const SelectCollapsible = ({ question, answer }: ISelectCollapsibleProps) => {
   const [isActive, setIsActive] = useState(false)
   const clickRef = useRef()
+
   const handleActive = active => {
     setIsActive(active)
   }
@@ -21,9 +25,11 @@ const SelectCollapsible = ({ question, answer }: ISelectCollapsibleProps) => {
       </>
     )
   }
+
   useOutSideClick(clickRef, () => {
     if (isActive) setIsActive(false)
   })
+
   return (
     <>
       <S.Container ref={clickRef}>

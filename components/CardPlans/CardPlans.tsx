@@ -9,16 +9,13 @@ import { ICardPlanItems } from './CardPlans.interface'
 import * as S from './CardPlan.style'
 
 const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
-  const handleURL = (url: string) => {
-    location.href = url
-  }
-
   return (
     <S.CardsContainer>
       {cards.map((item, index) => {
         return (
           <S.Cards key={index}>
             <S.Icon src={item.imageUrl} />
+
             <S.TextContainer>
               <S.Title>{item.title}</S.Title>
               <S.Text>{item.text}</S.Text>

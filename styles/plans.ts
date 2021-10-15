@@ -69,18 +69,21 @@ export const QuestionsContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  h2 {
-    font-size: 3.2rem;
-    text-align: center;
-    @media (max-width: 900px) {
-      align-items: flex-start;
-      font-size: 2rem;
-      text-align: left;
-    }
-  }
+  > h2 {
+    font-size: 2.25rem;
+    color: ${theme.colors.primary};
 
-  span {
-    font-weight: 700;
+    @media (max-width: 576px) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
   }
 `
 export const Pipe = styled.div`
@@ -102,28 +105,41 @@ export const ContainerItegration = styled.div`
   }
 `
 export const ContainerCallToAction = styled.div`
-  padding: 10vh 8vw 0 8vw;
+  padding: 3vh 8vw 3vh 8vw;
   @media (max-width: 900px) {
     align-items: flex-start;
 
     text-align: left;
   }
 `
-export const CarrouselTitle = styled.h2`
-  color: ${theme.colors.primary};
-  @media (max-width: 996px) {
-    margin-top: 10px;
-    font-size: 1.375rem;
-    text-align: left;
-  }
+export const CarrouselTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
 
-  span {
-    font-weight: 700;
+  > h2 {
+    font-size: 2.25rem;
+    color: ${theme.colors.primary};
+
+    @media (max-width: 576px) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
   }
 `
+
 export const CostumersCarrouselContainer = styled.div`
   width: 100%;
-  padding: 10vh 8vh 0 8vw;
+  padding: 10vh 8vh 0;
   background-size: 76%;
 `
 
@@ -175,7 +191,7 @@ export const ListIntegrationTitle = styled.h2`
     text-align: left;
   }
 
-  span {
+  > b {
     font-weight: 700;
   }
 `

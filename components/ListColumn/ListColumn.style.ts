@@ -5,6 +5,7 @@ export const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 5vh 8vw 0 8vw;
 
   @media (max-width: 900px) {
@@ -14,33 +15,33 @@ export const ListContainer = styled.div`
 `
 export const ListColumn = styled.ul`
   column-count: 2;
-  @media (max-width: 900px) {
+  color: ${theme.colors.secondary};
+
+  @media (max-width: 996px) {
     column-count: 1;
     align-items: flex-start;
   }
-
-  color: ${theme.colors.secondary};
 `
 export const ListItem = styled.li`
   display: flex;
-
   align-self: center;
-  justify-self: center;
+  padding: 0 10vh;
+  width: 100%;
 
-  max-width: 45ch;
+  @media (max-width: 996px) {
+    padding: 0;
+  }
 
   :before {
     padding-right: 8px;
     font-size: 3rem;
-
     content: '•';
   }
 
-  span {
+  > span {
     padding-top: 10px;
-
-    font-size: 16px;
-    line-height: 2;
+    font-size: 1.375rem;
+    line-height: 1.5;
     color: ${theme.colors.primary};
   }
 `

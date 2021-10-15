@@ -29,6 +29,7 @@ const CarrouselWithOutSSR = dynamic(
     ssr: false,
   },
 )
+
 const MultiCarrouselWithOutSSR = dynamic(
   () => import('../../components/MultiCarrousel/MultiCarrousel'),
   {
@@ -37,11 +38,13 @@ const MultiCarrouselWithOutSSR = dynamic(
 )
 
 const Plans = () => {
-  const cards: ICardPlanItems[] = cardPlanItems
-
-  const listQuestions = commonQuestions
   const { width } = useWindowDimensions()
+
+  const cards: ICardPlanItems[] = cardPlanItems
+  const listQuestions = commonQuestions
+
   const isMobile = width <= 1024
+
   return (
     <>
       <Head>
@@ -62,6 +65,7 @@ const Plans = () => {
           </p>
         </S.HeroContent>
       </Hero>
+
       <S.Container>
         <S.CardContainer>
           <CardPlans cards={cards} />
@@ -72,13 +76,16 @@ const Plans = () => {
             <S.PipeContainer>
               <S.Pipe />
             </S.PipeContainer>
+
             {isMobile ? (
               <CarrouselWithOutSSR
                 items={constumersMobile}
                 title={
                   <S.CarrouselTitle>
-                    Empresas que ja desbloquearam o{' '}
-                    <span>poder da integração de sistemas.</span>
+                    <h2>
+                      Empresas que ja desbloquearam o{' '}
+                      <b>poder da integração de sistemas.</b>
+                    </h2>
                   </S.CarrouselTitle>
                 }
               />
@@ -88,13 +95,16 @@ const Plans = () => {
                 items={costumers}
                 title={
                   <S.CarrouselTitle>
-                    Empresas que ja desbloquearam o{' '}
-                    <span>poder da integração de sistemas.</span>
+                    <h2>
+                      Empresas que ja desbloquearam o{' '}
+                      <b>poder da integração de sistemas.</b>
+                    </h2>
                   </S.CarrouselTitle>
                 }
               />
             )}
           </S.CostumersCarrouselContainer>
+
           <S.ContainerCallToAction>
             <CallToAction />
           </S.ContainerCallToAction>
@@ -108,20 +118,22 @@ const Plans = () => {
           <S.PipeContainer>
             <S.Pipe />
           </S.PipeContainer>
+
           <S.ListIntegrationTitle>
-            <span>Reduza em até 20x o tempo</span> de ter toda a sua empresa
-            integrada
+            <b>Reduza em até 20x o tempo</b> de ter toda a sua empresa integrada
           </S.ListIntegrationTitle>
+
           <S.ListColumnContainer>
             <ListColumn list={listIntegration} />
           </S.ListColumnContainer>
+
           <S.ButtonContainer>
             <ButtonLink
               text="Quero integrar meus sistemas"
               href="/free-trial"
               target="_self"
               type="default"
-              size="small"
+              size="default"
             />
           </S.ButtonContainer>
         </S.ListIntegrationContainer>
@@ -132,9 +144,10 @@ const Plans = () => {
           </S.PipeContainer>
           <S.QuestionsContainer>
             <h2>
-              Perguntas <span>frequentes</span>
+              Perguntas <b>frequentes</b>
             </h2>
           </S.QuestionsContainer>
+
           <Acordion list={listQuestions} />
 
           <S.ButtonContainer>
@@ -143,7 +156,7 @@ const Plans = () => {
               href="/free-trial"
               target="_self"
               type="default"
-              size="small"
+              size="default"
             />
           </S.ButtonContainer>
         </S.AcordionContainer>

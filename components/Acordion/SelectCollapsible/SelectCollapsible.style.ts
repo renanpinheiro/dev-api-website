@@ -8,36 +8,42 @@ export const Container = styled.div`
   width: 100%;
   padding-top: 2rem;
 `
+
 export const Selectable = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  span {
-    font-size: 22px;
-    font-weight: 700;
-  }
   cursor: pointer;
   user-select: none;
+
+  > span {
+    font-size: 1.375rem;
+    font-weight: 700;
+
+    @media (max-width: 996px) {
+      font-size: 1.125rem;
+    }
+  }
 `
 export const SelectCollapsibleContainerUp = styled.div`
   width: 100%;
   height: auto;
   padding: 1.5rem;
-
   border: 2px solid ${theme.colors.gray[300]};
   border-radius: 5px;
   transition: all 0.3s linear;
 
-  img {
+  > img {
     transition: transform 0.6s ease;
   }
-  p {
+
+  > p {
     display: none;
     transition: transform 0.6s, display 1s ease;
   }
 
-  span {
+  > span {
     color: ${theme.colors.primary};
   }
 
@@ -47,6 +53,7 @@ export const SelectCollapsibleContainerUp = styled.div`
     }
   }
 `
+
 export const SelectCollapsibleContainerDown = styled.div`
   width: 100%;
   height: auto;
@@ -55,17 +62,25 @@ export const SelectCollapsibleContainerDown = styled.div`
   border-radius: 5px;
   transition: max-height 0.6s, padding 0.6s ease;
 
-  p {
+  > p {
+    font-size: 1.25rem;
+    line-height: 1.3;
     display: block;
     padding-top: 1.5rem;
     transition: max-height 0.6s, padding 0.6s ease;
+
+    @media (max-width: 996px) {
+      font-size: 1.125rem;
+    }
   }
-  img {
+
+  > img {
     transition: transform 0.6s ease;
 
     transform: rotate(180deg);
   }
-  span {
+
+  > span {
     color: ${theme.colors.secondary};
   }
 `
