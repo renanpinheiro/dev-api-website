@@ -57,6 +57,11 @@ export const RangeContainer = styled.div`
 
 export const Bolder = styled.span`
   font-weight: bold;
+
+  > a {
+    text-decoration: none;
+    color: ${theme.colors.primary};
+  }
 `
 export const StepsContainer = styled.div`
   width: 100%;

@@ -1,25 +1,34 @@
+import React, { useState } from 'react'
+
+import Link from 'next/link'
+import router from 'next/router'
+
+import axios from 'axios'
 import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
-import React, { useEffect, useState } from 'react'
+import * as Yup from 'yup'
+
 import { Button } from '../../components/Button'
 import { MultipleCheckbox } from '../../components/MultipleCheckbox'
 import { InputText } from '../../components/InputText'
-import { departaments } from '../../constants/departaments'
-import { employerRanges } from '../../constants/employerRanges'
 import { Checkbox } from '../../components/Checkbox'
 import { Select } from '../../components/Select'
 import { Steps } from '../../components/Steps'
-import axios from 'axios'
-import router from 'next/router'
+
+import { departaments } from '../../constants/departaments'
+import { employerRanges } from '../../constants/employerRanges'
+
 import {
   stepsDepartamentsForm,
   stepsLastForm,
   stepsPersonalForm,
 } from '../../constants/steps'
-import * as Yup from 'yup'
 import { roleOptions } from '../../constants/roleOptions'
-import * as S from './TrialForm.style'
+
 import { IFormStepperProps, ITrialFormProps } from './TrialForm.interface'
+
 import { removePhoneMask } from '../../utils/removePhoneMask'
+
+import * as S from './TrialForm.style'
 
 const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
   const leadsApi = axios.create({
@@ -268,7 +277,12 @@ const LastForm = ({}: Pick<
       <Checkbox
         label={
           <span>
-            Concordo com a <S.Bolder>Política de privacidade.</S.Bolder>
+            Concordo com a{' '}
+            <S.Bolder>
+              <Link href="/free-trial">
+                <a title="Política de privacidade">Política de privacidade.</a>
+              </Link>
+            </S.Bolder>
           </span>
         }
         name={'isPrivacyPolice'}
