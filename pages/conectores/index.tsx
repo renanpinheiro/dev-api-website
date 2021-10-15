@@ -79,7 +79,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
   return (
     <>
       <Head>
-        <title>Conectores | DevApi</title>
+        <title>DevApi | Conectores</title>
       </Head>
 
       <S.Hero>

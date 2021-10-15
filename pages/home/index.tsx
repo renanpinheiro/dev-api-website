@@ -46,7 +46,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Programa de parceiros | DevApi</title>
+        <title>DevApi | Integração de sistemas</title>
       </Head>
 
       <S.Hero>

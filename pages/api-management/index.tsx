@@ -14,7 +14,7 @@ const ApiManagement = () => {
   return (
     <>
       <Head>
-        <title>API Management confiável e seguro | DevApi</title>
+        <title>DevApi |  API Management</title>
       </Head>
 
       <S.Container>

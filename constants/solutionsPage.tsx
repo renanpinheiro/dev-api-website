@@ -19,7 +19,7 @@ export interface ISolutionPage {
 export const solutionsPage = {
   gestao: {
     seo: {
-      metaTitle: 'Soluções em Gestão | DevApi',
+      metaTitle: 'DevApi | Soluções em Gestão',
     },
     title: {
       text: 'Cada empresa enfrenta diferentes <b>desafios de gestão. Supere os seus!</b>',
@@ -79,7 +79,7 @@ export const solutionsPage = {
   },
   marketing: {
     seo: {
-      metaTitle: 'Soluções em Marketing | DevApi',
+      metaTitle: 'DevApi | Soluções em Marketing',
     },
     title: {
       text: '<b>Marketing integrado impulsionando</b> a sua empresa no mercado',
@@ -146,7 +146,7 @@ export const solutionsPage = {
   },
   comercial: {
     seo: {
-      metaTitle: 'Soluções comerciais | DevApi',
+      metaTitle: 'DevApi | Soluções comerciais',
     },
     title: {
       text: '<b>Impulsione as vendas da sua empresa </b> integrando os sistemas',
@@ -201,7 +201,7 @@ export const solutionsPage = {
   },
   rh: {
     seo: {
-      metaTitle: 'Soluções em RH | DevApi',
+      metaTitle: 'DevApi | Soluções em RH',
     },
     title: {
       text: 'RH 4.0: Sua empresa está preparada para os <b>novos desafios na gestão de pessoas?</b>',
@@ -256,7 +256,7 @@ export const solutionsPage = {
   },
   'e-commerce': {
     seo: {
-      metaTitle: 'Soluções em e-commerce | DevApi',
+      metaTitle: 'DevApi | Soluções em e-commerce',
     },
     title: {
       text: '<b>Venda 24h por dia, 7 dias por semana</b> com seu e-commerce automatizado',
@@ -322,7 +322,7 @@ export const solutionsPage = {
   },
   'empresas-360': {
     seo: {
-      metaTitle: 'Soluções para Empresas | DevApi',
+      metaTitle: 'DevApi | Soluções para Empresas',
     },
     title: {
       text: 'A qualquer momento, em qualquer lugar: <b>tudo integrado!</b>',
@@ -356,7 +356,7 @@ export const solutionsPage = {
   },
   financeiro: {
     seo: {
-      metaTitle: 'Soluções Financeiras | DevApi',
+      metaTitle: 'DevApi | Soluções Financeiras',
     },
     title: {
       text: '<b>Gestão financeira de alta performance</b> para sua empresa',
@@ -416,7 +416,7 @@ export const solutionsPage = {
   },
   'seu-produto': {
     seo: {
-      metaTitle: 'Soluções para seu produto | DevApi',
+      metaTitle: 'DevApi | Soluções para seu produto',
     },
     title: {
       text: 'Torne o seu produto <b>líder de mercado</b>',
@@ -453,7 +453,7 @@ export const solutionsPage = {
   },
   logistica: {
     seo: {
-      metaTitle: 'Soluções em Logística | DevApi',
+      metaTitle: 'DevApi | Soluções em Logística',
     },
     title: {
       text: 'Logística 4.0: Sua empresa está preparada <b>para essa transformação?</b>',

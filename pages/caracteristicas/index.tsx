@@ -15,7 +15,7 @@ const Characteristics = () => {
   return (
     <>
       <Head>
-        <title>Integrações inteligentes para todos os setores | DevApi</title>
+        <title>DevApi | Características</title>
       </Head>
 
       <S.Container>

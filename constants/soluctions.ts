@@ -4,7 +4,7 @@ export const soluctions = [
     url: '/solucoes/gestao',
   },
   {
-    name: 'Comerical',
+    name: 'Comercial',
     url: '/solucoes/comercial',
   },
   {
