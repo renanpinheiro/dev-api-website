@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Sobre nós | DevApi</title>
+        <title>DevApi | Sobre nós</title>
       </Head>
 
       <Hero minHeight={40} maxHeight={65}>

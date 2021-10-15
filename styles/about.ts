@@ -112,6 +112,7 @@ export const Title = styled.div`
 export const Text = styled.div`
   align-items: flex-start;
   justify-items: flex-start;
+  margin-top: 2vh;
 
   > p {
     margin-bottom: 1vw;

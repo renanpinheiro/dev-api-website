@@ -238,16 +238,16 @@ export const solutionsPage = {
       <>
         <ConnectorsCard
           connectors={[
-            { url: '/images/images/connectors/gupy.png', name: 'Gupy' },
-            { url: '/images/images/connectors/senior.png', name: 'Senior' },
-            { url: '/images/images/connectors/vr.png', name: 'VR' },
+            { url: '/images/connectors/gupy.png', name: 'Gupy' },
+            { url: '/images/connectors/senior.png', name: 'Senior' },
+            { url: '/images/connectors/vr.png', name: 'VR' },
           ]}
           text="Busque os colaboradores contratados na Gupy e as envie para o setor de RH na Senior e solicite a criação do vale alimentação na VR."
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/solides.png', name: 'Sólides' },
-            { url: '/connectors/linkedin.png', name: 'Linkedin' },
+            { url: '/images/connectors/solides.png', name: 'Sólides' },
+            { url: '/images/connectors/linkedin.png', name: 'Linkedin' },
           ]}
           text="Capture vagas no HR e crie anúncios no Linkedin."
         />
@@ -304,9 +304,9 @@ export const solutionsPage = {
         />
         <ConnectorsCard
           connectors={[
-            { url: '/connectors/sap-one.png', name: 'SAP' },
-            { url: '/connectors/magalu.png', name: 'Magalu' },
-            { url: '/connectors/b2w.png', name: 'B2W' },
+            { url: '/images/connectors/sap-one.png', name: 'SAP' },
+            { url: '/images/connectors/magalu.png', name: 'Magalu' },
+            { url: '/images/connectors/b2w.png', name: 'B2W' },
           ]}
           text="Envio de produtos do ERP aos Marketplaces."
         />
