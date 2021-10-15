@@ -17,13 +17,16 @@ import { Cookie } from '../components/Cookie'
 
 import GlobalStyle from '../styles/global'
 import { theme } from '../styles/theme'
+import { useCookies } from 'react-cookie'
 
 const queryClient = new QueryClient()
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
 
-  const [isAcceptCookies, setIsAcceptCookies] = useState(false)
+  const [cookies, setCookie, removeCookie] = useCookies(['__Secure'])
+  const hasDevapiCookie = cookies.__Secure === 'accept'
+  const [isAcceptCookies, setIsAcceptCookies] = useState(hasDevapiCookie)
 
   // Initiate GTM
   useEffect(() => {
@@ -35,7 +38,12 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   }, [])
 
   const acceptCookie = (isAccept: boolean) => {
+    setCookie('__Secure', 'accept', { path: '/' })
     setIsAcceptCookies(isAccept)
+
+    if (!isAccept) {
+      removeCookie('__Secure', { path: '/' })
+    }
   }
 
   return (
