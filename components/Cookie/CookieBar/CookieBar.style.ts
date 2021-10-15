@@ -3,25 +3,30 @@ import { theme } from '../../../styles/theme'
 
 export const Cookie = styled.div`
   position: fixed;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 80vw;
-
-  padding: 2vh 2vw;
-
+  padding: 3vh 2vw;
   background-color: ${theme.colors.white};
   border-radius: 10px;
   box-shadow: 0px 0px 25px #5f47ff29;
+
+  @media (min-width: 1600px) {
+    width: 70vw;
+  }
 
   a {
     color: ${theme.colors.secondary};
   }
 
-  p {
-    max-width: 110ch;
+  > p {
+    max-width: 80ch;
+    font-size: 1.25rem;
+
+    @media (max-width: 996px) {
+      font-size: 1rem;
+    }
   }
 
   @media (max-width: 992px) {
@@ -42,10 +47,8 @@ export const ButtonContainer = styled.div`
 export const AcceptCookie = styled.div`
   position: fixed;
   display: flex;
-
   width: 100%;
   height: 60px;
-
   padding: 0 2vw;
 
   img {
@@ -54,6 +57,7 @@ export const AcceptCookie = styled.div`
     background-color: #f6f6ff;
     border-radius: 5px;
     box-shadow: 0px 0px 0px 2px ${theme.colors.secondary};
+
     @media (max-width: 992px) {
       padding: 5px;
     }

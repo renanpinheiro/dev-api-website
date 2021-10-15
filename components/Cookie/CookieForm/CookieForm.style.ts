@@ -26,14 +26,11 @@ const statusVariation = {
 export const Container = styled.div`
   height: 100%;
   max-height: 73vh;
-
-  padding: 2vh;
+  padding: 3vh;
   margin: 2vh 1vw;
-
   overflow: auto;
   font-size: 2.2vh;
-
-  background-color: ${theme.colors.gray[300]};
+  background-color: ${theme.colors.gray[100]};
   border-radius: 5px;
 `
 

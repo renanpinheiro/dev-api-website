@@ -9,11 +9,9 @@ import {
 
 export const Container = styled.div<ICookieStyle>`
   top: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100vw;
   height: 100vh;
 
@@ -36,10 +34,8 @@ export const CookieContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
   width: 100%;
   height: 100%;
-
   padding-bottom: 5vh;
 `
 
@@ -47,10 +43,8 @@ export const CookieModal = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   width: 50vw;
   max-height: 80vh;
-
   background-color: ${theme.colors.white};
   border-radius: 10px;
 
@@ -63,10 +57,8 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 100%;
-
-  padding: 2vh 2vw 5vh 2vw;
+  padding: 3vh 2vw 5vh 2vw;
 
   h3 {
     font-size: 3vh;

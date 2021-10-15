@@ -1,5 +1,9 @@
 import React from 'react'
+
+import Link from 'next/link'
+
 import { Button } from '../../Button'
+
 import * as S from './CookieBar.style'
 
 const CookieBar = ({
@@ -23,14 +27,16 @@ const CookieBar = ({
             Clicando em "Aceito todos os Cookies", você concorda com o
             armazenamento de cookies no seu dispositivo para melhorar a
             experiência e navegação no site. Para saber mais, acesse a{' '}
-            <a href="/politica-de-privacidade">Política de Privacidade.</a>
+            <Link href="/politica-de-privacidade">
+              <a title="Política de Privacidade">Política de Privacidade.</a>
+            </Link>
           </p>
           <S.ButtonContainer>
             <Button
               size="small"
               type="outline"
               text="Preferências"
-              margin="0 10px 0 10px"
+              margin="0 20px 0 20px"
               onClick={handleClickPreferences}
             />
             <Button

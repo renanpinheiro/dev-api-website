@@ -16,7 +16,7 @@ export const cookieContent = {
                 name: '__Secure-Senv',
                 domain: {
                   title: 'Domínio',
-                  value: 'devapi.com.br',
+                  value: '.devapi.com.br',
                 },
                 time: {
                   title: 'Duração',
@@ -24,14 +24,14 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
               {
                 name: '__Secure-Spvll',
                 domain: {
                   title: 'Domínio',
-                  value: 'devapi.com.br',
+                  value: '.devapi.com.br',
                 },
                 time: {
                   title: 'Duração',
@@ -39,27 +39,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
-                },
-              },
-            ],
-          },
-          {
-            name: 'CloudFlare',
-            subItem: [
-              {
-                name: '__cfduid',
-                domain: {
-                  title: 'Domínio',
-                  value: 'devapi.com.br',
-                },
-                time: {
-                  title: 'Duração',
-                  value: '1 ano',
-                },
-                type: {
-                  title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
             ],
@@ -71,7 +51,7 @@ export const cookieContent = {
                 name: '__trf.src',
                 domain: {
                   title: 'Domínio',
-                  value: 'devapi.com.br',
+                  value: '.devapi.com.br',
                 },
                 time: {
                   title: 'Duração',
@@ -79,7 +59,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
             ],
@@ -105,7 +85,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
               {
@@ -120,7 +100,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
               {
@@ -135,7 +115,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
             ],
@@ -155,7 +135,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
             ],
@@ -175,7 +155,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
               {
@@ -190,7 +170,7 @@ export const cookieContent = {
                 },
                 type: {
                   title: 'Tipo',
-                  value: 'Http Seguro',
+                  value: 'Https Seguro',
                 },
               },
             ],
