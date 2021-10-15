@@ -14,7 +14,7 @@ const ApiManagement = () => {
   return (
     <>
       <Head>
-        <title>DevApi |  API Management</title>
+        <title>DevApi | API Management</title>
       </Head>
 
       <S.Container>
