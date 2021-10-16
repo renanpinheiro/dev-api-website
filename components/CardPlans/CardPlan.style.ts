@@ -97,12 +97,8 @@ export const Text = styled.p`
 export const SubText = styled.p`
   padding-bottom: 1.5vh;
   margin-top: 1.1vh;
-  font-size: 1.75rem;
+  font-size: 1.375rem;
   color: ${theme.colors.primary};
-
-  @media (max-width: 996px) {
-    font-size: 1.5rem;
-  }
 `
 
 export const TextContainer = styled.div`

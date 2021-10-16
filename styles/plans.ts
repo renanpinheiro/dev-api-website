@@ -42,14 +42,21 @@ export const HeroContent = styled.div`
   }
 
   > p {
-    width: 51%;
+    width: 70%;
     margin: 3vh 0;
+    margin-bottom: 30px;
+    overflow: hidden;
     font-size: 1.375rem;
-    line-height: 3vh;
+    line-height: 1.5;
 
     @media (max-width: 996px) {
       width: 100%;
       font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    @media (min-width: 1600px) {
+      width: 55%;
     }
   }
 `

@@ -25,11 +25,14 @@ export const ListColumn = styled.ul`
 export const ListItem = styled.li`
   display: flex;
   align-self: center;
-  padding: 0 10vh;
   width: 100%;
 
   @media (max-width: 996px) {
     padding: 0;
+  }
+
+  @media (min-width: 1600px) {
+    padding: 0 10vh;
   }
 
   :before {
