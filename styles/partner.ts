@@ -189,9 +189,20 @@ export const CardPatner = styled.div`
     box-shadow: 0px 10px 10px #5f47ff29;
   }
 
-  img {
-    width: 12vw;
+  p {
+    font-size: 2.2vh;
+    line-height: 1.4;
+  }
+`
+
+export const CardPatnerHeader = styled.div`
+  @media (min-width: 1366px) {
     height: 7vw;
+  }
+
+  > img {
+    width: 12vw;
+    height: auto;
     padding-bottom: 5vh;
 
     @media (max-width: 900px) {
@@ -199,12 +210,8 @@ export const CardPatner = styled.div`
       height: auto;
     }
   }
-
-  p {
-    font-size: 2.2vh;
-    line-height: 1.4;
-  }
 `
+
 export const SubtextContainer = styled.ul`
   display: flex;
   flex-direction: column;
@@ -285,7 +292,7 @@ export const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 65vw;
+  width: 80vw;
   margin-top: 7vh;
 
   @media (max-width: 996px) {
@@ -320,7 +327,7 @@ export const Icon = styled.div`
 
   @media (max-width: 996px) {
     width: 13vh;
-    height: 10vh;
+    height: 8vh;
   }
 
   img {
@@ -338,9 +345,13 @@ export const Text = styled.div`
   font-size: 1.25rem;
 
   > p {
-    max-width: 28ch;
+    max-width: 34ch;
     margin: 0;
     line-height: 1.2;
+
+    @media (min-width: 1600px) {
+      max-width: 28ch;
+    }
   }
 
   > b {
@@ -349,7 +360,7 @@ export const Text = styled.div`
   }
 `
 
-export const Title = styled.p`
+export const Title = styled.span`
   font-weight: 700;
 `
 

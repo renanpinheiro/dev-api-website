@@ -92,8 +92,11 @@ const IntegrationPartner = () => {
           {knowPatners.map((patners, index) => {
             return (
               <S.CardPatner key={index}>
-                <S.Pipe />
-                <img src={patners.imgage} />
+                <S.CardPatnerHeader>
+                  <S.Pipe />
+                  <img src={patners.imgage} />
+                </S.CardPatnerHeader>
+
                 <p>{patners.text}</p>
 
                 {patners.subText.map((text, idx) => {
