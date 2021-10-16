@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Router from 'next/router'
 
@@ -138,119 +139,126 @@ const Blog = () => {
   })
 
   return (
-    <S.Container>
-      <S.ImageContainer>
-        <ImageCarousel items={newsImages} />
-        <S.FilterContainer>
-          <S.Filters>
-            <S.TextContainer margin="0px 0px 0px 0px">
-              <S.VerticalPipe />
-              <S.Text fontSize="1.5rem">
-                <span>Descubra</span> novas ideias
-              </S.Text>
-            </S.TextContainer>
+    <>
+      <Head>
+        <title>DevApi | Blog</title>
+        <link rel="canonical" href="https://devapi.com.br/blog" />
+      </Head>
 
-            <S.ButtonContainer>
-              <S.Button
-                hoverImg="icons/ic-newspaper-white.svg"
-                onClick={() => handleClickTagName('Tecnologia')}
-              >
-                <S.IconButton img="icons/ic-newspaper.svg" />
-                Tecnologia
-              </S.Button>
-              <S.Button
-                hoverImg="icons/ic-hand-white.svg"
-                onClick={() => handleClickTagName('Negócios')}
-              >
-                <S.IconButton img="icons/ic-hand.svg" />
-                Negócios
-              </S.Button>
-              <S.Button
-                hoverImg="icons/ic-rocket-white.svg"
-                onClick={() => handleClickTagName('Inovação')}
-              >
-                <S.IconButton img="icons/ic-rocket.svg" />
-                Inovação
-              </S.Button>
-            </S.ButtonContainer>
+      <S.Container>
+        <S.ImageContainer>
+          <ImageCarousel items={newsImages} />
+          <S.FilterContainer>
+            <S.Filters>
+              <S.TextContainer margin="0px 0px 0px 0px">
+                <S.VerticalPipe />
+                <S.Text fontSize="1.5rem">
+                  <span>Descubra</span> novas ideias
+                </S.Text>
+              </S.TextContainer>
 
-            <S.InputContainer>
-              <S.InputFormControl
-                placeholder="Busca..."
-                aria-label="search"
-                aria-describedby="basic-addon2"
-                name="search"
-                type="text"
-                onChange={searchTerm => {
-                  setSearch(searchTerm.target.value)
-                }}
-              />
-              <S.InputContainer.Append>
-                <S.ButtonInput variant="outline-secondary">
-                  <S.SearchIcon src="icons/search.svg" />
-                </S.ButtonInput>
-              </S.InputContainer.Append>
-            </S.InputContainer>
-          </S.Filters>
-        </S.FilterContainer>
-      </S.ImageContainer>
+              <S.ButtonContainer>
+                <S.Button
+                  hoverImg="icons/ic-newspaper-white.svg"
+                  onClick={() => handleClickTagName('Tecnologia')}
+                >
+                  <S.IconButton img="icons/ic-newspaper.svg" />
+                  Tecnologia
+                </S.Button>
+                <S.Button
+                  hoverImg="icons/ic-hand-white.svg"
+                  onClick={() => handleClickTagName('Negócios')}
+                >
+                  <S.IconButton img="icons/ic-hand.svg" />
+                  Negócios
+                </S.Button>
+                <S.Button
+                  hoverImg="icons/ic-rocket-white.svg"
+                  onClick={() => handleClickTagName('Inovação')}
+                >
+                  <S.IconButton img="icons/ic-rocket.svg" />
+                  Inovação
+                </S.Button>
+              </S.ButtonContainer>
 
-      <S.CasesContainer>
-        {isMobile ? (
-          <CarrouselWithOutSSR
-            items={newsMobileCarrouselItems}
-            dotsMargin="-1.5rem"
-            isCustomCarouselItem
-          />
-        ) : (
-          <>
-            {cases.map((item, index) => (
-              <S.CaseContainer key={index}>
-                <S.SidebarCotainer height="auto">
-                  <S.CaseType width="50px" height="24px">
-                    {item.type}
-                  </S.CaseType>
-                  <S.Date width="15px" height="15px">
-                    <img src="icons/calendar.svg" alt="calendar" />
-                    <p>{item.date}</p>
-                  </S.Date>
-                </S.SidebarCotainer>
-                <S.TextContainer>
-                  <S.VerticalPipe />
-                  <S.Text>{item.text}</S.Text>
-                </S.TextContainer>
-              </S.CaseContainer>
-            ))}
-          </>
-        )}
-      </S.CasesContainer>
+              <S.InputContainer>
+                <S.InputFormControl
+                  placeholder="Busca..."
+                  aria-label="search"
+                  aria-describedby="basic-addon2"
+                  name="search"
+                  type="text"
+                  onChange={searchTerm => {
+                    setSearch(searchTerm.target.value)
+                  }}
+                />
+                <S.InputContainer.Append>
+                  <S.ButtonInput variant="outline-secondary">
+                    <S.SearchIcon src="icons/search.svg" />
+                  </S.ButtonInput>
+                </S.InputContainer.Append>
+              </S.InputContainer>
+            </S.Filters>
+          </S.FilterContainer>
+        </S.ImageContainer>
 
-      <S.ContentContainer>
-        <S.Content>
-          {news.map((item, index) => (
-            <NewsCardWithOutSSR
-              key={index}
-              newsCards={item}
-              padding="0px 0px 30px 0px"
-              gridColum="auto 80px !important"
-              gridRow={
-                isMobile
-                  ? '250px 235px 80px !important'
-                  : '400px 300px 80px !important'
-              }
+        <S.CasesContainer>
+          {isMobile ? (
+            <CarrouselWithOutSSR
+              items={newsMobileCarrouselItems}
+              dotsMargin="-1.5rem"
+              isCustomCarouselItem
             />
-          ))}
-        </S.Content>
-        <Sidebar
-          tags={tags}
-          articles={popularArticles}
-          ebookRedirect={ebookRedirect}
-          ebookImg={ebookImg}
-          onClick={index => handleClickNews(popularArticles[index].linkId)}
-          onClickTag={index => handleClickTag(tags[index].id)}
-        />
-      </S.ContentContainer>
-    </S.Container>
+          ) : (
+            <>
+              {cases.map((item, index) => (
+                <S.CaseContainer key={index}>
+                  <S.SidebarCotainer height="auto">
+                    <S.CaseType width="50px" height="24px">
+                      {item.type}
+                    </S.CaseType>
+                    <S.Date width="15px" height="15px">
+                      <img src="icons/calendar.svg" alt="calendar" />
+                      <p>{item.date}</p>
+                    </S.Date>
+                  </S.SidebarCotainer>
+                  <S.TextContainer>
+                    <S.VerticalPipe />
+                    <S.Text>{item.text}</S.Text>
+                  </S.TextContainer>
+                </S.CaseContainer>
+              ))}
+            </>
+          )}
+        </S.CasesContainer>
+
+        <S.ContentContainer>
+          <S.Content>
+            {news.map((item, index) => (
+              <NewsCardWithOutSSR
+                key={index}
+                newsCards={item}
+                padding="0px 0px 30px 0px"
+                gridColum="auto 80px !important"
+                gridRow={
+                  isMobile
+                    ? '250px 235px 80px !important'
+                    : '400px 300px 80px !important'
+                }
+              />
+            ))}
+          </S.Content>
+          <Sidebar
+            tags={tags}
+            articles={popularArticles}
+            ebookRedirect={ebookRedirect}
+            ebookImg={ebookImg}
+            onClick={index => handleClickNews(popularArticles[index].linkId)}
+            onClickTag={index => handleClickTag(tags[index].id)}
+          />
+        </S.ContentContainer>
+      </S.Container>
+    </>
   )
 }
 

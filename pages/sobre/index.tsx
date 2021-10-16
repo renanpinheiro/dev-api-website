@@ -13,6 +13,7 @@ const About = () => {
     <>
       <Head>
         <title>DevApi | Sobre nós</title>
+        <link rel="canonical" href="https://devapi.com.br/sobre" />
       </Head>
 
       <Hero minHeight={40} maxHeight={65}>

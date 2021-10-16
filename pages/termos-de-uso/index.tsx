@@ -9,7 +9,8 @@ const UseTerm = () => {
   return (
     <>
       <Head>
-        <title>Termos de Uso | DevApi</title>
+        <title>DevApi | Termos de Uso</title>
+        <link rel="canonical" href="https://devapi.com.br/termos-de-uso" />
       </Head>
 
       <S.Container>

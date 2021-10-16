@@ -15,6 +15,7 @@ const ApiManagement = () => {
     <>
       <Head>
         <title>DevApi | API Management</title>
+        <link rel="canonical" href="https://devapi.com.br/api-management" />
       </Head>
 
       <S.Container>

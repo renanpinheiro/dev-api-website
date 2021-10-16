@@ -10,7 +10,11 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Head>
-        <title>Política de Privacidade | DevApi</title>
+        <title>DevApi | Política de privacidade</title>
+        <link
+          rel="canonical"
+          href="https://devapi.com.br/politica-de-privacidade"
+        />
       </Head>
 
       <S.Container>

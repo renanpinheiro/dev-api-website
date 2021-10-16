@@ -48,8 +48,8 @@ const Plans = () => {
   return (
     <>
       <Head>
-        <title>Planos | DevApi</title>
-        <link rel="canonical" href="https://devapi.com.br/plano" />
+        <title>DevApi | Planos</title>
+        <link rel="canonical" href="https://devapi.com.br/planos" />
       </Head>
 
       <Hero>

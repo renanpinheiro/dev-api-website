@@ -38,7 +38,11 @@ const IntegrationPartner = () => {
   return (
     <>
       <Head>
-        <title>Programa de parceiros | DevApi</title>
+        <title>DevApi | Programa de parceiros</title>
+        <link
+          rel="canonical"
+          href="https://devapi.com.br/parceiro-de-integracao"
+        />
       </Head>
 
       <S.Container>

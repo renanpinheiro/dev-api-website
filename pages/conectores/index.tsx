@@ -80,6 +80,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
     <>
       <Head>
         <title>DevApi | Conectores</title>
+        <link rel="canonical" href="https://devapi.com.br/conectores" />
       </Head>
 
       <S.Hero>

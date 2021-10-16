@@ -24,7 +24,8 @@ const Midias = ({ midias }: IMidiasProps) => {
   return (
     <>
       <Head>
-        <title>DevApi na mídia | DevApi</title>
+        <title>DevApi | Na mídia</title>
+        <link rel="canonical" href="https://devapi.com.br/devapi-na-midia" />
       </Head>
 
       <Hero>

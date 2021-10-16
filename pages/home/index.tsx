@@ -47,6 +47,7 @@ const Home = () => {
     <>
       <Head>
         <title>DevApi | Integração de sistemas</title>
+        <link rel="canonical" href="https://devapi.com.br" />
       </Head>
 
       <S.Hero>

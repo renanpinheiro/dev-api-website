@@ -16,6 +16,7 @@ const Characteristics = () => {
     <>
       <Head>
         <title>DevApi | Características</title>
+        <link rel="canonical" href="https://devapi.com.br/caracteristicas" />
       </Head>
 
       <S.Container>
