@@ -41,10 +41,12 @@ const Solutions = () => {
   const currentPage = router.split('/')
   const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
 
+  const paragraphWidth = currentPage[2] === 'marketing' ? '80%' : ''
+
   return (
     <>
       <Head>
-        <title>{page ? page.seo.metaTitle : '| Devapi | Soluções'}</title>
+        <title>{page ? page.seo.metaTitle : 'Devapi | Soluções'}</title>
       </Head>
 
       <S.Container>
@@ -80,7 +82,7 @@ const Solutions = () => {
                 {page && page.contentTitle}
               </S.TitleContainer>
 
-              <S.ParagraphContainer>
+              <S.ParagraphContainer width={paragraphWidth}>
                 {page && page.contentText}
               </S.ParagraphContainer>
             </S.TextContainer>

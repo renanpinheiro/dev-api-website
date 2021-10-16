@@ -138,7 +138,7 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
           )}
           <Button
             text={
-              isLastStep() ? 'Enviar' : isLoading ? 'Enviando...' : 'Proximo'
+              isLastStep() ? 'Enviar' : isLoading ? 'Enviando...' : 'Próximo'
             }
             size={'default'}
             type={'default'}

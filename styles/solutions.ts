@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { theme } from './theme'
 
 interface ITitleProps {
@@ -138,8 +138,11 @@ export const TitleContainer = styled.div`
   }
 `
 
-export const ParagraphContainer = styled.div`
-  width: 50%;
+interface IParagraphContainerProps {
+  width?: string
+}
+export const ParagraphContainer = styled.div<IParagraphContainerProps>`
+  width: ${props => (props.width ? props.width : '50%')};
 
   @media (max-width: 996px) {
     width: 100%;

@@ -83,7 +83,7 @@ const Plans = () => {
                 title={
                   <S.CarrouselTitle>
                     <h2>
-                      Empresas que ja desbloquearam o{' '}
+                      Empresas que já desbloquearam o{' '}
                       <b>poder da integração de sistemas</b>
                     </h2>
                   </S.CarrouselTitle>
@@ -96,7 +96,7 @@ const Plans = () => {
                 title={
                   <S.CarrouselTitle>
                     <h2>
-                      Empresas que ja desbloquearam o{' '}
+                      Empresas que já desbloquearam o{' '}
                       <b>poder da integração de sistemas</b>
                     </h2>
                   </S.CarrouselTitle>
