@@ -34,7 +34,7 @@ const ApiManagement = () => {
             </p>
             <ButtonLink
               text="Quero agilizar a inovação!"
-              href="/free-trial"
+              href="/converse-com-especialista"
               target="_self"
               type="default"
               size="default"
@@ -69,7 +69,7 @@ const ApiManagement = () => {
           </h3>
           <ButtonLink
             text="Sim, vamos lá!"
-            href="/free-trial"
+            href="/converse-com-especialista"
             target="_self"
             type="default"
             size="large"

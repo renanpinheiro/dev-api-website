@@ -95,7 +95,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
           </p>
           <ButtonLink
             text="Fale com um consultor"
-            href="/free-trial"
+            href="/converse-com-especialista"
             target="_self"
             type="default"
             size="default"

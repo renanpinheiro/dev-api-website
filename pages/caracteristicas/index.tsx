@@ -34,7 +34,7 @@ const Characteristics = () => {
             </p>
             <ButtonLink
               text="Quero escalabilidade!"
-              href="/free-trial"
+              href="/converse-com-especialista"
               target="_self"
               size="default"
               type="default"

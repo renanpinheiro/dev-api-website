@@ -65,7 +65,7 @@ const Solutions = () => {
 
               <ButtonLink
                 text="Fale com um consultor"
-                href="/free-trial"
+                href="/converse-com-especialista"
                 target="_self"
                 size="default"
                 type="default"
@@ -93,7 +93,7 @@ const Solutions = () => {
 
             <ButtonLink
               text="Quero integrar agora!"
-              href="/converse-com-especialista"
+              href="/free-trial"
               target="_self"
               size="default"
               type="default"

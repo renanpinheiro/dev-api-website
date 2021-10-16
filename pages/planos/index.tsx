@@ -153,7 +153,7 @@ const Plans = () => {
           <S.ButtonContainer>
             <ButtonLink
               text="Vamos conversar"
-              href="/free-trial"
+              href="/converse-com-especialista"
               target="_self"
               type="default"
               size="default"

@@ -109,7 +109,7 @@ export const navLinks = [
       },
       {
         name: 'Contato',
-        url: '/contato',
+        url: '/converse-com-especialista',
         isActive: false,
       },
       {

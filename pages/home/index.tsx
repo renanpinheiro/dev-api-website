@@ -63,7 +63,7 @@ const Home = () => {
 
           <ButtonLink
             text="Quero uma demo!"
-            href="/free-trial"
+            href="/converse-com-especialista"
             target="_self"
             size="default"
             type="default"
