@@ -57,7 +57,11 @@ export const Connector = styled.div`
 
   span {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 0.875rem;
+
+    @media (min-width: 1600px) {
+      font-size: 1rem;
+    }
   }
 
   @media (max-width: 996px) {
@@ -81,4 +85,8 @@ export const Text = styled.div`
   max-width: 40ch;
   text-align: center;
   display: flex;
+
+  > p {
+    line-height: 1.3;
+  }
 `

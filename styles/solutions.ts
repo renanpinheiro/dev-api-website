@@ -183,12 +183,10 @@ export const IntegrationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 10vh;
 
   @media (max-width: 996px) {
     flex-direction: column;
-
     padding: 0 8vw 0 8vw;
   }
 `
