@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import { Button } from '../Button'
-import * as S from './Cookie.style'
-
 import { IoMdClose } from 'react-icons/io'
-import { theme } from '../../styles/theme'
-import { cookieContent } from '../../constants/cookieContent'
-import { Switch } from '../Switch'
-import { CookieDetails } from './CookieDetails'
+
+import axios from 'axios'
+
+import { Button } from '../Button'
 import { CookieBar } from './CookieBar'
+import { CookieDetails } from './CookieDetails'
 import { CookieForm } from './CookieForm'
 import { CookieFollowUpRequestForm } from './CookieFollowUpRequestForm'
-import axios from 'axios'
+import { Switch } from '../Switch'
+
+import { cookieContent } from '../../constants/cookieContent'
+
+import { theme } from '../../styles/theme'
+import * as S from './Cookie.style'
 
 const Cookie = ({ acceptCookie, isActiveCookies }) => {
   const lgpdApi = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_LGPD,
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
   })
 
   const [isAcceptCookies, setIsAcceptCookies] = useState(isActiveCookies)

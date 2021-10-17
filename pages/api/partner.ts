@@ -13,12 +13,12 @@ const partnerMail = async (req: Request, res) => {
   const { message, company, email, fullName, phone } = req.body as IPayload
 
   const transporter = nodemailer.createTransport({
-    host: process.env.NEXT_PUBLIC_EMAIL_HOST,
-    port: Number(process.env.NEXT_PUBLIC_EMAIL_PORT),
+    host: process.env.NEXT_PUBLIC_MAIL_HOST,
+    port: Number(process.env.NEXT_PUBLIC_MAIL_PORT),
     secure: false,
     auth: {
-      user: process.env.NEXT_PUBLIC_EMAIL_USER,
-      pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
+      user: process.env.NEXT_PUBLIC_MAIL_USER,
+      pass: process.env.NEXT_PUBLIC_MAIL_PASS,
     },
     tls: {
       ciphers: 'SSLv3',
@@ -28,7 +28,7 @@ const partnerMail = async (req: Request, res) => {
   await transporter
     .sendMail({
       from: `${fullName} <${email}>`,
-      to: `${process.env.NEXT_PUBLIC_EMAIL_NAME} <${process.env.NEXT_PUBLIC_EMAIL_TO}>`,
+      to: `DevApi Parceria <${process.env.NEXT_PUBLIC_MAIL_SEND}>`,
       subject: 'Parceria',
       html: `
     ${message}

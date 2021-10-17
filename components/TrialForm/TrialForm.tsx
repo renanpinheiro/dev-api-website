@@ -32,7 +32,7 @@ import * as S from './TrialForm.style'
 
 const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
   const leadsApi = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_LEADS,
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
   })
 
   const formsArray = React.Children.toArray(children) as React.ReactElement[]
@@ -65,7 +65,7 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
         is_privacy_police: values.isPrivacyPolice,
       }
       try {
-        await leadsApi.post('/leads', payload)
+        await leadsApi.post('leads', payload)
         setErrorMessage('')
         router.push('/trial-success')
       } catch (error) {
