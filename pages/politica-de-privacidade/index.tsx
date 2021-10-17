@@ -11,6 +11,10 @@ const PrivacyPolicy = () => {
     <>
       <Head>
         <title>DevApi | Política de privacidade</title>
+        <meta
+          property="og:url"
+          content="https://devapi.com.br/politica-de-privacidade"
+        />
         <link
           rel="canonical"
           href="https://devapi.com.br/politica-de-privacidade"

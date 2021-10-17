@@ -46,7 +46,18 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>DevApi | Integração de sistemas</title>
+        <title>DevApi | Integração de Sistemas e Gestão de APIs</title>
+        <meta
+          property="og:title"
+          content="DevApi | Integração de Sistemas e Gestão de APIs"
+          key="title"
+        />
+        <meta
+          property="og:description"
+          content="Uma única plataforma para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Encaixe as peças da sua operação!"
+          key="description"
+        />
+        <meta property="og:url" content="https://devapi.com.br" />
         <link rel="canonical" href="https://devapi.com.br" />
       </Head>
 

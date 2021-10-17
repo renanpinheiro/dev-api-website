@@ -10,7 +10,13 @@ const FreeTrial = () => {
   return (
     <>
       <Head>
-        <title>DevApi | Free trial</title>
+        <title>DevApi | Crie sua conta grátis</title>
+        <meta
+          property="og:title"
+          content="DevApi | Crie sua conta grátis"
+          key="title"
+        />
+        <meta property="og:url" content="https://devapi.com.br/free-trial" />
         <link rel="canonical" href="https://devapi.com.br/free-trial" />
       </Head>
 

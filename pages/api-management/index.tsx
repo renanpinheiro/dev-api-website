@@ -15,6 +15,15 @@ const ApiManagement = () => {
     <>
       <Head>
         <title>DevApi | API Management</title>
+        <meta property="og:title" content="DevApi | API Management" />
+        <meta
+          property="description"
+          content="Agilidade e escalabilidade incríveis!"
+        />
+        <meta
+          property="og:url"
+          content="https://devapi.com.br/api-management"
+        />
         <link rel="canonical" href="https://devapi.com.br/api-management" />
       </Head>
 

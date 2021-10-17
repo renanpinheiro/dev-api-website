@@ -16,6 +16,13 @@ const About = () => {
         <link rel="canonical" href="https://devapi.com.br/sobre" />
       </Head>
 
+      <Head>
+        <title>DevApi | Sobre nós</title>
+        <meta property="og:title" content="DevApi | Sobre nós" />
+        <meta property="og:url" content="https://devapi.com.br/sobre" />
+        <link rel="canonical" href="https://devapi.com.br/sobre" />
+      </Head>
+
       <Hero minHeight={40} maxHeight={65}>
         <S.HeroContainer>
           <S.Pipe />

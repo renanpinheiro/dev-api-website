@@ -49,6 +49,13 @@ const Plans = () => {
     <>
       <Head>
         <title>DevApi | Planos</title>
+        <meta property="og:title" content="DevApi | Planos" key="title" />
+        <meta
+          property="og:description"
+          content="É hora de acelerar a transformação!"
+          key="description"
+        />
+        <meta property="og:url" content="https://devapi.com.br/planos" />
         <link rel="canonical" href="https://devapi.com.br/planos" />
       </Head>
 
