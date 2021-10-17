@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devapi.com.br/sitemap.xml
