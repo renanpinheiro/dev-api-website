@@ -183,6 +183,26 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
           </S.LoadMore>
         )}
       </S.Content>
+
+      <S.CornerContainer>
+        <hr />
+        <h2>
+          Não encontrou o <b>conector que precisa?</b>
+        </h2>
+        <p>
+          Não se preocupe! Aqui estão apenas alguns exemplos dos conectores
+          disponíveis. Teremos todo o gosto em disponibilizar o conector que
+          você precisa. Também é possível construir seu próprio conector ou
+          importar via Swagger. Sem limites!
+        </p>
+        <ButtonLink
+          text="Solicitar conector"
+          href="/converse-com-especialista"
+          target="_self"
+          type="default"
+          size="default"
+        />
+      </S.CornerContainer>
     </>
   )
 }

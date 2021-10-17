@@ -380,6 +380,7 @@ export const CornerContainer = styled.div`
     flex-direction: column;
   }
 `
+
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;

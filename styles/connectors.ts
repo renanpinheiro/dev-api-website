@@ -326,3 +326,64 @@ export const DoubleBounceIn = styled(BounceAnimation)``
 export const DoubleBounceOut = styled(BounceAnimation)`
   animation-delay: -1s;
 `
+
+export const CornerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15vh 8vw 15vh 8vw;
+  margin-bottom: 15vh;
+  text-align: center;
+  background-color: ${theme.colors.gray[100]};
+  background-image: url('masks/devapi.svg');
+  background-size: contain;
+  border-radius: 110px 0;
+
+  > hr {
+    width: 15vh;
+    height: 3px;
+    margin-bottom: 2vh;
+    background-color: ${theme.colors.secondary};
+
+    @media (max-width: 576px) {
+      width: 8vh;
+    }
+  }
+
+  > h2 {
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+    line-height: 1;
+
+    @media (max-width: 996px) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.25rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+
+  > p {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 1.25rem;
+    line-height: 1.3;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 1600px) {
+      width: 70%;
+      font-size: 1.375rem;
+    }
+  }
+`
