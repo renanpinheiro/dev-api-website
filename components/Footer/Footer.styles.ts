@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 import { IColProps } from './Footer.interfaces'
+
 export const FooterContainer = styled.div`
   z-index: 4;
   width: 100%;
   height: auto;
-  padding: 60px 8vw 70px 8vw;
-
+  padding: 60px 6vw 70px 6vw;
   background-color: #221e1e;
 
-  @media only screen and (max-width: 828px) {
+  @media only screen and (max-width: 996px) {
     padding-right: 20px 15px;
   }
 `
+
 export const Row = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,6 +23,7 @@ export const Row = styled.div`
     justify-items: flex-start;
   }
 `
+
 export const Col = styled.div<IColProps>`
   display: flex;
   flex-direction: row;
@@ -34,6 +36,7 @@ export const Col = styled.div<IColProps>`
     padding-top: 20px;
   }
 `
+
 export const NewsletterContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -64,7 +67,6 @@ export const Newsletter = styled.div`
 
 export const Pipe = styled.div`
   width: 3px;
-
   background-color: ${theme.colors.secondary};
 `
 
@@ -135,8 +137,8 @@ export const Logo = styled.img`
 
 export const AddressContainer = styled.div`
   display: flex;
-  height: 34px;
-  line-height: 1;
+  height: 90px;
+  line-height: 1.3;
 
   @media only screen and (max-width: 828px) {
     flex-direction: column;

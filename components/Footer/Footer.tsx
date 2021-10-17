@@ -59,10 +59,10 @@ const Footer = () => (
             <S.Pipe />
             <S.Address>
               <span>Endereço:</span> Ed. Atrium Torre Norte - Av. Pedro Taques,
-              294 - 13° Andar - Sala 1307 -
-              <br /> Zona 03 - CEP: 87030-008 - Maringá | PR | Brasil
-              <span> Telefone:</span> +55 (44) 3354-7410 | <span> Email:</span>{' '}
-              info@devapi.com.br
+              294 - 13° Andar - Sala 1307
+              <br /> Zona 03 - CEP: 87030-008 - Maringá-PR - Brasil
+              <br /> <span> Telefone:</span> +55 (44) 3354-7410
+              <br /> <span> Email:</span> info@devapi.com.br
             </S.Address>
           </S.AddressContainer>
         </S.LogoContainer>

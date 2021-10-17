@@ -32,7 +32,7 @@ const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
                 href="/free-trial"
                 target="_self"
                 type="default"
-                size="large"
+                size="default"
               />
             </S.ButtonContainer>
           </S.Cards>

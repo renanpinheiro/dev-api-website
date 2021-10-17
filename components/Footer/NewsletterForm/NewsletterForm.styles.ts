@@ -18,7 +18,7 @@ export const ContainerForm = styled.div`
   }
 
   @media only screen and (min-width: 1366px) {
-    width: 358px;
+    width: 400px;
     margin-bottom: 45px;
   }
 

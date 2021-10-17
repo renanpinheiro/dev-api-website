@@ -36,14 +36,14 @@ const size = {
   `,
 
   default: css`
-    height: 45px;
+    height: 50px;
     padding: 5px 30px;
     font-size: 1.3rem;
     font-weight: 700;
   `,
 
   large: css`
-    height: 50px;
+    height: 60px;
     padding: 5px 20px;
     font-size: 1.75rem;
     font-weight: 700;
