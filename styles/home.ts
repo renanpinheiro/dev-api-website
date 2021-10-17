@@ -28,14 +28,15 @@ export const HeroContent = styled.div`
   width: 45%;
   height: 100%;
 
-  @media (max-width: 900px) {
-    width: 100%;
-  }
-
   @media (max-width: 576px) {
     align-items: flex-start;
     text-align: left;
     background-size: 100%;
+  }
+
+  @media (max-width: 996px) {
+    z-index: 10;
+    width: 100%;
   }
 
   > h1 {

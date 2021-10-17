@@ -49,7 +49,12 @@ export const AcceptCookie = styled.div`
   display: flex;
   width: 100%;
   height: 40px;
-  padding: 0 2vw;
+  padding: 0 1vw;
+
+  @media (max-width: 996px) {
+    height: 30px;
+    padding: 0 1vw;
+  }
 
   img {
     padding: 10px;
@@ -61,10 +66,5 @@ export const AcceptCookie = styled.div`
     @media (max-width: 992px) {
       padding: 5px;
     }
-  }
-
-  @media (max-width: 992px) {
-    height: 40px;
-    padding: 0 5vw;
   }
 `
