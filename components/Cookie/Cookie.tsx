@@ -17,7 +17,7 @@ const Cookie = ({ acceptCookie, isActiveCookies }) => {
     baseURL: process.env.NEXT_PUBLIC_API_LGPD,
   })
 
-  const [isAcceptCookies, setIsAcceptCookies] = useState(false)
+  const [isAcceptCookies, setIsAcceptCookies] = useState(isActiveCookies)
   const [isOpenPreferences, setIsOpenPreferences] = useState(false)
   const [isOpenRequestForm, setIsOpenRequestForm] = useState(false)
   const [isOpenFollowUpRequest, setIsOpenFollowUpRequest] = useState(false)
