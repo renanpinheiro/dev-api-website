@@ -137,7 +137,7 @@ const Plans = () => {
           <S.ButtonContainer>
             <ButtonLink
               text="Quero integrar meus sistemas"
-              href="/free-trial"
+              href="/converse-com-especialista"
               target="_self"
               type="default"
               size="default"

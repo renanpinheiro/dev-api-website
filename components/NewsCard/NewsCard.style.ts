@@ -25,7 +25,7 @@ export const Grid = styled.div<IGridStyledProps>`
   border-radius: 15px;
 
   @media only screen and (max-width: 450px) {
-    grid-template-columns: auto 250px 80px;
+    grid-template-columns: 255px 80px;
     grid-template-rows: 200px 300px 80px;
     grid-template-areas:
       'IG IG'
@@ -34,14 +34,14 @@ export const Grid = styled.div<IGridStyledProps>`
   }
 
   @media only screen and (min-width: 770px) {
-    grid-template-columns: auto 250px 80px;
+    grid-template-columns: 250px 80px;
     grid-template-rows: 200px 300px 80px;
   }
   @media only screen and (min-width: 1700px) {
-    grid-template-columns: auto 300px 80px;
+    grid-template-columns: 300px 80px;
   }
   @media (min-width: 1701px) and (max-width: 2000px) {
-    grid-template-columns: auto 460px 80px;
+    grid-template-columns: 460px 80px;
   }
 `
 export const Image = styled.div`
@@ -119,7 +119,6 @@ export const SidebarCotainer = styled.div`
   align-items: center;
   justify-content: center;
   border-top: 2px solid #e5e5e5;
-  padding: 0 150px;
 `
 export const ButtonContainer = styled.div`
   grid-area: BT;

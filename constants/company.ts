@@ -6,7 +6,7 @@ export const company = [
   },
   {
     name: 'Contato',
-    url: '/fale-com-um-especialista',
+    url: '/converse-com-especialista',
     target: '_self',
   },
   {

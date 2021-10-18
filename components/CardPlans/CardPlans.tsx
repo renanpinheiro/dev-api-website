@@ -29,7 +29,7 @@ const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
 
               <ButtonLink
                 text="Fale conosco"
-                href="/free-trial"
+                href="/converse-com-especialista"
                 target="_self"
                 type="default"
                 size="default"

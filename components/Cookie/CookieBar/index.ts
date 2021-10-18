@@ -1,1 +1,1 @@
-export * from './CookieBar'
+export { CookieBar as default } from './CookieBar'

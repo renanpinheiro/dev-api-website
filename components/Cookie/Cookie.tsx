@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { IoMdClose } from 'react-icons/io'
 
+import dynamic from 'next/dynamic'
+
 import axios from 'axios'
 
 import { Button } from '../Button'
-import { CookieBar } from './CookieBar'
 import { CookieDetails } from './CookieDetails'
 import { CookieForm } from './CookieForm'
 import { CookieFollowUpRequestForm } from './CookieFollowUpRequestForm'
@@ -14,6 +15,10 @@ import { cookieContent } from '../../constants/cookieContent'
 
 import { theme } from '../../styles/theme'
 import * as S from './Cookie.style'
+
+const CookieBarSSR = dynamic(() => import('./CookieBar'), {
+  ssr: false,
+})
 
 const Cookie = ({ acceptCookie, isActiveCookies }) => {
   const lgpdApi = axios.create({
@@ -89,7 +94,7 @@ const Cookie = ({ acceptCookie, isActiveCookies }) => {
     <S.Container isOpen={isOpenPreferences}>
       {!isOpenPreferences ? (
         <S.CookieContainer>
-          <CookieBar
+          <CookieBarSSR
             isAcceptCookies={isAcceptCookies}
             handleClickAccept={handleClickAccept}
             handleClickPreferences={handleClickPreferences}

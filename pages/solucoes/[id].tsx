@@ -93,7 +93,7 @@ const Solutions = () => {
 
             <ButtonLink
               text="Quero integrar agora!"
-              href="/free-trial"
+              href="/converse-com-especialista"
               target="_self"
               size="default"
               type="default"

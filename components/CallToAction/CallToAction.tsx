@@ -18,7 +18,7 @@ const CallToAction = () => {
         </S.Title>
         <ButtonLink
           text="Converse com um especialista"
-          href="/converse-com-especialista"
+          href="/free-trial"
           target="_self"
           type="default"
           size="default"
