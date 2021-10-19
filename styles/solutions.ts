@@ -11,6 +11,7 @@ export const Container = styled.div`
 `
 
 export const HeroContent = styled.div`
+  position: absolute;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -79,7 +80,7 @@ export const Subtitle = styled.p`
 
 export const Content = styled.div`
   position: relative;
-  z-index: 13;
+  z-index: 18;
   width: 100%;
   margin-top: 30px;
   background-color: white;
@@ -95,7 +96,6 @@ export const SolutionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding-bottom: 10vh;
 `
 

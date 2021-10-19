@@ -15,6 +15,7 @@ export const Cards = styled.div`
   display: flex;
   flex: 0 0 24%;
   flex-direction: column;
+  align-content: center;
   padding-bottom: 1.5vh;
   line-height: 1;
   text-align: center;
@@ -30,7 +31,6 @@ export const Cards = styled.div`
   box-shadow: 0px 6px 28px #2c2d6636;
   transition: transform 0.5s;
   transform: translateX(0) scale(1);
-
   :hover,
   :focus {
     z-index: 9;
@@ -66,16 +66,16 @@ export const Title = styled.h2`
   font-size: 1.125rem;
   font-weight: 700;
   color: ${theme.colors.secondary};
+
   text-transform: uppercase;
   letter-spacing: 1vh;
-
   @media (max-width: 996px) {
-    width: 100%;
+    /* width: 100%; */
     font-size: 1.25rem;
   }
 
   @media (min-width: 1600px) {
-    width: 90%;
+    /* width: 90%; */
     font-size: 1.375rem;
   }
 `

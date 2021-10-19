@@ -291,13 +291,13 @@ export const FilterContainer = styled.div`
   position: absolute;
 
   top: 89%;
+  z-index: 29;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 
   height: 180px;
-
   @media (min-width: 320px) and (max-width: 992px) {
     height: auto;
   }

@@ -8,6 +8,7 @@ import {
 } from 'react-bootstrap'
 
 export const Container = styled.div<ICookieStyle>`
+  position: absolute;
   top: 0;
   display: flex;
   align-items: center;
@@ -21,12 +22,13 @@ export const Container = styled.div<ICookieStyle>`
     props.isOpen
       ? css`
           position: fixed;
-          z-index: 15;
+          z-index: 9999;
+
           background-color: rgba(0, 0, 0, 0.6);
         `
       : css`
           position: absolute;
-          z-index: 10;
+          z-index: 16;
         `}
 `
 

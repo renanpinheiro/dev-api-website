@@ -4,7 +4,7 @@ import { IContainerStyles, IHeaderStyle } from './Header.interface'
 
 export const Container = styled.div<IContainerStyles>`
   position: fixed;
-  z-index: 15;
+  z-index: 30;
 
   display: flex;
   align-items: center;
