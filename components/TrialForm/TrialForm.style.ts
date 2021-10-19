@@ -76,9 +76,7 @@ export const ErrorText = styled.p<IErrorTextStyle>`
   ${({ hasError }) =>
     hasError &&
     css`
-      ::before {
-        content: '•  ';
-      }
+      padding: 30px 0;
     `}
 `
 

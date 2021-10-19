@@ -38,7 +38,7 @@ export const Check = styled.label<ICheckStyles>`
       font-size: 1.4rem;
       color: #fff;
       ::after {
-        content: '✔';
+        content: '';
       }
       background-color: ${theme.colors.green[200]};
     `}
