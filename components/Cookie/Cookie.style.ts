@@ -17,18 +17,16 @@ export const Container = styled.div<ICookieStyle>`
   height: 100vh;
 
   transition: all 0.3s ease-in-out;
+  z-index: 20;
 
   ${props =>
     props.isOpen
       ? css`
           position: fixed;
-          z-index: 15;
-
           background-color: rgba(0, 0, 0, 0.6);
         `
       : css`
           position: absolute;
-          z-index: 10;
         `}
 `
 

@@ -5,7 +5,7 @@ import { IContainerStyle } from './Hero.interface'
 
 export const Container = styled.div<IContainerStyle>`
   position: relative;
-  z-index: 13;
+  z-index: 21;
   height: ${props => (props.maxHeight ? `${props.maxHeight}vh` : '80vh')};
   padding-top: 5vh;
   background-color: ${theme.colors.gray[100]};
