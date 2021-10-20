@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Row, Col } from 'react-bootstrap'
 
 import { FormikProvider, useFormik } from 'formik'
@@ -25,14 +25,6 @@ const Sidebar = ({
   })
 
   const [isSuccess, setIsSuccess] = useState(false)
-
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src =
-      'https://d335luupugsy2.cloudfront.net/js/loader-scripts/3898021c-e125-41ca-8f3c-3cd2e9e9bb99-loader.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
 
   const handleSubmit = async () => {
     setTimeout(() => {

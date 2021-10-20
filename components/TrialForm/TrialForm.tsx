@@ -69,12 +69,8 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
         setErrorMessage('')
         router.push('/trial-success')
       } catch (error) {
-        const errors = {
-          'Lead already exist.': 'Email já cadastrado.',
-        }
         setErrorMessage(
-          errors[error.response?.data?.message] ||
-            'Erro ao enviar sua requisição.',
+          'Desculpe, não conseguimos enviar seus dados, por favor tente novamente!',
         )
       } finally {
         setIsLoading(false)
@@ -123,7 +119,9 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
     <FormikProvider value={formik}>
       <S.Form onSubmit={formik.handleSubmit}>
         {currentForm}
+
         <S.ErrorText hasError={!!errorMessage}>{errorMessage}</S.ErrorText>
+
         <S.ButtonContainer>
           {!isFirstStep() ? (
             <Button
@@ -136,13 +134,14 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
           ) : (
             <div></div>
           )}
+
           <Button
             text={
               isLastStep() ? 'Enviar' : isLoading ? 'Enviando...' : 'Próximo'
             }
-            size={'default'}
-            type={'default'}
-            buttonType={'submit'}
+            size="default"
+            type="default"
+            buttonType="submit"
             isDisabled={isDisable()}
           />
         </S.ButtonContainer>
