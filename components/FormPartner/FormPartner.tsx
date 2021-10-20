@@ -9,6 +9,7 @@ import axios from 'axios'
 import { roleOptions } from '../../constants/roleOptions'
 import { IMessage, IPayload } from './FormPartner.interface'
 import { Select } from '../Select'
+import { removePhoneMask } from '../../utils/removePhoneMask'
 
 const FormPartner = () => {
   const [message, setMessage] = useState<IMessage>()
@@ -22,9 +23,28 @@ const FormPartner = () => {
     fullName: Yup.string().required('Campo Obrigatório'),
   })
 
+  const handleValues = (values: IPayload) => ({
+    event_type: 'CONVERSION',
+    event_family: 'CDP',
+    payload: {
+      conversion_identifier: 'parceiro-de-integracao',
+      email: values.email,
+      name: values.fullName,
+      mobile_phone: removePhoneMask(values.phone),
+      company: values.company,
+      cf_cargo: values.role,
+      cf_mensagem: values.message,
+    },
+  })
+
   const onSubmit = async (values: IPayload) => {
     try {
-      const result = await axios.post('/api/partner', values)
+      const handledValues = handleValues(values)
+
+      const result = await axios.post(
+        'https://api.rd.services/platform/conversions?api_key=qYACYTdSehuDUoCaOVpbdHyujAXQAQiIVECj',
+        handledValues,
+      )
 
       formik.resetForm()
       result.status === 200 &&
@@ -84,7 +104,7 @@ const FormPartner = () => {
                 label={'Telefone'}
                 isRequired
                 mask={'(99)9 9999-9999'}
-                placeholder={'(  )________-_______'}
+                placeholder={'(  ) ________-_______'}
               />
             </S.InputColumn>
 

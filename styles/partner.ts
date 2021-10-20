@@ -370,10 +370,10 @@ export const CornerContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10vh 8vw 10vh 8vw;
+  padding: 14vh 8vw 13vh 8vw;
   background-color: ${theme.colors.gray[100]};
   background-image: url('masks/devapi.svg');
-  background-size: contain;
+  background-size: cover;
   border-radius: 110px 0;
 
   @media (max-width: 900px) {

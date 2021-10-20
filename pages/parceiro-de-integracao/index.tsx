@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { FormPartner } from '../../components/FormPartner'
 
@@ -15,6 +14,7 @@ import { programCard } from '../../constants/programCard'
 import { constumersMobile, costumers } from '../../constants/costumers'
 
 import * as S from '../../styles/partner'
+import { Button } from '../../components/Button'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -32,8 +32,11 @@ const MultiCarrouselWithOutSSR = dynamic(
 
 const IntegrationPartner = () => {
   const { width } = useWindowDimensions()
+  const formRef = useRef(null)
 
   const isMobile = width <= 1024
+
+  const executeScroll = () => formRef.current.scrollIntoView()
 
   return (
     <>
@@ -72,12 +75,11 @@ const IntegrationPartner = () => {
               financeiros provenientes de seu próprio aplicativo, serviço ou
               solução. Junte-se a nós!
             </p>
-            <ButtonLink
+            <Button
               text="Quero ser um parceiro!"
-              href="/free-trial"
-              target="_self"
               size="default"
               type="default"
+              onClick={executeScroll}
             />
           </S.HeroContent>
         </Hero>
@@ -150,7 +152,7 @@ const IntegrationPartner = () => {
           </S.Features>
         </S.FeatureContainer>
 
-        <S.CornerContainer>
+        <S.CornerContainer ref={formRef}>
           <S.TextContainer>
             <S.Pipe />
             <h2>
