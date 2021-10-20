@@ -11,6 +11,7 @@ export const Container = styled.div`
 `
 
 export const HeroContent = styled.div`
+  position: absolute;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -95,7 +96,6 @@ export const SolutionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding-bottom: 10vh;
 `
 

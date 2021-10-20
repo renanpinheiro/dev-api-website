@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const FormContainer = styled.div`
-  z-index: 13;
+  z-index: 29;
   display: flex;
   flex-direction: column;
   width: 38vw;

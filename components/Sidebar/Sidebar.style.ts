@@ -12,16 +12,16 @@ export const SideBar = styled.div`
 
 export const Ebook = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   width: 100%;
   height: 500px;
   margin-bottom: 50px;
 
-  border-radius: 15px;
-
   cursor: pointer;
+
+  border-radius: 15px;
 
   img {
     width: 100%;
@@ -38,9 +38,9 @@ export const NewsForm = styled.form`
 `
 
 export const SubText = styled.span`
-  color: #b7b7b7;
-  line-height: 1;
   padding: 6px 60px 30px 60px;
+  line-height: 1;
+  color: #b7b7b7;
 `
 export const TagsContainer = styled.div``
 
@@ -51,9 +51,9 @@ export const Pipe = styled.div`
 `
 
 export const Title = styled.div`
-  color: ${theme.colors.primary};
-  font-weight: 700;
   font-size: 22px;
+  font-weight: 700;
+  color: ${theme.colors.primary};
 `
 
 export const Content = styled.div`
@@ -63,21 +63,20 @@ export const Content = styled.div`
 `
 
 export const Tag = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 39px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   padding: 13px;
-
-  border-radius: 10px;
-  background-color: #f6f6ff;
 
   margin: 5px;
 
   color: ${theme.colors.primary};
   cursor: pointer;
+  background-color: #f6f6ff;
+
+  border-radius: 10px;
 
   :hover {
     transform: scale(1.1);
@@ -86,19 +85,18 @@ export const Tag = styled.div`
 export const ArticleContainer = styled.div``
 
 export const Article = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 137px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   margin-bottom: 20px;
 
-  box-shadow: 0px 6px 28px #2c2d6636;
+  cursor: pointer;
   border-radius: 10px;
 
-  cursor: pointer;
+  box-shadow: 0px 6px 28px #2c2d6636;
 
   :hover {
     transform: scale(0.99);
@@ -121,13 +119,13 @@ export const TextContainer = styled.div`
 `
 
 export const Text = styled.p`
-  line-height: 1;
-  font-size: 22px;
+  display: -webkit-box;
   margin: 0;
 
   overflow: hidden;
+  font-size: 22px;
+  line-height: 1;
   text-overflow: ellipsis;
-  display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 
@@ -147,21 +145,21 @@ export const SidebarCotainer = styled.div`
   justify-content: flex-start;
 `
 export const Newspaper = styled.div`
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 100%;
 
   img {
     width: 14px;
     height: 14px;
   }
   p {
-    color: #c9c9c9;
+    padding-top: 2px;
     margin: 0;
     margin: 0 5px;
     line-height: 1;
-    padding-top: 2px;
+    color: #c9c9c9;
 
     @media only screen and (max-width: 770px) {
       font-size: 0.8rem;
@@ -169,21 +167,21 @@ export const Newspaper = styled.div`
   }
 `
 export const Date = styled.div`
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 100%;
 
   img {
     width: 14px;
     height: 14px;
   }
   p {
-    color: #c9c9c9;
+    padding-top: 2px;
     margin: 0;
     margin: 0 5px;
     line-height: 1;
-    padding-top: 2px;
+    color: #c9c9c9;
 
     @media only screen and (max-width: 770px) {
       font-size: 0.8rem;
