@@ -22,13 +22,13 @@ export const Container = styled.div<ICookieStyle>`
     props.isOpen
       ? css`
           position: fixed;
-          z-index: 9999;
+          z-index: 15;
 
           background-color: rgba(0, 0, 0, 0.6);
         `
       : css`
           position: absolute;
-          z-index: 16;
+          z-index: 10;
         `}
 `
 
