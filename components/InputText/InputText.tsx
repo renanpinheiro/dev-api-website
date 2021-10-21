@@ -14,13 +14,17 @@ export const InputText = ({
 }: IInputTextProps) => {
   const [field, meta] = useField(name)
 
+  const hasError = meta.error && meta.touched
+
+  console.log(hasError)
+
   if (type === 'textarea') {
     return (
       <S.Container>
         <S.Label isRequired={isRequired}>{label}</S.Label>
         <S.Textarea
           rows={5}
-          hasError={!!meta.error}
+          hasError={hasError}
           {...field}
           placeholder={placeholder}
         />
@@ -34,18 +38,14 @@ export const InputText = ({
         {mask ? (
           <InputMask
             mask={mask}
-            hasError={!!meta.error}
+            hasError={hasError}
             {...field}
             placeholder={placeholder}
           >
             {inputProps => <S.Input {...inputProps} />}
           </InputMask>
         ) : (
-          <S.Input
-            hasError={!!meta.error}
-            {...field}
-            placeholder={placeholder}
-          />
+          <S.Input hasError={hasError} {...field} placeholder={placeholder} />
         )}
         <S.ErrorMessage>{meta.touched && meta.error}</S.ErrorMessage>
       </S.Container>

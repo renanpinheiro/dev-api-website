@@ -45,11 +45,12 @@ export const Input = styled.input<IInputStyles>`
   ${({ hasError }) =>
     hasError &&
     css`
-      border-color: ${theme.colors.red};
+      border-color: ${theme.colors.red[100]};
     `};
 `
 
 export const ErrorMessage = styled.p`
+  margin-top: 5px;
   font-size: 1rem;
   color: ${theme.colors.red[200]};
 `

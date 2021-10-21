@@ -7,6 +7,8 @@ import axios from 'axios'
 import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
 import * as Yup from 'yup'
 
+import { emailCorporateValidation } from '../../utils/validation'
+
 import { Button } from '../../components/Button'
 import { MultipleCheckbox } from '../../components/MultipleCheckbox'
 import { InputText } from '../../components/InputText'
@@ -291,11 +293,23 @@ const LastForm = ({}: Pick<
 }
 
 const TrialForm = ({ conversionIdentifier }: ITrialFormProps) => {
+  // validate email corporate
+  Yup.addMethod(Yup.string, 'emailCorporate', function () {
+    return this.test({
+      name: 'email',
+      message: 'Informe um email corporativo',
+      test: (email = '') => {
+        return emailCorporateValidation(email)
+      },
+    })
+  })
+
   const validationSchemas = {
     step1: Yup.object().shape({
       fullName: Yup.string().required('Campo obrigatório.'),
       email: Yup.string()
         .email('Este campo deve ser um email válido.')
+        .emailCorporate()
         .required('Campo obrigatório'),
       phone: Yup.string().required('Campo obrigatório.'),
       company: Yup.string().required('Campo obrigatório.'),
