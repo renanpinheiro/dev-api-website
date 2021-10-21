@@ -118,8 +118,9 @@ const BlogDetails = () => {
               </S.ReturnButtonContainer>
             </Link>
 
-            <S.Paragraph dangerouslySetInnerHTML={{ __html: text }} />
+            <S.Post dangerouslySetInnerHTML={{ __html: text }} />
           </S.Content>
+
           <Sidebar
             tags={tags}
             articles={popularArticles}
