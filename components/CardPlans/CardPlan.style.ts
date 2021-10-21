@@ -70,12 +70,10 @@ export const Title = styled.h2`
   text-transform: uppercase;
   letter-spacing: 1vh;
   @media (max-width: 996px) {
-    /* width: 100%; */
     font-size: 1.25rem;
   }
 
   @media (min-width: 1600px) {
-    /* width: 90%; */
     font-size: 1.375rem;
   }
 `
