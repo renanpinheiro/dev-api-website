@@ -48,7 +48,11 @@ const FormPartner = () => {
 
       formik.resetForm()
       result.status === 200 &&
-        setMessage({ type: 'success', message: 'Enviando com sucesso !' })
+        setMessage({
+          type: 'success',
+          message:
+            'Enviando com sucesso! Entraremos em contato o mais brevemente possível',
+        })
     } catch {
       setMessage({ type: 'alert', message: 'Algo deu errado !' })
     }
