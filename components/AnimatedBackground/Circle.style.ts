@@ -23,6 +23,7 @@ export const Container = styled.div`
   padding-top: 5vh;
   background-color: ${theme.colors.gray[100]};
   background-color: ${theme.colors.gray[100]};
+  overflow: hidden;
 `
 
 export const BackgroundCircleContainer = styled.div`

@@ -20,7 +20,7 @@ export const Hero = styled.section`
 `
 
 export const HeroContent = styled.div`
-  z-index: 21;
+  z-index: 24;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -35,7 +35,6 @@ export const HeroContent = styled.div`
   }
 
   @media (max-width: 996px) {
-    z-index: 10;
     width: 100%;
   }
 
