@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 
 import { FormikProvider, useFormik } from 'formik'
@@ -24,13 +24,26 @@ const Sidebar = ({
     email: Yup.string().email('Digite um e-mail válido'),
   })
 
+  const [loading, setLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src =
+      'https://d335luupugsy2.cloudfront.net/js/loader-scripts/3898021c-e125-41ca-8f3c-3cd2e9e9bb99-loader.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
+
   const handleSubmit = async () => {
+    setLoading(true)
+
     setTimeout(() => {
       setIsSuccess(true)
+      setLoading(false)
     }, 1500)
   }
+
   const formikbag = useFormik({
     initialValues: {
       name: '',
@@ -45,8 +58,9 @@ const Sidebar = ({
       <S.Ebook onClick={() => open(ebookRedirect, '_blank')}>
         <img src={ebookImg} alt="ebook" />
       </S.Ebook>
+
       <FormikProvider value={formikbag}>
-        <S.NewsForm onSubmit={formikbag.handleSubmit}>
+        <S.NewsForm name="newsletter-devapi" onSubmit={formikbag.handleSubmit}>
           <Row>
             <Col>
               <Input type="text" name="name" placeholder="Nome " />
@@ -66,8 +80,8 @@ const Sidebar = ({
               <Button
                 type="submit"
                 size="custom"
-                text="Receber novidades"
-                color={isSuccess ? 'green' : 'secondary'}
+                text={loading ? 'Enviando...' : 'Receber novidades'}
+                color="secondary"
               />
             </Col>
           </Row>

@@ -90,9 +90,7 @@ export const Article = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 137px;
-
   margin-bottom: 20px;
-
   cursor: pointer;
   border-radius: 10px;
 
@@ -121,7 +119,6 @@ export const TextContainer = styled.div`
 export const Text = styled.p`
   display: -webkit-box;
   margin: 0;
-
   overflow: hidden;
   font-size: 22px;
   line-height: 1;
@@ -139,11 +136,13 @@ export const VerticalPipe = styled.div`
   height: 60%;
   background-color: ${theme.colors.primary};
 `
+
 export const SidebarCotainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
 `
+
 export const Newspaper = styled.div`
   display: flex;
   align-items: center;
@@ -154,6 +153,7 @@ export const Newspaper = styled.div`
     width: 14px;
     height: 14px;
   }
+
   p {
     padding-top: 2px;
     margin: 0;
@@ -176,6 +176,7 @@ export const Date = styled.div`
     width: 14px;
     height: 14px;
   }
+
   p {
     padding-top: 2px;
     margin: 0;
@@ -189,8 +190,10 @@ export const Date = styled.div`
   }
 `
 export const Message = styled.div`
+  padding-bottom: 30px;
+
   > small {
     font-size: 1.25rem;
-    color: ${props => props.theme.colors.green};
+    color: ${theme.colors.green[200]};
   }
 `

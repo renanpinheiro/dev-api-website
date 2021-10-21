@@ -21,7 +21,7 @@ const Button = ({
   const colorButton = {
     primary: theme.colors.primary,
     secondary: theme.colors.secondary,
-    green: theme.colors.green,
+    green: theme.colors.green[300],
   }[color]
 
   return (
