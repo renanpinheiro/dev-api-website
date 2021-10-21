@@ -7,7 +7,27 @@ import {
   Card as CardBootstrap,
 } from 'react-bootstrap'
 
-export const Container = styled.div<ICookieStyle>`
+export const Cookie = styled.div`
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+  z-index: 1001;
+`
+
+export const CookieContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5vh;
+`
+
+export const CookieModalOverlay = styled.div<ICookieStyle>`
   position: absolute;
   top: 0;
   display: flex;
@@ -15,7 +35,6 @@ export const Container = styled.div<ICookieStyle>`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-
   transition: all 0.3s ease-in-out;
 
   ${props =>
@@ -27,17 +46,7 @@ export const Container = styled.div<ICookieStyle>`
         `
       : css`
           position: absolute;
-          z-index: 20;
         `}
-`
-
-export const CookieContainer = styled.div`
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 5vh;
 `
 
 export const CookieModal = styled.div`

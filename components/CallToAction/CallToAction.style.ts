@@ -8,6 +8,7 @@ export const Container = styled.div`
   margin-top: 5vw;
 
   @media (max-width: 1024px) {
+    justify-content: flex-start;
     margin-top: 15vw;
   }
 `
@@ -20,6 +21,7 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 1024px) {
+    justify-content: flex-start;
     flex-direction: column;
   }
 

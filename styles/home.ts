@@ -7,13 +7,12 @@ export const Hero = styled.section`
   height: 100vh;
   padding: 0 8vw 0 8vw;
   background-color: ${theme.colors.gray[100]};
-
   background-image: url('/masks/lines.svg');
   background-repeat: no-repeat;
   background-position-y: 140%;
   background-size: 100%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     flex-direction: column-reverse;
     padding: 15vh 8vw 0 8vw;
   }
@@ -35,6 +34,7 @@ export const HeroContent = styled.div`
   }
 
   @media (max-width: 996px) {
+    z-index: 20;
     width: 100%;
   }
 
