@@ -9,22 +9,21 @@ import {
 
 export const Cookie = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: 3vh;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   transition: all 0.3s ease-in-out;
-  z-index: 1001;
+  z-index: 25;
 `
 
-export const CookieContainer = styled.div`
+export const CookieContainer = styled.div<ICookieStyle>`
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: ${props => (props.isActive ? 'flex-start' : 'center')};
   width: 100%;
   height: 100%;
-  padding-bottom: 5vh;
 `
 
 export const CookieModalOverlay = styled.div<ICookieStyle>`
