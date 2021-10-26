@@ -16,8 +16,6 @@ export const InputText = ({
 
   const hasError = meta.error && meta.touched
 
-  console.log(hasError)
-
   if (type === 'textarea') {
     return (
       <S.Container>

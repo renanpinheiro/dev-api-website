@@ -25,7 +25,9 @@ const Cookie = ({ acceptCookie, isActiveCookies }) => {
     baseURL: process.env.NEXT_PUBLIC_API_URL,
   })
 
-  const [isAcceptCookies, setIsAcceptCookies] = useState(isActiveCookies)
+  const [isAcceptCookies, setIsAcceptCookies] = useState(
+    isActiveCookies || true,
+  )
   const [isOpenPreferences, setIsOpenPreferences] = useState(false)
   const [isOpenRequestForm, setIsOpenRequestForm] = useState(false)
   const [isOpenFollowUpRequest, setIsOpenFollowUpRequest] = useState(false)
@@ -94,7 +96,7 @@ const Cookie = ({ acceptCookie, isActiveCookies }) => {
     <>
       {!isOpenPreferences ? (
         <S.Cookie>
-          <S.CookieContainer>
+          <S.CookieContainer isActive={isAcceptCookies}>
             <CookieBarSSR
               isAcceptCookies={isAcceptCookies}
               handleClickAccept={handleClickAccept}
