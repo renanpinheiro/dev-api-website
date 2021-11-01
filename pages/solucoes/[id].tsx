@@ -38,9 +38,9 @@ const Solutions = () => {
 
   const router = useRouter().asPath
 
-  const filterPage = router.split('?')
-  const splitPage = filterPage[0]
-  const currentPage = splitPage.split('/')
+  const [filterPage] = router.split('?')
+
+  const currentPage = filterPage.split('/')
 
   const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
 

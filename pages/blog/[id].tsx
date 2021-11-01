@@ -35,11 +35,10 @@ const NewsCarouselWithOutSSR = dynamic(
 
 const BlogDetails = () => {
   const router = useRouter()
-
+  const { id } = router.query
   const routerId = router.asPath
-  const splitId = routerId.split('?')
-  const currentId = splitId[0].split('/')
-  const realId = currentId[2]
+  const [splitId] = routerId.split('?')
+  const [, , currentId] = splitId.split('/')
 
   const [popularArticles, setPopularArticles] = useState([])
   const [tags, setTags] = useState([])
@@ -51,12 +50,12 @@ const BlogDetails = () => {
   const [newsCards, setNewsCards] = useState([])
 
   useEffect(() => {
-    if (router.isReady) handleFindPostById(realId)
+    if (router.isReady) handleFindPostById(currentId)
 
     handleFindTags()
     handleFindPopularPosts()
     handleFindEbook()
-  }, [realId])
+  }, [currentId])
 
   const handlePostTitle = title => title && `${title} | DevApi`
 
