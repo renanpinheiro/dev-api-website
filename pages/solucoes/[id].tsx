@@ -38,7 +38,10 @@ const Solutions = () => {
 
   const router = useRouter().asPath
 
-  const currentPage = router.split('/')
+  const filterPage = router.split('?')
+  const splitPage = filterPage[0]
+  const currentPage = splitPage.split('/')
+
   const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
 
   const paragraphWidth = currentPage[2] === 'marketing' ? '80%' : ''

@@ -24,6 +24,7 @@ import {
   findPostById,
   findTags,
 } from '../../providers/blog/find'
+import { connectorsMobile } from '../../constants/connectors'
 
 const NewsCarouselWithOutSSR = dynamic(
   () => import('../../components/NewsCarousel'),
@@ -34,7 +35,11 @@ const NewsCarouselWithOutSSR = dynamic(
 
 const BlogDetails = () => {
   const router = useRouter()
-  const { id } = router.query
+
+  const routerId = router.asPath
+  const splitId = routerId.split('?')
+  const currentId = splitId[0].split('/')
+  const realId = currentId[2]
 
   const [popularArticles, setPopularArticles] = useState([])
   const [tags, setTags] = useState([])
@@ -46,16 +51,18 @@ const BlogDetails = () => {
   const [newsCards, setNewsCards] = useState([])
 
   useEffect(() => {
-    handleFindPostById(id)
+    if (router.isReady) handleFindPostById(realId)
+
     handleFindTags()
     handleFindPopularPosts()
     handleFindEbook()
-  }, [])
+  }, [realId])
 
   const handlePostTitle = title => title && `${title} | DevApi`
 
   const handleFindPostById = async id => {
     const { data } = await findPostById(id)
+
     const handledPostDetails = handlePostDetails(data)
     const handledPostTitle = handlePostTitle(handledPostDetails.title)
     setTitle(handledPostTitle)
