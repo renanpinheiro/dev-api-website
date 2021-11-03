@@ -29,7 +29,7 @@ interface IConnectorsProps {
 }
 
 interface IQueryKeyType {
-  pageParam: number
+  pageParam?: number
   queryKey: [string, string]
 }
 
