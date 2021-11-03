@@ -56,13 +56,13 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
       setIsLoading(true)
       const payload = {
         conversion_identifier: conversionIdentifier,
-        full_name: values.fullName,
-        email: values.email,
-        phone: removePhoneMask(values.phone),
-        company: values.company,
-        role: values.role,
-        departaments: values.departaments,
-        employees: values.employees,
+        full_name: values.formFullName,
+        email: values.formEmail,
+        phone: removePhoneMask(values.formPhone),
+        company: values.formCompany,
+        role: values.formRole,
+        departaments: values.formDepartaments,
+        employees: values.formEmployees,
         is_comunication: values.isComunication,
         is_privacy_police: values.isPrivacyPolice,
       }
@@ -166,7 +166,7 @@ const PersonalForm = ({}: Pick<
         Preencha os campos abaixo para que possamos entrar em contato com você.
       </S.SubTitle>
       <InputText
-        name={'fullName'}
+        name={'formFullName'}
         label={'Nome Completo'}
         placeholder={'Nome'}
         isRequired
@@ -174,7 +174,7 @@ const PersonalForm = ({}: Pick<
       <S.DefaultContainer>
         <S.SmallContainer>
           <InputText
-            name={'email'}
+            name={'formEmail'}
             label={'Email'}
             placeholder={'Email'}
             isRequired
@@ -182,7 +182,7 @@ const PersonalForm = ({}: Pick<
         </S.SmallContainer>
         <S.SmallContainer>
           <InputText
-            name={'phone'}
+            name={'formPhone'}
             label={'Telefone'}
             isRequired
             mask={'(99)9 9999-9999'}
@@ -192,7 +192,7 @@ const PersonalForm = ({}: Pick<
       <S.DefaultContainer>
         <S.SmallContainer>
           <InputText
-            name={'company'}
+            name={'formCompany'}
             label={'Empresa'}
             placeholder={'Empresa'}
             isRequired
@@ -201,7 +201,7 @@ const PersonalForm = ({}: Pick<
         <S.SmallContainer>
           <Select
             isRequered
-            name={'role'}
+            name={'formRole'}
             label={'Cargo'}
             options={roleOptions}
           />
@@ -231,7 +231,7 @@ const DepartamentForm = ({}: Pick<
           <S.CheckboxContainer key={idx}>
             <MultipleCheckbox
               text={departament}
-              name={'departaments'}
+              name={'formDepartaments'}
               setError={setErrorMessage}
             />
           </S.CheckboxContainer>
@@ -264,7 +264,7 @@ const LastForm = ({}: Pick<
             <S.CheckboxContainer key={idx}>
               <MultipleCheckbox
                 text={range}
-                name={'employees'}
+                name={'formEmployees'}
                 setError={setErrorMessage}
               />
             </S.CheckboxContainer>
@@ -306,20 +306,24 @@ const TrialForm = ({ conversionIdentifier }: ITrialFormProps) => {
 
   const validationSchemas = {
     step1: Yup.object().shape({
-      fullName: Yup.string().required('Campo obrigatório.'),
-      email: Yup.string()
+      formFullName: Yup.string().required('Campo obrigatório.'),
+      formEmail: Yup.string()
         .email('Este campo deve ser um email válido.')
         .emailCorporate()
         .required('Campo obrigatório'),
-      phone: Yup.string().required('Campo obrigatório.'),
-      company: Yup.string().required('Campo obrigatório.'),
-      role: Yup.string().required('Campo obrigatŕoio.'),
+      formPhone: Yup.string().required('Campo obrigatório.'),
+      formCompany: Yup.string().required('Campo obrigatório.'),
+      formRole: Yup.string().required('Campo obrigatŕoio.'),
     }),
     step2: Yup.object().shape({
-      departaments: Yup.string().required('É necessário selecionar uma opção.'),
+      formDepartaments: Yup.string().required(
+        'É necessário selecionar uma opção.',
+      ),
     }),
     step3: Yup.object().shape({
-      employees: Yup.string().required('É necessário selecionar uma opção.'),
+      formEmployees: Yup.string().required(
+        'É necessário selecionar uma opção.',
+      ),
     }),
   }
 
