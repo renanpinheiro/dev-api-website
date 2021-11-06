@@ -19,6 +19,11 @@ const Characteristics = () => {
         <meta property="og:title" content="DevApi | Características" />
         <meta property="description" content="iPaas & API Manager." />
         <meta
+          property="og:description"
+          content="iPaas & API Manager."
+          key="description"
+        />
+        <meta
           property="og:url"
           content="https://devapi.com.br/caracteristicas"
         />
