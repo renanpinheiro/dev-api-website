@@ -64,7 +64,7 @@ const ApiManagement = () => {
                   <p>{integration.text}</p>
                 </S.TextContainer>
                 <S.GifContainer align={isOddNumber ? 'flex-end' : 'flex-start'}>
-                  <img src={integration.urlGif} />
+                  <img src={integration.urlGif} alt={`api-${index}`} />
                 </S.GifContainer>
               </S.ApiContant>
             )

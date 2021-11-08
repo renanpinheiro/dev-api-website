@@ -19,7 +19,7 @@ const Carrousel = ({ items, title }: ICarrouselProps) => {
                 {Object.entries(item).map(([key, value]: any) => {
                   return (
                     <S.ImageContainer>
-                      <img key={key} src={value} />
+                      <img key={key} src={value} alt={`image-${key + 1}`} />
                     </S.ImageContainer>
                   )
                 })}

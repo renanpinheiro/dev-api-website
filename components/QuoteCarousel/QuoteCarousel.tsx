@@ -23,10 +23,10 @@ const QuoteCarousel = ({ quotes }: IQuotesCarouselProps) => {
             <S.QuoteContainer key={index}>
               <S.IconContainer>
                 <S.CircleDetail />
-                <S.Icon src={card.imageUrl} />
+                <S.Icon src={card.imageUrl} alt={card.name} />
               </S.IconContainer>
               <S.QuoteTexts>
-                <S.QuotationMark src="/quotes/quote-mark.svg" />
+                <S.QuotationMark src="/quotes/quote-mark.svg" alt={''} />
                 <S.Quote>{card.quote}</S.Quote>
                 <S.Name>{card.name}</S.Name>
               </S.QuoteTexts>

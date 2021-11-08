@@ -61,7 +61,7 @@ const Characteristics = () => {
                   <p>{integration.text}</p>
                 </S.TextContainer>
                 <S.GifContainer align={isOddNumber ? 'flex-end' : 'flex-start'}>
-                  <img src={integration.urlGif} />
+                  <img src={integration.urlGif} alt={`integration-${index}`} />
                 </S.GifContainer>
               </S.IntegrationContant>
             )
