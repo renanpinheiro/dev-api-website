@@ -12,7 +12,7 @@ export default {
   openGraph: {
     images: [
       {
-        url: 'https://devninjas.sfo2.digitaloceanspaces.com/medias/39fcd79d682f736b47d7979e43252df9.png',
+        url: 'https://devapi-cdn-static.s3.amazonaws.com/website/logo.png',
         width: 1200,
         height: 630,
         alt: 'DevApi',

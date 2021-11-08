@@ -21,6 +21,11 @@ const ApiManagement = () => {
           content="Agilidade e escalabilidade incríveis!"
         />
         <meta
+          property="og:description"
+          content="Agilidade e escalabilidade incríveis!"
+          key="description"
+        />
+        <meta
           property="og:url"
           content="https://devapi.com.br/api-management"
         />

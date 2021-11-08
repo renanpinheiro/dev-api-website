@@ -49,6 +49,10 @@ const IntegrationPartner = () => {
           key="title"
         />
         <meta
+          property="description"
+          content="A DevApi tem um Programa de Parceiros que Oferece Inumeras Vantagens como Treinamento, Gestão estratégica e Muito Mais. Acesse e Confira!"
+        />
+        <meta
           property="og:description"
           content="A DevApi tem um Programa de Parceiros que Oferece Inumeras Vantagens como Treinamento, Gestão estratégica e Muito Mais. Acesse e Confira!"
           key="description"

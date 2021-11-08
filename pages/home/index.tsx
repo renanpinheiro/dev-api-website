@@ -53,6 +53,10 @@ const Home = () => {
           key="title"
         />
         <meta
+          property="description"
+          content="Uma única plataforma para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Encaixe as peças da sua operação!"
+        />
+        <meta
           property="og:description"
           content="Uma única plataforma para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Encaixe as peças da sua operação!"
           key="description"
