@@ -19,7 +19,7 @@ const SelectCollapsible = ({ question, answer }: ISelectCollapsibleProps) => {
       <>
         <S.Selectable>
           <span>{question}</span>
-          <img src="/arrows/arrow-dropdown.svg" />
+          <img src="/arrows/arrow-dropdown.svg" alt={''} />
         </S.Selectable>
         <p>{answer}</p>
       </>

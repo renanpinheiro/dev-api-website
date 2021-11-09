@@ -1,29 +1,38 @@
 export const connectors = [
   {
+    name: 'sap',
     url: '/images/connectors/sap-one.png',
   },
   {
+    name: 'oracle',
     url: '/images/connectors/oracle.png',
   },
   {
+    name: 'hubspot',
     url: '/images/connectors/hubspot.png',
   },
   {
+    name: 'correios',
     url: '/images/connectors/correios.png',
   },
   {
+    name: 'picpay',
     url: '/images/connectors/picpay.png',
   },
   {
+    name: 'totvs-black',
     url: '/images/connectors/totvs-black.png',
   },
   {
+    name: 'vtex',
     url: '/images/connectors/vtex.png',
   },
   {
+    name: 'magalu',
     url: '/images/connectors/magalu.png',
   },
   {
+    name: 'shipay',
     url: '/images/connectors/shipay.png',
   },
 ]

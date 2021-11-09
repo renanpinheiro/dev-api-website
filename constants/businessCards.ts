@@ -5,12 +5,15 @@ export const businessCards = [
     link: '/solucoes/gestao',
     connectors: [
       {
+        name: 'sap',
         urlImage: '/images/connectors/sap.png',
       },
       {
+        name: 'oracle',
         urlImage: '/images/connectors/oracle.png',
       },
       {
+        name: 'totvs-black',
         urlImage: '/images/connectors/totvs-black.png',
       },
     ],
@@ -21,12 +24,15 @@ export const businessCards = [
     link: '/solucoes/comercial',
     connectors: [
       {
+        name: 'salesforce',
         urlImage: '/images/connectors/salesforce.png',
       },
       {
+        name: 'pipedrive',
         urlImage: '/images/connectors/pipedrive.png',
       },
       {
+        name: 'meetime',
         urlImage: '/images/connectors/meetime.png',
       },
     ],
@@ -37,12 +43,15 @@ export const businessCards = [
     link: '/solucoes/e-commerce',
     connectors: [
       {
+        name: 'vtex',
         urlImage: '/images/connectors/vtex.png',
       },
       {
+        name: 'magalu',
         urlImage: '/images/connectors/magalu.png',
       },
       {
+        name: 'b2w',
         urlImage: '/images/connectors/b2w.png',
       },
     ],
@@ -53,12 +62,15 @@ export const businessCards = [
     link: '/solucoes/financeiro',
     connectors: [
       {
+        name: 'pix',
         urlImage: '/images/connectors/pix.png',
       },
       {
+        name: 'shipay',
         urlImage: '/images/connectors/shipay.png',
       },
       {
+        name: 'cielo',
         urlImage: '/images/connectors/cielo.png',
       },
     ],
@@ -69,12 +81,15 @@ export const businessCards = [
     link: '/solucoes/logistica',
     connectors: [
       {
+        name: 'bsoft',
         urlImage: '/images/connectors/bsoft.png',
       },
       {
+        name: 'frete',
         urlImage: '/images/connectors/frete.png',
       },
       {
+        name: 'fedex',
         urlImage: '/images/connectors/fedex.png',
       },
     ],
@@ -85,12 +100,18 @@ export const businessCards = [
     link: '/solucoes/marketing',
     connectors: [
       {
+        name: 'adwords',
+
         urlImage: '/images/connectors/adwords.png',
       },
       {
+        name: 'hubspot',
+
         urlImage: '/images/connectors/hubspot.png',
       },
       {
+        name: 'rd',
+
         urlImage: '/images/connectors/rd-station.png',
       },
     ],
@@ -101,12 +122,18 @@ export const businessCards = [
     link: '/solucoes/rh',
     connectors: [
       {
+        name: 'gupy',
+
         urlImage: '/images/connectors/gupy.png',
       },
       {
+        name: 'senior',
+
         urlImage: '/images/connectors/senior.png',
       },
       {
+        name: 'vr',
+
         urlImage: '/images/connectors/vr.png',
       },
     ],
