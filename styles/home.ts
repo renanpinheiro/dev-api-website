@@ -93,8 +93,9 @@ export const GifContainer = styled.div`
     width: 100%;
   }
 
-  > video {
+  > img {
     width: 100%;
+    height: 100%;
   }
 `
 
