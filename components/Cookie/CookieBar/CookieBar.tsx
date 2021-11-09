@@ -28,7 +28,9 @@ const CookieBar = ({
             armazenamento de cookies no seu dispositivo para melhorar a
             experiência e navegação no site. Para saber mais, acesse a{' '}
             <Link href="/politica-de-privacidade">
-              <a title="Política de Privacidade">Política de Privacidade.</a>
+              <a title="Política de Privacidade" rel="noreferrer">
+                Política de Privacidade.
+              </a>
             </Link>
           </p>
           <S.ButtonContainer>

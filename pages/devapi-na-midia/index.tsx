@@ -54,7 +54,7 @@ const Midias = ({ midias }: IMidiasProps) => {
               <h3>{midia.title}</h3>
               <S.KnowMoreLink>
                 <Link href={midia.link}>
-                  <a title="Saiba mais" target="_blank">
+                  <a title="Saiba mais" target="_blank" rel="noreferrer">
                     Saiba mais
                   </a>
                 </Link>
