@@ -17,7 +17,7 @@ const NewsCard = ({
   return (
     <S.Container padding={padding}>
       <Link href={`blog/${newsCards.linkId}`}>
-        <a>
+        <a rel="noreferrer">
           <S.Grid gridColum={gridColum} gridRow={gridRow}>
             <S.Image>
               <img src={newsCards.imageUrl} alt="news" />

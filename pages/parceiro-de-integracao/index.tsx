@@ -59,11 +59,11 @@ const IntegrationPartner = () => {
         />
         <meta
           property="og:url"
-          content="https://devapi.com.br/parceiro-de-integracao"
+          content="https://www.devapi.com.br/parceiro-de-integracao"
         />
         <link
           rel="canonical"
-          href="https://devapi.com.br/parceiro-de-integracao"
+          href="https://www.devapi.com.br/parceiro-de-integracao"
         />
       </Head>
 

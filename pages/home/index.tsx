@@ -61,8 +61,7 @@ const Home = () => {
           content="Uma única plataforma para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Encaixe as peças da sua operação!"
           key="description"
         />
-        <meta property="og:url" content="https://devapi.com.br" />
-        <link rel="canonical" href="https://devapi.com.br" />
+        <meta property="og:url" content="https://www.devapi.com.br" />
       </Head>
 
       <S.Hero>

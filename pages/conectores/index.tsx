@@ -87,8 +87,11 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
           content="Mais de 300 prontos para uso."
           key="description"
         />
-        <meta property="og:url" content="https://devapi.com.br/conectores" />
-        <link rel="canonical" href="https://devapi.com.br/conectores" />
+        <meta
+          property="og:url"
+          content="https://www.devapi.com.br/conectores"
+        />
+        <link rel="canonical" href="https://www.devapi.com.br/conectores" />
       </Head>
 
       <S.Hero>

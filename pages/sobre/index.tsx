@@ -13,14 +13,15 @@ const About = () => {
     <>
       <Head>
         <title>DevApi | Sobre nós</title>
-        <link rel="canonical" href="https://devapi.com.br/sobre" />
+        <link rel="canonical" href="https://www.devapi.com.br/sobre" />
       </Head>
 
       <Head>
         <title>DevApi | Sobre nós</title>
         <meta property="og:title" content="DevApi | Sobre nós" />
-        <meta property="og:url" content="https://devapi.com.br/sobre" />
-        <link rel="canonical" href="https://devapi.com.br/sobre" />
+        <meta property="og:url" content="https://www.devapi.com.br/sobre" />
+        <meta property="description" content="Sobre nós" />
+        <link rel="canonical" href="https://www.devapi.com.br/sobre" />
       </Head>
 
       <Hero minHeight={40} maxHeight={65}>
@@ -80,7 +81,7 @@ const About = () => {
                 alt={'William Hoffman - CTO'}
               />
               <Link href="https://www.linkedin.com/in/williamhoffmann/">
-                <a title="William Hoffmann" target="_blank">
+                <a title="William Hoffmann" target="_blank" rel="noopener">
                   William Hoffmann
                 </a>
               </Link>
@@ -90,7 +91,7 @@ const About = () => {
             <S.Card>
               <img src="/images/founder-luana-ceo.png" alt={'Luana - CEO'} />
               <Link href="https://www.linkedin.com/in/luanaribeiromelo/">
-                <a title="Luana Ribeiro" target="_blank">
+                <a title="Luana Ribeiro" target="_blank" rel="noopener">
                   Luana Ribeiro
                 </a>
               </Link>

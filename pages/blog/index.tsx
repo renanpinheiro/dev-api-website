@@ -142,7 +142,8 @@ const Blog = () => {
     <>
       <Head>
         <title>DevApi | Blog</title>
-        <link rel="canonical" href="https://devapi.com.br/blog" />
+        <meta property="description" content="Mantenha-se atualizado!" />
+        <link rel="canonical" href="https://www.devapi.com.br/blog" />
       </Head>
 
       <S.Container>

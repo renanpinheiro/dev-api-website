@@ -59,8 +59,8 @@ const Plans = () => {
           content="É hora de acelerar a transformação!"
           key="description"
         />
-        <meta property="og:url" content="https://devapi.com.br/planos" />
-        <link rel="canonical" href="https://devapi.com.br/planos" />
+        <meta property="og:url" content="https://www.devapi.com.br/planos" />
+        <link rel="canonical" href="https://www.devapi.com.br/planos" />
       </Head>
 
       <Hero>

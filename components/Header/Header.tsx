@@ -60,7 +60,7 @@ const Header = () => {
       <S.Container isCentralized>
         <S.LogoContainer>
           <Link href="/">
-            <a title="DevApi">
+            <a title="DevApi" rel="noreferrer">
               <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
             </a>
           </Link>
@@ -73,7 +73,7 @@ const Header = () => {
     <S.Container>
       <S.LogoContainer>
         <Link href="/">
-          <a title="DevApi">
+          <a title="DevApi" rel="noreferrer">
             <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
           </a>
         </Link>

@@ -159,9 +159,9 @@ const NewsletterForm = () => {
             />
             <S.LabelCheckBox>
               Concordo com a{' '}
-              <Link href="/politica-de-privacidade">
+              <a href="/politica-de-privacidade" rel="noreferrer">
                 Política de privacidade
-              </Link>
+              </a>
             </S.LabelCheckBox>
           </S.CheckboxCol>
         </S.CheckboxContainer>
