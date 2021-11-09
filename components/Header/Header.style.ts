@@ -25,6 +25,8 @@ export const Container = styled.div<IContainerStyles>`
     css`
       justify-content: center;
       img {
+        width: 100%;
+        height: 100%;
         padding: 2vh 0;
       }
       div {
@@ -133,6 +135,8 @@ export const NavLink = styled.a<IHeaderStyle>`
 
 export const Arrow = styled.img`
   margin: 5px 0 0 5px;
+  width: 100%;
+  height: 100%;
 `
 
 export const MenuContainer = styled.div`

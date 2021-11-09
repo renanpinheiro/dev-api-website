@@ -181,6 +181,7 @@ export const AccordionToggle = styled(AccordionBootstrap.Toggle)`
 
   img {
     width: 15px;
+    height: 100%;
     margin-left: 30px;
 
     @media (max-width: 992px) {

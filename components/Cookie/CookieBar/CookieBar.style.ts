@@ -61,7 +61,8 @@ export const AcceptCookie = styled.div`
     background-color: #f6f6ff;
     border-radius: 5px;
     box-shadow: 0px 0px 0px 2px ${theme.colors.secondary};
-
+    width: 100%;
+    height: 100%;
     @media (max-width: 992px) {
       padding: 5px;
     }

@@ -64,4 +64,8 @@ export const ImageContainer = styled.div`
   justify-content: space-around;
   width: 50%;
   height: 100px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `
