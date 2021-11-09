@@ -15,6 +15,7 @@ import { constumersMobile, costumers } from '../../constants/costumers'
 
 import * as S from '../../styles/partner'
 import { Button } from '../../components/Button'
+import { parseMutationFilterArgs } from 'react-query/types/core/utils'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -94,7 +95,7 @@ const IntegrationPartner = () => {
               <S.CardImage key={index}>
                 <h2>{card.title}</h2>
                 <S.ImageCardContainer>
-                  <img src={card.image} />
+                  <img src={card.image} alt={card.title} />
                 </S.ImageCardContainer>
               </S.CardImage>
             )
@@ -114,7 +115,7 @@ const IntegrationPartner = () => {
               <S.CardPatner key={index}>
                 <S.CardPatnerHeader>
                   <S.Pipe />
-                  <img src={patners.imgage} />
+                  <img src={patners.imgage} alt={`parceiro-${index}`} />
                 </S.CardPatnerHeader>
 
                 <p>{patners.text}</p>

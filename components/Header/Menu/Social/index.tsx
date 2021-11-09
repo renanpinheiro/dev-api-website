@@ -11,21 +11,21 @@ const SocialHorizontal = () => {
       <ul>
         <li>
           <Link href="https://www.facebook.com/DevApiOficial/">
-            <a title="Facebook" target="_blank">
+            <a title="Facebook" target="_blank" rel="noopener">
               <FaFacebookF />
             </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.instagram.com/devapi.ipaas/">
-            <a title="Instagram" target="_blank">
+            <a title="Instagram" target="_blank" rel="noopener">
               <FaInstagram />
             </a>
           </Link>
         </li>
         <li>
           <Link href="https://www.linkedin.com/company/devapitecnologia/">
-            <a title="Linkeding" target="_blank">
+            <a title="Linkeding" target="_blank" rel="noopener">
               <FaLinkedinIn />
             </a>
           </Link>

@@ -9,5 +9,6 @@ export interface IMultiCarrouselProps {
 }
 
 export interface IMultiCarrousel {
+  name: string
   url: string
 }

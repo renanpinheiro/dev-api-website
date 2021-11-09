@@ -75,7 +75,10 @@ const About = () => {
 
           <S.Founders>
             <S.Card>
-              <img src="/images/founder-william-cto.png" />
+              <img
+                src="/images/founder-william-cto.png"
+                alt={'William Hoffman - CTO'}
+              />
               <Link href="https://www.linkedin.com/in/williamhoffmann/">
                 <a title="William Hoffmann" target="_blank">
                   William Hoffmann
@@ -85,7 +88,7 @@ const About = () => {
               <hr />
             </S.Card>
             <S.Card>
-              <img src="/images/founder-luana-ceo.png" />
+              <img src="/images/founder-luana-ceo.png" alt={'Luana - CEO'} />
               <Link href="https://www.linkedin.com/in/luanaribeiromelo/">
                 <a title="Luana Ribeiro" target="_blank">
                   Luana Ribeiro

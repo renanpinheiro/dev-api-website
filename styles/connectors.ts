@@ -188,12 +188,12 @@ export const Card = styled.div`
   }
 
   > img {
+    width: 100%;
+    height: 100%;
     margin-bottom: 1vh;
     border-radius: 8px;
     border-image: initial;
     box-shadow: rgb(86 57 254 / 15%) 0px 5px 40px;
-    width: 100%;
-    height: 100%;
   }
 
   > span {

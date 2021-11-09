@@ -53,7 +53,7 @@ const Footer = () => (
     <S.Row>
       <S.Col content="space-between">
         <S.LogoContainer>
-          <S.Logo src={'/logo/devapi-white.svg'} />
+          <S.Logo src={'/logo/devapi-white.svg'} alt={'logo-devapi'} />
 
           <S.AddressContainer>
             <S.Pipe />
@@ -73,18 +73,27 @@ const Footer = () => (
           </S.SocialMedia>
           <S.SocialLogocontainer>
             <Link href="https://www.instagram.com/devapi.ipaas/">
-              <a title="Instagram" target="_blank">
-                <S.SocialMediaLogo src="/socialMedia/instagram-primary.svg" />
+              <a title="Instagram" target="_blank" rel="noopener">
+                <S.SocialMediaLogo
+                  src="/socialMedia/instagram-primary.svg"
+                  alt={'Click para ir ao instagram'}
+                />
               </a>
             </Link>
             <Link href="https://www.facebook.com/DevApiOficial/">
-              <a title="Facebook" target="_blank">
-                <S.SocialMediaLogo src="/socialMedia/facebook-primary.svg" />
+              <a title="Facebook" target="_blank" rel="noopener">
+                <S.SocialMediaLogo
+                  src="/socialMedia/facebook-primary.svg"
+                  alt={'Click para ir ao facebook'}
+                />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/devapitecnologia/">
-              <a title="Linkedin" target="_blank">
-                <S.SocialMediaLogo src="/socialMedia/linkedin-primary.svg" />
+              <a title="Linkedin" target="_blank" rel="noopener">
+                <S.SocialMediaLogo
+                  src="/socialMedia/linkedin-primary.svg"
+                  alt={'Click para ir ao linkedin'}
+                />
               </a>
             </Link>
           </S.SocialLogocontainer>

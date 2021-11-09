@@ -192,7 +192,13 @@ const Home = () => {
                   <S.ConnectorsContainer>
                     {item.connectors ? (
                       item.connectors.map((connector, index) => {
-                        return <img src={connector.urlImage} key={index} />
+                        return (
+                          <img
+                            src={connector.urlImage}
+                            key={index}
+                            alt={connector.name}
+                          />
+                        )
                       })
                     ) : (
                       <S.Invisible />
@@ -217,7 +223,7 @@ const Home = () => {
               return (
                 <S.FeatureCard key={index}>
                   <S.Icon>
-                    <img src={item.icon} />
+                    <img src={item.icon} alt={item.title} />
                   </S.Icon>
                   <S.Text>
                     <b>{item.title}</b>
