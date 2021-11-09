@@ -4,12 +4,14 @@ import * as S from './Circle.style'
 const Circle = ({ children }) => {
   const circles = [
     {
+      alt: 'circle1',
       position: 0,
       translatePosition: '-99px',
       timer: '25s',
       type: 'small',
     },
     {
+      alt: 'circle2',
       position: 0,
       translatePosition: '-165px',
       timer: '35s',
@@ -17,6 +19,7 @@ const Circle = ({ children }) => {
       type: 'default',
     },
     {
+      alt: 'circle3',
       position: 90,
       translatePosition: '-213px',
       timer: '40s',
@@ -24,12 +27,14 @@ const Circle = ({ children }) => {
       type: 'default',
     },
     {
+      alt: 'circle4',
       position: 180,
       translatePosition: '-213px',
       timer: '40s',
       type: 'small',
     },
     {
+      alt: 'circle5',
       position: 0,
       translatePosition: '-262px',
       timer: '50s',
@@ -37,6 +42,7 @@ const Circle = ({ children }) => {
       type: 'default',
     },
     {
+      alt: 'circle6',
       position: 180,
       translatePosition: '-262px',
       timer: '50s',
@@ -44,6 +50,7 @@ const Circle = ({ children }) => {
       type: 'default',
     },
     {
+      alt: 'circle7',
       position: 270,
       translatePosition: '-312px',
       timer: '50s',
@@ -51,18 +58,21 @@ const Circle = ({ children }) => {
       type: 'default',
     },
     {
+      alt: 'circle8',
       position: 0,
       translatePosition: '-364px',
       timer: '50s',
       type: 'small',
     },
     {
+      alt: 'circle9',
       position: 0,
       translatePosition: '-463px',
       timer: '60s',
       type: 'small',
     },
     {
+      alt: 'circle10',
       position: 0,
       translatePosition: '-614px',
       timer: '70s',
@@ -89,7 +99,7 @@ const Circle = ({ children }) => {
                               timer={circle.timer}
                               translatePosition={circle.translatePosition}
                             >
-                              <img src={circle.urlimage} />
+                              <img src={circle.urlimage} alt={''} />
                             </S.Circle>
                           )
                         })}

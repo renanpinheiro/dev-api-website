@@ -103,7 +103,7 @@ const Header = () => {
                   </S.NavLink>
 
                   {link.dropDown && (
-                    <S.Arrow src="/arrows/arrow-dropdown.svg" />
+                    <S.Arrow src="/arrows/arrow-dropdown.svg" alt={''} />
                   )}
                 </S.NavLinkContainer>
               </Dropdown>
