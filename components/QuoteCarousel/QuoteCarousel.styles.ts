@@ -82,7 +82,8 @@ export const QuoteTexts = styled.div`
 
 export const QuotationMark = styled.img`
   margin-bottom: 20px;
-
+  width: 30px;
+  height: 30px;
   @media (min-width: 1336px) and (max-width: 1600px) {
     width: 30px;
     height: 30px;

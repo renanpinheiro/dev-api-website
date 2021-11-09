@@ -93,7 +93,7 @@ export const GifContainer = styled.div`
     width: 100%;
   }
 
-  > img {
+  > video {
     width: 100%;
   }
 `
@@ -219,6 +219,7 @@ export const DetailsCard = styled.div`
 
   img {
     width: 100%;
+    height: 100%;
     border-radius: 5px;
   }
 `
@@ -341,6 +342,7 @@ export const Card = styled.div`
 export const ConnectorsContainer = styled.div`
   img {
     width: 3.5vw;
+    height: 100%;
     margin-right: 10px;
     box-shadow: 0px 10px 25px #5f47ff29;
 
@@ -441,6 +443,7 @@ export const Icon = styled.div`
 
   img {
     width: 60%;
+    height: 100%;
     padding: 2px;
   }
 `

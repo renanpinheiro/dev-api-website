@@ -85,7 +85,9 @@ const Home = () => {
           />
         </S.HeroContent>
         <S.GifContainer>
-          <img src="/gifs/home.gif" alt="platform" />
+          <video autoPlay loop>
+            <source src="/gifs/home.webm" type="video/webm" />
+          </video>
         </S.GifContainer>
       </S.Hero>
 
