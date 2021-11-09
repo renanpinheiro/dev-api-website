@@ -27,7 +27,10 @@ const Characteristics = () => {
           property="og:url"
           content="https://devapi.com.br/caracteristicas"
         />
-        <link rel="canonical" href="https://devapi.com.br/caracteristicas" />
+        <link
+          rel="canonical"
+          href="https://www.devapi.com.br/caracteristicas"
+        />
       </Head>
 
       <S.Container>

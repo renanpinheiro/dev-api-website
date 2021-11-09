@@ -63,6 +63,7 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
                                               isActive={item.isActive}
                                               title={item.name}
                                               onClick={close}
+                                              rel="noreferrer"
                                             >
                                               {item.name}
                                             </S.LinkDropdown>
@@ -79,7 +80,7 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
                     ) : (
                       <S.Plans>
                         <Link href="/planos" activeClassName="activeLink">
-                          <a title="Planos" onClick={close}>
+                          <a title="Planos" onClick={close} rel="noreferrer">
                             Planos
                           </a>
                         </Link>

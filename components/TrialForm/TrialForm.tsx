@@ -281,7 +281,9 @@ const LastForm = ({}: Pick<
             Concordo com a{' '}
             <S.Bolder>
               <Link href="/free-trial">
-                <a title="Política de privacidade">Política de privacidade.</a>
+                <a title="Política de privacidade" rel="noreferrer">
+                  Política de privacidade.
+                </a>
               </Link>
             </S.Bolder>
           </span>

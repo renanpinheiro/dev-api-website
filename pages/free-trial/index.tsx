@@ -16,8 +16,12 @@ const FreeTrial = () => {
           content="DevApi | Crie sua conta grátis"
           key="title"
         />
-        <meta property="og:url" content="https://devapi.com.br/free-trial" />
-        <link rel="canonical" href="https://devapi.com.br/free-trial" />
+        <meta
+          property="og:url"
+          content="https://www.devapi.com.br/free-trial"
+        />
+        <meta property="description" content="Crie sua conta grátis" />
+        <link rel="canonical" href="https://www.devapi.com.br/free-trial" />
       </Head>
 
       <S.Container>

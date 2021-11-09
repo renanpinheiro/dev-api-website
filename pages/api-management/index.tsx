@@ -29,7 +29,7 @@ const ApiManagement = () => {
           property="og:url"
           content="https://devapi.com.br/api-management"
         />
-        <link rel="canonical" href="https://devapi.com.br/api-management" />
+        <link rel="canonical" href="https://www.devapi.com.br/api-management" />
       </Head>
 
       <S.Container>

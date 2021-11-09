@@ -15,10 +15,7 @@ const PrivacyPolicy = () => {
           property="og:url"
           content="https://www.devapi.com.br/politica-de-privacidade"
         />
-        <link
-          rel="canonical"
-          href="https://www.devapi.com.br/politica-de-privacidade"
-        />
+        <meta property="description" content="Política de privacidade" />
       </Head>
 
       <S.Container>
@@ -542,7 +539,10 @@ const PrivacyPolicy = () => {
             <br />A DevApi garante ao titular dos dados o direito de retirar
             consentimento em qualquer altura, mediante comunicação ao
             Encarregado (DPO) através do e-mail{' '}
-            <a href="mailto:contato@devapi.com.br?subject=Solicitação de remoção dos dados&body=Desejo solicitar a remoção dos meu dados.">
+            <a
+              rel="noopener"
+              href="mailto:contato@devapi.com.br?subject=Solicitação de remoção dos dados&body=Desejo solicitar a remoção dos meu dados."
+            >
               contato@devapi.com.br
             </a>
             , sendo assegurado que a retirada do consentimento será tão fácil
@@ -596,9 +596,11 @@ const PrivacyPolicy = () => {
             Os titulares dos dados, sejam estes clientes, fornecedores,
             candidatos, terceiros e demais stakeholders, poderão invocar os seus
             direitos através do formulário de solicitação, pelo e-mail
-            <a href="mailto:contato@devapi.com.br">contato@devapi.com.br</a> e/
-            ou através dos contatos divulgados e consultáveis através da página
-            de internet da DevApi.
+            <a rel="noopener" href="mailto:contato@devapi.com.br">
+              contato@devapi.com.br
+            </a>{' '}
+            e/ ou através dos contatos divulgados e consultáveis através da
+            página de internet da DevApi.
             <br />
             <br />
             A DevApi reserva-se o direito de não responder aos pedidos de
@@ -693,7 +695,11 @@ const PrivacyPolicy = () => {
               <li>
                 Publicar e informar ao Usuário as futuras alterações a estes
                 Termos de Uso e Política de Privacidade por meio do sítio (
-                <a href="https://www.devapi.com.br" title="DevApi">
+                <a
+                  rel="noopener"
+                  href="https://www.devapi.com.br"
+                  title="DevApi"
+                >
                   https://www.devapi.com.br
                 </a>
                 ).
@@ -807,7 +813,7 @@ const PrivacyPolicy = () => {
             <br />A DevApi recomenda a verificação frequente da Política de
             Privacidade, consultado a versão mais atual disponibilizada por meio
             do sítio (
-            <a href="https://www.devapi.com.br" title="DevApi">
+            <a rel="noopener" href="https://www.devapi.com.br" title="DevApi">
               https://www.devapi.com.br
             </a>
             ).
@@ -831,7 +837,10 @@ const PrivacyPolicy = () => {
             <br />
             <br />
             Envie um e-mail para{' '}
-            <a href="malito:contato@devapi.com.br">contato@devapi.com.br</a>.
+            <a rel="noopener" href="malito:contato@devapi.com.br">
+              contato@devapi.com.br
+            </a>
+            .
             <br />
             <br />
             Estamos localizados no Ed. Atrium Torre Norte - Av. Pedro Taques, n.

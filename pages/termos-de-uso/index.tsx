@@ -10,8 +10,12 @@ const UseTerm = () => {
     <>
       <Head>
         <title>DevApi | Termos de Uso</title>
-        <meta property="og:url" content="https://devapi.com.br/termos-de-uso" />
-        <link rel="canonical" href="https://devapi.com.br/termos-de-uso" />
+        <meta
+          property="og:url"
+          content="https://www.devapi.com.br/termos-de-uso"
+        />
+        <meta property="description" content="Termos de Uso" />
+        <link rel="canonical" href="https://www.devapi.com.br/termos-de-uso" />
       </Head>
 
       <S.Container>
