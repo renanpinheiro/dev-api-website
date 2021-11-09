@@ -94,7 +94,11 @@ const Header = () => {
                   onClick={() => handleOpenDropdown(index)}
                   ref={dropdownRef}
                 >
-                  <S.NavLink href={link.url} isActive={link.isActive}>
+                  <S.NavLink
+                    href={link.url ? link.url : '#'}
+                    rel="noreferrer"
+                    isActive={link.isActive}
+                  >
                     {link.name}
                   </S.NavLink>
 

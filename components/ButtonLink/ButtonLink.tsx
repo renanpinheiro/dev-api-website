@@ -17,7 +17,7 @@ const ButtonLink = ({
   return (
     <S.Container type={type} size={size} margin={margin}>
       <Link href={href}>
-        <a title={text} target={target}>
+        <a title={text} target={target} rel="noreferrer">
           {text}
         </a>
       </Link>

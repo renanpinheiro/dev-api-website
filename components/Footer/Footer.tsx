@@ -73,7 +73,7 @@ const Footer = () => (
           </S.SocialMedia>
           <S.SocialLogocontainer>
             <Link href="https://www.instagram.com/devapi.ipaas/">
-              <a title="Instagram" target="_blank">
+              <a title="Instagram" target="_blank" rel="noopener">
                 <S.SocialMediaLogo
                   src="/socialMedia/instagram-primary.svg"
                   alt={'Click para ir ao instagram'}
@@ -81,7 +81,7 @@ const Footer = () => (
               </a>
             </Link>
             <Link href="https://www.facebook.com/DevApiOficial/">
-              <a title="Facebook" target="_blank">
+              <a title="Facebook" target="_blank" rel="noopener">
                 <S.SocialMediaLogo
                   src="/socialMedia/facebook-primary.svg"
                   alt={'Click para ir ao facebook'}
@@ -89,7 +89,7 @@ const Footer = () => (
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/devapitecnologia/">
-              <a title="Linkedin" target="_blank">
+              <a title="Linkedin" target="_blank" rel="noopener">
                 <S.SocialMediaLogo
                   src="/socialMedia/linkedin-primary.svg"
                   alt={'Click para ir ao linkedin'}
