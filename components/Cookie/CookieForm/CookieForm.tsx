@@ -13,7 +13,7 @@ const CookieForm = ({ text, title, onClickBack, lgpdApi }) => {
     try {
       const response = await lgpdApi.post(`lgpd`, values)
 
-      setProtocol('1')
+      setProtocol(response.data.protocol)
       setIsStatusOpen(true)
     } catch (error) {
       setIsStatusOpen(false)
