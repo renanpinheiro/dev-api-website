@@ -53,6 +53,10 @@ export default class MyDocument extends Document {
             name="facebook-domain-verification"
             content="gjkfy8gf02j42ylg49gsf9tc39ub3n"
           />
+          <meta
+            name="google-site-verification"
+            content="BnWrPOjKrz9YyEKTmc_cqJkcz870jFXR9xUVWGnBSno"
+          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"

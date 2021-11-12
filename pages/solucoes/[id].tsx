@@ -50,7 +50,10 @@ const Solutions = () => {
     <>
       <Head>
         <title>{page ? page.seo.metaTitle : 'Devapi | Soluções'}</title>
-        <meta property="description" content="Soluções" />
+        <meta
+          name="description"
+          content={page ? page.seo.metaTitle : 'Devapi | Soluções'}
+        />
       </Head>
 
       <S.Container>

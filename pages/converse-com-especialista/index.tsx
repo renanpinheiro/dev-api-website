@@ -15,7 +15,7 @@ const Subscribe = () => {
           rel="canonical"
           href="https://www.devapi.com.br/fale-com-especialista"
         />
-        <meta property="description" content="Converse com um especialista" />
+        <meta name="description" content="Converse com um especialista" />
       </Head>
 
       <S.Container>

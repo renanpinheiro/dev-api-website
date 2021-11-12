@@ -17,7 +17,7 @@ const Characteristics = () => {
       <Head>
         <title>DevApi | Características</title>
         <meta property="og:title" content="DevApi | Características" />
-        <meta property="description" content="iPaas & API Manager." />
+        <meta name="description" content="iPaas & API Manager." />
         <meta
           property="og:description"
           content="iPaas & API Manager."

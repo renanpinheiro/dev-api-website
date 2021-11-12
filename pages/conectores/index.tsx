@@ -81,7 +81,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
       <Head>
         <title>DevApi | Conectores</title>
         <meta property="og:title" content="DevApi | Conectores" />
-        <meta property="description" content="Mais de 300 prontos para uso." />
+        <meta name="description" content="Mais de 300 prontos para uso." />
         <meta
           property="og:description"
           content="Mais de 300 prontos para uso."

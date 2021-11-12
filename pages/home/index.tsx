@@ -53,12 +53,12 @@ const Home = () => {
           key="title"
         />
         <meta
-          property="description"
-          content="Uma única plataforma para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Encaixe as peças da sua operação!"
+          name="description"
+          content="Plataforma iPaaS para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Saiba mais!"
         />
         <meta
           property="og:description"
-          content="Uma única plataforma para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Encaixe as peças da sua operação!"
+          content="Plataforma iPaaS para integrar sistemas, automatizar processos, orquestrar dados e gerenciar APIs. Saiba mais!"
           key="description"
         />
         <meta property="og:url" content="https://www.devapi.com.br" />

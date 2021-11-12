@@ -51,7 +51,7 @@ const Plans = () => {
         <title>DevApi | Planos</title>
         <meta property="og:title" content="DevApi | Planos" key="title" />
         <meta
-          property="description"
+          name="description"
           content="É hora de acelerar a transformação!"
         />
         <meta

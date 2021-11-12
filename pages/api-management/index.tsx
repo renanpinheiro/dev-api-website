@@ -17,7 +17,7 @@ const ApiManagement = () => {
         <title>DevApi | API Management</title>
         <meta property="og:title" content="DevApi | API Management" />
         <meta
-          property="description"
+          name="description"
           content="Agilidade e escalabilidade incríveis!"
         />
         <meta

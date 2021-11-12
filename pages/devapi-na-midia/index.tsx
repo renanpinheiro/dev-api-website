@@ -29,7 +29,7 @@ const Midias = ({ midias }: IMidiasProps) => {
           property="og:url"
           content="https://devapi.com.br/devapi-na-midia"
         />
-        <meta property="description" content="DevApi na mídia" />
+        <meta name="description" content="DevApi na mídia" />
         <link
           rel="canonical"
           href="https://www.devapi.com.br/devapi-na-midia"

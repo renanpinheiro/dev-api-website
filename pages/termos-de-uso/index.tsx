@@ -14,7 +14,7 @@ const UseTerm = () => {
           property="og:url"
           content="https://www.devapi.com.br/termos-de-uso"
         />
-        <meta property="description" content="Termos de Uso" />
+        <meta name="description" content="Termos de Uso" />
         <link rel="canonical" href="https://www.devapi.com.br/termos-de-uso" />
       </Head>
 
