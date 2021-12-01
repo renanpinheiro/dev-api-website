@@ -65,7 +65,6 @@ const Cookie = ({ acceptCookie, isActiveCookies }) => {
   }
 
   const handleClickAccept = () => {
-    setIsAcceptCookies(true)
     setIsOpenPreferences(false)
   }
 
@@ -208,7 +207,7 @@ const Cookie = ({ acceptCookie, isActiveCookies }) => {
                         <Button
                           type="default"
                           size="small"
-                          text="Aceitar Todos os Cookies"
+                          text="Salvar detalhes dos Cookies"
                           onClick={handleClickAccept}
                         />
                       </S.ButtonContainer>

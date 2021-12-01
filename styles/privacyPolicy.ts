@@ -61,40 +61,63 @@ export const Content = styled.div`
     font-size: 1rem;
   }
 
-  > strong {
-    font-weight: 900;
-  }
+  > ul {
+    > li {
+      list-style: disc;
+      margin-left: 1.5vw;
+      > p {
+        margin-top: 2vh;
+        line-height: 2.5vh;
 
-  > p {
-    margin-top: 2vh;
-    line-height: 2.5vh;
-
-    > b {
-      font-weight: 900;
-    }
-
-    > ol {
-      padding: 1vh 1vw;
-
-      > li {
-        padding-bottom: 1vh;
-
-        ul {
-          padding: 1vh 1vw;
-
-          > li {
-            padding-bottom: 0.5vh;
-          }
+        > b {
+          font-weight: 900;
         }
       }
     }
 
-    > ul {
-      padding-left: 2vh;
-      list-style: disc;
+    > strong {
+      font-weight: 900;
+    }
 
-      > li {
-        padding-bottom: 0.5vh;
+    > p {
+      margin-top: 2vh;
+      line-height: 2.5vh;
+      margin-left: 1.5vw;
+
+      > b {
+        font-weight: 900;
+      }
+
+      > ol {
+        padding: 1vh 1vw;
+
+        > li {
+          padding-bottom: 1vh;
+          list-style: upper-roman;
+          list-style-position: inside;
+
+          ul {
+            padding: 1vh 1vw;
+
+            > li {
+              padding-bottom: 0.5vh;
+            }
+          }
+
+          > b {
+            font-weight: bold;
+          }
+        }
+      }
+
+      > ul {
+        padding-left: 2vh;
+        list-style: disc;
+        list-style-position: inside;
+
+        > li {
+          padding-bottom: 0.5vh;
+        }
       }
     }
   }
