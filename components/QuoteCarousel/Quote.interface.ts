@@ -15,5 +15,5 @@ export interface IQuoteSpanStyle {
 }
 
 export interface IFadeStyle {
-  fade: boolean
+  isFade: boolean
 }

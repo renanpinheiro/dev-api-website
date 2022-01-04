@@ -4,27 +4,27 @@ import * as S from './QuoteCarousel.styles'
 
 const QuoteCarousel = ({ quotes }) => {
   const [quote, setQuote] = useState<number>(0)
-  const [fade, setFade] = useState(false)
+  const [isFade, setIsFade] = useState(false)
 
   const handlePreviousQuote = () => {
-    setFade(true)
+    setIsFade(true)
     const hasFinished = quote === 0
 
     hasFinished ? setQuote(quotes.length - 1) : setQuote(quote - 1)
 
     setInterval(() => {
-      setFade(false)
+      setIsFade(false)
     }, 3000)
   }
 
   const handleNextQuote = () => {
-    setFade(true)
+    setIsFade(true)
 
     const hasFinished = quote >= quotes.length - 1
     hasFinished ? setQuote(0) : setQuote(quote + 1)
 
     setInterval(() => {
-      setFade(false)
+      setIsFade(false)
     }, 3000)
   }
 
@@ -33,7 +33,7 @@ const QuoteCarousel = ({ quotes }) => {
       <S.QuoteContainer>
         <S.IconContainer>
           <S.Icon
-            fade={fade}
+            isFade={isFade}
             src={quotes[quote].imageUrl}
             alt={quotes[quote].name}
           />
@@ -44,8 +44,8 @@ const QuoteCarousel = ({ quotes }) => {
             src="/quotes/left-quote-mark.svg"
             alt="left-quote"
           />
-          <S.Quote fade={fade}>{quotes[quote].quote}</S.Quote>
-          <S.Name fade={fade}>
+          <S.Quote isFade={isFade}>{quotes[quote].quote}</S.Quote>
+          <S.Name isFade={isFade}>
             {quotes[quote].name}, {quotes[quote].occupation} |{' '}
             {quotes[quote].company}
           </S.Name>

@@ -100,7 +100,7 @@ export const Quote = styled.p<IFadeStyle>`
   text-align: center;
 
   ${props =>
-    props.fade
+    props.isFade
       ? css`
           opacity: 0;
           transition: linear;
@@ -129,7 +129,7 @@ export const Name = styled.p<IFadeStyle>`
   align-self: center;
 
   ${props =>
-    props.fade
+    props.isFade
       ? css`
           opacity: 0;
           transition: linear;
@@ -183,7 +183,7 @@ export const Icon = styled.img<IFadeStyle>`
   border-radius: 50%;
 
   ${props =>
-    props.fade
+    props.isFade
       ? css`
           opacity: 0;
           transition: linear;
