@@ -9,3 +9,11 @@ interface IQuotes {
   imageUrl: string
   quote: string
 }
+
+export interface IQuoteSpanStyle {
+  isActive: boolean
+}
+
+export interface IFadeStyle {
+  fade: boolean
+}
