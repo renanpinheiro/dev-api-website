@@ -28,7 +28,12 @@ export const HeroContent = styled.div`
     background-size: 100%;
   }
 `
-
+export const PipeContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+`
 export const Pipe = styled.div`
   width: 15vh;
   height: 3px;

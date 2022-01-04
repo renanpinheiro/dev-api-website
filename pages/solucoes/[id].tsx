@@ -132,6 +132,9 @@ const Solutions = () => {
                 items={costumers}
                 title={
                   <S.CarrouselTitle>
+                    <S.PipeContainer>
+                      <S.Pipe />
+                    </S.PipeContainer>
                     Empresas que já desbloquearam o{' '}
                     <span>poder da integração de sistemas</span>
                   </S.CarrouselTitle>

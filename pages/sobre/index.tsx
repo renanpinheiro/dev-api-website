@@ -1,11 +1,11 @@
 import React from 'react'
-
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { costumers } from '../../constants/costumers'
 import { Hero } from '../../components/Hero'
 import { CallToAction } from '../../components/CallToAction'
-
+import { ListIconCostumer } from '../../components/ListIconCostumer'
 import * as S from '../../styles/about'
 
 const About = () => {
@@ -65,7 +65,22 @@ const About = () => {
             </p>
           </S.Text>
         </S.Wrapper>
-
+        <S.Wrapper>
+          <S.ListIconContainer>
+            <ListIconCostumer
+              items={costumers}
+              title={
+                <S.ListIconlTitle>
+                  <S.PipeContainer>
+                    <S.Pipe />
+                  </S.PipeContainer>
+                  Empresas que já desbloquearam o{' '}
+                  <span>poder da integração de sistemas</span>
+                </S.ListIconlTitle>
+              }
+            />
+          </S.ListIconContainer>
+        </S.Wrapper>
         <S.Wrapper>
           <S.Title>
             <hr />
