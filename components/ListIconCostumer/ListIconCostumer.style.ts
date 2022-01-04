@@ -27,7 +27,7 @@ export const ImageContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  width: 130px !important;
+  width: 130px;
   margin: 0 25px;
   padding-bottom: 2vh;
   -moz-user-select: none;
@@ -35,7 +35,7 @@ export const ImageContainer = styled.div`
   -webkit-user-select: none;
   user-select: none;
   @media (max-width: 1024px) {
-    width: 100px !important;
+    width: 100px;
     margin: 0 25px;
   }
 `

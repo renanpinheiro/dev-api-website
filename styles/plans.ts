@@ -217,8 +217,8 @@ export const ListIconContainer = styled.div`
   padding-top: 5vh;
   @media (max-width: 1024px) {
     width: 100%;
-    margin: 3vh 0;
     padding: 5vh 8vw 5vh 8vw;
+    margin: 3vh 0;
   }
 `
 
