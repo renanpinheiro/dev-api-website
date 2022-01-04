@@ -10,8 +10,6 @@ import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
 
-import { IntegrationCard } from '../../components/IntegrationCard'
-
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 
 import { constumersMobile, costumers } from '../../constants/costumers'
@@ -22,6 +20,13 @@ import * as S from '../../styles/solutions'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
+  {
+    ssr: false,
+  },
+)
+
+const IntegrationCardWithoutSSR = dynamic(
+  () => import('../../components/IntegrationCard'),
   {
     ssr: false,
   },
@@ -94,17 +99,24 @@ const Solutions = () => {
               </S.TitleContainer>
 
               <S.ComponentContainer>
-                {page.integrationCard &&
+                {/* {page.integrationCard &&
                   page.integrationCard.map(pageAtributes => {
                     return (
-                      <IntegrationCard
+                      <IntegrationCardWithoutSSR
                         imageLeft={pageAtributes.imageLeft}
                         imageRight={pageAtributes.imageRight}
-                      ></IntegrationCard>
+                      ></IntegrationCardWithoutSSR>
                     )
-                  })}
+                  })} */}
               </S.ComponentContainer>
             </S.TextContainer>
+
+            {/* {page.textJoinNow && (
+              <S.JoinNowContainer>
+                <S.PipeJoinNow />
+                {page.textJoinNow}
+              </S.JoinNowContainer>
+            )} */}
 
             <S.IntegrationContainer>
               {page && page.component}

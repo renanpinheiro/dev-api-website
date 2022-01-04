@@ -199,4 +199,44 @@ export const ImageContainer = styled.div`
 `
 export const ComponentContainer = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+export const JoinNowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  > h2 {
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+    line-height: 1.2;
+    text-align: center;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.25rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+`
+export const PipeJoinNow = styled.div`
+  width: 15vh;
+  height: 3px;
+  margin-bottom: 10px;
+  background-color: ${theme.colors.secondary};
+
+  @media (max-width: 576px) {
+    width: 8vh;
+  }
 `

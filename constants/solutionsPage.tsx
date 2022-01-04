@@ -15,6 +15,7 @@ export interface ISolutionPage {
   contentText: ReactNode
   component: ReactNode
   integrationCard?: IIntegrationCard[]
+  textJoinNow?: ReactNode
 }
 
 interface IIntegrationCard {
@@ -87,7 +88,29 @@ export const solutionsPage = {
         imageLeft: '/images/connectors/totvs-white.png',
         imageRight: '/images/connectors/salesforce.png',
       },
+      {
+        imageLeft: '/images/connectors/oracle.png',
+        imageRight: '/images/connectors/movidesk.png',
+      },
+      {
+        imageLeft: '/images/connectors/sap.png',
+        imageRight: '/images/connectors/power-bi.png',
+      },
+      {
+        imageLeft: '/images/connectors/sankhya.png',
+        imageRight: '/images/connectors/magento.png',
+      },
+      {
+        imageLeft: '/images/connectors/whatdoyouwant.png',
+        imageRight: '/images/connectors/whatdoyouwant.png',
+      },
     ],
+    textJoinNow: (
+      <h2>
+        Confira algumas das integrações de ERP e Gestão
+        <b> que realizamos para os nossos clientes</b>
+      </h2>
+    ),
   },
   marketing: {
     seo: {
@@ -155,6 +178,34 @@ export const solutionsPage = {
         />
       </>
     ),
+    integrationCard: [
+      {
+        imageLeft: '/images/connectors/hubspot.png',
+        imageRight: '/images/connectors/takeblip.png',
+      },
+      {
+        imageLeft: '/images/connectors/moskit.png',
+        imageRight: '/images/connectors/oracle.png',
+      },
+      {
+        imageLeft: '/images/connectors/marketo.png',
+        imageRight: '/images/connectors/bling.png',
+      },
+      {
+        imageLeft: '/images/connectors/rd-station.png',
+        imageRight: '/images/connectors/vtex.png',
+      },
+      {
+        imageLeft: '/images/connectors/whatdoyouwant.png',
+        imageRight: '/images/connectors/whatdoyouwant.png',
+      },
+    ],
+    textJoinNow: (
+      <h2>
+        Confira algumas das integrações de Marketing
+        <b> que realizamos para os nossos clientes</b>
+      </h2>
+    ),
   },
   comercial: {
     seo: {
@@ -210,6 +261,34 @@ export const solutionsPage = {
         />
       </>
     ),
+    integrationCard: [
+      {
+        imageLeft: '/images/connectors/salesforce.png',
+        imageRight: '/images/connectors/docusign.png',
+      },
+      {
+        imageLeft: '/images/connectors/pipefy.png',
+        imageRight: '/images/connectors/phonetrack.png',
+      },
+      {
+        imageLeft: '/images/connectors/hubspot.png',
+        imageRight: '/images/connectors/sankhya.png',
+      },
+      {
+        imageLeft: '/images/connectors/oracle.png',
+        imageRight: '/images/connectors/pfy.png',
+      },
+      {
+        imageLeft: '/images/connectors/whatdoyouwant.png',
+        imageRight: '/images/connectors/whatdoyouwant.png',
+      },
+    ],
+    textJoinNow: (
+      <h2>
+        Confira algumas das integrações de vendas
+        <b> que realizamos para os nossos clientes</b>
+      </h2>
+    ),
   },
   rh: {
     seo: {
@@ -264,6 +343,34 @@ export const solutionsPage = {
           text="Capture vagas no HR e crie anúncios no Linkedin."
         />
       </>
+    ),
+    integrationCard: [
+      {
+        imageLeft: '/images/connectors/ahgora.png',
+        imageRight: '/images/connectors/sap.png',
+      },
+      {
+        imageLeft: '/images/connectors/alelo.png',
+        imageRight: '/images/connectors/senior.png',
+      },
+      {
+        imageLeft: '/images/connectors/kenoby.png',
+        imageRight: '/images/connectors/soma-pay.png',
+      },
+      {
+        imageLeft: '/images/connectors/solides.png',
+        imageRight: '/images/connectors/linkedin.png',
+      },
+      {
+        imageLeft: '/images/connectors/whatdoyouwant.png',
+        imageRight: '/images/connectors/whatdoyouwant.png',
+      },
+    ],
+    textJoinNow: (
+      <h2>
+        Confira algumas das integrações do Setor de Recursos Humanos
+        <b> que realizamos para os nossos clientes</b>
+      </h2>
     ),
   },
   'e-commerce': {
@@ -330,6 +437,34 @@ export const solutionsPage = {
           text="Envio de clientes do e-Commerce ao CRM."
         />
       </>
+    ),
+    integrationCard: [
+      {
+        imageLeft: '/images/connectors/vtex.png',
+        imageRight: '/images/connectors/sankhya.png',
+      },
+      {
+        imageLeft: '/images/connectors/magento.png',
+        imageRight: '/images/connectors/shipay.png',
+      },
+      {
+        imageLeft: '/images/connectors/mercadolivre2x.png',
+        imageRight: '/images/connectors/frete.png',
+      },
+      {
+        imageLeft: '/images/connectors/anymarket.png',
+        imageRight: '/images/connectors/oracle.png',
+      },
+      {
+        imageLeft: '/images/connectors/whatdoyouwant.png',
+        imageRight: '/images/connectors/whatdoyouwant.png',
+      },
+    ],
+    textJoinNow: (
+      <h2>
+        Confira algumas das integrações de e-Commerce & MarketPlace
+        <b> que realizamos para os nossos clientes</b>
+      </h2>
     ),
   },
   'empresas-360': {
@@ -425,6 +560,34 @@ export const solutionsPage = {
         />
       </>
     ),
+    integrationCard: [
+      {
+        imageLeft: '/images/connectors/asaas.png',
+        imageRight: '/images/connectors/sap.png',
+      },
+      {
+        imageLeft: '/images/connectors/cielo.png',
+        imageRight: '/images/connectors/ca.png',
+      },
+      {
+        imageLeft: '/images/connectors/picpay.png',
+        imageRight: '/images/connectors/vhsys.png',
+      },
+      {
+        imageLeft: '/images/connectors/superlogica.png',
+        imageRight: '/images/connectors/clicksign.png',
+      },
+      {
+        imageLeft: '/images/connectors/whatdoyouwant.png',
+        imageRight: '/images/connectors/whatdoyouwant.png',
+      },
+    ],
+    textJoinNow: (
+      <h2>
+        Confira algumas das integrações para o setor Financeiro
+        <b> que realizamos para os nossos clientes</b>
+      </h2>
+    ),
   },
   'seu-produto': {
     seo: {
@@ -517,6 +680,34 @@ export const solutionsPage = {
           text="Atualização de tracking code."
         />
       </>
+    ),
+    integrationCard: [
+      {
+        imageLeft: '/images/connectors/bsoftblue.png',
+        imageRight: '/images/connectors/alelo.png',
+      },
+      {
+        imageLeft: '/images/connectors/cobli.png',
+        imageRight: '/images/connectors/flexy.png',
+      },
+      {
+        imageLeft: '/images/connectors/fedexpurple.png',
+        imageRight: '/images/connectors/magento.png',
+      },
+      {
+        imageLeft: '/images/connectors/frete.png',
+        imageRight: '/images/connectors/anymarket.png',
+      },
+      {
+        imageLeft: '/images/connectors/whatdoyouwant.png',
+        imageRight: '/images/connectors/whatdoyouwant.png',
+      },
+    ],
+    textJoinNow: (
+      <h2>
+        Confira algumas das integrações de Logísticas
+        <b> que realizamos para os nossos clientes</b>
+      </h2>
     ),
   },
 }

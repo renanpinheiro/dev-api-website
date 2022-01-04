@@ -1,1 +1,1 @@
-export * from './IntegrationCard'
+export { IntegrationCard as default } from './IntegrationCard'

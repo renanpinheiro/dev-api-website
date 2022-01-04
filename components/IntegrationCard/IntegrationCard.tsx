@@ -4,10 +4,7 @@ import * as S from './IntegrationCard.style'
 
 import { IIntegrationCard } from './IntegrationCard.interface'
 
-export const IntegrationCard = ({
-  imageLeft,
-  imageRight,
-}: IIntegrationCard) => {
+const IntegrationCard = ({ imageLeft, imageRight }: IIntegrationCard) => {
   return (
     <S.Container>
       <S.ImageContainer>
@@ -30,3 +27,5 @@ export const IntegrationCard = ({
     </S.Container>
   )
 }
+
+export { IntegrationCard }
