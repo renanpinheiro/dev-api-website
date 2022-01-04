@@ -65,6 +65,7 @@ export const PipeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   @media (max-width: 900px) {
     align-items: flex-start;
 
@@ -113,6 +114,7 @@ export const ContainerItegration = styled.div`
 `
 export const ContainerCallToAction = styled.div`
   padding: 3vh 8vw 3vh 8vw;
+
   @media (max-width: 900px) {
     align-items: flex-start;
 
@@ -163,6 +165,7 @@ export const AcordionContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 10vh 8vw 10vh 8vw;
+
   @media (max-width: 900px) {
     align-items: flex-start;
   }
@@ -172,9 +175,9 @@ export const ListIntegrationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 100%;
   padding: 10vh 8vw 0 8vw;
+
   @media (max-width: 900px) {
     align-items: flex-start;
   }
@@ -210,5 +213,29 @@ export const ButtonContainer = styled.div`
 
   @media (max-width: 900) {
     align-items: flex-start;
+  }
+`
+export const ListIconContainer = styled.div`
+  width: 100vw;
+  padding-top: 5vh;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 5vh 8vw 5vh 8vw;
+    margin: 3vh 0;
+  }
+`
+
+export const ListIconlTitle = styled.h2`
+  font-size: 2.3rem;
+  color: ${theme.colors.primary};
+
+  @media (max-width: 996px) {
+    margin-top: 10px;
+    font-size: 1.375rem;
+  }
+
+  span {
+    font-weight: 700;
   }
 `
