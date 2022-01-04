@@ -1,6 +1,7 @@
 import React from 'react'
 import * as S from './ListIconCostumer.style'
 import { IListIconCostumer } from './ListIconCostumer.interface'
+
 export const ListIconCostumer = ({ items, title }: IListIconCostumer) => {
   return (
     <S.Container>

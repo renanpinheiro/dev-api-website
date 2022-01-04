@@ -10,6 +10,7 @@ export const TitleContainer = styled.div`
   width: 100%;
   padding-bottom: 3vh;
   text-align: center;
+
   @media (max-width: 768px) {
     text-align: left;
   }
@@ -23,10 +24,8 @@ export const ListImageContainer = styled.div`
 `
 export const ImageContainer = styled.div`
   display: flex;
-
   flex-direction: column;
   align-items: center;
-
   width: 130px;
   margin: 0 25px;
   padding-bottom: 2vh;
@@ -34,6 +33,7 @@ export const ImageContainer = styled.div`
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  
   @media (max-width: 1024px) {
     width: 100px;
     margin: 0 25px;

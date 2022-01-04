@@ -65,6 +65,7 @@ export const PipeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   @media (max-width: 900px) {
     align-items: flex-start;
 
@@ -113,6 +114,7 @@ export const ContainerItegration = styled.div`
 `
 export const ContainerCallToAction = styled.div`
   padding: 3vh 8vw 3vh 8vw;
+
   @media (max-width: 900px) {
     align-items: flex-start;
 
@@ -163,6 +165,7 @@ export const AcordionContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 10vh 8vw 10vh 8vw;
+
   @media (max-width: 900px) {
     align-items: flex-start;
   }
@@ -172,9 +175,9 @@ export const ListIntegrationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: 100%;
   padding: 10vh 8vw 0 8vw;
+
   @media (max-width: 900px) {
     align-items: flex-start;
   }
@@ -215,6 +218,7 @@ export const ButtonContainer = styled.div`
 export const ListIconContainer = styled.div`
   width: 100vw;
   padding-top: 5vh;
+
   @media (max-width: 1024px) {
     width: 100%;
     padding: 5vh 8vw 5vh 8vw;
