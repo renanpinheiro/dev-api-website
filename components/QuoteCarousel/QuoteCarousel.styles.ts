@@ -5,9 +5,7 @@ import { theme } from '../../styles/theme'
 
 export const Container = styled.div`
   width: 100%;
-`
 
-export const Carrousel = styled(Slider)`
   & > div {
     & > div {
       @media (max-width: 996px) {
@@ -37,6 +35,7 @@ export const QuoteContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 1640px;
   height: 485px;
   padding: 3vh 13vh 3vh 13vh;
@@ -222,31 +221,26 @@ export const CircleDetail = styled.div`
   border-radius: 50%;
 `
 
-export const ButtonContainer = styled.div`
-  margin-top: -55px;
+export const QuoteButtonContainer = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+`
 
-  button:nth-child(1) {
-    background-image: url('/quotes/left-arrow.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 53px;
-    width: 53px;
-    margin: 0vh 0vh 0vh 1vh;
-    border-radius: 100%;
-    background-color: #f6f6ff33;
-    border: none;
-  }
-  button:nth-child(2) {
-    background-image: url('/quotes/right-arrow.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 53px;
-    width: 53px;
-    margin: 0vh 0vh 0vh 1vh;
-    border-radius: 100%;
-    background-color: #f6f6ff33;
-    border: none;
-  }
+export const QuoteButton = styled.button`
+  height: 53px;
+  width: 53px;
+  border-radius: 100%;
+  background-color: #f6f6ff33; //alterar para o tema
+  border: none;
+`
+
+export const QuoteSpanContainer = styled.div`
+  padding: 0vh 5vh;
+`
+
+export const QuoteSpan = styled.div`
+  width: 10px;
+  height: 10px;
+  background-color: #f6f6ff33; //alterar para o tema
+  border-radius: 50%;
 `
