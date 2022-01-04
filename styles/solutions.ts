@@ -30,9 +30,12 @@ export const HeroContent = styled.div`
 `
 export const PipeContainer = styled.div`
   display: flex;
-  width: 100%;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
 `
 export const Pipe = styled.div`
   width: 15vh;
@@ -203,5 +206,28 @@ export const ImageContainer = styled.div`
     @media (max-width: 996px) {
       width: 100%;
     }
+  }
+`
+export const ListIconContainer = styled.div`
+  width: 100vw;
+  padding: 5vh 0 5vh 0;
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin: 3vh 0;
+    padding: 5vh 8vw 5vh 8vw;
+  }
+`
+
+export const ListIconlTitle = styled.h2`
+  font-size: 2.3rem;
+  color: ${theme.colors.primary};
+
+  @media (max-width: 996px) {
+    margin-top: 10px;
+    font-size: 1.375rem;
+  }
+
+  span {
+    font-weight: 700;
   }
 `

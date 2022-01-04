@@ -9,11 +9,12 @@ import { CallToAction } from '../../components/CallToAction'
 import { CardPlans } from '../../components/CardPlans'
 import { Hero } from '../../components/Hero'
 import { ListColumn } from '../../components/ListColumn'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
 import QuoteCarousel from '../../components/QuoteCarousel'
 
 import { cardPlanItems } from '../../constants/cardPlanItems'
 import { commonQuestions } from '../../constants/commonQuestions'
-import { constumersMobile, costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/costumers'
 import { listIntegration } from '../../constants/listIntegration'
 import { quotes } from '../../constants/quotes'
 
@@ -83,39 +84,6 @@ const Plans = () => {
         </S.CardContainer>
 
         <S.ContainerItegration>
-          <S.CostumersCarrouselContainer>
-            <S.PipeContainer>
-              <S.Pipe />
-            </S.PipeContainer>
-
-            {isMobile ? (
-              <CarrouselWithOutSSR
-                items={constumersMobile}
-                title={
-                  <S.CarrouselTitle>
-                    <h2>
-                      Empresas que já desbloquearam o{' '}
-                      <b>poder da integração de sistemas</b>
-                    </h2>
-                  </S.CarrouselTitle>
-                }
-              />
-            ) : (
-              <MultiCarrouselWithOutSSR
-                interval={2000}
-                items={costumers}
-                title={
-                  <S.CarrouselTitle>
-                    <h2>
-                      Empresas que já desbloquearam o{' '}
-                      <b>poder da integração de sistemas</b>
-                    </h2>
-                  </S.CarrouselTitle>
-                }
-              />
-            )}
-          </S.CostumersCarrouselContainer>
-
           <S.ContainerCallToAction>
             <CallToAction />
           </S.ContainerCallToAction>
@@ -124,6 +92,21 @@ const Plans = () => {
         <S.QuoteContainer>
           <QuoteCarousel quotes={quotes} />
         </S.QuoteContainer>
+
+        <S.ListIconContainer>
+          <ListIconCostumer
+            items={costumers}
+            title={
+              <S.ListIconlTitle>
+                <S.PipeContainer>
+                  <S.Pipe />
+                </S.PipeContainer>
+                Empresas que já desbloquearam o{' '}
+                <span>poder da integração de sistemas</span>
+              </S.ListIconlTitle>
+            }
+          />
+        </S.ListIconContainer>
 
         <S.ListIntegrationContainer>
           <S.PipeContainer>
