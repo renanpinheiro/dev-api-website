@@ -4,6 +4,8 @@ export interface IQuotesCarouselProps {
 
 interface IQuotes {
   name: string
+  occupation: string
+  company: string
   imageUrl: string
   quote: string
 }

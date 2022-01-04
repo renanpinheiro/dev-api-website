@@ -18,21 +18,36 @@ const QuoteCarousel = ({ quotes }: IQuotesCarouselProps) => {
         autoplaySpeed={5000}
         speed={500}
       >
-        {quotes.map((card, index) => {
-          return (
-            <S.QuoteContainer key={index}>
-              <S.IconContainer>
-                <S.CircleDetail />
-                <S.Icon src={card.imageUrl} alt={card.name} />
-              </S.IconContainer>
-              <S.QuoteTexts>
-                <S.QuotationMark src="/quotes/quote-mark.svg" alt={''} />
-                <S.Quote>{card.quote}</S.Quote>
-                <S.Name>{card.name}</S.Name>
-              </S.QuoteTexts>
-            </S.QuoteContainer>
-          )
-        })}
+        <S.QuoteContainer>
+          {quotes.map((card, index) => {
+            return (
+              <React.Fragment key={index}>
+                <S.IconContainer>
+                  <S.CircleDetail />
+                  <S.Icon src={card.imageUrl} alt={card.name} />
+                </S.IconContainer>
+                <S.QuoteTexts>
+                  <S.LeftQuotationMark
+                    src="/quotes/left-quote-mark.svg"
+                    alt={''}
+                  />
+                  <S.Quote>{card.quote}</S.Quote>
+                  <S.Name>
+                    {card.name}, {card.occupation} | {card.company}
+                  </S.Name>
+                  <S.RightQuotationMark
+                    src="/quotes/right-quote-mark.svg"
+                    alt={''}
+                  />
+                </S.QuoteTexts>
+                <S.ButtonContainer>
+                  <button />
+                  <button />
+                </S.ButtonContainer>
+              </React.Fragment>
+            )
+          })}
+        </S.QuoteContainer>
       </S.Carrousel>
     </S.Container>
   )
