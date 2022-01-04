@@ -14,6 +14,12 @@ export interface ISolutionPage {
   contentTitle: ReactNode
   contentText: ReactNode
   component: ReactNode
+  integrationCard?: IIntegrationCard[]
+}
+
+interface IIntegrationCard {
+  imageLeft: string
+  imageRight: string
 }
 
 export const solutionsPage = {
@@ -76,6 +82,12 @@ export const solutionsPage = {
         />
       </>
     ),
+    integrationCard: [
+      {
+        imageLeft: '/images/connectors/totvs-white.png',
+        imageRight: '/images/connectors/salesforce.png',
+      },
+    ],
   },
   marketing: {
     seo: {

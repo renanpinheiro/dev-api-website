@@ -10,6 +10,8 @@ import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
 
+import { IntegrationCard } from '../../components/IntegrationCard'
+
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 
 import { constumersMobile, costumers } from '../../constants/costumers'
@@ -43,8 +45,6 @@ const Solutions = () => {
   const currentPage = filterPage.split('/')
 
   const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
-
-  const paragraphWidth = currentPage[2] === 'marketing' ? '80%' : ''
 
   return (
     <>
@@ -87,11 +87,23 @@ const Solutions = () => {
               <S.TitleContainer>
                 <S.Pipe />
                 {page && page.contentTitle}
+
+                <S.ParagraphContainer>
+                  {page && page.contentText}
+                </S.ParagraphContainer>
               </S.TitleContainer>
 
-              <S.ParagraphContainer width={paragraphWidth}>
-                {page && page.contentText}
-              </S.ParagraphContainer>
+              <S.ComponentContainer>
+                {page.integrationCard &&
+                  page.integrationCard.map(pageAtributes => {
+                    return (
+                      <IntegrationCard
+                        imageLeft={pageAtributes.imageLeft}
+                        imageRight={pageAtributes.imageRight}
+                      ></IntegrationCard>
+                    )
+                  })}
+              </S.ComponentContainer>
             </S.TextContainer>
 
             <S.IntegrationContainer>

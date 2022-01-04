@@ -138,11 +138,8 @@ export const TitleContainer = styled.div`
   }
 `
 
-interface IParagraphContainerProps {
-  width?: string
-}
-export const ParagraphContainer = styled.div<IParagraphContainerProps>`
-  width: ${props => (props.width ? props.width : '50%')};
+export const ParagraphContainer = styled.div`
+  width: 60%;
 
   @media (max-width: 996px) {
     width: 100%;
@@ -199,4 +196,7 @@ export const ImageContainer = styled.div`
       width: 100%;
     }
   }
+`
+export const ComponentContainer = styled.div`
+  width: 100%;
 `
