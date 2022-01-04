@@ -1,6 +1,5 @@
 import React from 'react'
 
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
 import { Acordion } from '../../components/Acordion'
@@ -10,36 +9,18 @@ import { CardPlans } from '../../components/CardPlans'
 import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
 import { Hero } from '../../components/Hero'
 import { ListColumn } from '../../components/ListColumn'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
 import QuoteCarousel from '../../components/QuoteCarousel'
 import { cardPlanItems } from '../../constants/cardPlanItems'
 import { commonQuestions } from '../../constants/commonQuestions'
-import { constumersMobile, costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/costumers'
 import { listIntegration } from '../../constants/listIntegration'
 import { quotes } from '../../constants/quotes'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/plans'
 
-const CarrouselWithOutSSR = dynamic(
-  () => import('../../components/Carrousel'),
-  {
-    ssr: false,
-  },
-)
-
-const MultiCarrouselWithOutSSR = dynamic(
-  () => import('../../components/MultiCarrousel/MultiCarrousel'),
-  {
-    ssr: false,
-  },
-)
-
 const Plans = () => {
-  const { width } = useWindowDimensions()
-
   const cards: ICardPlanItems[] = cardPlanItems
   const listQuestions = commonQuestions
-
-  const isMobile = width <= 1024
 
   return (
     <>
@@ -79,39 +60,6 @@ const Plans = () => {
         </S.CardContainer>
 
         <S.ContainerItegration>
-          <S.CostumersCarrouselContainer>
-            <S.PipeContainer>
-              <S.Pipe />
-            </S.PipeContainer>
-
-            {isMobile ? (
-              <CarrouselWithOutSSR
-                items={constumersMobile}
-                title={
-                  <S.CarrouselTitle>
-                    <h2>
-                      Empresas que já desbloquearam o{' '}
-                      <b>poder da integração de sistemas</b>
-                    </h2>
-                  </S.CarrouselTitle>
-                }
-              />
-            ) : (
-              <MultiCarrouselWithOutSSR
-                interval={2000}
-                items={costumers}
-                title={
-                  <S.CarrouselTitle>
-                    <h2>
-                      Empresas que já desbloquearam o{' '}
-                      <b>poder da integração de sistemas</b>
-                    </h2>
-                  </S.CarrouselTitle>
-                }
-              />
-            )}
-          </S.CostumersCarrouselContainer>
-
           <S.ContainerCallToAction>
             <CallToAction />
           </S.ContainerCallToAction>
@@ -120,6 +68,21 @@ const Plans = () => {
         <S.QuoteContainer>
           <QuoteCarousel quotes={quotes} />
         </S.QuoteContainer>
+
+        <S.ListIconContainer>
+          <ListIconCostumer
+            items={costumers}
+            title={
+              <S.ListIconlTitle>
+                <S.PipeContainer>
+                  <S.Pipe />
+                </S.PipeContainer>
+                Empresas que já desbloquearam o{' '}
+                <span>poder da integração de sistemas</span>
+              </S.ListIconlTitle>
+            }
+          />
+        </S.ListIconContainer>
 
         <S.ListIntegrationContainer>
           <S.PipeContainer>
