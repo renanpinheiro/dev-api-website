@@ -4,29 +4,6 @@ import { IFadeStyle, IQuoteSpanStyle } from './Quote.interface'
 
 export const Container = styled.div`
   width: 100%;
-
-  /* & > div {
-    & > div {
-       @media (max-width: 996px) {
-        width: 100% !important;
-      }
-
-      & > div {
-        @media (max-width: 996px) {
-          width: 100% !important;
-          height: 100%;
-          padding-right: 1.25rem;
-          padding-left: 1.25rem;
-        }
-
-        & > div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-    }
-  } */
 `
 
 export const QuoteContainer = styled.div`
