@@ -3,9 +3,8 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Hero } from '../../components/Hero'
 import { CallToAction } from '../../components/CallToAction'
-
+import { Hero } from '../../components/Hero'
 import * as S from '../../styles/about'
 
 const About = () => {

@@ -7,20 +7,16 @@ import { Acordion } from '../../components/Acordion'
 import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
 import { CardPlans } from '../../components/CardPlans'
+import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
 import { Hero } from '../../components/Hero'
 import { ListColumn } from '../../components/ListColumn'
 import QuoteCarousel from '../../components/QuoteCarousel'
-
 import { cardPlanItems } from '../../constants/cardPlanItems'
 import { commonQuestions } from '../../constants/commonQuestions'
 import { constumersMobile, costumers } from '../../constants/costumers'
 import { listIntegration } from '../../constants/listIntegration'
 import { quotes } from '../../constants/quotes'
-
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
-import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
-
 import * as S from '../../styles/plans'
 
 const CarrouselWithOutSSR = dynamic(

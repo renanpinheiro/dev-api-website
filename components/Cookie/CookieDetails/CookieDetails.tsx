@@ -1,5 +1,7 @@
-import Link from 'next/link'
 import React, { useState } from 'react'
+
+import Link from 'next/link'
+
 import * as S from './CookieDetails.style'
 
 const CookieDetails = ({ cookies }) => {

@@ -3,34 +3,28 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import router from 'next/router'
 
-import axios from 'axios'
-import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
-import * as Yup from 'yup'
-
-import { emailCorporateValidation } from '../../utils/validation'
-
 import { Button } from '../../components/Button'
-import { MultipleCheckbox } from '../../components/MultipleCheckbox'
-import { InputText } from '../../components/InputText'
 import { Checkbox } from '../../components/Checkbox'
+import { InputText } from '../../components/InputText'
+import { MultipleCheckbox } from '../../components/MultipleCheckbox'
 import { Select } from '../../components/Select'
 import { Steps } from '../../components/Steps'
-
 import { departaments } from '../../constants/departaments'
 import { employerRanges } from '../../constants/employerRanges'
-
+import { roleOptions } from '../../constants/roleOptions'
 import {
   stepsDepartamentsForm,
   stepsLastForm,
   stepsPersonalForm,
 } from '../../constants/steps'
-import { roleOptions } from '../../constants/roleOptions'
-
-import { IFormStepperProps, ITrialFormProps } from './TrialForm.interface'
-
 import { removePhoneMask } from '../../utils/removePhoneMask'
-
+import { emailCorporateValidation } from '../../utils/validation'
+import { IFormStepperProps, ITrialFormProps } from './TrialForm.interface'
 import * as S from './TrialForm.style'
+
+import axios from 'axios'
+import { FormikConfig, FormikProvider, FormikValues, useFormik } from 'formik'
+import * as Yup from 'yup'
 
 const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
   const leadsApi = axios.create({
@@ -39,7 +33,7 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
 
   const formsArray = React.Children.toArray(children) as React.ReactElement[]
   const [step, setStep] = useState(0)
-  const [errorMessage, setErrorMessage] = useState<String>('')
+  const [errorMessage, setErrorMessage] = useState<string>('')
   const [isLoading, setIsLoading] = useState(false)
   const currentForm = formsArray[step]
 
@@ -152,6 +146,7 @@ const FormStepper = ({ children, conversionIdentifier }: IFormStepperProps) => {
   )
 }
 
+// eslint-disable-next-line no-empty-pattern
 const PersonalForm = ({}: Pick<
   FormikConfig<FormikValues>,
   'validationSchema' | 'validateOnChange'
@@ -211,11 +206,12 @@ const PersonalForm = ({}: Pick<
   )
 }
 
+// eslint-disable-next-line no-empty-pattern
 const DepartamentForm = ({}: Pick<
   FormikConfig<FormikValues>,
   'validationSchema' | 'validateOnChange'
 >) => {
-  const [errorMessage, setErrorMessage] = useState<String>('')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   return (
     <>
@@ -241,11 +237,12 @@ const DepartamentForm = ({}: Pick<
   )
 }
 
+// eslint-disable-next-line no-empty-pattern
 const LastForm = ({}: Pick<
   FormikConfig<FormikValues>,
   'validationSchema' | 'validateOnChange'
 >) => {
-  const [errorMessage, setErrorMessage] = useState<String>('')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   return (
     <>

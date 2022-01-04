@@ -3,9 +3,7 @@ import React from 'react'
 import Router from 'next/router'
 
 import { theme } from '../../../styles/theme'
-
 import { IButtonProps } from './Button.interface'
-
 import * as S from './Button.style'
 
 const Button = ({

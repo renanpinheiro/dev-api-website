@@ -1,12 +1,9 @@
 import React from 'react'
 
 import { ButtonLink } from '../ButtonLink'
-
-import { MiddleText } from './MiddleText'
-
-import { ICardPlanItems } from './CardPlans.interface'
-
 import * as S from './CardPlan.style'
+import { ICardPlanItems } from './CardPlans.interface'
+import { MiddleText } from './MiddleText'
 
 const CardPlans = ({ cards }: { cards: ICardPlanItems[] }) => {
   return (

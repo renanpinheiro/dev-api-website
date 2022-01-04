@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
+
 import { theme } from '../../styles/theme'
 import { IHeroStyles, IHeroCircleStyle } from './Circle.interface'
 

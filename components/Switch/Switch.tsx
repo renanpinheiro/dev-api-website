@@ -1,6 +1,6 @@
 import React from 'react'
-import { ISwitchProps } from './Switch.interface'
 
+import { ISwitchProps } from './Switch.interface'
 import {
   Container,
   SwitchContainer,

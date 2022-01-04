@@ -9,13 +9,10 @@ import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
-
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
 import { constumersMobile, costumers } from '../../constants/costumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
-
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/solutions'
 
 const CarrouselWithOutSSR = dynamic(

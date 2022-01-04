@@ -5,26 +5,23 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Router, { useRouter } from 'next/router'
 
-import marked from 'marked'
-
-import { ImageCarousel } from '../../components/ImageCarousel'
-import { Sidebar } from '../../components/Sidebar'
-
-import * as S from '../../styles/blog'
-
 import {
   handleHeaderImage,
   handlePopularPosts,
   handlePostDetails,
   handlePostsCarousel,
 } from '../../adapters/blog/handlePosts'
+import { ImageCarousel } from '../../components/ImageCarousel'
+import { Sidebar } from '../../components/Sidebar'
 import {
   findEbook,
   findPopularPosts,
   findPostById,
   findTags,
 } from '../../providers/blog/find'
-import { connectorsMobile } from '../../constants/connectors'
+import * as S from '../../styles/blog'
+
+import marked from 'marked'
 
 const NewsCarouselWithOutSSR = dynamic(
   () => import('../../components/NewsCarousel'),
@@ -35,7 +32,6 @@ const NewsCarouselWithOutSSR = dynamic(
 
 const BlogDetails = () => {
   const router = useRouter()
-  const { id } = router.query
   const routerId = router.asPath
   const [splitId] = routerId.split('?')
   const [, , currentId] = splitId.split('/')
@@ -77,7 +73,7 @@ const BlogDetails = () => {
   }
 
   const handleFindEbook = async () => {
-    const { data }: any = await findEbook()
+    const { data } = await findEbook()
     setEbookImg(data.media)
     setEbookRedirect(data.link)
   }

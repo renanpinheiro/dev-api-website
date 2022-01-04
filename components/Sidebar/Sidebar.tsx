@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 
-import { FormikProvider, useFormik } from 'formik'
-
-import * as Yup from 'yup'
-
 import { Button } from '../ui/Button'
 import { Input } from '../ui/Input'
-
 import { ISidebarProps } from './Sidebar.interface'
-
 import * as S from './Sidebar.style'
+
+import { FormikProvider, useFormik } from 'formik'
+import * as Yup from 'yup'
 
 const Sidebar = ({
   tags,
-  articles,
   ebookImg,
   ebookRedirect,
-  onClick,
   onClickTag,
 }: ISidebarProps) => {
   const schema = Yup.object().shape({

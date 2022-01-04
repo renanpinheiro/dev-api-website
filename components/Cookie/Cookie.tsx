@@ -3,18 +3,16 @@ import { IoMdClose } from 'react-icons/io'
 
 import dynamic from 'next/dynamic'
 
-import axios from 'axios'
-
-import { Button } from '../Button'
-import { CookieDetails } from './CookieDetails'
-import { CookieForm } from './CookieForm'
-import { CookieFollowUpRequestForm } from './CookieFollowUpRequestForm'
-import { Switch } from '../Switch'
-
 import { cookieContent } from '../../constants/cookieContent'
-
 import { theme } from '../../styles/theme'
+import { Button } from '../Button'
+import { Switch } from '../Switch'
 import * as S from './Cookie.style'
+import { CookieDetails } from './CookieDetails'
+import { CookieFollowUpRequestForm } from './CookieFollowUpRequestForm'
+import { CookieForm } from './CookieForm'
+
+import axios from 'axios'
 
 const CookieBarSSR = dynamic(() => import('./CookieBar'), {
   ssr: false,

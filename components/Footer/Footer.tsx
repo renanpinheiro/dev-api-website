@@ -2,15 +2,13 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import { Links } from './Links'
-import { NewsletterForm } from './NewsletterForm'
-
 import { company } from '../../constants/company'
 import { platform } from '../../constants/platform'
 import { resources } from '../../constants/resources'
 import { soluctions } from '../../constants/soluctions'
-
 import * as S from './Footer.styles'
+import { Links } from './Links'
+import { NewsletterForm } from './NewsletterForm'
 
 const Footer = () => (
   <S.FooterContainer>
