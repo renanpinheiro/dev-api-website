@@ -113,8 +113,8 @@ const Header = () => {
 
       <S.ButtonContainer>
         <ButtonLink
-          text="Teste grátis"
-          href="/free-trial"
+          text="Cases"
+          href="/cases"
           target="_self"
           type="default"
           size="default"

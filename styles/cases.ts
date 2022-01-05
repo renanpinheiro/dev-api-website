@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { theme } from './theme'
 export const Container = styled.div``
 export const CardContainer = styled.div`
@@ -60,19 +61,16 @@ export const HeroContent = styled.div`
     }
   }
 `
-
 export const PipeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 900px) {
+  @media (max-width: 414px) {
     align-items: flex-start;
-
-    text-align: left;
+    padding-left: 8vw;
   }
 `
-
 export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
@@ -84,38 +82,6 @@ export const Pipe = styled.div`
     width: 8vh;
   }
 `
-export const ContainerItegration = styled.div`
-  @media (max-width: 900px) {
-    align-items: flex-start;
-    padding-left: 0;
-    text-align: left;
-  }
-`
-export const ContainerCallToAction = styled.div`
-  padding: 3vh 8vw 3vh 8vw;
-
-  @media (max-width: 900px) {
-    align-items: flex-start;
-
-    text-align: left;
-  }
-`
-
-
-export const CostumersCarrouselContainer = styled.div`
-  width: 100%;
-  padding: 10vh 8vh 0;
-  background-size: 76%;
-`
-
-export const QuoteContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 10vh 3vw 3vh 6vw;
-`
-
-
 
 export const ListIntegrationContainer = styled.div`
   display: flex;
@@ -154,31 +120,41 @@ export const ListIntegrationTitle = styled.h2`
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
-  padding: 10vh 0 0 0;
+  padding: 2vh 0 8vh 0;
 
   @media (max-width: 900) {
-    align-items: flex-start;
+    // align-items: flex-start;
   }
 `
-export const ListIconContainer = styled.div`
+export const HistorySuccessContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
   width: 100vw;
   padding-top: 5vh;
+  text-align: center;
+  // padding: 3vh 8vw 3vh 8vw;
 
-  @media (max-width: 1024px) {
-    width: 100%;
-    padding: 5vh 8vw 5vh 8vw;
-    margin: 3vh 0;
-  }
+  /* @media (max-width: 900px) {
+    align-items: flex-start;
+
+    text-align: left;
+  } */
 `
 
-export const ListIconlTitle = styled.h2`
-  font-size: 2.3rem;
+export const HistorySuccessTitle = styled.h2`
+  font-size: 2.8rem;
   color: ${theme.colors.primary};
 
   @media (max-width: 996px) {
     margin-top: 10px;
     font-size: 1.375rem;
+  }
+  @media (max-width: 414px) {
+    text-align: left;
+    padding-left: 8vw;
   }
 
   span {
