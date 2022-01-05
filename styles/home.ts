@@ -74,12 +74,20 @@ export const HeroContent = styled.div`
     }
   }
 `
+export const PipeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+`
 export const Pipe = styled.div`
-  width: 19vh;
+  width: 15vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -105,7 +113,13 @@ export const Content = styled.section`
 `
 
 export const CarrouselImageContainer = styled.div`
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
 
 export const Carrousel = styled.section`
@@ -251,6 +265,7 @@ export const BusinessContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10vh 8vw;
+  margin: 18vh 0;
   text-align: center;
   background-color: ${theme.colors.gray[100]};
   background-image: url('/masks/devapi.svg');
@@ -476,4 +491,138 @@ export const Text = styled.div`
 
 export const CallToActionContainer = styled.div`
   padding: 0 8vw 10vh 8vw;
+`
+
+export const ListIconContainer = styled.div`
+  width: 100vw;
+  padding: 5vh 0 5vh 0;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 5vh 8vw 5vh 8vw;
+    margin: 3vh 0;
+  }
+`
+
+export const ListIconlTitle = styled.h2`
+  font-size: 2.3rem;
+  color: ${theme.colors.primary};
+
+  @media (max-width: 996px) {
+    margin-top: 10px;
+    font-size: 1.375rem;
+  }
+
+  span {
+    font-weight: 700;
+  }
+`
+
+export const JoinNowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  > h2 {
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 30ch;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.25rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+`
+export const SystemContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+
+  b {
+    font-weight: 700;
+    color: ${theme.colors.secondary};
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-size: 1.125rem;
+    line-height: 1.3;
+
+    @media (min-width: 1600px) {
+      font-size: 1.375rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+`
+
+export const SystemImageContainer = styled.img`
+  object-fit: cover;
+  @media (max-width: 900px) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+`
+
+export const ApiManagerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: flex-start;
+
+  > p {
+    max-width: 56ch;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`
+
+export const IPaasContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: flex-start;
+
+  > p {
+    max-width: 50ch;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `

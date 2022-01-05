@@ -13,6 +13,7 @@ import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -222,6 +223,52 @@ const Home = () => {
         </S.BusinessContainer>
 
         <S.FeaturesContainer>
+          <S.JoinNowContainer>
+            <S.Pipe />
+            <h2>
+              As empresas possuem diversos sistemas{' '}
+              <b>que não conversam entre si</b>
+            </h2>
+            <p>Com o iPaaS e API Managaer da DevApi isso acabou!</p>
+          </S.JoinNowContainer>
+
+          <S.SystemContainer>
+            <S.IPaasContainer>
+              <h2>
+                <b>iPaaS</b>
+              </h2>
+              <p>
+                Plataforma de Integração de Sistemas como Serviço que agiliza a
+                integração entre sistemas, a orquestração de dados e a
+                automatização de processos, tanto na nuvem como on-premise. O
+                iPaaS da DevApi funciona como um tradutor universal entre todos
+                os sistemas, colocando os diferentes softwares para conversar
+                entre si.
+              </p>
+
+              <S.SystemImageContainer src="/images/ipaas.png" alt="iPaas" />
+            </S.IPaasContainer>
+            <S.ApiManagerContainer>
+              <h2>
+                <b>API Manager</b>
+              </h2>
+              <p>
+                Com o API Manager da DevApi sua empresa pode construir,
+                distribuir e gerenciar APIs de maneira veloz e altamente
+                escalável, com uma arquitetura ágil, robusta e muito segura.
+                Fundamental para desenvolver, monitorar, distribuir e monetizar
+                APIs, expandindo o ecossistema entre instituições, clientes,
+                fornecedores e parceiros.
+              </p>
+              <S.SystemImageContainer
+                src="/images/api-manager.png"
+                alt="API Manager"
+              />
+            </S.ApiManagerContainer>
+          </S.SystemContainer>
+        </S.FeaturesContainer>
+
+        <S.FeaturesContainer>
           <S.Pipe />
           <h2>Poderosa, mas simples e intuitiva</h2>
           <p>
@@ -245,6 +292,21 @@ const Home = () => {
             })}
           </S.Features>
         </S.FeaturesContainer>
+
+        <S.ListIconContainer>
+          <ListIconCostumer
+            items={costumers}
+            title={
+              <S.ListIconlTitle>
+                <S.PipeContainer>
+                  <S.Pipe />
+                </S.PipeContainer>
+                Empresas que já desbloquearam o{' '}
+                <span>poder da integração de sistemas</span>
+              </S.ListIconlTitle>
+            }
+          />
+        </S.ListIconContainer>
 
         <S.Quote>
           <QuoteCarouselWithOutSSR quotes={quotes} />
