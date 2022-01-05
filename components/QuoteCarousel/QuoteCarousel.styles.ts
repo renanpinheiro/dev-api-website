@@ -120,8 +120,18 @@ export const Quote = styled.p<IFadeStyle>`
   }
 `
 
+export const NameContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`
+
 export const Name = styled.p<IFadeStyle>`
-  padding-top: 1vw;
+  padding-top: 2vh;
+  padding-right: 0.3vw;
   font-size: 1.75rem;
   font-family: 'TT Commons';
   font-weight: 300;
@@ -146,6 +156,43 @@ export const Name = styled.p<IFadeStyle>`
   @media only screen and (max-width: 800px) {
     left: -45%;
     font-size: 1.2rem;
+  }
+`
+
+export const Company = styled.p<IFadeStyle>`
+  padding-top: 2vh;
+  font-size: 1.75rem;
+  font-family: 'TT Commons';
+  font-weight: 300;
+  font-style: italic;
+  color: ${theme.colors.white};
+  align-self: center;
+
+  ::before {
+    content: ' | ';
+  }
+
+  ${props =>
+    props.isFade
+      ? css`
+          opacity: 0;
+          transition: linear;
+        `
+      : css`
+          transition: opacity 1s ease;
+        `}
+
+  @media (min-width: 800px) and (max-width: 1600px) {
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+    left: -45%;
+    font-size: 1.2rem;
+
+    ::before {
+      content: '';
+    }
   }
 `
 
