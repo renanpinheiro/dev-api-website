@@ -86,37 +86,6 @@ const Home = () => {
       </S.Hero>
 
       <S.Content>
-        <S.Carrousel>
-          {isMobile ? (
-            <CarrouselWithOutSSR
-              items={constumersMobile}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Empresas que já desbloquearam o{' '}
-                    <b>poder da integração de sistemas</b>
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          ) : (
-            <MultiCarrouselWithOutSSR
-              interval={2000}
-              items={costumers}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Empresas que já desbloquearam o{' '}
-                    <b>poder da integração de sistemas</b>
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          )}
-        </S.Carrousel>
-
         <S.PlatformContainer>
           <S.Platform>
             <S.Pipe />
