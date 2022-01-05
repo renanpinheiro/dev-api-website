@@ -5,11 +5,9 @@ import Head from 'next/head'
 import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { ProfessionalService } from '../../components/ProfessionalService'
-
 import { integrations } from '../../constants/integrations'
-import { validateOddNumber } from '../../utils/validateOddNumber'
-
 import * as S from '../../styles/characteristics'
+import { validateOddNumber } from '../../utils/validateOddNumber'
 
 const Characteristics = () => {
   return (

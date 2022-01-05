@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import { ICarrouselProps } from './Carrousel.interface'
-
 import * as S from './Carrousel.style'
 
 const Carrousel = ({

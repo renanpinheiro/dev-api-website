@@ -4,10 +4,8 @@ import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import api from '../../services/api'
-
 import { Hero } from '../../components/Hero'
-
+import api from '../../services/api'
 import * as S from '../../styles/midia'
 
 interface IMidia {
@@ -72,7 +70,7 @@ const Midias = ({ midias }: IMidiasProps) => {
 }
 
 export const getStaticProps: GetServerSideProps = async () => {
-  const { data } = await api.get(`imprensas`)
+  const { data } = await api.get('imprensas')
 
   const midias = data
 

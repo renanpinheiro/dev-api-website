@@ -1,10 +1,9 @@
 import React, { useRef } from 'react'
 
-import { useField } from 'formik'
-
 import { IInputProps } from './Input.interface'
-
 import * as S from './Input.style'
+
+import { useField } from 'formik'
 
 type InputProps = JSX.IntrinsicElements['input'] & IInputProps<false>
 type TextAreaProps = JSX.IntrinsicElements['textarea'] & IInputProps<true>

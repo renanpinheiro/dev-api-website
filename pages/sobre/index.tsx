@@ -1,11 +1,12 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
+
 import Head from 'next/head'
 import Link from 'next/link'
-import { costumers } from '../../constants/costumers'
-import { Hero } from '../../components/Hero'
+
 import { CallToAction } from '../../components/CallToAction'
+import { Hero } from '../../components/Hero'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
+import { costumers } from '../../constants/costumers'
 import * as S from '../../styles/about'
 
 const About = () => {

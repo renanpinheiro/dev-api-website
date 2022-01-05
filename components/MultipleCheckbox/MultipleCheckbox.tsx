@@ -1,7 +1,9 @@
-import { useField } from 'formik'
 import React, { useEffect, useState } from 'react'
+
 import { IMultipleCheckboxProps } from './MultipleCheckbox.interface'
 import * as S from './MultipleCheckbox.style'
+
+import { useField } from 'formik'
 
 export const MultipleCheckbox = ({
   text,
