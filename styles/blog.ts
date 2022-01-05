@@ -254,6 +254,7 @@ export const VerticalPipe = styled.div`
 `
 
 export const Text = styled.div<ITextStyle>`
+  /* stylelint-disable-next-line value-no-vendor-prefix */
   display: -webkit-box;
 
   padding-top: 2px;

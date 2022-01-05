@@ -9,8 +9,8 @@
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore --ext .jsx,.ts,.tsx .",
     "format": "prettier --ignore-path .gitignore --ext .jsx,.ts,.tsx . --write",
-    "lint:css": "stylelint './styles/*.ts' --fix",
-    "precommit": "yarn format && yarn lint:css",
+    "lint:styles": "stylelint ./styles/*.ts",
+    "precommit": "yarn format",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
     "@babel/core": "^7.16.0",
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
+    "@stylelint/postcss-css-in-js": "^0.37.2",
     "@types/node": "^16.11.6",
     "@types/nodemailer": "^6.4.4",
     "@types/react": "^17.0.33",
@@ -70,6 +71,7 @@
     "prettier": "^2.4.1",
     "stylelint": "^14.2.0",
     "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended": "^6.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^4.4.4"
