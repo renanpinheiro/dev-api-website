@@ -1,9 +1,6 @@
 import React from 'react'
 
-import Link from 'next/link'
-
 import { ButtonLink } from '../ButtonLink'
-
 import * as S from './CallToAction.style'
 
 const CallToAction = () => {

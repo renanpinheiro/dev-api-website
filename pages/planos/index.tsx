@@ -1,50 +1,26 @@
 import React from 'react'
 
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
 import { Acordion } from '../../components/Acordion'
 import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
 import { CardPlans } from '../../components/CardPlans'
+import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
 import { Hero } from '../../components/Hero'
 import { ListColumn } from '../../components/ListColumn'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import QuoteCarousel from '../../components/QuoteCarousel'
-
 import { cardPlanItems } from '../../constants/cardPlanItems'
 import { commonQuestions } from '../../constants/commonQuestions'
 import { costumers } from '../../constants/costumers'
 import { listIntegration } from '../../constants/listIntegration'
 import { quotes } from '../../constants/quotes'
-
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
-import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
-
 import * as S from '../../styles/plans'
 
-const CarrouselWithOutSSR = dynamic(
-  () => import('../../components/Carrousel'),
-  {
-    ssr: false,
-  },
-)
-
-const MultiCarrouselWithOutSSR = dynamic(
-  () => import('../../components/MultiCarrousel/MultiCarrousel'),
-  {
-    ssr: false,
-  },
-)
-
 const Plans = () => {
-  const { width } = useWindowDimensions()
-
   const cards: ICardPlanItems[] = cardPlanItems
   const listQuestions = commonQuestions
-
-  const isMobile = width <= 1024
 
   return (
     <>

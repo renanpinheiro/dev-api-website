@@ -1,28 +1,20 @@
 import React from 'react'
 
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import { Circle } from '../../components/AnimatedBackground'
 import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
-import { ProfessionalService } from '../../components/ProfessionalService'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
+import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
-
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
 import { costumers } from '../../constants/costumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
-
 import * as S from '../../styles/solutions'
 
 const Solutions = () => {
-  const { width } = useWindowDimensions()
-  const isMobile = width <= 1024
-
   const router = useRouter().asPath
 
   const [filterPage] = router.split('?')

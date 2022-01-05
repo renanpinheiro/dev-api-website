@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+
 import { theme } from './theme'
 
 interface ITitleProps {
@@ -33,7 +34,7 @@ export const PipeContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  
+
   @media (max-width: 768px) {
     justify-content: flex-start;
   }

@@ -5,11 +5,9 @@ import { useUIDSeed } from 'react-uid'
 import type { GetServerSideProps } from 'next'
 import Head from 'next/head'
 
+import { ButtonLink } from '../../components/ButtonLink'
 import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 import api from '../../services/api'
-
-import { ButtonLink } from '../../components/ButtonLink'
-
 import * as S from '../../styles/connectors'
 
 interface ICategory {
@@ -164,7 +162,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
       <S.Content>
         <S.Wrapper>
           {isSuccess &&
-            data?.pages.map((page: any) => (
+            data?.pages.map(page => (
               <Fragment key={seed(page)}>
                 {page.content.map(item => (
                   <S.Card>

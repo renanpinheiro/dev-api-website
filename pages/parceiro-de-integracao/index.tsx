@@ -3,19 +3,15 @@ import React, { useRef } from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import { Hero } from '../../components/Hero'
+import { Button } from '../../components/Button'
 import { FormPartner } from '../../components/FormPartner'
-
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
+import { Hero } from '../../components/Hero'
 import { cardPatnerImages } from '../../constants/cardPatnerImages'
+import { constumersMobile, costumers } from '../../constants/costumers'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
-import { constumersMobile, costumers } from '../../constants/costumers'
-
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/partner'
-import { Button } from '../../components/Button'
-import { parseMutationFilterArgs } from 'react-query/types/core/utils'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),

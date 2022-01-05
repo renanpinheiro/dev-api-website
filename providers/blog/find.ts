@@ -1,13 +1,12 @@
+import api from '../../services/api'
 import {
   IFindPopularPosts,
   IFindResponse,
   IFindTagResponse,
 } from './shared.interface'
 
-import api from '../../services/api'
-
 export const findPost = async (search?: string, tag?: string) => {
-  return api.get<IFindResponse[]>(`/posts`, {
+  return api.get<IFindResponse[]>('/posts', {
     params: {
       ...(search && { Titulo_containss: search }),
       ...(tag && { 'Tags.id': tag }),

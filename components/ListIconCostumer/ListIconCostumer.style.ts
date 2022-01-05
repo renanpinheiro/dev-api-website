@@ -33,7 +33,7 @@ export const ImageContainer = styled.div`
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
-  
+
   @media (max-width: 1024px) {
     width: 100px;
     margin: 0 25px;

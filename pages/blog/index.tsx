@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
-import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
 import Router from 'next/router'
-
-import { ImageCarousel } from '../../components/ImageCarousel'
-import { Sidebar } from '../../components/Sidebar'
 
 import { handleCases } from '../../adapters/blog/handleCases'
 import {
@@ -13,9 +10,9 @@ import {
   handlePopularPosts,
   handlePosts,
 } from '../../adapters/blog/handlePosts'
-
+import { ImageCarousel } from '../../components/ImageCarousel'
+import { Sidebar } from '../../components/Sidebar'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
 import {
   findCases,
   findEbook,
@@ -23,6 +20,7 @@ import {
   findPost,
   findTags,
 } from '../../providers/blog/find'
+import * as S from '../../styles/blog'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Blog/Carrousel'),
@@ -34,8 +32,6 @@ const CarrouselWithOutSSR = dynamic(
 const NewsCardWithOutSSR = dynamic(() => import('../../components/NewsCard'), {
   ssr: false,
 })
-
-import * as S from '../../styles/blog'
 
 const Blog = () => {
   const { width } = useWindowDimensions()
@@ -80,7 +76,7 @@ const Blog = () => {
   }
 
   const handleFindEbook = async () => {
-    const { data }: any = await findEbook()
+    const { data } = await findEbook()
 
     setEbookImg(data.media)
 

@@ -1,6 +1,5 @@
-import { convertDate } from '../../utils/formatter'
-
 import { IFindCasesResponse } from '../../providers/blog/shared.interface'
+import { convertDate } from '../../utils/formatter'
 
 export const handleCases = (cases: IFindCasesResponse[]) => {
   return cases.map(post => ({

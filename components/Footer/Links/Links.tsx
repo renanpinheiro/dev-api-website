@@ -3,7 +3,6 @@ import React from 'react'
 import Link from 'next/link'
 
 import { IContainerLinkProps } from './Links.interfaces'
-
 import * as S from './Links.styles'
 
 const Links = ({ title, links }: IContainerLinkProps) => {

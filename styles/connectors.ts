@@ -1,5 +1,3 @@
-import styled, { css, keyframes } from 'styled-components'
-import { theme } from './theme'
 import {
   Button,
   FormControl as BFormControl,
@@ -7,6 +5,10 @@ import {
   Dropdown as BDropdown,
   DropdownButton as BDropdownButton,
 } from 'react-bootstrap'
+
+import styled, { keyframes } from 'styled-components'
+
+import { theme } from './theme'
 
 const bounce = keyframes`
   0%, 100% {

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useField } from 'formik'
+
 import { IOption, ISelectProps } from './Select.interface'
 import * as S from './Select.style'
+
+import { useField } from 'formik'
 
 export const Select = ({ name, label, options, isRequered }: ISelectProps) => {
   const [field, meta, helpers] = useField(name)

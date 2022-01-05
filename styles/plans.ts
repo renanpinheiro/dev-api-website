@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { theme } from './theme'
 export const Container = styled.div``
 export const CardContainer = styled.div`
@@ -65,7 +66,7 @@ export const PipeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   @media (max-width: 900px) {
     align-items: flex-start;
 

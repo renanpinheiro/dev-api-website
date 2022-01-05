@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { IListColumnProps } from './ListColumn.interface'
-
 import * as S from './ListColumn.style'
 
 const ListColumn = ({ list }: IListColumnProps) => {

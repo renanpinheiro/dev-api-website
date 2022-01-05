@@ -4,7 +4,6 @@ import Head from 'next/head'
 
 import { Button } from '../../components/Button'
 import { Hero } from '../../components/Hero'
-
 import * as S from '../../styles/speakExpert'
 
 const SpeakExpert = () => {

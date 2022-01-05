@@ -1,11 +1,7 @@
 import React from 'react'
 
-import Router from 'next/router'
-
 import NewsCard from '../NewsCard'
-
 import { INewsCarouselProps } from './NewsCarousel.interface'
-
 import * as S from './NewsCarousel.style'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -43,10 +39,6 @@ const NewsCarousel = ({ newsCards }: INewsCarouselProps) => {
       },
     },
   ]
-
-  const handleClickNews = url => {
-    Router.push(`/blog/${url}`)
-  }
 
   return (
     <S.Container>

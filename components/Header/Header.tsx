@@ -4,11 +4,10 @@ import { useRouter } from 'next/router'
 
 import { ButtonLink } from '../ButtonLink'
 import { Dropdown } from './Dropdown'
+import * as S from './Header.style'
 import Link from './Link'
 import { Menu } from './Menu'
 import { handleNavLink } from './menuOptions'
-
-import * as S from './Header.style'
 
 const Header = () => {
   const router = useRouter()

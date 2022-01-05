@@ -1,6 +1,6 @@
 import { Carousel, CarouselItem } from 'react-bootstrap'
 
-import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
+import styled from 'styled-components'
 
 import { theme } from '../../styles/theme'
 

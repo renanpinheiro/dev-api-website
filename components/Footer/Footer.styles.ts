@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { theme } from '../../styles/theme'
 import { IColProps } from './Footer.interfaces'
 

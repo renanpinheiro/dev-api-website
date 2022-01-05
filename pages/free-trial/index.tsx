@@ -3,7 +3,6 @@ import React from 'react'
 import Head from 'next/head'
 
 import { TrialForm } from '../../components/TrialForm/TrialForm'
-
 import * as S from '../../styles/freeTrial'
 
 const FreeTrial = () => {

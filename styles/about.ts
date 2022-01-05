@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { theme } from './theme'
 
 export const HeroContainer = styled.section`
@@ -203,7 +204,7 @@ export const Card = styled.div`
 export const ListIconContainer = styled.div`
   width: 100vw;
   padding-top: 5vh;
-  
+
   @media (max-width: 1024px) {
     width: 100%;
     margin: 3vh 0;

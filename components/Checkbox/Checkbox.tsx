@@ -1,10 +1,12 @@
-import { useField } from 'formik'
 import React, { useEffect, useState } from 'react'
+
 import { ICheckboxProps } from './Checkbox.interface'
 import * as S from './Checkbox.style'
 
+import { useField } from 'formik'
+
 export const Checkbox = ({ label, name }: ICheckboxProps) => {
-  const [field, _, helpers] = useField(name)
+  const [field, , helpers] = useField(name)
 
   const [isChecked, setIsChecked] = useState<boolean>(field.value)
 

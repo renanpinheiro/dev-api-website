@@ -1,8 +1,8 @@
 import React from 'react'
+import { HiPlusSm } from 'react-icons/hi'
+
 import { IConnectorsCardProps } from './ConnectorsCard.interface'
 import * as S from './ConnectorsCard.style'
-
-import { HiPlusSm } from 'react-icons/hi'
 
 const ConnectorsCard = ({ connectors, text }: IConnectorsCardProps) => {
   return (
