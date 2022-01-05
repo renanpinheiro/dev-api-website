@@ -1,35 +1,10 @@
-import Slider from 'react-slick'
+import styled, { css } from 'styled-components'
 
-import styled from 'styled-components'
 import { theme } from '../../styles/theme'
+import { IFadeStyle, IQuotePaginationDivStyle } from './Quote.interface'
 
 export const Container = styled.div`
   width: 100%;
-`
-
-export const Carrousel = styled(Slider)`
-  & > div {
-    & > div {
-      @media (max-width: 996px) {
-        width: 100% !important;
-      }
-
-      & > div {
-        @media (max-width: 996px) {
-          width: 100% !important;
-          height: 100%;
-          padding-right: 1.25rem;
-          padding-left: 1.25rem;
-        }
-
-        & > div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-    }
-  }
 `
 
 export const QuoteContainer = styled.div`
@@ -37,11 +12,12 @@ export const QuoteContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75rem;
-  height: 250px;
-  padding: 2vh 5vh 2vh 20vh;
+  flex-direction: column;
+  width: 1640px;
+  height: 485px;
+  padding: 3vh 6vw 3vh 7vw;
   background-color: ${theme.colors.secondary};
-  background-image: url('/backgrounds/devapi-bg-secondary.svg');
+  margin-top: 11vh;
 
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
@@ -54,18 +30,15 @@ export const QuoteContainer = styled.div`
   @media only screen and (max-width: 1023px) {
     width: 100%;
     height: auto;
-    padding: 2vh 2vw 2vh 2vh;
-    margin-top: 10vh;
+    padding: 2vh 2vw 2vh 2vw;
+    margin-top: 15vh;
   }
 `
 
 export const QuoteTexts = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
   height: 100%;
-  line-height: 1;
 
   @media (min-width: 1600px) and (max-width: 1920px) {
     padding: 1vw;
@@ -80,82 +53,145 @@ export const QuoteTexts = styled.div`
   }
 `
 
-export const QuotationMark = styled.img`
-  margin-bottom: 20px;
-  width: 30px;
-  height: 30px;
-  @media (min-width: 1336px) and (max-width: 1600px) {
-    width: 30px;
-    height: 30px;
+export const LeftQuotationMark = styled.img`
+  width: 121px;
+  height: 94px;
+
+  @media (min-width: 800px) and (max-width: 1600px) {
+    width: 75px;
+    height: 45px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 5vw;
   }
 
-  @media only screen and (max-width: 996px) {
+  @media only screen and (max-width: 800px) {
     width: 25px;
     height: 25px;
     margin-top: 11vh;
   }
 `
 
-export const Quote = styled.p`
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: ${theme.colors.white};
+export const RightQuotationMark = styled.img`
+  width: 121px;
+  height: 94px;
+  align-self: end;
+  margin-top: -50px;
 
-  @media (min-width: 1336px) and (max-width: 1600px) {
-    font-size: 1.5rem;
+  @media (min-width: 800px) and (max-width: 1600px) {
+    width: 75px;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 25px;
+    height: 25px;
+    margin-top: 11vh;
+  }
+`
+
+export const Quote = styled.p<IFadeStyle>`
+  font-size: 2.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: ${theme.colors.white};
+  padding: 1vh 0.3vw;
+  text-align: center;
+
+  ${props =>
+    props.isFade
+      ? css`
+          opacity: 0;
+          transition: linear;
+        `
+      : css`
+          transition: opacity 1s ease;
+        `}
+
+  @media (min-width: 1000px) and (max-width: 1600px) {
+    font-size: 1.4rem;
   }
 
   @media only screen and (max-width: 800px) {
     font-size: 1.125rem;
-    line-height: 25px;
+    line-height: 20px;
   }
 `
 
-export const Name = styled.p`
-  margin: 0;
-  font-size: 1.125rem;
+export const Name = styled.p<IFadeStyle>`
+  padding-top: 1vw;
+  font-size: 1.75rem;
+  font-family: 'TT Commons';
+  font-weight: 300;
+  font-style: italic;
   color: ${theme.colors.white};
+  align-self: center;
+
+  ${props =>
+    props.isFade
+      ? css`
+          opacity: 0;
+          transition: linear;
+        `
+      : css`
+          transition: opacity 1s ease;
+        `}
+
+  @media (min-width: 800px) and (max-width: 1600px) {
+    font-size: 1.5rem;
+  }
 
   @media only screen and (max-width: 800px) {
-    margin-bottom: 2vh;
-    font-size: 1.375rem;
-    font-style: italic;
+    left: -45%;
+    font-size: 1.2rem;
   }
 `
 
 export const IconContainer = styled.div`
   position: absolute;
-  top: 10%;
-  left: -3%;
-  display: flex;
   align-items: center;
   justify-content: center;
+  top: -22%;
+  left: 43.5%;
+  display: flex;
 
   @media (min-width: 1440px) and (max-width: 1600px) {
-    left: -5%;
+    left: 45%;
   }
 
   @media (min-width: 1336px) and (max-width: 1440px) {
-    left: -4%;
+    top: -19%;
+    left: 45%;
   }
 
   @media (min-width: 1000px) and (max-width: 1336px) {
-    left: -8%;
+    top: -16%;
+    left: 40%;
   }
 
   @media only screen and (max-width: 800px) {
-    top: -15%;
-    left: 20%;
+    top: -13%;
+    align-items: center;
+    right: 35vw;
   }
 `
-export const Icon = styled.img`
-  width: 200px;
-  height: 200px;
+
+export const Icon = styled.img<IFadeStyle>`
+  width: 193px;
+  height: 184px;
   border-radius: 50%;
+
+  ${props =>
+    props.isFade
+      ? css`
+          opacity: 0;
+          transition: linear;
+        `
+      : css`
+          transition: opacity 0.1s linear;
+        `}
 
   @media (min-width: 1600px) and (max-width: 1920px) {
     width: 200px;
@@ -168,13 +204,13 @@ export const Icon = styled.img`
   }
 
   @media (min-width: 1440px) and (max-width: 1517px) {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 
-  @media (min-width: 1336px) and (max-width: 1440px) {
-    width: 160px;
-    height: 160px;
+  @media (min-width: 1000px) and (max-width: 1440px) {
+    width: 150px;
+    height: 150px;
   }
 
   @media only screen and (max-width: 800px) {
@@ -183,12 +219,41 @@ export const Icon = styled.img`
   }
 `
 
-export const CircleDetail = styled.div`
-  position: absolute;
-  right: 7%;
-  z-index: 9;
+export const QuoteButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const QuoteButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #f6f6ff33;
+  border: none;
+`
+
+export const QuoteImageButton = styled.img`
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+`
+
+export const QuoteSpanContainer = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  border: 2px solid ${theme.colors.primary};
+  align-items: center;
+  padding: 0vh 1vw;
+`
+
+export const QuotePaginationDiv = styled.div<IQuotePaginationDivStyle>`
+  margin: 0.5vw 0.5vh;
+  width: 10px;
+  height: 10px;
+  background-color: ${props =>
+    props.isActive ? theme.colors.white : '#f6f6ff33'};
   border-radius: 50%;
 `

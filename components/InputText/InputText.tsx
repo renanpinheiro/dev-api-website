@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
-import { useField } from 'formik'
+import React from 'react'
+import InputMask from 'react-input-mask'
+
 import { IInputTextProps } from './InputText.interface'
 import * as S from './InputText.style'
-import InputMask from 'react-input-mask'
+
+import { useField } from 'formik'
 
 export const InputText = ({
   name,

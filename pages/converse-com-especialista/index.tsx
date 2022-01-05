@@ -1,29 +1,92 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 
 import Head from 'next/head'
 
-import { TrialForm } from '../../components/TrialForm/TrialForm'
+import { Button } from '../../components/Button'
+import { Hero } from '../../components/Hero'
+import * as S from '../../styles/speakExpert'
 
-import * as S from '../../styles/subscribe'
+const SpeakExpert = () => {
+  const formRef = useRef(null)
 
-const Subscribe = () => {
+  const executeScroll = () => formRef.current.scrollIntoView()
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src =
+      'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
+
   return (
     <>
       <Head>
         <title>DevApi | Converse com um especialista</title>
+        <meta
+          property="og:title"
+          content="Nosso time de especialistas está pronto para te ajudar com a nossa plataforma. Envie uma mensagem que responderemos o mais rápido possível!"
+          key="title"
+        />
+        <meta
+          name="description"
+          content="Nosso time de especialistas está pronto para te ajudar com a nossa plataforma. Envie uma mensagem que responderemos o mais rápido possível!"
+        />
+        <meta
+          property="og:description"
+          content="Nosso time de especialistas está pronto para te ajudar com a nossa plataforma. Envie uma mensagem que responderemos o mais rápido possível!"
+          key="description"
+        />
+        <meta
+          property="og:url"
+          content="https://www.devapi.com.br/converse-com-especialista"
+        />
         <link
           rel="canonical"
-          href="https://www.devapi.com.br/fale-com-especialista"
+          href="https://www.devapi.com.br/converse-com-especialista"
         />
-        <meta name="description" content="Converse com um especialista" />
       </Head>
 
-      <S.Container>
-        <S.FormContainer>
-          <TrialForm conversionIdentifier={'converse-com-especialista'} />
-        </S.FormContainer>
-      </S.Container>
+      <Hero>
+        <S.HeroContainer>
+          <S.Pipe />
+          <h1>
+            Vamos desbloquear o poder da <b>integração de sistemas?</b>
+          </h1>
+
+          <p>
+            Agende uma conversa com um de nossos especialistas em Integrações e
+            APIs.
+          </p>
+
+          <Button
+            text="Agendar conversa!"
+            size="default"
+            type="default"
+            onClick={executeScroll}
+          />
+        </S.HeroContainer>
+      </Hero>
+
+      <S.Content ref={formRef}>
+        <S.Wrapper>
+          <S.Title>
+            <hr />
+            <h2>
+              Escolha a melhor <b>data e horário</b>
+            </h2>
+          </S.Title>
+
+          <S.Scheduling>
+            <div
+              className="meetings-iframe-container"
+              data-src="https://meetings.hubspot.com/michel-carnevali/agendamento?embed=true"
+            ></div>
+          </S.Scheduling>
+        </S.Wrapper>
+      </S.Content>
     </>
   )
 }
-export default Subscribe
+
+export default SpeakExpert

@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+
 import { ConnectorsCard } from '../components/ConnectorsCard'
 import * as S from '../styles/solutions'
 

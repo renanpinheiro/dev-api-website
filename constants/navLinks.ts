@@ -74,6 +74,7 @@ export const navLinks = [
   {
     name: 'Recursos',
     isActive: false,
+    // eslint-disable-next-line no-sparse-arrays
     dropDown: [
       // {
       //   name: 'DevApi Academy',
@@ -101,6 +102,7 @@ export const navLinks = [
   {
     name: 'Empresa',
     isActive: false,
+    // eslint-disable-next-line no-sparse-arrays
     dropDown: [
       {
         name: 'Sobre',

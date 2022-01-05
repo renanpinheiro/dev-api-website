@@ -1,20 +1,17 @@
 import React from 'react'
 
-import Head from 'next/head'
 import dynamic from 'next/dynamic'
-
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
+import Head from 'next/head'
 
 import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
-
 import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
 import { constumersMobile, costumers } from '../../constants/costumers'
 import { featuresCard } from '../../constants/featuresCard'
 import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
-
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
 
 const CarrouselWithOutSSR = dynamic(

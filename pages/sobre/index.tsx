@@ -3,9 +3,10 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Hero } from '../../components/Hero'
 import { CallToAction } from '../../components/CallToAction'
-
+import { Hero } from '../../components/Hero'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
+import { costumers } from '../../constants/costumers'
 import * as S from '../../styles/about'
 
 const About = () => {
@@ -65,7 +66,22 @@ const About = () => {
             </p>
           </S.Text>
         </S.Wrapper>
-
+        <S.Wrapper>
+          <S.ListIconContainer>
+            <ListIconCostumer
+              items={costumers}
+              title={
+                <S.ListIconlTitle>
+                  <S.PipeContainer>
+                    <S.Pipe />
+                  </S.PipeContainer>
+                  Empresas que já desbloquearam o{' '}
+                  <span>poder da integração de sistemas</span>
+                </S.ListIconlTitle>
+              }
+            />
+          </S.ListIconContainer>
+        </S.Wrapper>
         <S.Wrapper>
           <S.Title>
             <hr />

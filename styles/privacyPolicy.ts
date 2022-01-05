@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { theme } from './theme'
 
 export const Container = styled.div``
@@ -63,8 +64,8 @@ export const Content = styled.div`
 
   > ul {
     > li {
-      list-style: disc;
       margin-left: 1.5vw;
+      list-style: disc;
       > p {
         margin-top: 2vh;
         line-height: 2.5vh;
@@ -81,8 +82,8 @@ export const Content = styled.div`
 
     > p {
       margin-top: 2vh;
-      line-height: 2.5vh;
       margin-left: 1.5vw;
+      line-height: 2.5vh;
 
       > b {
         font-weight: 900;

@@ -11,9 +11,10 @@ export const TitleContainer = styled.div`
 
 export const ImageContainer = styled.div`
   display: flex;
+
   align-items: center;
   justify-content: center;
-  width: 220px !important;
+  width: 220px;
   margin: 0 25px;
   -moz-user-select: none;
   -khtml-user-select: none;

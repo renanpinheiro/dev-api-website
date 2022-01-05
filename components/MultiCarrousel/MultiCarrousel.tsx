@@ -1,10 +1,9 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import * as S from './MultiCarrousel.styles'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import { IMultiCarrouselProps } from './MultiCarrousel.interface'
+import * as S from './MultiCarrousel.styles'
 
 const MultiCarrousel = ({
   items,

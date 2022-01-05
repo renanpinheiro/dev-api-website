@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { theme } from './theme'
 
 export const HeroContainer = styled.section`
@@ -48,6 +49,14 @@ export const Pipe = styled.div`
 
   @media (max-width: 576px) {
     width: 8vh;
+  }
+`
+export const PipeContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
   }
 `
 
@@ -190,5 +199,28 @@ export const Card = styled.div`
     @media (max-width: 768px) {
       margin: 7vw 0 0;
     }
+  }
+`
+export const ListIconContainer = styled.div`
+  width: 100vw;
+  padding-top: 5vh;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin: 3vh 0;
+  }
+`
+
+export const ListIconlTitle = styled.h2`
+  font-size: 2.3rem;
+  color: ${theme.colors.primary};
+
+  @media (max-width: 996px) {
+    margin-top: 10px;
+    font-size: 1.375rem;
+  }
+
+  span {
+    font-weight: 700;
   }
 `

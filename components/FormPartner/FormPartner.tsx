@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
-import * as S from './FormPartiner.style'
-import { InputText } from '../InputText'
+import { roleOptions } from '../../constants/roleOptions'
+import { removePhoneMask } from '../../utils/removePhoneMask'
 import { Button } from '../Button'
+import { InputText } from '../InputText'
+import { Select } from '../Select'
+import * as S from './FormPartiner.style'
+import { IMessage, IPayload } from './FormPartner.interface'
+
+import axios from 'axios'
 import { FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
-import axios from 'axios'
-import { roleOptions } from '../../constants/roleOptions'
-import { IMessage, IPayload } from './FormPartner.interface'
-import { Select } from '../Select'
-import { removePhoneMask } from '../../utils/removePhoneMask'
 
 const FormPartner = () => {
   const [message, setMessage] = useState<IMessage>()

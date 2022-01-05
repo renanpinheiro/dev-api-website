@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
 
-import Link from 'next/link'
+import { theme } from '../../../styles/theme'
+import { Button } from '../../Button'
+import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
+import * as S from './NewsletterForm.styles'
 
+import axios from 'axios'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import axios from 'axios'
-
-import { Button } from '../../Button'
-
-import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
-
-import * as S from './NewsletterForm.styles'
-import { theme } from '../../../styles/theme'
 
 const NewsletterForm = () => {
   const RDapi = axios.create({
@@ -49,10 +45,10 @@ const NewsletterForm = () => {
       `?api_key=${process.env.NEXT_PUBLIC_KEY_RDSTATION}`,
       payloadRD,
     )
-      .then(response => {
+      .then(() => {
         setIsSuccess(true)
       })
-      .catch(error => {
+      .catch(() => {
         setIsSuccess(false)
       })
   }

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+
 import { FlattenSimpleInterpolation } from 'styled-components'
 
 export interface ICarrouselProps {

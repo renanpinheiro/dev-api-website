@@ -1,29 +1,19 @@
 import React from 'react'
 
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import { Circle } from '../../components/AnimatedBackground'
 import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
-
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
-
-import { constumersMobile, costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/costumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
-
 import * as S from '../../styles/solutions'
-
-const CarrouselWithOutSSR = dynamic(
-  () => import('../../components/Carrousel'),
-  {
-    ssr: false,
-  },
-)
+import dynamic from 'next/dynamic'
 
 const IntegrationCardWithoutSSR = dynamic(
   () => import('../../components/IntegrationCard'),
@@ -32,17 +22,7 @@ const IntegrationCardWithoutSSR = dynamic(
   },
 )
 
-const MultiCarrouselWithOutSSR = dynamic(
-  () => import('../../components/MultiCarrousel/MultiCarrousel'),
-  {
-    ssr: false,
-  },
-)
-
 const Solutions = () => {
-  const { width } = useWindowDimensions()
-  const isMobile = width <= 1024
-
   const router = useRouter().asPath
 
   const [filterPage] = router.split('?')
@@ -155,31 +135,20 @@ const Solutions = () => {
           <S.ProfessionalServiceContainer>
             <ProfessionalService />
           </S.ProfessionalServiceContainer>
-
-          <S.CarrouselContainer>
-            {isMobile ? (
-              <CarrouselWithOutSSR
-                items={constumersMobile}
-                title={
-                  <S.CarrouselTitle>
-                    Empresas que já desbloquearam o{' '}
-                    <span>poder da integração de sistemas</span>
-                  </S.CarrouselTitle>
-                }
-              />
-            ) : (
-              <MultiCarrouselWithOutSSR
-                interval={2000}
-                items={costumers}
-                title={
-                  <S.CarrouselTitle>
-                    Empresas que já desbloquearam o{' '}
-                    <span>poder da integração de sistemas</span>
-                  </S.CarrouselTitle>
-                }
-              />
-            )}
-          </S.CarrouselContainer>
+          <S.ListIconContainer>
+            <ListIconCostumer
+              items={costumers}
+              title={
+                <S.ListIconlTitle>
+                  <S.PipeContainer>
+                    <S.Pipe />
+                  </S.PipeContainer>
+                  Empresas que já desbloquearam o{' '}
+                  <span>poder da integração de sistemas</span>
+                </S.ListIconlTitle>
+              }
+            />
+          </S.ListIconContainer>
         </S.Content>
       </S.Container>
     </>
