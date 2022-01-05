@@ -33,7 +33,7 @@ export const PipeContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  
+
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
