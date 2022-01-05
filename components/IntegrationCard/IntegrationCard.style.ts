@@ -13,6 +13,10 @@ export const Container = styled.div`
   opacity: 1;
   margin-bottom: 20px;
   width: 25vw;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 export const ImageContainer = styled.div`

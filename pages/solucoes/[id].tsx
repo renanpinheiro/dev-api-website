@@ -96,10 +96,22 @@ const Solutions = () => {
                 <S.ParagraphContainer>
                   {page && page.contentText}
                 </S.ParagraphContainer>
+
+                {!page.textJoinNow && (
+                  <>
+                    <ButtonLink
+                      text="Quero integrar agora!"
+                      href="/converse-com-especialista"
+                      target="_self"
+                      size="default"
+                      type="default"
+                    />
+                  </>
+                )}
               </S.TitleContainer>
 
               <S.ComponentContainer>
-                {/* {page.integrationCard &&
+                {page.integrationCard ? (
                   page.integrationCard.map(pageAtributes => {
                     return (
                       <IntegrationCardWithoutSSR
@@ -107,28 +119,33 @@ const Solutions = () => {
                         imageRight={pageAtributes.imageRight}
                       ></IntegrationCardWithoutSSR>
                     )
-                  })} */}
+                  })
+                ) : (
+                  <S.IntegrationContainer>
+                    {page && page.component}
+                  </S.IntegrationContainer>
+                )}
               </S.ComponentContainer>
             </S.TextContainer>
 
-            {/* {page.textJoinNow && (
+            {page.textJoinNow && (
               <S.JoinNowContainer>
                 <S.PipeJoinNow />
                 {page.textJoinNow}
+
+                <S.IntegrationContainer>
+                  {page && page.component}
+                </S.IntegrationContainer>
+
+                <ButtonLink
+                  text="Quero integrar agora!"
+                  href="/converse-com-especialista"
+                  target="_self"
+                  size="default"
+                  type="default"
+                />
               </S.JoinNowContainer>
-            )} */}
-
-            <S.IntegrationContainer>
-              {page && page.component}
-            </S.IntegrationContainer>
-
-            <ButtonLink
-              text="Quero integrar agora!"
-              href="/converse-com-especialista"
-              target="_self"
-              size="default"
-              type="default"
-            />
+            )}
           </S.SolutionContainer>
 
           <S.QuoteContainer>

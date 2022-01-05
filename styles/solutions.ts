@@ -139,8 +139,8 @@ export const TitleContainer = styled.div`
 `
 
 export const ParagraphContainer = styled.div`
-  width: 60%;
-
+  margin-bottom: 40px;
+  width: 100%;
   @media (max-width: 996px) {
     width: 100%;
   }
@@ -149,6 +149,7 @@ export const ParagraphContainer = styled.div`
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
+    max-width: 67ch;
 
     @media (max-width: 996px) {
       font-size: 1.25rem;
@@ -180,7 +181,8 @@ export const IntegrationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 
   @media (max-width: 996px) {
     flex-direction: column;
@@ -198,16 +200,20 @@ export const ImageContainer = styled.div`
   }
 `
 export const ComponentContainer = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 export const JoinNowContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 
   > h2 {
@@ -215,6 +221,7 @@ export const JoinNowContainer = styled.div`
     font-size: 2.625rem;
     line-height: 1.2;
     text-align: center;
+    max-width: 38ch;
 
     @media (max-width: 996px) {
       width: 100%;
