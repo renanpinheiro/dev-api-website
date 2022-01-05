@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components'
-import { Form as FormikForm } from 'formik'
+
 import { theme } from '../../styles/theme'
 import { IErrorTextStyle } from './TrialForm.interface'
+
+import { Form as FormikForm } from 'formik'
 
 export const Form = styled(FormikForm)`
   width: 100%;

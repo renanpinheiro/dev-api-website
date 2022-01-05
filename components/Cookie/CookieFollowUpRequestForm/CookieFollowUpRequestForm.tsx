@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { FormikProvider, useFormik } from 'formik'
+
 import { Button } from '../../Button'
-import * as S from './CookieFollowUpRequestForm.style'
-import * as Yup from 'yup'
 import { InputText } from '../../InputText'
+import * as S from './CookieFollowUpRequestForm.style'
+
+import { FormikProvider, useFormik } from 'formik'
+import * as Yup from 'yup'
 
 const CookieFollowUpRequestForm = ({ onClickBack, lgpdApi }) => {
   const [isStatusOpen, setIsStatusOpen] = useState(false)

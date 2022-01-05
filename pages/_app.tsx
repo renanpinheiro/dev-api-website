@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react'
+import { useCookies } from 'react-cookie'
 import { QueryClientProvider, QueryClient } from 'react-query'
 
+import { DefaultSeo } from 'next-seo'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { DefaultSeo } from 'next-seo'
-
-import { GTMPageView } from '../utils/seo/gtm'
-import SEO from '../next-seo.config'
+import { useRouter } from 'next/router'
 
 import { ThemeProvider } from 'styled-components'
 
-import { useRouter } from 'next/router'
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
 import { Cookie } from '../components/Cookie'
-
+import { Footer } from '../components/Footer'
+import { Header } from '../components/Header'
+import SEO from '../next-seo.config'
 import GlobalStyle from '../styles/global'
 import { theme } from '../styles/theme'
-import { useCookies } from 'react-cookie'
+import { GTMPageView } from '../utils/seo/gtm'
 
 const queryClient = new QueryClient()
 

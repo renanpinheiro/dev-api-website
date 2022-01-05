@@ -1,8 +1,10 @@
-import { FormikProvider, useFormik } from 'formik'
 import React, { useState } from 'react'
+
 import { Button } from '../../Button'
 import { InputText } from '../../InputText'
 import * as S from './CookieForm.style'
+
+import { FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
 
 const CookieForm = ({ text, title, onClickBack, lgpdApi }) => {
@@ -11,7 +13,7 @@ const CookieForm = ({ text, title, onClickBack, lgpdApi }) => {
 
   const onSubmit = async values => {
     try {
-      const response = await lgpdApi.post(`lgpd`, values)
+      const response = await lgpdApi.post('lgpd', values)
 
       setProtocol(response.data.protocol)
       setIsStatusOpen(true)

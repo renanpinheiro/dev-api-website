@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import { IQuotesCarouselProps } from './QuoteCarousel.interface'
 import * as S from './QuoteCarousel.styles'
 
 const QuoteCarousel = ({ quotes }) => {

@@ -1,9 +1,7 @@
 import React from 'react'
 
 import Link from '../Link'
-
 import { IDropdownProps } from './Dropdown.interface'
-
 import * as S from './Dropdown.style'
 
 const Dropdown = ({ children, isOpen, dropdownItems }: IDropdownProps) => {

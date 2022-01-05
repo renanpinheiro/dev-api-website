@@ -1,14 +1,12 @@
 import React from 'react'
 
-import { convertDate } from '../../utils/formatter'
-
-import * as S from '../../styles/blog'
-
 import {
   IFindArticlesRelated,
   IFindPopularPosts,
   IFindResponse,
 } from '../../providers/blog/shared.interface'
+import * as S from '../../styles/blog'
+import { convertDate } from '../../utils/formatter'
 
 export const handlePosts = (posts: IFindResponse[]) => {
   return posts.map(post => {

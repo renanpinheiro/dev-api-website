@@ -1,11 +1,12 @@
-import styled, { css } from 'styled-components'
-import { theme } from '../../../styles/theme'
-import { IMenuContainerProps, INavLinkTitleStyle } from '../Header.interface'
-
 import {
   Accordion as AccordionBootstrap,
   Card as CardBootstrap,
 } from 'react-bootstrap'
+
+import styled, { css } from 'styled-components'
+
+import { theme } from '../../../styles/theme'
+import { IMenuContainerProps, INavLinkTitleStyle } from '../Header.interface'
 
 export const Menu = styled.div<IMenuContainerProps>`
   position: fixed;

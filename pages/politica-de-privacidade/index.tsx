@@ -3,7 +3,6 @@ import React from 'react'
 import Head from 'next/head'
 
 import { Hero } from '../../components/Hero'
-
 import * as S from '../../styles/privacyPolicy'
 
 const PrivacyPolicy = () => {
@@ -62,7 +61,7 @@ const PrivacyPolicy = () => {
               princípios adotados pelo Grupo DevApi para assegurar a proteção
               dos titulares dos dados, estabelecendo os procedimentos e regras
               relativas aos direitos dos titulares e ao tratamento e circulação
-              dos dados pessoais. 
+              dos dados pessoais.
             </p>
             <p>
               Este documento apresenta as regras a cumprir de forma a agir em
@@ -71,7 +70,7 @@ const PrivacyPolicy = () => {
               de Dados) devendo ser respeitado por todos os colaboradores do
               Grupo DevApi. Assim, todos os colaboradores do Grupo DevApi
               deverão ter conhecimento desta Política de Privacidade e
-              diligenciar pela devida compreensão. 
+              diligenciar pela devida compreensão.
             </p>
             <p>
               Adicionalmente, o Grupo DevApi preocupa-se em facultar aos seus
@@ -398,7 +397,7 @@ const PrivacyPolicy = () => {
               segurança dos nossos sistemas e dos seus dados. Apenas os
               colaboradores do Grupo DevApi e fornecedores vinculados a estes
               termos terão acesso aos dados pessoais, e dentre estes, somente as
-              pessoas com as devidas autorizações. 
+              pessoas com as devidas autorizações.
             </p>
             <p>
               Nos termos desta Política, você poderá, a qualquer momento
@@ -559,8 +558,8 @@ const PrivacyPolicy = () => {
               titular dos dados ter acesso à informação quanto ao tratamento dos
               seus dados pessoais, nos termos previstos na LGPD. Eventuais
               solicitações de inventário de dados deverão ser encaminhadas
-              mediante o preenchimento do formulário de solicitação, mediante a
-              devida comprovação de identidade do titular. 
+              mediante o preenchimento do formulário de solicitação, mediante a
+              devida comprovação de identidade do titular.
               <br />
               <br />O Grupo DevApi processará a requisição de inventário de
               dados pessoais tratados pelo Grupo DevApi, encaminhando o
@@ -569,22 +568,22 @@ const PrivacyPolicy = () => {
               preferencialmente de forma eletrônica, o qual não acarretará
               custos ao titular, no entanto também poderá ser encaminhado por
               meio físico, mediante o pagamento de taxa razoável por este, tendo
-              em conta os custos administrativos da operação. 
+              em conta os custos administrativos da operação.
               <br />
               <br />
               <b>c) Direito de correção</b>
               <br />O Grupo DevApi assegura que o titular dos dados possa
               retificar os seus dados pessoais, nomeadamente, quando estes
               estejam incorretos, inexatos ou desatualizados ou completá-los,
-              caso se encontrem incompletos. 
+              caso se encontrem incompletos.
               <br />
               <br />
               A solicitação de retificação deverá ser encaminhada mediante o
-              preenchimento do formulário de solicitação, a qual será
+              preenchimento do formulário de solicitação, a qual será
               direcionada ao Encarregado (DPO), o qual analisará a possibilidade
               de retificação dos dados pessoais, considerando obrigações legais,
               contratuais e regulatórias do Grupo DevApi, retornando em um prazo
-              razoável a solicitação do titular. 
+              razoável a solicitação do titular.
               <br />
               <br />É garantido ao titular dos dados, em caso de indeferimento
               sobre a retificação de suas informações, uma resposta detalhada e
@@ -605,21 +604,21 @@ const PrivacyPolicy = () => {
               <br />
               Os titulares que possuem interesse em eliminar os seus dados
               pessoais tratados pelo Grupo DevApi deverão encaminhar a
-              solicitação através do formulário de solicitação. Os pedidos de
+              solicitação através do formulário de solicitação. Os pedidos de
               eliminação serão recepcionados pelo Encarregado (DPO), os quais
               serão analisados e, sendo considerados válidos à luz das normas
-              legais aplicáveis, o Grupo DevApi processará o pedido. 
+              legais aplicáveis, o Grupo DevApi processará o pedido.
               <br />
               <br />
               Caso os pedidos realizados não forem considerados válidos, tendo
               em vista a existência de obrigações legais e regulatórias do Grupo
               DevApi ou do Controlador manterem os dados, o Grupo DevApi não
               processará a exclusão dos dados e comunicará ao titular os motivos
-              associados a essa decisão. 
+              associados a essa decisão.
               <br />
               <br />A comunicação da exclusão ou fundamentando o indeferimento
               do pedido deverão ser encaminhadas pelo Grupo DevApi ao titular no
-              prazo máximo de 30 (trinta) dias após a recepção do pedido. 
+              prazo máximo de 30 (trinta) dias após a recepção do pedido.
               <br />
               <br />
               Haverá exceção à eliminação dos dados somente quando houver
@@ -654,7 +653,7 @@ const PrivacyPolicy = () => {
               causa. Se os pedidos realizados não forem considerados válidos, o
               Grupo DevApi não os processará e comunicará ao titular dos dados
               os motivos associados a essa decisão no prazo máximo de 30
-              (trinta) dias após a recepção do pedido. 
+              (trinta) dias após a recepção do pedido.
               <br />
               <br />
               <b>f) Revogação de consentimento</b>
@@ -662,13 +661,13 @@ const PrivacyPolicy = () => {
               O Grupo DevApi, quando na posição de Controladora, recolherá o
               consentimento do titular para coletar e tratar os seus dados para
               as diversas finalidades, ressalvadas as hipóteses que exonerem a
-              obrigatoriedade de recolha deste consentimento. 
+              obrigatoriedade de recolha deste consentimento.
               <br />
               <br />O Grupo DevApi recolherá e conservará o consentimento de
               forma que permita a prova quanto à recolha do mesmo e suas
               circunstâncias, durante todo o tempo em que o consentimento se
               mantiver válido e durante todo o prazo subsequente necessário e
-              lícito, nos termos das normas legais e regulamentares aplicáveis. 
+              lícito, nos termos das normas legais e regulamentares aplicáveis.
               <br />
               <br />O Grupo DevApi garante ao titular dos dados o direito de
               retirar consentimento em qualquer altura, mediante comunicação ao
@@ -693,7 +692,7 @@ const PrivacyPolicy = () => {
               <br />
               <br />
               O direito à portabilidade não inclui, contudo, os dados que já
-              tenham sido anonimizados. 
+              tenham sido anonimizados.
               <br />
               <br />
               O Grupo DevApi assegura ainda os meios necessários para que o
@@ -1073,7 +1072,7 @@ const PrivacyPolicy = () => {
               <br />
               <br />
               É recomendável que você deixe todos os cookies se não tiver
-              certeza se precisa ou não deles, caso sejam usados ​​para fornecer
+              certeza se precisa ou não deles, caso sejam usados para fornecer
               um serviço que você usa.Você pode impedir a configuração de
               cookies ajustando as configurações do seu navegador (consulte a
               Ajuda do navegador para saber como fazer isso).
@@ -1107,7 +1106,7 @@ const PrivacyPolicy = () => {
               <br />
               <br />
               Este site usa o Google Analytics, que é uma das soluções de
-              análise mais difundidas e confiáveis ​​da Web, para nos ajudar a
+              análise mais difundidas e confiáveis da Web, para nos ajudar a
               entender como você usa o site e como podemos melhorar sua
               experiência. Esses cookies podem rastrear itens como quanto tempo
               você gasta no site e as páginas visitadas, para que possamos

@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
-import * as S from './Steps.style'
+import React from 'react'
+
 import { IStepsProps } from './Steps.interface'
+import * as S from './Steps.style'
 
 export const Steps = ({ steps }: IStepsProps) => {
   return (

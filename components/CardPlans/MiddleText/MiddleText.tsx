@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { IText } from './MiddleText.interface'
-
 import * as S from './MiddleText.style'
 
 const MiddleText = ({ text }: IText) => {

@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { reset } from 'styled-reset'
 import { theme } from './theme'
+
+import { reset } from 'styled-reset'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 

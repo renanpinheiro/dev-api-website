@@ -5,10 +5,8 @@ import Head from 'next/head'
 import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { apis } from '../../constants/apis'
-
-import { validateOddNumber } from '../../utils/validateOddNumber'
-
 import * as S from '../../styles/apiManagement'
+import { validateOddNumber } from '../../utils/validateOddNumber'
 
 const ApiManagement = () => {
   return (

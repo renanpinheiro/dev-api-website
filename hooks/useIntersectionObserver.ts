@@ -7,7 +7,7 @@ export default function useIntersectionObserver({
   rootMargin = '0px',
   target,
   threshold = 0.1,
-}: any) {
+}) {
   useEffect(() => {
     if (!enabled) {
       return

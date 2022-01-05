@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { theme } from '../../styles/theme'
 
+import { theme } from '../../styles/theme'
 import { IContainerStyle } from './Hero.interface'
 
 export const Container = styled.div<IContainerStyle>`

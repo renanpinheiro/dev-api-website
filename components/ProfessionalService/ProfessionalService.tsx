@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { ButtonLink } from '../ButtonLink'
-
 import * as S from './ProfessionalService.style'
 
 const ProfessionalService = () => {

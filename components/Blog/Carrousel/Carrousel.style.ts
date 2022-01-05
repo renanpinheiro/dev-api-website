@@ -1,7 +1,8 @@
 import { Carousel, CarouselItem } from 'react-bootstrap'
-import styled, { css } from 'styled-components'
-import { theme } from '../../../styles/theme'
 
+import styled, { css } from 'styled-components'
+
+import { theme } from '../../../styles/theme'
 import { ICarouselStyledProps } from './Carrousel.interface'
 
 export const Container = styled.div`

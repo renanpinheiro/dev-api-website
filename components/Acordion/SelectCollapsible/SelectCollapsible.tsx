@@ -1,10 +1,8 @@
 import React, { useState, useRef } from 'react'
 
-import { useOutSideClick } from './useOutSideClick'
-
 import { ISelectCollapsibleProps } from './SelectCollapsible.interface'
-
 import * as S from './SelectCollapsible.style'
+import { useOutSideClick } from './useOutSideClick'
 
 const SelectCollapsible = ({ question, answer }: ISelectCollapsibleProps) => {
   const [isActive, setIsActive] = useState(false)

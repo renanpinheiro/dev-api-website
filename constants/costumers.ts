@@ -39,6 +39,46 @@ export const costumers = [
     name: 'barba-de-respeito',
     url: '/costumers/barba-de-respeito.png',
   },
+  {
+    name: 'bold',
+    url: '/costumers/bold.svg',
+  },
+  {
+    name: 'sao-luiz',
+    url: '/costumers/sao-luiz.png',
+  },
+  {
+    name: 'dev-ninjas',
+    url: '/costumers/devninjas.svg',
+  },
+  {
+    name: 'brands-hub',
+    url: '/costumers/brands-hub.svg',
+  },
+  {
+    name: 'epy',
+    url: '/costumers/epy.png',
+  },
+  {
+    name: 'refrigeracao-mota',
+    url: '/costumers/refrigeracao-mota.svg',
+  },
+  {
+    name: 'be-brasil',
+    url: '/costumers/bebrasil.svg',
+  },
+  {
+    name: 'pam',
+    url: '/costumers/pam.svg',
+  },
+  {
+    name: 'pormade-portas',
+    url: '/costumers/pormade.svg',
+  },
+  {
+    name: 'scaffold',
+    url: '/costumers/logo-scaffold.svg',
+  },
 ]
 
 export const constumersMobile = {

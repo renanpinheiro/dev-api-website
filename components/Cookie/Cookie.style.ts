@@ -1,11 +1,12 @@
-import styled, { css } from 'styled-components'
-import { theme } from '../../styles/theme'
-import { ICookieStyle } from './Cookie.interface'
-
 import {
   Accordion as AccordionBootstrap,
   Card as CardBootstrap,
 } from 'react-bootstrap'
+
+import styled, { css } from 'styled-components'
+
+import { theme } from '../../styles/theme'
+import { ICookieStyle } from './Cookie.interface'
 
 export const Cookie = styled.div`
   position: absolute;
