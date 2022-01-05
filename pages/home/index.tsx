@@ -120,6 +120,54 @@ const Home = () => {
           </S.PlatformDetails>
         </S.PlatformContainer>
 
+        <S.CarrouselImageContainer>
+          <img
+            src="/images/connectors-computer.png"
+            alt="Connectors Computer"
+          />
+        </S.CarrouselImageContainer>
+        <S.Carrousel>
+          {isMobile ? (
+            <CarrouselWithOutSSR
+              items={connectorsMobile}
+              title={
+                <S.CarrouselTitle>
+                  <S.Pipe />
+                  <h2>
+                    Mais de 300 conectores pré-construídos{' '}
+                    <b> e prontos para uso </b>
+                  </h2>
+                </S.CarrouselTitle>
+              }
+            />
+          ) : (
+            <MultiCarrouselWithOutSSR
+              itemsPerSlide={9}
+              interval={2000}
+              items={connectors}
+              title={
+                <S.CarrouselTitle>
+                  <S.Pipe />
+                  <h2>
+                    Mais de 300 conectores pré-construídos{' '}
+                    <b> e prontos para uso </b>
+                  </h2>
+                </S.CarrouselTitle>
+              }
+            />
+          )}
+        </S.Carrousel>
+
+        <S.ButtonContainer>
+          <ButtonLink
+            text="Ver conectores"
+            href="/conectores"
+            target="_self"
+            size="default"
+            type="default"
+          />
+        </S.ButtonContainer>
+
         <S.BusinessContainer>
           <S.Pipe />
           <h2>
@@ -197,48 +245,6 @@ const Home = () => {
             })}
           </S.Features>
         </S.FeaturesContainer>
-
-        <S.Carrousel>
-          {isMobile ? (
-            <CarrouselWithOutSSR
-              items={connectorsMobile}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    <b> Mais de 300 conectores</b> pré-construídos e prontos
-                    para uso
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          ) : (
-            <MultiCarrouselWithOutSSR
-              itemsPerSlide={9}
-              interval={2000}
-              items={connectors}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    <b> Mais de 300 conectores</b> pré-construídos e prontos
-                    para uso
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          )}
-        </S.Carrousel>
-
-        <S.ButtonContainer>
-          <ButtonLink
-            text="Ver conectores"
-            href="/conectores"
-            target="_self"
-            size="default"
-            type="default"
-          />
-        </S.ButtonContainer>
 
         <S.Quote>
           <QuoteCarouselWithOutSSR quotes={quotes} />

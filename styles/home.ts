@@ -76,7 +76,7 @@ export const HeroContent = styled.div`
 `
 
 export const Pipe = styled.div`
-  width: 10vh;
+  width: 19vh;
   height: 3px;
   margin-bottom: 10px;
 
@@ -104,6 +104,10 @@ export const Content = styled.section`
   width: 100%;
 `
 
+export const CarrouselImageContainer = styled.div`
+  width: 100%;
+`
+
 export const Carrousel = styled.section`
   width: 100%;
   padding: 10vh 5.5vw 6vh;
@@ -118,7 +122,7 @@ export const CarrouselTitle = styled.div`
   margin-bottom: 2vh;
 
   > h2 {
-    font-size: 2.25rem;
+    font-size: 2.6rem;
     color: ${theme.colors.primary};
 
     @media (max-width: 576px) {
