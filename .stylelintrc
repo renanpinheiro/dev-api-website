@@ -3,7 +3,8 @@
   "extends": [
     "stylelint-config-recommended",
     "stylelint-config-styled-components",
-    "stylelint-config-recess-order"
+    "stylelint-config-recess-order",
+    "stylelint-config-standard-scss"
   ],
   "customSyntax": "postcss-scss"
 }
