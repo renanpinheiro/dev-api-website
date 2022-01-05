@@ -151,6 +151,7 @@ export const TitleContainer = styled.div`
 export const ParagraphContainer = styled.div`
   margin-bottom: 40px;
   width: 100%;
+
   @media (max-width: 996px) {
     width: 100%;
   }
