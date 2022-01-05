@@ -61,7 +61,7 @@ const QuoteCarousel = ({ quotes }) => {
           <S.QuoteSpanContainer>
             {quotes.map((item, quoteIndex) => {
               const isActive = quoteIndex === quote
-              return <S.QuoteSpan isActive={isActive} />
+              return <S.QuotePaginationDiv isActive={isActive} />
             })}
           </S.QuoteSpanContainer>
           <S.QuoteButton onClick={handleNextQuote}>

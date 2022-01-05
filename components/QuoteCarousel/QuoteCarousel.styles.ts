@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { theme } from '../../styles/theme'
-import { IFadeStyle, IQuoteSpanStyle } from './Quote.interface'
+import { IFadeStyle, IQuotePaginationDivStyle } from './Quote.interface'
 
 export const Container = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ export const QuoteContainer = styled.div`
   flex-direction: column;
   width: 1640px;
   height: 485px;
-  padding: 3vh 13vh 3vh 13vh;
+  padding: 3vh 6vw 3vh 7vw;
   background-color: ${theme.colors.secondary};
   margin-top: 11vh;
 
@@ -29,7 +29,7 @@ export const QuoteContainer = styled.div`
   @media only screen and (max-width: 1023px) {
     width: 100%;
     height: auto;
-    padding: 2vh 2vw 2vh 2vh;
+    padding: 2vh 2vw 2vh 2vw;
     margin-top: 15vh;
   }
 `
@@ -61,7 +61,7 @@ export const LeftQuotationMark = styled.img`
     height: 45px;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 5vh;
+    margin-left: 5vw;
   }
 
   @media only screen and (max-width: 800px) {
@@ -96,7 +96,7 @@ export const Quote = styled.p<IFadeStyle>`
   font-weight: 700;
   line-height: 1.2;
   color: ${theme.colors.white};
-  padding: 1vh 0.3vh;
+  padding: 1vh 0.3vw;
   text-align: center;
 
   ${props =>
@@ -248,8 +248,8 @@ export const QuoteSpanContainer = styled.div`
   padding: 0vh 1vw;
 `
 
-export const QuoteSpan = styled.div<IQuoteSpanStyle>`
-  margin: 0.5vh;
+export const QuotePaginationDiv = styled.div<IQuotePaginationDivStyle>`
+  margin: 0.5vw 0.5vh;
   width: 10px;
   height: 10px;
   background-color: ${props =>

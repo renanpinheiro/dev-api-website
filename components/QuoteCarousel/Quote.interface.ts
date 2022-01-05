@@ -10,7 +10,7 @@ interface IQuotes {
   quote: string
 }
 
-export interface IQuoteSpanStyle {
+export interface IQuotePaginationDivStyle {
   isActive: boolean
 }
 
