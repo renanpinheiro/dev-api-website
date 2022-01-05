@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-import { IQuotesCarouselProps } from './QuoteCarousel.interface'
 import * as S from './QuoteCarousel.styles'
 
 const QuoteCarousel = ({ quotes }) => {
@@ -15,7 +14,7 @@ const QuoteCarousel = ({ quotes }) => {
 
     setInterval(() => {
       setIsFade(false)
-    }, 3000)
+    }, 100)
   }
 
   const handleNextQuote = () => {
@@ -26,7 +25,7 @@ const QuoteCarousel = ({ quotes }) => {
 
     setInterval(() => {
       setIsFade(false)
-    }, 3000)
+    }, 100)
   }
 
   return (
@@ -46,10 +45,12 @@ const QuoteCarousel = ({ quotes }) => {
             alt="left-quote"
           />
           <S.Quote isFade={isFade}>{quotes[quote].quote}</S.Quote>
-          <S.Name isFade={isFade}>
-            {quotes[quote].name}, {quotes[quote].occupation} |{' '}
-            {quotes[quote].company}
-          </S.Name>
+          <S.NameContainer>
+            <S.Name isFade={isFade}>
+              {quotes[quote].name}, {quotes[quote].occupation}
+            </S.Name>
+            <S.Company isFade={isFade}>{quotes[quote].company}</S.Company>
+          </S.NameContainer>
           <S.RightQuotationMark
             src="/quotes/right-quote-mark.svg"
             alt="right-quote"
