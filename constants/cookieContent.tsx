@@ -45,10 +45,10 @@ export const cookieContent = {
             ],
           },
           {
-            name: 'RD Station',
+            name: 'HubSpot',
             subItem: [
               {
-                name: '__trf.src',
+                name: '__cf_bm',
                 domain: {
                   title: 'Domínio',
                   value: '.devapi.com.br',
