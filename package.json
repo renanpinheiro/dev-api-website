@@ -10,7 +10,7 @@
     "lint": "eslint --ignore-path .gitignore --ext .jsx,.ts,.tsx .",
     "format": "prettier --ignore-path .gitignore --ext .jsx,.ts,.tsx . --write",
     "lint:styles": "stylelint ./styles/*.ts",
-    "precommit": "yarn format",
+    "precommit": "yarn format && yarn lint:styles",
     "prepare": "husky install"
   },
   "dependencies": {

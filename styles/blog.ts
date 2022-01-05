@@ -60,9 +60,7 @@ export const ImageHeaderContainer = styled.div<ICaseStyle>`
   justify-content: flex-end;
   width: 100%;
   height: 100%;
-
   padding: 12vh 12.5vw;
-
   background-image: url(${props => props.imageUrl});
   background-size: cover;
 
@@ -73,7 +71,6 @@ export const ImageHeaderContainer = styled.div<ICaseStyle>`
 
 export const Title = styled.p`
   margin-top: 20px;
-
   font-size: 3.3rem;
   font-weight: 700;
   line-height: 1;
@@ -91,15 +88,11 @@ export const CaseType = styled.div<ICaseTypeProps>`
   width: ${props => (props.width ? props.width : '80px')};
   height: ${props => (props.height ? props.height : '35px')} !important;
   padding-top: 2px;
-
   margin-right: 10px;
-
   font-size: calc(${props => props.height} / 2);
   font-weight: 600;
   color: white;
-
   background-color: ${theme.colors.secondary};
-
   border-radius: 5px;
 `
 
@@ -122,13 +115,13 @@ export const User = styled.div<IIconStyle>`
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-
   margin-right: 10px;
 
   img {
     width: ${props => (props.width ? props.width : '20px')};
     height: ${props => (props.height ? props.height : '20px')};
   }
+
   p {
     padding-top: 3px;
     margin: 0;
@@ -148,13 +141,13 @@ export const Date = styled.div<IIconStyle>`
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-
   margin-right: 10px;
 
   img {
     width: ${props => (props.width ? props.width : '20px')};
     height: ${props => (props.height ? props.height : '20px')};
   }
+
   p {
     padding-top: 3px;
     margin: 0;
@@ -205,7 +198,7 @@ export const CasesContainer = styled.div`
   @media (min-width: 320px) and (max-width: 992px) {
     flex-direction: column;
     max-width: 100%;
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 
   @media (min-width: 1280px) {
@@ -221,7 +214,6 @@ export const CaseContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   max-width: 15rem;
 
   @media (min-width: 320px) and (max-width: 992px) {
@@ -234,7 +226,6 @@ export const TextContainer = styled.div<ITextContainerStyle>`
   position: relative;
   display: flex;
   justify-content: space-between;
-
   margin: ${props => (props.margin ? props.margin : '15px 0px 0px 0px')};
 
   @media (min-width: 320px) and (max-width: 992px) {
@@ -249,20 +240,16 @@ export const VerticalPipe = styled.div`
   left: 0;
   width: 3px !important;
   height: 100%;
-
   background-color: ${theme.colors.secondary};
 `
 
 export const Text = styled.div<ITextStyle>`
   /* stylelint-disable-next-line value-no-vendor-prefix */
   display: -webkit-box;
-
   padding-top: 2px;
   margin-left: 10px;
-
   overflow: hidden;
   font-size: ${props => (props.fontSize ? props.fontSize : '1.2rem')};
-
   font-weight: 700;
   line-height: 1;
   color: ${props => props.theme.colors.primary};
@@ -290,15 +277,14 @@ export const Box = styled.div`
 
 export const FilterContainer = styled.div`
   position: absolute;
-
   top: 89%;
   z-index: 29;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-
   height: 180px;
+
   @media (min-width: 320px) and (max-width: 992px) {
     height: auto;
   }
@@ -308,15 +294,12 @@ export const Filters = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 100%;
   height: 100%;
-
   padding: 10px 60px;
-
   background-color: ${theme.colors.white};
   border-radius: 10px;
-  box-shadow: 0px 6px 28px #2c2d6636;
+  box-shadow: 0 6px 28px #2c2d6636;
 
   @media (min-width: 320px) and (max-width: 992px) {
     flex-direction: column;
@@ -405,10 +388,8 @@ export const IconButton = styled.div<IButtonStyle>`
 export const Button = styled.button<IButtonStyle>`
   display: flex;
   height: 55px;
-
   padding: 17px;
   margin-right: 15px;
-
   font-weight: 700;
   color: ${theme.colors.primary};
   border: none;
@@ -426,7 +407,7 @@ export const Button = styled.button<IButtonStyle>`
 
   @media only screen and (max-width: 828px) {
     padding: 18px 14px;
-    margin-right: 0px;
+    margin-right: 0;
   }
 `
 
@@ -435,15 +416,12 @@ export const DateCard = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width: 70px;
   height: 70px !important;
   font-size: 1rem;
   font-weight: 700;
-
   line-height: 1;
   color: ${theme.colors.white};
-
   background-color: ${theme.colors.secondary};
   border-radius: 10px;
 
@@ -457,20 +435,15 @@ export const ReturnButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 233px;
   height: 49px;
-
   margin-bottom: 30px;
-
   cursor: pointer;
   border-radius: 10px;
-
-  box-shadow: 0px 6px 28px #2c2d6636;
+  box-shadow: 0 6px 28px #2c2d6636;
 
   span {
     padding-top: 2px;
-
     font-size: 1rem;
     font-weight: 700;
     color: ${theme.colors.primary};
@@ -483,9 +456,7 @@ export const ReturnButtonContainer = styled.div`
   img {
     width: 25px;
     height: 20px;
-
     margin-right: 10px;
-
     transform: rotateY(180deg);
   }
 
@@ -580,10 +551,8 @@ export const TitleContainer = styled.div`
 export const TextPipe = styled.div`
   width: 100px;
   height: 3px;
-
   margin-top: 30px;
   margin-bottom: 12px;
-
   background-color: ${theme.colors.secondary};
 `
 

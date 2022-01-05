@@ -1,5 +1,4 @@
-/* eslint @typescript-eslint/no-empty-interface: "off" */
-
+/* eslint-disable @typescript-eslint/no-empty-interface */
 import 'styled-components'
 
 import theme from './theme'

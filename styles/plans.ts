@@ -69,7 +69,6 @@ export const PipeContainer = styled.div`
 
   @media (max-width: 900px) {
     align-items: flex-start;
-
     text-align: left;
   }
 `
@@ -99,7 +98,6 @@ export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -118,7 +116,6 @@ export const ContainerCallToAction = styled.div`
 
   @media (max-width: 900px) {
     align-items: flex-start;
-
     text-align: left;
   }
 `
