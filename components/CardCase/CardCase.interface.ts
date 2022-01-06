@@ -1,10 +1,10 @@
 export interface ICardCases {
-  cases: ICaseList[]
+  cases: ICases[]
 }
 
-interface ICaseList {
+interface ICases {
   title: string
-  short_text: string
-  image_cover: string
-  link_id: string
+  shortText: string
+  imageCover: string
+  linkId: string
 }

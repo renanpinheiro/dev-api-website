@@ -29,7 +29,7 @@ const Cases = () => {
   return (
     <>
       <Head>
-        <title>DevApi | Planos</title>
+        <title>DevApi | Cases</title>
         <meta property="og:title" content="DevApi | Cases" key="title" />
         <meta
           name="description"

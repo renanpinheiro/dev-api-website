@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100vw;
-  padding: 5vh 8vw 5vh 8vh;
+  padding: 5vh 8vw 5vh 8vw;
   flex-wrap: wrap;
 
   @media (max-width: 600px) {
