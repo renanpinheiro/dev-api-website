@@ -26,12 +26,13 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const hasDevapiCookie = cookies.__Secure === 'accept'
   const [isAcceptCookies, setIsAcceptCookies] = useState(hasDevapiCookie)
 
-  // rdstation
+  // hubspot
   useEffect(() => {
     const script = document.createElement('script')
-    script.src =
-      'https://d335luupugsy2.cloudfront.net/js/loader-scripts/3898021c-e125-41ca-8f3c-3cd2e9e9bb99-loader.js'
+    script.src = '//js.hs-scripts.com/20991234.js'
     script.async = true
+    script.defer = true
+    script.id = 'hs-script-loader'
     document.body.appendChild(script)
   }, [])
 
