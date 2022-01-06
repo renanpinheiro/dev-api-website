@@ -23,9 +23,9 @@ export const Image = styled.img`
 `
 
 export const Text = styled.p`
+  padding-left: 0.5vw;
   overflow: hidden;
   font-size: 1.325rem;
-  padding-left: 0.5vw;
   line-height: 1.5;
 
   @media (max-width: 900px) {

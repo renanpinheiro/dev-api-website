@@ -19,8 +19,8 @@ export const ControlContainer = styled.div<IControlContainerStyle>`
   display: flex;
   flex-direction: ${props =>
     props.flexDirection ? props.flexDirection : 'row'};
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   margin-bottom: 50px;

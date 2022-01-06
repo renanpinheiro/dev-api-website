@@ -5,8 +5,8 @@ import { IFadeStyle, IQuotePaginationDivStyle } from './Quote.interface'
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
   justify-content: center;
+  width: 100%;
   padding: 0 5vw 0 3vw;
 `
 
