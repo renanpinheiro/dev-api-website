@@ -148,11 +148,9 @@ export const TitleContainer = styled.div`
   }
 `
 
-interface IParagraphContainerProps {
-  width?: string
-}
-export const ParagraphContainer = styled.div<IParagraphContainerProps>`
-  width: ${props => (props.width ? props.width : '50%')};
+export const ParagraphContainer = styled.div`
+  margin-bottom: 40px;
+  width: 100%;
 
   @media (max-width: 996px) {
     width: 100%;
@@ -162,6 +160,7 @@ export const ParagraphContainer = styled.div<IParagraphContainerProps>`
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
+    max-width: 67ch;
 
     @media (max-width: 996px) {
       font-size: 1.25rem;
@@ -193,7 +192,8 @@ export const IntegrationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 
   @media (max-width: 996px) {
     flex-direction: column;
@@ -208,6 +208,54 @@ export const ImageContainer = styled.div`
     @media (max-width: 996px) {
       width: 100%;
     }
+  }
+`
+export const ComponentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`
+
+export const JoinNowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > h2 {
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 38ch;
+
+    @media (max-width: 996px) {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.25rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+`
+export const PipeJoinNow = styled.div`
+  width: 15vh;
+  height: 3px;
+  margin-bottom: 10px;
+  background-color: ${theme.colors.secondary};
+
+  @media (max-width: 576px) {
+    width: 8vh;
   }
 `
 export const ListIconContainer = styled.div`
