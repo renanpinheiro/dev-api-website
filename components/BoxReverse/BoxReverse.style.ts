@@ -7,12 +7,10 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 10vh 8vw 0 8vw;
-  text-align: j;
+  padding: 2.5vh 8vw 2.5vh 8vw;
 
   @media (max-width: 900px) {
     align-items: flex-start;
-    text-align: left;
   }
 `
 
@@ -22,30 +20,12 @@ export const ControlContainer = styled.div<IControlContainerStyle>`
     props.flexDirection ? props.flexDirection : 'row'};
   justify-content: space-between;
   width: 100%;
+  height: 100%;
+  align-items: center;
+  margin-bottom: 50px;
 
   @media (max-width: 900px) {
     flex-direction: column;
-  }
-`
-
-export const Image = styled.img`
-  object-fit: cover;
-
-  @media (max-width: 900px) {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-`
-
-export const Text = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 40%;
-
-  @media (max-width: 900px) {
-    width: 100%;
   }
 `
 
@@ -59,6 +39,29 @@ export const ImageContainer = styled.div`
   > p {
     max-width: 50ch;
   }
+
+  @media (max-width: 900px) {
+    margin-top: 30px;
+    width: 100%;
+  }
+`
+
+export const Image = styled.img`
+  object-fit: cover;
+  width: 100%;
+
+  @media (max-width: 900px) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+`
+
+export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
 
   @media (max-width: 900px) {
     width: 100%;

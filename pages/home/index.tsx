@@ -15,6 +15,8 @@ import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { BoxReverse } from '../../components/BoxReverse'
+import { CompanyBenefits } from '../../components/CompanyBenefits'
+import { benefitsList } from '../../constants/benefits-list'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -361,7 +363,7 @@ const Home = () => {
                 href="/converse-com-especialista"
                 target="_self"
                 type="primary"
-                size="large"
+                size="default"
                 margin="45px 0px 0px 0px"
               />
             </S.ContentContainer>
@@ -404,7 +406,7 @@ const Home = () => {
                 href="/converse-com-especialista"
                 target="_self"
                 type="default"
-                size="large"
+                size="default"
                 margin="45px 0px 0px 0px"
               />
             </S.ContentContainer>
@@ -412,9 +414,153 @@ const Home = () => {
           image="/images/lgpd.png"
         />
 
-        <S.CallToActionContainer>
-          <CallToAction />
-        </S.CallToActionContainer>
+        <S.SecurityContainer>
+          <S.SecurityTextContainer>
+            <S.Pipe />
+            <h2>
+              Conheça a plataforma e integração de sistemas
+              <b> mais segura do mercado</b>
+            </h2>
+            <p>A DevApi conta com três camadas de segurança:</p>
+          </S.SecurityTextContainer>
+        </S.SecurityContainer>
+
+        <BoxReverse
+          hasPipe={false}
+          title={
+            <S.SecurityContentContainer>
+              <h2>
+                <b>1° Camada</b>
+              </h2>
+            </S.SecurityContentContainer>
+          }
+          content={
+            <S.SecurityContentContainer>
+              <p>
+                Na 1° camada, utilizamos <b>WAF</b>, que fornece proteção na
+                entrada de dados da plataforma, além de um balanceador de carga.
+              </p>
+            </S.SecurityContentContainer>
+          }
+          image="/images/security.png"
+        />
+
+        <BoxReverse
+          hasPipe={false}
+          flexDirection="row-reverse"
+          title={
+            <S.SecurityContentContainer>
+              <h2>
+                <b>2° Camada</b>
+              </h2>
+            </S.SecurityContentContainer>
+          }
+          content={
+            <S.SecurityContentContainer>
+              <p>
+                A 2ª camada é o <b>Middleware de Segurança Heimdall</b>, um
+                módulo exclusivo cujo nome remete ao deus nórdico que tem a
+                missão de guardar a ponte entre céu e a terra. O Heimdall
+                identifica qualquer tentativa de ameaça à plataforma e aos
+                nossos clientes, analisando todas as informações trafegadas nas
+                requisições feitas. Possui um dashboard com mapa das ameaças
+                registradas e um relatório que pode ser utilizado para medidas
+                judiciais contra crimes cibernéticos, uma vez que armazena IP,
+                Latitude, Provedor de Internet, Data e Hora de todas as
+                tentativas de invasão/ameaças.
+              </p>
+            </S.SecurityContentContainer>
+          }
+          image="/images/heimdal.png"
+        />
+
+        <BoxReverse
+          hasPipe={false}
+          title={
+            <S.SecurityContentContainer>
+              <h2>
+                <b>3° Camada</b>
+              </h2>
+            </S.SecurityContentContainer>
+          }
+          content={
+            <S.SecurityContentContainer>
+              <p>
+                A 3ª camada usa a{' '}
+                <b>
+                  Criptografia AES, da Agência Nacional de Segurança Americana
+                  (NSA)
+                </b>
+                , utilizada na transmissão de dados governamentais e dados
+                particulares de saúde, considerada a mais robusta que existe.
+                Máxima segurança para a sua empresa!
+              </p>
+            </S.SecurityContentContainer>
+          }
+          image="/images/aes.png"
+        />
+
+        <S.SecurityContainer>
+          <S.SecurityTextContainer>
+            <p>
+              Além de todas as camadas de segurança, nossa equipe é especialista
+              no Padrão de Desenvolvimento Seguro (PDS). Esse padrão é uma forma
+              de garantir mais segurança, mais qualidade e maior disponibilidade
+              de um produto.{' '}
+            </p>
+            <p>
+              {' '}
+              <b>
+                Proteja os dados críticos da sua empresa e obtenha total
+                visibilidade e controle tanto na nuvem como on-premise!{' '}
+              </b>
+            </p>
+
+            <ButtonLink
+              text="Consulte um especialista!"
+              href="/converse-com-especialista"
+              target="_self"
+              type="default"
+              size="default"
+              margin="45px 0px 0px 0px"
+            />
+          </S.SecurityTextContainer>
+        </S.SecurityContainer>
+
+        <S.SecurityContainer>
+          <S.CompanyContainer>
+            <S.Pipe />
+            <h2>
+              <b> Com a Plataforma de Integração e Gestão de APIs</b> da DevApi,
+              sua empresa vai:
+            </h2>
+          </S.CompanyContainer>
+        </S.SecurityContainer>
+
+        <S.BenefitsContainer>
+          {benefitsList.map(benefit => (
+            <CompanyBenefits benefit={benefit} />
+          ))}
+        </S.BenefitsContainer>
+
+        <S.UnlockContainer>
+          <S.SecurityTextContainer>
+            <S.Pipe />
+            <h2>
+              Encaixe todas as peças da sua operação e
+              <b> desbloqueie agora o poder da integração de sistemas</b>
+            </h2>
+
+            <ButtonLink
+              text="Consulte um especialista!"
+              href="/converse-com-especialista"
+              target="_self"
+              type="default"
+              size="default"
+              margin="45px 0px 0px 0px"
+            />
+          </S.SecurityTextContainer>
+        </S.UnlockContainer>
       </S.Content>
     </>
   )
