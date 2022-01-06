@@ -56,7 +56,6 @@ export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -87,7 +86,7 @@ export const Card = styled.div`
   text-align: center;
   background: ${theme.colors.white};
   border-radius: 8px;
-  box-shadow: rgb(95 71 255 / 21%) 0px 6px 28px;
+  box-shadow: rgb(95 71 255 / 21%) 0 6px 28px;
 
   @media (max-width: 768px) {
     padding: 5vh 3vh 0;

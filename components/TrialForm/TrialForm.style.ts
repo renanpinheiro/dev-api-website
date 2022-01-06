@@ -17,6 +17,7 @@ export const SmallContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 49%;
+
   @media (max-width: 600px) {
     width: 100%;
   }
@@ -43,6 +44,7 @@ export const DepartamentContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-top: 10px;
+
   @media (max-width: 900px) {
     height: 60vh;
     overflow: scroll;
@@ -61,8 +63,8 @@ export const Bolder = styled.span`
   font-weight: bold;
 
   > a {
-    text-decoration: none;
     color: ${theme.colors.primary};
+    text-decoration: none;
   }
 `
 export const StepsContainer = styled.div`
@@ -74,7 +76,6 @@ export const ErrorText = styled.p<IErrorTextStyle>`
   height: 15px;
   font-size: 1rem;
   color: ${theme.colors.red[200]};
-
   ${({ hasError }) =>
     hasError &&
     css`

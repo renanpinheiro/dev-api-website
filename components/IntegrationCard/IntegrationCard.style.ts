@@ -3,16 +3,16 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  height: 14vh;
   align-items: center;
-  padding: 7vh 2vw;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 10px 25px #5f47ff29;
-  border-radius: 10px;
-  opacity: 1;
-  margin-bottom: 20px;
+  justify-content: space-between;
   width: 25vw;
+  height: 14vh;
+  padding: 7vh 2vw;
+  margin-bottom: 20px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px #5f47ff29;
+  opacity: 1;
 
   @media (max-width: 900px) {
     width: 100%;
@@ -22,16 +22,16 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   width: 9vh;
   height: 9vh;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 10px 25px #5f47ff29;
+  background: #fff 0% 0% no-repeat padding-box;
   border-radius: 10px;
+  box-shadow: 0 10px 25px #5f47ff29;
   opacity: 1;
 `
 export const ConnectorContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 `
 
 export const ConnectorImage = styled.img`
@@ -44,13 +44,13 @@ export const BallContainer = styled.div`
   width: 30%;
 `
 export const ContainerDevApiLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 2vw;
   height: 2vw;
   border-radius: 50%;
-  box-shadow: 0px 0px 15px #5f47ff33;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0 0 15px #5f47ff33;
 `
 export const LittleBallImage = styled.img`
   object-fit: cover;

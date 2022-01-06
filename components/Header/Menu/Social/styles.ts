@@ -16,8 +16,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     list-style: none;
 
     > li {

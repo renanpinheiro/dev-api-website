@@ -70,7 +70,6 @@ export const Pipe = styled.div`
   width: 17vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -87,7 +86,6 @@ export const IntegrationContant = styled.div<ICharacteristicsStyle>`
   flex-direction: ${props => props.position};
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 20vh;
 
   @media (max-width: 1200px) {
@@ -100,7 +98,6 @@ export const GifContainer = styled.div<ICharacteristicsStyle>`
   display: flex;
   align-items: center;
   justify-content: ${props => props.align};
-
   width: 50%;
 
   img {

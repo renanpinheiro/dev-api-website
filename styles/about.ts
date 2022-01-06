@@ -44,7 +44,6 @@ export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -55,6 +54,7 @@ export const PipeContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
@@ -151,7 +151,7 @@ export const Card = styled.div`
   align-items: center;
   margin: 0 1.5vw;
   border-radius: 8px;
-  box-shadow: rgb(44 45 102 / 21%) 0px 6px 28px;
+  box-shadow: rgb(44 45 102 / 21%) 0 6px 28px;
 
   @media (max-width: 768px) {
     margin: 3vh 0;

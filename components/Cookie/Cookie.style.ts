@@ -11,12 +11,12 @@ import { ICookieStyle } from './Cookie.interface'
 export const Cookie = styled.div`
   position: absolute;
   bottom: 3vh;
+  z-index: 25;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   transition: all 0.3s ease-in-out;
-  z-index: 25;
 `
 
 export const CookieContainer = styled.div<ICookieStyle>`
@@ -36,7 +36,6 @@ export const CookieModalOverlay = styled.div<ICookieStyle>`
   width: 100vw;
   height: 100vh;
   transition: all 0.3s ease-in-out;
-
   ${props =>
     props.isOpen
       ? css`
@@ -84,7 +83,6 @@ export const TabContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100%;
 `
 
@@ -92,16 +90,11 @@ export const Tab = styled.div<ICookieStyle>`
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 50%;
-
   padding: 0 0 2vh 0;
-
   font-size: 2.7vh;
   font-weight: 700;
-
   cursor: pointer;
-
   ${props =>
     props.isActive
       ? css`
@@ -123,10 +116,8 @@ export const Tab = styled.div<ICookieStyle>`
 export const ContentContainer = styled.div`
   height: 100%;
   max-height: 73vh;
-
   padding: 2vh 2vw;
   overflow: auto;
-
   font-size: 2.2vh;
 
   @media (max-width: 992px) {
@@ -153,11 +144,8 @@ export const Card = styled(CardBootstrap)`
 export const CardHeader = styled(CardBootstrap.Header)`
   display: flex;
   align-items: center;
-
   height: 60px;
-
   cursor: pointer;
-
   background-color: transparent;
   border: none;
 `
@@ -170,13 +158,10 @@ export const CardBody = styled(CardBootstrap.Body)``
 
 export const AccordionToggle = styled(AccordionBootstrap.Toggle)`
   display: flex;
-
   flex: 1;
   align-items: center;
   justify-content: flex-start;
-
   height: 100%;
-
   background-color: transparent;
   border: none;
 
@@ -195,7 +180,6 @@ export const AccordionCollapse = styled(AccordionBootstrap.Collapse)``
 
 export const Plans = styled.div`
   padding: 0.5rem 1rem;
-
   margin-bottom: 70px;
   color: ${theme.colors.primary};
 `
@@ -208,6 +192,5 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-
   margin-top: 30px;
 `
