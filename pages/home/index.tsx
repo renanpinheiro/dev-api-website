@@ -16,7 +16,7 @@ import * as S from '../../styles/home'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { BoxReverse } from '../../components/BoxReverse'
 import { CompanyBenefits } from '../../components/CompanyBenefits'
-import { benefitsList } from '../../constants/benefits-list'
+import { benefits } from '../../constants/benefits-list'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -538,8 +538,8 @@ const Home = () => {
         </S.SecurityContainer>
 
         <S.BenefitsContainer>
-          {benefitsList.map(benefit => (
-            <CompanyBenefits benefit={benefit} />
+          {benefits.map(description => (
+            <CompanyBenefits description={description} />
           ))}
         </S.BenefitsContainer>
 

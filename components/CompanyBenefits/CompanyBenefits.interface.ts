@@ -1,3 +1,3 @@
 export interface ICompanyBenefitsProps {
-  benefit: string
+  description: string
 }

@@ -1,4 +1,4 @@
-export const benefitsList = [
+export const benefits = [
   'Ter gerenciamento de segurança, protegendo a marca e a operação contra ameaças.',
   'Unir governança de dados e compliance, mantendo a integridade e atualização em todos os sistemas.',
   'Obter uma visão geral clara do desempenho do negócio e tomar decisões baseadas em dados confiáveis.',
