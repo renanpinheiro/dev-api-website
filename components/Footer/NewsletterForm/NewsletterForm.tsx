@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { theme } from '../../../styles/theme'
 import { Button } from '../../Button'
-import { IValuesForm, IRdStationResponse } from './NewsletterForm.interfaces'
+import { IHubspotResponse, IValuesForm } from './NewsletterForm.interfaces'
 import * as S from './NewsletterForm.styles'
 
 import axios from 'axios'
@@ -10,8 +10,8 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
 const NewsletterForm = () => {
-  const RDapi = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_RDSTATION,
+  const hubspotApi = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_BASE_URL,
   })
 
   const [isSuccess, setIsSuccess] = useState(false)
@@ -32,19 +32,19 @@ const NewsletterForm = () => {
   })
 
   const handleAPI = (values: IValuesForm) => {
-    const payloadRD = {
-      event_type: 'CONVERSION',
-      event_family: 'CDP',
-      payload: {
-        conversion_identifier: 'newsletter-devapi (site novo)',
+    const [firstName, lastName] = values.name.split(' ')
+
+    const payloadHubspot = {
+      properties: {
+        firstname: firstName,
+        lastname: lastName,
         email: values.email,
+        hubtags: 'newsletter',
       },
     }
 
-    RDapi.post<IRdStationResponse>(
-      `?api_key=${process.env.NEXT_PUBLIC_KEY_RDSTATION}`,
-      payloadRD,
-    )
+    hubspotApi
+      .post<IHubspotResponse>('/contacts', payloadHubspot)
       .then(() => {
         setIsSuccess(true)
       })

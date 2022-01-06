@@ -4,14 +4,18 @@ export interface IValuesForm {
   isNotifications: boolean
   isPolicy: boolean
 }
-export interface IRdStationResponse {
-  event_type: string
-  event_family: string
-  payload: IRdPayload
+export interface IHubspotResponse {
+  properties: IHubspotPayload
+  createdAt: string
+  updatedAt: string
 }
-export interface IRdPayload {
-  conversion_identifier: string
+export interface IHubspotPayload {
+  createdate: string
   email: string
+  firstname: string
+  hubtags: string
+  lastmodifieddate: string
+  lastname: string
 }
 export interface IColorNotificationStyle {
   color?: string
