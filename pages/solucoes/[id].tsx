@@ -13,6 +13,14 @@ import { costumers } from '../../constants/costumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 import * as S from '../../styles/solutions'
+import dynamic from 'next/dynamic'
+
+const IntegrationCardWithoutSSR = dynamic(
+  () => import('../../components/IntegrationCard'),
+  {
+    ssr: false,
+  },
+)
 
 const Solutions = () => {
   const router = useRouter().asPath
@@ -22,8 +30,6 @@ const Solutions = () => {
   const currentPage = filterPage.split('/')
 
   const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
-
-  const paragraphWidth = currentPage[2] === 'marketing' ? '80%' : ''
 
   return (
     <>
@@ -66,24 +72,60 @@ const Solutions = () => {
               <S.TitleContainer>
                 <S.Pipe />
                 {page && page.contentTitle}
+
+                <S.ParagraphContainer>
+                  {page && page.contentText}
+                </S.ParagraphContainer>
+
+                {!page.textJoinNow && (
+                  <>
+                    <ButtonLink
+                      text="Quero integrar agora!"
+                      href="/converse-com-especialista"
+                      target="_self"
+                      size="default"
+                      type="default"
+                    />
+                  </>
+                )}
               </S.TitleContainer>
 
-              <S.ParagraphContainer width={paragraphWidth}>
-                {page && page.contentText}
-              </S.ParagraphContainer>
+              <S.ComponentContainer>
+                {page.integrationCard ? (
+                  page.integrationCard.map(pageAtributes => {
+                    return (
+                      <IntegrationCardWithoutSSR
+                        imageLeft={pageAtributes.imageLeft}
+                        imageRight={pageAtributes.imageRight}
+                      ></IntegrationCardWithoutSSR>
+                    )
+                  })
+                ) : (
+                  <S.IntegrationContainer>
+                    {page && page.component}
+                  </S.IntegrationContainer>
+                )}
+              </S.ComponentContainer>
             </S.TextContainer>
 
-            <S.IntegrationContainer>
-              {page && page.component}
-            </S.IntegrationContainer>
+            {page.textJoinNow && (
+              <S.JoinNowContainer>
+                <S.PipeJoinNow />
+                {page.textJoinNow}
 
-            <ButtonLink
-              text="Quero integrar agora!"
-              href="/converse-com-especialista"
-              target="_self"
-              size="default"
-              type="default"
-            />
+                <S.IntegrationContainer>
+                  {page && page.component}
+                </S.IntegrationContainer>
+
+                <ButtonLink
+                  text="Quero integrar agora!"
+                  href="/converse-com-especialista"
+                  target="_self"
+                  size="default"
+                  type="default"
+                />
+              </S.JoinNowContainer>
+            )}
           </S.SolutionContainer>
 
           <S.QuoteContainer>
@@ -93,6 +135,7 @@ const Solutions = () => {
           <S.ProfessionalServiceContainer>
             <ProfessionalService />
           </S.ProfessionalServiceContainer>
+
           <S.ListIconContainer>
             <ListIconCostumer
               items={costumers}
