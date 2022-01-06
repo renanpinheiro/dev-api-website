@@ -125,7 +125,7 @@ export const ButtonContainer = styled.div`
   padding: 2vh 0 8vh 0;
 
   @media (max-width: 900) {
-    // align-items: flex-start;align-items
+    // align-items: flex-start;align-itemsalign-items
   }
 `
 export const HistorySuccessContainer = styled.div`
@@ -135,7 +135,7 @@ export const HistorySuccessContainer = styled.div`
   width: 100vw;
   padding-top: 5vh;
   text-align: center;
-  // padding: 3vh 8vw 3vh 8vw;padding
+  // padding: 3vh 8vw 3vh 8vw;paddingpadding
 
   /* @media (max-width: 900px) {
     align-items: flex-start;

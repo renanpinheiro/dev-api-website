@@ -5,22 +5,21 @@ import Head from 'next/head'
 import { Button } from '../../components/Button'
 import { CardCase } from '../../components/CardCase'
 import { Hero } from '../../components/Hero'
-import api from '../../services/api'
+import { findCases } from '../../providers/blog/find'
 import * as S from '../../styles/cases'
-
 const Cases = () => {
   const [caseState, setCaseState] = useState([])
-  const findCases = async () => {
-    const { data } = await api.get('/cases')
+
+  useEffect(() => {
+    handleFindCases()
+  }, [])
+
+  const handleFindCases = async () => {
+    const { data } = await findCases()
     if (data.length > 0) {
       setCaseState(data)
     }
   }
-
-  useEffect(() => {
-    findCases()
-  }, [])
-
   return (
     <>
       <Head>
