@@ -4,7 +4,10 @@ import { theme } from '../../styles/theme'
 import { IFadeStyle, IQuotePaginationDivStyle } from './Quote.interface'
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
+  padding: 0 5vw 0 3vw;
 `
 
 export const QuoteContainer = styled.div`
@@ -13,8 +16,8 @@ export const QuoteContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1640px;
-  height: 485px;
+  width: 100%;
+  height: 490px;
   padding: 3vh 6vw 3vh 7vw;
   margin-top: 11vh;
   background-color: ${theme.colors.secondary};
@@ -87,7 +90,7 @@ export const RightQuotationMark = styled.img`
   @media only screen and (max-width: 800px) {
     width: 25px;
     height: 25px;
-    margin-top: 11vh;
+    margin: 0 0 11vh 0;
   }
 `
 
