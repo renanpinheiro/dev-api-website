@@ -120,12 +120,12 @@ export const ListIntegrationTitle = styled.h2`
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
+  width: 100%;
   padding: 2vh 0 8vh 0;
 
   @media (max-width: 900) {
-    // align-items: flex-start;
+    // align-items: flex-start;align-items
   }
 `
 export const HistorySuccessContainer = styled.div`
@@ -135,7 +135,7 @@ export const HistorySuccessContainer = styled.div`
   width: 100vw;
   padding-top: 5vh;
   text-align: center;
-  // padding: 3vh 8vw 3vh 8vw;
+  // padding: 3vh 8vw 3vh 8vw;padding
 
   /* @media (max-width: 900px) {
     align-items: flex-start;
@@ -153,8 +153,8 @@ export const HistorySuccessTitle = styled.h2`
     font-size: 1.375rem;
   }
   @media (max-width: 414px) {
-    text-align: left;
     padding-left: 8vw;
+    text-align: left;
   }
 
   span {
