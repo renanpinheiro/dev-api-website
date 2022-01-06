@@ -14,6 +14,7 @@ import { quotes } from '../../constants/quotes'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
+import { BoxReverse } from '../../components/BoxReverse'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -311,6 +312,105 @@ const Home = () => {
         <S.Quote>
           <QuoteCarouselWithOutSSR quotes={quotes} />
         </S.Quote>
+
+        <BoxReverse
+          hasPipe={true}
+          title={
+            <S.ContentContainer>
+              <h2>
+                Metodologia <b>Full Cycle</b>
+              </h2>
+            </S.ContentContainer>
+          }
+          content={
+            <S.ContentContainer>
+              <p>
+                Do kickoff à entrega, passando por desenvolvimento, homologação
+                e onboarding,<b> você jamais estará sozinho!</b> O resultado é
+                mais entregas em menor tempo e com maior qualidade, redução de
+                custos, mais transparência e visibilidade do projeto,
+                antecipação de problemas e tomadas de decisão mais assertivas.
+              </p>
+
+              <p>
+                A plataforma iPaaS & API Manager da DevApi é uma{' '}
+                <b>
+                  {' '}
+                  plataforma de integração híbrida (HIP) projetada para
+                  simplificar integrações complexas, minimizando o tempo de
+                  entrega.{' '}
+                </b>{' '}
+                Em paralelo, colocamos à sua disposição um time especialista em
+                integração de sistemas e APIs, arquitetura, infraestrutura,
+                desenvolvimento, segurança, soluções de negócio e customer
+                success para apoiar você com foco nas necessidades da sua
+                operação.
+              </p>
+
+              <p>
+                Do início ao fim, estaremos sempre do seu lado. Conte com a
+                gente:{' '}
+                <b>
+                  {' '}
+                  um time de especialistas ao serviço do sucesso da sua empresa!{' '}
+                </b>
+              </p>
+
+              <ButtonLink
+                text="Conversar com o time!"
+                href="/converse-com-especialista"
+                target="_self"
+                type="primary"
+                size="large"
+                margin="45px 0px 0px 0px"
+              />
+            </S.ContentContainer>
+          }
+          image="/images/full-cycle.png"
+        />
+
+        <BoxReverse
+          flexDirection="row-reverse"
+          hasPipe={true}
+          title={
+            <S.ContentContainer>
+              <h2>
+                Em 2022, as APIs serão o{' '}
+                <b> principal vetor de ataque ás empresas</b>
+              </h2>
+            </S.ContentContainer>
+          }
+          content={
+            <S.ContentContainer>
+              <p>
+                A segurança da sua empresa começa aqui! As soluções de
+                integração disponíveis no mercado não protegem completamente os
+                dados trafegados por APIs e, por isso, sua empresa fica
+                vulnerável a ataques. Além disso, as recentes mudanças no
+                mercado, com a LGPD, Open Finance e trabalho remoto, impõem a
+                necessidade de um novo patamar de segurança.
+              </p>
+
+              <p>
+                <b>
+                  {' '}
+                  Vai deixar os dados da sua empresa expostos? Garanta a
+                  segurança da sua operação!
+                </b>{' '}
+              </p>
+
+              <ButtonLink
+                text="Quero integrações seguras!"
+                href="/converse-com-especialista"
+                target="_self"
+                type="default"
+                size="large"
+                margin="45px 0px 0px 0px"
+              />
+            </S.ContentContainer>
+          }
+          image="/images/lgpd.png"
+        />
 
         <S.CallToActionContainer>
           <CallToAction />

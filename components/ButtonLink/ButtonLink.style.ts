@@ -26,6 +26,18 @@ const type = {
       border: 2px solid ${theme.colors.secondary};
     }
   `,
+
+  primary: css`
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.blue[500]};
+    border: 2px solid ${theme.colors.blue[500]};
+
+    :hover {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.blue[200]};
+      border: 2px solid ${theme.colors.blue[200]};
+    }
+  `,
 }
 
 const size = {

@@ -85,7 +85,7 @@ export const PipeContainer = styled.div`
   }
 `
 export const Pipe = styled.div`
-  width: 15vh;
+  width: 7vw;
   height: 3px;
   margin-bottom: 10px;
   background-color: ${theme.colors.secondary};
@@ -526,11 +526,11 @@ export const JoinNowContainer = styled.div`
   margin-bottom: 40px;
 
   > h2 {
+    max-width: 30ch;
     margin-bottom: 15px;
     font-size: 2.625rem;
     line-height: 1.2;
     text-align: center;
-    max-width: 30ch;
 
     @media (max-width: 996px) {
       width: 100%;
@@ -598,9 +598,9 @@ export const SystemImageContainer = styled.img`
 export const ApiManagerContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
   align-items: center;
   justify-content: flex-start;
+  width: 40%;
 
   > p {
     max-width: 56ch;
@@ -614,9 +614,9 @@ export const ApiManagerContainer = styled.div`
 export const IPaasContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
   align-items: center;
   justify-content: flex-start;
+  width: 40%;
 
   > p {
     max-width: 50ch;
@@ -624,5 +624,29 @@ export const IPaasContainer = styled.div`
 
   @media (max-width: 900px) {
     width: 100%;
+  }
+`
+
+export const ContentContainer = styled.div`
+  margin-bottom: 50px;
+
+  b {
+    font-weight: 700;
+    color: ${theme.colors.primary};
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-size: 1.125rem;
+    line-height: 1.3;
+
+    @media (min-width: 1600px) {
+      font-size: 1.375rem;
+    }
   }
 `
