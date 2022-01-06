@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
 import Head from 'next/head'
+import Router from 'next/router'
 
 import { Button } from '../../components/Button'
 import { CardCase } from '../../components/CardCase'
 import { Hero } from '../../components/Hero'
-import { findCases } from '../../providers/blog/find'
+import { findCases } from '../../providers/cases/find'
 import * as S from '../../styles/cases'
 const Cases = () => {
   const [caseState, setCaseState] = useState([])
@@ -20,6 +21,11 @@ const Cases = () => {
       setCaseState(data)
     }
   }
+
+  const handleRouterTalk = () => {
+    Router.push('/converse-com-especialista')
+  }
+
   return (
     <>
       <Head>
@@ -57,7 +63,12 @@ const Cases = () => {
             Venha construir sua <span>história de sucesso</span>
           </S.HistorySuccessTitle>
           <S.ButtonContainer>
-            <Button type="default" text="Quero ser um case!" size="small" />
+            <Button
+              type="default"
+              text="Quero ser um case!"
+              size="small"
+              onClick={() => handleRouterTalk()}
+            />
           </S.ButtonContainer>
         </S.HistorySuccessContainer>
       </S.Container>
