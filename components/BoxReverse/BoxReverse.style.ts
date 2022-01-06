@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { theme } from '../../styles/theme'
 import { IControlContainerStyle } from './BoxReverse.interface'
 
@@ -19,9 +20,9 @@ export const ControlContainer = styled.div<IControlContainerStyle>`
   flex-direction: ${props =>
     props.flexDirection ? props.flexDirection : 'row'};
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 100%;
-  align-items: center;
   margin-bottom: 50px;
 
   @media (max-width: 900px) {
@@ -41,8 +42,8 @@ export const ImageContainer = styled.div`
   }
 
   @media (max-width: 900px) {
-    margin-top: 30px;
     width: 100%;
+    margin-top: 30px;
   }
 `
 

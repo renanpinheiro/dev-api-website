@@ -3,89 +3,89 @@ import Slider from 'react-slick'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
-  margin: 0px 0px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin: 0 0;
 `
 
 export const SliderContainer = styled(Slider)`
   > .slick-prev {
-    left: 81%;
     top: -5.5%;
+    left: 81%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 60px;
-
     border: 3px solid ${props => props.theme.colors.primary};
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
     border-radius: 50%;
 
     :hover {
       background-color: ${props => props.theme.colors.secondary};
       border: none;
     }
-    :before {
-      font-size: 35px;
-      font-family: 'sans-serif';
-      color: ${props => props.theme.colors.primary};
-      opacity: 1;
-    }
-    :hover:before {
-      color: ${props => props.theme.colors.white};
-    }
+
     ::before {
       width: 35px;
       height: 35px;
       margin-bottom: 2px;
+      font-family: sans-serif;
+      font-size: 35px;
+      color: ${props => props.theme.colors.primary};
+      opacity: 1;
     }
+
+    :hover::before {
+      color: ${props => props.theme.colors.white};
+    }
+
     @media (min-width: 320px) and (max-width: 992px) {
-      left: 74%;
       top: -4%;
+      left: 74%;
       width: 40px;
       height: 40px;
     }
 
     @media (min-width: 1280px) and (max-width: 1440.99px) {
-      left: 84%;
       top: -5.5%;
+      left: 84%;
     }
 
     @media (min-width: 1440.99px) and (max-width: 1919px) {
-      left: 81%;
       top: -5.5%;
+      left: 81%;
     }
   }
+
   > .slick-next {
     top: -5.5%;
     right: 12%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 60px;
-
     border: 3px solid ${props => props.theme.colors.primary};
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
     border-radius: 50%;
 
     :hover {
       background-color: ${props => props.theme.colors.secondary};
       border: none;
     }
-    :before {
-      font-size: 35px;
-      font-family: 'sans-serif';
-      color: ${props => props.theme.colors.primary};
-      opacity: 1;
-    }
-    :hover:before {
-      color: ${props => props.theme.colors.white};
-    }
+
     ::before {
       width: 35px;
       height: 35px;
       margin-bottom: 2px;
+      font-family: sans-serif;
+      font-size: 35px;
+      color: ${props => props.theme.colors.primary};
+      opacity: 1;
+    }
+
+    :hover::before {
+      color: ${props => props.theme.colors.white};
     }
 
     @media (min-width: 320px) and (max-width: 992px) {
@@ -113,16 +113,16 @@ export const CardContainer = styled.div`
 
 export const CardContent = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `
 export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 90rem !important;
   margin: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
 
   @media (min-width: 320px) and (max-width: 992px) {
     max-width: 100%;
@@ -142,8 +142,8 @@ export const TitleContainer = styled.div`
 export const Pipe = styled.div`
   width: 120px;
   height: 3px;
-  background-color: ${props => props.theme.colors.secondary};
   margin-bottom: 8px;
+  background-color: ${props => props.theme.colors.secondary};
 `
 
 export const Title = styled.p`

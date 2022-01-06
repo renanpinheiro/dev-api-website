@@ -11,7 +11,7 @@ export const Cookie = styled.div`
   padding: 3vh 2vw;
   background-color: ${theme.colors.white};
   border-radius: 10px;
-  box-shadow: 0px 0px 25px #5f47ff29;
+  box-shadow: 0 0 25px #5f47ff29;
 
   @media (min-width: 1600px) {
     width: 70vw;
@@ -57,13 +57,14 @@ export const AcceptCookie = styled.div`
   }
 
   img {
+    width: 40px;
+    height: 40px;
     padding: 10px;
     cursor: pointer;
     background-color: #f6f6ff;
     border-radius: 5px;
-    box-shadow: 0px 0px 0px 2px ${theme.colors.secondary};
-    width: 40px;
-    height: 40px;
+    box-shadow: 0 0 0 2px ${theme.colors.secondary};
+
     @media (max-width: 992px) {
       padding: 5px;
     }

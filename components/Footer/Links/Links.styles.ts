@@ -23,6 +23,7 @@ export const ContainerLink = styled.div`
       color: ${props => props.theme.colors.secondary};
       text-decoration: none;
     }
+
     @media only screen and (max-width: 828px) {
       width: auto;
       margin-top: 15px;

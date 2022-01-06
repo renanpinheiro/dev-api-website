@@ -71,11 +71,10 @@ export const Container = styled.div<IButtonStyle>`
     display: flex;
     align-items: center;
     width: max-content;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
-    text-decoration: none;
     transition: all 0.2s ease-out 0s;
-
     ${props => size[props.size]}
     ${props => type[props.type]}
 

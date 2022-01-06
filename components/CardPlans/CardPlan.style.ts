@@ -28,15 +28,15 @@ export const Cards = styled.div`
   background-position-y: -3vh;
   background-size: contain;
   border-radius: 8px;
-  border-radius: 8px;
-  box-shadow: 0px 6px 28px #2c2d6636;
+  box-shadow: 0 6px 28px #2c2d6636;
   transition: transform 0.5s;
   transform: translateX(0) scale(1);
+
   :hover,
   :focus {
     z-index: 9;
     border-radius: 8px;
-    box-shadow: 0px 6px 28px #2c2d6636;
+    box-shadow: 0 6px 28px #2c2d6636;
     transform: scale(1.05);
   }
 
@@ -67,9 +67,9 @@ export const Title = styled.h2`
   font-size: 1.125rem;
   font-weight: 700;
   color: ${theme.colors.secondary};
-
   text-transform: uppercase;
   letter-spacing: 1vh;
+
   @media (max-width: 996px) {
     font-size: 1.25rem;
   }

@@ -43,6 +43,7 @@ export const NewsletterContainer = styled.div`
   height: 100%;
   padding: 10px;
   color: white;
+
   p {
     padding: 10px;
     font-size: 26px;
@@ -83,14 +84,12 @@ export const ResponsivePipe = styled.div`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-
   margin-bottom: 1vh;
 `
 
 export const Title = styled.div`
   padding-top: 0.5vh;
   padding-left: 1vw;
-
   font-size: 18px;
   line-height: 1;
   color: ${theme.colors.secondary};
@@ -99,6 +98,7 @@ export const Title = styled.div`
     font-style: italic;
     font-weight: 700;
   }
+
   @media only screen and (max-width: 500px) {
     padding-top: 0.5vh;
   }
@@ -156,6 +156,7 @@ export const Address = styled.div`
     font-style: italic;
     font-weight: 700;
   }
+
   @media only screen and (max-width: 828px) {
     margin: 0;
     margin-bottom: 15px;
@@ -188,8 +189,9 @@ export const SocialMedia = styled.p`
     font-style: italic;
     font-weight: 700;
   }
+
   @media only screen and (max-width: 828px) {
-    margin-left: 0px;
+    margin-left: 0;
     font-size: 16px;
   }
 `
@@ -203,7 +205,6 @@ export const SocialLogocontainer = styled.div`
 export const SocialMediaLogo = styled.img`
   width: 40px;
   height: 40px;
-
   margin-left: 15px;
 
   @media only screen and (max-width: 828px) {

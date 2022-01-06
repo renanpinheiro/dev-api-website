@@ -21,18 +21,18 @@ export const CarrouselContent = styled(Carousel)<ICarouselStyledProps>`
     li {
       width: 7px;
       height: 6px;
-      border-radius: 100%;
       background-color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
       background-clip: border-box;
+      border: 1px solid ${theme.colors.primary};
+      border-radius: 100%;
       opacity: 1;
 
       &.active {
         width: 50px;
-        border-radius: 6px;
-        transition: width 0.8s cubic-bezier(0.01, 0.29, 1, 0.68);
         background-color: ${theme.colors.secondary};
         border-color: ${theme.colors.secondary};
+        border-radius: 6px;
+        transition: width 0.8s cubic-bezier(0.01, 0.29, 1, 0.68);
       }
     }
   }

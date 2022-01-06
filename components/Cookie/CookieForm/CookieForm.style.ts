@@ -19,7 +19,7 @@ const statusVariation = {
     border-radius: 5px;
   `,
   pending: css`
-    background-color: rgba(241, 196, 15, 0.5);
+    background-color: rgba(241 196 15 50%);
     border: 2px solid ${theme.colors.yellow[200]};
     border-radius: 5px;
   `,
@@ -45,7 +45,6 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-
   margin-top: 30px;
 `
 
@@ -83,13 +82,10 @@ export const Status = styled.div<IStatusStyle>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   height: 6vh;
   margin-top: 30px;
-
   text-align: left;
-
   ${props => statusVariation[props.status]};
 
   p {

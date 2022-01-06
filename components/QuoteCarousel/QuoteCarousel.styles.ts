@@ -4,8 +4,8 @@ import { theme } from '../../styles/theme'
 import { IFadeStyle, IQuotePaginationDivStyle } from './Quote.interface'
 
 export const Container = styled.div`
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: center;
   padding: 0 5vw 0 3vw;
 `
@@ -13,15 +13,14 @@ export const Container = styled.div`
 export const QuoteContainer = styled.div`
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   width: 100%;
   height: 490px;
   padding: 3vh 6vw 3vh 7vw;
-  background-color: ${theme.colors.secondary};
   margin-top: 11vh;
-
+  background-color: ${theme.colors.secondary};
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
 
@@ -76,9 +75,9 @@ export const LeftQuotationMark = styled.img`
 `
 
 export const RightQuotationMark = styled.img`
+  align-self: end;
   width: 121px;
   height: 94px;
-  align-self: end;
   margin-top: -50px;
 
   @media (min-width: 800px) and (max-width: 1600px) {
@@ -96,13 +95,12 @@ export const RightQuotationMark = styled.img`
 `
 
 export const Quote = styled.p<IFadeStyle>`
+  padding: 1vh 0.3vw;
   font-size: 2.05rem;
   font-weight: 700;
   line-height: 1.2;
   color: ${theme.colors.white};
-  padding: 1vh 0.3vw;
   text-align: center;
-
   ${props =>
     props.isFade
       ? css`
@@ -133,15 +131,14 @@ export const NameContainer = styled.div`
 `
 
 export const Name = styled.p<IFadeStyle>`
+  align-self: center;
   padding-top: 2vh;
   padding-right: 0.3vw;
-  font-size: 1.75rem;
   font-family: 'TT Commons';
-  font-weight: 300;
+  font-size: 1.75rem;
   font-style: italic;
+  font-weight: 300;
   color: ${theme.colors.white};
-  align-self: center;
-
   ${props =>
     props.isFade
       ? css`
@@ -163,13 +160,13 @@ export const Name = styled.p<IFadeStyle>`
 `
 
 export const Company = styled.p<IFadeStyle>`
-  padding-top: 2vh;
-  font-size: 1.75rem;
-  font-family: 'TT Commons';
-  font-weight: 300;
-  font-style: italic;
-  color: ${theme.colors.white};
   align-self: center;
+  padding-top: 2vh;
+  font-family: 'TT Commons';
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 300;
+  color: ${theme.colors.white};
 
   ::before {
     content: ' | ';
@@ -201,11 +198,11 @@ export const Company = styled.p<IFadeStyle>`
 
 export const IconContainer = styled.div`
   position: absolute;
-  align-items: center;
-  justify-content: center;
   top: -22%;
   left: 43.5%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: 1440px) and (max-width: 1600px) {
     left: 45%;
@@ -223,8 +220,8 @@ export const IconContainer = styled.div`
 
   @media only screen and (max-width: 800px) {
     top: -13%;
-    align-items: center;
     right: 35vw;
+    align-items: center;
   }
 `
 
@@ -232,7 +229,6 @@ export const Icon = styled.img<IFadeStyle>`
   width: 193px;
   height: 184px;
   border-radius: 50%;
-
   ${props =>
     props.isFade
       ? css`
@@ -278,11 +274,11 @@ export const QuoteButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 53px;
   width: 90px;
-  border-radius: 50%;
+  height: 53px;
   background-color: #f6f6ff33;
   border: none;
+  border-radius: 50%;
 `
 
 export const QuoteImageButton = styled.img`
@@ -293,16 +289,16 @@ export const QuoteImageButton = styled.img`
 
 export const QuoteSpanContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
-  align-items: center;
-  padding: 0vh 1vw;
+  padding: 0 1vw;
 `
 
 export const QuotePaginationDiv = styled.div<IQuotePaginationDivStyle>`
-  margin: 0.5vw 0.5vh;
   width: 10px;
   height: 10px;
+  margin: 0.5vw 0.5vh;
   background-color: ${props =>
     props.isActive ? theme.colors.white : '#f6f6ff33'};
   border-radius: 50%;

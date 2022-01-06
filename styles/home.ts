@@ -128,7 +128,7 @@ export const Carrousel = styled.section`
   background-size: 100%;
 
   @media (max-width: 900px) {
-    padding: 0vh 5.5vw 6vh;
+    padding: 0 5.5vw 6vh;
   }
 `
 
@@ -241,8 +241,8 @@ export const DetailsCard = styled.div`
   width: 12vh;
   height: 12vh;
   padding: 1vw;
-  background: transparent linear-gradient(225deg, #5f47ff -80%, #ffffff 60%) 0%
-    0% no-repeat padding-box;
+  background: transparent linear-gradient(225deg, #5f47ff -80%, #fff 60%) 0% 0%
+    no-repeat padding-box;
   border-radius: 5px;
 
   img {
@@ -335,7 +335,7 @@ export const Card = styled.div`
   text-align: left;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 10px 25px #5f47ff29;
+  box-shadow: 0 10px 25px #5f47ff29;
 
   @media (max-width: 900px) {
     width: 100%;
@@ -373,7 +373,7 @@ export const ConnectorsContainer = styled.div`
     width: 3.5vw;
     height: 100%;
     margin-right: 10px;
-    box-shadow: 0px 10px 25px #5f47ff29;
+    box-shadow: 0 10px 25px #5f47ff29;
 
     @media (max-width: 900px) {
       width: 6vh;

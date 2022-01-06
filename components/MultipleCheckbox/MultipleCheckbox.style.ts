@@ -11,7 +11,6 @@ export const Container = styled.div<ICheckStyles>`
   cursor: pointer;
   border: 1px solid ${theme.colors.gray[400]};
   border-radius: 5px;
-
   ${({ isChecked }) =>
     isChecked &&
     css`
@@ -32,7 +31,6 @@ export const Check = styled.label<ICheckStyles>`
   cursor: pointer;
   border: 1px solid ${theme.colors.gray[500]};
   border-radius: 2px;
-
   ${({ isChecked }) =>
     isChecked &&
     css`

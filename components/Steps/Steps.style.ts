@@ -37,6 +37,7 @@ export const IconContainer = styled.div<IIconContainerStyle>`
     font-size: 3vh;
     color: ${theme.colors.gray[400]};
   }
+
   ${({ isPass }) =>
     isPass &&
     css`
@@ -58,7 +59,6 @@ export const StepTextContainer = styled.div<IStepTextContainerStyle>`
   justify-content: center;
   width: 70%;
   height: 90%;
-
   ${({ isLastItem }) =>
     !isLastItem &&
     css`

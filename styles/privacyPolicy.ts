@@ -66,6 +66,7 @@ export const Content = styled.div`
     > li {
       margin-left: 1.5vw;
       list-style: disc;
+
       > p {
         margin-top: 2vh;
         line-height: 2.5vh;

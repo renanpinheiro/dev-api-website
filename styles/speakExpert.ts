@@ -63,7 +63,6 @@ export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {

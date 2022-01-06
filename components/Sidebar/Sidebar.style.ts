@@ -14,19 +14,15 @@ export const Ebook = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   height: 500px;
   margin-bottom: 50px;
-
   cursor: pointer;
-
   border-radius: 15px;
 
   img {
     width: 100%;
     height: 100%;
-
     border-radius: 15px;
   }
 `
@@ -67,15 +63,11 @@ export const Tag = styled.div`
   align-items: center;
   justify-content: center;
   height: 39px;
-
   padding: 13px;
-
   margin: 5px;
-
   color: ${theme.colors.primary};
   cursor: pointer;
   background-color: #f6f6ff;
-
   border-radius: 10px;
 
   :hover {
@@ -93,8 +85,7 @@ export const Article = styled.div`
   margin-bottom: 20px;
   cursor: pointer;
   border-radius: 10px;
-
-  box-shadow: 0px 6px 28px #2c2d6636;
+  box-shadow: 0 6px 28px #2c2d6636;
 
   :hover {
     transform: scale(0.99);
@@ -117,6 +108,7 @@ export const TextContainer = styled.div`
 `
 
 export const Text = styled.p`
+  /* stylelint-disable-next-line value-no-vendor-prefix */
   display: -webkit-box;
   margin: 0;
   overflow: hidden;

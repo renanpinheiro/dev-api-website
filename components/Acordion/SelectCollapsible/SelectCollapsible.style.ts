@@ -64,10 +64,10 @@ export const SelectCollapsibleContainerDown = styled.div`
   transition: max-height 0.6s, padding 0.6s ease;
 
   > p {
-    font-size: 1.25rem;
-    line-height: 1.3;
     display: block;
     padding-top: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
     transition: max-height 0.6s, padding 0.6s ease;
 
     @media (max-width: 996px) {
@@ -77,7 +77,6 @@ export const SelectCollapsibleContainerDown = styled.div`
 
   > img {
     transition: transform 0.6s ease;
-
     transform: rotate(180deg);
   }
 
