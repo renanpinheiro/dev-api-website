@@ -149,18 +149,18 @@ export const TitleContainer = styled.div`
 `
 
 export const ParagraphContainer = styled.div`
-  margin-bottom: 40px;
   width: 100%;
+  margin-bottom: 40px;
 
   @media (max-width: 996px) {
     width: 100%;
   }
 
   > p {
+    max-width: 67ch;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
-    max-width: 67ch;
 
     @media (max-width: 996px) {
       font-size: 1.25rem;
@@ -192,8 +192,8 @@ export const IntegrationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5vh;
   margin-top: 5vh;
+  margin-bottom: 5vh;
 
   @media (max-width: 996px) {
     flex-direction: column;
@@ -213,8 +213,8 @@ export const ImageContainer = styled.div`
 export const ComponentContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
 
   @media (max-width: 900px) {
     width: 100%;
@@ -228,11 +228,11 @@ export const JoinNowContainer = styled.div`
   justify-content: center;
 
   > h2 {
+    max-width: 38ch;
     margin-bottom: 15px;
     font-size: 2.625rem;
     line-height: 1.2;
     text-align: center;
-    max-width: 38ch;
 
     @media (max-width: 996px) {
       width: 100%;

@@ -706,12 +706,12 @@ export const SecurityTextContainer = styled.div`
   }
 
   p {
+    max-width: 90ch;
     margin-bottom: 15px;
     overflow: hidden;
     font-size: 1.125rem;
     line-height: 1.3;
     text-align: center;
-    max-width: 90ch;
 
     @media (max-width: 996px) {
       width: 100%;
@@ -770,8 +770,8 @@ export const CompanyContainer = styled.div`
 
   @media (max-width: 996px) {
     align-items: center;
-    text-align: center;
     padding: 0 8vw 0 8vw;
+    text-align: center;
   }
 `
 
@@ -782,8 +782,8 @@ export const BenefitsContainer = styled.div`
 
   @media (max-width: 996px) {
     align-items: center;
-    text-align: center;
     padding: 0 8vw 0 8vw;
     margin-bottom: 20px;
+    text-align: center;
   }
 `
