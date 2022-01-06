@@ -135,6 +135,7 @@ const Solutions = () => {
           <S.ProfessionalServiceContainer>
             <ProfessionalService />
           </S.ProfessionalServiceContainer>
+
           <S.ListIconContainer>
             <ListIconCostumer
               items={costumers}
