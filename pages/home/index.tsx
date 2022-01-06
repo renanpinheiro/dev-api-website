@@ -16,7 +16,7 @@ import * as S from '../../styles/home'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { BoxReverse } from '../../components/BoxReverse'
 import { CompanyBenefits } from '../../components/CompanyBenefits'
-import { benefits } from '../../constants/benefits-list'
+import { benefits } from '../../constants/benefits'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
