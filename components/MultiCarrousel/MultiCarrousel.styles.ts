@@ -11,7 +11,6 @@ export const TitleContainer = styled.div`
 
 export const ImageContainer = styled.div`
   display: flex;
-
   align-items: center;
   justify-content: center;
   width: 220px;

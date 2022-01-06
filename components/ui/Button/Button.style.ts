@@ -13,14 +13,14 @@ export const Container = styled.div<IContainerStyledProps>`
 `
 
 export const BootstrapButton = styled(Button)<IButtonStyledProps>`
-  border: 0;
-  height: ${props => (props.height ? props.height : '55px')};
   width: 100%;
-  background-color: ${props => props.color};
-  font-weight: 700;
+  height: ${props => (props.height ? props.height : '55px')};
   font-size: ${props => (props.fontSize ? props.fontSize : '1.5rem')};
-  transition: all 0.2s;
+  font-weight: 700;
+  background-color: ${props => props.color};
+  border: 0;
   opacity: 1;
+  transition: all 0.2s;
 
   :hover,
   :focus {
@@ -38,9 +38,6 @@ export const BootstrapButton = styled(Button)<IButtonStyledProps>`
   :disabled {
     background-color: ${props => props.color} !important;
     border-color: ${props => props.color} !important;
-  }
-
-  :disabled {
     opacity: 0.2;
   }
 `

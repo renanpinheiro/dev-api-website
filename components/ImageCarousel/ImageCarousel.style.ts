@@ -12,6 +12,7 @@ export const CarrouselContent = styled(Carousel)`
 
   ol {
     display: none;
+
     li {
       display: none;
     }
@@ -46,25 +47,23 @@ export const Item = styled(CarouselItem)`
 `
 
 export const ArrowRight = styled.p`
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
   border: solid white;
   border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-
-  height: 30px;
-  width: 30px;
+  transform: rotate(-45deg);
 `
 
 export const ArrowLeft = styled.p`
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
   border: solid white;
   border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-
-  height: 30px;
-  width: 30px;
+  transform: rotate(135deg);
 `

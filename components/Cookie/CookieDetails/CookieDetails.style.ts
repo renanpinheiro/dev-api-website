@@ -28,11 +28,8 @@ export const Card = styled(CardBootstrap)`
 export const CardHeader = styled(CardBootstrap.Header)`
   display: flex;
   align-items: center;
-
-  padding: 0.5rem 0rem;
-
+  padding: 0.5rem 0;
   cursor: pointer;
-
   background-color: transparent;
   border: none;
 `
@@ -40,9 +37,7 @@ export const CardHeader = styled(CardBootstrap.Header)`
 export const Title = styled.div`
   display: flex;
   flex: 1;
-
   margin-left: 10px;
-
   font-weight: 700;
   color: ${theme.colors.secondary};
 `
@@ -51,42 +46,32 @@ export const AccordionToggle = styled(AccordionBootstrap.Toggle)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   background-color: transparent;
   border: none;
 
   div {
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 20px;
     height: 20px;
-
     background-color: ${theme.colors.secondary};
-
     border-radius: 3px;
 
     ::after {
       width: 10px;
       height: 2px;
-
       content: '';
-
       background-color: ${theme.colors.white};
     }
 
     ::before {
       position: absolute;
-
       width: 10px;
       height: 2px;
-
       content: '';
       background-color: ${theme.colors.white};
-
       transition: all 0.4s ease-in-out;
       transform: rotate(${props => (props.isActive ? '0deg' : '90deg')});
     }
@@ -99,9 +84,7 @@ export const CardBody = styled(CardBootstrap.Body)`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
   width: 100%;
-
   padding: 0;
 `
 
@@ -117,13 +100,13 @@ export const Text = styled.p`
 export const DetailsContainer = styled.div`
   display: flex;
   width: 60%;
-
   margin-bottom: 10px;
 
   ul {
     li {
       margin-bottom: 10px;
     }
+
     margin-right: 30px;
   }
 
@@ -139,7 +122,6 @@ export const List = styled.ul`
 export const ListName = styled.li<IListStyle>`
   font-size: 2.2vh;
   color: ${theme.colors.secondary};
-
   ${props =>
     props.hasDot
       ? css`

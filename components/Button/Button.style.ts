@@ -58,7 +58,6 @@ export const Container = styled.div<IButtonStyle>`
     width: max-content;
     cursor: pointer;
     border-radius: 5px;
-
     ${props => sizeVariation[props.size]}
     ${props => typeVariation[props.type]}
 

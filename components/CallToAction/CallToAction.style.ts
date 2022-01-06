@@ -22,8 +22,8 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 1024px) {
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   > a {
@@ -52,6 +52,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.div`
   flex-basis: 23vw;
+
   > hr {
     width: 7.5vw;
     height: 3px;

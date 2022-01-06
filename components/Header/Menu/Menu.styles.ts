@@ -180,7 +180,6 @@ export const Title = styled.h6<INavLinkTitleStyle>`
   font-size: clamp(42px, 45px, 62px);
   font-weight: 600;
   color: ${theme.colors.primary};
-
   ${props =>
     props.isActive &&
     css`
@@ -260,9 +259,7 @@ export const CardHeader = styled(CardBootstrap.Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   cursor: pointer;
-
   background-color: transparent;
   border: none;
 `
@@ -281,7 +278,6 @@ export const AccordionCollapse = styled(AccordionBootstrap.Collapse)``
 
 export const Plans = styled.div`
   padding: 0.5rem 1rem;
-
   margin-bottom: 70px;
   color: ${theme.colors.primary};
 

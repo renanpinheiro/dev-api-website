@@ -6,21 +6,17 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 5vh 8vw 5vh 8vw;
   margin-bottom: 10vh;
-
   background-color: ${theme.colors.gray[100]};
   background-image: url('/masks/devapi.svg');
   background-repeat: no-repeat;
   background-size: cover;
-
   border-top-left-radius: 180px;
   border-bottom-right-radius: 180px;
 
   @media (max-width: 1200px) {
     flex-direction: column;
-
     border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
   }
@@ -77,8 +73,8 @@ export const ProfessionalServiceText = styled.div`
     }
 
     @media (min-width: 1600px) {
-      font-size: 1.375rem;
       width: 96%;
+      font-size: 1.375rem;
     }
   }
 `
@@ -105,9 +101,9 @@ export const CheckContainer = styled.div`
   }
 
   > img {
-    padding-right: 10px;
     width: 5vh;
     height: auto;
+    padding-right: 10px;
   }
 
   > p {
