@@ -8,14 +8,13 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 25vw;
-  height: 28vh;
+  height: 35vh;
   padding: 35px 30px;
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 10px 25px #5f47ff29;
 
   @media (max-width: 1400px) {
-    height: 32vh;
     padding: 30px 20px;
   }
 
