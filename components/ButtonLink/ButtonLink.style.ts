@@ -26,6 +26,18 @@ const type = {
       border: 2px solid ${theme.colors.secondary};
     }
   `,
+
+  primary: css`
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.blue[500]};
+    border: 2px solid ${theme.colors.blue[500]};
+
+    :hover {
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.blue[200]};
+      border: 2px solid ${theme.colors.blue[200]};
+    }
+  `,
 }
 
 const size = {
@@ -59,11 +71,10 @@ export const Container = styled.div<IButtonStyle>`
     display: flex;
     align-items: center;
     width: max-content;
+    text-decoration: none;
     cursor: pointer;
     border-radius: 5px;
-    text-decoration: none;
     transition: all 0.2s ease-out 0s;
-
     ${props => size[props.size]}
     ${props => type[props.type]}
 

@@ -48,6 +48,7 @@ export const CarrouselContent = styled(Carousel)`
 
 export const Item = styled(CarouselItem)`
   height: 140px;
+
   img {
     max-width: 120px;
     object-fit: contain;
@@ -64,6 +65,7 @@ export const ImageContainer = styled.div`
   justify-content: space-around;
   width: 50%;
   height: 100px;
+
   img {
     width: 100%;
     height: 100%;

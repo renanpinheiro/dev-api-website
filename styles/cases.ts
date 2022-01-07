@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 100%;
   padding: 8vh 20vw 8vh 15vw;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1600px) {
     padding: 8vh 8vw 8vh 8vw;
   }
 
@@ -26,9 +26,11 @@ export const HeroColumns = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 576px) {
+  @media (max-width: px) {
     flex-direction: column-reverse;
-    padding: 12vh 5vw 5vw 8vh;
+    justify-content: center;
+    height: 100%;
+    padding: 5vh 8vw 8vh 5vw;
   }
 `
 export const HeroContentDetails = styled.div`
@@ -48,15 +50,23 @@ export const HeroContentDetails = styled.div`
     background-size: 100%;
   }
 
-  @media (max-width: 600px) {
-    padding: 0;
+  @media (max-width: 768px) {
+    padding: 15vh 0 8vh 8vw;
+  }
+
+  @media (max-width: 414px) {
+    padding: 15vh 0 8vh 8vw;
   }
 
   > h1 {
     font-size: 2.625rem;
 
     @media (max-width: 576px) {
-      font-size: 2rem;
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 414px) {
+      font-size: 1.5rem;
     }
 
     @media (min-width: 1600px) {
@@ -83,14 +93,18 @@ export const HeroContentDetails = styled.div`
       line-height: 1.2;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       width: 100%;
-      font-size: 1rem;
+      font-size: 1.5rem;
       line-height: 1.2;
     }
 
     @media (min-width: 1600px) {
       width: 55%;
+    }
+
+    @media (max-width: 414px) {
+      font-size: 1.2rem;
     }
   }
 `
@@ -102,15 +116,23 @@ export const HeroContentImage = styled.div`
   height: 100%;
   padding: 8vh 5vw 8vh 0;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1600px) {
     img {
       width: 60vw;
     }
+
     padding: 12vh 5vw 8vh 0;
   }
 
-  @media (max-width: 375px) {
-    padding-top: 3vh;
+  @media (max-width: 768px) {
+    img {
+      width: 60vw;
+    }
+
+    padding: 25vw 5vw 5vw 0;
+  }
+
+  @media (max-width: 600px) {
     img {
       display: none;
     }
@@ -140,10 +162,11 @@ export const HeroContent = styled.div`
     align-items: flex-start;
     text-align: left;
   }
+
   > h1 {
     font-size: 2.625rem;
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       font-size: 2.25rem;
     }
 
@@ -193,11 +216,10 @@ export const Pipe = styled.div`
   width: 10vw;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
-    width: 8vh;
+    width: 8vw;
   }
 `
 
@@ -245,7 +267,6 @@ export const ButtonContainer = styled.div`
 export const HistorySuccessContainer = styled.div`
   display: flex;
   flex-direction: column;
-
   width: 100vw;
   padding-top: 5vh;
   text-align: center;
@@ -278,10 +299,10 @@ export const DatailsListContainer = styled.div`
   padding: 0 10vw;
 
   @media (max-width: 1024px) {
-    padding: 0 5vw;
+    padding: 0;
   }
 
-  @media (max-width: 600px) {
-    padding: 0 15vw;
+  @media (max-width: 414px) {
+    padding: 0 5vw;
   }
 `

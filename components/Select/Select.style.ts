@@ -17,7 +17,6 @@ export const Container = styled.div`
 export const Label = styled.label<ILabelStyles>`
   margin-bottom: 5px;
   font-size: 1.2rem;
-
   ${({ isRequired }) =>
     isRequired &&
     css`
@@ -54,7 +53,6 @@ export const Selection = styled.input<ISelectionStyle>`
   background-color: #fff;
   border: none;
   outline: 0;
-
   ${({ hasError }) =>
     hasError &&
     css`
@@ -63,7 +61,6 @@ export const Selection = styled.input<ISelectionStyle>`
 `
 export const OptionsContainer = styled.div<IOptionsContainerStyle>`
   display: none;
-
   ${({ isOpen }) =>
     isOpen &&
     css`

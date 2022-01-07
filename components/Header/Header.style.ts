@@ -6,21 +6,15 @@ import { IContainerStyles, IHeaderStyle } from './Header.interface'
 export const Container = styled.div<IContainerStyles>`
   position: fixed;
   z-index: 30;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 100%;
   height: 13vh;
-
-  padding: 0vh 8vw 0 8vw;
-
+  padding: 0 8vw 0 8vw;
   user-select: none;
-
   background-color: ${theme.colors.gray[100]};
   transition: all 0.3s ease-in-out;
-
   ${({ isCentralized }) =>
     isCentralized &&
     css`
@@ -41,6 +35,7 @@ export const LogoContainer = styled.div`
   align-items: center;
   width: 10vw;
   height: 100%;
+
   @media (max-width: 450px) {
     padding-top: 2vh;
   }
@@ -50,7 +45,6 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   height: 100%;
 
   @media (max-width: 1200px) {
@@ -69,7 +63,6 @@ export const NavBarContainer = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
-
   height: 100%;
 
   @media (max-width: 1200px) {
@@ -92,9 +85,7 @@ export const NavBar = styled.div`
 export const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
-
   margin-right: 5vw;
-
   cursor: pointer;
 
   @media (max-width: 1600px) {
@@ -121,7 +112,6 @@ export const NavLink = styled.a<IHeaderStyle>`
   font-size: 20px;
   color: ${theme.colors.primary};
   text-decoration: none;
-
   ${props =>
     props.isActive &&
     css`
@@ -135,13 +125,14 @@ export const NavLink = styled.a<IHeaderStyle>`
 `
 
 export const Arrow = styled.img`
-  margin: 5px 0 0 5px;
   width: 100%;
   height: 100%;
+  margin: 5px 0 0 5px;
 `
 
 export const MenuContainer = styled.div`
   display: none;
+
   @media (max-width: 1200px) {
     display: block;
   }

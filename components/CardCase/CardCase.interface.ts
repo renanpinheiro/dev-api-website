@@ -4,7 +4,7 @@ export interface ICardCases {
 
 interface ICases {
   title: string
-  shortText: string
-  imageCover: string
-  linkId: string
+  short_text: string
+  image_cover: string
+  link_id: string
 }

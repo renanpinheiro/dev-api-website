@@ -92,7 +92,7 @@ export const ButtonNewsLetter = styled.button`
   padding: 5px 30px;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   background-color: ${theme.colors.green[100]};
   border: 1px solid ${theme.colors.green[100]};
@@ -106,11 +106,9 @@ export const ButtonNewsLetter = styled.button`
 
 export const Message = styled.div<IColorNotificationStyle>`
   left: 10vw;
-
   padding: 1vh 1vw;
-
   border-radius: 5px;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 3px rgba(0 0 0 20%);
 
   > small {
     font-size: 1rem;
@@ -159,13 +157,11 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
   visibility: hidden;
   content: '';
 
-  &:after {
+  &::after {
     display: inline-block;
     width: 18px;
     height: 18px;
-
     color: #00bff0;
-
     cursor: pointer;
     visibility: visible;
     content: '';
@@ -174,7 +170,7 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
     border-radius: 3px;
   }
 
-  &:checked:after {
+  &:checked::after {
     display: flex;
     align-items: center;
     justify-content: center;

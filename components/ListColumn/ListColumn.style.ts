@@ -36,7 +36,7 @@ export const ListItem = styled.li`
     padding: 0 10vh;
   }
 
-  :before {
+  ::before {
     padding-right: 8px;
     font-size: 3rem;
     content: '•';

@@ -8,8 +8,8 @@ const circleAnimation = (translate: string, position: number) => {
   return keyframes`
        from {
          transform: rotate(${position}deg) translate(${translate}) rotate(-${position}deg);
-
        }
+
        to {
          transform: rotate(${rotate}deg) translate(${translate}) rotate(-${rotate}deg);
        }
@@ -22,9 +22,9 @@ export const Container = styled.div`
   height: 80vh;
   max-height: 80vh;
   padding-top: 5vh;
-  background-color: ${theme.colors.gray[100]};
-  background-color: ${theme.colors.gray[100]};
   overflow: hidden;
+  background-color: ${theme.colors.gray[100]};
+  background-color: ${theme.colors.gray[100]};
 `
 
 export const BackgroundCircleContainer = styled.div`
@@ -52,8 +52,7 @@ export const BackgroundCircleContainer = styled.div`
 
   @media (max-width: 500px) {
     bottom: 60vh;
-    left: 0vw;
-
+    left: 0;
     transform: scale(0.5);
   }
 `
@@ -64,16 +63,12 @@ export const CircleContainer = styled.div<IHeroStyles>`
   right: 0;
   bottom: 0;
   left: 0;
-
   z-index: 2;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: ${props => props.width};
   height: ${props => props.height};
-
   margin: auto;
   border: 2px solid ${theme.colors.gray[400]};
   border-radius: 50%;
@@ -85,19 +80,15 @@ export const Circle = styled.div<IHeroCircleStyle>`
   right: 0;
   bottom: 0;
   left: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin: auto;
   overflow: hidden;
-
   border-radius: 50%;
   animation: ${props =>
       circleAnimation(props.translatePosition, props.position)}
     ${props => props.timer} linear infinite;
-
   ${props =>
     props.type === 'default'
       ? css`

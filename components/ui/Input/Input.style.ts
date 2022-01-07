@@ -21,7 +21,6 @@ export const Container = styled.div<IContainerProps>`
     background-clip: padding-box;
     border: 1px solid ${props => props.theme.colors.gray[800]};
     border-radius: 0.25rem;
-
     ${props =>
       props.isErrored &&
       css`
@@ -29,11 +28,11 @@ export const Container = styled.div<IContainerProps>`
       `}
 
     &:focus {
-      outline: none;
       border-color: ${props =>
         props.isErrored
           ? props.theme.colors.red
           : props.theme.colors.gray[800]};
+      outline: none;
     }
   }
 

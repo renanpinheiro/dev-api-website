@@ -2,6 +2,7 @@ import React from 'react'
 
 import Router from 'next/router'
 
+import { Button } from '../../components/Button'
 import { ICardCases } from './CardCase.interface'
 import * as S from './CardCase.style'
 
@@ -20,12 +21,13 @@ export const CardCase = ({ cases }: ICardCases) => {
             <S.Title>{value.title}</S.Title>
             <S.ContentText>{value.short_text}</S.ContentText>
             <S.ButtonContainer>
-              <S.ButtonCard
-                type="button"
+              <Button
+                buttonType="button"
+                type="default"
+                size="small"
                 onClick={() => handleClickCase(value.link_id)}
-              >
-                Conheça essa história
-              </S.ButtonCard>
+                text="Conheça essa história"
+              />
             </S.ButtonContainer>
           </S.CardBox>
         )
