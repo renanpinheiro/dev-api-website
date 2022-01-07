@@ -3,8 +3,12 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
+import { BoxReverse } from '../../components/BoxReverse'
 import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
+import { CompanyBenefits } from '../../components/CompanyBenefits'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
+import { benefits } from '../../constants/benefits'
 import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
 import { constumersMobile, costumers } from '../../constants/costumers'
@@ -13,10 +17,6 @@ import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
-import { ListIconCostumer } from '../../components/ListIconCostumer'
-import { BoxReverse } from '../../components/BoxReverse'
-import { CompanyBenefits } from '../../components/CompanyBenefits'
-import { benefits } from '../../constants/benefits'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -85,7 +85,7 @@ const Home = () => {
           />
         </S.HeroContent>
         <S.GifContainer>
-          <img src="/gifs/home.gif" />
+          <img src="/gifs/ipaas.gif" />
         </S.GifContainer>
       </S.Hero>
 
