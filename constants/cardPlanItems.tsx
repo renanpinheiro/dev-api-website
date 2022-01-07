@@ -38,7 +38,7 @@ export const cardPlanItems = [
     title: 'ESSENTIAL',
     text: 'Para empresas que precisam começar a desbloquear o poder da integração de sistemas, com integrações de menor criticidade e baixo volume de tráfego.',
     middleText: 'API Gateway Calls: 300K',
-    subText: <b>R$ 1,399/mês</b>,
+    subText: <b>R$ 1.399/mês</b>,
     buttonText: 'Fale conosco',
 
     url: '/converse-com-especialista',
