@@ -60,9 +60,6 @@ export const solutionsPage = {
         que sua empresa fique para trás. O que seu negócio precisa integrar hoje
         para sair na frente da concorrência?
         <br />
-        <br />
-        Confira algumas das integrações de ERP e Gestão que realizamos para os
-        nossos clientes:
       </p>
     ),
     component: (
@@ -144,9 +141,6 @@ export const solutionsPage = {
         confiáveis para análise e eleve sua operação de marketing a outro
         patamar!
         <br />
-        <br />
-        Confira algumas das integrações de marketing que realizamos para os
-        nossos clientes:
       </p>
     ),
     component: (
@@ -239,8 +233,10 @@ export const solutionsPage = {
         em uma verdadeira máquina de vendas!
         <br />
         <br />
-        Confira algumas das integrações de vendas que realizamos para os nossos
-        clientes:
+        <b>
+          Confira algumas das integrações de vendas que realizamos para os
+          nossos clientes:
+        </b>
       </p>
     ),
     component: (
@@ -321,9 +317,6 @@ export const solutionsPage = {
         vem facilitando a tomada de decisão e a otimização das diretrizes
         estratégicas para a organização.
         <br />
-        <br />
-        Confira algumas das integrações do setor de Recursos Humanos que
-        realizamos para os nossos clientes:
       </p>
     ),
     component: (
@@ -408,9 +401,6 @@ export const solutionsPage = {
         negócio com rapidez e facilidade, aumente suas vendas e fidelize os seus
         clientes!
         <br />
-        <br />
-        Confira algumas das integrações de e-Commerce & Marketplaces que
-        realizamos para os nossos clientes:
       </p>
     ),
     component: (
@@ -530,9 +520,6 @@ export const solutionsPage = {
         sistemas utilizados. Somos os parceiros estratégicos da inovação na sua
         empresa!
         <br />
-        <br />
-        Confira algumas das integrações para o setor financeiro que realizamos
-        para os nossos clientes:
       </p>
     ),
     component: (
@@ -658,9 +645,6 @@ export const solutionsPage = {
         time e melhore a comunicação entre equipes, clientes, fornecedores e
         parceiros. Integre-se à logística 4.0!
         <br />
-        <br />
-        Confira algumas das integrações de Logística que realizamos para os
-        nossos clientes:
       </p>
     ),
     component: (

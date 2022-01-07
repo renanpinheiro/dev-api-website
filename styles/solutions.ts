@@ -161,7 +161,11 @@ export const ParagraphContainer = styled.div`
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
-
+    max-width: 66ch;
+  }
+  b {
+    font-weight: 700
+  }
     @media (max-width: 996px) {
       font-size: 1.25rem;
       line-height: 1.3;
