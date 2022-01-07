@@ -43,9 +43,9 @@ export const HeroContentDetails = styled.div`
 
   @media (max-width: 1024px) {
     align-items: flex-start;
+    padding: 15vh 0 8vh 8vw;
     text-align: left;
     background-size: 100%;
-    padding: 15vh 0 8vh 8vw;
   }
 
   @media (max-width: 600px) {
@@ -74,8 +74,8 @@ export const HeroContentDetails = styled.div`
     margin-bottom: 30px;
     overflow: hidden;
     font-size: 1.1rem;
-    line-height: 1.5;
     font-weight: 500;
+    line-height: 1.5;
 
     @media (max-width: 996px) {
       width: 100%;
