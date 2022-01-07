@@ -31,7 +31,7 @@ export const QuoteContainer = styled.div`
 
   @media only screen and (max-width: 1023px) {
     width: 100%;
-    height: auto;
+    height: 490px;
     padding: 2vh 2vw 2vh 2vw;
     margin-top: 15vh;
   }
@@ -52,6 +52,10 @@ export const QuoteTexts = styled.div`
 
   @media (min-width: 1336px) and (max-width: 1440px) {
     height: 100%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    height: 55vh;
   }
 `
 
@@ -90,7 +94,7 @@ export const RightQuotationMark = styled.img`
   @media only screen and (max-width: 800px) {
     width: 25px;
     height: 25px;
-    margin: 0 0 11vh 0;
+    margin: 0 0 3vh 0;
   }
 `
 
@@ -115,7 +119,9 @@ export const Quote = styled.p<IFadeStyle>`
     font-size: 1.4rem;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
+    height: 23vh;
+    padding: 1vh 0 0 0;
     font-size: 1.125rem;
     line-height: 20px;
   }
@@ -125,8 +131,9 @@ export const NameContainer = styled.div`
   display: flex;
   justify-content: center;
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 900px) {
     flex-direction: column;
+    padding-top: 1vh;
   }
 `
 
@@ -293,6 +300,10 @@ export const QuoteSpanContainer = styled.div`
   justify-content: center;
   width: 100%;
   padding: 0 1vw;
+
+  @media only screen and (max-width: 800px) {
+    width: 75%;
+  }
 `
 
 export const QuotePaginationDiv = styled.div<IQuotePaginationDivStyle>`

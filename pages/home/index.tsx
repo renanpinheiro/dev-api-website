@@ -248,8 +248,9 @@ const Home = () => {
                 os sistemas, colocando os diferentes softwares para conversar
                 entre si.
               </p>
-
-              <S.SystemImageContainer src="/images/ipaas.png" alt="iPaas" />
+              <S.SystemImageContainer>
+                <S.SystemImage src="/images/ipaas.png" alt="iPaas" />
+              </S.SystemImageContainer>
             </S.IPaasContainer>
             <S.ApiManagerContainer>
               <h2>
@@ -263,10 +264,12 @@ const Home = () => {
                 APIs, expandindo o ecossistema entre instituições, clientes,
                 fornecedores e parceiros.
               </p>
-              <S.SystemImageContainer
-                src="/images/api-manager.png"
-                alt="API Manager"
-              />
+              <S.SystemImageContainer>
+                <S.SystemImage
+                  src="/images/api-manager.png"
+                  alt="API Manager"
+                />
+              </S.SystemImageContainer>
             </S.ApiManagerContainer>
           </S.SystemContainer>
         </S.FeaturesContainer>
@@ -362,7 +365,7 @@ const Home = () => {
                 text="Conversar com o time!"
                 href="/converse-com-especialista"
                 target="_self"
-                type="primary"
+                type="default"
                 size="default"
                 margin="45px 0px 0px 0px"
               />
@@ -544,7 +547,7 @@ const Home = () => {
         </S.BenefitsContainer>
 
         <S.UnlockContainer>
-          <S.SecurityTextContainer>
+          <S.UnlockTextContainer>
             <S.Pipe />
             <h2>
               Encaixe todas as peças da sua operação e
@@ -557,9 +560,9 @@ const Home = () => {
               target="_self"
               type="default"
               size="default"
-              margin="45px 0px 0px 0px"
+              margin="35px 0px 0px 0px"
             />
-          </S.SecurityTextContainer>
+          </S.UnlockTextContainer>
         </S.UnlockContainer>
       </S.Content>
     </>
