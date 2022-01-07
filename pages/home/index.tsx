@@ -5,6 +5,7 @@ import Head from 'next/head'
 
 import { BoxReverse } from '../../components/BoxReverse'
 import { ButtonLink } from '../../components/ButtonLink'
+import { CallToAction } from '../../components/CallToAction'
 import { CompanyBenefits } from '../../components/CompanyBenefits'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { benefits } from '../../constants/benefits'
@@ -84,7 +85,7 @@ const Home = () => {
           />
         </S.HeroContent>
         <S.GifContainer>
-          <img src="/gifs/home.gif" />
+          <img src="/gifs/ipaas.gif" />
         </S.GifContainer>
       </S.Hero>
 
