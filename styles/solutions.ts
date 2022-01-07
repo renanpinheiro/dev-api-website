@@ -157,19 +157,19 @@ export const ParagraphContainer = styled.div`
   }
 
   > p {
-    max-width: 67ch;
+    max-width: 66ch;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
-    max-width: 66ch;
   }
+
   b {
-    font-weight: 700
+    font-weight: 700;
   }
-    @media (max-width: 996px) {
-      font-size: 1.25rem;
-      line-height: 1.3;
-    }
+
+  @media (max-width: 996px) {
+    font-size: 1.25rem;
+    line-height: 1.3;
   }
 `
 
