@@ -15,8 +15,6 @@ const CaseDetails = () => {
   const [splitId] = routerId.split('?')
   const [, , currentId] = splitId.split('/')
 
-  console.log(currentId)
-
   const [titleCase, setTitleCase] = useState('')
   const [shortTextCase, setShortTextCase] = useState('')
   const [imageCase, setImagetCase] = useState('')
@@ -36,6 +34,7 @@ const CaseDetails = () => {
   }
   const handleFindCasesById = async (link_id: string) => {
     const { data } = await findCasesById(link_id)
+
     if (data) {
       setTitleCase(data.title)
       setShortTextCase(data.short_text)
