@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const cardPlanItems = [
   {
     imageUrl: '/icons/free.svg',
@@ -36,7 +38,7 @@ export const cardPlanItems = [
     title: 'ESSENTIAL',
     text: 'Para empresas que precisam começar a desbloquear o poder da integração de sistemas, com integrações de menor criticidade e baixo volume de tráfego.',
     middleText: 'API Gateway Calls: 300K',
-    subText: 'R$ 1.399/mês',
+    subText: <b>R$ 1.399/mês</b>,
     buttonText: 'Fale conosco',
 
     url: '/converse-com-especialista',
