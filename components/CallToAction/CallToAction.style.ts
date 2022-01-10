@@ -51,7 +51,7 @@ export const Wrapper = styled.div`
 `
 
 export const Title = styled.div`
-  flex-basis: 23vw;
+  flex-basis: 27vw;
 
   > hr {
     width: 7.5vw;

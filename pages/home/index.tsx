@@ -231,7 +231,7 @@ const Home = () => {
               As empresas possuem diversos sistemas{' '}
               <b>que não conversam entre si</b>
             </h2>
-            <p>Com o iPaaS e API Managaer da DevApi isso acabou!</p>
+            <p>Com o iPaaS e API Manager da DevApi isso acabou!</p>
           </S.JoinNowContainer>
 
           <S.SystemContainer>
@@ -380,7 +380,7 @@ const Home = () => {
             <S.ContentContainer>
               <h2>
                 Em 2022, as APIs serão o{' '}
-                <b> principal vetor de ataque ás empresas</b>
+                <b> principal vetor de ataque às empresas</b>
               </h2>
             </S.ContentContainer>
           }

@@ -231,12 +231,6 @@ export const solutionsPage = {
         copiar e colar, dados perdidos no CRM, follows não realizados,
         relatórios trabalhosos e pouco confiáveis. Transforme seu time comercial
         em uma verdadeira máquina de vendas!
-        <br />
-        <br />
-        <b>
-          Confira algumas das integrações de vendas que realizamos para os
-          nossos clientes:
-        </b>
       </p>
     ),
     component: (
