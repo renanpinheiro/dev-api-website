@@ -7,9 +7,11 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  padding: 5vh 8vw 5vh 8vw;
 
   @media (max-width: 768px) {
     justify-content: center;
+    padding: 0;
   }
 
   @media (max-width: 415px) {
@@ -27,7 +29,7 @@ export const CardBox = styled.div`
   box-shadow: 0 4px 25px #5f47ff29;
 
   @media (max-width: 1600px) {
-    width: 40vw;
+    width: 30vw;
   }
 
   @media (max-width: 768px) {
