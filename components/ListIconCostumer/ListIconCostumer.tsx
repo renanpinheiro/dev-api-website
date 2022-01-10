@@ -8,9 +8,9 @@ export const ListIconCostumer = ({ items, title }: IListIconCostumer) => {
     <S.Container>
       <S.TitleContainer>{title}</S.TitleContainer>
       <S.ListImageContainer>
-        {items.map(item => {
+        {items.map((item, index) => {
           return (
-            <S.ImageContainer>
+            <S.ImageContainer key={index}>
               <S.Image src={item.url} alt={item.name} />
             </S.ImageContainer>
           )

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -13,7 +14,6 @@ import { costumers } from '../../constants/costumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 import * as S from '../../styles/solutions'
-import dynamic from 'next/dynamic'
 
 const IntegrationCardWithoutSSR = dynamic(
   () => import('../../components/IntegrationCard'),
@@ -92,11 +92,12 @@ const Solutions = () => {
 
               <S.ComponentContainer>
                 {page?.integrationCard ? (
-                  page.integrationCard.map(pageAtributes => {
+                  page.integrationCard.map((pageAtributes, index) => {
                     return (
                       <IntegrationCardWithoutSSR
                         imageLeft={pageAtributes.imageLeft}
                         imageRight={pageAtributes.imageRight}
+                        key={index}
                       ></IntegrationCardWithoutSSR>
                     )
                   })

@@ -50,8 +50,8 @@ const Midias = ({ midias }: IMidiasProps) => {
 
       <S.Content>
         <S.Wrapper>
-          {midias.map(midia => (
-            <S.Card>
+          {midias.map((midia, index) => (
+            <S.Card key={index}>
               <img src={midia.image} alt={midia.title} />
               <h3>{midia.title}</h3>
               <S.KnowMoreLink>
