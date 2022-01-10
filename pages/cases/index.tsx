@@ -47,7 +47,7 @@ const Cases = () => {
         <S.HeroContent>
           <S.Pipe />
           <h1>
-            História de <b>Sucesso</b>
+            Histórias de <b>Sucesso</b>
           </h1>
           <p>Conheça algumas das nossas histórias de sucesso</p>
         </S.HeroContent>

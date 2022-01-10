@@ -5,13 +5,12 @@ import Head from 'next/head'
 
 import { BoxReverse } from '../../components/BoxReverse'
 import { ButtonLink } from '../../components/ButtonLink'
-import { CallToAction } from '../../components/CallToAction'
 import { CompanyBenefits } from '../../components/CompanyBenefits'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { benefits } from '../../constants/benefits'
 import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
-import { constumersMobile, costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/costumers'
 import { featuresCard } from '../../constants/featuresCard'
 import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
@@ -541,8 +540,8 @@ const Home = () => {
         </S.SecurityContainer>
 
         <S.BenefitsContainer>
-          {benefits.map(description => (
-            <CompanyBenefits description={description} />
+          {benefits.map((description, index) => (
+            <CompanyBenefits description={description} key={index} />
           ))}
         </S.BenefitsContainer>
 

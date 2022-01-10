@@ -4,11 +4,13 @@ export interface IValuesForm {
   isNotifications: boolean
   isPolicy: boolean
 }
+
 export interface IHubspotResponse {
   properties: IHubspotPayload
   createdAt: string
   updatedAt: string
 }
+
 export interface IHubspotPayload {
   createdate: string
   email: string
@@ -17,6 +19,7 @@ export interface IHubspotPayload {
   lastmodifieddate: string
   lastname: string
 }
+
 export interface IColorNotificationStyle {
   color?: string
 }

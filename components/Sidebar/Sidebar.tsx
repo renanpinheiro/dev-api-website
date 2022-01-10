@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 
+import { IHubspotResponse } from '../Footer/NewsletterForm/NewsletterForm.interfaces'
 import { Button } from '../ui/Button'
 import { Input } from '../ui/Input'
 import { ISidebarProps } from './Sidebar.interface'
 import * as S from './Sidebar.style'
 
+import axios from 'axios'
 import { FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
-import { IHubspotResponse } from '../Footer/NewsletterForm/NewsletterForm.interfaces'
-import axios from 'axios'
 
 const Sidebar = ({
   tags,
@@ -18,7 +18,7 @@ const Sidebar = ({
   onClickTag,
 }: ISidebarProps) => {
   const hubspotApi = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+    baseURL: process.env.NEXT_PUBLIC_API_SITE,
   })
 
   const schema = Yup.object().shape({
