@@ -106,7 +106,11 @@ export const SolutionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10vh;
+  padding-bottom: 22.5vh;
+
+  @media (max-width: 996px) {
+    padding-bottom: 10vh;
+  }
 `
 
 export const TextContainer = styled.div`
@@ -135,7 +139,8 @@ export const TitleContainer = styled.div`
 
     @media (max-width: 996px) {
       width: 100%;
-      font-size: 2rem;
+      font-size: 1.375rem;
+      line-height: 1;
     }
 
     @media (min-width: 1600px) {
@@ -152,19 +157,23 @@ export const ParagraphContainer = styled.div`
   width: 100%;
   margin-bottom: 40px;
 
-  @media (max-width: 996px) {
-    width: 100%;
-  }
-
   > p {
-    max-width: 67ch;
+    max-width: 66ch;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
+  }
 
-    @media (max-width: 996px) {
-      font-size: 1.25rem;
-      line-height: 1.3;
+  b {
+    font-weight: 700;
+  }
+
+  @media (max-width: 996px) {
+    width: 100%;
+
+    > p {
+      font-size: 1.1rem;
+      line-height: 1;
     }
   }
 `
@@ -235,8 +244,8 @@ export const JoinNowContainer = styled.div`
     text-align: center;
 
     @media (max-width: 996px) {
-      width: 100%;
-      font-size: 2rem;
+      width: 85%;
+      font-size: 1.375rem;
     }
 
     @media (min-width: 1600px) {

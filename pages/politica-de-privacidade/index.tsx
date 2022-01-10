@@ -1189,7 +1189,7 @@ const PrivacyPolicy = () => {
               <br />
               Estamos localizados no Ed. Atrium Torre Norte - Av. Pedro Taques,
               n. 294 - 13° Andar - Sala 1307 - Zona 03, CEP: 87030-008,
-              Maringá-PR, Brasil, Telefone: +55 (44) 3354-7410.
+              Maringá-PR, Brasil, Telefone: +55 (44) 9 9738-5897
             </p>
             <br />
             <br />

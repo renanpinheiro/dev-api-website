@@ -49,7 +49,7 @@ export const ProfessionalServiceText = styled.div`
     line-height: 1;
 
     @media (max-width: 996px) {
-      font-size: 2rem;
+      font-size: 1.375rem;
     }
 
     @media (min-width: 1600px) {
@@ -69,7 +69,7 @@ export const ProfessionalServiceText = styled.div`
 
     @media (max-width: 996px) {
       width: 100%;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
 
     @media (min-width: 1600px) {
@@ -96,10 +96,6 @@ export const CheckContainer = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
 
-  @media (max-width: 996px) {
-    align-items: flex-start;
-  }
-
   > img {
     width: 5vh;
     height: auto;
@@ -111,11 +107,11 @@ export const CheckContainer = styled.div`
     line-height: 1.3;
 
     @media (max-width: 996px) {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       line-height: 1.1;
     }
 
-    @media (max-width: 1600px) {
+    @media (min-width: 1600px) {
       font-size: 1.375rem;
     }
   }
