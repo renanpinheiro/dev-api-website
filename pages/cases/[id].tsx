@@ -68,9 +68,7 @@ const CaseDetails = () => {
         <S.HeroColumns>
           <S.HeroContentDetails>
             <S.Pipe />
-            <h1>
-              <b>{titleCase}</b>
-            </h1>
+            <h1>{titleCase}</h1>
             <p dangerouslySetInnerHTML={{ __html: shortTextCase }} />
 
             <Button

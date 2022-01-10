@@ -248,6 +248,9 @@ const Home = () => {
                 os sistemas, colocando os diferentes softwares para conversar
                 entre si.
               </p>
+              <S.SystemImageContainer>
+                <S.SystemImage src="/images/ipaas.png" alt="iPaas" />
+              </S.SystemImageContainer>
             </S.IPaasContainer>
             <S.ApiManagerContainer>
               <h2>

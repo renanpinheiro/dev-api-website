@@ -6,17 +6,14 @@ export const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100vw;
-  padding: 5vh 8vw 5vh 8vw;
+  width: 100%;
 
   @media (max-width: 768px) {
     justify-content: center;
-    padding: 5vh 10vw 5vh 8vh;
   }
 
   @media (max-width: 415px) {
     justify-content: center;
-    padding: 5vh 8vw 5vh 8vh;
   }
 `
 export const CardBox = styled.div`
@@ -30,16 +27,11 @@ export const CardBox = styled.div`
   box-shadow: 0 4px 25px #5f47ff29;
 
   @media (max-width: 1600px) {
-    width: 27vw;
+    width: 40vw;
   }
 
   @media (max-width: 768px) {
-    width: 40vw;
-    margin-left: 2vw;
-  }
-
-  @media (max-width: 415px) {
-    width: 95vw;
+    width: 100%;
   }
 `
 export const ImageContainer = styled.div`
@@ -56,7 +48,7 @@ export const Title = styled.div`
   font-weight: 900;
 
   @media (max-width: 1600px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 `
 export const ContentText = styled.div`
@@ -64,11 +56,11 @@ export const ContentText = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 2vw 3vh 2vw;
-  font-size: 1.9vh;
+  font-size: 2vh;
   line-height: 1.5;
 
   @media (max-width: 1600px) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 `
 export const ButtonContainer = styled.div`

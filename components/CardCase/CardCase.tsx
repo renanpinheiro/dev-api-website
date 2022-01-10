@@ -3,6 +3,7 @@ import React from 'react'
 import Router from 'next/router'
 
 import { Button } from '../../components/Button'
+import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import { ICardCases } from './CardCase.interface'
 import * as S from './CardCase.style'
 
@@ -10,6 +11,8 @@ export const CardCase = ({ cases }: ICardCases) => {
   const handleClickCase = (url: string) => {
     Router.push(`/cases/${url}`)
   }
+  const { width } = useWindowDimensions()
+  const isMobile = width <= 700
   return (
     <S.Container>
       {cases.map((value, index) => {
@@ -24,7 +27,7 @@ export const CardCase = ({ cases }: ICardCases) => {
               <Button
                 buttonType="button"
                 type="default"
-                size="small"
+                size={isMobile ? 'small' : 'default'}
                 onClick={() => handleClickCase(value.link_id)}
                 text="Conheça essa história"
               />

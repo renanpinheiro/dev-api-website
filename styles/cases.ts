@@ -6,14 +6,9 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 8vh 20vw 8vh 15vw;
 
   @media (max-width: 1600px) {
     padding: 8vh 8vw 8vh 8vw;
-  }
-
-  @media (max-width: 576px) {
-    padding: 0;
   }
 `
 export const CardContainer = styled.div`
@@ -22,15 +17,15 @@ export const CardContainer = styled.div`
 `
 export const HeroColumns = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  padding: 10vh 8vw 5vh 8vw;
 
-  @media (max-width: px) {
-    flex-direction: column-reverse;
-    justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
     height: 100%;
-    padding: 5vh 8vw 8vh 5vw;
+    padding: 15vh 8vw 5vh 8vw;
   }
 `
 export const HeroContentDetails = styled.div`
@@ -38,28 +33,20 @@ export const HeroContentDetails = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 25vh 0 8vh 8vw;
+  width: 40%;
   text-align: left;
 
   @media (max-width: 1024px) {
-    align-items: flex-start;
-    padding: 15vh 0 8vh 8vw;
-    text-align: left;
     background-size: 100%;
   }
 
   @media (max-width: 768px) {
-    padding: 15vh 0 8vh 8vw;
-  }
-
-  @media (max-width: 414px) {
-    padding: 15vh 0 8vh 8vw;
+    width: 100%;
   }
 
   > h1 {
     font-size: 2.625rem;
+    font-weight: 700;
 
     @media (max-width: 576px) {
       font-size: 2.2rem;
@@ -71,10 +58,6 @@ export const HeroContentDetails = styled.div`
 
     @media (min-width: 1600px) {
       font-size: 3.75rem;
-    }
-
-    > b {
-      font-weight: 700;
     }
   }
 
@@ -99,10 +82,6 @@ export const HeroContentDetails = styled.div`
       line-height: 1.2;
     }
 
-    @media (min-width: 1600px) {
-      width: 55%;
-    }
-
     @media (max-width: 414px) {
       font-size: 1.2rem;
     }
@@ -111,28 +90,15 @@ export const HeroContentDetails = styled.div`
 export const HeroContentImage = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 8vh 5vw 8vh 0;
+  width: 60%;
 
-  @media (max-width: 1600px) {
-    img {
-      width: 60vw;
-    }
-
-    padding: 12vh 5vw 8vh 0;
+  img {
+    width: 100%;
   }
 
   @media (max-width: 768px) {
-    img {
-      width: 60vw;
-    }
-
-    padding: 25vw 5vw 5vw 0;
-  }
-
-  @media (max-width: 600px) {
     img {
       display: none;
     }
@@ -213,7 +179,7 @@ export const PipeContainer = styled.div`
   }
 `
 export const Pipe = styled.div`
-  width: 10vw;
+  width: 7vw;
   height: 3px;
   margin-bottom: 10px;
   background-color: ${theme.colors.secondary};
@@ -300,9 +266,5 @@ export const DatailsListContainer = styled.div`
 
   @media (max-width: 1024px) {
     padding: 0;
-  }
-
-  @media (max-width: 414px) {
-    padding: 0 5vw;
   }
 `
