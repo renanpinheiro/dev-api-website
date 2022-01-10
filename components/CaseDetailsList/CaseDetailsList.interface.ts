@@ -1,9 +1,9 @@
 export interface ICaseDetail {
   title: string
   detail: string
-  border: true | false
+  hasBorder: boolean
 }
 
 export interface IBorderCase {
-  border: boolean
+  hasBorder: boolean
 }

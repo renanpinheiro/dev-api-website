@@ -33,6 +33,7 @@ const CaseDetails = () => {
   }
   const handleFindCasesById = async (link_id: string) => {
     const { data } = await findCasesById(link_id)
+
     if (data) {
       setTitleCase(data.title)
       setShortTextCase(data.short_text)
@@ -67,9 +68,7 @@ const CaseDetails = () => {
         <S.HeroColumns>
           <S.HeroContentDetails>
             <S.Pipe />
-            <h1>
-              <b>{titleCase}</b>
-            </h1>
+            <h1>{titleCase}</h1>
             <p dangerouslySetInnerHTML={{ __html: shortTextCase }} />
 
             <Button
@@ -86,30 +85,18 @@ const CaseDetails = () => {
       </Hero>
       <S.Container id="cases">
         <S.DatailsListContainer>
-          <CaseDetailsList title="Sobre" detail={aboutCase} border="true" />
+          <CaseDetailsList title="Sobre" detail={aboutCase} border />
 
-          <CaseDetailsList
-            title="Desafio"
-            detail={challengeCase}
-            border="true"
-          />
+          <CaseDetailsList title="Desafio" detail={challengeCase} border />
 
-          <CaseDetailsList
-            title="Objetivo"
-            detail={objectiveCase}
-            border="true"
-          />
+          <CaseDetailsList title="Objetivo" detail={objectiveCase} border />
 
-          <CaseDetailsList
-            title="Solução"
-            detail={solutionCase}
-            border="true"
-          />
+          <CaseDetailsList title="Solução" detail={solutionCase} border />
 
           <CaseDetailsList
             title="Resultado"
             detail={resultCase}
-            border="false"
+            border={false}
           />
         </S.DatailsListContainer>
 

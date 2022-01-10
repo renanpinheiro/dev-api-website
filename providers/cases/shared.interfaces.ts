@@ -1,6 +1,6 @@
 export interface IFindCaseById {
   title: string
-  linkId: string
+  link_id: string
   short_text: string
   about_text: string
   challenge_text: string

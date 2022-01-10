@@ -733,7 +733,6 @@ export const UnlockTextContainer = styled.div`
     padding: 0 8vw 0 8vw;
   }
 `
-
 export const SecurityTextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -786,7 +785,6 @@ export const SecurityTextContainer = styled.div`
     padding: 0 8vw 0 8vw;
   }
 `
-
 export const SecurityContentContainer = styled.div`
   h2 {
     margin-bottom: 1vh;

@@ -3,15 +3,18 @@ import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 import { IBorderCase } from './CaseDetailsList.interface'
 
-export const container = styled.div<IBorderCase>`
+export const Container = styled.div<IBorderCase>`
   display: flex;
   width: 100%;
   padding-top: 10vh;
   padding-bottom: 8vh;
-  border-bottom: ${props =>
-    props.border === true ? '1px solid #e2e8f0' : 'none'};
+  border-bottom: ${props => (props.hasBorder ? '1px solid #e2e8f0' : 'none')};
+
+  @media (max-width: 768px) {
+    padding-top: 1vh;
+  }
 `
-export const containerColuns = styled.div`
+export const ContainerColuns = styled.div`
   display: flex;
   flex-direction: row;
   align-content: space-between;
@@ -45,18 +48,18 @@ export const TitleText = styled.h2`
   font-size: 3rem;
   font-weight: 900;
 
-  @media (max-width: 600px) {
-    font-size: 2rem;
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
   }
 `
 export const DetailContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 1.1rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 
-  @media (max-width: 600px) {
-    font-size: 1rem;
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
   }
 `
