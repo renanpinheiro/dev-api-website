@@ -1,5 +1,6 @@
-import axios from 'axios'
 import { IHubspotResponse } from '../../components/Footer/NewsletterForm/NewsletterForm.interfaces'
+
+import axios from 'axios'
 
 export default async (req, res) => {
   const hubspotApi = axios.create({
