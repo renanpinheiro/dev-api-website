@@ -164,8 +164,8 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
           {isSuccess &&
             data?.pages.map(page => (
               <Fragment key={seed(page)}>
-                {page.content.map(item => (
-                  <S.Card>
+                {page.content.map((item, index) => (
+                  <S.Card key={index}>
                     <img src={item.image} title={item.name} />
                     <span>{item.name}</span>
                   </S.Card>

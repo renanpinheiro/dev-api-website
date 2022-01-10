@@ -92,13 +92,14 @@ const Circle = ({ children }) => {
                   <S.CircleContainer width="430px" height="430px">
                     <S.CircleContainer width="330px" height="330px">
                       <S.CircleContainer width="200px" height="200px">
-                        {circles.map(circle => {
+                        {circles.map((circle, index) => {
                           return (
                             <S.Circle
                               type={circle.type}
                               position={circle.position}
                               timer={circle.timer}
                               translatePosition={circle.translatePosition}
+                              key={index}
                             >
                               <img src={circle.urlimage} alt={''} />
                             </S.Circle>
