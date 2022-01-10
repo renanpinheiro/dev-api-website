@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="42" viewBox="0 0 43 42">
+  <g id="Grupo_27696" data-name="Grupo 27696" transform="translate(20712 16500)">
+    <rect id="Retângulo_5234" data-name="Retângulo 5234" width="43" height="42" rx="6" transform="translate(-20712 -16500)" fill="#5f47ff"/>
+    <g id="Grupo_19" data-name="Grupo 19" transform="translate(-20702 -16490)">
+      <g id="Grupo_17" data-name="Grupo 17" transform="translate(0.312 6.616)">
+        <g id="Grupo_16" data-name="Grupo 16">
+          <path id="Caminho_18" data-name="Caminho 18" d="M404.975,1736.989v7.9a.354.354,0,0,1-.354.354h-4.079a.354.354,0,0,1-.354-.354v-7.348c0-1.934-.691-3.254-2.424-3.254a2.618,2.618,0,0,0-2.455,1.75,3.288,3.288,0,0,0-.158,1.167v7.686a.353.353,0,0,1-.353.354H390.72a.352.352,0,0,1-.353-.354c.009-1.957.05-11.451.008-13.683a.351.351,0,0,1,.353-.358h4.07a.354.354,0,0,1,.354.354v1.686c-.01.016-.023.032-.032.047h.032v-.047a4.752,4.752,0,0,1,4.314-2.378c3.149,0,5.509,2.057,5.509,6.478Zm-21.687,8.256h4.078a.354.354,0,0,0,.354-.354V1731.2a.354.354,0,0,0-.354-.354h-4.078a.354.354,0,0,0-.354.354v13.688A.354.354,0,0,0,383.288,1745.244Z" transform="translate(-382.934 -1730.511)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Grupo_18" data-name="Grupo 18">
+        <ellipse id="Elipse_5" data-name="Elipse 5" cx="2.562" cy="2.562" rx="2.562" ry="2.562" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
