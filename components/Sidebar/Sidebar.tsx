@@ -8,6 +8,8 @@ import * as S from './Sidebar.style'
 
 import { FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
+import { IHubspotResponse } from '../Footer/NewsletterForm/NewsletterForm.interfaces'
+import axios from 'axios'
 
 const Sidebar = ({
   tags,
@@ -15,28 +17,40 @@ const Sidebar = ({
   ebookRedirect,
   onClickTag,
 }: ISidebarProps) => {
+  const hubspotApi = axios.create({
+    baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+  })
+
   const schema = Yup.object().shape({
+    name: Yup.string().required('O nome é obrigatório! '),
     email: Yup.string().email('Digite um e-mail válido'),
   })
 
   const [loading, setLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src =
-      'https://d335luupugsy2.cloudfront.net/js/loader-scripts/3898021c-e125-41ca-8f3c-3cd2e9e9bb99-loader.js'
-    script.async = true
-    document.body.appendChild(script)
-  }, [])
-
-  const handleSubmit = async () => {
+  const handleSubmit = async values => {
     setLoading(true)
+    const [firstName, lastName] = values.name.split(' ')
 
-    setTimeout(() => {
-      setIsSuccess(true)
-      setLoading(false)
-    }, 1500)
+    const payloadHubspot = {
+      properties: {
+        firstname: firstName,
+        lastname: lastName,
+        email: values.email,
+        hubtags: 'newsletter',
+      },
+    }
+
+    hubspotApi
+      .post<IHubspotResponse>('/contacts', payloadHubspot)
+      .then(() => {
+        setIsSuccess(true)
+      })
+      .catch(() => {
+        setIsSuccess(false)
+      })
+      .finally(() => setLoading(false))
   }
 
   const formikbag = useFormik({

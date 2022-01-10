@@ -2,14 +2,14 @@ import styled from 'styled-components'
 
 import { theme } from '../../styles/theme'
 import { IBorderCase } from './CaseDetailsList.interface'
+
 export const container = styled.div<IBorderCase>`
   display: flex;
-
   width: 100%;
   padding-top: 10vh;
   padding-bottom: 8vh;
   border-bottom: ${props =>
-    props.border === 'true' ? '1px solid #e2e8f0' : 'none'};
+    props.border === true ? '1px solid #e2e8f0' : 'none'};
 `
 export const containerColuns = styled.div`
   display: flex;
@@ -26,7 +26,6 @@ export const Pipe = styled.div`
   width: 5vw;
   height: 3px;
   margin-bottom: 5px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {

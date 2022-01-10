@@ -14,9 +14,6 @@ const CaseDetails = () => {
   const routerId = router.asPath
   const [splitId] = routerId.split('?')
   const [, , currentId] = splitId.split('/')
-
-  console.log(currentId)
-
   const [titleCase, setTitleCase] = useState('')
   const [shortTextCase, setShortTextCase] = useState('')
   const [imageCase, setImagetCase] = useState('')

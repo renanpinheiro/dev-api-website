@@ -6,18 +6,19 @@ export const Container = styled.div`
   display: flex;
   flex: initial;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100vw;
   padding: 5vh 8vw 5vh 8vw;
-  flex-wrap: wrap;
 
   @media (max-width: 600px) {
-    padding: 5vh 10vw 5vh 8vh;
     justify-content: center;
+    padding: 5vh 10vw 5vh 8vh;
   }
+
   @media (max-width: 415px) {
-    padding: 5vh 10vw 5vh 8vh;
     justify-content: center;
+    padding: 5vh 10vw 5vh 8vh;
   }
 `
 export const CardBox = styled.div`
@@ -25,15 +26,16 @@ export const CardBox = styled.div`
   flex-direction: column;
   width: 25vw;
   margin-top: 2vh;
-  border-radius: 5px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 4px 25px #5f47ff29;
   vertical-align: bottom;
+  background: #fff 0 0 no-repeat padding-box;
+  border-radius: 5px;
+  box-shadow: 0 4px 25px #5f47ff29;
 
   @media (max-width: 600px) {
-    margin-left: 2vw;
     width: 35vw;
+    margin-left: 2vw;
   }
+
   @media (max-width: 415px) {
     width: 55vw;
   }
@@ -59,16 +61,18 @@ export const ContentText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  line-height: 1.5;
-  padding: 0vh 2vw 3vh 2vw;
+  padding: 0 2vw 3vh 2vw;
   font-size: 1.9vh;
+  line-height: 1.5;
 
   @media (max-width: 1024px) {
     font-size: 1vh;
   }
+
   @media (max-width: 600px) {
     font-size: 1.4vh;
   }
+
   @media (max-width: 376px) {
     font-size: 1.3vh;
   }
@@ -84,6 +88,7 @@ export const ButtonContainer = styled.div`
   @media (max-width: 1024px) {
     padding: 0 2vw 3vh 2vw;
   }
+
   @media (max-width: 600px) {
     padding: 1vh 2vw 5vh 2vw;
   }
@@ -91,18 +96,17 @@ export const ButtonContainer = styled.div`
 export const ButtonCard = styled.button`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: flex-end;
-  color: ${theme.colors.white};
-  background-color: ${theme.colors.green[100]};
-  border: 1px solid ${theme.colors.green[100]};
-  padding: 1.5vh 1vw;
+  width: max-content;
   height: 5vh;
+  padding: 1.5vh 1vw;
   font-size: 2vh;
   font-weight: 700;
-  display: flex;
-  align-items: center;
-  width: max-content;
+  color: ${theme.colors.white};
   cursor: pointer;
+  background-color: ${theme.colors.green[100]};
+  border: 1px solid ${theme.colors.green[100]};
   border-radius: 5px;
 
   :hover {
@@ -111,19 +115,21 @@ export const ButtonCard = styled.button`
   }
 
   @media (max-width: 1024px) {
+    height: 2vh;
+    padding: 0.5vh 1vw;
     font-size: 0.9vh;
     font-weight: 700;
-    padding: 0.5vh 1vw;
-    height: 2vh;
   }
+
   @media (max-width: 600px) {
-    font-size: 1.3vh;
+    height: 3vh;
     padding: 0.7vh 1vw;
-    height: 3vh;
-  }
-  @media (max-width: 415px) {
     font-size: 1.3vh;
-    padding: 0.5vh 1vw;
+  }
+
+  @media (max-width: 415px) {
     height: 3vh;
+    padding: 0.5vh 1vw;
+    font-size: 1.3vh;
   }
 `

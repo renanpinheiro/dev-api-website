@@ -15,7 +15,7 @@ export const SwitchContainer = styled.div`
 
   & > input {
     position: relative;
-    margin: -2px 0px 0 0;
+    margin: -2px 0 0 0;
     cursor: pointer;
 
     &::before,
@@ -33,7 +33,7 @@ export const SwitchContainer = styled.div`
 
     &::after {
       border-radius: 21px;
-      box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 0 1px 0 rgba(0 0 0 75%);
       transition: all 0.2s;
     }
 
@@ -60,7 +60,7 @@ export const SwitchContainer = styled.div`
 
     &:disabled::before {
       background-color: ${theme.colors.white};
-      border-color: rgba(0, 0, 0, 0.12);
+      border-color: rgba(0 0 0 12%);
       box-shadow: none;
     }
 
@@ -68,7 +68,7 @@ export const SwitchContainer = styled.div`
       background-color: ${theme.colors.white};
     }
 
-    &:disabled:checked:after {
+    &:disabled:checked::after {
       background-color: ${theme.colors.gray[600]};
       box-shadow: none;
     }

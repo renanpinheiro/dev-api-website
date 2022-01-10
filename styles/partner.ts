@@ -65,7 +65,6 @@ export const Pipe = styled.div`
   width: 12vh;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -95,7 +94,7 @@ export const CardImage = styled.div`
   text-align: center;
   background-color: ${theme.colors.gray[100]};
   border-radius: 10px;
-  box-shadow: 0px 10px 25px #5f47ff29;
+  box-shadow: 0 10px 25px #5f47ff29;
 
   h2 {
     font-size: 2vw;
@@ -110,9 +109,8 @@ export const CardImage = styled.div`
     width: 100%;
     height: 30vh;
     padding: 3vh 3vh 0 3vh;
-
     margin-bottom: 2.5vh;
-    box-shadow: 0px 10px 20px #5f47ff29;
+    box-shadow: 0 10px 20px #5f47ff29;
   }
 `
 export const ImageCardContainer = styled.div`
@@ -181,13 +179,13 @@ export const CardPatner = styled.div`
   padding: 3vh 1.5vw 5vh 1.5vw;
   margin-top: 2vh;
   border-radius: 10px;
-  box-shadow: 0px 10px 25px #5f47ff29;
+  box-shadow: 0 10px 25px #5f47ff29;
 
   @media (max-width: 900px) {
     flex: 0 0 100%;
     padding: 3vh 1.7vw 5vh 4vw;
     font-size: 1.7vh;
-    box-shadow: 0px 10px 10px #5f47ff29;
+    box-shadow: 0 10px 10px #5f47ff29;
   }
 
   p {
@@ -229,7 +227,7 @@ export const SubText = styled.li`
   justify-self: flex-start;
   padding-left: 2vh;
 
-  :before {
+  ::before {
     display: flex;
     align-self: center;
     justify-self: center;
@@ -470,7 +468,7 @@ export const FormContainer = styled.div`
   padding: 4vh 1vw 4vh 1vw;
   background-color: ${theme.colors.white};
   border-radius: 10px;
-  box-shadow: 0px 10px 25px #5f47ff29;
+  box-shadow: 0 10px 25px #5f47ff29;
 
   @media (max-width: 996px) {
     width: 100%;

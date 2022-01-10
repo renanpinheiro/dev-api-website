@@ -106,11 +106,13 @@ export const HeroContentImage = styled.div`
     img {
       width: 60vw;
     }
+
     padding: 12vh 5vw 8vh 0;
   }
 
   @media (max-width: 375px) {
     padding-top: 3vh;
+
     img {
       display: none;
     }
@@ -140,6 +142,7 @@ export const HeroContent = styled.div`
     align-items: flex-start;
     text-align: left;
   }
+
   > h1 {
     font-size: 2.625rem;
 
@@ -193,7 +196,6 @@ export const Pipe = styled.div`
   width: 10vw;
   height: 3px;
   margin-bottom: 10px;
-
   background-color: ${theme.colors.secondary};
 
   @media (max-width: 576px) {
@@ -245,7 +247,6 @@ export const ButtonContainer = styled.div`
 export const HistorySuccessContainer = styled.div`
   display: flex;
   flex-direction: column;
-
   width: 100vw;
   padding-top: 5vh;
   text-align: center;

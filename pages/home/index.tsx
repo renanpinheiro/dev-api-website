@@ -13,6 +13,10 @@ import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
+import { BoxReverse } from '../../components/BoxReverse'
+import { CompanyBenefits } from '../../components/CompanyBenefits'
+import { benefits } from '../../constants/benefits'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -86,37 +90,6 @@ const Home = () => {
       </S.Hero>
 
       <S.Content>
-        <S.Carrousel>
-          {isMobile ? (
-            <CarrouselWithOutSSR
-              items={constumersMobile}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Empresas que já desbloquearam o{' '}
-                    <b>poder da integração de sistemas</b>
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          ) : (
-            <MultiCarrouselWithOutSSR
-              interval={2000}
-              items={costumers}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Empresas que já desbloquearam o{' '}
-                    <b>poder da integração de sistemas</b>
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          )}
-        </S.Carrousel>
-
         <S.PlatformContainer>
           <S.Platform>
             <S.Pipe />
@@ -150,6 +123,54 @@ const Home = () => {
             })}
           </S.PlatformDetails>
         </S.PlatformContainer>
+
+        <S.CarrouselImageContainer>
+          <img
+            src="/images/connectors-computer.png"
+            alt="Connectors Computer"
+          />
+        </S.CarrouselImageContainer>
+        <S.Carrousel>
+          {isMobile ? (
+            <CarrouselWithOutSSR
+              items={connectorsMobile}
+              title={
+                <S.CarrouselTitle>
+                  <S.Pipe />
+                  <h2>
+                    Mais de 300 conectores pré-construídos{' '}
+                    <b> e prontos para uso </b>
+                  </h2>
+                </S.CarrouselTitle>
+              }
+            />
+          ) : (
+            <MultiCarrouselWithOutSSR
+              itemsPerSlide={9}
+              interval={2000}
+              items={connectors}
+              title={
+                <S.CarrouselTitle>
+                  <S.Pipe />
+                  <h2>
+                    Mais de 300 conectores pré-construídos{' '}
+                    <b> e prontos para uso </b>
+                  </h2>
+                </S.CarrouselTitle>
+              }
+            />
+          )}
+        </S.Carrousel>
+
+        <S.ButtonContainer>
+          <ButtonLink
+            text="Ver conectores"
+            href="/conectores"
+            target="_self"
+            size="default"
+            type="default"
+          />
+        </S.ButtonContainer>
 
         <S.BusinessContainer>
           <S.Pipe />
@@ -205,6 +226,52 @@ const Home = () => {
         </S.BusinessContainer>
 
         <S.FeaturesContainer>
+          <S.JoinNowContainer>
+            <S.Pipe />
+            <h2>
+              As empresas possuem diversos sistemas{' '}
+              <b>que não conversam entre si</b>
+            </h2>
+            <p>Com o iPaaS e API Managaer da DevApi isso acabou!</p>
+          </S.JoinNowContainer>
+
+          <S.SystemContainer>
+            <S.IPaasContainer>
+              <h2>
+                <b>iPaaS</b>
+              </h2>
+              <p>
+                Plataforma de Integração de Sistemas como Serviço que agiliza a
+                integração entre sistemas, a orquestração de dados e a
+                automatização de processos, tanto na nuvem como on-premise. O
+                iPaaS da DevApi funciona como um tradutor universal entre todos
+                os sistemas, colocando os diferentes softwares para conversar
+                entre si.
+              </p>
+
+              <S.SystemImageContainer src="/images/ipaas.png" alt="iPaas" />
+            </S.IPaasContainer>
+            <S.ApiManagerContainer>
+              <h2>
+                <b>API Manager</b>
+              </h2>
+              <p>
+                Com o API Manager da DevApi sua empresa pode construir,
+                distribuir e gerenciar APIs de maneira veloz e altamente
+                escalável, com uma arquitetura ágil, robusta e muito segura.
+                Fundamental para desenvolver, monitorar, distribuir e monetizar
+                APIs, expandindo o ecossistema entre instituições, clientes,
+                fornecedores e parceiros.
+              </p>
+              <S.SystemImageContainer
+                src="/images/api-manager.png"
+                alt="API Manager"
+              />
+            </S.ApiManagerContainer>
+          </S.SystemContainer>
+        </S.FeaturesContainer>
+
+        <S.FeaturesContainer>
           <S.Pipe />
           <h2>Poderosa, mas simples e intuitiva</h2>
           <p>
@@ -229,55 +296,271 @@ const Home = () => {
           </S.Features>
         </S.FeaturesContainer>
 
-        <S.Carrousel>
-          {isMobile ? (
-            <CarrouselWithOutSSR
-              items={connectorsMobile}
-              title={
-                <S.CarrouselTitle>
+        <S.ListIconContainer>
+          <ListIconCostumer
+            items={costumers}
+            title={
+              <S.ListIconlTitle>
+                <S.PipeContainer>
                   <S.Pipe />
-                  <h2>
-                    <b> Mais de 300 conectores</b> pré-construídos e prontos
-                    para uso
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          ) : (
-            <MultiCarrouselWithOutSSR
-              itemsPerSlide={9}
-              interval={2000}
-              items={connectors}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    <b> Mais de 300 conectores</b> pré-construídos e prontos
-                    para uso
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          )}
-        </S.Carrousel>
-
-        <S.ButtonContainer>
-          <ButtonLink
-            text="Ver conectores"
-            href="/conectores"
-            target="_self"
-            size="default"
-            type="default"
+                </S.PipeContainer>
+                Empresas que já desbloquearam o{' '}
+                <span>poder da integração de sistemas</span>
+              </S.ListIconlTitle>
+            }
           />
-        </S.ButtonContainer>
+        </S.ListIconContainer>
 
         <S.Quote>
           <QuoteCarouselWithOutSSR quotes={quotes} />
         </S.Quote>
 
-        <S.CallToActionContainer>
-          <CallToAction />
-        </S.CallToActionContainer>
+        <BoxReverse
+          hasPipe={true}
+          title={
+            <S.ContentContainer>
+              <h2>
+                Metodologia <b>Full Cycle</b>
+              </h2>
+            </S.ContentContainer>
+          }
+          content={
+            <S.ContentContainer>
+              <p>
+                Do kickoff à entrega, passando por desenvolvimento, homologação
+                e onboarding,<b> você jamais estará sozinho!</b> O resultado é
+                mais entregas em menor tempo e com maior qualidade, redução de
+                custos, mais transparência e visibilidade do projeto,
+                antecipação de problemas e tomadas de decisão mais assertivas.
+              </p>
+
+              <p>
+                A plataforma iPaaS & API Manager da DevApi é uma{' '}
+                <b>
+                  {' '}
+                  plataforma de integração híbrida (HIP) projetada para
+                  simplificar integrações complexas, minimizando o tempo de
+                  entrega.{' '}
+                </b>{' '}
+                Em paralelo, colocamos à sua disposição um time especialista em
+                integração de sistemas e APIs, arquitetura, infraestrutura,
+                desenvolvimento, segurança, soluções de negócio e customer
+                success para apoiar você com foco nas necessidades da sua
+                operação.
+              </p>
+
+              <p>
+                Do início ao fim, estaremos sempre do seu lado. Conte com a
+                gente:{' '}
+                <b>
+                  {' '}
+                  um time de especialistas ao serviço do sucesso da sua empresa!{' '}
+                </b>
+              </p>
+
+              <ButtonLink
+                text="Conversar com o time!"
+                href="/converse-com-especialista"
+                target="_self"
+                type="primary"
+                size="default"
+                margin="45px 0px 0px 0px"
+              />
+            </S.ContentContainer>
+          }
+          image="/images/full-cycle.png"
+        />
+
+        <BoxReverse
+          flexDirection="row-reverse"
+          hasPipe={true}
+          title={
+            <S.ContentContainer>
+              <h2>
+                Em 2022, as APIs serão o{' '}
+                <b> principal vetor de ataque ás empresas</b>
+              </h2>
+            </S.ContentContainer>
+          }
+          content={
+            <S.ContentContainer>
+              <p>
+                A segurança da sua empresa começa aqui! As soluções de
+                integração disponíveis no mercado não protegem completamente os
+                dados trafegados por APIs e, por isso, sua empresa fica
+                vulnerável a ataques. Além disso, as recentes mudanças no
+                mercado, com a LGPD, Open Finance e trabalho remoto, impõem a
+                necessidade de um novo patamar de segurança.
+              </p>
+
+              <p>
+                <b>
+                  {' '}
+                  Vai deixar os dados da sua empresa expostos? Garanta a
+                  segurança da sua operação!
+                </b>{' '}
+              </p>
+
+              <ButtonLink
+                text="Quero integrações seguras!"
+                href="/converse-com-especialista"
+                target="_self"
+                type="default"
+                size="default"
+                margin="45px 0px 0px 0px"
+              />
+            </S.ContentContainer>
+          }
+          image="/images/lgpd.png"
+        />
+
+        <S.SecurityContainer>
+          <S.SecurityTextContainer>
+            <S.Pipe />
+            <h2>
+              Conheça a plataforma e integração de sistemas
+              <b> mais segura do mercado</b>
+            </h2>
+            <p>A DevApi conta com três camadas de segurança:</p>
+          </S.SecurityTextContainer>
+        </S.SecurityContainer>
+
+        <BoxReverse
+          hasPipe={false}
+          title={
+            <S.SecurityContentContainer>
+              <h2>
+                <b>1° Camada</b>
+              </h2>
+            </S.SecurityContentContainer>
+          }
+          content={
+            <S.SecurityContentContainer>
+              <p>
+                Na 1° camada, utilizamos <b>WAF</b>, que fornece proteção na
+                entrada de dados da plataforma, além de um balanceador de carga.
+              </p>
+            </S.SecurityContentContainer>
+          }
+          image="/images/security.png"
+        />
+
+        <BoxReverse
+          hasPipe={false}
+          flexDirection="row-reverse"
+          title={
+            <S.SecurityContentContainer>
+              <h2>
+                <b>2° Camada</b>
+              </h2>
+            </S.SecurityContentContainer>
+          }
+          content={
+            <S.SecurityContentContainer>
+              <p>
+                A 2ª camada é o <b>Middleware de Segurança Heimdall</b>, um
+                módulo exclusivo cujo nome remete ao deus nórdico que tem a
+                missão de guardar a ponte entre céu e a terra. O Heimdall
+                identifica qualquer tentativa de ameaça à plataforma e aos
+                nossos clientes, analisando todas as informações trafegadas nas
+                requisições feitas. Possui um dashboard com mapa das ameaças
+                registradas e um relatório que pode ser utilizado para medidas
+                judiciais contra crimes cibernéticos, uma vez que armazena IP,
+                Latitude, Provedor de Internet, Data e Hora de todas as
+                tentativas de invasão/ameaças.
+              </p>
+            </S.SecurityContentContainer>
+          }
+          image="/images/heimdal.png"
+        />
+
+        <BoxReverse
+          hasPipe={false}
+          title={
+            <S.SecurityContentContainer>
+              <h2>
+                <b>3° Camada</b>
+              </h2>
+            </S.SecurityContentContainer>
+          }
+          content={
+            <S.SecurityContentContainer>
+              <p>
+                A 3ª camada usa a{' '}
+                <b>
+                  Criptografia AES, da Agência Nacional de Segurança Americana
+                  (NSA)
+                </b>
+                , utilizada na transmissão de dados governamentais e dados
+                particulares de saúde, considerada a mais robusta que existe.
+                Máxima segurança para a sua empresa!
+              </p>
+            </S.SecurityContentContainer>
+          }
+          image="/images/aes.png"
+        />
+
+        <S.SecurityContainer>
+          <S.SecurityTextContainer>
+            <p>
+              Além de todas as camadas de segurança, nossa equipe é especialista
+              no Padrão de Desenvolvimento Seguro (PDS). Esse padrão é uma forma
+              de garantir mais segurança, mais qualidade e maior disponibilidade
+              de um produto.{' '}
+            </p>
+            <p>
+              {' '}
+              <b>
+                Proteja os dados críticos da sua empresa e obtenha total
+                visibilidade e controle tanto na nuvem como on-premise!{' '}
+              </b>
+            </p>
+
+            <ButtonLink
+              text="Consulte um especialista!"
+              href="/converse-com-especialista"
+              target="_self"
+              type="default"
+              size="default"
+              margin="45px 0px 0px 0px"
+            />
+          </S.SecurityTextContainer>
+        </S.SecurityContainer>
+
+        <S.SecurityContainer>
+          <S.CompanyContainer>
+            <S.Pipe />
+            <h2>
+              <b> Com a Plataforma de Integração e Gestão de APIs</b> da DevApi,
+              sua empresa vai:
+            </h2>
+          </S.CompanyContainer>
+        </S.SecurityContainer>
+
+        <S.BenefitsContainer>
+          {benefits.map(description => (
+            <CompanyBenefits description={description} />
+          ))}
+        </S.BenefitsContainer>
+
+        <S.UnlockContainer>
+          <S.SecurityTextContainer>
+            <S.Pipe />
+            <h2>
+              Encaixe todas as peças da sua operação e
+              <b> desbloqueie agora o poder da integração de sistemas</b>
+            </h2>
+
+            <ButtonLink
+              text="Consulte um especialista!"
+              href="/converse-com-especialista"
+              target="_self"
+              type="default"
+              size="default"
+              margin="45px 0px 0px 0px"
+            />
+          </S.SecurityTextContainer>
+        </S.UnlockContainer>
       </S.Content>
     </>
   )

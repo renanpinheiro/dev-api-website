@@ -19,16 +19,16 @@ export const ListImageContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
+  width: 100%;
 `
 export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 130px;
-  margin: 0 25px;
   padding-bottom: 2vh;
+  margin: 0 25px;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;

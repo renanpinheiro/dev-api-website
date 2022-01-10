@@ -117,9 +117,9 @@ export const SearchContent = styled.div`
   width: 75vw;
   height: 16vh;
   padding: 0 3vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255 255 255);
   border-radius: 10px;
-  box-shadow: 0px 6px 28px #5f47ff36;
+  box-shadow: 0 6px 28px #5f47ff36;
 
   @media (max-width: 996px) {
     display: block;
@@ -195,7 +195,7 @@ export const Card = styled.div`
     margin-bottom: 1vh;
     border-radius: 8px;
     border-image: initial;
-    box-shadow: rgb(86 57 254 / 15%) 0px 5px 40px;
+    box-shadow: rgb(86 57 254 / 15%) 0 5px 40px;
   }
 
   > span {

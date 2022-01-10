@@ -5,17 +5,14 @@ import { IInputStyles, ILabelStyles } from './InputText.interface'
 
 export const Container = styled.div`
   display: flex;
-
   flex-direction: column;
   width: 100%;
-
   margin-bottom: 20px;
 `
 
 export const Label = styled.label<ILabelStyles>`
   margin-bottom: 5px;
   font-size: 1.2rem;
-
   ${({ isRequired }) =>
     isRequired &&
     css`
@@ -77,12 +74,4 @@ export const Textarea = styled.textarea<IInputStyles>`
     css`
       border-color: ${theme.colors.red};
     `};
-
-  :focus-visible {
-    outline: none;
-  }
-
-  :focus {
-    border-color: ${theme.colors.gray[700]};
-  }
 `

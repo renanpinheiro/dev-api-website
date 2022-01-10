@@ -1,7 +1,7 @@
 export const connectors = [
   {
     name: 'sap',
-    url: '/images/connectors/sap-one.png',
+    url: '/images/connectors/sap.png',
   },
   {
     name: 'oracle',
@@ -13,15 +13,15 @@ export const connectors = [
   },
   {
     name: 'correios',
-    url: '/images/connectors/correios.png',
+    url: '/images/connectors/pipefy.png',
   },
   {
     name: 'picpay',
-    url: '/images/connectors/picpay.png',
+    url: '/images/connectors/salesforce.png',
   },
   {
     name: 'totvs-black',
-    url: '/images/connectors/totvs-black.png',
+    url: '/images/connectors/totvs.png',
   },
   {
     name: 'vtex',
@@ -40,14 +40,14 @@ export const connectors = [
 export const connectorsMobile = {
   3: [
     {
-      1: '/images/connectors/sap-one.png',
+      1: '/images/connectors/sap.png',
       2: '/images/connectors/oracle.png',
       3: '/images/connectors/hubspot.png',
     },
     {
-      1: '/images/connectors/correios.png',
-      2: '/images/connectors/picpay.png',
-      3: '/images/connectors/totvs-black.png',
+      1: '/images/connectors/pipefy.png',
+      2: '/images/connectors/salesforce.png',
+      3: '/images/connectors/totvs.png',
     },
     {
       1: '/images/connectors/vtex.png',

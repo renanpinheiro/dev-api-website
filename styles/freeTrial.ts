@@ -9,7 +9,6 @@ export const Container = styled.div`
 
 export const FormContainer = styled.div`
   z-index: 17;
-
   display: flex;
   flex-direction: column;
   width: 38vw;
@@ -17,6 +16,7 @@ export const FormContainer = styled.div`
   @media (max-width: 1600px) {
     width: 50vw;
   }
+
   @media (max-width: 1200px) {
     width: 70vw;
   }

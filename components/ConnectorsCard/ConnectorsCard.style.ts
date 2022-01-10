@@ -7,15 +7,12 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   width: 25vw;
   height: 28vh;
-
   padding: 35px 30px;
   margin: 20px;
-
   border-radius: 10px;
-  box-shadow: 0px 10px 25px #5f47ff29;
+  box-shadow: 0 10px 25px #5f47ff29;
 
   @media (max-width: 1400px) {
     height: 32vh;
@@ -48,7 +45,7 @@ export const Connector = styled.div`
     width: 6vw;
     height: 6vw;
     border-radius: 10px;
-    box-shadow: 0px 10px 25px #5f47ff29;
+    box-shadow: 0 10px 25px #5f47ff29;
 
     @media (max-width: 996px) {
       width: 20vw;
@@ -83,9 +80,9 @@ export const Plus = styled.span`
 `
 
 export const Text = styled.div`
+  display: flex;
   max-width: 40ch;
   text-align: center;
-  display: flex;
 
   > p {
     line-height: 1.3;
