@@ -98,6 +98,10 @@ export const SubText = styled.p`
   margin-top: 1.1vh;
   font-size: 1.375rem;
   color: ${theme.colors.primary};
+
+  b {
+    font-weight: 700;
+  }
 `
 
 export const TextContainer = styled.div`

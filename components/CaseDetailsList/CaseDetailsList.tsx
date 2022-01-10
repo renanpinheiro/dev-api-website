@@ -5,8 +5,8 @@ import * as S from './CaseDetailsList.style'
 
 const CaseDetailsList = ({ title, detail, border }: ICaseDetail) => {
   return (
-    <S.container border={border}>
-      <S.containerColuns>
+    <S.Container border={border}>
+      <S.ContainerColuns>
         <S.TitleContainer>
           <S.Pipe />
           <S.TitleText>{title}</S.TitleText>
@@ -14,8 +14,8 @@ const CaseDetailsList = ({ title, detail, border }: ICaseDetail) => {
         <S.DetailContainer>
           <div dangerouslySetInnerHTML={{ __html: detail }} />
         </S.DetailContainer>
-      </S.containerColuns>
-    </S.container>
+      </S.ContainerColuns>
+    </S.Container>
   )
 }
 export { CaseDetailsList }

@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 import { theme } from '../../styles/theme'
 import { IBorderCase } from './CaseDetailsList.interface'
-export const container = styled.div<IBorderCase>`
+
+export const Container = styled.div<IBorderCase>`
   display: flex;
   width: 100%;
   padding-top: 10vh;
   padding-bottom: 8vh;
-  border-bottom: ${props =>
-    props.border === 'true' ? '1px solid #e2e8f0' : 'none'};
+  border-bottom: ${props => (props.border ? '1px solid #e2e8f0' : 'none')};
 `
-export const containerColuns = styled.div`
+export const ContainerColuns = styled.div`
   display: flex;
   flex-direction: row;
   align-content: space-between;

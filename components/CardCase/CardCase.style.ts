@@ -11,6 +11,7 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
+    padding: 5vh 10vw 5vh 8vh;
   }
 
   @media (max-width: 415px) {

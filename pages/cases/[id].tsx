@@ -14,7 +14,6 @@ const CaseDetails = () => {
   const routerId = router.asPath
   const [splitId] = routerId.split('?')
   const [, , currentId] = splitId.split('/')
-
   const [titleCase, setTitleCase] = useState('')
   const [shortTextCase, setShortTextCase] = useState('')
   const [imageCase, setImagetCase] = useState('')
@@ -88,30 +87,18 @@ const CaseDetails = () => {
       </Hero>
       <S.Container id="cases">
         <S.DatailsListContainer>
-          <CaseDetailsList title="Sobre" detail={aboutCase} border="true" />
+          <CaseDetailsList title="Sobre" detail={aboutCase} border />
 
-          <CaseDetailsList
-            title="Desafio"
-            detail={challengeCase}
-            border="true"
-          />
+          <CaseDetailsList title="Desafio" detail={challengeCase} border />
 
-          <CaseDetailsList
-            title="Objetivo"
-            detail={objectiveCase}
-            border="true"
-          />
+          <CaseDetailsList title="Objetivo" detail={objectiveCase} border />
 
-          <CaseDetailsList
-            title="Solução"
-            detail={solutionCase}
-            border="true"
-          />
+          <CaseDetailsList title="Solução" detail={solutionCase} border />
 
           <CaseDetailsList
             title="Resultado"
             detail={resultCase}
-            border="false"
+            border={false}
           />
         </S.DatailsListContainer>
 

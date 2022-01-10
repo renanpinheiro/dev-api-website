@@ -77,7 +77,7 @@ const Solutions = () => {
                   {page && page.contentText}
                 </S.ParagraphContainer>
 
-                {!page.textJoinNow && (
+                {!page?.textJoinNow && (
                   <>
                     <ButtonLink
                       text="Quero integrar agora!"
@@ -91,7 +91,7 @@ const Solutions = () => {
               </S.TitleContainer>
 
               <S.ComponentContainer>
-                {page.integrationCard ? (
+                {page?.integrationCard ? (
                   page.integrationCard.map(pageAtributes => {
                     return (
                       <IntegrationCardWithoutSSR
@@ -108,7 +108,7 @@ const Solutions = () => {
               </S.ComponentContainer>
             </S.TextContainer>
 
-            {page.textJoinNow && (
+            {page?.textJoinNow && (
               <S.JoinNowContainer>
                 <S.PipeJoinNow />
                 {page.textJoinNow}

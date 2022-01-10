@@ -143,22 +143,30 @@ export const CarrouselTitle = styled.div`
     font-size: 2.6rem;
     color: ${theme.colors.primary};
 
-    @media (max-width: 576px) {
-      margin-top: 10px;
-    }
-
     @media (min-width: 1600px) {
       font-size: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      text-align: left;
+    }
+
+    @media (max-width: 576px) {
+      margin-top: 10px;
     }
 
     > b {
       font-weight: 700;
     }
   }
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+  }
 `
 
 export const Quote = styled.div`
-  padding: 10vh 3vw 5vh 5vw;
+  padding: 10vh 3vw 15vh 5vw;
 
   @media (max-width: 900px) {
     padding: 0 3vw 5vh 5vw;
@@ -532,13 +540,13 @@ export const JoinNowContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
+  text-align: center;
 
   > h2 {
     max-width: 30ch;
     margin-bottom: 15px;
     font-size: 2.625rem;
     line-height: 1.2;
-    text-align: center;
 
     @media (max-width: 996px) {
       width: 100%;
@@ -559,7 +567,12 @@ export const JoinNowContainer = styled.div`
     overflow: hidden;
     font-size: 1.125rem;
     line-height: 1.3;
-    text-align: center;
+  }
+
+  @media (max-width: 996px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
   }
 `
 
@@ -595,8 +608,17 @@ export const SystemContainer = styled.div`
   }
 `
 
-export const SystemImageContainer = styled.img`
+export const SystemImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+`
+
+export const SystemImage = styled.img`
   object-fit: cover;
+  width: 100%;
 
   @media (max-width: 900px) {
     object-fit: cover;
@@ -617,7 +639,9 @@ export const ApiManagerContainer = styled.div`
   }
 
   @media (max-width: 900px) {
+    align-items: flex-start;
     width: 100%;
+    text-align: left;
   }
 `
 
@@ -633,7 +657,9 @@ export const IPaasContainer = styled.div`
   }
 
   @media (max-width: 900px) {
+    align-items: flex-start;
     width: 100%;
+    text-align: left;
   }
 `
 
@@ -668,6 +694,7 @@ export const SecurityContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 5vh;
 `
 
 export const UnlockContainer = styled.div`
@@ -678,6 +705,34 @@ export const UnlockContainer = styled.div`
   margin-bottom: 15vh;
 `
 
+export const UnlockTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  b {
+    font-weight: 700;
+    color: ${theme.colors.primary};
+  }
+
+  > h2 {
+    max-width: 40ch;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-align: center;
+
+    @media (max-width: 996px) {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 996px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 8vw 0 8vw;
+  }
+`
 export const SecurityTextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -703,30 +758,38 @@ export const SecurityTextContainer = styled.div`
     @media (min-width: 1600px) {
       font-size: 3.25rem;
     }
+
+    @media only screen and (max-width: 1023px) {
+      text-align: left;
+    }
   }
 
   p {
     max-width: 90ch;
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 1.125rem;
+    font-size: 1.525rem;
     line-height: 1.3;
     text-align: center;
 
     @media (max-width: 996px) {
       width: 100%;
-      font-size: 1rem;
+      font-size: 1.125rem;
+      text-align: left;
     }
   }
 
   @media only screen and (max-width: 1023px) {
-    width: 100%;
-    height: auto;
-    padding: 0 3vw 0 3vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 8vw 0 8vw;
   }
 `
-
 export const SecurityContentContainer = styled.div`
+  h2 {
+    margin-bottom: 1vh;
+  }
+
   b {
     font-weight: 700;
     color: ${theme.colors.primary};
@@ -756,22 +819,12 @@ export const CompanyContainer = styled.div`
 
   > h2 {
     max-width: 40ch;
-    font-size: 2.625rem;
     line-height: 1.2;
-
-    @media (max-width: 996px) {
-      font-size: 1.5rem;
-    }
-
-    @media (min-width: 1600px) {
-      font-size: 3.25rem;
-    }
   }
 
   @media (max-width: 996px) {
-    align-items: center;
+    width: 100%;
     padding: 0 8vw 0 8vw;
-    text-align: center;
   }
 `
 
