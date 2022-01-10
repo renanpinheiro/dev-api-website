@@ -3,9 +3,9 @@ import React from 'react'
 import { ICaseDetail } from './CaseDetailsList.interface'
 import * as S from './CaseDetailsList.style'
 
-const CaseDetailsList = ({ title, detail, border }: ICaseDetail) => {
+const CaseDetailsList = ({ title, detail, hasBorder }: ICaseDetail) => {
   return (
-    <S.Container border={border}>
+    <S.Container hasBorder={hasBorder}>
       <S.ContainerColuns>
         <S.TitleContainer>
           <S.Pipe />

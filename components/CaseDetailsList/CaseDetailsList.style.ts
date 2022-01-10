@@ -8,7 +8,7 @@ export const Container = styled.div<IBorderCase>`
   width: 100%;
   padding-top: 10vh;
   padding-bottom: 8vh;
-  border-bottom: ${props => (props.border ? '1px solid #e2e8f0' : 'none')};
+  border-bottom: ${props => (props.hasBorder ? '1px solid #e2e8f0' : 'none')};
 
   @media (max-width: 768px) {
     padding-top: 1vh;

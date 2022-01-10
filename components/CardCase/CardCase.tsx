@@ -13,6 +13,7 @@ export const CardCase = ({ cases }: ICardCases) => {
   }
   const { width } = useWindowDimensions()
   const isMobile = width <= 700
+
   return (
     <S.Container>
       {cases.map((value, index) => {
