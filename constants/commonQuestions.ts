@@ -26,7 +26,7 @@ export const commonQuestions = [
   },
   {
     questions:
-      'O que diferencia a DevApi de outras opções no mercado de integração?',
+      'O que diferencia a DevApi de outras opções no mercado de integração',
     answers:
       'Os principais diferenciais da plataforma de integração da DevApi estão relacionados à alta segurança da plataforma contra ameaças, à metodologia Full Cycle, à facilidade no uso da ferramenta, alta performance e robustez. É uma ferramenta poderosa, mas intuitiva e fácil de usar, o que proporciona uma experiência de usuário incrível, tanto para usuários no-code, em que não é necessário programar para desenhar os fluxos de trabalho (bastando arrastar e soltar), como para o usuário que procura as multipotencialidades do high-code, porém sem se preocupar com a estrutura de pastas, conectores e configuração de deploy. Existem concorrentes que prometem, mas a DevApi entrega de verdade!',
   },

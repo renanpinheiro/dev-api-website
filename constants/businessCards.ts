@@ -1,7 +1,7 @@
 export const businessCards = [
   {
     title: 'Integrações para Gestão',
-    text: 'Sistemas ERP desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
+    text: 'ERPs desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
     link: '/solucoes/gestao',
     connectors: [
       {

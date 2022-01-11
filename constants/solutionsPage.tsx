@@ -33,7 +33,7 @@ export const solutionsPage = {
       text: 'Cada empresa enfrenta diferentes <b>desafios de gestão. Supere os seus!</b>',
     },
     subtitle:
-      'Sistemas ERP desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
+      'ERPs desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
     contentTitle: (
       <h2>
         Visão centralizada <b>do seu negócio!</b>
@@ -231,12 +231,6 @@ export const solutionsPage = {
         copiar e colar, dados perdidos no CRM, follows não realizados,
         relatórios trabalhosos e pouco confiáveis. Transforme seu time comercial
         em uma verdadeira máquina de vendas!
-        <br />
-        <br />
-        <b>
-          Confira algumas das integrações de vendas que realizamos para os
-          nossos clientes:
-        </b>
       </p>
     ),
     component: (

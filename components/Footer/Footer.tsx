@@ -73,25 +73,24 @@ const Footer = () => (
             <Link href="https://www.instagram.com/devapi.ipaas/">
               <a title="Instagram" target="_blank" rel="noopener">
                 <S.SocialMediaLogo
-                  src="/socialMedia/instagram-primary.svg"
-                  alt={'Click para ir ao instagram'}
+                  src="/images/instagram.svg"
+                  alt="Instagram"
                 />
               </a>
             </Link>
             <Link href="https://www.facebook.com/DevApiOficial/">
               <a title="Facebook" target="_blank" rel="noopener">
-                <S.SocialMediaLogo
-                  src="/socialMedia/facebook-primary.svg"
-                  alt={'Click para ir ao facebook'}
-                />
+                <S.SocialMediaLogo src="/images/facebook.svg" alt="Facebook" />
               </a>
             </Link>
             <Link href="https://www.linkedin.com/company/devapitecnologia/">
               <a title="Linkedin" target="_blank" rel="noopener">
-                <S.SocialMediaLogo
-                  src="/socialMedia/linkedin-primary.svg"
-                  alt={'Click para ir ao linkedin'}
-                />
+                <S.SocialMediaLogo src="/images/linkedin.svg" alt="Linkedin" />
+              </a>
+            </Link>
+            <Link href="https://www.youtube.com/channel/UC-ocfHETIE550ZN5CP13H5w">
+              <a title="Youtube" target="_blank" rel="noopener">
+                <S.SocialMediaLogo src="/images/youtube.svg" alt="Youtube" />
               </a>
             </Link>
           </S.SocialLogocontainer>

@@ -565,7 +565,7 @@ export const JoinNowContainer = styled.div`
   p {
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     line-height: 1.3;
   }
 

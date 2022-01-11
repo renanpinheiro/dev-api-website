@@ -10,7 +10,7 @@ const CallToAction = () => {
         <S.Title>
           <hr />
           <h3>
-            Quer testar a DevApi <b>gratuitamente?</b>
+            Solicite uma <b>demonstração agora!</b>
           </h3>
         </S.Title>
         <ButtonLink
