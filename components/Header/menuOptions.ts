@@ -5,7 +5,9 @@ export const handleNavLink = (route: string): INavLinks[] => {
   const handledNavLinks = navLinks.map(link => {
     return {
       name: link.name,
-      isActive: link.dropDown && link.dropDown.some(item => item.url === route),
+      isActive:
+        (link.dropDown && link.dropDown.some(item => item.url === route)) ||
+        link.url === route,
       dropDown:
         link.dropDown &&
         link.dropDown.map(item => {

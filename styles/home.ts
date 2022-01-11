@@ -116,9 +116,11 @@ export const CarrouselImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 8vw;
+  margin-bottom: 10vh;
 
-  @media (max-width: 900px) {
-    display: none;
+  img {
+    width: 100%;
   }
 `
 
@@ -258,6 +260,10 @@ export const DetailsCard = styled.div`
     height: 100%;
     border-radius: 5px;
   }
+
+  @media (max-width: 900px) {
+    padding: 3vw;
+  }
 `
 
 export const DetailsText = styled.div`
@@ -272,6 +278,10 @@ export const DetailsText = styled.div`
     font-size: 4vh;
     font-weight: 700;
     color: ${theme.colors.green[100]};
+  }
+
+  @media (max-width: 900px) {
+    max-width: 20ch;
   }
 `
 
@@ -614,6 +624,10 @@ export const SystemImageContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 60vh;
+
+  @media (max-width: 900px) {
+    height: 45vh;
+  }
 `
 
 export const SystemImage = styled.img`
@@ -623,7 +637,6 @@ export const SystemImage = styled.img`
   @media (max-width: 900px) {
     object-fit: cover;
     width: 100%;
-    height: 100%;
   }
 `
 
