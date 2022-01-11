@@ -94,7 +94,7 @@ const Header = () => {
                   ref={dropdownRef}
                 >
                   <S.NavLink
-                    href={link.url ? link.url : '#'}
+                    href={link.url && link.url}
                     rel="noreferrer"
                     isActive={link.isActive}
                   >
