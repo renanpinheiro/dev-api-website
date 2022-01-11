@@ -3,7 +3,6 @@ import { INavLinks } from './Header.interface'
 
 export const handleNavLink = (route: string): INavLinks[] => {
   const handledNavLinks = navLinks.map(link => {
-    console.log(link)
     return {
       name: link.name,
       isActive:
