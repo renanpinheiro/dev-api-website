@@ -7,8 +7,7 @@ export interface IFindCaseById {
   objective_text: string
   solution_text: string
   result_text: string
-  image_main: string
-  image_cover: string
+  image: string
   seo: ICaseSeo
 }
 

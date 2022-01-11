@@ -37,7 +37,7 @@ const CaseDetails = () => {
     if (data) {
       setTitleCase(data.title)
       setShortTextCase(data.short_text)
-      setImagetCase(data.image_main)
+      setImagetCase(data.image)
       setaboutCase(data.about_text)
       setchallengeCase(data.challenge_text)
       setObjectiveCase(data.objective_text)
