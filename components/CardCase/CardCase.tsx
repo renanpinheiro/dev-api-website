@@ -20,7 +20,7 @@ export const CardCase = ({ cases }: ICardCases) => {
         return (
           <S.CardBox key={index}>
             <S.ImageContainer>
-              <img src={value.image_cover} />
+              <img src={value.image} />
             </S.ImageContainer>
             <S.Title>{value.title}</S.Title>
             <S.ContentText>{value.short_text}</S.ContentText>

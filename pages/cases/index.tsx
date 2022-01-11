@@ -43,6 +43,7 @@ const Cases = () => {
         <meta property="og:url" content="https://www.devapi.com.br/cases" />
         <link rel="canonical" href="https://www.devapi.com.br/cases" />
       </Head>
+
       <Hero>
         <S.HeroContent>
           <S.Pipe />
