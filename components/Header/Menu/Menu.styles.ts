@@ -278,7 +278,6 @@ export const AccordionCollapse = styled(AccordionBootstrap.Collapse)``
 
 export const Plans = styled.div`
   padding: 0.5rem 1rem;
-  margin-bottom: 70px;
   color: ${theme.colors.primary};
 
   > a {

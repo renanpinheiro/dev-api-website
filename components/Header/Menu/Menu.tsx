@@ -76,13 +76,22 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
                         </S.Card>
                       </S.Accordion>
                     ) : (
-                      <S.Plans>
-                        <Link href="/planos" activeClassName="activeLink">
-                          <a title="Planos" onClick={close} rel="noreferrer">
-                            Planos
-                          </a>
-                        </Link>
-                      </S.Plans>
+                      <>
+                        <S.Plans>
+                          <Link href="/cases" activeClassName="activeLink">
+                            <a title="Cases" onClick={close} rel="noreferrer">
+                              Cases
+                            </a>
+                          </Link>
+                        </S.Plans>
+                        <S.Plans>
+                          <Link href="/planos" activeClassName="activeLink">
+                            <a title="Planos" onClick={close} rel="noreferrer">
+                              Planos
+                            </a>
+                          </Link>
+                        </S.Plans>
+                      </>
                     )}
                   </React.Fragment>
                 )
@@ -93,8 +102,6 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
           <SocialVertical />
 
           <S.BgCicle />
-
-          <S.SignUp>Fazer teste gratuito</S.SignUp>
         </S.Container>
       </S.Menu>
     </>

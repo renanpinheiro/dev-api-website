@@ -85,18 +85,18 @@ const CaseDetails = () => {
       </Hero>
       <S.Container id="cases">
         <S.DatailsListContainer>
-          <CaseDetailsList title="Sobre" detail={aboutCase} border />
+          <CaseDetailsList title="Sobre" detail={aboutCase} hasBorder />
 
-          <CaseDetailsList title="Desafio" detail={challengeCase} border />
+          <CaseDetailsList title="Desafio" detail={challengeCase} hasBorder />
 
-          <CaseDetailsList title="Objetivo" detail={objectiveCase} border />
+          <CaseDetailsList title="Objetivo" detail={objectiveCase} hasBorder />
 
-          <CaseDetailsList title="Solução" detail={solutionCase} border />
+          <CaseDetailsList title="Solução" detail={solutionCase} hasBorder />
 
           <CaseDetailsList
             title="Resultado"
             detail={resultCase}
-            border={false}
+            hasBorder={false}
           />
         </S.DatailsListContainer>
 

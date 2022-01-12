@@ -36,7 +36,7 @@ export const InfoContainer = styled.div`
     max-width: 120ch;
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 2vh;
+    font-size: 1.7rem;
     line-height: 1.3;
   }
 `
