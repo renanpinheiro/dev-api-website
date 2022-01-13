@@ -72,6 +72,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
     target: loadMoreRef,
     onIntersect: fetchNextPage,
     enabled: hasNextPage,
+    root: <React.Fragment />,
   })
 
   return (
