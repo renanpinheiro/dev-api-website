@@ -1,15 +1,12 @@
 import React from 'react'
 
+import { handleScrollTop } from '../../../hooks/handleScrollTop'
 import Link from '../Link'
 import { IDropdownProps } from './Dropdown.interface'
 import * as S from './Dropdown.style'
 
 const Dropdown = ({ children, isOpen, dropdownItems }: IDropdownProps) => {
   const hasTwoColumns = dropdownItems && dropdownItems.length > 5
-
-  const handleTop = () => {
-    scrollTo({ top: 50, behavior: 'smooth' })
-  }
 
   return (
     <S.Container>
@@ -20,7 +17,7 @@ const Dropdown = ({ children, isOpen, dropdownItems }: IDropdownProps) => {
             return (
               <S.DropdownItemContainer key={index} isActive={item.isActive}>
                 <Link href={item.url} activeClassName="active">
-                  <S.DropdownItem id={`${index}`} onClick={handleTop}>
+                  <S.DropdownItem id={`${index}`} onClick={handleScrollTop}>
                     {item.name}
                   </S.DropdownItem>
                 </Link>

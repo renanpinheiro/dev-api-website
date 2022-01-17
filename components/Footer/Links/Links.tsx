@@ -2,20 +2,18 @@ import React from 'react'
 
 import Link from 'next/link'
 
+import { handleScrollTop } from '../../../hooks/handleScrollTop'
 import { IContainerLinkProps } from './Links.interfaces'
 import * as S from './Links.styles'
 
 const Links = ({ title, links }: IContainerLinkProps) => {
-  const handleTop = () => {
-    scrollTo({ top: 50, behavior: 'smooth' })
-  }
   const handleLinks = links.map((link, index) => {
     return (
       <Link key={index} href={link.url}>
         <a
           title={link.name}
           target={link.target}
-          onClick={handleTop}
+          onClick={handleScrollTop}
           rel="noreferrer"
         >
           {link.name}
