@@ -24,12 +24,8 @@ export const ImageContainer = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 90px;
-  margin-bottom: 1vh;
   pointer-events: none;
   object-fit: contain;
-  border-radius: 8px;
-  border-image: initial;
-  box-shadow: rgb(86 57 254 / 15%) 0 5px 40px;
 `
 
 export const Carrousel = styled(Slider)`

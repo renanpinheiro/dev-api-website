@@ -187,7 +187,7 @@ const Blog = () => {
           </S.FilterContainer>
         </S.ImageContainer>
 
-        <S.CasesContainer>
+        {/* <S.CasesContainer>
           {isMobile ? (
             <CarrouselWithOutSSR
               items={newsMobileCarrouselItems}
@@ -215,7 +215,7 @@ const Blog = () => {
               ))}
             </>
           )}
-        </S.CasesContainer>
+        </S.CasesContainer> */}
 
         <S.ContentContainer>
           <S.Content>
