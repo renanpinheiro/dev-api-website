@@ -1,79 +1,73 @@
-import React, { useState, Fragment, useRef } from 'react'
-import { useInfiniteQuery } from 'react-query'
-import { useUIDSeed } from 'react-uid'
+import React, { useState, Fragment, useEffect } from 'react'
 
-import type { GetServerSideProps } from 'next'
 import Head from 'next/head'
 
+import { Button } from '../../components/Button'
 import { ButtonLink } from '../../components/ButtonLink'
-import useIntersectionObserver from '../../hooks/useIntersectionObserver'
 import api from '../../services/api'
 import * as S from '../../styles/connectors'
 
-interface ICategory {
-  id: string
-  name: string
-}
-
-interface IPagination {
-  pagination: {
-    page: number
-    total_pages: number
-  }
-}
-
-interface IConnectorsProps {
-  categories: ICategory[]
-}
-
-interface IQueryKeyType {
-  pageParam?: number
-  queryKey: [string, string]
-}
-
-const getMoreConnectors = async ({
-  pageParam = 0,
-  queryKey,
-}: IQueryKeyType) => {
-  let params = `_limit=40&_start=${pageParam}`
-
-  const categoryId = queryKey[0]
-  const search = queryKey[1]
-
-  if (categoryId) {
-    params = `${params}&Categoria=${categoryId}`
-  }
-
-  if (search) {
-    params = `${params}&_q=${search}`
-  }
-
-  const { data } = await api.get(`/conectores?${params}`)
-
-  return data
-}
-
-const ConnectorsPage = ({ categories }: IConnectorsProps) => {
-  const seed = useUIDSeed()
-  const loadMoreRef = useRef()
-
+const ConnectorsPage = () => {
+  const [hasMoreConnectors, setHasMoreConnectors] = useState(true)
   const [search, setSearch] = useState('')
   const [categoryId, setCategoryId] = useState('')
+  const [connectors, setConnectors] = useState([])
+  const [categories, setCategories] = useState([])
+  const [page, setPage] = useState(0)
 
-  const { data, isSuccess, fetchNextPage, hasNextPage, isLoading } =
-    useInfiniteQuery([categoryId, search], getMoreConnectors, {
-      getNextPageParam: (data: IPagination) =>
-        data.pagination.page === data.pagination.total_pages
-          ? undefined
-          : data.pagination.page + 40,
-    })
+  useEffect(() => {
+    findCategories()
+    findConnectors('_limit=40&_start=0')
+  }, [])
 
-  useIntersectionObserver({
-    target: loadMoreRef,
-    onIntersect: fetchNextPage,
-    enabled: hasNextPage,
-    root: <React.Fragment />,
-  })
+  useEffect(() => {
+    let params = `_limit=40&_start=${page}`
+
+    if (search) {
+      params = `${params}&_q=${search}`
+    }
+
+    if (categoryId) {
+      params = `${params}&Categoria=${categoryId}`
+    }
+
+    findConnectors(params)
+  }, [search, categoryId, page])
+
+  const findConnectors = async (params?: string) => {
+    const { data } = await api.get(`/conectores?${params}`)
+
+    if (
+      data.content.length < 40 ||
+      (data.content.length === 40 && categoryId)
+    ) {
+      setHasMoreConnectors(false)
+    } else {
+      setHasMoreConnectors(true)
+    }
+
+    if (connectors.length > 0 && page != 0 && !categoryId) {
+      data.content.map(item => setConnectors(connector => [...connector, item]))
+    } else {
+      setConnectors(data.content)
+    }
+  }
+
+  const findCategories = async () => {
+    const { data } = await api.get('/categoria-de-conectores')
+
+    setCategories(data)
+  }
+
+  const handleSetCategory = (category: string) => {
+    setCategoryId(category)
+    setPage(0)
+  }
+
+  const handleSetSearchTerm = (searchTerm: string) => {
+    setSearch(searchTerm)
+    setPage(0)
+  }
 
   return (
     <>
@@ -124,9 +118,9 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
                   placeholder="Busca..."
                   aria-label="search"
                   aria-describedby="basic-addon2"
-                  onChange={e => {
+                  onChange={searchTerm => {
                     setTimeout(() => {
-                      setSearch(e.target.value)
+                      handleSetSearchTerm(searchTerm.target.value)
                     }, 1000)
                   }}
                 />
@@ -143,7 +137,7 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
                 id="dropdown-basic-button"
                 title="Todas as categorias"
                 size="md"
-                onSelect={e => setCategoryId(e)}
+                onSelect={category => handleSetCategory(category)}
               >
                 {categories.map((item, index) => (
                   <S.Dropdown.Item
@@ -162,35 +156,28 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
 
       <S.Content>
         <S.Wrapper>
-          {isSuccess &&
-            data?.pages.map(page => (
-              <Fragment key={seed(page)}>
-                {page.content.map((item, index) => (
-                  <S.Card key={index}>
-                    <img src={item.image} title={item.name} />
-                    <span>{item.name}</span>
+          {connectors.length > 0 &&
+            connectors.map((page, index) => {
+              return (
+                <Fragment key={index}>
+                  <S.Card>
+                    <img src={page.image} title={page.name} />
+                    <span>{page.name}</span>
                   </S.Card>
-                ))}
-              </Fragment>
-            ))}
+                </Fragment>
+              )
+            })}
         </S.Wrapper>
 
-        {hasNextPage && (
-          <S.LoadMore ref={loadMoreRef}>
-            <S.Preloader>
-              <S.DoubleBounceIn />
-              <S.DoubleBounceOut />
-            </S.Preloader>
-          </S.LoadMore>
-        )}
-
-        {isLoading && (
-          <S.LoadMore>
-            <S.Preloader>
-              <S.DoubleBounceIn />
-              <S.DoubleBounceOut />
-            </S.Preloader>
-          </S.LoadMore>
+        {hasMoreConnectors && (
+          <S.ContainerLoadingButton>
+            <Button
+              type="default"
+              size="default"
+              text="Carregar"
+              onClick={() => setPage(page + 40)}
+            />
+          </S.ContainerLoadingButton>
         )}
       </S.Content>
 
@@ -215,23 +202,6 @@ const ConnectorsPage = ({ categories }: IConnectorsProps) => {
       </S.CornerContainer>
     </>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const { data: categories } = await api.get('/categoria-de-conectores')
-  const { data } = await api.get('/conectores?_limit=40&_start=0')
-
-  const connectors = {
-    pages: [{ data }],
-    pageParams: [null],
-  }
-
-  return {
-    props: {
-      connectors,
-      categories,
-    },
-  }
 }
 
 export default ConnectorsPage

@@ -391,3 +391,11 @@ export const CornerContainer = styled.div`
     }
   }
 `
+
+export const ContainerLoadingButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10vh;
+`
