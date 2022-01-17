@@ -11,12 +11,7 @@ import axios from 'axios'
 import { FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
 
-const Sidebar = ({
-  tags,
-  ebookImg,
-  ebookRedirect,
-  onClickTag,
-}: ISidebarProps) => {
+const Sidebar = ({ tags, onClickTag }: ISidebarProps) => {
   const hubspotApi = axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_SITE,
   })
@@ -64,9 +59,9 @@ const Sidebar = ({
 
   return (
     <S.SideBar>
-      <S.Ebook onClick={() => open(ebookRedirect, '_blank')}>
+      {/* <S.Ebook onClick={() => open(ebookRedirect, '_blank')}>
         <img src={ebookImg} alt="ebook" />
-      </S.Ebook>
+      </S.Ebook> */}
 
       <FormikProvider value={formikbag}>
         <S.NewsForm name="newsletter-devapi" onSubmit={formikbag.handleSubmit}>
