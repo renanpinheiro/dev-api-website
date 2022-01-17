@@ -15,7 +15,6 @@ import { Sidebar } from '../../components/Sidebar'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import {
   findCases,
-  findEbook,
   findPopularPosts,
   findPost,
   findTags,
@@ -43,8 +42,6 @@ const Blog = () => {
   const [news, setNews] = useState([])
   const [newsImages, setNewsImages] = useState([])
   const [tags, setTags] = useState([])
-  const [ebookImg, setEbookImg] = useState('')
-  const [ebookRedirect, setEbookRedirect] = useState('')
   const [cases, setCases] = useState([])
   const [popularArticles, setPopularArticles] = useState([])
   const [searchTag, setSearchTag] = useState('')
@@ -55,7 +52,6 @@ const Blog = () => {
 
   useEffect(() => {
     handleFindTags()
-    handleFindEbook()
     handleFindCases()
     handleFindPopularPosts()
   }, [])
@@ -73,14 +69,6 @@ const Blog = () => {
     const { data } = await findTags()
 
     setTags(data)
-  }
-
-  const handleFindEbook = async () => {
-    const { data } = await findEbook()
-
-    setEbookImg(data.media)
-
-    setEbookRedirect(data.link)
   }
 
   const handleFindCases = async () => {
@@ -199,7 +187,7 @@ const Blog = () => {
           </S.FilterContainer>
         </S.ImageContainer>
 
-        <S.CasesContainer>
+        {/* <S.CasesContainer>
           {isMobile ? (
             <CarrouselWithOutSSR
               items={newsMobileCarrouselItems}
@@ -227,7 +215,7 @@ const Blog = () => {
               ))}
             </>
           )}
-        </S.CasesContainer>
+        </S.CasesContainer> */}
 
         <S.ContentContainer>
           <S.Content>
@@ -245,11 +233,10 @@ const Blog = () => {
               />
             ))}
           </S.Content>
+
           <Sidebar
             tags={tags}
             articles={popularArticles}
-            ebookRedirect={ebookRedirect}
-            ebookImg={ebookImg}
             onClick={index => handleClickNews(popularArticles[index].linkId)}
             onClickTag={index => handleClickTag(tags[index].id)}
           />

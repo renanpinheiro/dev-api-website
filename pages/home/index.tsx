@@ -129,6 +129,7 @@ const Home = () => {
             alt="Connectors Computer"
           />
         </S.CarrouselImageContainer>
+
         <S.Carrousel>
           {isMobile ? (
             <CarrouselWithOutSSR

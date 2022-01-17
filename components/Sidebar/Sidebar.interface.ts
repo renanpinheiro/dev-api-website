@@ -14,8 +14,6 @@ interface ITags {
 export interface ISidebarProps {
   tags: ITags[]
   articles: IArticles[]
-  ebookImg: string
-  ebookRedirect: string
   onClick(index: number): void
   onClickTag(index: number): void
 }

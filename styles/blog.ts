@@ -165,7 +165,7 @@ export const Date = styled.div<IIconStyle>`
 export const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 50px auto;
+  margin: 200px auto 50px auto;
 
   @media (min-width: 320px) and (max-width: 992px) {
     flex-direction: column;
