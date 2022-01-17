@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import { handleScrollTop } from '../../../hooks/handleScrollTop'
+import { useScrollTop } from '../../../hooks/useScrollTop'
 import { IContainerLinkProps } from './Links.interfaces'
 import * as S from './Links.styles'
 
@@ -13,7 +13,7 @@ const Links = ({ title, links }: IContainerLinkProps) => {
         <a
           title={link.name}
           target={link.target}
-          onClick={handleScrollTop}
+          onClick={useScrollTop}
           rel="noreferrer"
         >
           {link.name}

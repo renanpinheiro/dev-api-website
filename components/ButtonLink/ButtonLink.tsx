@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from 'next/link'
 
-import { handleScrollTop } from '../../hooks/handleScrollTop'
+import { useScrollTop } from '../../hooks/useScrollTop'
 import { IButtonProps } from './ButtonLink.interface'
 import * as S from './ButtonLink.style'
 
@@ -17,12 +17,7 @@ const ButtonLink = ({
   return (
     <S.Container type={type} size={size} margin={margin}>
       <Link href={href}>
-        <a
-          title={text}
-          target={target}
-          rel="noreferrer"
-          onClick={handleScrollTop}
-        >
+        <a title={text} target={target} rel="noreferrer" onClick={useScrollTop}>
           {text}
         </a>
       </Link>

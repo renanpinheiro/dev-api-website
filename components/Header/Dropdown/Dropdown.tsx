@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { handleScrollTop } from '../../../hooks/handleScrollTop'
+import { useScrollTop } from '../../../hooks/useScrollTop'
 import Link from '../Link'
 import { IDropdownProps } from './Dropdown.interface'
 import * as S from './Dropdown.style'
@@ -17,7 +17,7 @@ const Dropdown = ({ children, isOpen, dropdownItems }: IDropdownProps) => {
             return (
               <S.DropdownItemContainer key={index} isActive={item.isActive}>
                 <Link href={item.url} activeClassName="active">
-                  <S.DropdownItem id={`${index}`} onClick={handleScrollTop}>
+                  <S.DropdownItem id={`${index}`} onClick={useScrollTop}>
                     {item.name}
                   </S.DropdownItem>
                 </Link>
