@@ -37,16 +37,18 @@ const ConnectorsPage = () => {
   const findConnectors = async (params?: string) => {
     const { data } = await api.get(`/conectores?${params}`)
 
-    if (
-      data.content.length < 40 ||
-      (data.content.length === 40 && categoryId)
-    ) {
+    const hasConnectors =
+      data.content.length < 40 || (data.content.length === 40 && categoryId)
+
+    const hasPage = connectors.length > 0 && page != 0 && !categoryId
+
+    if (hasConnectors) {
       setHasMoreConnectors(false)
     } else {
       setHasMoreConnectors(true)
     }
 
-    if (connectors.length > 0 && page != 0 && !categoryId) {
+    if (hasPage) {
       data.content.map(item => setConnectors(connector => [...connector, item]))
     } else {
       setConnectors(data.content)
