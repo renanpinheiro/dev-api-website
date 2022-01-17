@@ -93,7 +93,7 @@ const Home = () => {
           <S.Platform>
             <S.Pipe />
             <h2>
-              Plataforma de integração e gestão de APIs.{' '}
+              Plataforma de integração e gestão de APIs.
               <span>Encaixe as peças da sua operação!</span>
             </h2>
             <p>
