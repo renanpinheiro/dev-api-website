@@ -14,7 +14,6 @@ import {
 import { ImageCarousel } from '../../components/ImageCarousel'
 import { Sidebar } from '../../components/Sidebar'
 import {
-  findEbook,
   findPopularPosts,
   findPostById,
   findTags,

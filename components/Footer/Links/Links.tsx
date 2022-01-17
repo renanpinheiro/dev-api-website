@@ -6,10 +6,18 @@ import { IContainerLinkProps } from './Links.interfaces'
 import * as S from './Links.styles'
 
 const Links = ({ title, links }: IContainerLinkProps) => {
+  const handleTop = () => {
+    scrollTo({ top: 50, behavior: 'smooth' })
+  }
   const handleLinks = links.map((link, index) => {
     return (
       <Link key={index} href={link.url}>
-        <a title={link.name} target={link.target} rel="noreferrer">
+        <a
+          title={link.name}
+          target={link.target}
+          onClick={handleTop}
+          rel="noreferrer"
+        >
           {link.name}
         </a>
       </Link>
