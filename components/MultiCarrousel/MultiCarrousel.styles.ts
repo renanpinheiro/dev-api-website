@@ -26,6 +26,10 @@ export const Image = styled.img`
   height: 90px;
   pointer-events: none;
   object-fit: contain;
+  margin-bottom: 1vh;
+  border-radius: 8px;
+  border-image: initial;
+  box-shadow: rgb(86 57 254 / 15%) 0 5px 40px;
 `
 
 export const Carrousel = styled(Slider)`
