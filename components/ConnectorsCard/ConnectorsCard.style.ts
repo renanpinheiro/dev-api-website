@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 25vw;
-  height: 35vh;
+  height: 28vh;
   padding: 35px 30px;
   margin: 20px;
   border-radius: 10px;
@@ -62,8 +62,12 @@ export const Connector = styled.div`
     }
   }
 
-  @media (max-width: 996px) {
+  @media (max-width: 600px) {
     width: 13vw;
+  }
+
+  @media (min-width: 600px) and (max-width: 1000px) {
+    width: 20vw;
   }
 `
 

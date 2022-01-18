@@ -4,7 +4,9 @@ import Head from 'next/head'
 
 import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { ProfessionalService } from '../../components/ProfessionalService'
+import { costumers } from '../../constants/costumers'
 import { integrations } from '../../constants/integrations'
 import * as S from '../../styles/characteristics'
 import { validateOddNumber } from '../../utils/validateOddNumber'
@@ -75,6 +77,21 @@ const Characteristics = () => {
         </S.IntegrationContainer>
 
         <ProfessionalService />
+
+        <S.ListIconContainer>
+          <ListIconCostumer
+            items={costumers}
+            title={
+              <S.ListIconlTitle>
+                <S.PipeContainer>
+                  <S.Pipe />
+                </S.PipeContainer>
+                Empresas que já desbloquearam o{' '}
+                <span>poder da integração de sistemas</span>
+              </S.ListIconlTitle>
+            }
+          />
+        </S.ListIconContainer>
       </S.Container>
     </>
   )

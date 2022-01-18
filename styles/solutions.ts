@@ -97,7 +97,7 @@ export const Content = styled.div`
 `
 
 export const QuoteContainer = styled.div`
-  padding: 0 3vw 10vh 6vw;
+  padding: 8vh 3vw 12vh 6vw;
 `
 
 export const ProfessionalServiceContainer = styled.div``
@@ -106,7 +106,6 @@ export const SolutionContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 22.5vh;
 
   @media (max-width: 996px) {
     padding-bottom: 10vh;
@@ -118,7 +117,7 @@ export const TextContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  padding: 10vh 8vw 10vh 8vw;
+  padding: 10vh 8vw 0 8vw;
 
   @media (max-width: 996px) {
     flex-direction: column;

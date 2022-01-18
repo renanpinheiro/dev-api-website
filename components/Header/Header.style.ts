@@ -11,7 +11,7 @@ export const Container = styled.div<IContainerStyles>`
   justify-content: space-between;
   width: 100%;
   height: 13vh;
-  padding: 0 8vw 0 8vw;
+  padding: 0 8vw 2vh 8vw;
   user-select: none;
   background-color: ${theme.colors.gray[100]};
   transition: all 0.3s ease-in-out;
