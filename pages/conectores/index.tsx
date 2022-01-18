@@ -176,7 +176,7 @@ const ConnectorsPage = () => {
             <Button
               type="default"
               size="default"
-              text="Carregar"
+              text="Carregar mais conectores"
               onClick={() => setPage(page + 40)}
             />
           </S.ContainerLoadingButton>
