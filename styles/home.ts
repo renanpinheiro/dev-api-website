@@ -25,7 +25,7 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 45%;
+  width: 50ch;
   height: 100%;
 
   @media (max-width: 576px) {
