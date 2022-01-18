@@ -68,7 +68,7 @@ const Home = () => {
         <S.HeroContent>
           <S.Pipe />
           <h1>
-            Desbloqueamos o poder da <b>integração de sistemas</b>
+            <b>Integração de Sistemas</b> e Gestão de APIs
           </h1>
           <p>
             Sem limites: uma única plataforma para integrar sistemas,
@@ -93,9 +93,10 @@ const Home = () => {
           <S.Platform>
             <S.Pipe />
             <h2>
-              Plataforma de integração e gestão de APIs.
+              Desbloqueamos o poder da integração de sistemas.{' '}
               <span>Encaixe as peças da sua operação!</span>
             </h2>
+
             <p>
               Integre. Automatize. Otimize. Das regras de negócio mais complexas
               aos processos mais avançados, somos o parceiro estratégico do seu
