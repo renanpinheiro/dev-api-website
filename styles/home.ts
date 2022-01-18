@@ -624,6 +624,7 @@ export const SystemImageContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 60vh;
+  margin-top: 5vh;
 
   @media (max-width: 900px) {
     height: 45vh;

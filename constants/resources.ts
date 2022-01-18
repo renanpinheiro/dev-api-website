@@ -1,8 +1,8 @@
 export const resources = [
-  // {
-  //   name: 'DevApi Academy',
-  //   url: '/devapi-academy',
-  // },
+  {
+    name: 'Cases',
+    url: '/cases',
+  },
   {
     name: 'Blog',
     url: '/blog',

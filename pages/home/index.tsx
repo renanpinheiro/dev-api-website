@@ -93,7 +93,7 @@ const Home = () => {
           <S.Platform>
             <S.Pipe />
             <h2>
-              Plataforma de integração e gestão de APIs.{' '}
+              Plataforma de Integração de Sistemas e Gestão de APIs..{' '}
               <span>Encaixe as peças da sua operação!</span>
             </h2>
             <p>
@@ -248,7 +248,7 @@ const Home = () => {
                 entre si.
               </p>
               <S.SystemImageContainer>
-                <S.SystemImage src="/images/ipaas.png" alt="iPaas" />
+                <S.SystemImage src="/images/ipaas.svg" alt="iPaas" />
               </S.SystemImageContainer>
             </S.IPaasContainer>
             <S.ApiManagerContainer>
@@ -265,7 +265,7 @@ const Home = () => {
               </p>
               <S.SystemImageContainer>
                 <S.SystemImage
-                  src="/images/api-manager.png"
+                  src="/images/api-manager.svg"
                   alt="API Manager"
                 />
               </S.SystemImageContainer>
@@ -420,7 +420,7 @@ const Home = () => {
           <S.SecurityTextContainer>
             <S.Pipe />
             <h2>
-              Conheça a plataforma e integração de sistemas
+              Conheça a plataforma de integração de sistemas
               <b> mais segura do mercado</b>
             </h2>
             <p>A DevApi conta com três camadas de segurança:</p>

@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="566" height="566" viewBox="0 0 566 566">
+  <defs>
+    <filter id="Caminho_20082" x="158" y="158.016" width="249.969" height="249.969" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#5f47ff" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_685" x="184" y="368" width="198" height="198" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-2"/>
+      <feFlood flood-color="#5f47ff" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_685-2" x="184" y="0" width="198" height="198" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-3"/>
+      <feFlood flood-color="#5f47ff" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_685-3" x="368" y="273" width="198" height="198" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-4"/>
+      <feFlood flood-color="#5f47ff" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_685-4" x="0" y="273" width="198" height="198" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-5"/>
+      <feFlood flood-color="#5f47ff" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_685-5" x="368" y="95" width="198" height="198" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-6"/>
+      <feFlood flood-color="#5f47ff" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_685-6" x="0" y="95" width="198" height="198" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur-7"/>
+      <feFlood flood-color="#5f47ff" flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_28324" data-name="Grupo 28324" transform="translate(-1167 -6042)">
+    <g id="Grupo_27914" data-name="Grupo 27914" transform="translate(1 -47.984)">
+      <g id="Grupo_27902" data-name="Grupo 27902" transform="translate(-374 -347)">
+        <g transform="matrix(1, 0, 0, 1, 1540, 6436.98)" filter="url(#Caminho_20082)">
+          <path id="Caminho_20082-2" data-name="Caminho 20082" d="M133.035,120.813c-.521,4.671,1.792,8.4,5.146,11.589,1.5,1.422,1.843,2.493.262,4.164a79.942,79.942,0,0,1-33.408,21.661c-2.377.781-4.671,1.747-7.236,1.719a2.189,2.189,0,0,1-2.519-1.936c-1.586-6.609-5.419-10.951-12.191-12.635-7.237-1.8-16.537,3.906-17.719,11.373-.425,2.691-1.72,3.537-4.158,3.122A58.61,58.61,0,0,1,45.088,154.1a76.644,76.644,0,0,1-22.723-17.147c-1.654-1.816-1.827-3.052.04-4.889,8.61-8.469,5.789-20.895-4.012-26.009a13.642,13.642,0,0,0-9.7-.991C4,106.191,4.063,105.9,2.8,101.2A94.528,94.528,0,0,1,.177,83.778,71.009,71.009,0,0,1,2.44,60.739c1.6-6.263,1.821-6.206,7.972-5.3,10.542,1.548,20.01-10.4,16.293-20.474a16.175,16.175,0,0,0-4.344-7.036c-1.793-1.543-1.785-2.907-.124-4.679A77.392,77.392,0,0,1,55.711,1.753,32.607,32.607,0,0,1,61.826.039c1.921-.22,3.08.546,3.362,2.44,1.12,7.513,8.448,12.617,14.88,12.6A15.673,15.673,0,0,0,95.239,2.347C95.649.179,96.648-.207,98.5.086a57.49,57.49,0,0,1,16.367,5.723,81.557,81.557,0,0,1,23.244,17.37c1.779,1.887,1.785,3.087-.149,4.773-8.229,7.174-6.106,21.416,3.548,25.9a14.08,14.08,0,0,0,9.939,1.17c4.2-1.14,4.48-1.106,5.743,3.047a51.508,51.508,0,0,1,2.294,11.219c.719,10.167.96,20.362-1.591,30.37-.414,1.624-1.009,3.2-1.538,4.793-.428,1.289-1.371,1.232-2.479,1.061-2.815-.432-5.574-1.044-8.514-.573a15.368,15.368,0,0,0-12.325,15.87" transform="translate(193 187.02)" fill="#2c2d66"/>
+        </g>
+        <path id="Caminho_20083" data-name="Caminho 20083" d="M5.093,83.45A73.329,73.329,0,0,1,7.741,62.632c.524-1.864,1.386-2.376,3.422-2.058C23.269,62.463,33.18,53.339,32.462,41A16.667,16.667,0,0,0,28.37,30.5c-1.745-1.927-1.566-3.293.358-5.127A82.091,82.091,0,0,1,60.362,6.407c2.251-.731,3.665-.719,4.928,2.041,4.581,10.015,11.357,13.485,21.98,11.244,5.8-1.224,9.662-5.219,11.842-10.76,1.124-2.857,2.154-3.559,5.045-2.587C116.23,10.4,127.076,16.524,136.1,25.762c1.589,1.626,1.634,2.744.268,4.5a19.141,19.141,0,0,0,7.642,29.608,16.79,16.79,0,0,0,9.309.72c2.4-.4,3.306.3,3.93,2.84,2.622,10.7,2.707,21.455,1.326,32.28-.329,2.584-1.1,5.111-1.67,7.663-.263,1.179-1.172,1.334-2.139,1.33a48.456,48.456,0,0,1-4.994-.1c-8.819-.948-17.418,8.942-17.5,17.1-.053,5.1,1.017,9.633,4.239,13.543,1.366,1.658,1.121,2.794-.354,4.281a78.115,78.115,0,0,1-31.944,19.361c-2.951.957-4.036.277-5.106-2.541A17.4,17.4,0,0,0,82.623,144.85c-7.076-.071-12.7,3.038-16.158,9.442-2.933,5.428-2.787,5.358-8.949,3.389-11.153-3.565-20.466-10.053-29-17.951-1.863-1.726-1.634-2.949-.31-4.687,5.3-6.964,5.835-14.374,1.421-21.911-3.159-5.394-7.86-8.551-14.3-8.5-.74.006-1.481-.007-2.221,0-5.228.061-5.442.075-6.269-5.086-.9-5.616-2.19-11.216-1.746-16.095" transform="translate(1730.776 6621.402)" fill="#f6f6ff"/>
+        <rect id="Retângulo_5587" data-name="Retângulo 5587" width="159" height="159" transform="translate(1733 6624)" fill="none"/>
+      </g>
+      <text id="API_Manager" data-name="API
+Manager" transform="translate(1439 6353)" fill="#2c2d66" font-size="20" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-18" y="0">API</tspan><tspan x="-46" y="21">Manager</tspan></text>
+    </g>
+    <g id="Grupo_27925" data-name="Grupo 27925" transform="translate(0 -49)">
+      <ellipse id="Elipse_551" data-name="Elipse 551" cx="5" cy="5" rx="5" ry="5" transform="translate(1251 6377)" fill="#5f47ff"/>
+      <ellipse id="Elipse_566" data-name="Elipse 566" cx="5" cy="5" rx="5" ry="5" transform="translate(1251 6343)" fill="#5f47ff"/>
+      <ellipse id="Elipse_549" data-name="Elipse 549" cx="2" cy="2" rx="2" ry="2" transform="translate(1254 6363)" fill="#5f47ff"/>
+      <ellipse id="Elipse_567" data-name="Elipse 567" cx="2" cy="2" rx="2" ry="2" transform="translate(1254 6329)" fill="#5f47ff"/>
+    </g>
+    <g id="Grupo_27926" data-name="Grupo 27926" transform="translate(1619 6280)">
+      <ellipse id="Elipse_551-2" data-name="Elipse 551" cx="5" cy="5" rx="5" ry="5" transform="translate(0 0)" fill="#5f47ff"/>
+      <ellipse id="Elipse_566-2" data-name="Elipse 566" cx="5" cy="5" rx="5" ry="5" transform="translate(0 34)" fill="#5f47ff"/>
+      <ellipse id="Elipse_549-2" data-name="Elipse 549" cx="2" cy="2" rx="2" ry="2" transform="translate(3 20)" fill="#5f47ff"/>
+      <ellipse id="Elipse_567-2" data-name="Elipse 567" cx="2" cy="2" rx="2" ry="2" transform="translate(3 54)" fill="#5f47ff"/>
+    </g>
+    <g id="Grupo_27927" data-name="Grupo 27927" transform="translate(1557.615 6426.17) rotate(60)">
+      <ellipse id="Elipse_551-3" data-name="Elipse 551" cx="5" cy="5" rx="5" ry="5" transform="translate(0 0)" fill="#5f47ff"/>
+      <ellipse id="Elipse_566-3" data-name="Elipse 566" cx="5" cy="5" rx="5" ry="5" transform="translate(0 34)" fill="#5f47ff"/>
+      <ellipse id="Elipse_549-3" data-name="Elipse 549" cx="2" cy="2" rx="2" ry="2" transform="translate(3 20)" fill="#5f47ff"/>
+      <ellipse id="Elipse_567-3" data-name="Elipse 567" cx="2" cy="2" rx="2" ry="2" transform="translate(3 54)" fill="#5f47ff"/>
+    </g>
+    <g id="Grupo_27929" data-name="Grupo 27929" transform="translate(1323.387 6434.83) rotate(-60)">
+      <ellipse id="Elipse_551-4" data-name="Elipse 551" cx="5" cy="5" rx="5" ry="5" transform="translate(0 47.999)" fill="#5f47ff"/>
+      <ellipse id="Elipse_566-4" data-name="Elipse 566" cx="5" cy="5" rx="5" ry="5" transform="translate(0 14)" fill="#5f47ff"/>
+      <ellipse id="Elipse_549-4" data-name="Elipse 549" cx="2" cy="2" rx="2" ry="2" transform="translate(3 34)" fill="#5f47ff"/>
+      <ellipse id="Elipse_567-4" data-name="Elipse 567" cx="2" cy="2" rx="2" ry="2" transform="translate(3 0)" fill="#5f47ff"/>
+    </g>
+    <g id="Grupo_27930" data-name="Grupo 27930" transform="translate(1328.387 6191.475) rotate(-120)">
+      <ellipse id="Elipse_551-5" data-name="Elipse 551" cx="5" cy="5" rx="5" ry="5" transform="translate(0 0)" fill="#5f47ff"/>
+      <ellipse id="Elipse_566-5" data-name="Elipse 566" cx="5" cy="5" rx="5" ry="5" transform="translate(0 33.999)" fill="#5f47ff"/>
+      <ellipse id="Elipse_549-5" data-name="Elipse 549" cx="2" cy="2" rx="2" ry="2" transform="translate(3 20)" fill="#5f47ff"/>
+      <ellipse id="Elipse_567-5" data-name="Elipse 567" cx="2" cy="2" rx="2" ry="2" transform="translate(3 53.999)" fill="#5f47ff"/>
+    </g>
+    <g id="Grupo_27928" data-name="Grupo 27928" transform="translate(1562.615 6183.17) rotate(120)">
+      <ellipse id="Elipse_551-6" data-name="Elipse 551" cx="5" cy="5" rx="5" ry="5" transform="translate(0 48)" fill="#5f47ff"/>
+      <ellipse id="Elipse_566-6" data-name="Elipse 566" cx="5" cy="5" rx="5" ry="5" transform="translate(0 14)" fill="#5f47ff"/>
+      <ellipse id="Elipse_549-6" data-name="Elipse 549" cx="2" cy="2" rx="2" ry="2" transform="translate(3 34)" fill="#5f47ff"/>
+      <ellipse id="Elipse_567-6" data-name="Elipse 567" cx="2" cy="2" rx="2" ry="2" transform="translate(3 0)" fill="#5f47ff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1167, 6042)" filter="url(#Elipse_685)">
+      <circle id="Elipse_685-7" data-name="Elipse 685" cx="54" cy="54" r="54" transform="translate(219 397)" fill="#f6f6ff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1167, 6042)" filter="url(#Elipse_685-2)">
+      <circle id="Elipse_685-8" data-name="Elipse 685" cx="54" cy="54" r="54" transform="translate(219 29)" fill="#f6f6ff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1167, 6042)" filter="url(#Elipse_685-3)">
+      <circle id="Elipse_685-9" data-name="Elipse 685" cx="54" cy="54" r="54" transform="translate(403 302)" fill="#f6f6ff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1167, 6042)" filter="url(#Elipse_685-4)">
+      <circle id="Elipse_685-10" data-name="Elipse 685" cx="54" cy="54" r="54" transform="translate(35 302)" fill="#f6f6ff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1167, 6042)" filter="url(#Elipse_685-5)">
+      <circle id="Elipse_685-11" data-name="Elipse 685" cx="54" cy="54" r="54" transform="translate(403 124)" fill="#f6f6ff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1167, 6042)" filter="url(#Elipse_685-6)">
+      <circle id="Elipse_685-12" data-name="Elipse 685" cx="54" cy="54" r="54" transform="translate(35 124)" fill="#f6f6ff"/>
+    </g>
+    <text id="Segurança" transform="translate(1624 6247.502)" fill="#5f47ff" font-size="10" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-28" y="0">Segurança</tspan></text>
+    <g id="Grupo_28320" data-name="Grupo 28320" transform="translate(346.004 -344.502)">
+      <path id="Caminho_20929" data-name="Caminho 20929" d="M160.1,33.039a10.53,10.53,0,0,0-10.477,10.568v6.032h-2.177a4.065,4.065,0,0,0-4.082,4.082v15.24a4.065,4.065,0,0,0,4.082,4.082h25.309a4.065,4.065,0,0,0,4.082-4.082V53.721a4.065,4.065,0,0,0-4.082-4.082h-2.177V43.607A10.53,10.53,0,0,0,160.1,33.039Zm-7.756,10.568a7.758,7.758,0,1,1,15.467-1.224,5.139,5.139,0,0,1,0,1.179v6.032H152.343Zm21.771,10.114v15.24a1.337,1.337,0,0,1-1.361,1.361H147.445a1.337,1.337,0,0,1-1.361-1.361V53.722a1.337,1.337,0,0,1,1.361-1.361h25.309a1.336,1.336,0,0,1,1.36,1.361Z" transform="translate(1117.633 6500.961)" fill="#2c2d66"/>
+      <path id="Caminho_20930" data-name="Caminho 20930" d="M298.733,316.586v2.586a1.361,1.361,0,1,0,2.722,0v-2.586a4.389,4.389,0,1,0-2.721,0Z" transform="translate(977.638 6248.257)" fill="#2c2d66"/>
+    </g>
+    <text id="Analisar" transform="translate(1256 6248)" fill="#5f47ff" font-size="10" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-21" y="0">Analisar</tspan></text>
+    <g id="Grupo_28323" data-name="Grupo 28323" transform="translate(-368.801 -168.883)">
+      <path id="Caminho_20925" data-name="Caminho 20925" d="M118.921,291.76H114.24v12.031h4.681Z" transform="translate(1509.492 6090.662)" fill="#2c2d66"/>
+      <path id="Caminho_20926" data-name="Caminho 20926" d="M261.721,174.16H257.04v24.066h4.681Z" transform="translate(1356.958 6196.228)" fill="#2c2d66"/>
+      <path id="Caminho_20927" data-name="Caminho 20927" d="M397.241,288.4H392.56v15.575h4.681Z" transform="translate(1212.24 6090.438)" fill="#2c2d66"/>
+      <path id="Caminho_20935" data-name="Caminho 20935" d="M100.8,42.934,96.455,38.59l.153-.2a8.367,8.367,0,0,0,1.288-2.62h.327a.655.655,0,0,0,0-1.31h-.044a8.717,8.717,0,0,0-2.467-7.292,8.657,8.657,0,0,0-14.759,5.5h-.218a.653.653,0,0,0-.655.633.672.672,0,0,0,.633.677h.24a8.481,8.481,0,0,0,2.511,5.436,8.707,8.707,0,0,0,11.222.9l.2-.153.044.044,4.323,4.3a1.108,1.108,0,0,0,.786.327,1.038,1.038,0,0,0,.786-.327,1.108,1.108,0,0,0,.327-.786,1.232,1.232,0,0,0-.349-.786ZM84.447,28.154a7.239,7.239,0,0,1,5.131-2.14,7.165,7.165,0,0,1,5.131,2.14,7.279,7.279,0,0,1,2.03,6.288H93.66l-1.245-2.292a.662.662,0,0,0-.59-.349.612.612,0,0,0-.568.393l-1.7,3.777L88.2,28.219a.652.652,0,0,0-1.244-.153L84.971,32.76l-2.6-.065a7.022,7.022,0,0,1,2.074-4.541ZM94.73,38.437a7.239,7.239,0,0,1-5.131,2.14,7.291,7.291,0,0,1-7.227-6.571l3.013.087A.618.618,0,0,0,86,33.7l1.288-3.056,1.354,7.641a.672.672,0,0,0,.568.546h.087a.642.642,0,0,0,.59-.393l2.009-4.5.808,1.485a.629.629,0,0,0,.568.349h3.166a7.588,7.588,0,0,1-1.7,2.664Z" transform="translate(1543.652 6339.244)" fill="#2c2d66"/>
+    </g>
+    <text id="Monitorar" transform="translate(1256 6425.555)" fill="#5f47ff" font-size="10" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-25" y="0">Monitorar</tspan></text>
+    <g id="Grupo_28319" data-name="Grupo 28319" transform="translate(-410.449 270.213)">
+      <path id="Caminho_20924" data-name="Caminho 20924" d="M103.547,18.3a3.389,3.389,0,0,0,3.365-3.365,3.675,3.675,0,0,0-.538-1.839l6.729-5.07a3.382,3.382,0,0,0,2.288.9A3.2,3.2,0,0,0,117.32,8.3l6.1,5.249a3.313,3.313,0,0,0-.493,1.75,3.365,3.365,0,1,0,5.877-2.243l5.249-7.672a2.977,2.977,0,0,0,1.256.224,3.389,3.389,0,0,0,3.365-3.365,3.365,3.365,0,0,0-6.73,0,3.2,3.2,0,0,0,.852,2.2l-5.249,7.672a3.892,3.892,0,0,0-1.256-.224,3.313,3.313,0,0,0-1.75.494L118.4,7.041a3.274,3.274,0,0,0,.4-1.57,3.365,3.365,0,0,0-6.73,0,3.371,3.371,0,0,0,.224,1.166l-7.044,5.249a3.35,3.35,0,0,0-5.025,2.916,3.356,3.356,0,0,0,3.32,3.5ZM135.086.357a2.088,2.088,0,0,1,2.064,2.064,2.064,2.064,0,1,1-4.128,0A2.059,2.059,0,0,1,135.086.357Zm-8.973,12.921a2.064,2.064,0,1,1-2.064,2.064A2.059,2.059,0,0,1,126.113,13.277Zm-10.857-9.69a2.064,2.064,0,1,1-2.064,2.064A2.088,2.088,0,0,1,115.256,3.587Zm-11.709,9.332a2.064,2.064,0,1,1-2.064,2.064A2.059,2.059,0,0,1,103.547,12.919Z" transform="translate(1547.225 6098.355)" fill="#2c2d66"/>
+      <path id="Caminho_20925-2" data-name="Caminho 20925" d="M114.24,291.76h5.07V308.4h-5.07Z" transform="translate(1534.334 5828.936)" fill="#2c2d66"/>
+      <path id="Caminho_20926-2" data-name="Caminho 20926" d="M257.04,174.16h5.07v26.066h-5.07Z" transform="translate(1402.973 5937.115)" fill="#2c2d66"/>
+      <path id="Caminho_20927-2" data-name="Caminho 20927" d="M392.56,288.4h5.07v16.869h-5.07Z" transform="translate(1278.31 5832.027)" fill="#2c2d66"/>
+      <path id="Caminho_20928" data-name="Caminho 20928" d="M514.64,141.12h5.07v28.713h-5.07Z" transform="translate(1166.01 5967.506)" fill="#2c2d66"/>
+    </g>
+    <text id="Publicar" transform="translate(1440 6520.52)" fill="#5f47ff" font-size="10" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-21" y="0">Publicar</tspan></text>
+    <path id="Caminho_20979" data-name="Caminho 20979" d="M117.245,8.369a1.217,1.217,0,0,0-.322.034l-.034.008L79.266,18.672a1.21,1.21,0,0,0-.451,2.1l11.709,9.647-2.156,6.468a1.21,1.21,0,0,0,1.53,1.529l6.468-2.156,9.647,11.709a1.21,1.21,0,0,0,2.1-.451L118.373,9.9l.008-.036a1.209,1.209,0,0,0-1.138-1.491Zm-5.279,3.892L91.941,28.453l-9.785-8.062Zm2.558,2.558-8.13,29.81-8.062-9.785ZM85.187,40.391a1.205,1.205,0,0,0-.855.355l-1.709,1.711a1.3,1.3,0,0,0,0,1.71,1.348,1.348,0,0,0,1.71,0l1.709-1.711a1.209,1.209,0,0,0-.856-2.064Z" transform="translate(1341.625 6454.109)" fill="#2c2d66"/>
+    <text id="Deploy" transform="translate(1624 6425.508)" fill="#5f47ff" font-size="10" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-18" y="0">Deploy</tspan></text>
+    <path id="Caminho_20978" data-name="Caminho 20978" d="M209.173,5.892c-4.782,5.947-6.582,9.93-6.688,17.72-1.225,1.1-2.469,2.18-3.688,3.286,0,4.332.013,8.775.013,12.49q2.269-2.848,4.531-5.7l1.557-.4a10.4,10.4,0,0,0-.026,5.421c.627,2.079,2.037,3.985,4.276,6.648a.851.851,0,0,0,1.225.025c2.54-2.7,3.99-4.606,4.531-6.712a10.512,10.512,0,0,0-.306-5.421l1.71.435q2.263,2.853,4.531,5.7c0-4.4.013-8.675.013-12.49q-1.832-1.65-3.676-3.286c-.034-7.753-1.513-11.765-6.688-17.669a.851.851,0,0,0-1.314-.051Zm.664,1.854c4.641,5.472,5.765,8.891,5.705,16.645-.015,2.435-1.354,5.069-2.5,6.929-2.7,0-3.982.054-6.445.025a14.6,14.6,0,0,1-2.489-6.955c.04-7.739,1.25-11,5.731-16.645Zm-.013,7.62a2.455,2.455,0,1,0,2.451,2.455A2.465,2.465,0,0,0,209.824,15.366Zm0,6.546a2.455,2.455,0,1,0,2.451,2.455A2.465,2.465,0,0,0,209.824,21.911Zm-7.249,3.8a16.754,16.754,0,0,0,2.272,5.906c-.812.208-1.631.389-2.438.614-.646.834-1.309,1.655-1.965,2.48l-.013-7.083Zm14.512.013,2.132,1.9-.013,7.083c-.652-.829-1.322-1.645-1.965-2.48-.807-.224-1.624-.413-2.438-.614a21.472,21.472,0,0,0,2.285-5.894Z" transform="translate(1414.203 6361.887)" fill="#2c2d66"/>
+    <text id="Escalabilidade" transform="translate(1440 6153)" fill="#5f47ff" font-size="10" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-37" y="0">Escalabilidade</tspan></text>
+    <path id="Caminho_20977" data-name="Caminho 20977" d="M130.662,45.089l-5.752,6.224a.889.889,0,0,0,.653,1.5l1.779-.014V81.267a.924.924,0,0,0,.889.889h6.225a.924.924,0,0,0,.889-.889V52.8l1.765.014a.889.889,0,0,0,.667-1.5c-2.047-2.088-4.5-4.931-5.961-6.349a.875.875,0,0,0-1.153.125Zm.653,1.9c1.27,1.346,2.682,2.864,3.752,4.015h-.6a.925.925,0,0,0-.9.889v10.7h-4.446V51.91a.924.924,0,0,0-.889-.889H127.6Zm-12.95,9.378a.921.921,0,0,0-.806.889V81.267a.924.924,0,0,0,.889.889h6.225a.924.924,0,0,0,.889-.889V57.259a.924.924,0,0,0-.889-.889h-6.308Zm.973,1.778h4.446V68.373h-4.446ZM108.582,61.7a.921.921,0,0,0-.806.889V81.266a.924.924,0,0,0,.889.889h6.225a.924.924,0,0,0,.889-.889V62.594a.924.924,0,0,0-.889-.889h-6.308Zm.973,1.778H114v7.558h-4.446ZM98.8,67.04a.921.921,0,0,0-.806.889V81.266a.924.924,0,0,0,.889.889h6.225a.924.924,0,0,0,.889-.889V67.929a.924.924,0,0,0-.889-.889H98.8Zm.973,1.778h4.446v4.89H99.773Z" transform="translate(1322.006 6051.197)" fill="#2c2d66"/>
+  </g>
+</svg>
