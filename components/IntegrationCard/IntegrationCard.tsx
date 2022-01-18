@@ -1,8 +1,7 @@
 import React from 'react'
 
-import * as S from './IntegrationCard.style'
-
 import { IIntegrationCard } from './IntegrationCard.interface'
+import * as S from './IntegrationCard.style'
 
 const IntegrationCard = ({ imageLeft, imageRight }: IIntegrationCard) => {
   return (

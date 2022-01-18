@@ -93,7 +93,7 @@ const Home = () => {
           <S.Platform>
             <S.Pipe />
             <h2>
-              Plataforma de Integração de Sistemas e Gestão de APIs..{' '}
+              Plataforma de Integração e Gestão de APIs.
               <span>Encaixe as peças da sua operação!</span>
             </h2>
             <p>
@@ -129,6 +129,7 @@ const Home = () => {
             alt="Connectors Computer"
           />
         </S.CarrouselImageContainer>
+
         <S.Carrousel>
           {isMobile ? (
             <CarrouselWithOutSSR
@@ -529,7 +530,7 @@ const Home = () => {
           </S.SecurityTextContainer>
         </S.SecurityContainer>
 
-        <S.SecurityContainer>
+        <S.BenefitsContainer>
           <S.CompanyContainer>
             <S.Pipe />
             <h2>
@@ -537,9 +538,7 @@ const Home = () => {
               sua empresa vai:
             </h2>
           </S.CompanyContainer>
-        </S.SecurityContainer>
 
-        <S.BenefitsContainer>
           {benefits.map((description, index) => (
             <CompanyBenefits description={description} key={index} />
           ))}
@@ -559,7 +558,6 @@ const Home = () => {
               target="_self"
               type="default"
               size="default"
-              margin="35px 0px 0px 0px"
             />
           </S.UnlockTextContainer>
         </S.UnlockContainer>

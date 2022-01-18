@@ -126,7 +126,7 @@ export const CarrouselImageContainer = styled.div`
 
 export const Carrousel = styled.section`
   width: 100%;
-  padding: 10vh 5.5vw 6vh;
+  padding: 7vh 8vw 7vh;
   background-size: 100%;
 
   @media (max-width: 900px) {
@@ -457,8 +457,8 @@ export const Features = styled.div`
     width: 100%;
   }
 
-  @media (min-width: 1600px) {
-    width: 51vw;
+  @media (max-width: 1300px) {
+    justify-content: center;
   }
 `
 
@@ -711,42 +711,6 @@ export const SecurityContainer = styled.div`
   margin-top: 5vh;
 `
 
-export const UnlockContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15vh;
-`
-
-export const UnlockTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  b {
-    font-weight: 700;
-    color: ${theme.colors.primary};
-  }
-
-  > h2 {
-    max-width: 40ch;
-    margin-bottom: 15px;
-    line-height: 1.2;
-    text-align: center;
-
-    @media (max-width: 996px) {
-      text-align: left;
-    }
-  }
-
-  @media (max-width: 996px) {
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 8vw 0 8vw;
-  }
-`
 export const SecurityTextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -799,6 +763,7 @@ export const SecurityTextContainer = styled.div`
     padding: 0 8vw 0 8vw;
   }
 `
+
 export const SecurityContentContainer = styled.div`
   h2 {
     margin-bottom: 1vh;
@@ -820,6 +785,19 @@ export const SecurityContentContainer = styled.div`
   }
 `
 
+export const BenefitsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0 8vw 10vh 19.5vw;
+
+  @media (max-width: 996px) {
+    align-items: center;
+    padding: 0 8vw 0 8vw;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+`
+
 export const CompanyContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -832,25 +810,76 @@ export const CompanyContainer = styled.div`
   }
 
   > h2 {
-    max-width: 40ch;
+    max-width: 35ch;
+    margin-bottom: 15px;
+    font-size: 2.625rem;
     line-height: 1.2;
+    text-align: left;
+
+    @media (max-width: 996px) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.25rem;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      text-align: left;
+    }
   }
 
   @media (max-width: 996px) {
     width: 100%;
-    padding: 0 8vw 0 8vw;
   }
 `
 
-export const BenefitsContainer = styled.div`
+export const UnlockContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 8vw 10vh 19.5vw;
+  padding: 8vh 8vw 8vh 8vw;
 
   @media (max-width: 996px) {
     align-items: center;
-    padding: 0 8vw 0 8vw;
+    padding: 8vh 8vw 8vh 8vw;
     margin-bottom: 20px;
     text-align: center;
+  }
+`
+
+export const UnlockTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  b {
+    font-weight: 700;
+    color: ${theme.colors.primary};
+  }
+
+  > h2 {
+    max-width: 35ch;
+    margin-bottom: 15px;
+    font-size: 2.625rem;
+    line-height: 1.2;
+    text-align: center;
+
+    @media (max-width: 996px) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3.25rem;
+    }
+
+    @media only screen and (max-width: 1023px) {
+      text-align: left;
+    }
+  }
+
+  @media only screen and (max-width: 1023px) {
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 `

@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5vh 8vw 5vh 8vw;
+  padding: 8vh 8vw;
   margin-bottom: 10vh;
   background-color: ${theme.colors.gray[100]};
   background-image: url('/masks/devapi.svg');

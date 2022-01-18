@@ -100,7 +100,8 @@ export const HeroContentImage = styled.div`
 
   @media (max-width: 768px) {
     img {
-      display: none;
+      display: flex;
+      width: 105vw;
     }
   }
 `

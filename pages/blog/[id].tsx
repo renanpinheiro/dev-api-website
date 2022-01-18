@@ -14,7 +14,6 @@ import {
 import { ImageCarousel } from '../../components/ImageCarousel'
 import { Sidebar } from '../../components/Sidebar'
 import {
-  findEbook,
   findPopularPosts,
   findPostById,
   findTags,
@@ -38,8 +37,6 @@ const BlogDetails = () => {
 
   const [popularArticles, setPopularArticles] = useState([])
   const [tags, setTags] = useState([])
-  const [ebookImg, setEbookImg] = useState('')
-  const [ebookRedirect, setEbookRedirect] = useState('')
   const [text, setText] = useState('')
   const [title, setTitle] = useState('')
   const [newsImages, setNewsImages] = useState([])
@@ -50,7 +47,6 @@ const BlogDetails = () => {
 
     handleFindTags()
     handleFindPopularPosts()
-    handleFindEbook()
   }, [currentId])
 
   const handlePostTitle = title => title && `${title} | DevApi`
@@ -70,12 +66,6 @@ const BlogDetails = () => {
 
     const articleRelated = handlePostsCarousel(data.articles_related)
     setNewsCards(articleRelated)
-  }
-
-  const handleFindEbook = async () => {
-    const { data } = await findEbook()
-    setEbookImg(data.media)
-    setEbookRedirect(data.link)
   }
 
   const handleFindPopularPosts = async () => {
@@ -126,8 +116,6 @@ const BlogDetails = () => {
           <Sidebar
             tags={tags}
             articles={popularArticles}
-            ebookRedirect={ebookRedirect}
-            ebookImg={ebookImg}
             onClick={index => handleClickNews(popularArticles[index].linkId)}
             onClickTag={handleClickTag}
           />
