@@ -93,8 +93,8 @@ const Home = () => {
           <S.Platform>
             <S.Pipe />
             <h2>
-              Plataforma de Integração e Gestão de APIs.
-              <span>Encaixe as peças da sua operação!</span>
+              Desbloqueamos o poder da integração de sistemas.{' '}
+              <span> Encaixe as peças da sua operação!</span>
             </h2>
 
             <p>
