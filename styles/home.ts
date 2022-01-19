@@ -39,12 +39,12 @@ export const HeroContent = styled.div`
   }
 
   > h1 {
-    width: 19ch;
+    max-width: 19ch;
     margin-bottom: 15px;
     font-size: 2.625rem;
 
     @media (max-width: 576px) {
-      width: 15ch;
+      max-width: 15ch;
       font-size: 2.25rem;
     }
 
