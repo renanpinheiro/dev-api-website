@@ -44,8 +44,8 @@ export const HeroContent = styled.div`
     font-size: 2.625rem;
 
     @media (max-width: 576px) {
-      font-size: 2.25rem;
       width: 15ch;
+      font-size: 2.25rem;
     }
 
     @media (min-width: 1600px) {
