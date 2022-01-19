@@ -25,7 +25,6 @@ export const HeroContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 50ch;
   height: 100%;
 
   @media (max-width: 576px) {
@@ -40,12 +39,13 @@ export const HeroContent = styled.div`
   }
 
   > h1 {
-    max-width: 20ch;
+    width: 19ch;
     margin-bottom: 15px;
     font-size: 2.625rem;
 
     @media (max-width: 576px) {
       font-size: 2.25rem;
+      width: 15ch;
     }
 
     @media (min-width: 1600px) {
