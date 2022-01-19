@@ -58,6 +58,11 @@ const ConnectorsPage = () => {
   const findCategories = async () => {
     const { data } = await api.get('/categoria-de-conectores')
 
+    data.push({
+      id: '',
+      name: 'Todas categorias',
+    })
+
     setCategories(data)
   }
 
