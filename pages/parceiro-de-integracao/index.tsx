@@ -1,37 +1,19 @@
 import React, { useRef } from 'react'
 
-import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
 import { Button } from '../../components/Button'
 import { FormPartner } from '../../components/FormPartner'
 import { Hero } from '../../components/Hero'
+import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { cardPatnerImages } from '../../constants/cardPatnerImages'
-import { constumersMobile, costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/costumers'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
-import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/partner'
 
-const CarrouselWithOutSSR = dynamic(
-  () => import('../../components/Carrousel'),
-  {
-    ssr: false,
-  },
-)
-
-const MultiCarrouselWithOutSSR = dynamic(
-  () => import('../../components/MultiCarrousel/MultiCarrousel'),
-  {
-    ssr: false,
-  },
-)
-
 const IntegrationPartner = () => {
-  const { width } = useWindowDimensions()
   const formRef = useRef(null)
-
-  const isMobile = width <= 1024
 
   const executeScroll = () => formRef.current.scrollIntoView()
 
@@ -167,36 +149,20 @@ const IntegrationPartner = () => {
           </S.FormContainer>
         </S.CornerContainer>
 
-        <S.Carrousel>
-          {isMobile ? (
-            <CarrouselWithOutSSR
-              items={constumersMobile}
-              title={
-                <S.CarrouselTitle>
+        <S.ListIconContainer>
+          <ListIconCostumer
+            items={costumers}
+            title={
+              <S.ListIconlTitle>
+                <S.PipeContainer>
                   <S.Pipe />
-                  <h2>
-                    Empresas que já desbloquearam o{' '}
-                    <b>poder da integração de sistemas</b>
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          ) : (
-            <MultiCarrouselWithOutSSR
-              interval={2000}
-              items={costumers}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Empresas que já desbloquearam o{' '}
-                    <b>poder da integração de sistemas</b>
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          )}
-        </S.Carrousel>
+                </S.PipeContainer>
+                Empresas que já desbloquearam o{' '}
+                <span>poder da integração de sistemas</span>
+              </S.ListIconlTitle>
+            }
+          />
+        </S.ListIconContainer>
       </S.Container>
     </>
   )

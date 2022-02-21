@@ -74,6 +74,7 @@ export const HeroContent = styled.div`
     }
   }
 `
+
 export const PipeContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -84,6 +85,7 @@ export const PipeContainer = styled.div`
     justify-content: flex-start;
   }
 `
+
 export const Pipe = styled.div`
   width: 7vw;
   height: 3px;
