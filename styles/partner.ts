@@ -421,40 +421,6 @@ export const TextContainer = styled.div`
     }
   }
 `
-export const Carrousel = styled.section`
-  width: 100%;
-  padding: 15vh 5.5vw;
-  background-size: 100%;
-
-  @media (max-width: 996px) {
-    padding: 10vh 5.5vw;
-  }
-`
-
-export const CarrouselTitle = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2vh;
-
-  > h2 {
-    font-size: 2.25rem;
-    color: ${theme.colors.primary};
-
-    @media (max-width: 576px) {
-      margin-top: 10px;
-    }
-
-    @media (min-width: 1600px) {
-      font-size: 3rem;
-    }
-
-    > b {
-      font-weight: 700;
-    }
-  }
-`
 
 export const Quote = styled.div`
   padding: 10vh 3vw 0 5vw;
@@ -472,5 +438,40 @@ export const FormContainer = styled.div`
 
   @media (max-width: 996px) {
     width: 100%;
+  }
+`
+
+export const ListIconContainer = styled.div`
+  width: 100vw;
+  padding: 5vh 0 5vh 0;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 5vh 8vw 5vh 8vw;
+    margin: 3vh 0;
+  }
+`
+
+export const ListIconlTitle = styled.h2`
+  font-size: 2.3rem;
+  color: ${theme.colors.primary};
+
+  @media (max-width: 996px) {
+    margin-top: 10px;
+    font-size: 1.375rem;
+  }
+
+  span {
+    font-weight: 700;
+  }
+`
+export const PipeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
   }
 `
