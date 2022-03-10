@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { INewsCardProps } from './NewsCard.interface'
 import * as S from './NewsCard.style'
 
-import marked from 'marked'
+import { marked } from 'marked'
 
 const NewsCard = ({
   newsCards,
