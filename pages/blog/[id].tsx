@@ -20,7 +20,7 @@ import {
 } from '../../providers/blog/find'
 import * as S from '../../styles/blog'
 
-import marked from 'marked'
+import { marked } from 'marked'
 
 const NewsCarouselWithOutSSR = dynamic(
   () => import('../../components/NewsCarousel'),
