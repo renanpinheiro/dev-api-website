@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { CallToAction } from '../../components/CallToAction'
 import { Hero } from '../../components/Hero'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
-import { costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/custumers'
 import * as S from '../../styles/about'
 
 const About = () => {
@@ -69,7 +69,6 @@ const About = () => {
         <S.Wrapper>
           <S.ListIconContainer>
             <ListIconCostumer
-              items={costumers}
               title={
                 <S.ListIconlTitle>
                   <S.PipeContainer>
