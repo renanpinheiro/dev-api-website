@@ -6,7 +6,7 @@ import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { ProfessionalService } from '../../components/ProfessionalService'
-import { costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/custumers'
 import { integrations } from '../../constants/integrations'
 import * as S from '../../styles/characteristics'
 import { validateOddNumber } from '../../utils/validateOddNumber'
@@ -80,7 +80,6 @@ const Characteristics = () => {
 
         <S.ListIconContainer>
           <ListIconCostumer
-            items={costumers}
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>

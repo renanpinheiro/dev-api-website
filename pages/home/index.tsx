@@ -7,10 +7,11 @@ import { BoxReverse } from '../../components/BoxReverse'
 import { ButtonLink } from '../../components/ButtonLink'
 import { CompanyBenefits } from '../../components/CompanyBenefits'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
+import { Slider } from '../../components/Slider'
 import { benefits } from '../../constants/benefits'
 import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
-import { costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/custumers'
 import { featuresCard } from '../../constants/featuresCard'
 import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
@@ -302,7 +303,6 @@ const Home = () => {
 
         <S.ListIconContainer>
           <ListIconCostumer
-            items={costumers}
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>

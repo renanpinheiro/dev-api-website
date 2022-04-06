@@ -7,7 +7,7 @@ import { FormPartner } from '../../components/FormPartner'
 import { Hero } from '../../components/Hero'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { cardPatnerImages } from '../../constants/cardPatnerImages'
-import { costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/custumers'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
 import * as S from '../../styles/partner'
@@ -151,7 +151,6 @@ const IntegrationPartner = () => {
 
         <S.ListIconContainer>
           <ListIconCostumer
-            items={costumers}
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>
