@@ -17,18 +17,18 @@ export const Container = styled.div``
 
 export const Slider = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  perspective-origin: top;
+  justify-content: center;
   height: 100%;
+  perspective-origin: top;
 `
 
 export const SliderAnimation = styled.div<ISliderAnimation>`
   position: relative;
-  margin: 0 auto;
   top: 10%;
   width: 100vw;
   height: 120px;
+  margin: 0 auto;
   transform-style: preserve-3d;
   transform-origin: center center;
   animation: ${props => (props.rotate === 'right' ? rotateRight : rotateLeft)}

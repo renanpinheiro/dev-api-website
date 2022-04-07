@@ -11,18 +11,16 @@ interface ISliderStyle {
 }
 
 const Side = styled.div<ISliderStyle>`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
-  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 158px;
-
+  height: 150px;
+  padding: 1vh;
+  overflow: hidden;
   background-color: ${props => props.color};
   transform: ${props => `rotateY(${props.rotate}deg)`} translateZ(3000px);
-  overflow: hidden;
-
-  padding: 1vh;
 `
 
 const Slider = () => {
