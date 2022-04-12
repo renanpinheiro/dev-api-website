@@ -13,7 +13,7 @@ import { ListIconCostumer } from '../../components/ListIconCostumer'
 import QuoteCarousel from '../../components/QuoteCarousel'
 import { cardPlanItems } from '../../constants/cardPlanItems'
 import { commonQuestions } from '../../constants/commonQuestions'
-import { costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/custumers'
 import { listIntegration } from '../../constants/listIntegration'
 import { quotes } from '../../constants/quotes'
 import * as S from '../../styles/plans'
@@ -71,7 +71,6 @@ const Plans = () => {
 
         <S.ListIconContainer>
           <ListIconCostumer
-            items={costumers}
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>

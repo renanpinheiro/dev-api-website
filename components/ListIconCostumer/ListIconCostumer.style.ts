@@ -15,34 +15,4 @@ export const TitleContainer = styled.div`
     text-align: left;
   }
 `
-export const ListImageContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-`
-export const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 130px;
-  padding-bottom: 2vh;
-  margin: 0 25px;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-
-  @media (max-width: 1024px) {
-    width: 100px;
-    margin: 0 25px;
-  }
-`
-
-export const Image = styled.img`
-  width: 100%;
-  height: 90px;
-  pointer-events: none;
-  object-fit: contain;
-`
+export const ListImageContainer = styled.div``

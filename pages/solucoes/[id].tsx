@@ -10,7 +10,7 @@ import { Hero } from '../../components/Hero'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
-import { costumers } from '../../constants/costumers'
+import { costumers } from '../../constants/custumers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 import * as S from '../../styles/solutions'
@@ -139,7 +139,6 @@ const Solutions = () => {
 
           <S.ListIconContainer>
             <ListIconCostumer
-              items={costumers}
               title={
                 <S.ListIconlTitle>
                   <S.PipeContainer>
