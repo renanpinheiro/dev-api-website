@@ -14,12 +14,14 @@ export default async (req, res) => {
       },
     })
 
-    await transporter.sendMail({
-      from: process.env.NEXT_PUBLIC_USER,
-      to: 'michel.carnevali@devapi.com.br, luana@devapi.com.br',
-      subject: `Solicitação de Parceria de Integração - ${company}`,
-      text: `Nome: ${fullName} \n E-mail: ${email} \n Telefone: ${phone} \n Empresa: ${company} \n Cargo: ${role}`,
-    })
+    await transporter
+      .sendMail({
+        from: process.env.NEXT_PUBLIC_USER,
+        to: 'michel.carnevali@devapi.com.br, luana@devapi.com.br',
+        subject: `Solicitação de Parceria de Integração - ${company}`,
+        text: `Nome: ${fullName} \n E-mail: ${email} \n Telefone: ${phone} \n Empresa: ${company} \n Cargo: ${role}`,
+      })
+      .catch(error => console.log(error))
 
     return res.status(200).json({
       message: 'E-mail enviado com sucesso! Em breve entraremos em contato.',

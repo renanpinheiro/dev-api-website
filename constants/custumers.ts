@@ -79,6 +79,22 @@ export const costumers = [
     name: 'scaffold',
     url: '/costumers/logo-scaffold.svg',
   },
+  {
+    name: 'checkstore',
+    url: '/costumers/checkstore.jpg',
+  },
+  {
+    name: 'dimona',
+    url: '/costumers/dimona.jpg',
+  },
+  {
+    name: 'latina-creativa',
+    url: '/costumers/latina-creativa.jpg',
+  },
+  {
+    name: 'otimize-frete',
+    url: '/costumers/otimize-frete.jpg',
+  },
 ]
 
 export const constumersMobile = {
