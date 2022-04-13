@@ -21,6 +21,11 @@ const Side = styled.div<ISliderStyle>`
   overflow: hidden;
   background-color: ${props => props.color};
   transform: ${props => `rotateY(${props.rotate}deg)`} translateZ(3000px);
+
+  > img {
+    width: 95%;
+    max-height: 88px;
+  }
 `
 
 const Slider = () => {

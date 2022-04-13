@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
 import { roleOptions } from '../../constants/roleOptions'
-import { removePhoneMask } from '../../utils/removePhoneMask'
 import { Button } from '../Button'
 import { InputText } from '../InputText'
 import { Select } from '../Select'
@@ -24,27 +23,11 @@ const FormPartner = () => {
     fullName: Yup.string().required('Campo Obrigatório'),
   })
 
-  const handleValues = (values: IPayload) => ({
-    event_type: 'CONVERSION',
-    event_family: 'CDP',
-    payload: {
-      conversion_identifier: 'parceiro-de-integracao',
-      email: values.email,
-      name: values.fullName,
-      mobile_phone: removePhoneMask(values.phone),
-      company: values.company,
-      cf_cargo: values.role,
-      cf_mensagem: values.message,
-    },
-  })
-
   const onSubmit = async (values: IPayload) => {
     try {
-      const handledValues = handleValues(values)
-
       const result = await axios.post(
-        'https://api.rd.services/platform/conversions?api_key=qYACYTdSehuDUoCaOVpbdHyujAXQAQiIVECj',
-        handledValues,
+        `${process.env.NEXT_PUBLIC_API_SITE}/api/send-email`,
+        values,
       )
 
       formik.resetForm()
@@ -52,10 +35,10 @@ const FormPartner = () => {
         setMessage({
           type: 'success',
           message:
-            'Enviando com sucesso! Entraremos em contato o mais brevemente possível',
+            'Enviado com sucesso! Entraremos em contato o mais brevemente possível',
         })
     } catch {
-      setMessage({ type: 'alert', message: 'Algo deu errado !' })
+      setMessage({ type: 'alert', message: 'Algo deu errado!' })
     }
   }
 
