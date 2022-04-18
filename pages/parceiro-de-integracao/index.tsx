@@ -1,13 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import Head from 'next/head'
 
 import { Button } from '../../components/Button'
-import { FormPartner } from '../../components/FormPartner'
 import { Hero } from '../../components/Hero'
 import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { cardPatnerImages } from '../../constants/cardPatnerImages'
-import { costumers } from '../../constants/custumers'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
 import * as S from '../../styles/partner'
@@ -16,6 +14,14 @@ const IntegrationPartner = () => {
   const formRef = useRef(null)
 
   const executeScroll = () => formRef.current.scrollIntoView()
+
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src =
+      'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
 
   return (
     <>
@@ -145,7 +151,10 @@ const IntegrationPartner = () => {
           </S.TextContainer>
 
           <S.FormContainer>
-            <FormPartner />
+            <div
+              className="meetings-iframe-container"
+              data-src="https://meetings.hubspot.com/michel-carnevali/parcerias?embed=true"
+            ></div>
           </S.FormContainer>
         </S.CornerContainer>
 

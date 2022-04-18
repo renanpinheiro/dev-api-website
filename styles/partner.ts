@@ -427,14 +427,7 @@ export const Quote = styled.div`
 `
 
 export const FormContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 60%;
-  padding: 4vh 1vw 4vh 1vw;
-  background-color: ${theme.colors.white};
-  border-radius: 10px;
-  box-shadow: 0 10px 25px #5f47ff29;
 
   @media (max-width: 996px) {
     width: 100%;
