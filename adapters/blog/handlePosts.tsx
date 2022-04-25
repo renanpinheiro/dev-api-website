@@ -33,7 +33,10 @@ export const handleCarouselPosts = (posts: IFindResponse[]) => {
       interval: 8000,
       component: (
         <S.ImageCarouselItems>
-          <S.ImageHeaderContainer imageUrl={post.images.big}>
+          <S.Image>
+            <img src={post.images.big} />
+          </S.Image>
+          <S.ImageHeaderContainer>
             <S.CaseType>{post.type}</S.CaseType>
             <S.Title>{post.title}</S.Title>
             <S.Pipe />
@@ -85,7 +88,10 @@ export const handleHeaderImage = (post: IFindResponse) => {
     interval: 8000,
     component: (
       <S.ImageCarouselItems>
-        <S.ImageHeaderContainer imageUrl={post.images.big}>
+        <S.Image>
+          <img src={post.images.big} />
+        </S.Image>
+        <S.ImageHeaderContainer>
           <S.CaseType>{post.type}</S.CaseType>
           <S.Title>{post.title}</S.Title>
           <S.Pipe />

@@ -53,7 +53,9 @@ export const ImageCarouselItems = styled.div`
   width: 100%;
   height: 100%;
 `
-export const ImageHeaderContainer = styled.div<ICaseStyle>`
+export const ImageHeaderContainer = styled.div`
+  position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -61,16 +63,27 @@ export const ImageHeaderContainer = styled.div<ICaseStyle>`
   width: 100%;
   height: 100%;
   padding: 12vh 12.5vw;
-  background-image: url(${props => props.imageUrl});
-  background-size: cover;
 
   @media only screen and (max-width: 770px) {
     padding: 12vh 9vw;
   }
 `
 
+export const Image = styled.div`
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  > img {
+    min-width: 100%;
+    opacity: 0.5;
+  }
+`
+
 export const Title = styled.p`
-  margin-top: 20px;
+  margin: 20px 0;
   font-size: 3.3rem;
   font-weight: 700;
   line-height: 1;
