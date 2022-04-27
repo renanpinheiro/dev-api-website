@@ -523,7 +523,7 @@ export const CallToActionContainer = styled.div`
 
 export const ListIconContainer = styled.div`
   width: 100vw;
-  padding: 5vh 0 5vh 0;
+  padding: 8vh 0 0 0;
 
   @media (max-width: 1024px) {
     width: 100%;
