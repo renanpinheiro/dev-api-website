@@ -78,16 +78,13 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
                     ) : (
                       <>
                         <S.Plans>
-                          <Link href="/cases" activeClassName="activeLink">
-                            <a title="Cases" onClick={close} rel="noreferrer">
-                              Cases
-                            </a>
-                          </Link>
-                        </S.Plans>
-                        <S.Plans>
-                          <Link href="/planos" activeClassName="activeLink">
-                            <a title="Planos" onClick={close} rel="noreferrer">
-                              Planos
+                          <Link href={link.url} activeClassName="activeLink">
+                            <a
+                              title={link.name}
+                              onClick={close}
+                              rel="noreferrer"
+                            >
+                              {link.name}
                             </a>
                           </Link>
                         </S.Plans>
