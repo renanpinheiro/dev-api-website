@@ -88,7 +88,7 @@ export const navLinks = [
   },
   {
     name: 'Trabalhe Conosco',
-    url: '/',
+    url: 'https://jobs.kenoby.com/tivit',
     isActive: false,
   },
 ]
