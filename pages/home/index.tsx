@@ -301,19 +301,19 @@ const Home = () => {
           </S.Features>
         </S.FeaturesContainer>
 
-        <S.ListIconContainer>
-          <ListIconCostumer
-            title={
-              <S.ListIconlTitle>
-                <S.PipeContainer>
-                  <S.Pipe />
-                </S.PipeContainer>
-                Empresas que já desbloquearam o{' '}
-                <span>poder da integração de sistemas</span>
-              </S.ListIconlTitle>
-            }
-          />
-        </S.ListIconContainer>
+        <S.BenefitsContainer>
+          <S.CompanyContainer>
+            <S.Pipe />
+            <h2>
+              <b> Com a Plataforma de Integração e Gestão de APIs</b> da DevApi,
+              sua empresa vai:
+            </h2>
+          </S.CompanyContainer>
+
+          {benefits.map((description, index) => (
+            <CompanyBenefits description={description} key={index} />
+          ))}
+        </S.BenefitsContainer>
 
         <S.Quote>
           <QuoteCarouselWithOutSSR quotes={quotes} />
@@ -531,19 +531,19 @@ const Home = () => {
           </S.SecurityTextContainer>
         </S.SecurityContainer>
 
-        <S.BenefitsContainer>
-          <S.CompanyContainer>
-            <S.Pipe />
-            <h2>
-              <b> Com a Plataforma de Integração e Gestão de APIs</b> da DevApi,
-              sua empresa vai:
-            </h2>
-          </S.CompanyContainer>
-
-          {benefits.map((description, index) => (
-            <CompanyBenefits description={description} key={index} />
-          ))}
-        </S.BenefitsContainer>
+        <S.ListIconContainer>
+          <ListIconCostumer
+            title={
+              <S.ListIconlTitle>
+                <S.PipeContainer>
+                  <S.Pipe />
+                </S.PipeContainer>
+                Empresas que já desbloquearam o{' '}
+                <span>poder da integração de sistemas</span>
+              </S.ListIconlTitle>
+            }
+          />
+        </S.ListIconContainer>
 
         <S.UnlockContainer>
           <S.UnlockTextContainer>
