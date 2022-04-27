@@ -85,7 +85,7 @@ export const NavBar = styled.div`
 export const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 5vw;
+  margin-right: 4vw;
   cursor: pointer;
 
   @media (max-width: 1600px) {
