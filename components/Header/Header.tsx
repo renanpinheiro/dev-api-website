@@ -113,7 +113,7 @@ const Header = () => {
 
       <S.ButtonContainer>
         <ButtonLink
-          text="Fale com um especialista"
+          text="Agendar conversa"
           href="/converse-com-especialista"
           target="_self"
           type="default"
