@@ -3,10 +3,10 @@ import React from 'react'
 import Head from 'next/head'
 
 import { ButtonLink } from '../../components/ButtonLink'
+import { Customers } from '../../components/Customers'
 import { Hero } from '../../components/Hero'
-import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { ProfessionalService } from '../../components/ProfessionalService'
-import { costumers } from '../../constants/custumers'
+import { customers } from '../../constants/customers'
 import { integrations } from '../../constants/integrations'
 import * as S from '../../styles/characteristics'
 import { validateOddNumber } from '../../utils/validateOddNumber'
@@ -79,7 +79,7 @@ const Characteristics = () => {
         <ProfessionalService />
 
         <S.ListIconContainer>
-          <ListIconCostumer
+          <Customers
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>
@@ -89,6 +89,7 @@ const Characteristics = () => {
                 <span>poder da integração de sistemas</span>
               </S.ListIconlTitle>
             }
+            items={customers}
           />
         </S.ListIconContainer>
       </S.Container>

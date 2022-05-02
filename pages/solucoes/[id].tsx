@@ -6,11 +6,11 @@ import { useRouter } from 'next/router'
 
 import { Circle } from '../../components/AnimatedBackground'
 import { ButtonLink } from '../../components/ButtonLink'
+import { Customers } from '../../components/Customers'
 import { Hero } from '../../components/Hero'
-import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { ProfessionalService } from '../../components/ProfessionalService'
 import QuoteCarousel from '../../components/QuoteCarousel'
-import { costumers } from '../../constants/custumers'
+import { customers } from '../../constants/customers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 import * as S from '../../styles/solutions'
@@ -138,7 +138,7 @@ const Solutions = () => {
           </S.ProfessionalServiceContainer>
 
           <S.ListIconContainer>
-            <ListIconCostumer
+            <Customers
               title={
                 <S.ListIconlTitle>
                   <S.PipeContainer>
@@ -148,6 +148,7 @@ const Solutions = () => {
                   <span>poder da integração de sistemas</span>
                 </S.ListIconlTitle>
               }
+              items={customers}
             />
           </S.ListIconContainer>
         </S.Content>

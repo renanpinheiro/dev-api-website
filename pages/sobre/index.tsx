@@ -4,9 +4,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import { CallToAction } from '../../components/CallToAction'
+import { Customers } from '../../components/Customers'
 import { Hero } from '../../components/Hero'
-import { ListIconCostumer } from '../../components/ListIconCostumer'
-import { costumers } from '../../constants/custumers'
+import { customers } from '../../constants/customers'
 import * as S from '../../styles/about'
 
 const About = () => {
@@ -68,7 +68,7 @@ const About = () => {
         </S.Wrapper>
         <S.Wrapper>
           <S.ListIconContainer>
-            <ListIconCostumer
+            <Customers
               title={
                 <S.ListIconlTitle>
                   <S.PipeContainer>
@@ -78,6 +78,7 @@ const About = () => {
                   <span>poder da integração de sistemas</span>
                 </S.ListIconlTitle>
               }
+              items={customers}
             />
           </S.ListIconContainer>
         </S.Wrapper>
