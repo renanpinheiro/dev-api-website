@@ -3,9 +3,10 @@ import React, { useEffect, useRef } from 'react'
 import Head from 'next/head'
 
 import { Button } from '../../components/Button'
+import { Customers } from '../../components/Customers'
 import { Hero } from '../../components/Hero'
-import { ListIconCostumer } from '../../components/ListIconCostumer'
 import { cardPatnerImages } from '../../constants/cardPatnerImages'
+import { customers } from '../../constants/customers'
 import { knowPatners } from '../../constants/knowPartners'
 import { programCard } from '../../constants/programCard'
 import * as S from '../../styles/partner'
@@ -159,7 +160,7 @@ const IntegrationPartner = () => {
         </S.CornerContainer>
 
         <S.ListIconContainer>
-          <ListIconCostumer
+          <Customers
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>
@@ -169,6 +170,7 @@ const IntegrationPartner = () => {
                 <span>poder da integração de sistemas</span>
               </S.ListIconlTitle>
             }
+            items={customers}
           />
         </S.ListIconContainer>
       </S.Container>

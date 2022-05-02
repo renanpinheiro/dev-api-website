@@ -6,12 +6,11 @@ import Head from 'next/head'
 import { BoxReverse } from '../../components/BoxReverse'
 import { ButtonLink } from '../../components/ButtonLink'
 import { CompanyBenefits } from '../../components/CompanyBenefits'
-import { ListIconCostumer } from '../../components/ListIconCostumer'
-import { Slider } from '../../components/Slider'
+import { Customers } from '../../components/Customers'
 import { benefits } from '../../constants/benefits'
 import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
-import { costumers } from '../../constants/custumers'
+import { customers } from '../../constants/customers'
 import { featuresCard } from '../../constants/featuresCard'
 import { plataformDetails } from '../../constants/plataformDetails'
 import { quotes } from '../../constants/quotes'
@@ -532,7 +531,7 @@ const Home = () => {
         </S.SecurityContainer>
 
         <S.ListIconContainer>
-          <ListIconCostumer
+          <Customers
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>
@@ -542,6 +541,7 @@ const Home = () => {
                 <span>poder da integração de sistemas</span>
               </S.ListIconlTitle>
             }
+            items={customers}
           />
         </S.ListIconContainer>
 

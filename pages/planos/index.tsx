@@ -7,13 +7,13 @@ import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
 import { CardPlans } from '../../components/CardPlans'
 import { ICardPlanItems } from '../../components/CardPlans/CardPlans.interface'
+import { Customers } from '../../components/Customers'
 import { Hero } from '../../components/Hero'
 import { ListColumn } from '../../components/ListColumn'
-import { ListIconCostumer } from '../../components/ListIconCostumer'
 import QuoteCarousel from '../../components/QuoteCarousel'
 import { cardPlanItems } from '../../constants/cardPlanItems'
 import { commonQuestions } from '../../constants/commonQuestions'
-import { costumers } from '../../constants/custumers'
+import { customers } from '../../constants/customers'
 import { listIntegration } from '../../constants/listIntegration'
 import { quotes } from '../../constants/quotes'
 import * as S from '../../styles/plans'
@@ -70,7 +70,7 @@ const Plans = () => {
         </S.QuoteContainer>
 
         <S.ListIconContainer>
-          <ListIconCostumer
+          <Customers
             title={
               <S.ListIconlTitle>
                 <S.PipeContainer>
@@ -80,6 +80,7 @@ const Plans = () => {
                 <span>poder da integração de sistemas</span>
               </S.ListIconlTitle>
             }
+            items={customers}
           />
         </S.ListIconContainer>
 
