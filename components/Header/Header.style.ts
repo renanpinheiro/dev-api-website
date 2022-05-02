@@ -92,7 +92,7 @@ export const NavLinkContainer = styled.div`
     margin-right: 4vw;
   }
 
-  @media (max-width: 1370px) {
+  @media (max-width: 1599.99px) {
     margin-right: 3vw;
   }
 
