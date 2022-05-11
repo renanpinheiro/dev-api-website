@@ -4,9 +4,9 @@ import { theme } from '../../styles/theme'
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 0 5vw 0 3vw;
 `
@@ -27,8 +27,8 @@ export const FeaturesContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5vh;
   padding: 8vh 8vw 0 8vw;
+  margin-bottom: 5vh;
   text-align: center;
 
   > h2 {
@@ -56,9 +56,9 @@ export const FeaturesContainer = styled.div`
 
 export const QuoteContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 
   > div {
@@ -66,6 +66,7 @@ export const QuoteContainer = styled.div`
       @media screen and (max-width: 900px) {
         width: 88vw;
       }
+
       > div {
         height: 55vh;
         margin-top: 20px;
@@ -81,8 +82,8 @@ export const QuoteStructure = styled.div`
   justify-content: space-evenly;
   min-height: 45vh;
   padding: 20px 30px;
-  box-shadow: 0px 0px 19px -8px gray;
   border-radius: 20px;
+  box-shadow: 1px 1px 19px -8px gray;
 `
 
 export const Image = styled.div`
@@ -90,8 +91,8 @@ export const Image = styled.div`
   margin-bottom: 1.5vh;
 `
 export const Quote = styled.p`
-  font-size: 1.4rem;
   margin-bottom: 1.5vh;
+  font-size: 1.4rem;
   text-align: justify;
 
   @media screen and (max-width: 900px) {
@@ -106,10 +107,10 @@ export const NameContainer = styled.div`
 `
 
 export const Name = styled.p`
-  font-weight: bold;
   font-size: 1.2rem;
+  font-weight: bold;
 `
 export const Company = styled.p`
-  font-weight: bold;
   font-size: 1.2rem;
+  font-weight: bold;
 `
