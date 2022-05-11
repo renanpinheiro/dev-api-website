@@ -2,13 +2,16 @@ import React, { useRef, useEffect } from 'react'
 
 import Head from 'next/head'
 
+import { Acordion } from '../../components/Acordion'
 import { Button } from '../../components/Button'
+import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
+import { speakExpertQuestions } from '../../constants/commonQuestions'
 import * as S from '../../styles/speakExpert'
 
 const SpeakExpert = () => {
   const formRef = useRef(null)
-
+  const listQuestions = speakExpertQuestions
   const executeScroll = () => formRef.current.scrollIntoView()
 
   useEffect(() => {
@@ -83,6 +86,29 @@ const SpeakExpert = () => {
               data-src="https://meetings.hubspot.com/michel-carnevali/agendamento?embed=true"
             ></div>
           </S.Scheduling>
+
+          <S.AcordionContainer>
+            <S.PipeContainer>
+              <S.Pipe />
+            </S.PipeContainer>
+            <S.QuestionsContainer>
+              <h2>
+                Perguntas <b>frequentes</b>
+              </h2>
+            </S.QuestionsContainer>
+
+            <Acordion list={listQuestions} />
+
+            <S.ButtonContainer>
+              <ButtonLink
+                text="Vamos conversar"
+                href="/converse-com-especialista"
+                target="_self"
+                type="default"
+                size="default"
+              />
+            </S.ButtonContainer>
+          </S.AcordionContainer>
         </S.Wrapper>
       </S.Content>
     </>
