@@ -123,3 +123,56 @@ export const Title = styled.div`
 export const Scheduling = styled.div`
   width: 100%;
 `
+export const AcordionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10vh 8vw 10vh 8vw;
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+  }
+`
+export const PipeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`
+export const QuestionsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > h2 {
+    font-size: 2.25rem;
+    color: ${theme.colors.primary};
+
+    @media (max-width: 576px) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+
+    > b {
+      font-weight: 700;
+    }
+  }
+`
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0 0 0;
+
+  @media (max-width: 900) {
+    align-items: flex-start;
+  }
+`
