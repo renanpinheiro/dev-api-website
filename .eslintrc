@@ -22,7 +22,12 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "space-before-function-paren": "off",
     "no-use-before-define": "off",
     "react/prop-types": "off",

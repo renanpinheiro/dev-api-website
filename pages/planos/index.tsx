@@ -2,7 +2,6 @@ import React from 'react'
 
 import Head from 'next/head'
 
-import { Acordion } from '../../components/Acordion'
 import { ButtonLink } from '../../components/ButtonLink'
 import { CallToAction } from '../../components/CallToAction'
 import { CardPlans } from '../../components/CardPlans'
@@ -17,6 +16,7 @@ import { customers } from '../../constants/customers'
 import { listIntegration } from '../../constants/listIntegration'
 import { quotes } from '../../constants/quotes'
 import * as S from '../../styles/plans'
+import { Questions } from '../../components/Questions'
 
 const Plans = () => {
   const cards: ICardPlanItems[] = cardPlanItems
@@ -112,13 +112,7 @@ const Plans = () => {
           <S.PipeContainer>
             <S.Pipe />
           </S.PipeContainer>
-          <S.QuestionsContainer>
-            <h2>
-              Perguntas <b>frequentes</b>
-            </h2>
-          </S.QuestionsContainer>
-
-          <Acordion list={listQuestions} />
+          <Questions listQuestions={listQuestions} />
 
           <S.ButtonContainer>
             <ButtonLink

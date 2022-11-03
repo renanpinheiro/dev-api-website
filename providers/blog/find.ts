@@ -5,11 +5,17 @@ import {
   IFindTagResponse,
 } from './shared.interface'
 
-export const findPost = async (search?: string, tag?: string) => {
+export const findPost = async (
+  search?: string,
+  tag?: string,
+  page?: number,
+) => {
   return api.get<IFindResponse[]>('/posts', {
     params: {
       ...(search && { Titulo_containss: search }),
       ...(tag && { 'Tags.id': tag }),
+      ...(page && { _start: page }),
+      ...{ _limit: 5 },
     },
   })
 }

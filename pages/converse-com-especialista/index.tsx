@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react'
 import Head from 'next/head'
 
 import { Acordion } from '../../components/Acordion'
+import { Questions } from '../../components/Questions'
 import { Button } from '../../components/Button'
 import { ButtonLink } from '../../components/ButtonLink'
 import { Hero } from '../../components/Hero'
@@ -91,13 +92,7 @@ const SpeakExpert = () => {
             <S.PipeContainer>
               <S.Pipe />
             </S.PipeContainer>
-            <S.QuestionsContainer>
-              <h2>
-                Perguntas <b>frequentes</b>
-              </h2>
-            </S.QuestionsContainer>
-
-            <Acordion list={listQuestions} />
+            <Questions listQuestions={listQuestions} />
 
             <S.ButtonContainer>
               <ButtonLink

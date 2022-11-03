@@ -45,6 +45,7 @@ const Blog = () => {
   const [cases, setCases] = useState([])
   const [popularArticles, setPopularArticles] = useState([])
   const [searchTag, setSearchTag] = useState('')
+  const [pagination, setPagination] = useState(0)
 
   useEffect(() => {
     handleFindPosts()
@@ -57,7 +58,7 @@ const Blog = () => {
   }, [])
 
   const handleFindPosts = async () => {
-    const { data } = await findPost(search, searchTag)
+    const { data } = await findPost(search, searchTag, pagination)
     const posts = handlePosts(data)
     setNews(posts)
 
@@ -95,6 +96,14 @@ const Blog = () => {
 
   const handleClickNews = url => {
     Router.push(`/blog/${url}`)
+  }
+
+  const handlePagination = async () => {
+    const page = pagination + 5
+    setPagination(page)
+    const { data } = await findPost(search, searchTag, page)
+    const posts = handlePosts(data)
+    news.push(...posts)
   }
 
   const newsMobileCarrouselItems = cases.map((item, index) => {
@@ -232,6 +241,9 @@ const Blog = () => {
                 }
               />
             ))}
+            <S.LoadMoreButton onClick={() => handlePagination()}>
+              Carregar Mais
+            </S.LoadMoreButton>
           </S.Content>
 
           <Sidebar

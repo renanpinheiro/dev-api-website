@@ -388,6 +388,22 @@ export const ButtonContainer = styled.div`
   }
 `
 
+export const LoadMoreButton = styled.div`
+  display: flex;
+  grid-area: BT;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 1.5px solid ${props => props.theme.colors.secondary};
+  padding: 1.5rem;
+
+  :hover {
+    color: white;
+    background-color: ${theme.colors.secondary};
+  }
+`
+
 export const IconButton = styled.div<IButtonStyle>`
   width: 20px;
   height: 20px;

@@ -1,10 +1,12 @@
 import React from 'react'
 
 import * as S from './QuoteCarousel.styles'
+import dynamic from 'next/dynamic'
 
-import OwlCarousel from '@ntegral/react-owl-carousel'
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css'
+// import OwlCarousel from '@ntegral/react-owl-carousel'
+const OwlCarousel = dynamic(import('@ntegral/react-owl-carousel'), {
+  ssr: false,
+})
 
 const QuoteCarousel = ({ quotes }) => {
   return (
