@@ -235,13 +235,15 @@ const Home = () => {
             {transformCard.map((item, index) => {
               return (
                 <S.FeatureCard key={index}>
-                  <S.Icon>
-                    <img src={item.icon} alt={item.title} />
-                  </S.Icon>
-                  <S.Text>
-                    <b>{item.title}</b>
-                    <p>{item.text}</p>
-                  </S.Text>
+                  <a href={item.url} target="_self" rel="noreferrer">
+                    <S.Icon>
+                      <img src={item.icon} alt={item.title} />
+                    </S.Icon>
+                    <S.Text>
+                      <b>{item.title}</b>
+                      <p>{item.text}</p>
+                    </S.Text>
+                  </a>
                 </S.FeatureCard>
               )
             })}

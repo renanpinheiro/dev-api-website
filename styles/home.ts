@@ -484,12 +484,15 @@ export const TransformContainer = styled.div`
 `
 
 export const Features = styled.div`
-  columns: 3;
+  display: block;
   justify-content: space-between;
   margin-top: 7vh;
 
   @media (max-width: 996px) {
     width: 100%;
+  }
+  @media (min-width: 996px) {
+    columns: 3;
   }
 
   @media (max-width: 1300px) {
@@ -506,6 +509,17 @@ export const FeatureCard = styled.div`
   border: 1px solid ${theme.colors.gray[100]};
   border-radius: 15px;
   margin: 0.5vw;
+  height: 20vh;
+
+  > a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  :hover {
+    background-color: ${theme.colors.gray[100]};
+    cursor: pointer;
+  }
 
   @media (max-width: 996px) {
     align-items: flex-start;
@@ -519,7 +533,6 @@ export const Icon = styled.div`
   justify-content: center;
   width: 8vh;
   height: 8vh;
-  background-color: ${theme.colors.gray[100]};
   border-radius: 5px;
 
   @media (max-width: 996px) {
@@ -542,6 +555,7 @@ export const Text = styled.div`
   margin-left: 15px;
 
   > p {
+    text-decoration: none;
     max-width: 28ch;
     margin: 0;
     line-height: 1.2;
@@ -716,6 +730,7 @@ export const CardSystemContainer = styled.div`
 
   @media (max-width: 900px) {
     width: 100%;
+    margin-bottom: 30px;
   }
 `
 
@@ -968,8 +983,13 @@ export const Cases = styled.div`
 `
 
 export const QuoteContainer = styled.div`
-  display: flex;
+  display: block;
   padding: 8vh 8vw 8vh 8vw;
+
+  @media (min-width: 900px) {
+    display: flex;
+    width: 100%;
+  }
 `
 
 export const QuoteStructure = styled.div`
@@ -982,7 +1002,7 @@ export const QuoteStructure = styled.div`
   border-radius: 15px;
   opacity: 1;
   padding: 5vh 2vw 5vh 2vw;
-  margin: 0 2vw 0 0;
+  margin: 0 2vw 2vh 0;
 
   > p {
     max-width: 50ch;

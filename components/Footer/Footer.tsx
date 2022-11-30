@@ -8,7 +8,6 @@ import { resources } from '../../constants/resources'
 import { soluctions } from '../../constants/soluctions'
 import * as S from './Footer.styles'
 import { Links } from './Links'
-import { NewsletterForm } from './NewsletterForm'
 
 const Footer = () => (
   <S.FooterContainer>
