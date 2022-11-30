@@ -15,7 +15,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.16.0",
     "@ntegral/react-owl-carousel": "^1.0.1",
     "axios": "0.26.1",
