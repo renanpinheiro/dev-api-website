@@ -312,8 +312,8 @@ export const AdvantagesContainer = styled.div`
 
   > ul {
     > li {
+      height: 8vw;
       padding: 1vw;
-      max-height: 15vh;
 
       @media (max-width: 996px) {
         height: 15vh;

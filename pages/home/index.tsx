@@ -20,6 +20,7 @@ import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
 import { inlineCustomers } from '../../constants/inlineCustomers'
 import { NewsletterFooter } from '../../components/NewsletterFooter'
+import { CustomersContainer } from '../../components/CustomersContainer'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -137,8 +138,8 @@ const Home = () => {
                 <S.CarrouselTitle>
                   <S.Pipe />
                   <h2>
-                    Mais de 300 conectores pré-construídos{' '}
-                    <b> e prontos para uso </b>
+                    Mais de&nbsp;<b>300 conectores</b> pré-construídos e prontos
+                    para uso
                   </h2>
                 </S.CarrouselTitle>
               }
@@ -152,8 +153,8 @@ const Home = () => {
                 <S.CarrouselTitle>
                   <S.Pipe />
                   <h2>
-                    Mais de 300 conectores pré-construídos{' '}
-                    <b> e prontos para uso </b>
+                    Mais de <b>300 conectores</b> pré-construídos e prontos para
+                    uso
                   </h2>
                 </S.CarrouselTitle>
               }
@@ -323,6 +324,8 @@ const Home = () => {
             </S.ButtonContainer>
           </S.JoinNowContainer>
         </S.DemoContainer>
+
+        <CustomersContainer></CustomersContainer>
 
         <NewsletterFooter></NewsletterFooter>
       </S.Content>

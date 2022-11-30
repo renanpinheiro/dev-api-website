@@ -100,7 +100,7 @@ export const Pipe = styled.div`
 export const GifContainer = styled.div`
   width: 54%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     width: 100%;
   }
 
@@ -131,7 +131,7 @@ export const Carrousel = styled.section`
   padding: 7vh 8vw 7vh;
   background-size: 100%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     padding: 0 5.5vw 6vh;
   }
 `
@@ -151,8 +151,13 @@ export const CarrouselTitle = styled.div`
       font-size: 3rem;
     }
 
-    @media (max-width: 900px) {
-      text-align: left;
+    @media (max-width: 996px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
     }
 
     @media (max-width: 576px) {
@@ -164,7 +169,7 @@ export const CarrouselTitle = styled.div`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     align-items: flex-start;
   }
 `
@@ -233,7 +238,7 @@ export const PlatformDetails = styled.div`
   width: 50%;
   height: 100%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     width: 100%;
   }
 `
@@ -261,7 +266,7 @@ export const DetailsCard = styled.div`
     border-radius: 5px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     padding: 3vw;
   }
 `
@@ -281,7 +286,7 @@ export const DetailsText = styled.div`
     color: ${theme.colors.green[100]};
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     max-width: 20ch;
   }
 `
@@ -324,7 +329,7 @@ export const BusinessContainer = styled.div`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     align-items: flex-start;
     text-align: left;
   }
@@ -336,7 +341,7 @@ export const CardContainer = styled.div`
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     flex-direction: column;
     align-items: center;
   }
@@ -356,7 +361,7 @@ export const Card = styled.div`
   border-radius: 10px;
   box-shadow: 0 10px 25px #5f47ff29;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     width: 100%;
     height: 40vh;
     padding: 3vh;
@@ -394,7 +399,7 @@ export const ConnectorsContainer = styled.div`
     margin-right: 10px;
     box-shadow: 0 10px 25px #5f47ff29;
 
-    @media (max-width: 900px) {
+    @media (max-width: 996px) {
       width: 6vh;
     }
   }
@@ -404,7 +409,7 @@ export const Invisible = styled.div`
   width: 2px;
   height: 4vw;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     height: 6vh;
   }
 `
@@ -447,7 +452,7 @@ export const FeaturesContainer = styled.div`
     line-height: 1.3;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     align-items: flex-start;
     text-align: left;
   }
@@ -477,7 +482,7 @@ export const TransformContainer = styled.div`
     line-height: 1.3;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     align-items: flex-start;
     text-align: left;
   }
@@ -509,7 +514,7 @@ export const FeatureCard = styled.div`
   border: 1px solid ${theme.colors.gray[100]};
   border-radius: 15px;
   margin: 0.5vw;
-  height: 20vh;
+  height: 20vw;
 
   > a {
     text-decoration: none;
@@ -524,6 +529,7 @@ export const FeatureCard = styled.div`
   @media (max-width: 996px) {
     align-items: flex-start;
     margin: 0 0 7vh;
+    height: 30vh;
   }
 `
 
@@ -614,11 +620,20 @@ export const JoinNowContainer = styled.div`
 
     @media (max-width: 996px) {
       width: 100%;
-      font-size: 2rem;
     }
 
     @media (min-width: 1600px) {
       font-size: 3.25rem;
+    }
+
+    @media (max-width: 996px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      font-size: 2rem;
     }
 
     > b {
@@ -667,7 +682,7 @@ export const SystemContainer = styled.div`
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     flex-direction: column;
   }
 `
@@ -677,9 +692,9 @@ export const SystemImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 45vh;
+  height: 60vh;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     height: 45vh;
   }
 `
@@ -688,7 +703,7 @@ export const SystemImage = styled.img`
   object-fit: cover;
   width: 100%;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     object-fit: cover;
     width: 100%;
   }
@@ -705,7 +720,7 @@ export const ApiManagerContainer = styled.div`
     max-width: 56ch;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     align-items: flex-start;
     width: 100%;
     text-align: left;
@@ -728,7 +743,7 @@ export const CardSystemContainer = styled.div`
     max-width: 50ch;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     width: 100%;
     margin-bottom: 30px;
   }
@@ -967,7 +982,7 @@ export const CasesContainer = styled.div`
     line-height: 1.3;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     align-items: flex-start;
     text-align: left;
   }
@@ -976,6 +991,15 @@ export const CasesContainer = styled.div`
 export const Cases = styled.div`
   > h2 {
     width: 50%;
+
+    @media (max-width: 996px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
     > span {
       font-weight: bold;
     }
@@ -986,7 +1010,7 @@ export const QuoteContainer = styled.div`
   display: block;
   padding: 8vh 8vw 8vh 8vw;
 
-  @media (min-width: 900px) {
+  @media (min-width: 996px) {
     display: flex;
     width: 100%;
   }
@@ -1008,7 +1032,7 @@ export const QuoteStructure = styled.div`
     max-width: 50ch;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     width: 100%;
   }
 `
@@ -1067,7 +1091,7 @@ export const AdvantagesContainer = styled.div`
 
   > ul {
     > li {
-      padding: 2vw;
+      padding: 1vw;
 
       > img {
         vertical-align: middle;
@@ -1112,7 +1136,7 @@ export const DemoContainer = styled.div`
     line-height: 1.3;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     align-items: flex-start;
     text-align: left;
   }

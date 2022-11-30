@@ -31,12 +31,30 @@ export const NewsletterFooterContainer = styled.div`
   @media (min-width: 900px) {
     text-align: left;
   }
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
 `
 
 export const TextContainer = styled.div`
   margin-bottom: 2vh;
   > h2 {
     width: 50%;
+
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
     > b {
       font-weight: bold;
     }

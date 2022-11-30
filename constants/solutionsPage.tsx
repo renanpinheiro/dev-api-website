@@ -118,7 +118,7 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em Marketing',
     },
     title: {
-      pageTitle: 'Marketing',
+      pageName: 'Marketing',
       text: '<b>Impulsione a sua empresa no mercado com um Marketing integrado</b>',
       width: '60%',
     },
@@ -268,7 +268,7 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em RH',
     },
     title: {
-      pageTitle: 'RH 4.0',
+      pageName: 'RH 4.0',
       text: '<b>Esteja preparado para os novos desafios na gestão de pessoas com um RH 4.0</b>',
       width: '65%',
     },
@@ -337,7 +337,7 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em e-commerce',
     },
     title: {
-      pageTitle: 'e-commerce',
+      pageName: 'e-commerce',
       text: '<b>Venda 24h por dia, 7 dias por semana com seu e-commerce automatizado</b>',
     },
     subtitle:
@@ -413,7 +413,7 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções para Empresas',
     },
     title: {
-      pageTitle: 'Empresas 360',
+      pageName: 'Empresas 360',
       text: '<b>Integração total, a qualquer momento e em qualquer lugar.</b>',
       width: '55%',
     },
@@ -458,8 +458,9 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções Financeiras',
     },
     title: {
-      pageTitle: 'Financeiro',
+      pageName: 'Financeiro',
       text: '<b>Gestão financeira de alta performance para sua empresa</b>',
+      width: '65%',
     },
     subtitle:
       'Integre soluções financeiras e APIs open banking, automatize a contabilidade, relatórios e DREs de forma ágil e segura.',
@@ -535,7 +536,7 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções para seu produto',
     },
     title: {
-      pageTitle: 'Seu produto',
+      pageName: 'Seu produto',
       text: '<b>Torne o seu produto líder de mercado</b>',
       width: '30%',
     },
@@ -586,7 +587,7 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em Logística',
     },
     title: {
-      pageTitle: 'Logística 4.0',
+      pageName: 'Logística 4.0',
       text: '<b>Tenha uma Logística 4.0 e insira a sua empresa na transformação digital</b>',
     },
     subtitle:

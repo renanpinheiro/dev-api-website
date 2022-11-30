@@ -46,7 +46,9 @@ const Solutions = () => {
       <S.Container>
         <Hero>
           <S.HeroContent>
-            <h2>{page ? page.title.pageName : ''}</h2>
+            <h2
+              dangerouslySetInnerHTML={{ __html: `${page.title.pageName}` }}
+            ></h2>
             {page && (
               <S.Title
                 width={page.title.width}
