@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BiPlus } from 'react-icons/bi'
+import { BiCaretDown, BiPlus } from "react-icons/bi";
 import { VscChromeClose } from 'react-icons/vsc'
 
 import { theme } from '../../../styles/theme'
@@ -23,10 +23,12 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
     <>
       <S.Menu isOpen={isOpen}>
         <S.Container>
-          <S.Close onClick={close}>
-            <span>Fechar</span>
-            <VscChromeClose />
-          </S.Close>
+          <S.MenuHeader>
+            <S.Close onClick={close}>
+              <span>Fechar</span>
+              <VscChromeClose />
+            </S.Close>
+          </S.MenuHeader>
 
           <S.Nav>
             <ul>
@@ -45,7 +47,7 @@ const Menu = ({ isOpen, close, navLinks }: IHeaderMenuProps) => {
                               {link.name}
                             </S.Title>
                             <S.AccordionToggle eventKey={index.toString()}>
-                              <BiPlus color={theme.colors.primary} />
+                              <BiCaretDown color={theme.colors.primary} />
                             </S.AccordionToggle>
                           </S.CardHeader>
                           <S.AccordionCollapse eventKey={index.toString()}>

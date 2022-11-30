@@ -8,13 +8,13 @@ export const Hero = styled.section`
   height: 100vh;
   padding: 0 8vw 0 8vw;
   background-color: ${theme.colors.gray[100]};
-  background-image: url('/masks/lines.svg');
+  background-image: url('/backgrounds/Apresentação-DevApi.png');
   background-repeat: no-repeat;
   background-position-y: 140%;
   background-size: 100%;
 
   @media (max-width: 996px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 15vh 8vw 0 8vw;
   }
 `
@@ -28,12 +28,12 @@ export const HeroContent = styled.div`
   height: 100%;
 
   @media (max-width: 576px) {
-    align-items: flex-start;
     text-align: left;
     background-size: 100%;
   }
 
   @media (max-width: 996px) {
+    align-items: center;
     z-index: 20;
     width: 100%;
   }
@@ -169,29 +169,27 @@ export const CarrouselTitle = styled.div`
   }
 `
 
-export const Quote = styled.div`
-  padding: 10vh 3vw 15vh 5vw;
-
-  @media (max-width: 900px) {
-    padding: 0 3vw 5vh 5vw;
-  }
-`
-
 export const PlatformContainer = styled.div`
   display: flex;
   padding: 10vh 8vw;
 
-  @media (max-width: 900px) {
+  @media (max-width: 996px) {
     flex-direction: column;
   }
 `
 
 export const Platform = styled.div`
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
 
   @media (max-width: 996px) {
     width: 100%;
     margin-bottom: 30px;
+    text-align: center;
   }
 
   > h2 {
@@ -216,6 +214,7 @@ export const Platform = styled.div`
     line-height: 1.3;
 
     @media (max-width: 996px) {
+      text-align: center;
       width: 100%;
       font-size: 1.25rem;
     }
@@ -253,8 +252,7 @@ export const DetailsCard = styled.div`
   width: 12vh;
   height: 12vh;
   padding: 1vw;
-  background: transparent linear-gradient(225deg, #5f47ff -80%, #fff 60%) 0% 0%
-    no-repeat padding-box;
+  background-color: ${theme.colors.gray[100]};
   border-radius: 5px;
 
   img {
@@ -272,6 +270,7 @@ export const DetailsText = styled.div`
   margin-left: 20px;
 
   > p {
+    font-weight: 800;
     margin-bottom: 1vh;
     font-size: 3vh;
   }
@@ -417,13 +416,49 @@ export const ButtonContainer = styled.div`
   padding: 0 8vw 0 8vw;
 `
 
+export const Spacing = styled.div`
+  margin: 20vh 0 0 0;
+`
+
 export const FeaturesContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8vh 8vw 0 8vw;
+  padding: 8vh 8vw 8vh 8vw;
   text-align: center;
+  background: transparent url('/backgrounds/Apresentação-DevApi.png') 0% 0%
+    round padding-box;
+
+  > h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+  }
+
+  > p {
+    max-width: 120ch;
+    margin-top: 2vh;
+    overflow: hidden;
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`
+
+export const TransformContainer = styled.div`
+  align-items: center;
+  justify-content: center;
+  padding: 8vh 4vw 8vh 4vw;
+  text-align: center;
+  background: ${theme.colors.white};
 
   > h2 {
     font-size: 2.25rem;
@@ -449,10 +484,8 @@ export const FeaturesContainer = styled.div`
 `
 
 export const Features = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  columns: 3;
   justify-content: space-between;
-  width: 65vw;
   margin-top: 7vh;
 
   @media (max-width: 996px) {
@@ -466,9 +499,13 @@ export const Features = styled.div`
 
 export const FeatureCard = styled.div`
   display: flex;
+  flex-grow: 1;
   align-items: center;
-  margin: 0 2vh 7vh;
+  padding: 1vw 0 1vw 1vw;
   text-align: left;
+  border: 1px solid ${theme.colors.gray[100]};
+  border-radius: 15px;
+  margin: 0.5vw;
 
   @media (max-width: 996px) {
     align-items: flex-start;
@@ -503,17 +540,18 @@ export const Text = styled.div`
   justify-content: space-between;
   height: 100%;
   margin-left: 15px;
-  font-size: 1.25rem;
 
   > p {
     max-width: 28ch;
     margin: 0;
     line-height: 1.2;
+    font-size: 1rem;
   }
 
   > b {
     margin-bottom: 10px;
     font-weight: 700;
+    font-size: 1.125rem;
   }
 `
 
@@ -625,8 +663,7 @@ export const SystemImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 60vh;
-  margin-top: 5vh;
+  height: 45vh;
 
   @media (max-width: 900px) {
     height: 45vh;
@@ -661,21 +698,24 @@ export const ApiManagerContainer = styled.div`
   }
 `
 
-export const IPaasContainer = styled.div`
+export const CardSystemContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 40%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 30px #5f47ff26;
+  border-radius: 15px;
+  opacity: 1;
+  padding: 50px 30px 30px 30px;
 
   > p {
     max-width: 50ch;
   }
 
   @media (max-width: 900px) {
-    align-items: flex-start;
     width: 100%;
-    text-align: left;
   }
 `
 
@@ -883,5 +923,177 @@ export const UnlockTextContainer = styled.div`
   @media only screen and (max-width: 1023px) {
     align-items: flex-start;
     justify-content: flex-start;
+  }
+`
+
+export const CasesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8vh 4vw 0 8vw;
+  text-align: center;
+  background: ${theme.colors.white};
+
+  > h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+  }
+
+  > p {
+    max-width: 120ch;
+    margin-top: 2vh;
+    overflow: hidden;
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`
+
+export const Cases = styled.div`
+  > h2 {
+    width: 50%;
+    > span {
+      font-weight: bold;
+    }
+  }
+`
+
+export const QuoteContainer = styled.div`
+  display: flex;
+  padding: 8vh 8vw 8vh 8vw;
+`
+
+export const QuoteStructure = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  background: #f6f6ff 0% 0% no-repeat padding-box;
+  border-radius: 15px;
+  opacity: 1;
+  padding: 5vh 2vw 5vh 2vw;
+  margin: 0 2vw 0 0;
+
+  > p {
+    max-width: 50ch;
+  }
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+`
+
+export const QuoteAvatar = styled.div`
+  display: flex;
+  > img {
+    max-height: 95px;
+  }
+`
+
+export const QuoteTitle = styled.div`
+  display: block;
+  width: 100%;
+  > h3 {
+    // set block width
+    width: max-content;
+    font-weight: bold;
+  }
+
+  > img {
+    align-self: flex-start;
+    max-width: 26px;
+  }
+
+  > p {
+    font-size: 0.9rem;
+  }
+`
+
+export const QuoteText = styled.div`
+  margin-top: 2vh;
+  font-size: 0.95rem;
+  line-height: 25px;
+`
+
+export const Demo = styled.div`
+  > h2 {
+    width: 50%;
+    > span {
+      font-weight: bold;
+    }
+  }
+`
+
+export const AdvantagesContainer = styled.div`
+  display: flex;
+  background: ${theme.colors.white};
+  border-radius: 15px;
+  padding: 8vh 8vw 8vh 8vw;
+  columns: 2;
+  text-align: left;
+  font-size: 1.125rem;
+  align-content: center;
+  justify-content: center;
+
+  > ul {
+    > li {
+      padding: 2vw;
+
+      > img {
+        vertical-align: middle;
+        margin: 0 0.5vw 0 0;
+        max-width: 35px;
+      }
+    }
+  }
+
+  @media (min-width: 1300px) {
+    display: inline-block;
+
+    li:nth-child(-n + 5) {
+      border-right: 2px solid ${theme.colors.gray[300]};
+    }
+  }
+`
+
+export const DemoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8vh 4vw 0 8vw;
+  text-align: center;
+  background: ${theme.colors.white};
+
+  > h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+  }
+
+  > p {
+    max-width: 120ch;
+    margin-top: 2vh;
+    overflow: hidden;
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+    text-align: left;
   }
 `

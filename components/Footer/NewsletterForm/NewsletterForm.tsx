@@ -19,7 +19,6 @@ const NewsletterForm = () => {
   const [checkedPolicy, setCheckedPolicy] = useState(false)
 
   const handleValidation = Yup.object().shape({
-    name: Yup.string().required('O nome é obrigatório! '),
     email: Yup.string()
       .email('Email inválido')
       .required('O Email é obrigatório!'),
@@ -85,6 +84,11 @@ const NewsletterForm = () => {
 
   return (
     <S.ContainerForm>
+      <S.TextContainer>
+        <h2>
+          Assine <b>nossa newsletter</b>
+        </h2>
+      </S.TextContainer>
       <S.ContainerMessage>
         {isSuccess && (
           <S.Message>
@@ -97,28 +101,15 @@ const NewsletterForm = () => {
       <form name="newsletter-devapi" onSubmit={handleSubmit}>
         <S.InputContainer>
           <S.InputNewsletter
-            placeholder="Digite seu nome"
-            type="text"
-            name="name"
-            value={values.name}
-            onChange={handleChange}
-          />
-        </S.InputContainer>
-        <S.ContainerMessage>
-          {errors.name && (
-            <S.Message color={theme.colors.red[100]}>
-              <small>{errors.name}</small>
-            </S.Message>
-          )}
-        </S.ContainerMessage>
-        <S.InputContainer>
-          <S.InputNewsletter
-            placeholder="Digite aqui seu email"
+            placeholder="Digite seu email"
             type="text"
             name="email"
             value={values.email}
             onChange={handleChange}
-          />
+          ></S.InputNewsletter>
+          <S.ButtonContainer>
+            <S.ButtonNewsLetter type="submit">Assinar</S.ButtonNewsLetter>
+          </S.ButtonContainer>
         </S.InputContainer>
         <S.ContainerMessage>
           {errors.email && (
@@ -169,9 +160,6 @@ const NewsletterForm = () => {
             </S.Message>
           )}
         </S.ContainerMessage>
-        <S.ButtonContainer>
-          <Button type="default" text="Descobrir" size="default" />
-        </S.ButtonContainer>
       </form>
     </S.ContainerForm>
   )

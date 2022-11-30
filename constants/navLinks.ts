@@ -18,6 +18,11 @@ export const navLinks = [
         url: '/conectores',
         isActive: false,
       },
+      {
+        name: 'Segurança',
+        url: '/seguranca',
+        isActive: false,
+      },
     ],
   },
   {
@@ -40,7 +45,7 @@ export const navLinks = [
         isActive: false,
       },
       {
-        name: 'RH',
+        name: 'RH 4.0',
         url: '/solucoes/rh',
         isActive: false,
       },
@@ -65,7 +70,7 @@ export const navLinks = [
         isActive: false,
       },
       {
-        name: 'Logística',
+        name: 'Logística 4.0',
         url: '/solucoes/logistica',
         isActive: false,
       },
@@ -79,11 +84,6 @@ export const navLinks = [
   {
     name: 'Cases',
     url: '/cases',
-    isActive: false,
-  },
-  {
-    name: 'Trabalhe Conosco',
-    url: 'https://jobs.kenoby.com/tivit',
     isActive: false,
   },
 ]

@@ -8,6 +8,7 @@ const type = {
     color: ${theme.colors.white};
     background-color: ${theme.colors.green[100]};
     border: 1px solid ${theme.colors.green[100]};
+    border-radius: 30px;
 
     :hover {
       background-color: ${theme.colors.green[200]};
@@ -17,8 +18,8 @@ const type = {
 
   outline: css`
     color: ${theme.colors.primary};
-    background-color: ${theme.colors.white};
     border: 2px solid ${theme.colors.secondary};
+    border-radius: 30px;
 
     :hover {
       color: ${theme.colors.white};

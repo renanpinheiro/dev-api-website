@@ -170,7 +170,7 @@ export const Address = styled.div`
 export const SocialMediaContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: start;
   height: 100%;
 
   @media only screen and (max-width: 828px) {

@@ -18,11 +18,8 @@ export const Menu = styled.div<IMenuContainerProps>`
   width: 72%;
   height: 100vh;
   padding: 7rem 3rem 3rem 3rem;
-  text-align: left;
-  background-color: white;
-  background-image: url('/masks/devapi.svg');
-  background-position: center;
-  background-size: cover;
+  text-align: center;
+  background-color: ${theme.colors.gray[100]};
   transition: transform 0.3s ease-in-out;
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
 
@@ -51,8 +48,13 @@ export const Container = styled.div`
   }
 `
 
+export const MenuHeader = styled.div`
+  background-color: ${theme.colors.gray[100]};
+  height: 20%;
+`
+
 export const Close = styled.div`
-  position: fixed;
+  position: absolute;
   top: 5%;
   right: 17%;
   z-index: 1082;
@@ -268,7 +270,7 @@ export const CardBody = styled(CardBootstrap.Body)``
 
 export const AccordionToggle = styled(AccordionBootstrap.Toggle)`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 100%;
   background-color: transparent;
   border: none;

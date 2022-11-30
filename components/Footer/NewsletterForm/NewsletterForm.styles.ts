@@ -7,24 +7,23 @@ export const ContainerForm = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 450px;
   margin-top: 5px;
-  margin-bottom: 65px;
+  //margin-bottom: 65px;
 
   @media only screen and (max-width: 828px) {
     width: auto;
     margin-top: 5px;
-    margin-bottom: 25px;
+    //margin-bottom: 25px;
   }
 
   @media only screen and (min-width: 1366px) {
     width: 400px;
-    margin-bottom: 45px;
+    //margin-bottom: 45px;
   }
 
   @media only screen and (min-width: 1517px) {
     width: 405px;
-    margin-bottom: 55px;
+    //margin-bottom: 55px;
   }
 `
 export const ContainerMessage = styled.div`
@@ -37,21 +36,22 @@ export const ContainerMessage = styled.div`
   @media only screen and (max-width: 828px) {
     width: auto;
     margin-top: 3px;
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
   }
 
   @media only screen and (min-width: 1366px) {
     width: 358px;
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
   }
 
   @media only screen and (min-width: 1517px) {
     width: 405px;
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
   }
 `
 export const InputContainer = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -61,8 +61,10 @@ export const InputContainer = styled.div`
 
 export const InputNewsletter = styled.input`
   width: 100%;
+  box-sizing: border-box;
+  outline: none;
   height: 100%;
-  padding: 0.75rem 0.75rem;
+  padding: 1.7rem 1.5rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -70,33 +72,35 @@ export const InputNewsletter = styled.input`
   background-color: white;
   background-clip: padding-box;
   border: 1px solid ${theme.colors.gray[500]};
-  border-radius: 5px;
-  outline: none;
+  border-radius: 30px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     -webkit-box-shadow 0.15s ease-in-out;
 `
 export const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   width: 100%;
   height: 50px;
   margin: 10px;
 `
 
 export const ButtonNewsLetter = styled.button`
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  bottom: 3px;
+  z-index: 2;
   display: flex;
   align-items: center;
   width: max-content;
   height: 45px;
   padding: 5px 30px;
+  margin-right: 0.05rem;
   font-size: 1.3rem;
   font-weight: 700;
   color: #fff;
   cursor: pointer;
   background-color: ${theme.colors.green[100]};
   border: 1px solid ${theme.colors.green[100]};
-  border-radius: 5px;
+  border-radius: 30px;
 
   &:hover {
     background-color: ${theme.colors.green[200]};
@@ -135,13 +139,11 @@ export const CheckboxCol = styled.div`
 export const LabelCheckBox = styled.label`
   padding-left: 10px;
   font-size: 18px;
-  color: ${theme.colors.white};
+  color: ${theme.colors.primary};
   text-align: left;
 
   > a {
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
+    color: ${theme.colors.blue};
     transition: all 0.2s ease-out 0s;
 
     &:hover {
@@ -180,6 +182,14 @@ export const CheckBoxNewsLetter = styled.input.attrs({ type: 'checkbox' })`
     color: ${theme.colors.gray[100]};
     cursor: pointer;
     content: '✓';
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.tertiary};
+  }
+`
+export const TextContainer = styled.div`
+  > h2 {
+    width: 100%;
+    > b {
+      font-weight: bold;
+    }
   }
 `

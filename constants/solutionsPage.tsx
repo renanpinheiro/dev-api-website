@@ -9,9 +9,11 @@ export interface ISolutionPage {
   }
   title: {
     text: string
+    pageName: string
     width?: string
   }
   subtitle: string
+  listItems: []
   contentTitle: ReactNode
   contentText: ReactNode
   component: ReactNode
@@ -30,38 +32,61 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em Gestão',
     },
     title: {
-      text: 'Cada empresa enfrenta diferentes <b>desafios de gestão. Supere os seus!</b>',
+      pageName: 'Gestão',
+      text: '<b>Solucione os desafios da gestão da sua empresa!</b>',
     },
     subtitle:
-      'ERPs desempenham um papel central na gestão. Integre seu ERP aos demais sistemas e fontes de dados que a empresa utiliza.',
+      'Integre ERP aos demais sistemas e fontes de dados. Tenha a gestão central do seu negócio.',
     contentTitle: (
       <h2>
-        Visão centralizada <b>do seu negócio!</b>
+        <b>O que seu negócio precisa para sair na frente da concorrência?</b>
       </h2>
     ),
     contentText: (
       <p>
-        Integrar ERP aos demais sistemas da empresa possibilita a centralização
-        de todas as informações e a automação de todos os processos e dados do
-        negócio. As possibilidades são ilimitadas! Através da integração do seu
-        ERP, os ativos da empresa ficam disponíveis em uma única fonte,
-        proporcionando a tomada de decisões estratégicas baseadas em dados
-        íntegros.
-        <br />
-        <br />
-        Cada empresa é única e enfrenta desafios diferentes. Mas todas se
-        beneficiariam de reduzir custos, aprimorar a colaboração entre times,
-        melhorar as análises, otimizar a produtividade, ter clientes mais
-        felizes, maior compliance e gerenciamento de riscos, monitoramento de
-        estoque mais certeiro, melhor planejamento e gerenciamento de recursos.
-        <br />
-        <br />
-        Administrar a operação com métodos manuais ou desatualizados só fará com
-        que sua empresa fique para trás. O que seu negócio precisa integrar hoje
-        para sair na frente da concorrência?
-        <br />
+        Com a plataforma DevApi tenha os ativos da sua empresa disponíveis em
+        uma única fonte. Tome decisões estratégicas baseadas em dados efetivos.
+        E mais:
       </p>
     ),
+    listItems: [
+      {
+        text: 'Visão centralizada da gestão do seu negócio;',
+      },
+      {
+        text: 'Integre dados e informações no mesmo canal;',
+      },
+      {
+        text: 'Automatize processos para eliminar erros retrabalhos de tarefas manuais;',
+      },
+      {
+        text: 'Gestão mais ágil e com segurança;',
+      },
+      {
+        text: 'Integre ERPs a fonte de dados e demais sistemas que a sua empresa utiliza;',
+      },
+      {
+        text: 'Otimize tempo e investimento financeiro;',
+      },
+      {
+        text: 'Aprimore a colaboração entre as equipes;',
+      },
+      {
+        text: 'Gerencie riscos com eficiência;',
+      },
+      {
+        text: 'Integre governança de dados e compliance, mantendo os sistemas atualizados;',
+      },
+      {
+        text: 'Monitore estoque com assertividade;',
+      },
+      {
+        text: 'Melhore o planejamento e o gerenciamento de recursos;',
+      },
+      {
+        text: 'Acelere a transformação digital da sua empresa.',
+      },
+    ],
     component: (
       <>
         <ConnectorsCard
@@ -81,32 +106,10 @@ export const solutionsPage = {
         />
       </>
     ),
-    integrationCard: [
-      {
-        imageLeft: '/images/connectors/totvs-white.png',
-        imageRight: '/images/connectors/salesforce.png',
-      },
-      {
-        imageLeft: '/images/connectors/oracle.png',
-        imageRight: '/images/connectors/movidesk.png',
-      },
-      {
-        imageLeft: '/images/connectors/sap.png',
-        imageRight: '/images/connectors/power-bi.png',
-      },
-      {
-        imageLeft: '/images/connectors/sankhya.png',
-        imageRight: '/images/connectors/magento.png',
-      },
-      {
-        imageLeft: '/images/connectors/whatdoyouwant.png',
-        imageRight: '/images/connectors/whatdoyouwant.png',
-      },
-    ],
+
     textJoinNow: (
       <h2>
-        Confira algumas das integrações de ERP e Gestão
-        <b> que realizamos para os nossos clientes</b>
+        Confira algumas das integrações de <b>ERP e gestão</b> que realizamos
       </h2>
     ),
   },
@@ -115,34 +118,46 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em Marketing',
     },
     title: {
-      text: '<b>Marketing integrado impulsionando</b> a sua empresa no mercado',
+      pageTitle: 'Marketing',
+      text: '<b>Impulsione a sua empresa no mercado com um Marketing integrado</b>',
       width: '60%',
     },
     subtitle:
-      'A nova era do marketing integrado espera por você. Elimine tarefas manuais, acelere a conversão em vendas e encante os seus clientes!',
+      'Elimine tarefas manuais, acelere a conversão em vendas e encante os seus clientes.',
     contentTitle: (
       <h2>
-        Crie uma estrutura Omnichannel com{' '}
-        <b>estratégias de marketing integrado</b>
+        <b>
+          O que sua empresa precisa integrar para ter um Marketing integrado,
+          coeso e efetivo?
+        </b>
       </h2>
     ),
     contentText: (
       <p>
-        Cada vez mais os clientes demandam consistência em todos os pontos de
-        contato com as empresas, sejam online ou físicos, promocionais ou de
-        atendimento e suporte. Este novo cenário exige que as empresas conectem
-        não só suas ferramentas de marketing, mas também os demais sistemas da
-        empresa, de forma a manter uma comunicação integrada e coesa.
-        <br />
-        <br />
-        Acabe de vez com o trabalho manual! Integre todas as ferramentas,
-        automatize os dados e a jornada dos leads de ponta a ponta, sem
-        planilhas para copiar e colar nem ações manuais. Obtenha dados
-        confiáveis para análise e eleve sua operação de marketing a outro
-        patamar!
-        <br />
+        Com a plataforma DevApi, crie uma estrutura Omnichannel com estratégias
+        de marketing totalmente integrado. E mais:
       </p>
     ),
+    listItems: [
+      {
+        text: 'Conecte as ferramentas de marketing e os demais sistemas da sua empresa;',
+      },
+      {
+        text: 'Mantenha uma comunicação integrada, coesa e efetiva;',
+      },
+      {
+        text: 'Elimine ou minimize o trabalho manual;',
+      },
+      {
+        text: 'Automatize os dados e a jornada dos leads de ponta a ponta, sem planilhas para copiar e colar;',
+      },
+      {
+        text: 'Tenha consistência em todos os pontos de contato, sejam online ou físico, promocionais ou de atendimento e suporte;',
+      },
+      {
+        text: 'Eleve sua operação de marketing a outro patamar.',
+      },
+    ],
     component: (
       <>
         <ConnectorsCard
@@ -158,14 +173,6 @@ export const solutionsPage = {
         />
         <ConnectorsCard
           connectors={[
-            { url: '/images/connectors/facebook.png', name: 'Facebook' },
-            { url: '/images/connectors/instagram.png', name: 'Instagram' },
-            { url: '/images/connectors/rd-station.png', name: 'RD Station' },
-          ]}
-          text="Capture novos leads nos canais de marketing e crie um novo lead no RD Station Marketing."
-        />
-        <ConnectorsCard
-          connectors={[
             { url: '/images/connectors/shopify.png', name: 'Shopify' },
             { url: '/images/connectors/rd-station.png', name: 'RD Station' },
           ]}
@@ -173,32 +180,9 @@ export const solutionsPage = {
         />
       </>
     ),
-    integrationCard: [
-      {
-        imageLeft: '/images/connectors/hubspot.png',
-        imageRight: '/images/connectors/takeblip.png',
-      },
-      {
-        imageLeft: '/images/connectors/moskit.png',
-        imageRight: '/images/connectors/oracle.png',
-      },
-      {
-        imageLeft: '/images/connectors/marketo.png',
-        imageRight: '/images/connectors/bling.png',
-      },
-      {
-        imageLeft: '/images/connectors/rd-station.png',
-        imageRight: '/images/connectors/vtex.png',
-      },
-      {
-        imageLeft: '/images/connectors/whatdoyouwant.png',
-        imageRight: '/images/connectors/whatdoyouwant.png',
-      },
-    ],
     textJoinNow: (
       <h2>
-        Confira algumas das integrações de Marketing
-        <b> que realizamos para os nossos clientes</b>
+        Confira algumas das integrações de <b>marketing</b> que realizamos
       </h2>
     ),
   },
@@ -207,30 +191,51 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções comerciais',
     },
     title: {
-      text: '<b>Impulsione as vendas da sua empresa </b> integrando os sistemas',
+      pageName: 'Comercial',
+      text: '<b>Venda mais e escale o seu negócio integrando os sistemas da sua empresa</b>',
     },
     subtitle:
-      'Automatize a operação comercial e aumente o tempo da equipe para se dedicar ao que realmente importa: suas vendas!',
+      'Automatize a operação comercial, integre CRM às demais ferramentas, e tenha uma equipe dedicada às vendas.',
     contentTitle: (
       <h2>
-        Processo comercial com <b>agilidade e inteligência</b>
+        <b>
+          O que seu negócio precisa integrar para escalar e vender ainda mais?
+        </b>
       </h2>
     ),
+    listItems: [
+      {
+        text: 'Integre o CRM aos sistemas de marketing, chat e demais mensagens;',
+      },
+      {
+        text: 'Conecte ferramentas de gestão, sistemas administrativos, financeiros e logísticos;',
+      },
+      {
+        text: 'Tenha as informações “conversando” entre si;',
+      },
+      {
+        text: 'Elimine ou minimize o trabalho manual;',
+      },
+      {
+        text: 'Automatize os dados do processo comercial e não dependa mais de planilhas de copiar e colar;',
+      },
+      {
+        text: 'Organize e não tenha mais dados perdidos no CRM;',
+      },
+      {
+        text: 'Gerencie e tenha o máximo de aproveitamento dos follows realizados;',
+      },
+      {
+        text: 'Tenha relatórios confiáveis e organize as informações de maneira simples e rápida;',
+      },
+      {
+        text: 'Proporcione ao setor comercial vantagem competitiva diante da concorrência.',
+      },
+    ],
     contentText: (
       <p>
-        Processos comerciais ágeis e eficientes necessitam etapas inteligentes e
-        acesso a informações ricas de prospects e leads. As possibilidades são
-        infinitas! Integre o CRM aos sistemas de marketing, de chat e
-        mensageria, ferramentas de gestão, sistemas administrativos, financeiros
-        e logísticos, e proporcione ao setor comercial uma vantagem competitiva
-        diante da concorrência.
-        <br />
-        <br />
-        Foco nas vendas: elimine o trabalho manual! Integre todos os sistemas e
-        automatize os dados do seu processo comercial. Acabe com as planilhas de
-        copiar e colar, dados perdidos no CRM, follows não realizados,
-        relatórios trabalhosos e pouco confiáveis. Transforme seu time comercial
-        em uma verdadeira máquina de vendas!
+        Com a plataforma DevApi, tenha processos comerciais ágeis e efetivos e
+        acesse rapidamente informações organizadas de prospects e leads. E mais:
       </p>
     ),
     component: (
@@ -252,32 +257,9 @@ export const solutionsPage = {
         />
       </>
     ),
-    integrationCard: [
-      {
-        imageLeft: '/images/connectors/salesforce.png',
-        imageRight: '/images/connectors/docusign.png',
-      },
-      {
-        imageLeft: '/images/connectors/pipefy.png',
-        imageRight: '/images/connectors/phonetrack.png',
-      },
-      {
-        imageLeft: '/images/connectors/hubspot.png',
-        imageRight: '/images/connectors/sankhya.png',
-      },
-      {
-        imageLeft: '/images/connectors/oracle.png',
-        imageRight: '/images/connectors/pfy.png',
-      },
-      {
-        imageLeft: '/images/connectors/whatdoyouwant.png',
-        imageRight: '/images/connectors/whatdoyouwant.png',
-      },
-    ],
     textJoinNow: (
       <h2>
-        Confira algumas das integrações de vendas
-        <b> que realizamos para os nossos clientes</b>
+        Confira algumas das integrações de <b>vendas</b> que realizamos
       </h2>
     ),
   },
@@ -286,33 +268,43 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em RH',
     },
     title: {
-      text: 'RH 4.0: Sua empresa está preparada para os <b>novos desafios na gestão de pessoas?</b>',
+      pageTitle: 'RH 4.0',
+      text: '<b>Esteja preparado para os novos desafios na gestão de pessoas com um RH 4.0</b>',
       width: '65%',
     },
     subtitle:
       'Employer Branding, People Analytics, Gestão de Dados e Business Intelligence junto com a agilidade nos processos internos do Departamento Pessoal.',
     contentTitle: (
       <h2>
-        Recursos Humanos mais <b>estratégico e eficiente</b>
+        <b>
+          O que sua empresa precisa integrar para ter um RH mais estratégico e
+          eficiente?
+        </b>
       </h2>
     ),
     contentText: (
       <p>
-        A área de Recursos Humanos vive em constante evolução. Existe um grande
-        abismo que separa as práticas antigas dos novos desafios na gestão de
-        pessoas. E isso vai muito além do próprio setor. Devido ao grande volume
-        de dados gerados pelos diversos departamentos da empresa surge o desafio
-        de organizá-los sistematicamente, criando parâmetros para cada
-        colaborador e área.
-        <br />
-        <br />
-        Inserido na era digital, o RH 4.0 faz uso de ferramentas tecnológicas
-        como People Analytics, Gestão de Dados e Business Intelligence, o que
-        vem facilitando a tomada de decisão e a otimização das diretrizes
-        estratégicas para a organização.
-        <br />
+        Com a plataforma DevApi, tenha um RH preparado para os atuais desafios
+        na gestão de pessoas. E mais:
       </p>
     ),
+    listItems: [
+      {
+        text: 'Organize sistematicamente o volume de dados gerados pelos diversos departamentos da empresa;',
+      },
+      {
+        text: 'Crie parâmetros para cada colaborador e área;',
+      },
+      {
+        text: 'Tenha consistência para a tomada de decisões com rapidez;',
+      },
+      {
+        text: 'Utilize com segurança e efetividade ferramentas tecnológicas como People Analytics, Gestão de Dados e Business Intelligence;',
+      },
+      {
+        text: 'Otimize as diretrizes estratégicas para a sua empresa.',
+      },
+    ],
     component: (
       <>
         <ConnectorsCard
@@ -332,28 +324,7 @@ export const solutionsPage = {
         />
       </>
     ),
-    integrationCard: [
-      {
-        imageLeft: '/images/connectors/ahgora.png',
-        imageRight: '/images/connectors/sap.png',
-      },
-      {
-        imageLeft: '/images/connectors/alelo.png',
-        imageRight: '/images/connectors/senior.png',
-      },
-      {
-        imageLeft: '/images/connectors/kenoby.png',
-        imageRight: '/images/connectors/soma-pay.png',
-      },
-      {
-        imageLeft: '/images/connectors/solides.png',
-        imageRight: '/images/connectors/linkedin.png',
-      },
-      {
-        imageLeft: '/images/connectors/whatdoyouwant.png',
-        imageRight: '/images/connectors/whatdoyouwant.png',
-      },
-    ],
+
     textJoinNow: (
       <h2>
         Confira algumas das integrações do Setor de Recursos Humanos
@@ -366,46 +337,53 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em e-commerce',
     },
     title: {
-      text: '<b>Venda 24h por dia, 7 dias por semana</b> com seu e-commerce automatizado',
+      pageTitle: 'e-commerce',
+      text: '<b>Venda 24h por dia, 7 dias por semana com seu e-commerce automatizado</b>',
     },
     subtitle:
-      'Integre seu e-commerce aos Marketplaces e às suas ferramentas de marketing, CRM e atendimento, ERP, financeiro, logística e muito mais!',
+      'Integre seu e-commerce aos marketplaces e às suas ferramentas de marketing, CRM e atendimento, ERP, financeiro, logística e muito mais!',
     contentTitle: (
       <h2>
-        Automatizar e escalar. <b>Ou desaparecer!</b>
+        <b>
+          O que seu e-commerce precisa integrar para escalar, estar nos maiores
+          marketplaces e vender ainda mais?
+        </b>
       </h2>
     ),
+    listItems: [
+      {
+        text: 'Gerencie múltiplos canais de vendas e de comunicação;',
+      },
+      {
+        text: 'Atualize informações de produtos, estoque e entrega;',
+      },
+      {
+        text: 'Consolide pedidos de um sistema para outro;',
+      },
+      {
+        text: 'Conecte os mais diversos gateways de pagamento, logística, atendimento, marketing, comercial, gestão, marketplaces e muito mais;',
+      },
+      {
+        text: 'Integre os sistemas de maneira personalizada, conforme a necessidade da operação;',
+      },
+      {
+        text: 'Automatize e escale com rapidez e facilidade;',
+      },
+      {
+        text: 'Aumente as vendas;',
+      },
+      {
+        text: 'Fidelize os seus clientes.',
+      },
+    ],
     contentText: (
       <p>
-        O comércio eletrônico cresce ano após ano e dá sinais de que este
-        crescimento não vai parar tão cedo. Empresas tradicionais estão migrando
-        e novos empreendedores estão abrindo suas lojas virtuais e ampliando o
-        ecossistema digital, a par da consolidação de grandes players e uma
-        disputa cada vez mais feroz pela visibilidade nos Marketplaces.
-        <br />
-        <br />
-        Gerenciar múltiplos canais de vendas e de comunicação, atualizar
-        informações de produtos, estoques e consolidar pedidos de um sistema
-        para outro pode gerar caos e prejudicar a imagem da sua loja ou marca.
-        <br />
-        <br />
-        Com a DevApi você pode conectar os mais diversos gateways de pagamento,
-        logística, atendimento, marketing, comercial, gestão, marketplaces e
-        muito mais, tudo à medida da sua operação. Automatize e escale o seu
-        negócio com rapidez e facilidade, aumente suas vendas e fidelize os seus
-        clientes!
-        <br />
+        Com a plataforma DevApi, amplie o ecossistema digital, consolide seu
+        e-commerce, e ganhe visibilidade nos marketplaces. E mais:
       </p>
     ),
     component: (
       <>
-        <ConnectorsCard
-          connectors={[
-            { url: '/images/connectors/totvs.png', name: 'Totvs' },
-            { url: '/images/connectors/vtex.png', name: 'Vtex' },
-          ]}
-          text="Capture os produtos, estoque e preço e atualize no seu e-Commerce."
-        />
         <ConnectorsCard
           connectors={[
             { url: '/images/connectors/sap-one.png', name: 'SAP' },
@@ -423,32 +401,10 @@ export const solutionsPage = {
         />
       </>
     ),
-    integrationCard: [
-      {
-        imageLeft: '/images/connectors/vtex.png',
-        imageRight: '/images/connectors/sankhya.png',
-      },
-      {
-        imageLeft: '/images/connectors/magento.png',
-        imageRight: '/images/connectors/shipay.png',
-      },
-      {
-        imageLeft: '/images/connectors/mercadolivre2x.png',
-        imageRight: '/images/connectors/frete.png',
-      },
-      {
-        imageLeft: '/images/connectors/anymarket.png',
-        imageRight: '/images/connectors/oracle.png',
-      },
-      {
-        imageLeft: '/images/connectors/whatdoyouwant.png',
-        imageRight: '/images/connectors/whatdoyouwant.png',
-      },
-    ],
     textJoinNow: (
       <h2>
-        Confira algumas das integrações de e-Commerce & MarketPlace
-        <b> que realizamos para os nossos clientes</b>
+        Confira algumas das integrações de <b>e-commerce & marketplace</b> que
+        realizamos
       </h2>
     ),
   },
@@ -457,29 +413,40 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções para Empresas',
     },
     title: {
-      text: 'A qualquer momento, em qualquer lugar: <b>tudo integrado!</b>',
+      pageTitle: 'Empresas 360',
+      text: '<b>Integração total, a qualquer momento e em qualquer lugar.</b>',
       width: '55%',
     },
     subtitle:
-      'Uma empresa 360° representa uma organização que possui integração total entre sistemas, dados, processos, projetos e pessoas.',
+      'Empresa 360° representa uma organização com sistemas, dados, processos, projetos e pessoas totalmente integrados.',
     contentTitle: (
       <h2>
-        Defina o cenário ideal <b>para a sua empresa!</b>
+        <b>O que sua empresa precisa integrar para ter uma gestão 360º?</b>
       </h2>
     ),
     contentText: (
       <p>
-        Se sua empresa pode ser o estado da arte no segmento em que atua, por
-        que não buscar esse diferencial competitivo? Sonhe sem limites, a DevApi
-        torna realidade! Qual é o seu sonho grande? Conte para a gente e conte
-        com a gente, somos o seu parceiro estratégico.
-        <br />
-        <br />
-        Integre todos os sistemas, dados e processos de marketing, vendas,
-        gestão, atendimento, logística, recursos humanos, administrativo e
-        financeiro… não há limites!
+        Com a plataforma DevApi, defina o cenário ideal e tenha uma gestão
+        integrada para a sua empresa. E mais:
       </p>
     ),
+    listItems: [
+      {
+        text: 'Tenha diferencial competitivo;',
+      },
+      {
+        text: 'Planeje sem barreiras;',
+      },
+      {
+        text: 'Faça com que os dados e processos de marketing “conversem entre si”;',
+      },
+      {
+        text: 'Integre todos os sistemas;',
+      },
+      {
+        text: 'Conecte vendas, gestão, atendimento, logística, recursos humanos, administrativo e financeiro.',
+      },
+    ],
     component: (
       <S.ImageContainer>
         <img src="/logo/business.png" alt="Empresa 360" />
@@ -491,31 +458,52 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções Financeiras',
     },
     title: {
-      text: '<b>Gestão financeira de alta performance</b> para sua empresa',
+      pageTitle: 'Financeiro',
+      text: '<b>Gestão financeira de alta performance para sua empresa</b>',
     },
     subtitle:
       'Integre soluções financeiras e APIs open banking, automatize a contabilidade, relatórios e DREs de forma ágil e segura.',
     contentTitle: (
       <h2>
-        O processo de digitalização da <b>economia não para!</b>
+        <b>
+          O que sua empresa precisa integrar para implementar a transformação
+          digital e estar dentro da digitalização da economia?
+        </b>
       </h2>
     ),
     contentText: (
       <p>
-        Otimize o departamento financeiro, crie integrações robustas e seguras,
-        centralizando os dados e automatizando processos morosos, evitando
-        intervenções manuais, erros e retrabalho.
-        <br />
-        <br />
-        A digitalização da economia necessita de um tráfego de dados
-        transparente, seguro e ágil. APIS Open Banking e diversas soluções
-        financeiras permitem inovar sem barreiras! Mas tal só é possível através
-        da adoção de uma plataforma de integração capaz de conectar os diversos
-        sistemas utilizados. Somos os parceiros estratégicos da inovação na sua
-        empresa!
-        <br />
+        Com a plataforma DevApi, sua empresa conta com o parceiro estratégico
+        para inovar sem barreiras e com segurança diante do processo de
+        digitalização da economia, que não para. E mais:
       </p>
     ),
+    listItems: [
+      {
+        text: 'Otimize o departamento financeiro;',
+      },
+      {
+        text: 'Crie integrações robustas e seguras;',
+      },
+      {
+        text: 'Tenha transparência, segurança e agilidade no tráfego de dados;',
+      },
+      {
+        text: 'Inove sem barreiras com APIs Open Banking e as diversas soluções financeiras disponíveis;',
+      },
+      {
+        text: 'Evitando intervenções manuais, erros e retrabalho;',
+      },
+      {
+        text: 'Centralize os dados em uma única plataforma;',
+      },
+      {
+        text: 'Automatize processos morosos;',
+      },
+      {
+        text: 'Conte com uma plataforma de integração capaz de conectar os diversos sistemas utilizados em sua empresa.',
+      },
+    ],
     component: (
       <>
         <ConnectorsCard
@@ -532,42 +520,13 @@ export const solutionsPage = {
           ]}
           text="Envio de SMS para clientes inadimplentes."
         />
-        <ConnectorsCard
-          connectors={[
-            { url: '/images/connectors/sap-one.png', name: 'SAP' },
-            { url: '/images/connectors/picpay.png', name: 'PicPay' },
-            { url: '/images/connectors/gmail.png', name: 'Gmail' },
-          ]}
-          text="Busque os pedidos faturados e registre os boletos no gateway de pagamento e envie para o cliente."
-        />
       </>
     ),
-    integrationCard: [
-      {
-        imageLeft: '/images/connectors/asaas.png',
-        imageRight: '/images/connectors/sap.png',
-      },
-      {
-        imageLeft: '/images/connectors/cielo.png',
-        imageRight: '/images/connectors/ca.png',
-      },
-      {
-        imageLeft: '/images/connectors/picpay.png',
-        imageRight: '/images/connectors/vhsys.png',
-      },
-      {
-        imageLeft: '/images/connectors/superlogica.png',
-        imageRight: '/images/connectors/clicksign.png',
-      },
-      {
-        imageLeft: '/images/connectors/whatdoyouwant.png',
-        imageRight: '/images/connectors/whatdoyouwant.png',
-      },
-    ],
+
     textJoinNow: (
       <h2>
-        Confira algumas das integrações para o setor Financeiro
-        <b> que realizamos para os nossos clientes</b>
+        Confira algumas das integrações para o setor <b>financeiro</b> que
+        realizamos
       </h2>
     ),
   },
@@ -576,32 +535,46 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções para seu produto',
     },
     title: {
-      text: 'Torne o seu produto <b>líder de mercado</b>',
+      pageTitle: 'Seu produto',
+      text: '<b>Torne o seu produto líder de mercado</b>',
       width: '30%',
     },
     subtitle:
-      'Escale as integrações do seu produto, conecte-o aos sistemas do mercado e não perca mais nenhuma venda!',
+      'Escale as integrações do seu produto, conecte-o aos sistemas do mercado e não perca mais nenhuma venda.',
     contentTitle: (
       <h2>
-        Conecte o seu produto <b>com o mundo</b>
+        <b>
+          O que sua empresa precisa integrar para tornar o seu produto líder de
+          mercado?
+        </b>
       </h2>
     ),
     contentText: (
-      <p>
-        Elimine o backlog de integrações do seu produto sem desviar a equipe de
-        desenvolvimento do core business da empresa. Incremente o portfólio de
-        integrações nativas com facilidade, possibilitando a integração do seu
-        produto aos sistemas de mercado, de seus clientes e parceiros. Nunca
-        mais perca negócios por falta de integrações!
-        <br />
-        <br />
-        Incorpore a DevApi ao seu produto. É simples, rápido e seguro. Depois
-        disso, venda sem limites impostos pela ausência de integrações. Você
-        acredita na solução que sua empresa está desenvolvendo? Então converse
-        com a gente, vamos ajudar você a desbloquear todo o potencial do seu
-        produto. Prepare-se para escalar!
-      </p>
+      <p>Com a plataforma DevApi, conecte o seu produto com o mundo. E mais:</p>
     ),
+    listItems: [
+      {
+        text: 'Elimine o backlog de integrações do seu produto;',
+      },
+      {
+        text: 'Foque a equipe de desenvolvimento no core business da empresa;',
+      },
+      {
+        text: 'Incremente o portfólio de integrações nativas com facilidade;',
+      },
+      {
+        text: 'Venda sem barreiras;',
+      },
+      {
+        text: 'Gere mais oportunidades de negócios e não perca mais nenhuma possibilidade por falta de integrações;',
+      },
+      {
+        text: 'Possibilite a integração do seu produto aos sistemas de mercado, de seus clientes e parceiros;',
+      },
+      {
+        text: 'Escale com efetividade e consistência.',
+      },
+    ],
     component: (
       <S.ImageContainer>
         <img src="/logo/product.png" alt="Empresa 360" />
@@ -613,34 +586,49 @@ export const solutionsPage = {
       metaTitle: 'DevApi | Soluções em Logística',
     },
     title: {
-      text: 'Logística 4.0: Sua empresa está preparada <b>para essa transformação?</b>',
+      pageTitle: 'Logística 4.0',
+      text: '<b>Tenha uma Logística 4.0 e insira a sua empresa na transformação digital</b>',
     },
     subtitle:
       'Integre a operação de logística, supply e delivery ao ecossistema da sua empresa e de seus clientes e parceiros.',
     contentTitle: (
       <h2>
-        Logística integrada, <b> visão 360 graus</b>
+        <b>
+          O que sua empresa precisa integrar para ter uma logística integrada e
+          com visão 360º?
+        </b>
       </h2>
     ),
     contentText: (
       <p>
-        A logística 4.0 vem alterar os processos logísticos, que agora começam a
-        ser altamente influenciados pela digitalização e pela automação, com
-        coordenação multifuncional e supraempresarial em toda a cadeia de
-        fornecimento. Conexões inteligentes otimizando os requisitos de
-        velocidade, ganho de eficiência, redução de custos e ampla disposição de
-        dados em tempo real.
-        <br />
-        <br />
-        A integração é a palavra-chave para adotar as práticas logísticas mais
-        modernas, proporcionando a conectividade que otimiza a gestão, o ganho
-        de escala e que permite o controle total sobre todos os processos.
-        Analise dados para criar estratégias mais eficientes, diminua o lead
-        time e melhore a comunicação entre equipes, clientes, fornecedores e
-        parceiros. Integre-se à logística 4.0!
-        <br />
+        Com a plataforma DevApi, tenha uma logística 4.0, digitalizada e
+        automatizada, com coordenação multifuncional e supraempresarial em toda
+        a cadeia de fornecimento. E mais:
       </p>
     ),
+    listItems: [
+      {
+        text: 'Analise dados para criar estratégias mais eficientes;',
+      },
+      {
+        text: 'Tenha conexões inteligentes;',
+      },
+      {
+        text: 'Adote práticas logísticas mais modernas;',
+      },
+      {
+        text: 'Invista em conectividade e otimize a gestão e o ganho de escala;',
+      },
+      {
+        text: 'Tenha controle total sobre todos os processos;',
+      },
+      {
+        text: 'Otimize os requisitos de velocidade, ganho de eficiência, redução de custos e ampla disposição, tudo em tempo real;',
+      },
+      {
+        text: 'Diminua o lead time e melhore a comunicação entre equipes, clientes, fornecedores e parceiros.',
+      },
+    ],
     component: (
       <>
         <ConnectorsCard
@@ -660,32 +648,10 @@ export const solutionsPage = {
         />
       </>
     ),
-    integrationCard: [
-      {
-        imageLeft: '/images/connectors/bsoftblue.png',
-        imageRight: '/images/connectors/alelo.png',
-      },
-      {
-        imageLeft: '/images/connectors/cobli.png',
-        imageRight: '/images/connectors/flexy.png',
-      },
-      {
-        imageLeft: '/images/connectors/fedexpurple.png',
-        imageRight: '/images/connectors/magento.png',
-      },
-      {
-        imageLeft: '/images/connectors/frete.png',
-        imageRight: '/images/connectors/anymarket.png',
-      },
-      {
-        imageLeft: '/images/connectors/whatdoyouwant.png',
-        imageRight: '/images/connectors/whatdoyouwant.png',
-      },
-    ],
+
     textJoinNow: (
       <h2>
-        Confira algumas das integrações de Logísticas
-        <b> que realizamos para os nossos clientes</b>
+        Confira algumas das integrações de <b>logística</b> que realizamos
       </h2>
     ),
   },

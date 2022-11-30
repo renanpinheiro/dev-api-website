@@ -131,7 +131,6 @@ const Header = () => {
 
       <S.MenuContainer>
         <S.Menu title="Menu" onClick={handleOpenMenu}>
-          <span>Menu</span>
           <S.Burger>
             <div />
             <div />

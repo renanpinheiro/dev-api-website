@@ -50,5 +50,9 @@ export default {
 
   secondary: '#5F47FF',
 
+  tertiary: '#14B99F',
+
   purple: '#4E4CF1',
+
+  header: '#D8D8FF',
 }

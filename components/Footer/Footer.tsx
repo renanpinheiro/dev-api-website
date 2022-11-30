@@ -14,27 +14,6 @@ const Footer = () => (
   <S.FooterContainer>
     <S.Row>
       <S.Col>
-        <S.NewsletterContainer>
-          <p>
-            Sua empresa totalmente
-            <br />
-            <span> integrada no mundo digital </span>
-            <br /> de forma segura, fácil e eficiente.
-          </p>
-
-          <S.Newsletter>
-            <S.Pipe />
-            <S.TextContainer>
-              <S.Title>
-                Assine <span>nossa newsletter</span>
-              </S.Title>
-              <S.SubTitle>Descubra novas ideias</S.SubTitle>
-            </S.TextContainer>
-          </S.Newsletter>
-
-          <NewsletterForm />
-        </S.NewsletterContainer>
-
         <S.ResponsivePipe />
         <Links title="Plataforma" links={platform} />
         <S.ResponsivePipe />
@@ -56,9 +35,6 @@ const Footer = () => (
           <S.AddressContainer>
             <S.Pipe />
             <S.Address>
-              <span>Endereço:</span> Ed. Atrium Torre Norte - Av. Pedro Taques,
-              294 - 13° Andar - Sala 1307
-              <br /> Zona 03 - CEP: 87030-008 - Maringá-PR - Brasil
               <br /> <span> Telefone:</span> +55 (44) 9 9738-5897
               <br /> <span> Email:</span> info@devapi.com.br
             </S.Address>

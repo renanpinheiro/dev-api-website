@@ -3,17 +3,15 @@ import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
 export const Container = styled.div`
+  margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8vh 8vw;
-  margin-bottom: 10vh;
   background-color: ${theme.colors.gray[100]};
   background-image: url('/masks/devapi.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  border-top-left-radius: 180px;
-  border-bottom-right-radius: 180px;
 
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -45,8 +43,10 @@ export const ProfessionalServiceText = styled.div`
   > h2 {
     max-width: 25ch;
     margin-bottom: 15px;
-    font-size: 2.625rem;
+    font-size: 1.3rem;
     line-height: 1;
+    font-weight: 800;
+    color: ${theme.colors.secondary};
 
     @media (max-width: 996px) {
       font-size: 1.375rem;
@@ -56,13 +56,17 @@ export const ProfessionalServiceText = styled.div`
       width: 98%;
       font-size: 3.25rem;
     }
+  }
 
-    > b {
-      font-weight: 700;
-    }
+  > b {
+    color: ${theme.colors.primary};
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 42px;
   }
 
   > p {
+    margin: 2vh 0 4vh 0;
     width: 100%;
     font-size: 1.25rem;
     line-height: 1.3;

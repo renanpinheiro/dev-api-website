@@ -11,9 +11,9 @@ export const Container = styled.div<IContainerStyles>`
   justify-content: space-between;
   width: 100%;
   height: 13vh;
-  padding: 0 8vw 2vh 8vw;
+  padding: 0 6vw 0vh 6vw;
   user-select: none;
-  background-color: ${theme.colors.gray[100]};
+  background-color: ${theme.colors.header};
   transition: all 0.3s ease-in-out;
   ${({ isCentralized }) =>
     isCentralized &&
@@ -166,7 +166,7 @@ export const Burger = styled.div`
     position: relative;
     width: 2rem;
     height: 0.125rem;
-    background: ${theme.colors.primary};
+    background: ${theme.colors.tertiary};
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;

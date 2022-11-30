@@ -16,12 +16,20 @@ export const HeroContent = styled.div`
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   padding: 0 8vw 0 8vw;
   text-align: left;
+
+  > h2 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: ${theme.colors.secondary};
+    margin: 2vh 0;
+  }
 
   @media (max-width: 576px) {
     align-items: flex-start;
@@ -53,7 +61,8 @@ export const Pipe = styled.div`
 export const Title = styled.h1<ITitleProps>`
   z-index: 4;
   width: ${props => (props.width ? props.width : '62%')};
-  font-size: 2.625rem;
+  text-align: center;
+  font-size: 2.5rem;
 
   @media (max-width: 996px) {
     width: 100%;
@@ -74,9 +83,10 @@ export const Title = styled.h1<ITitleProps>`
 export const Subtitle = styled.p`
   z-index: 4;
   width: 60%;
-  margin: 3vh 0;
+  margin: 3vh 0 4vh 0;
   font-size: 1.375rem;
   line-height: 3vh;
+  text-align: center;
 
   @media (max-width: 996px) {
     width: 100%;
@@ -114,8 +124,8 @@ export const SolutionContainer = styled.div`
 
 export const TextContainer = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 10vh 8vw 0 8vw;
 
@@ -127,13 +137,14 @@ export const TextContainer = styled.div`
 export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  text-align: center;
 
   > h2 {
     width: 61%;
     margin-bottom: 15px;
-    font-size: 2.625rem;
+    font-size: 2rem;
     line-height: 1.2;
 
     @media (max-width: 996px) {
@@ -154,10 +165,10 @@ export const TitleContainer = styled.div`
 
 export const ParagraphContainer = styled.div`
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 5vh;
 
   > p {
-    max-width: 66ch;
+    max-width: 100vw;
     overflow: hidden;
     font-size: 1.375rem;
     line-height: 1.5;
@@ -200,7 +211,6 @@ export const IntegrationContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5vh;
   margin-bottom: 5vh;
 
   @media (max-width: 996px) {
@@ -288,5 +298,38 @@ export const ListIconlTitle = styled.h2`
 
   span {
     font-weight: 700;
+  }
+`
+
+export const AdvantagesContainer = styled.div`
+  background: ${theme.colors.white};
+  border-radius: 15px;
+  padding: 4vh 4vw 4vh 4vw;
+  columns: 2;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 28px;
+
+  > ul {
+    > li {
+      padding: 1vw;
+      max-height: 15vh;
+
+      @media (max-width: 996px) {
+        height: 15vh;
+      }
+
+      > img {
+        vertical-align: middle;
+        margin: 0 0.5vw 0 0;
+        max-width: 35px;
+      }
+    }
+  }
+
+  @media (min-width: 1300px) {
+    display: inline-block;
+    box-shadow: 0px 0px 30px #5f47ff26;
+    margin: 0 15vh 20vh 15vh;
   }
 `

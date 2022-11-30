@@ -14,6 +14,8 @@ import { customers } from '../../constants/customers'
 import { quotes } from '../../constants/quotes'
 import { ISolutionPage, solutionsPage } from '../../constants/solutionsPage'
 import * as S from '../../styles/solutions'
+import { NewsletterFooter } from '../../components/NewsletterFooter'
+import { CustomersContainer } from '../../components/CustomersContainer'
 
 const IntegrationCardWithoutSSR = dynamic(
   () => import('../../components/IntegrationCard'),
@@ -43,27 +45,24 @@ const Solutions = () => {
 
       <S.Container>
         <Hero>
-          <Circle>
-            <S.HeroContent>
-              <S.Pipe />
-
-              {page && (
-                <S.Title
-                  width={page.title.width}
-                  dangerouslySetInnerHTML={{ __html: `${page.title.text}` }}
-                />
-              )}
-              {page && <S.Subtitle>{page.subtitle}</S.Subtitle>}
-
-              <ButtonLink
-                text="Fale com um consultor"
-                href="/converse-com-especialista"
-                target="_self"
-                size="default"
-                type="default"
+          <S.HeroContent>
+            <h2>{page.title.pageName}</h2>
+            {page && (
+              <S.Title
+                width={page.title.width}
+                dangerouslySetInnerHTML={{ __html: `${page.title.text}` }}
               />
-            </S.HeroContent>
-          </Circle>
+            )}
+            {page && <S.Subtitle>{page.subtitle}</S.Subtitle>}
+
+            <ButtonLink
+              text="Fale com um especialista"
+              href="/converse-com-especialista"
+              target="_self"
+              size="default"
+              type="default"
+            />
+          </S.HeroContent>
         </Hero>
 
         <S.Content>
@@ -76,38 +75,43 @@ const Solutions = () => {
                 <S.ParagraphContainer>
                   {page && page.contentText}
                 </S.ParagraphContainer>
-
-                {!page?.textJoinNow && (
-                  <>
-                    <ButtonLink
-                      text="Quero integrar agora!"
-                      href="/converse-com-especialista"
-                      target="_self"
-                      size="default"
-                      type="default"
-                    />
-                  </>
-                )}
               </S.TitleContainer>
-
-              <S.ComponentContainer>
-                {page?.integrationCard ? (
-                  page.integrationCard.map((pageAtributes, index) => {
-                    return (
-                      <IntegrationCardWithoutSSR
-                        imageLeft={pageAtributes.imageLeft}
-                        imageRight={pageAtributes.imageRight}
-                        key={index}
-                      ></IntegrationCardWithoutSSR>
-                    )
-                  })
-                ) : (
-                  <S.IntegrationContainer>
-                    {page && page.component}
-                  </S.IntegrationContainer>
-                )}
-              </S.ComponentContainer>
             </S.TextContainer>
+
+            <S.AdvantagesContainer>
+              <ul>
+                {page &&
+                  page.listItems.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <img src="/icons/check.svg" alt="Checkmark"></img>&nbsp;
+                        {item.text}
+                      </li>
+                    )
+                  })}
+              </ul>
+            </S.AdvantagesContainer>
+
+            {/*<S.ComponentContainer>*/}
+            {/*  {page?.integrationCard ? (*/}
+            {/*    page.integrationCard.map((pageAtributes, index) => {*/}
+            {/*      return (*/}
+            {/*        <IntegrationCardWithoutSSR*/}
+            {/*          imageLeft={pageAtributes.imageLeft}*/}
+            {/*          imageRight={pageAtributes.imageRight}*/}
+            {/*          key={index}*/}
+            {/*        ></IntegrationCardWithoutSSR>*/}
+            {/*      )*/}
+            {/*    })*/}
+            {/*  ) : (*/}
+            <S.IntegrationContainer>
+              {page &&
+                (page.title.pageTitle === 'Empresas 360' ||
+                  page.title.pageTitle === 'Seu produto') &&
+                page.component}
+            </S.IntegrationContainer>
+            {/*  )}*/}
+            {/*</S.ComponentContainer>*/}
 
             {page?.textJoinNow && (
               <S.JoinNowContainer>
@@ -129,28 +133,13 @@ const Solutions = () => {
             )}
           </S.SolutionContainer>
 
-          <S.QuoteContainer>
-            <QuoteCarousel quotes={quotes} />
-          </S.QuoteContainer>
-
           <S.ProfessionalServiceContainer>
             <ProfessionalService />
           </S.ProfessionalServiceContainer>
 
-          <S.ListIconContainer>
-            <Customers
-              title={
-                <S.ListIconlTitle>
-                  <S.PipeContainer>
-                    <S.Pipe />
-                  </S.PipeContainer>
-                  Empresas que já desbloquearam o{' '}
-                  <span>poder da integração de sistemas</span>
-                </S.ListIconlTitle>
-              }
-              items={customers}
-            />
-          </S.ListIconContainer>
+          <CustomersContainer></CustomersContainer>
+
+          <NewsletterFooter></NewsletterFooter>
         </S.Content>
       </S.Container>
     </>
