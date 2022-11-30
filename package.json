@@ -39,7 +39,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "5.3.5",
     "styled-reset": "^4.3.4",
-    "webpack": "^5.72.0",
+    "webpack": "^5.75.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
