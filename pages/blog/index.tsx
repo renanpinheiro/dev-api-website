@@ -20,6 +20,8 @@ import {
   findTags,
 } from '../../providers/blog/find'
 import * as S from '../../styles/blog'
+import { Article } from '../../components/Blog/Article'
+import { Col, Container, Row } from 'react-bootstrap'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Blog/Carrousel'),
@@ -106,31 +108,6 @@ const Blog = () => {
     news.push(...posts)
   }
 
-  const newsMobileCarrouselItems = cases.map((item, index) => {
-    return {
-      interval: INTERVAL,
-      component: (
-        <S.Box>
-          <S.CaseContainer key={index}>
-            <S.SidebarCotainer height="40px">
-              <S.CaseType width="50px" height="24px">
-                {item.type}
-              </S.CaseType>
-              <S.Date width="15px" height="15px">
-                <img src="icons/calendar.svg" alt="calendar" />
-                <p>{item.date}</p>
-              </S.Date>
-            </S.SidebarCotainer>
-            <S.TextContainer>
-              <S.VerticalPipe />
-              <S.Text>{item.text}</S.Text>
-            </S.TextContainer>
-          </S.CaseContainer>
-        </S.Box>
-      ),
-    }
-  })
-
   return (
     <>
       <Head>
@@ -141,43 +118,23 @@ const Blog = () => {
 
       <S.Container>
         <S.ImageContainer>
-          <ImageCarousel items={newsImages} />
           <S.FilterContainer>
             <S.Filters>
-              <S.TextContainer margin="0px 0px 0px 0px">
-                <S.VerticalPipe />
-                <S.Text fontSize="1.5rem">
-                  <span>Descubra</span> novas ideias
-                </S.Text>
-              </S.TextContainer>
-
               <S.ButtonContainer>
-                <S.Button
-                  hoverImg="icons/ic-newspaper-white.svg"
-                  onClick={() => handleClickTagName('Tecnologia')}
-                >
-                  <S.IconButton img="icons/ic-newspaper.svg" />
-                  Tecnologia
+                <S.Button onClick={() => handleClickTagName('Tecnologia')}>
+                  Artigos
                 </S.Button>
-                <S.Button
-                  hoverImg="icons/ic-hand-white.svg"
-                  onClick={() => handleClickTagName('Negócios')}
-                >
-                  <S.IconButton img="icons/ic-hand.svg" />
-                  Negócios
+                <S.Button onClick={() => handleClickTagName('Negócios')}>
+                  Cases
                 </S.Button>
-                <S.Button
-                  hoverImg="icons/ic-rocket-white.svg"
-                  onClick={() => handleClickTagName('Inovação')}
-                >
-                  <S.IconButton img="icons/ic-rocket.svg" />
-                  Inovação
+                <S.Button onClick={() => handleClickTagName('Inovação')}>
+                  Notícias
                 </S.Button>
               </S.ButtonContainer>
 
               <S.InputContainer>
                 <S.InputFormControl
-                  placeholder="Busca..."
+                  placeholder="Buscar..."
                   aria-label="search"
                   aria-describedby="basic-addon2"
                   name="search"
@@ -196,55 +153,15 @@ const Blog = () => {
           </S.FilterContainer>
         </S.ImageContainer>
 
-        {/* <S.CasesContainer>
-          {isMobile ? (
-            <CarrouselWithOutSSR
-              items={newsMobileCarrouselItems}
-              dotsMargin="-1.5rem"
-              isCustomCarouselItem
-            />
-          ) : (
-            <>
-              {cases.map((item, index) => (
-                <S.CaseContainer key={index}>
-                  <S.SidebarCotainer height="auto">
-                    <S.CaseType width="50px" height="24px">
-                      {item.type}
-                    </S.CaseType>
-                    <S.Date width="15px" height="15px">
-                      <img src="icons/calendar.svg" alt="calendar" />
-                      <p>{item.date}</p>
-                    </S.Date>
-                  </S.SidebarCotainer>
-                  <S.TextContainer>
-                    <S.VerticalPipe />
-                    <S.Text>{item.text}</S.Text>
-                  </S.TextContainer>
-                </S.CaseContainer>
-              ))}
-            </>
-          )}
-        </S.CasesContainer> */}
-
         <S.ContentContainer>
-          <S.Content>
+          <S.ArticleContainer>
             {news.map((item, index) => (
-              <NewsCardWithOutSSR
-                key={index}
-                newsCards={item}
-                padding="0px 0px 30px 0px"
-                gridColum="auto 80px !important"
-                gridRow={
-                  isMobile
-                    ? '250px 235px 80px !important'
-                    : '400px 300px 80px !important'
-                }
-              />
+              <Article key={index} news={item} />
             ))}
             <S.LoadMoreButton onClick={() => handlePagination()}>
               Carregar Mais
             </S.LoadMoreButton>
-          </S.Content>
+          </S.ArticleContainer>
 
           <Sidebar
             tags={tags}

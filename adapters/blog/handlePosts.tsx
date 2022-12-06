@@ -80,6 +80,7 @@ export const handlePostDetails = (post: IFindResponse) => {
     articlesRelated: post.articles_related,
     tag: post.tag,
     createt_at: post.createt_at,
+    date: convertDate(post.createt_at).withMonth,
   }
 }
 

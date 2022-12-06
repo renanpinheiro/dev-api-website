@@ -55,4 +55,6 @@ export default {
   purple: '#4E4CF1',
 
   header: '#D8D8FF',
+
+  link: '#737A96',
 }

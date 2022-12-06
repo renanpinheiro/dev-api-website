@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import { Hero } from '../../components/Hero'
 import * as S from '../../styles/privacyPolicy'
+import { SimplifiedHero } from '../../components/SimplifiedHero'
 
 const PrivacyPolicy = () => {
   return (
@@ -18,31 +19,32 @@ const PrivacyPolicy = () => {
       </Head>
 
       <S.Container>
-        <Hero minHeight={40} maxHeight={65}>
-          <S.HeroContent>
-            <S.Pipe />
-            <h1>
-              Política de <b>privacidade</b>
-            </h1>
-          </S.HeroContent>
-        </Hero>
+        <SimplifiedHero
+          title={'Política de privacidade'}
+          subtitle={'Suas informações seguras'}
+        />
 
         <S.Content>
           <ul>
             <strong>1. OBJETIVO DA POLÍTICA DE PRIVACIDADE</strong>
             <p>
-              Nós somos o Grupo DevApi. Somos uma solução completa de produtos
-              digitais: Agile-Software-Squads-as-a-Service. A DevApi (ou “nós”),
-              estamos comprometidos em resguardar sua privacidade. O intuito
-              deste documento é esclarecer de que forma os dados pessoais
-              tratados por nós são utilizados.
+              Nós somos o Grupo Devninjas. Somos uma Fábrica de Software focada,
+              principalmente, no desenvolvimento de soluções Web e Aplicativos
+              Mobile. A Devninjas (ou “nós”), estamos comprometidos em
+              resguardar sua privacidade. O intuito deste documento é esclarecer
+              de que forma os dados pessoais tratados por nós são utilizados.
             </p>
             <p>
-              Nós somos o Grupo DevApi. Somos uma solução completa de produtos
-              digitais: Agile-Software-Squads-as-a-Service. A DevApi (ou “nós”),
-              estamos comprometidos em resguardar sua privacidade. O intuito
-              deste documento é esclarecer de que forma os dados pessoais
-              tratados por nós são utilizados.
+              Para oferecer nossos serviços, o Grupo Devninjas coleta{' '}
+              <b>
+                <span>diversos dados e informações</span>
+              </b>
+              , visando, sobretudo, prestar o melhor serviço para você. O Grupo
+              Devninjas reconhece que a sua privacidade é muito importante,
+              portanto, tomamos todas as medidas possíveis para protegê-la.
+              Nesse sentido, a presente Política de Privacidade (“Política”)
+              visa lhe informar como as suas informações e dados serão
+              coletados, usados, compartilhados e armazenados.
             </p>
             <p>
               Este documento foi redigido de forma simples e acessível,
@@ -51,14 +53,14 @@ const PrivacyPolicy = () => {
               e confortável no uso dos serviços que oferecemos a você.
             </p>
             <p>
-              No decorrer da sua atividade, o Grupo DevApi coleta e trata dados
-              pessoais de vários titulares, estes advindos nomeadamente de
+              No decorrer da sua atividade, o Grupo Devninjas coleta e trata
+              dados pessoais de vários titulares, estes advindos nomeadamente de
               clientes, fornecedores, colaboradores, candidatos a colaboradores,
               entre outros (“titulares dos dados” ou “titulares”).
             </p>
             <p>
               A presente Política de Privacidade descreve as orientações e
-              princípios adotados pelo Grupo DevApi para assegurar a proteção
+              princípios adotados pelo Grupo Devninjas para assegurar a proteção
               dos titulares dos dados, estabelecendo os procedimentos e regras
               relativas aos direitos dos titulares e ao tratamento e circulação
               dos dados pessoais.
@@ -66,14 +68,13 @@ const PrivacyPolicy = () => {
             <p>
               Este documento apresenta as regras a cumprir de forma a agir em
               conformidade com os requisitos legais no âmbito da privacidade dos
-              dados, especificamente a Lei 13.709 de 2018 (Lei Geral de Proteção
-              de Dados) devendo ser respeitado por todos os colaboradores do
-              Grupo DevApi. Assim, todos os colaboradores do Grupo DevApi
+              dados, devendo ser respeitado por todos os colaboradores do Grupo
+              Devninjas. Assim, todos os colaboradores do Grupo Devninjas
               deverão ter conhecimento desta Política de Privacidade e
               diligenciar pela devida compreensão.
             </p>
             <p>
-              Adicionalmente, o Grupo DevApi preocupa-se em facultar aos seus
+              Adicionalmente, o Grupo Devninjas preocupa-se em facultar aos seus
               colaboradores formação no âmbito da privacidade adequada às suas
               funções, tendo estabelecido um plano de formação que contempla a
               temática da privacidade e especificamente a proteção de dados
@@ -299,6 +300,7 @@ const PrivacyPolicy = () => {
               4. PRINCÍPIOS APLICÁVEIS AO PROCESSAMENTO DE DADOS PESSOAIS
             </strong>
             <p>
+              <br />
               <b>a) Lícito, leal e transparente</b>
               <br /> Os dados pessoais são recolhidos e tratados de forma
               lícita, leal e transparente, nomeadamente dando garantia, aos
@@ -307,6 +309,7 @@ const PrivacyPolicy = () => {
               tratamento, e o seu prazo de conservação.
             </p>
             <p>
+              <br />
               <b>b) Finalidades determinadas, explícitas e legítimas</b>
               <br />
               Os dados pessoais são coletados e tratados para finalidades
@@ -315,6 +318,7 @@ const PrivacyPolicy = () => {
               essas finalidades.
             </p>
             <p>
+              <br />
               <b>c) Minimização de dados</b>
               <br />
               As operações de coleta de dados são alvo de análise prévia
@@ -324,6 +328,7 @@ const PrivacyPolicy = () => {
               necessário.
             </p>
             <p>
+              <br />
               <b>d) Exatidão e atualização dos dados</b>
               <br />
               A exatidão e atualização dos dados é garantida através da
@@ -342,6 +347,7 @@ const PrivacyPolicy = () => {
               conservação.
             </p>
             <p>
+              <br />
               <b>e) Integridade e confidencialidade dos dados</b>
               <br />O Grupo DevApi procura garantir a segurança dos dados
               pessoais através da adoção de medidas técnicas e organizativas que
@@ -355,6 +361,7 @@ const PrivacyPolicy = () => {
               disponibilizada na respetiva política de segurança da informação.
             </p>
             <p>
+              <br />
               <b>f) Responsabilidade pelos dados</b>
               <br />O Grupo DevApi tem a responsabilidade de observar os
               princípios acima referidos, devendo comprovar os mesmos. Para
@@ -368,18 +375,21 @@ const PrivacyPolicy = () => {
               de dados.
             </p>
             <p>
+              <br />
               <b>g) Prevenção</b>
               <br />A segurança e confidencialidade dos dados pessoais devem ser
               asseguradas, de forma preventiva, a fim de evitar ou mitigar a
               ocorrência de incidentes de segurança envolvendo dados pessoais.
             </p>
             <p>
+              <br />
               <b>h) Não Discriminação</b>
               <br />
               As atividades de tratamento de dados pessoais jamais poderão
               objetivar fins discriminatórios, ilícitos ou abusivos.
             </p>
             <p>
+              <br />
               <b>i) Responsabilização e Prestação de Contas</b>
               <br />
               Adoção de medidas eficazes e guarda de registros de atividades

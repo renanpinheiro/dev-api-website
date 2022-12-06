@@ -15,11 +15,12 @@ const Button = ({
   size,
   height,
   fontSize,
+  borderRadius,
 }: IButtonProps) => {
   const colorButton = {
     primary: theme.colors.primary,
     secondary: theme.colors.secondary,
-    green: theme.colors.green[300],
+    green: theme.colors.green[100],
   }[color]
 
   return (
@@ -31,6 +32,7 @@ const Button = ({
         disabled={disabled}
         height={height}
         fontSize={fontSize}
+        borderRadius={borderRadius}
       >
         {text}
       </S.BootstrapButton>

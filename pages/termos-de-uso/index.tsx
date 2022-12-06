@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import { Hero } from '../../components/Hero'
 import * as S from '../../styles/termsOfUse'
+import { SimplifiedHero } from '../../components/SimplifiedHero'
 
 const UseTerm = () => {
   return (
@@ -19,14 +20,10 @@ const UseTerm = () => {
       </Head>
 
       <S.Container>
-        <Hero minHeight={40} maxHeight={65}>
-          <S.HeroContent>
-            <S.Pipe />
-            <h1>
-              Termos de <b>uso</b>
-            </h1>
-          </S.HeroContent>
-        </Hero>
+        <SimplifiedHero
+          title={'Termos de uso'}
+          subtitle={'Conheça nossos Termos'}
+        ></SimplifiedHero>
 
         <S.Content>
           <strong>1. Termos</strong>

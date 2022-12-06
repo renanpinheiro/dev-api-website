@@ -12,10 +12,10 @@ export const findPost = async (
 ) => {
   return api.get<IFindResponse[]>('/posts', {
     params: {
-      ...(search && { Titulo_containss: search }),
+      ...(search && { Titulo_contains: search }),
       ...(tag && { 'Tags.id': tag }),
       ...(page && { _start: page }),
-      ...{ _limit: 5 },
+      ...{ _limit: 6 },
     },
   })
 }

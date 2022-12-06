@@ -45,7 +45,7 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.div`
   position: relative;
-  height: 90vh;
+  height: 1vh;
 `
 
 export const ImageCarouselItems = styled.div`
@@ -177,7 +177,6 @@ export const Date = styled.div<IIconStyle>`
 
 export const ContentContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   margin: 200px auto 50px auto;
 
   @media (min-width: 320px) and (max-width: 992px) {
@@ -296,7 +295,7 @@ export const FilterContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 180px;
+  height: 8vh;
 
   @media (min-width: 320px) and (max-width: 992px) {
     height: auto;
@@ -310,9 +309,8 @@ export const Filters = styled.div`
   width: 100%;
   height: 100%;
   padding: 10px 60px;
-  background-color: ${theme.colors.white};
   border-radius: 10px;
-  box-shadow: 0 6px 28px #2c2d6636;
+  border-bottom: 1px solid ${theme.colors.gray[100]};
 
   @media (min-width: 320px) and (max-width: 992px) {
     flex-direction: column;
@@ -331,9 +329,8 @@ export const Filters = styled.div`
 
 export const InputFormControl = styled(FormControl)`
   height: 55px;
-  text-transform: lowercase;
-  background: #eff3f6;
-  border: none;
+  border: 1px solid ${theme.colors.gray[400]};
+  border-radius: 31px;
 
   &:focus {
     background: #eff3f6;
@@ -402,6 +399,10 @@ export const LoadMoreButton = styled.div`
     color: white;
     background-color: ${theme.colors.secondary};
   }
+
+  @media (min-width: 320px) and (max-width: 992px) {
+    margin: 5vh auto;
+  }
 `
 
 export const IconButton = styled.div<IButtonStyle>`
@@ -416,22 +417,18 @@ export const IconButton = styled.div<IButtonStyle>`
 
 export const Button = styled.button<IButtonStyle>`
   display: flex;
-  height: 55px;
+  height: 50px;
   padding: 17px;
   margin-right: 15px;
   font-weight: 700;
-  color: ${theme.colors.primary};
+  font-size: 1.25rem;
+  color: ${theme.colors.link};
   border: none;
-  border-radius: 3px;
+  background: none;
 
   :hover {
-    color: ${theme.colors.white};
-    background-color: ${props => props.theme.colors.secondary};
-    border-color: ${props => props.theme.colors.secondary};
-
-    > div {
-      background-image: url(${props => props.hoverImg}) !important;
-    }
+    color: ${theme.colors.secondary};
+    border-bottom: 4px solid ${props => props.theme.colors.secondary};
   }
 
   @media only screen and (max-width: 828px) {
@@ -462,14 +459,13 @@ export const DateCard = styled.div`
 
 export const ReturnButtonContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   width: 233px;
   height: 49px;
   margin-bottom: 30px;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 6px 28px #2c2d6636;
 
   span {
     padding-top: 2px;
@@ -486,7 +482,6 @@ export const ReturnButtonContainer = styled.div`
     width: 25px;
     height: 20px;
     margin-right: 10px;
-    transform: rotateY(180deg);
   }
 
   :hover {
@@ -590,4 +585,60 @@ export const NewsTitle = styled.p`
   font-weight: 700;
   line-height: 1;
   color: ${theme.colors.primary};
+`
+
+export const BlogContainer = styled.div`
+  margin-top: 20vh;
+  padding: 0 10vw;
+`
+
+export const BlogContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 66%;
+  margin: 50px;
+`
+
+export const ArticleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 2vw;
+  justify-content: space-between;
+  flex-basis: 80%;
+`
+
+export const ArticleTag = styled.div`
+  padding: 0.5rem 1rem;
+  background: ${theme.colors.secondary};
+  max-width: fit-content;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  color: ${theme.colors.white};
+  font-weight: 600;
+  font-size: 0.75rem;
+`
+export const ArticleTitle = styled.div`
+  font-weight: 900;
+  font-size: 2rem;
+`
+
+export const ArticleDate = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 10px;
+
+  > img {
+    margin-right: 0.5rem;
+  }
+
+  > p {
+    color: ${theme.colors.gray[550]};
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
 `

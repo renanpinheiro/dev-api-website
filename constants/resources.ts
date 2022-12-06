@@ -15,4 +15,8 @@ export const resources = [
     name: 'Política de privacidade',
     url: '/politica-de-privacidade',
   },
+  {
+    name: 'Perguntas frequentes',
+    url: '/faq',
+  },
 ]

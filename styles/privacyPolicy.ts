@@ -63,9 +63,13 @@ export const Content = styled.div`
   }
 
   > ul {
+    > p {
+      b > {
+        font-style: italic;
+      }
+    }
     > li {
       margin-left: 1.5vw;
-      list-style: disc;
 
       > p {
         margin-top: 2vh;
@@ -88,6 +92,10 @@ export const Content = styled.div`
 
       > b {
         font-weight: 900;
+
+        > span {
+          font-style: italic;
+        }
       }
 
       > ol {

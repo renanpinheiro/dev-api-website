@@ -19,6 +19,8 @@ export const BootstrapButton = styled(Button)<IButtonStyledProps>`
   font-weight: 700;
   background-color: ${props => props.color};
   border: 0;
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : '10px')};
+
   opacity: 1;
   transition: all 0.2s;
 

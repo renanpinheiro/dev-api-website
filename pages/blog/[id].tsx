@@ -39,6 +39,7 @@ const BlogDetails = () => {
   const [tags, setTags] = useState([])
   const [text, setText] = useState('')
   const [title, setTitle] = useState('')
+  const [date, setDate] = useState('')
   const [newsImages, setNewsImages] = useState([])
   const [newsCards, setNewsCards] = useState([])
 
@@ -56,7 +57,9 @@ const BlogDetails = () => {
 
     const handledPostDetails = handlePostDetails(data)
     const handledPostTitle = handlePostTitle(handledPostDetails.title)
+    const handledPostDate = handledPostDetails.date
     setTitle(handledPostTitle)
+    setDate(handledPostDate)
 
     const content = marked(handledPostDetails.text)
     setText(content)
@@ -97,18 +100,24 @@ const BlogDetails = () => {
       </Head>
 
       <S.Container>
-        <S.ImageContainer>
-          <ImageCarousel items={newsImages} isControls={false} />
-        </S.ImageContainer>
+        <S.ImageContainer />
 
         <S.ContentContainer>
           <S.Content>
             <Link href="/blog">
               <S.ReturnButtonContainer>
-                <img src="/icons/ic-arrow-primary.svg" alt="arrow" />
+                <img src="/icons/caret-left.svg" alt="caret" />
                 <span>Todos os posts</span>
               </S.ReturnButtonContainer>
             </Link>
+
+            <S.ArticleTag>Artigo</S.ArticleTag>
+
+            <S.ArticleTitle>{title}</S.ArticleTitle>
+            <S.ArticleDate>
+              <img src="/icons/calendar-green.svg" alt="calendar" />
+              <p>{date}</p>
+            </S.ArticleDate>
 
             <S.Post dangerouslySetInnerHTML={{ __html: text }} />
           </S.Content>

@@ -10,6 +10,8 @@ import * as S from './Sidebar.style'
 import axios from 'axios'
 import { FormikProvider, useFormik } from 'formik'
 import * as Yup from 'yup'
+import { NewsletterFooter } from '../NewsletterFooter'
+import { NewsletterForm } from '../Footer/NewsletterForm'
 
 const Sidebar = ({ tags, onClickTag }: ISidebarProps) => {
   const hubspotApi = axios.create({
@@ -50,7 +52,6 @@ const Sidebar = ({ tags, onClickTag }: ISidebarProps) => {
 
   const formikbag = useFormik({
     initialValues: {
-      name: '',
       email: '',
     },
     validationSchema: schema,
@@ -59,91 +60,38 @@ const Sidebar = ({ tags, onClickTag }: ISidebarProps) => {
 
   return (
     <S.SideBar>
-      {/* <S.Ebook onClick={() => open(ebookRedirect, '_blank')}>
-        <img src={ebookImg} alt="ebook" />
-      </S.Ebook> */}
-
-      <FormikProvider value={formikbag}>
-        <S.NewsForm name="newsletter-devapi" onSubmit={formikbag.handleSubmit}>
-          <Row>
-            <Col>
-              <Input type="text" name="name" placeholder="Nome " />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Input
-                type="text"
-                name="email"
-                placeholder="Digite aqui seu email"
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Button
-                type="submit"
-                size="custom"
-                text={loading ? 'Enviando...' : 'Receber novidades'}
-                color="secondary"
-              />
-            </Col>
-          </Row>
-          <S.SubText>
-            {isSuccess && (
-              <S.Message>
-                <small>Obrigado! newsletter assinado com sucesso!</small>
-              </S.Message>
-            )}
-            Prometemos não utilizar suas informações de contato para enviar
-            qualquer tipo de SPAM.
-          </S.SubText>
-        </S.NewsForm>
-      </FormikProvider>
-
-      {/* <S.ArticleContainer>
-        <S.Pipe />
-        <S.Title>Artigos mais lidos</S.Title>
-        <S.Content>
-          {articles.map((article, index) => (
-            <S.Article key={index} onClick={() => onClick(index)}>
-              <S.Image src={article.urlImage} />
-              <S.TextContainer>
-                <S.Text>{article.text}</S.Text>
-                <S.SidebarCotainer>
-                  <S.Newspaper>
-                    <img
-                      src="/icons/newspaper.svg"
-                      alt="newspaper"
-                    />
-                    <p>{article.newsType}</p>
-                  </S.Newspaper>
-                  <S.Date>
-                    <img
-                      src="/icons/calendar.svg"
-                      alt="calendar"
-                    />
-                    <p>{article.date}</p>
-                  </S.Date>
-                </S.SidebarCotainer>
-              </S.TextContainer>
-              <S.VerticalPipe />
-            </S.Article>
-          ))}
-        </S.Content>
-      </S.ArticleContainer> */}
-
-      <S.TagsContainer>
-        <S.Pipe />
-        <S.Title>Tags</S.Title>
-        <S.Content>
-          {tags.map((tag, index) => (
-            <S.Tag key={index} onClick={() => onClickTag(index)}>
-              {tag.name}
-            </S.Tag>
-          ))}
-        </S.Content>
-      </S.TagsContainer>
+      {/*<FormikProvider value={formikbag}>*/}
+      {/*  <S.NewsForm name="newsletter-devapi" onSubmit={formikbag.handleSubmit}>*/}
+      {/*    <Row>*/}
+      {/*      <Col>*/}
+      {/*        <Input*/}
+      {/*          type="text"*/}
+      {/*          name="email"*/}
+      {/*          placeholder="Digite aqui seu email"*/}
+      {/*        />*/}
+      {/*      </Col>*/}
+      {/*    </Row>*/}
+      {/*    <Row>*/}
+      {/*      <Col>*/}
+      {/*        <Button*/}
+      {/*          type="submit"*/}
+      {/*          size="custom"*/}
+      {/*          text={loading ? 'Enviando...' : 'Receber novidades'}*/}
+      {/*          color="green"*/}
+      {/*          borderRadius="30px"*/}
+      {/*        />*/}
+      {/*      </Col>*/}
+      {/*    </Row>*/}
+      {/*    <S.SubText>*/}
+      {/*      {isSuccess && (*/}
+      {/*        <S.Message>*/}
+      {/*          <small>Obrigado! newsletter assinado com sucesso!</small>*/}
+      {/*        </S.Message>*/}
+      {/*      )}*/}
+      {/*    </S.SubText>*/}
+      {/*  </S.NewsForm>*/}
+      {/*</FormikProvider>*/}
+      <NewsletterForm />
     </S.SideBar>
   )
 }

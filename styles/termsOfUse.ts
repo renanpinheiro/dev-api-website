@@ -6,44 +6,6 @@ export const Container = styled.div`
   width: 100%;
 `
 
-export const HeroContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  text-align: center;
-  background-image: url('/masks/lines.svg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
-
-  @media (max-width: 576px) {
-    align-items: flex-start;
-    padding: 25px;
-    text-align: left;
-    background-size: 100%;
-  }
-
-  > h1 {
-    font-size: 2.625rem;
-
-    @media (max-width: 576px) {
-      font-size: 2.25rem;
-    }
-
-    @media (min-width: 1600px) {
-      font-size: 3.75rem;
-    }
-
-    > b {
-      font-weight: 700;
-    }
-  }
-`
-
 export const Pipe = styled.div`
   width: 10vh;
   height: 3px;
@@ -71,6 +33,7 @@ export const Content = styled.div`
   > p {
     margin-top: 2vh;
     line-height: 2.5vh;
+    font-size: 1.125rem;
 
     > b {
       font-weight: 900;
@@ -78,7 +41,10 @@ export const Content = styled.div`
 
     > ul {
       padding: 1vw 4vh;
-      list-style: disc;
+
+      li:before {
+        content: '- ';
+      }
 
       > li {
         @media (max-width: 768px) {

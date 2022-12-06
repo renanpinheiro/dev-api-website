@@ -7,6 +7,7 @@ export interface IButtonProps {
   size?: string
   height?: string
   fontSize?: string
+  borderRadius?: string
 }
 
 export interface IContainerStyledProps {
