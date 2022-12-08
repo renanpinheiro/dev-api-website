@@ -31,7 +31,9 @@ const Solutions = () => {
 
   const currentPage = filterPage.split('/')
 
-  const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
+  const page: ISolutionPage =
+    solutionsPage[currentPage[currentPage.length - 1]] ||
+    solutionsPage['gestao']
 
   return (
     <>

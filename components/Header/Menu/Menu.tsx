@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BiCaretDown, BiPlus } from "react-icons/bi";
+import { BiCaretDown, BiPlus } from 'react-icons/bi'
 import { VscChromeClose } from 'react-icons/vsc'
 
 import { theme } from '../../../styles/theme'

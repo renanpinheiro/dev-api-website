@@ -112,7 +112,7 @@ const Plans = () => {
           <S.PipeContainer>
             <S.Pipe />
           </S.PipeContainer>
-          <Questions listQuestions={listQuestions} />
+          <Questions showTitle={true} listQuestions={listQuestions} />
 
           <S.ButtonContainer>
             <ButtonLink

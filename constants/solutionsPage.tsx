@@ -5,15 +5,20 @@ import * as S from '../styles/solutions'
 
 export interface ISolutionPage {
   seo: {
-    metaTitle: string
+    metaTitle?: string
   }
-  title: {
-    text: string
-    pageName: string
+  title?: {
+    text?: string
+    pageName?: string
     width?: string
+    pageTitle?: string
   }
-  subtitle: string
-  listItems: []
+  subtitle?: string
+  listItems?: [
+    {
+      text: string
+    },
+  ]
   contentTitle: ReactNode
   contentText: ReactNode
   component: ReactNode
