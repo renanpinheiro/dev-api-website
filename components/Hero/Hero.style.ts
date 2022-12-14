@@ -10,7 +10,7 @@ export const Container = styled.div<IContainerStyle>`
   padding-top: 5vh;
   background: ${props =>
     props.backgroundUrl
-      ? `background: transparent url('${props.backgroundUrl}') 0% 0% round padding-box;`
+      ? `transparent url(${props.backgroundUrl}) 0% 0% round padding-box;`
       : ''};
   background-color: ${theme.colors.gray[100]};
 

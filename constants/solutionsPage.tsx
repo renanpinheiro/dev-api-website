@@ -274,7 +274,6 @@ export const solutionsPage = {
   },
   rh: {
     backgroundUrl: '/images/solutions/rh.png',
-
     seo: {
       metaTitle: 'DevApi | Soluções em RH',
     },

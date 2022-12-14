@@ -110,8 +110,8 @@ const Solutions = () => {
             {/*  ) : (*/}
             <S.IntegrationContainer>
               {page &&
-                (page.title.pageTitle === 'Empresas 360' ||
-                  page.title.pageTitle === 'Seu produto') &&
+                (page.title.pageName === 'Empresas 360' ||
+                  page.title.pageName === 'Seu produto') &&
                 page.component}
             </S.IntegrationContainer>
             {/*  )}*/}

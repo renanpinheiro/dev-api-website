@@ -76,6 +76,7 @@ export const NavBar = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  margin-left: 20vw;
 
   @media (max-width: 1200px) {
     display: none;
