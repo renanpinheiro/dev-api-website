@@ -46,7 +46,7 @@ const Solutions = () => {
       </Head>
 
       <S.Container>
-        <Hero>
+        <Hero backgroundUrl={page.backgroundUrl}>
           <S.HeroContent>
             <h2
               dangerouslySetInnerHTML={{ __html: `${page.title.pageName}` }}
@@ -140,10 +140,6 @@ const Solutions = () => {
           <S.ProfessionalServiceContainer>
             <ProfessionalService />
           </S.ProfessionalServiceContainer>
-
-          <CustomersContainer></CustomersContainer>
-
-          <NewsletterFooter></NewsletterFooter>
         </S.Content>
       </S.Container>
     </>

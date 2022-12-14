@@ -50,7 +50,7 @@ const BlogDetails = () => {
     handleFindPopularPosts()
   }, [currentId])
 
-  const handlePostTitle = title => title && `${title} | DevApi`
+  const handlePostTitle = title => title && `${title}`
 
   const handleFindPostById = async id => {
     const { data } = await findPostById(id)

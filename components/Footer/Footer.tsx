@@ -11,67 +11,64 @@ import { Links } from './Links'
 
 const Footer = () => (
   <S.FooterContainer>
-    <S.Row>
-      <S.Col>
-        <S.ResponsivePipe />
-        <Links title="Plataforma" links={platform} />
-        <S.ResponsivePipe />
+    <S.LogoContainer>
+      <S.Logo
+        src={'/logo/devapi-by-tivit-color.svg'}
+        alt={'logo-devapi'}
+      ></S.Logo>
 
-        <Links title="Soluções" links={soluctions} />
-        <S.ResponsivePipe />
+      <S.SocialMediaContainer>
+        <S.SocialMedia>
+          Siga <span>nossas redes</span>
+        </S.SocialMedia>
+        <S.SocialLogoContainer>
+          <Link href="https://www.instagram.com/devapi.ipaas/">
+            <a title="Instagram" target="_blank" rel="noopener">
+              <S.SocialMediaLogo src="/images/instagram.svg" alt="Instagram" />
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com/DevApiOficial/">
+            <a title="Facebook" target="_blank" rel="noopener">
+              <S.SocialMediaLogo src="/images/facebook.svg" alt="Facebook" />
+            </a>
+          </Link>
+          <Link href="https://www.linkedin.com/company/devapitecnologia/">
+            <a title="Linkedin" target="_blank" rel="noopener">
+              <S.SocialMediaLogo src="/images/linkedin.svg" alt="Linkedin" />
+            </a>
+          </Link>
+          <Link href="https://www.youtube.com/channel/UC-ocfHETIE550ZN5CP13H5w">
+            <a title="Youtube" target="_blank" rel="noopener">
+              <S.SocialMediaLogo src="/images/youtube.svg" alt="Youtube" />
+            </a>
+          </Link>
+        </S.SocialLogoContainer>
+      </S.SocialMediaContainer>
 
-        <Links title="Recursos" links={resources} />
+      <S.AddressContainer>
+        <S.Pipe />
+        <S.Address>
+          <span> Telefone:</span> +55 (44) 9 9738-5897
+          <br /> <span> Email:</span> info@devapi.com.br
+        </S.Address>
+      </S.AddressContainer>
+    </S.LogoContainer>
 
-        <S.ResponsivePipe />
-        <Links title="Empresa" links={company} />
-      </S.Col>
-    </S.Row>
-    <S.Row>
-      <S.Col content="space-between">
-        <S.LogoContainer>
-          <S.Logo src={'/logo/devapi-white.svg'} alt={'logo-devapi'} />
+    <S.NavContainer>
+      <Links title="Plataforma" links={platform} />
+    </S.NavContainer>
 
-          <S.AddressContainer>
-            <S.Pipe />
-            <S.Address>
-              <br /> <span> Telefone:</span> +55 (44) 9 9738-5897
-              <br /> <span> Email:</span> info@devapi.com.br
-            </S.Address>
-          </S.AddressContainer>
-        </S.LogoContainer>
+    <S.NavContainer>
+      <Links title="Soluções" links={soluctions} />
+    </S.NavContainer>
 
-        <S.SocialMediaContainer>
-          <S.SocialMedia>
-            Siga <span>nossas redes</span>
-          </S.SocialMedia>
-          <S.SocialLogocontainer>
-            <Link href="https://www.instagram.com/devapi.ipaas/">
-              <a title="Instagram" target="_blank" rel="noopener">
-                <S.SocialMediaLogo
-                  src="/images/instagram.svg"
-                  alt="Instagram"
-                />
-              </a>
-            </Link>
-            <Link href="https://www.facebook.com/DevApiOficial/">
-              <a title="Facebook" target="_blank" rel="noopener">
-                <S.SocialMediaLogo src="/images/facebook.svg" alt="Facebook" />
-              </a>
-            </Link>
-            <Link href="https://www.linkedin.com/company/devapitecnologia/">
-              <a title="Linkedin" target="_blank" rel="noopener">
-                <S.SocialMediaLogo src="/images/linkedin.svg" alt="Linkedin" />
-              </a>
-            </Link>
-            <Link href="https://www.youtube.com/channel/UC-ocfHETIE550ZN5CP13H5w">
-              <a title="Youtube" target="_blank" rel="noopener">
-                <S.SocialMediaLogo src="/images/youtube.svg" alt="Youtube" />
-              </a>
-            </Link>
-          </S.SocialLogocontainer>
-        </S.SocialMediaContainer>
-      </S.Col>
-    </S.Row>
+    <S.NavContainer>
+      <Links title="Recursos" links={resources} />
+    </S.NavContainer>
+
+    <S.NavContainer>
+      <Links title="Empresa" links={company} />
+    </S.NavContainer>
   </S.FooterContainer>
 )
 

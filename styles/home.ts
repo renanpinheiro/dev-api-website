@@ -611,6 +611,7 @@ export const JoinNowContainer = styled.div`
   justify-content: center;
   margin-bottom: 40px;
   text-align: center;
+  padding: 0 8vw;
 
   > h2 {
     max-width: 30ch;
@@ -1139,5 +1140,37 @@ export const DemoContainer = styled.div`
   @media (max-width: 996px) {
     align-items: flex-start;
     text-align: left;
+  }
+`
+
+export const LayerContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 10vh 0;
+
+  @media (max-width: 996px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+`
+
+export const LayerImage = styled.div`
+  padding: 0 2vw;
+
+  @media (max-width: 996px) {
+    padding: 0;
+    width: 50vw;
+  }
+`
+export const LayersColumn = styled.div`
+  text-align: left;
+  > b {
+    font-weight: 900;
+    font-size: 2rem;
+  }
+
+  > p {
+    font-size: 1.125rem;
   }
 `
