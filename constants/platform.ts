@@ -12,6 +12,10 @@ export const platform = [
     url: '/conectores',
   },
   {
+    name: 'Segurança',
+    url: '/seguranca',
+  },
+  {
     name: 'Planos',
     url: '/planos',
   },

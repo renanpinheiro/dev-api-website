@@ -18,7 +18,7 @@ export const Pipe = styled.div`
 `
 
 export const Content = styled.div`
-  padding: 10vh 19vw 10vh 19vw;
+  padding: 10vh 10vw 10vh 10vw;
   font-size: 1.25rem;
 
   @media (max-width: 768px) {

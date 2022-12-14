@@ -5,12 +5,12 @@ import Head from 'next/head'
 import { Questions } from '../../components/Questions'
 import { Button } from '../../components/Button'
 import { ButtonLink } from '../../components/ButtonLink'
-import { speakExpertQuestions } from '../../constants/commonQuestions'
+import { commonQuestions } from '../../constants/commonQuestions'
 import * as S from '../../styles/faq'
 import { SimplifiedHero } from '../../components/SimplifiedHero'
 
 const Faq = () => {
-  const listQuestions = speakExpertQuestions
+  const listQuestions = commonQuestions
 
   return (
     <>

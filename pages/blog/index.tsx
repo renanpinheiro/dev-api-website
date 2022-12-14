@@ -174,13 +174,13 @@ const Blog = () => {
 
             <S.SidebarLine />
 
-            <Link href={''}>
+            <Link href="https://conteudo.devapi.com.br/e-book-devapi-rh">
               <img src="/images/rh-ebook.svg"></img>
             </Link>
 
             <S.SidebarLine />
 
-            <Link href={''}>
+            <Link href="https://conteudo.devapi.com.br/e-book-devapi-ecommerce">
               <img src="/images/integration-ecommerce.svg"></img>
             </Link>
           </S.SidebarContainer>
