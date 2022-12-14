@@ -4,7 +4,7 @@ export const ContainerLink = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 60%;
+  width: 100%;
   height: 100%;
   padding: 10px;
 
@@ -12,8 +12,7 @@ export const ContainerLink = styled.div`
     padding-bottom: 10px;
     margin: 0;
     margin-bottom: 5px;
-    font-size: 1.25rem;
-    font-size: 20px;
+    font-size: 1rem;
     color: ${props => props.theme.colors.white};
     text-decoration: none;
     cursor: pointer;
