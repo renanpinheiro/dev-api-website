@@ -642,3 +642,19 @@ export const ArticleDate = styled.div`
     font-size: 0.75rem;
   }
 `
+
+export const SidebarContainer = styled.div`
+  padding: 0 2vw;
+  align-self: center;
+
+  @media only screen and (max-width: 828px) {
+    display: block;
+  }
+`
+
+export const SidebarLine = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: ${theme.colors.gray[200]};
+  margin: 5vh 0;
+`

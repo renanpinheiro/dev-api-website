@@ -22,6 +22,7 @@ import {
 import * as S from '../../styles/blog'
 import { Article } from '../../components/Blog/Article'
 import { Col, Container, Row } from 'react-bootstrap'
+import Link from 'next/link'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Blog/Carrousel'),
@@ -163,12 +164,26 @@ const Blog = () => {
             </S.LoadMoreButton>
           </S.ArticleContainer>
 
-          <Sidebar
-            tags={tags}
-            articles={popularArticles}
-            onClick={index => handleClickNews(popularArticles[index].linkId)}
-            onClickTag={index => handleClickTag(tags[index].id)}
-          />
+          <S.SidebarContainer>
+            <Sidebar
+              tags={tags}
+              articles={popularArticles}
+              onClick={index => handleClickNews(popularArticles[index].linkId)}
+              onClickTag={index => handleClickTag(tags[index].id)}
+            />
+
+            <S.SidebarLine />
+
+            <Link href={''}>
+              <img src="/images/rh-ebook.svg"></img>
+            </Link>
+
+            <S.SidebarLine />
+
+            <Link href={''}>
+              <img src="/images/integration-ecommerce.svg"></img>
+            </Link>
+          </S.SidebarContainer>
         </S.ContentContainer>
       </S.Container>
     </>

@@ -4,16 +4,22 @@ import { ConnectorsCard } from '../components/ConnectorsCard'
 import * as S from '../styles/solutions'
 
 export interface ISolutionPage {
+  backgroundUrl?: string
   seo: {
-    metaTitle: string
+    metaTitle?: string
   }
-  title: {
-    text: string
-    pageName: string
+  title?: {
+    text?: string
+    pageName?: string
     width?: string
+    pageTitle?: string
   }
-  subtitle: string
-  listItems: []
+  subtitle?: string
+  listItems?: [
+    {
+      text: string
+    },
+  ]
   contentTitle: ReactNode
   contentText: ReactNode
   component: ReactNode
@@ -28,6 +34,7 @@ interface IIntegrationCard {
 
 export const solutionsPage = {
   gestao: {
+    backgroundUrl: '/images/solutions/gestao.png',
     seo: {
       metaTitle: 'DevApi | Soluções em Gestão',
     },
@@ -114,6 +121,7 @@ export const solutionsPage = {
     ),
   },
   marketing: {
+    backgroundUrl: '/images/solutions/marketing.png',
     seo: {
       metaTitle: 'DevApi | Soluções em Marketing',
     },
@@ -187,6 +195,7 @@ export const solutionsPage = {
     ),
   },
   comercial: {
+    backgroundUrl: '/images/solutions/comercial.png',
     seo: {
       metaTitle: 'DevApi | Soluções comerciais',
     },
@@ -264,6 +273,8 @@ export const solutionsPage = {
     ),
   },
   rh: {
+    backgroundUrl: '/images/solutions/rh.png',
+
     seo: {
       metaTitle: 'DevApi | Soluções em RH',
     },
@@ -333,6 +344,8 @@ export const solutionsPage = {
     ),
   },
   'e-commerce': {
+    backgroundUrl: '/images/solutions/e-commerce.png',
+
     seo: {
       metaTitle: 'DevApi | Soluções em e-commerce',
     },
@@ -409,6 +422,8 @@ export const solutionsPage = {
     ),
   },
   'empresas-360': {
+    backgroundUrl: '/images/solutions/seu-produto.png',
+
     seo: {
       metaTitle: 'DevApi | Soluções para Empresas',
     },
@@ -454,6 +469,8 @@ export const solutionsPage = {
     ),
   },
   financeiro: {
+    backgroundUrl: '/images/solutions/financeiro.png',
+
     seo: {
       metaTitle: 'DevApi | Soluções Financeiras',
     },
@@ -532,6 +549,8 @@ export const solutionsPage = {
     ),
   },
   'seu-produto': {
+    backgroundUrl: '/images/solutions/seu-produto.png',
+
     seo: {
       metaTitle: 'DevApi | Soluções para seu produto',
     },
@@ -583,6 +602,8 @@ export const solutionsPage = {
     ),
   },
   logistica: {
+    backgroundUrl: '/images/solutions/logistica.png',
+
     seo: {
       metaTitle: 'DevApi | Soluções em Logística',
     },

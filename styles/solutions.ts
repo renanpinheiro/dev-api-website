@@ -304,7 +304,7 @@ export const ListIconlTitle = styled.h2`
 export const AdvantagesContainer = styled.div`
   background: ${theme.colors.white};
   border-radius: 15px;
-  padding: 4vh 4vw 4vh 4vw;
+  padding: 4vh 4vw;
   columns: 2;
   text-align: left;
   font-size: 1.125rem;
@@ -312,9 +312,7 @@ export const AdvantagesContainer = styled.div`
 
   > ul {
     > li {
-      height: 8vw;
-      padding: 1vw;
-
+      margin-bottom: 2vh;
       @media (max-width: 996px) {
         height: 15vh;
       }

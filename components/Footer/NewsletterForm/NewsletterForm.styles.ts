@@ -11,6 +11,7 @@ export const ContainerForm = styled.div`
   //margin-bottom: 65px;
 
   @media only screen and (max-width: 828px) {
+    align-items: center;
     width: auto;
     margin-top: 5px;
     //margin-bottom: 25px;

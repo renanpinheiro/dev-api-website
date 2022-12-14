@@ -2,7 +2,7 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-import { costumers } from '../../constants/custumers'
+import { customers } from '../../constants/customers'
 import * as S from './Slider.style'
 
 interface ISliderStyle {
@@ -34,12 +34,12 @@ const Slider = () => {
 
   const rotate = 360 / 120
 
-  const customersLength = costumers.length
+  const customersLength = customers.length
 
-  const costumersHalfLength = customersLength / 2
+  const customersHalfLength = customersLength / 2
 
-  const halfStart = costumers.slice(0, costumersHalfLength)
-  const halfEnd = costumers.slice(costumersHalfLength, customersLength)
+  const halfStart = customers.slice(0, customersHalfLength)
+  const halfEnd = customers.slice(customersHalfLength, customersLength)
 
   firstLine.push(...firstLine, halfStart)
   secondLine.push(...secondLine, halfEnd)

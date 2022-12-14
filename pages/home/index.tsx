@@ -146,7 +146,7 @@ const Home = () => {
             />
           ) : (
             <MultiCarrouselWithOutSSR
-              itemsPerSlide={9}
+              itemsPerSlide={11}
               interval={2000}
               items={connectors}
               title={

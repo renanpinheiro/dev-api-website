@@ -31,7 +31,9 @@ const Solutions = () => {
 
   const currentPage = filterPage.split('/')
 
-  const page: ISolutionPage = solutionsPage[currentPage[currentPage.length - 1]]
+  const page: ISolutionPage =
+    solutionsPage[currentPage[currentPage.length - 1]] ||
+    solutionsPage['gestao']
 
   return (
     <>
@@ -44,7 +46,7 @@ const Solutions = () => {
       </Head>
 
       <S.Container>
-        <Hero>
+        <Hero backgroundUrl={page.backgroundUrl}>
           <S.HeroContent>
             <h2
               dangerouslySetInnerHTML={{ __html: `${page.title.pageName}` }}
@@ -138,10 +140,6 @@ const Solutions = () => {
           <S.ProfessionalServiceContainer>
             <ProfessionalService />
           </S.ProfessionalServiceContainer>
-
-          <CustomersContainer></CustomersContainer>
-
-          <NewsletterFooter></NewsletterFooter>
         </S.Content>
       </S.Container>
     </>

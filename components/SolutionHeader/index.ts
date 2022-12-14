@@ -1,1 +1,1 @@
-export * from './NewsletterFooter'
+export * from './SolutionHeader'

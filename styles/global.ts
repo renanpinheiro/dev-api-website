@@ -9,7 +9,131 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const GlobalStyles = createGlobalStyle`
   ${reset}
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Montserrat Black'), url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    src: local('Montserrat Black Italic'), url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Montserrat Bold'), url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Montserrat Bold Italic'), url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 800;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 200;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 200;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: normal;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 300;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat'), url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 500;
+    src: local('Montserrat Italic'), url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 100;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+  }
 
   @font-face {
     font-family: 'TT Commons';
