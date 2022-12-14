@@ -104,4 +104,6 @@ export const ResponsiveNavsContainer = styled.div`
   @media only screen and (max-width: 996px) {
   }
 `
-export const NavContainer = styled.div``
+export const NavContainer = styled.div`
+  font-size: 14px;
+`
