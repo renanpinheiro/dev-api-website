@@ -7,18 +7,21 @@ export const HeroContainer = styled.section`
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 40vh;
   padding: 30vh 10vw 20vh 10vw;
   text-align: center;
-  background: transparent url('/backgrounds/faq.png') 0% 0% no-repeat
-    padding-box;
+  background: transparent url('/backgrounds/faq.png') 0% 0% round border-box;
+
+  // media query tablet
+  @media (max-width: 768px) {
+    background: transparent url('/backgrounds/faq.png') padding-box;
+  }
 
   @media (max-width: 576px) {
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-    background: transparent url('/backgrounds/faq.png') padding-box;
   }
 
   > h1 {

@@ -74,7 +74,7 @@ export const Pipe = styled.div`
 
 export const Content = styled.section`
   width: 100%;
-  padding: 10vh 19vw;
+  padding: 10vh 10vw;
 
   @media (max-width: 768px) {
     padding: 10vh 8vw;

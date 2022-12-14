@@ -41,6 +41,7 @@ interface IButtonStyle {
 
 export const Container = styled.div`
   width: 100vw;
+  padding-top: 25vh;
 `
 
 export const ImageContainer = styled.div`
@@ -608,6 +609,11 @@ export const ArticleContainer = styled.div`
   padding: 0 2vw;
   justify-content: space-between;
   flex-basis: 80%;
+
+  @media (min-width: 320px) and (max-width: 992px) {
+    flex-direction: column;
+    align-content: center;
+  }
 `
 
 export const ArticleTag = styled.div`
@@ -645,9 +651,10 @@ export const ArticleDate = styled.div`
 
 export const SidebarContainer = styled.div`
   padding: 0 2vw;
-  align-self: center;
+  align-self: start;
 
   @media only screen and (max-width: 828px) {
+    align-self: center;
     display: block;
   }
 `

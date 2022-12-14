@@ -6,7 +6,7 @@ export const Hero = styled.section`
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 0 8vw 0 8vw;
+  padding: 0 10vw 0 10vw;
   background-color: ${theme.colors.gray[100]};
   background-image: url('/backgrounds/Apresentação-DevApi.png');
   background-repeat: no-repeat;
@@ -176,7 +176,7 @@ export const CarrouselTitle = styled.div`
 
 export const PlatformContainer = styled.div`
   display: flex;
-  padding: 10vh 8vw;
+  padding: 10vh 10vw;
 
   @media (max-width: 996px) {
     flex-direction: column;
@@ -430,7 +430,7 @@ export const FeaturesContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8vh 8vw 8vh 8vw;
+  padding: 8vh 20vw;
   text-align: center;
   background: transparent url('/backgrounds/Apresentação-DevApi.png') 0% 0%
     round padding-box;
@@ -693,7 +693,7 @@ export const SystemImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 60vh;
+  height: 35vh;
 
   @media (max-width: 996px) {
     height: 45vh;
