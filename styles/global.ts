@@ -271,6 +271,15 @@ const GlobalStyles = createGlobalStyle`
   html {
     width: 100%;
     font-size: 1rem;
+
+    @media (max-width: 425px) {
+      font-size: 0.7rem;
+
+    }
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+
   }
 
   /* stylelint-disable-next-line selector-id-pattern */

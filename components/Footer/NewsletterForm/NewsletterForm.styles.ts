@@ -8,23 +8,19 @@ export const ContainerForm = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-top: 5px;
-  //margin-bottom: 65px;
 
   @media only screen and (max-width: 828px) {
     align-items: center;
     width: auto;
     margin-top: 5px;
-    //margin-bottom: 25px;
   }
 
   @media only screen and (min-width: 1366px) {
     width: 400px;
-    //margin-bottom: 45px;
   }
 
   @media only screen and (min-width: 1517px) {
     width: 405px;
-    //margin-bottom: 55px;
   }
 `
 export const ContainerMessage = styled.div`
@@ -76,6 +72,10 @@ export const InputNewsletter = styled.input`
   border-radius: 30px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     -webkit-box-shadow 0.15s ease-in-out;
+
+  @media only screen and (min-width: 868px) and (max-width: 1366px) {
+    width: 35vw;
+  }
 `
 export const ButtonContainer = styled.div`
   width: 100%;
