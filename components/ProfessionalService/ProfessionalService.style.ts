@@ -43,18 +43,13 @@ export const ProfessionalServiceText = styled.div`
   > h2 {
     max-width: 25ch;
     margin-bottom: 15px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 1;
     font-weight: 800;
     color: ${theme.colors.secondary};
 
-    @media (max-width: 996px) {
-      font-size: 1.375rem;
-    }
-
     @media (min-width: 1600px) {
       width: 98%;
-      font-size: 3.25rem;
     }
   }
 

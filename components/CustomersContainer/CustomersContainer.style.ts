@@ -20,7 +20,8 @@ export const CustomersContainer = styled.div`
     padding: 0 2vw 0 0;
     max-height: 32px;
 
-    @media (max-width: 1300px) {
+    @media (max-width: 768px) {
+      margin: 2vh 2vw;
     }
   }
 `

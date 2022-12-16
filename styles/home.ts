@@ -1099,6 +1099,10 @@ export const AdvantagesContainer = styled.div`
         margin: 0 0.5vw 0 0;
         max-width: 35px;
       }
+
+      @media (max-width: 996px) {
+        //text-align: center;
+      }
     }
   }
 
