@@ -97,11 +97,11 @@ export const CardImage = styled.div`
   box-shadow: 0 10px 25px #5f47ff29;
 
   h2 {
-    font-size: 2vw;
+    font-size: 2rem;
     font-weight: 700;
 
     @media (max-width: 900px) {
-      font-size: 3.5vh;
+      font-size: 2rem;
     }
   }
 
@@ -184,12 +184,12 @@ export const CardPatner = styled.div`
   @media (max-width: 900px) {
     flex: 0 0 100%;
     padding: 3vh 1.7vw 5vh 4vw;
-    font-size: 1.7vh;
+    font-size: 1.7rem;
     box-shadow: 0 10px 10px #5f47ff29;
   }
 
   p {
-    font-size: 2.2vh;
+    font-size: 2.2rem;
     line-height: 1.4;
   }
 `

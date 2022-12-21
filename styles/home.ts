@@ -144,12 +144,8 @@ export const CarrouselTitle = styled.div`
   margin-bottom: 2vh;
 
   > h2 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     color: ${theme.colors.primary};
-
-    @media (min-width: 1600px) {
-      font-size: 3rem;
-    }
 
     @media (max-width: 996px) {
       display: flex;
@@ -200,10 +196,10 @@ export const Platform = styled.div`
   > h2 {
     max-width: 20ch;
     margin-bottom: 15px;
-    font-size: 2.25rem;
+    font-size: 2rem;
 
     @media (min-width: 1600px) {
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     span {
@@ -215,18 +211,18 @@ export const Platform = styled.div`
     max-width: 50ch;
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 1.125rem;
+    font-size: 1.15rem;
     line-height: 1.3;
 
     @media (max-width: 996px) {
       text-align: center;
       width: 100%;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
     }
 
     @media (min-width: 1600px) {
       width: 90%;
-      font-size: 1.375rem;
+      font-size: 1.15rem;
     }
   }
 `
@@ -277,11 +273,11 @@ export const DetailsText = styled.div`
   > p {
     font-weight: 800;
     margin-bottom: 1vh;
-    font-size: 3vh;
+    font-size: 1.25rem;
   }
 
   > span {
-    font-size: 4vh;
+    font-size: 2rem;
     font-weight: 700;
     color: ${theme.colors.green[100]};
   }
@@ -616,15 +612,11 @@ export const JoinNowContainer = styled.div`
   > h2 {
     max-width: 30ch;
     margin-bottom: 15px;
-    font-size: 2.625rem;
+    font-size: 2rem;
     line-height: 1.2;
 
     @media (max-width: 996px) {
       width: 100%;
-    }
-
-    @media (min-width: 1600px) {
-      font-size: 3.25rem;
     }
 
     @media (max-width: 996px) {
@@ -645,7 +637,7 @@ export const JoinNowContainer = styled.div`
   p {
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.3;
   }
 
@@ -666,6 +658,7 @@ export const SystemContainer = styled.div`
   b {
     font-weight: 700;
     color: ${theme.colors.secondary};
+    font-size: 2rem;
   }
 
   h2 {
@@ -675,12 +668,8 @@ export const SystemContainer = styled.div`
   p {
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.3;
-
-    @media (min-width: 1600px) {
-      font-size: 1.375rem;
-    }
   }
 
   @media (max-width: 996px) {
@@ -969,10 +958,6 @@ export const CasesContainer = styled.div`
   > h2 {
     font-size: 2.25rem;
     font-weight: 700;
-
-    @media (min-width: 1600px) {
-      font-size: 3rem;
-    }
   }
 
   > p {
