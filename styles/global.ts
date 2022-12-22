@@ -270,15 +270,15 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     width: 100%;
-    font-size: 1rem;
+    font-size: 14px;
 
-    @media (max-width: 425px) {
-      font-size: 0.7rem;
+    // @media (max-width: 425px) {
+    //   font-size: 0.7rem;
 
-    }
-    @media (max-width: 768px) {
-      font-size: 0.8rem;
-    }
+    // }
+    // @media (max-width: 768px) {
+    //   font-size: 0.8rem;
+    // }
 
   }
 
@@ -287,12 +287,22 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  .grid {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+  }
+
   body {
+    font-size: 1rem;
     max-width: 100%;
     overflow-x: hidden;
-    font-size: 1rem;
     font-weight: normal;
     color: ${theme.colors.primary};
+  }
+
+  h1 {
+    font-size: 3rem;
   }
 
   h2 {

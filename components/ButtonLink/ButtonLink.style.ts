@@ -50,9 +50,8 @@ const size = {
   `,
 
   default: css`
-    height: 50px;
-    padding: 5px 30px;
-    font-size: 1.3rem;
+    height: 45px;
+    padding: 5px 35px;
     font-weight: 700;
   `,
 

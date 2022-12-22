@@ -10,8 +10,7 @@ export const Container = styled.div<IContainerStyles>`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 13vh;
-  padding: 0 6vw 0vh 6vw;
+  height: 10vh;
   user-select: none;
   background-color: ${theme.colors.header};
   transition: all 0.3s ease-in-out;
@@ -30,11 +29,14 @@ export const Container = styled.div<IContainerStyles>`
     `}
 `
 
+export const ContainerGrid = styled.div`
+  width: 100%;
+`
+
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   width: 10vw;
-  height: 100%;
 
   @media (max-width: 450px) {
     padding-top: 2vh;
@@ -45,7 +47,6 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 100%;
 
   @media (max-width: 1200px) {
     display: none;
@@ -53,7 +54,7 @@ export const ButtonContainer = styled.div`
 `
 
 export const Logo = styled.img`
-  width: 100px;
+  width: 90px;
   height: 100%;
   padding: 2vh 0 2vh 0;
   cursor: pointer;
@@ -63,7 +64,6 @@ export const NavBarContainer = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
-  height: 100%;
 
   @media (max-width: 1200px) {
     display: none;
@@ -73,10 +73,9 @@ export const NavBarContainer = styled.div`
 export const NavBar = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   width: 100%;
   height: 100%;
-  margin-left: 20vw;
 
   @media (max-width: 1200px) {
     display: none;
@@ -85,8 +84,8 @@ export const NavBar = styled.div`
 
 export const NavLinkContainer = styled.div`
   display: flex;
-  align-items: center;
-  margin-right: 4vw;
+  align-items: right;
+  margin-right: 2.5vw;
   cursor: pointer;
 
   @media (max-width: 1600px) {
@@ -110,7 +109,6 @@ export const NavLinkContainer = styled.div`
 `
 
 export const NavLink = styled.a<IHeaderStyle>`
-  font-size: 20px;
   color: ${theme.colors.primary};
   text-decoration: none;
   ${props =>

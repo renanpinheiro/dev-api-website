@@ -70,76 +70,78 @@ const Header = () => {
 
   return (
     <S.Container>
-      <S.LogoContainer>
-        <Link href="/">
-          <a title="DevApi" rel="noreferrer">
-            <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
-          </a>
-        </Link>
-      </S.LogoContainer>
+      <S.ContainerGrid className={'grid'}>
+        <S.LogoContainer>
+          <Link href="/">
+            <a title="DevApi" rel="noreferrer">
+              <S.Logo src="/logo/devapi-primary.svg" alt="devapi" />
+            </a>
+          </Link>
+        </S.LogoContainer>
 
-      <S.NavBarContainer>
-        <S.NavBar>
-          {navLinks.map((link, index) => {
-            const isOpen = openDropdown === index
+        <S.NavBarContainer>
+          <S.NavBar>
+            {navLinks.map((link, index) => {
+              const isOpen = openDropdown === index
 
-            return (
-              <Dropdown
-                isOpen={isOpen}
-                key={index}
-                dropdownItems={link.dropDown}
-              >
-                <S.NavLinkContainer
-                  onClick={() => handleOpenDropdown(index)}
-                  ref={dropdownRef}
+              return (
+                <Dropdown
+                  isOpen={isOpen}
+                  key={index}
+                  dropdownItems={link.dropDown}
                 >
-                  <S.NavLink
-                    href={link.url && link.url}
-                    rel="noreferrer"
-                    isActive={link.isActive}
+                  <S.NavLinkContainer
+                    onClick={() => handleOpenDropdown(index)}
+                    ref={dropdownRef}
                   >
-                    {link.name}
-                  </S.NavLink>
+                    <S.NavLink
+                      href={link.url && link.url}
+                      rel="noreferrer"
+                      isActive={link.isActive}
+                    >
+                      {link.name}
+                    </S.NavLink>
 
-                  {link.dropDown && (
-                    <S.Arrow src="/arrows/arrow-dropdown.svg" alt={''} />
-                  )}
-                </S.NavLinkContainer>
-              </Dropdown>
-            )
-          })}
-        </S.NavBar>
-      </S.NavBarContainer>
+                    {link.dropDown && (
+                      <S.Arrow src="/arrows/arrow-dropdown.svg" alt={''} />
+                    )}
+                  </S.NavLinkContainer>
+                </Dropdown>
+              )
+            })}
+          </S.NavBar>
+        </S.NavBarContainer>
 
-      <S.ButtonContainer>
-        <ButtonLink
-          text="Agendar conversa"
-          href="/converse-com-especialista"
-          target="_self"
-          type="default"
-          size="default"
-          margin="0 20px 0 0"
-        />
-        <ButtonLink
-          text="Login"
-          href="https://app.devapi.com.br"
-          target="_self"
-          type="outline"
-          size="default"
-        />
-      </S.ButtonContainer>
+        <S.ButtonContainer>
+          <ButtonLink
+            text="Agendar conversa"
+            href="/converse-com-especialista"
+            target="_self"
+            type="default"
+            size="default"
+            margin="0 20px 0 0"
+          />
+          <ButtonLink
+            text="Login"
+            href="https://app.devapi.com.br"
+            target="_self"
+            type="outline"
+            size="default"
+          />
+        </S.ButtonContainer>
 
-      <S.MenuContainer>
-        <S.Menu title="Menu" onClick={handleOpenMenu}>
-          <S.Burger>
-            <div />
-            <div />
-            <div />
-          </S.Burger>
-        </S.Menu>
+        <S.MenuContainer>
+          <S.Menu title="Menu" onClick={handleOpenMenu}>
+            <S.Burger>
+              <div />
+              <div />
+              <div />
+            </S.Burger>
+          </S.Menu>
 
-        <Menu isOpen={isOpenMenu} close={handleOpenMenu} navLinks={navLinks} />
-      </S.MenuContainer>
+          <Menu isOpen={isOpenMenu} close={handleOpenMenu} navLinks={navLinks} />
+        </S.MenuContainer>
+      </S.ContainerGrid>
     </S.Container>
   )
 }

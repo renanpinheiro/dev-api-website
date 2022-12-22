@@ -5,12 +5,11 @@ import { theme } from './theme'
 export const Hero = styled.section`
   display: flex;
   align-items: center;
-  height: 100vh;
   padding: 0 10vw 0 10vw;
   background-color: ${theme.colors.gray[100]};
   background-image: url('/backgrounds/Apresentação-DevApi.png');
   background-repeat: no-repeat;
-  background-position-y: 140%;
+  background-position-y: bottom;
   background-size: 100%;
 
   @media (max-width: 996px) {
@@ -18,10 +17,14 @@ export const Hero = styled.section`
     padding: 15vh 8vw 0 8vw;
   }
 `
+export const ContainerGrid = styled.div`
+  padding: 16.4rem 0 10rem 0;
+`
 
 export const HeroContent = styled.div`
   z-index: 24;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -39,17 +42,10 @@ export const HeroContent = styled.div`
   }
 
   > h1 {
-    max-width: 19ch;
     margin-bottom: 15px;
-    font-size: 2.625rem;
 
     @media (max-width: 576px) {
-      max-width: 15ch;
       font-size: 2.25rem;
-    }
-
-    @media (min-width: 1600px) {
-      font-size: 3.75rem;
     }
 
     > b {
@@ -98,7 +94,7 @@ export const Pipe = styled.div`
 `
 
 export const GifContainer = styled.div`
-  width: 54%;
+  flex: 1;
 
   @media (max-width: 996px) {
     width: 100%;

@@ -70,27 +70,29 @@ const Home = () => {
       </Head>
 
       <S.Hero>
-        <S.HeroContent>
-          <S.Pipe />
-          <h1>
-            <b>Integração de Sistemas e Gestão de APIs</b>
-          </h1>
-          <p>
-            Sem limites: uma única plataforma para integrar sistemas,
-            automatizar processos, orquestrar dados e gerenciar APIs.
-          </p>
+        <S.ContainerGrid className={'grid'}>
+          <S.HeroContent>
+            <S.Pipe />
+            <h1>
+              <b>Integração de Sistemas e Gestão de APIs</b>
+            </h1>
+            <p>
+              Sem limites: uma única plataforma para integrar sistemas,
+              automatizar processos, orquestrar dados e gerenciar APIs.
+            </p>
 
-          <ButtonLink
-            text="Quero uma demonstração"
-            href="/converse-com-especialista"
-            target="_self"
-            size="default"
-            type="default"
-          />
-        </S.HeroContent>
-        <S.GifContainer>
-          <img src="/backgrounds/bg-hero.png" />
-        </S.GifContainer>
+            <ButtonLink
+              text="Quero uma demonstração"
+              href="/converse-com-especialista"
+              target="_self"
+              size="default"
+              type="default"
+            />
+          </S.HeroContent>
+          <S.GifContainer>
+            <img src="/backgrounds/bg-hero.png" />
+          </S.GifContainer>
+        </S.ContainerGrid>
       </S.Hero>
 
       <S.Content>
