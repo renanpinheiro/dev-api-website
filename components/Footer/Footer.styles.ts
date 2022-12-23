@@ -4,7 +4,8 @@ import { theme } from '../../styles/theme'
 export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 10vh 6vw;
+  margin: 0 auto;
+  padding: 6rem 12rem;
   background-color: #221e1e;
 
   // responsive
@@ -30,7 +31,8 @@ export const SocialMediaContainer = styled.div`
 
 export const SocialMedia = styled.p`
   margin: 0;
-  font-size: 18px;
+  font-size: 1.25rem;
+
   line-height: 1;
   color: ${theme.colors.secondary};
 
@@ -41,7 +43,8 @@ export const SocialMedia = styled.p`
 
   @media only screen and (max-width: 828px) {
     margin-left: 0;
-    font-size: 16px;
+    font-size: 1rem;
+
     text-align: center;
   }
 `
@@ -76,7 +79,8 @@ export const AddressContainer = styled.div`
 
 export const Address = styled.div`
   margin-left: 10px;
-  font-size: 18px;
+  font-size: 1rem;
+
   color: white;
 
   span {
@@ -87,11 +91,11 @@ export const Address = styled.div`
   @media only screen and (max-width: 828px) {
     margin: 0;
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   @media only screen and (max-width: 1366px) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
 
@@ -105,5 +109,5 @@ export const ResponsiveNavsContainer = styled.div`
   }
 `
 export const NavContainer = styled.div`
-  font-size: 14px;
+  font-size: 1rem;
 `

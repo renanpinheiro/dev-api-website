@@ -21,6 +21,10 @@ export const ContainerGrid = styled.div`
   padding: 16.4rem 0 10rem 0;
 `
 
+export const ContentGrid = styled.div`
+  padding: 10rem 0;
+`
+
 export const HeroContent = styled.div`
   z-index: 24;
   display: flex;
@@ -108,6 +112,7 @@ export const GifContainer = styled.div`
 
 export const Content = styled.section`
   width: 100%;
+  padding: 0 10vw 0 10vw;
 `
 
 export const CarrouselImageContainer = styled.div`
@@ -124,8 +129,7 @@ export const CarrouselImageContainer = styled.div`
 
 export const Carrousel = styled.section`
   width: 100%;
-  padding: 7vh 8vw 7vh;
-  background-size: 100%;
+  padding: 2rem 8rem;
 
   @media (max-width: 996px) {
     padding: 0 5.5vw 6vh;
@@ -246,8 +250,8 @@ export const DetailsCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12vh;
-  height: 12vh;
+  max-width: 60px;
+  max-height: 60px;
   padding: 1vw;
   background-color: ${theme.colors.gray[100]};
   border-radius: 5px;
@@ -422,7 +426,43 @@ export const FeaturesContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8vh 20vw;
+  padding: 32rem 20rem;
+  height: 80%;
+  text-align: center;
+  background: transparent url('/backgrounds/Apresentação-DevApi.png') 0% 0%
+    round padding-box;
+
+  > h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+  }
+
+  > p {
+    max-width: 120ch;
+    margin-top: 2vh;
+    overflow: hidden;
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 996px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`
+
+export const AdventagesGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 15vw 0 15vw;
+  height: 80%;
   text-align: center;
   background: transparent url('/backgrounds/Apresentação-DevApi.png') 0% 0%
     round padding-box;
@@ -453,7 +493,7 @@ export const FeaturesContainer = styled.div`
 export const TransformContainer = styled.div`
   align-items: center;
   justify-content: center;
-  padding: 8vh 4vw 8vh 4vw;
+  padding: 10vh 4vw 8vh 4vw;
   text-align: center;
   background: ${theme.colors.white};
 
@@ -483,7 +523,7 @@ export const TransformContainer = styled.div`
 export const Features = styled.div`
   display: block;
   justify-content: space-between;
-  margin-top: 7vh;
+  margin-top: 1rem;
 
   @media (max-width: 996px) {
     width: 100%;
@@ -505,8 +545,8 @@ export const FeatureCard = styled.div`
   text-align: left;
   border: 1px solid ${theme.colors.gray[100]};
   border-radius: 15px;
-  margin: 0.5vw;
-  height: 20vw;
+  height: 10rem;
+  margin-bottom: 1rem;
 
   > a {
     text-decoration: none;
@@ -527,20 +567,10 @@ export const FeatureCard = styled.div`
 
 export const Icon = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 8vh;
-  height: 8vh;
-  border-radius: 5px;
-
-  @media (max-width: 996px) {
-    width: 13vh;
-    height: 10vh;
-  }
+  align-items: start;
 
   img {
-    width: 60%;
-    height: 100%;
+    width: 40px;
     padding: 2px;
   }
 `
@@ -635,6 +665,7 @@ export const JoinNowContainer = styled.div`
     overflow: hidden;
     font-size: 1.2rem;
     line-height: 1.3;
+    width: 60%;
   }
 
   @media (max-width: 996px) {
@@ -647,7 +678,8 @@ export const JoinNowContainer = styled.div`
 export const SystemContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 20px;
   width: 100%;
   text-align: center;
 
@@ -664,7 +696,7 @@ export const SystemContainer = styled.div`
   p {
     margin-bottom: 15px;
     overflow: hidden;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.3;
   }
 
@@ -678,16 +710,11 @@ export const SystemImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 35vh;
-
-  @media (max-width: 996px) {
-    height: 45vh;
-  }
 `
 
 export const SystemImage = styled.img`
   object-fit: cover;
-  width: 100%;
+  height: 200px;
 
   @media (max-width: 996px) {
     object-fit: cover;
@@ -972,7 +999,8 @@ export const CasesContainer = styled.div`
 
 export const Cases = styled.div`
   > h2 {
-    width: 50%;
+    width: 60%;
+    text-align: left;
 
     @media (max-width: 996px) {
       display: flex;
@@ -990,7 +1018,7 @@ export const Cases = styled.div`
 
 export const QuoteContainer = styled.div`
   display: block;
-  padding: 8vh 8vw 8vh 8vw;
+  padding: 8vh 4vw 0 4vw;
 
   @media (min-width: 996px) {
     display: flex;
@@ -1007,30 +1035,26 @@ export const QuoteStructure = styled.div`
   background: #f6f6ff 0% 0% no-repeat padding-box;
   border-radius: 15px;
   opacity: 1;
-  padding: 5vh 2vw 5vh 2vw;
-  margin: 0 2vw 2vh 0;
-
-  > p {
-    max-width: 50ch;
-  }
-
-  @media (max-width: 996px) {
-    width: 100%;
-  }
+  padding: 3rem 1rem;
+  margin: 1rem;
 `
 
 export const QuoteAvatar = styled.div`
   display: flex;
+  justify-content: center;
   > img {
     max-height: 95px;
   }
 `
 
 export const QuoteTitle = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem 0 1rem;
   width: 100%;
   > h3 {
-    // set block width
+    font-size: 1.25rem;
     width: max-content;
     font-weight: bold;
   }
@@ -1039,15 +1063,12 @@ export const QuoteTitle = styled.div`
     align-self: flex-start;
     max-width: 26px;
   }
-
-  > p {
-    font-size: 0.9rem;
-  }
 `
 
 export const QuoteText = styled.div`
   margin-top: 2vh;
-  font-size: 0.95rem;
+  padding: 0 0.8rem;
+  font-size: 1.12rem;
   line-height: 25px;
 `
 
@@ -1064,25 +1085,24 @@ export const AdvantagesContainer = styled.div`
   display: flex;
   background: ${theme.colors.white};
   border-radius: 15px;
-  padding: 8vh 8vw 8vh 8vw;
+  padding: 2rem;
   columns: 2;
   text-align: left;
-  font-size: 1.125rem;
+  font-size: 1.19rem;
   align-content: center;
   justify-content: center;
 
   > ul {
+    display: flex;
+    flex-direction: column;
     > li {
-      padding: 1vw;
-
+      display: flex;
+      padding: 1rem 3rem;
+      align-items: center;
       > img {
         vertical-align: middle;
-        margin: 0 0.5vw 0 0;
+        margin-right: 0.5rem;
         max-width: 35px;
-      }
-
-      @media (max-width: 996px) {
-        //text-align: center;
       }
     }
   }

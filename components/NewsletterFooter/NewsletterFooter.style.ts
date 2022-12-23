@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
 export const NewsletterFooterContainer = styled.div`
-  display: block;
-  columns: 2;
+  display: flex;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
-  padding: 8vh 8vw 8vh 8vw;
+  padding: 6rem 12rem;
   text-align: center;
   background: transparent url('/backgrounds/Apresentação-DevApi.png') 0% 0%
     round padding-box;
@@ -45,7 +45,7 @@ export const NewsletterFooterContainer = styled.div`
 export const TextContainer = styled.div`
   margin-bottom: 2vh;
   > h2 {
-    width: 50%;
+    width: 55%;
 
     @media (max-width: 900px) {
       display: flex;

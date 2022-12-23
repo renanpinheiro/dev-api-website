@@ -96,7 +96,7 @@ const Home = () => {
       </S.Hero>
 
       <S.Content>
-        <S.PlatformContainer>
+        <S.ContentGrid className={'grid'}>
           <S.Platform>
             <S.Pipe />
             <h2>
@@ -114,7 +114,6 @@ const Home = () => {
               transformação digital.
             </p>
           </S.Platform>
-
           <S.PlatformDetails>
             {plataformDetails.map((item, index) => {
               return (
@@ -130,38 +129,23 @@ const Home = () => {
               )
             })}
           </S.PlatformDetails>
-        </S.PlatformContainer>
+        </S.ContentGrid>
 
         <S.Carrousel>
-          {isMobile ? (
-            <CarrouselWithOutSSR
-              items={connectorsMobile}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Mais de&nbsp;<b>300 conectores</b> pré-construídos e prontos
-                    para uso
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          ) : (
-            <MultiCarrouselWithOutSSR
-              itemsPerSlide={11}
-              interval={2000}
-              items={connectors}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Mais de <b>300 conectores</b> pré-construídos e prontos para
-                    uso
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
-          )}
+          <MultiCarrouselWithOutSSR
+            itemsPerSlide={11}
+            interval={2000}
+            items={connectors}
+            title={
+              <S.CarrouselTitle>
+                <S.Pipe />
+                <h2>
+                  Mais de <b>300 conectores</b> pré-construídos e prontos para
+                  uso
+                </h2>
+              </S.CarrouselTitle>
+            }
+          />
         </S.Carrousel>
 
         <S.ButtonContainer>
@@ -175,53 +159,51 @@ const Home = () => {
         </S.ButtonContainer>
 
         <S.Spacing></S.Spacing>
+      </S.Content>
 
-        <S.FeaturesContainer>
-          <S.JoinNowContainer>
-            <S.Pipe />
+      <S.FeaturesContainer>
+        <S.JoinNowContainer>
+          <S.Pipe />
+          <h2>
+            Garanta que os sistemas da sua empresa <b>estejam integrados</b>
+          </h2>
+        </S.JoinNowContainer>
+
+        <S.SystemContainer>
+          <S.CardSystemContainer>
             <h2>
-              Garanta que os sistemas da sua empresa <b>estejam integrados</b>
+              <b>iPaaS</b>
             </h2>
-          </S.JoinNowContainer>
+            <S.SystemImageContainer>
+              <S.SystemImage src="/images/ipaas.svg" alt="iPaas" />
+            </S.SystemImageContainer>
+            <p>
+              Plataforma de Integração de Sistemas como Serviço que agiliza a
+              integração entre sistemas, a orquestração de dados e a
+              automatização de processos, tanto na nuvem como on-premise. O
+              iPaaS da DevApi funciona como um tradutor universal entre todos os
+              sistemas, integrando os diferentes softwares.
+            </p>
+          </S.CardSystemContainer>
+          <S.CardSystemContainer>
+            <h2>
+              <b>API Manager</b>
+            </h2>
+            <S.SystemImageContainer>
+              <S.SystemImage src="/images/api-manager.svg" alt="API Manager" />
+            </S.SystemImageContainer>
+            <p>
+              Tecnologia que desenvolve, monitora, distribui e monetiza APIs,
+              expandindo o ecossistema entre instituições, clientes,
+              fornecedores e parceiros. Com o API Manager da DevApi construa,
+              distribua e gerencie APIs com agilidade, com uma arquitetura
+              robusta e super segura.
+            </p>
+          </S.CardSystemContainer>
+        </S.SystemContainer>
+      </S.FeaturesContainer>
 
-          <S.SystemContainer>
-            <S.CardSystemContainer>
-              <h2>
-                <b>iPaaS</b>
-              </h2>
-              <S.SystemImageContainer>
-                <S.SystemImage src="/images/ipaas.svg" alt="iPaas" />
-              </S.SystemImageContainer>
-              <p>
-                Plataforma de Integração de Sistemas como Serviço que agiliza a
-                integração entre sistemas, a orquestração de dados e a
-                automatização de processos, tanto na nuvem como on-premise. O
-                iPaaS da DevApi funciona como um tradutor universal entre todos
-                os sistemas, integrando os diferentes softwares.
-              </p>
-            </S.CardSystemContainer>
-            <S.CardSystemContainer>
-              <h2>
-                <b>API Manager</b>
-              </h2>
-              <S.SystemImageContainer>
-                <S.SystemImage
-                  src="/images/api-manager.svg"
-                  alt="API Manager"
-                />
-              </S.SystemImageContainer>
-              <p>
-                Com o API Manager da DevApi sua empresa pode construir,
-                distribuir e gerenciar APIs de maneira veloz e altamente
-                escalável, com uma arquitetura ágil, robusta e muito segura.
-                Fundamental para desenvolver, monitorar, distribuir e monetizar
-                APIs, expandindo o ecossistema entre instituições, clientes,
-                fornecedores e parceiros.
-              </p>
-            </S.CardSystemContainer>
-          </S.SystemContainer>
-        </S.FeaturesContainer>
-
+      <S.Content>
         <S.TransformContainer>
           <S.JoinNowContainer>
             <S.Pipe />
@@ -241,40 +223,42 @@ const Home = () => {
                   <a href={item.url} target="_self" rel="noreferrer">
                     <S.Icon>
                       <img src={item.icon} alt={item.title} />
+                      <S.Text>
+                        <b>{item.title}</b>
+                        <p>{item.text}</p>
+                      </S.Text>
                     </S.Icon>
-                    <S.Text>
-                      <b>{item.title}</b>
-                      <p>{item.text}</p>
-                    </S.Text>
                   </a>
                 </S.FeatureCard>
               )
             })}
           </S.Features>
         </S.TransformContainer>
+      </S.Content>
 
-        <S.FeaturesContainer>
-          <S.JoinNowContainer>
-            <S.Pipe />
-            <h2>
-              Vantagens para a <b>sua empresa</b>
-            </h2>
-          </S.JoinNowContainer>
+      <S.AdventagesGrid>
+        <S.JoinNowContainer>
+          <S.Pipe />
+          <h2>
+            Vantagens para a <b>sua empresa</b>
+          </h2>
+        </S.JoinNowContainer>
 
-          <S.AdvantagesContainer>
-            <ul>
-              {advantagesList.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <img src="/icons/check.svg" alt="Checkmark"></img>&nbsp;
-                    {item.text}
-                  </li>
-                )
-              })}
-            </ul>
-          </S.AdvantagesContainer>
-        </S.FeaturesContainer>
+        <S.AdvantagesContainer>
+          <ul>
+            {advantagesList.map((item, index) => {
+              return (
+                <li key={index}>
+                  <img src="/icons/check.svg" alt="Checkmark"></img>&nbsp;
+                  {item.text}
+                </li>
+              )
+            })}
+          </ul>
+        </S.AdvantagesContainer>
+      </S.AdventagesGrid>
 
+      <S.Content>
         <S.CasesContainer>
           <S.Cases>
             <S.Pipe />
@@ -326,11 +310,11 @@ const Home = () => {
             </S.ButtonContainer>
           </S.JoinNowContainer>
         </S.DemoContainer>
-
-        <CustomersContainer></CustomersContainer>
-
-        <NewsletterFooter></NewsletterFooter>
       </S.Content>
+
+      <CustomersContainer></CustomersContainer>
+
+      <NewsletterFooter></NewsletterFooter>
     </>
   )
 }

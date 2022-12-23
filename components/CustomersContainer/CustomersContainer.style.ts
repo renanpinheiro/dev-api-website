@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
+export const CustomersGrid = styled.div`
+  display: flex;
+`
 export const CustomersContainer = styled.div`
   display: flex;
   width: 100%;
-  padding: 8vh 8vw 8vh 8vw;
+  padding: 4rem 6rem;
   justify-content: center;
   align-content: center;
   background-color: ${theme.colors.header};
@@ -13,15 +16,14 @@ export const CustomersContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
   }
 
   > img {
-    padding: 0 2vw 0 0;
-    max-height: 32px;
+    padding: 0 2rem 0 0;
+    max-height: 16px;
 
     @media (max-width: 768px) {
-      margin: 2vh 2vw;
+      margin: 2rem;
     }
   }
 `

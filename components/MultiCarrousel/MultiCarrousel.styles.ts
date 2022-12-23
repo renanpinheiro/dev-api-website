@@ -12,7 +12,6 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 6vw;
   height: auto;
   margin: 4vw 2.5vh 0;
 
@@ -27,12 +26,11 @@ export const ImageContainer = styled.div`
   }
 
   > img {
-    width: 100%;
-    height: 100%;
+    max-width: 60px;
+    max-height: 60px;
     margin-bottom: 2vh;
     border-radius: 8px;
-    border-image: initial;
-    box-shadow: rgb(86 57 254 / 15%) 0 5px 40px;
+    box-shadow: rgb(86 57 254 / 15%) 0 5px 20px;
   }
 
   > span {

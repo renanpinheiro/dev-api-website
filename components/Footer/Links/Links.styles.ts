@@ -12,7 +12,7 @@ export const ContainerLink = styled.div`
     padding-bottom: 10px;
     margin: 0;
     margin-bottom: 5px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: ${props => props.theme.colors.white};
     text-decoration: none;
     cursor: pointer;
