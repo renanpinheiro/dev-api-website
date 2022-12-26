@@ -497,7 +497,7 @@ export const solutionsPage = {
     ),
     listItems: [
       {
-        text: 'Otimize o departamento financeiro;',
+        text: 'Otimize o departamento Financeiro;',
       },
       {
         text: 'Crie integrações robustas e seguras;',

@@ -70,73 +70,61 @@ const Solutions = () => {
         </Hero>
 
         <S.Content>
-          <S.SolutionContainer>
-            <S.TextContainer>
-              <S.TitleContainer>
-                <S.Pipe />
-                {page && page.contentTitle}
+          <S.ContentGrid className={'grid'}>
+            <S.SolutionContainer>
+              <S.TextContainer>
+                <S.TitleContainer>
+                  <S.Pipe />
+                  {page && page.contentTitle}
 
-                <S.ParagraphContainer>
-                  {page && page.contentText}
-                </S.ParagraphContainer>
-              </S.TitleContainer>
-            </S.TextContainer>
+                  <S.ParagraphContainer>
+                    {page && page.contentText}
+                  </S.ParagraphContainer>
+                </S.TitleContainer>
+              </S.TextContainer>
 
-            <S.AdvantagesContainer>
-              <ul>
+              <S.AdvantagesContainer>
+                <ul>
+                  {page &&
+                    page.listItems.map((item, index) => {
+                      return (
+                        <li key={index}>
+                          <img src="/icons/check.svg" alt="Checkmark"></img>
+                          &nbsp;
+                          {item.text}
+                        </li>
+                      )
+                    })}
+                </ul>
+              </S.AdvantagesContainer>
+
+              <S.IntegrationContainer>
                 {page &&
-                  page.listItems.map((item, index) => {
-                    return (
-                      <li key={index}>
-                        <img src="/icons/check.svg" alt="Checkmark"></img>&nbsp;
-                        {item.text}
-                      </li>
-                    )
-                  })}
-              </ul>
-            </S.AdvantagesContainer>
+                  (page.title.pageName === 'Empresas 360' ||
+                    page.title.pageName === 'Seu produto') &&
+                  page.component}
+              </S.IntegrationContainer>
 
-            {/*<S.ComponentContainer>*/}
-            {/*  {page?.integrationCard ? (*/}
-            {/*    page.integrationCard.map((pageAtributes, index) => {*/}
-            {/*      return (*/}
-            {/*        <IntegrationCardWithoutSSR*/}
-            {/*          imageLeft={pageAtributes.imageLeft}*/}
-            {/*          imageRight={pageAtributes.imageRight}*/}
-            {/*          key={index}*/}
-            {/*        ></IntegrationCardWithoutSSR>*/}
-            {/*      )*/}
-            {/*    })*/}
-            {/*  ) : (*/}
-            <S.IntegrationContainer>
-              {page &&
-                (page.title.pageName === 'Empresas 360' ||
-                  page.title.pageName === 'Seu produto') &&
-                page.component}
-            </S.IntegrationContainer>
-            {/*  )}*/}
-            {/*</S.ComponentContainer>*/}
+              {page?.textJoinNow && (
+                <S.JoinNowContainer>
+                  <S.PipeJoinNow />
+                  {page.textJoinNow}
 
-            {page?.textJoinNow && (
-              <S.JoinNowContainer>
-                <S.PipeJoinNow />
-                {page.textJoinNow}
+                  <S.IntegrationContainer>
+                    {page && page.component}
+                  </S.IntegrationContainer>
 
-                <S.IntegrationContainer>
-                  {page && page.component}
-                </S.IntegrationContainer>
-
-                <ButtonLink
-                  text="Quero integrar agora!"
-                  href="/converse-com-especialista"
-                  target="_self"
-                  size="default"
-                  type="default"
-                />
-              </S.JoinNowContainer>
-            )}
-          </S.SolutionContainer>
-
+                  <ButtonLink
+                    text="Quero integrar agora!"
+                    href="/converse-com-especialista"
+                    target="_self"
+                    size="default"
+                    type="default"
+                  />
+                </S.JoinNowContainer>
+              )}
+            </S.SolutionContainer>
+          </S.ContentGrid>
           <S.ProfessionalServiceContainer>
             <ProfessionalService />
           </S.ProfessionalServiceContainer>

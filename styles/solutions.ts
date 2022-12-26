@@ -302,24 +302,27 @@ export const ListIconlTitle = styled.h2`
 `
 
 export const AdvantagesContainer = styled.div`
+  display: flex;
   background: ${theme.colors.white};
   border-radius: 15px;
-  padding: 4vh 4vw;
+  padding: 2rem;
   columns: 2;
   text-align: left;
-  font-size: 1.125rem;
-  line-height: 28px;
+  font-size: 1.19rem;
+  align-content: center;
+  justify-content: center;
+  box-shadow: 0px 0px 30px #5f47ff26;
 
   > ul {
+    display: flex;
+    flex-direction: column;
     > li {
-      margin-bottom: 2vh;
-      @media (max-width: 996px) {
-        height: 15vh;
-      }
-
+      display: flex;
+      padding: 0.5rem 3rem;
+      align-items: center;
       > img {
         vertical-align: middle;
-        margin: 0 0.5vw 0 0;
+        margin-right: 0.5rem;
         max-width: 35px;
       }
     }
@@ -327,7 +330,7 @@ export const AdvantagesContainer = styled.div`
 
   @media (min-width: 1300px) {
     display: inline-block;
-    box-shadow: 0px 0px 30px #5f47ff26;
-    margin: 0 15vh 20vh 15vh;
   }
 `
+
+export const ContentGrid = styled.div``

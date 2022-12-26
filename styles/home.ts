@@ -19,6 +19,8 @@ export const Hero = styled.section`
 `
 export const ContainerGrid = styled.div`
   padding: 16.4rem 0 10rem 0;
+  align-items: center;
+  justify-content: center;
 `
 
 export const ContentGrid = styled.div`
@@ -491,6 +493,36 @@ export const AdventagesGrid = styled.div`
 `
 
 export const TransformContainer = styled.div`
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 4vw 8vh 4vw;
+  text-align: center;
+  background: ${theme.colors.white};
+
+  > h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    @media (min-width: 1600px) {
+      font-size: 3rem;
+    }
+  }
+
+  > p {
+    max-width: 120ch;
+    margin-top: 2vh;
+    overflow: hidden;
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 996px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`
+
+export const SecurityFeatureContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10vh 4vw 8vh 4vw;
@@ -1176,6 +1208,8 @@ export const LayersColumn = styled.div`
   }
 
   > p {
-    font-size: 1.125rem;
+    margin-top: 1rem;
+    font-size: 1.375rem;
+    line-height: 1.3;
   }
 `

@@ -22,6 +22,7 @@ import { inlineCustomers } from '../../constants/inlineCustomers'
 import { NewsletterFooter } from '../../components/NewsletterFooter'
 import { CustomersContainer } from '../../components/CustomersContainer'
 import { ProfessionalService } from '../../components/ProfessionalService'
+import { SecurityFeatureContainer } from '../../styles/home'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -67,83 +68,81 @@ const Home = () => {
       </Head>
 
       <S.Hero>
-        <S.HeroContent>
-          <S.Pipe />
-          <h1>
-            <b>Garanta a segurança da sua operação</b>
-          </h1>
-          <p>Proteja os dados e informações da sua empreesa com a DevApi.</p>
-        </S.HeroContent>
-        <S.GifContainer>
-          <img src="/backgrounds/bg-security.png" />
-        </S.GifContainer>
+        <S.ContainerGrid className={'grid'}>
+          <S.HeroContent>
+            <S.Pipe />
+            <h1>
+              <b>Garanta a segurança da sua operação</b>
+            </h1>
+            <p>Proteja os dados e informações da sua empresa com a DevApi.</p>
+          </S.HeroContent>
+          <S.GifContainer>
+            <img src="/backgrounds/bg-security.png" />
+          </S.GifContainer>
+        </S.ContainerGrid>
       </S.Hero>
 
       <S.Content>
-        <S.TransformContainer>
-          <S.JoinNowContainer>
-            <S.Pipe />
-            <h2>
-              <b>
-                Conheça a plataforma de integração de sistemas mais segura do
-                mercado
-              </b>
-            </h2>
-            <p>
-              As recentes mudanças no mercado, com a LGPD, Open Finance e
-              trabalho remoto, têm exigido um novo patamar de segurança às
-              empresas. As soluções de integração de sistemas disponíveis no
-              mercado não protegem completamente os dados trafegados por APIs e,
-              por isso, o seu negócio pode ficar mais vulnerável aos ataques.
+        <S.SecurityFeatureContainer>
+          <S.Pipe />
+          <h2>
+            <b>
+              Conheça a plataforma de integração de sistemas mais segura do
+              mercado
+            </b>
+          </h2>
+          <p>
+            As recentes mudanças no mercado, com a LGPD, Open Finance e trabalho
+            remoto, têm exigido um novo patamar de segurança às empresas. As
+            soluções de integração de sistemas disponíveis no mercado não
+            protegem completamente os dados trafegados por APIs e, por isso, o
+            seu negócio pode ficar mais vulnerável aos ataques.
+            <br />
+            <br />
+            Proteja os dados e informações da sua empresa com as duas camadas de
+            segurança da plataforma DevApi:
+          </p>
+
+          <S.LayerContainer>
+            <S.LayerImage>
+              <img src="/images/layer.png" />
+            </S.LayerImage>
+            <S.LayersColumn>
+              <b>1ª Camada</b>
               <br />
               <br />
-              Proteja os dados e informações da sua empresa com as duas camadas
-              de segurança da plataforma DevApi:
-            </p>
+              <p>
+                WAF, que fornece proteção na entrada de dados da plataforma,
+                além de um balanceador de carga.
+              </p>
 
-            <S.LayerContainer>
-              <S.LayerImage>
-                <img src="/images/layer.png" />
-              </S.LayerImage>
-              <S.LayersColumn>
-                <b>1ª Camada</b>
-                <br />
-                <br />
-                <p>
-                  WAF, que fornece proteção na entrada de dados da plataforma,
-                  além de um balanceador de carga.
-                </p>
+              <br />
+              <br />
+              <br />
+              <br />
 
-                <br />
-                <br />
-                <br />
-                <br />
-
-                <b>2ª Camada</b>
-                <br />
-                <br />
-                <p>
-                  Middleware de Segurança Heimdall, um módulo exclusivo que
-                  identifica qualquer tentativa de ameaça à plataforma e aos
-                  nossos clientes, analisando todas as informações trafegadas
-                  nas requisições feitas.
-                </p>
-                <p>
-                  Possui um dashboard com mapa das ameaças registradas e
-                  relatório que pode ser utilizado para medidas judiciais contra
-                  crimes cibernéticos, uma vez que armazena IP, Latitude,
-                  Provedor de Internet, Data e Hora de todas as tentativas de
-                  invasão/ameaças.
-                </p>
-                <p>
-                  Além disso, nossa equipe é especialista no Padrão de
-                  Desenvolvimento Seguro (PDS), uma forma de garantir mais
-                  segurança, mais qualidade e maior disponibilidade de um
-                  produto.
-                </p>
-              </S.LayersColumn>
-            </S.LayerContainer>
-          </S.JoinNowContainer>
+              <b>2ª Camada</b>
+              <br />
+              <br />
+              <p>
+                Middleware de Segurança Heimdall, um módulo exclusivo que
+                identifica qualquer tentativa de ameaça à plataforma e aos
+                nossos clientes, analisando todas as informações trafegadas nas
+                requisições feitas.
+              </p>
+              <p>
+                Possui um dashboard com mapa das ameaças registradas e relatório
+                que pode ser utilizado para medidas judiciais contra crimes
+                cibernéticos, uma vez que armazena IP, Latitude, Provedor de
+                Internet, Data e Hora de todas as tentativas de invasão/ameaças.
+              </p>
+              <p>
+                Além disso, nossa equipe é especialista no Padrão de
+                Desenvolvimento Seguro (PDS), uma forma de garantir mais
+                segurança, mais qualidade e maior disponibilidade de um produto.
+              </p>
+            </S.LayersColumn>
+          </S.LayerContainer>
 
           <S.JoinNowContainer>
             <S.Pipe />
@@ -162,9 +161,9 @@ const Home = () => {
               />
             </S.ButtonContainer>
           </S.JoinNowContainer>
-        </S.TransformContainer>
-        <ProfessionalService></ProfessionalService>
+        </S.SecurityFeatureContainer>
       </S.Content>
+      <ProfessionalService></ProfessionalService>
     </>
   )
 }
