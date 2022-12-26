@@ -105,8 +105,9 @@ export const Pipe = styled.div`
   margin-bottom: 10px;
   background-color: ${theme.colors.secondary};
 
-  @media (max-width: 576px) {
+  @media (max-width: 1200px) {
     width: 8vh;
+    align-self: center;
   }
 `
 

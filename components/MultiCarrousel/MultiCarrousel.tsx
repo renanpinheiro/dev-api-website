@@ -18,7 +18,6 @@ const MultiCarrousel = ({
       <S.Carrousel
         dots={false}
         infinite
-        autoplay
         autoplaySpeed={interval}
         arrows={false}
         speed={2000}

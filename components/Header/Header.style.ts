@@ -43,8 +43,7 @@ export const LogoContainer = styled.div`
   align-items: center;
   width: 10vw;
 
-  @media (max-width: 450px) {
-    // padding-top: 2vh;
+  @media (max-width: 1200px) {
     flex: 1;
   }
 `

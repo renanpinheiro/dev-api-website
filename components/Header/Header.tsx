@@ -139,7 +139,11 @@ const Header = () => {
             </S.Burger>
           </S.Menu>
 
-          <Menu isOpen={isOpenMenu} close={handleOpenMenu} navLinks={navLinks} />
+          <Menu
+            isOpen={isOpenMenu}
+            close={handleOpenMenu}
+            navLinks={navLinks}
+          />
         </S.MenuContainer>
       </S.ContainerGrid>
     </S.Container>

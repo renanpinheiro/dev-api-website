@@ -7,20 +7,20 @@ import { BoxReverse } from '../../components/BoxReverse'
 import { ButtonLink } from '../../components/ButtonLink'
 import { CompanyBenefits } from '../../components/CompanyBenefits'
 import { Customers } from '../../components/Customers'
+import { CustomersContainer } from '../../components/CustomersContainer'
+import { NewsletterFooter } from '../../components/NewsletterFooter'
+import { advantagesList } from '../../constants/advantagesList'
 import { benefits } from '../../constants/benefits'
 import { businessCards } from '../../constants/businessCards'
 import { connectors, connectorsMobile } from '../../constants/connectors'
 import { customers } from '../../constants/customers'
 import { featuresCard } from '../../constants/featuresCard'
-import { transformCard } from '../../constants/transformCard'
+import { inlineCustomers } from '../../constants/inlineCustomers'
 import { plataformDetails } from '../../constants/plataformDetails'
-import { advantagesList } from '../../constants/advantagesList'
 import { quotes } from '../../constants/quotes'
+import { transformCard } from '../../constants/transformCard'
 import { useWindowDimensions } from '../../hooks/useWindowDimensions'
 import * as S from '../../styles/home'
-import { inlineCustomers } from '../../constants/inlineCustomers'
-import { NewsletterFooter } from '../../components/NewsletterFooter'
-import { CustomersContainer } from '../../components/CustomersContainer'
 
 const CarrouselWithOutSSR = dynamic(
   () => import('../../components/Carrousel'),
@@ -132,20 +132,37 @@ const Home = () => {
 
         <S.ContentGrid className={'grid flex-column'}>
           <S.Carrousel>
-            <MultiCarrouselWithOutSSR
-              itemsPerSlide={11}
-              interval={2000}
-              items={connectors}
-              title={
-                <S.CarrouselTitle>
-                  <S.Pipe />
-                  <h2>
-                    Mais de <b>300 conectores</b> pré-construídos e prontos para
-                    uso
-                  </h2>
-                </S.CarrouselTitle>
-              }
-            />
+            {isMobile ? (
+              <MultiCarrouselWithOutSSR
+                itemsPerSlide={3.5}
+                interval={5000}
+                items={connectors}
+                title={
+                  <S.CarrouselTitle>
+                    <S.Pipe />
+                    <h2>
+                      Mais de&nbsp;<b>300 conectores</b> pré-construídos e
+                      prontos para uso
+                    </h2>
+                  </S.CarrouselTitle>
+                }
+              />
+            ) : (
+              <MultiCarrouselWithOutSSR
+                itemsPerSlide={11}
+                interval={2000}
+                items={connectors}
+                title={
+                  <S.CarrouselTitle>
+                    <S.Pipe />
+                    <h2>
+                      Mais de <b>300 conectores</b> pré-construídos e prontos
+                      para uso
+                    </h2>
+                  </S.CarrouselTitle>
+                }
+              />
+            )}
           </S.Carrousel>
           <S.ButtonContainer>
             <ButtonLink
@@ -180,8 +197,8 @@ const Home = () => {
                 Plataforma de Integração de Sistemas como Serviço que agiliza a
                 integração entre sistemas, a orquestração de dados e a
                 automatização de processos, tanto na nuvem como on-premise. O
-                iPaaS da DevApi funciona como um tradutor universal entre todos os
-                sistemas, integrando os diferentes softwares.
+                iPaaS da DevApi funciona como um tradutor universal entre todos
+                os sistemas, integrando os diferentes softwares.
               </p>
             </S.CardSystemContainer>
             <S.CardSystemContainer>
@@ -189,7 +206,10 @@ const Home = () => {
                 <b>API Manager</b>
               </h2>
               <S.SystemImageContainer>
-                <S.SystemImage src="/images/api-manager.svg" alt="API Manager" />
+                <S.SystemImage
+                  src="/images/api-manager.svg"
+                  alt="API Manager"
+                />
               </S.SystemImageContainer>
               <p>
                 Tecnologia que desenvolve, monitora, distribui e monetiza APIs,
@@ -299,7 +319,8 @@ const Home = () => {
           <S.DemoContainer>
             <S.Pipe />
             <h2>
-              Encaixe todas as peças da sua operação <strong>com a integração de sistemas</strong>
+              Encaixe todas as peças da sua operação{' '}
+              <strong>com a integração de sistemas</strong>
             </h2>
 
             <S.ButtonContainer>
