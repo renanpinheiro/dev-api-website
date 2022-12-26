@@ -7,14 +7,16 @@ const NewsletterFooter = () => {
   return (
     <>
       <S.NewsletterFooterContainer>
-        <S.TextContainer>
-          <h2>
-            Sua empresa totalmente <b>integrada ao mundo digital</b> de forma
-            segura, fácil e eficiente.
-          </h2>
-        </S.TextContainer>
+        <S.ContainerGrid className={'grid'}>
+          <S.TextContainer>
+            <h2>
+              Sua empresa totalmente <b>integrada ao mundo digital</b> de forma
+              segura, fácil e eficiente.
+            </h2>
+          </S.TextContainer>
 
-        <NewsletterForm />
+          <NewsletterForm />
+        </S.ContainerGrid>
       </S.NewsletterFooterContainer>
     </>
   )

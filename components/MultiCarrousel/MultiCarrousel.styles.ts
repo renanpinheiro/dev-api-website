@@ -26,11 +26,11 @@ export const ImageContainer = styled.div`
   }
 
   > img {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 75px;
+    max-height: 75px;
     margin-bottom: 2vh;
     border-radius: 8px;
-    box-shadow: rgb(86 57 254 / 15%) 0 5px 20px;
+    box-shadow: rgb(86 57 254 / 80%) 0 0px 15px;
   }
 
   > span {

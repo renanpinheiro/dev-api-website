@@ -71,24 +71,26 @@ const Home = () => {
 
       <S.Hero>
         <S.ContainerGrid className={'grid'}>
-          <S.HeroContent>
-            <S.Pipe />
-            <h1>
-              <b>Integração de Sistemas e Gestão de APIs</b>
-            </h1>
-            <p>
-              Sem limites: uma única plataforma para integrar sistemas,
-              automatizar processos, orquestrar dados e gerenciar APIs.
-            </p>
+          <S.ContentContainer className={'flex'}>
+            <S.HeroContent>
+              <S.Pipe />
+              <h1 className={'font-bolder'}>
+                Integração de Sistemas e Gestão de APIs
+              </h1>
+              <p>
+                Sem limites: uma única plataforma para integrar sistemas,
+                automatizar processos, orquestrar dados e gerenciar APIs.
+              </p>
 
-            <ButtonLink
-              text="Quero uma demonstração"
-              href="/converse-com-especialista"
-              target="_self"
-              size="default"
-              type="default"
-            />
-          </S.HeroContent>
+              <ButtonLink
+                text="Quero uma demonstração"
+                href="/converse-com-especialista"
+                target="_self"
+                size="default"
+                type="default"
+              />
+            </S.HeroContent>
+          </S.ContentContainer>
           <S.GifContainer>
             <img src="/backgrounds/bg-hero.png" />
           </S.GifContainer>
@@ -99,10 +101,7 @@ const Home = () => {
         <S.ContentGrid className={'grid'}>
           <S.Platform>
             <S.Pipe />
-            <h2>
-              <span> Encaixe as peças da sua operação!</span>
-            </h2>
-
+            <h2 className={'font-bolder'}>Encaixe as peças da sua operação!</h2>
             <p>
               Otimize processos e gerencie APIs. Automatize dados e toda a
               operação da sua empresa. Integre sistemas em uma única plataforma
@@ -131,172 +130,176 @@ const Home = () => {
           </S.PlatformDetails>
         </S.ContentGrid>
 
-        <S.Carrousel>
-          <MultiCarrouselWithOutSSR
-            itemsPerSlide={11}
-            interval={2000}
-            items={connectors}
-            title={
-              <S.CarrouselTitle>
-                <S.Pipe />
-                <h2>
-                  Mais de <b>300 conectores</b> pré-construídos e prontos para
-                  uso
-                </h2>
-              </S.CarrouselTitle>
-            }
-          />
-        </S.Carrousel>
-
-        <S.ButtonContainer>
-          <ButtonLink
-            text="Ver conectores"
-            href="/conectores"
-            target="_self"
-            size="default"
-            type="default"
-          />
-        </S.ButtonContainer>
-
-        <S.Spacing></S.Spacing>
+        <S.ContentGrid className={'grid flex-column'}>
+          <S.Carrousel>
+            <MultiCarrouselWithOutSSR
+              itemsPerSlide={11}
+              interval={2000}
+              items={connectors}
+              title={
+                <S.CarrouselTitle>
+                  <S.Pipe />
+                  <h2>
+                    Mais de <b>300 conectores</b> pré-construídos e prontos para
+                    uso
+                  </h2>
+                </S.CarrouselTitle>
+              }
+            />
+          </S.Carrousel>
+          <S.ButtonContainer>
+            <ButtonLink
+              text="Ver conectores"
+              href="/conectores"
+              target="_self"
+              size="default"
+              type="default"
+            />
+          </S.ButtonContainer>
+        </S.ContentGrid>
       </S.Content>
 
       <S.FeaturesContainer>
-        <S.JoinNowContainer>
-          <S.Pipe />
-          <h2>
-            Garanta que os sistemas da sua empresa <b>estejam integrados</b>
-          </h2>
-        </S.JoinNowContainer>
+        <S.ContentGrid className={'grid flex-column'}>
+          <S.JoinNowContainer>
+            <S.Pipe />
+            <h2>
+              Garanta que os sistemas da sua empresa <b>estejam integrados</b>
+            </h2>
+          </S.JoinNowContainer>
 
-        <S.SystemContainer>
-          <S.CardSystemContainer>
-            <h2>
-              <b>iPaaS</b>
-            </h2>
-            <S.SystemImageContainer>
-              <S.SystemImage src="/images/ipaas.svg" alt="iPaas" />
-            </S.SystemImageContainer>
-            <p>
-              Plataforma de Integração de Sistemas como Serviço que agiliza a
-              integração entre sistemas, a orquestração de dados e a
-              automatização de processos, tanto na nuvem como on-premise. O
-              iPaaS da DevApi funciona como um tradutor universal entre todos os
-              sistemas, integrando os diferentes softwares.
-            </p>
-          </S.CardSystemContainer>
-          <S.CardSystemContainer>
-            <h2>
-              <b>API Manager</b>
-            </h2>
-            <S.SystemImageContainer>
-              <S.SystemImage src="/images/api-manager.svg" alt="API Manager" />
-            </S.SystemImageContainer>
-            <p>
-              Tecnologia que desenvolve, monitora, distribui e monetiza APIs,
-              expandindo o ecossistema entre instituições, clientes,
-              fornecedores e parceiros. Com o API Manager da DevApi construa,
-              distribua e gerencie APIs com agilidade, com uma arquitetura
-              robusta e super segura.
-            </p>
-          </S.CardSystemContainer>
-        </S.SystemContainer>
+          <S.SystemContainer>
+            <S.CardSystemContainer>
+              <h2>
+                <b>iPaaS</b>
+              </h2>
+              <S.SystemImageContainer>
+                <S.SystemImage src="/images/ipaas.svg" alt="iPaas" />
+              </S.SystemImageContainer>
+              <p>
+                Plataforma de Integração de Sistemas como Serviço que agiliza a
+                integração entre sistemas, a orquestração de dados e a
+                automatização de processos, tanto na nuvem como on-premise. O
+                iPaaS da DevApi funciona como um tradutor universal entre todos os
+                sistemas, integrando os diferentes softwares.
+              </p>
+            </S.CardSystemContainer>
+            <S.CardSystemContainer>
+              <h2>
+                <b>API Manager</b>
+              </h2>
+              <S.SystemImageContainer>
+                <S.SystemImage src="/images/api-manager.svg" alt="API Manager" />
+              </S.SystemImageContainer>
+              <p>
+                Tecnologia que desenvolve, monitora, distribui e monetiza APIs,
+                expandindo o ecossistema entre instituições, clientes,
+                fornecedores e parceiros. Com o API Manager da DevApi construa,
+                distribua e gerencie APIs com agilidade, com uma arquitetura
+                robusta e super segura.
+              </p>
+            </S.CardSystemContainer>
+          </S.SystemContainer>
+        </S.ContentGrid>
       </S.FeaturesContainer>
 
       <S.Content>
         <S.TransformContainer>
-          <S.JoinNowContainer>
-            <S.Pipe />
-            <h2>
-              <b>Transforme a sua empresa!</b>
-            </h2>
-            <p>
-              Tenha processos ágeis, seguros e eficientes. Escale a operação,
-              impulsione a inovação e ganhe vantagem competitiva.
-            </p>
-          </S.JoinNowContainer>
+          <S.ContentGrid className={'grid flex-column'}>
+            <S.JoinNowContainer>
+              <S.Pipe />
+              <h2>
+                <b>Transforme a sua empresa!</b>
+              </h2>
+              <p>
+                Tenha processos ágeis, seguros e eficientes. Escale a operação,
+                impulsione a inovação e ganhe vantagem competitiva.
+              </p>
+            </S.JoinNowContainer>
 
-          <S.Features>
-            {transformCard.map((item, index) => {
-              return (
-                <S.FeatureCard key={index}>
-                  <a href={item.url} target="_self" rel="noreferrer">
-                    <S.Icon>
-                      <img src={item.icon} alt={item.title} />
-                      <S.Text>
-                        <b>{item.title}</b>
-                        <p>{item.text}</p>
-                      </S.Text>
-                    </S.Icon>
-                  </a>
-                </S.FeatureCard>
-              )
-            })}
-          </S.Features>
+            <S.Features>
+              {transformCard.map((item, index) => {
+                return (
+                  <S.FeatureCard key={index}>
+                    <a href={item.url} target="_self" rel="noreferrer">
+                      <S.Icon>
+                        <img src={item.icon} alt={item.title} />
+                        <S.Text>
+                          <b>{item.title}</b>
+                          <p>{item.text}</p>
+                        </S.Text>
+                      </S.Icon>
+                    </a>
+                  </S.FeatureCard>
+                )
+              })}
+            </S.Features>
+          </S.ContentGrid>
         </S.TransformContainer>
       </S.Content>
 
       <S.AdventagesGrid>
-        <S.JoinNowContainer>
-          <S.Pipe />
-          <h2>
-            Vantagens para a <b>sua empresa</b>
-          </h2>
-        </S.JoinNowContainer>
-
-        <S.AdvantagesContainer>
-          <ul>
-            {advantagesList.map((item, index) => {
-              return (
-                <li key={index}>
-                  <img src="/icons/check.svg" alt="Checkmark"></img>&nbsp;
-                  {item.text}
-                </li>
-              )
-            })}
-          </ul>
-        </S.AdvantagesContainer>
-      </S.AdventagesGrid>
-
-      <S.Content>
-        <S.CasesContainer>
-          <S.Cases>
-            <S.Pipe />
-            <h2>
-              Grandes empresas usam a DevApi para integrar com
-              <span> velocidade e segurança</span>
-            </h2>
-          </S.Cases>
-        </S.CasesContainer>
-
-        <S.QuoteContainer>
-          {quotes.map((item, index) => {
-            return (
-              <S.QuoteStructure key={index}>
-                <S.QuoteAvatar>
-                  <img src={item.imageUrl} alt="Avatar" />
-                  <S.QuoteTitle>
-                    <h3>
-                      {item.name} &nbsp;
-                      <img src="/icons/quote-mark.svg" alt="Avatar" />
-                    </h3>
-                    <p>{item.occupation + ' | ' + item.company}</p>
-                  </S.QuoteTitle>
-                </S.QuoteAvatar>
-                <S.QuoteText>
-                  <p>{item.quote}</p>
-                </S.QuoteText>
-              </S.QuoteStructure>
-            )
-          })}
-        </S.QuoteContainer>
-
-        <S.DemoContainer>
+        <S.ContentGrid className={'grid flex-column'}>
           <S.JoinNowContainer>
             <S.Pipe />
             <h2>
-              Encaixe todas as peças da sua operação{' '}
-              <b>com a integração de sistemas</b>
+              Vantagens para a <b>sua empresa</b>
+            </h2>
+          </S.JoinNowContainer>
+
+          <S.AdvantagesContainer>
+            <ul>
+              {advantagesList.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <img src="/icons/check.svg" alt="Checkmark"></img>
+                    {item.text}
+                  </li>
+                )
+              })}
+            </ul>
+          </S.AdvantagesContainer>
+        </S.ContentGrid>
+      </S.AdventagesGrid>
+
+      <S.Content>
+        <S.ContentGrid className={'grid flex-column'}>
+          <S.CasesContainer>
+            <S.Cases>
+              <S.Pipe />
+              <h2>
+                Grandes empresas usam a DevApi para integrar com
+                <span> velocidade e segurança</span>
+              </h2>
+            </S.Cases>
+          </S.CasesContainer>
+
+          <S.QuoteContainer>
+            {quotes.map((item, index) => {
+              return (
+                <S.QuoteStructure key={index}>
+                  <S.QuoteAvatar>
+                    <img src={item.imageUrl} alt="Avatar" />
+                    <S.QuoteTitle>
+                      <h3>
+                        {item.name} &nbsp;
+                        <img src="/icons/quote-mark.svg" alt="Avatar" />
+                      </h3>
+                      <p>{item.occupation + ' | ' + item.company}</p>
+                    </S.QuoteTitle>
+                  </S.QuoteAvatar>
+                  <S.QuoteText>
+                    <p>{item.quote}</p>
+                  </S.QuoteText>
+                </S.QuoteStructure>
+              )
+            })}
+          </S.QuoteContainer>
+
+          <S.DemoContainer>
+            <S.Pipe />
+            <h2>
+              Encaixe todas as peças da sua operação <strong>com a integração de sistemas</strong>
             </h2>
 
             <S.ButtonContainer>
@@ -308,8 +311,8 @@ const Home = () => {
                 type="default"
               />
             </S.ButtonContainer>
-          </S.JoinNowContainer>
-        </S.DemoContainer>
+          </S.DemoContainer>
+        </S.ContentGrid>
       </S.Content>
 
       <CustomersContainer></CustomersContainer>

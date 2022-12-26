@@ -31,6 +31,11 @@ export const Container = styled.div<IContainerStyles>`
 
 export const ContainerGrid = styled.div`
   width: 100%;
+  align-items: center;
+
+  @media (max-width: 576px) {
+    flex-direction: row !important;
+  }
 `
 
 export const LogoContainer = styled.div`
@@ -39,7 +44,8 @@ export const LogoContainer = styled.div`
   width: 10vw;
 
   @media (max-width: 450px) {
-    padding-top: 2vh;
+    // padding-top: 2vh;
+    flex: 1;
   }
 `
 

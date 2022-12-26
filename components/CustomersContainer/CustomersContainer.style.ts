@@ -3,14 +3,13 @@ import { theme } from '../../styles/theme'
 
 export const CustomersGrid = styled.div`
   display: flex;
+  background-color: ${theme.colors.header};
 `
 export const CustomersContainer = styled.div`
   display: flex;
   width: 100%;
-  padding: 4rem 6rem;
-  justify-content: center;
-  align-content: center;
-  background-color: ${theme.colors.header};
+  padding: 4rem 0;
+  justify-content: space-between;
 
   @media (max-width: 1300px) {
     flex-direction: row;
@@ -19,9 +18,6 @@ export const CustomersContainer = styled.div`
   }
 
   > img {
-    padding: 0 2rem 0 0;
-    max-height: 16px;
-
     @media (max-width: 768px) {
       margin: 2rem;
     }

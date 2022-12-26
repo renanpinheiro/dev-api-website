@@ -85,14 +85,13 @@ export const ButtonContainer = styled.div`
 
 export const ButtonNewsLetter = styled.button`
   position: absolute;
-  right: 6px;
+  right: 5px;
   top: 5px;
-  bottom: 3px;
   z-index: 2;
   display: flex;
   align-items: center;
   width: max-content;
-  height: 45px;
+  height: 40px;
   padding: 5px 30px;
   margin-right: 0.05rem;
   font-size: 1.3rem;

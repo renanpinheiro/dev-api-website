@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 
+export const ContainerGrid = styled.div`
+  display: flex;
+`
+
 export const NewsletterFooterContainer = styled.div`
   display: flex;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  padding: 6rem 12rem;
+  padding: 6rem 0;
   text-align: center;
   background: transparent url('/backgrounds/Apresentação-DevApi.png') 0% 0%
     round padding-box;

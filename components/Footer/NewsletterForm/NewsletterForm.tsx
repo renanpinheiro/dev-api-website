@@ -85,9 +85,9 @@ const NewsletterForm = () => {
   return (
     <S.ContainerForm>
       <S.TextContainer>
-        <h2>
-          Assine <b>nossa newsletter</b>
-        </h2>
+        <h4>
+          Assine <span className={'font-bolder font-italic'}>nossa newsletter</span>
+        </h4>
       </S.TextContainer>
       <S.ContainerMessage>
         {isSuccess && (
